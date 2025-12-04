@@ -27,3 +27,7 @@
   - image: fusion coil sprite tweaks
   Guti:
   - refactor: Improved filling cabinet UI and makes use of span_bold
+2025-12-04:
+  FluffMedic:
+  - bugfix: A certain Tyr boss mechanic functions as intended, and one tyr wrecked
+      shuttles is more accurate
