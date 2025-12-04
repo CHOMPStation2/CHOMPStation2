@@ -9,14 +9,10 @@
 export const IMPL_HUB_STORAGE = 1;
 export const IMPL_IFRAME_INDEXED_DB = 2;
 
-<<<<<<< HEAD
 const KEY_NAME = 'chomp'; // CHOMPEdit - CHOMPStation Localstore
-=======
-const KEY_NAME = 'virgo';
 type StorageImplementation =
   | typeof IMPL_HUB_STORAGE
   | typeof IMPL_IFRAME_INDEXED_DB;
->>>>>>> 34a0791c2f (Port of the iframe storage for settings (#18751))
 
 type StorageBackend = {
   impl: StorageImplementation;
