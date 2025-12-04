@@ -2,6 +2,26 @@
 "aa" = (
 /turf/space,
 /area/space)
+"ab" = (
+/obj/structure/closet/emcloset,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/structure/handrail,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/arrival/pre_game)
+"ac" = (
+/obj/structure/closet/emcloset,
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/obj/structure/handrail,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/arrival/pre_game)
 "ag" = (
 /turf/simulated/sky/moving/north/sif/planet_fall,
 /area/space)
@@ -224,6 +244,10 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
+/obj/structure/handrail,
+/obj/machinery/light/floortube{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/arrival/pre_game)
 "cV" = (
@@ -337,6 +361,10 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
+/obj/structure/handrail,
+/obj/machinery/light/floortube{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/arrival/pre_game)
 "er" = (
@@ -373,6 +401,9 @@
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
+	},
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/arrival/pre_game)
@@ -415,11 +446,9 @@
 /turf/simulated/shuttle/plating/airless,
 /area/shuttle/arrival/pre_game)
 "py" = (
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/structure/table/standard,
 /obj/random/plushie,
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/arrival/pre_game)
 "qb" = (
@@ -601,13 +630,14 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/arrival/pre_game)
 "PA" = (
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/structure/table/standard,
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/arrival/pre_game)
 "Qb" = (
@@ -755,7 +785,10 @@
 /turf/space,
 /area/space)
 "Zs" = (
-/obj/machinery/light,
+/obj/machinery/light/floortube,
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/arrival/pre_game)
 
@@ -8694,7 +8727,7 @@ at
 Sc
 Sc
 Sc
-Nx
+ab
 Rs
 Hw
 dQ
@@ -10242,7 +10275,7 @@ at
 Sc
 Sc
 Sc
-ij
+ac
 Hw
 Hw
 qg
