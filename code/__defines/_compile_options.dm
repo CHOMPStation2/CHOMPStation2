@@ -58,4 +58,4 @@
 #endif //ifdef REFERENCE_TRACKING
 
 // Standard flags to use for browser-options
-#define DEFAULT_CLIENT_BROWSER_OPTIONS "byondstorage,find"
+#define DEFAULT_CLIENT_BROWSER_OPTIONS "find"
