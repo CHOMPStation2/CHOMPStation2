@@ -32,6 +32,28 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
+/datum/design_techweb/tyr_katar
+	name = "Tyrian Energy Katar"
+	id = "tyr_katar"
+	build_type = PROTOLATHE
+	materials = list(MAT_BRONZE = 10000,MAT_DIAMOND = 6000,MAT_COPPER = 8000,MAT_METALHYDROGEN = 2000,MAT_QUARTZ = 2000,MAT_EAGATE = 6000)
+	build_path = /obj/item/melee/energy/tyr_katar
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design_techweb/tyr_hammer
+	name = "Tyrian Energy Hammer"
+	id = "tyr_hammer"
+	build_type = PROTOLATHE
+	materials = list(MAT_BRONZE = 10000,MAT_DIAMOND = 6000,MAT_COPPER = 8000,MAT_METALHYDROGEN = 2000,MAT_QUARTZ = 2000,MAT_EAGATE = 6000)
+	build_path = /obj/item/melee/energy/tyr_hammer
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
 /datum/design_techweb/tyr_barrierbelt
 	name = "Tyrian Barrier Bubble"
 	id = "tyr_barrier"

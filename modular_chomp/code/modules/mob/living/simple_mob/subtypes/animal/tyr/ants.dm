@@ -8,6 +8,8 @@
 	pass_flags = PASSTABLE
 	movement_cooldown = 1
 
+	melee_miss_chance = 0
+
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 	see_in_dark = 3
@@ -125,7 +127,7 @@
 	name = "quartz metal ant"
 	icon_state = "quartz_ant"
 	icon_living = "quartz_ant"
-	armor = list(melee = 60, bullet = 50, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 100)
+	armor = list(melee = 80, bullet = 80, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 100)
 	butchery_loot = list(\
 		/obj/item/stack/material/quartz = 18\
 		)
@@ -158,6 +160,7 @@
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/verdantium
 	name = "green metal ant"
+	evasion = 50
 	icon_state = "verdantium_ant"
 	icon_living = "verdantium_ant"
 	butchery_loot = list(\
@@ -171,7 +174,13 @@
 	butchery_loot = list(\
 		/obj/item/stack/material/uranium = 18\
 		)
+
+	special_attack_min_range = 1
+	special_attack_max_range = 2
+	special_attack_cooldown = 5 SECONDS
+
 /mob/living/simple_mob/animal/tyr/mineral_ants/uranium/do_special_attack(atom/A)
+	visible_message(span_bolddanger(span_orange("The ant glows bright green!.")))
 	SSradiation.radiate(src, 15)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/tritium
@@ -189,15 +198,8 @@
 	butchery_loot = list(\
 		/obj/item/stack/material/mhydrogen = 6\
 		)
-
-	special_attack_min_range = 4
-	special_attack_max_range = 7
-	special_attack_cooldown = 15 SECONDS
-
-/mob/living/simple_mob/animal/tyr/mineral_ants/mydro/do_special_attack(atom/A)
-	for(var/i =1 to 3)
-		new /obj/effect/spider/spiderling/antling(src.loc)
-	new /obj/effect/spider/spiderling/antling(src.loc)
+	size_multiplier = 0.5
+	movement_cooldown = -1
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/builder
 	name = "concrete ant"
