@@ -31,3 +31,14 @@
   FluffMedic:
   - bugfix: A certain Tyr boss mechanic functions as intended, and one tyr wrecked
       shuttles is more accurate
+2025-12-05:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: windows should no longer be just white from an invalid iframe
+  - admin: re-added the 'reload configuration' verb to reload config from disk
+  - bugfix: fixed the hairs I tried to add a bit ago
+  - bugfix: sun subsystem overruns
+  - bugfix: nightshift subsystem overruns
+  - bugfix: some remaining hitching issues
+  Will:
+  - bugfix: Phased shadekin are no longer knocked down or thrown when a shuttle they
+      are inside of moves.
