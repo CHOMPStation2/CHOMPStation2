@@ -7,6 +7,8 @@
 		"tyr_rifle",
 		"magnet_belt",
 		"tyr_sabre",
+		"tyr_katar",
+		"tyr_hammer",
 		"tyr_barrier",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)

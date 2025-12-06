@@ -55,8 +55,8 @@
 	faction = FACTION_HIVEBOT
 	movement_cooldown = 10
 	size_multiplier = 2
-	maxHealth = 500
-	health = 500
+	maxHealth = 600
+	health = 600
 	wreckage = /obj/structure/loot_pile/surface/alien/engineering
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases/no_movement
 	anchored = 1
@@ -89,7 +89,7 @@
 			specialattackprojectile = /obj/item/projectile/energy/wallbreaker/boss
 			rng_cycle = rand(1,4)
 			direct_say("PROTOCOL: PRECISION. SWEEP.")
-			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 25), 2 SECONDS, TIMER_DELETE_ME)
+			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 15), 2 SECONDS, TIMER_DELETE_ME)
 			attackcycle = 0
 		if(3)
 			specialattackprojectile = /obj/item/projectile/energy/lightingspark/nanoweave
