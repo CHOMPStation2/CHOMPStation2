@@ -80,7 +80,7 @@
 	return TryToSwitchState(user)
 
 /* // CHOMPEDIT: disabling becaue alt-clicking to view a turf is pretty important.
-/obj/structure/simple_door/AltClick(mob/user as mob)
+/obj/structure/simple_door/click_alt(mob/user as mob)
 	. = ..()
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(!Adjacent(user))

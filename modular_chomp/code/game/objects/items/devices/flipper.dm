@@ -74,7 +74,7 @@
 /*
  * This function is called when the user Alt-clicks the Flipper. It calls the system_select function to allow the user to select a subsystem.
  */
-/obj/item/paicard/flipper/AltClick(mob/living/user)
+/obj/item/paicard/flipper/click_alt(mob/living/user)
 	system_select(user)
 
 //Vore
