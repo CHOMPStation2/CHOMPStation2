@@ -53,9 +53,6 @@
 
 	var/list/modifiers = params2list(params)
 
-<<<<<<< HEAD
-	if(stat || paralysis || stunned) //CHOMPedit, removed weakened to allow item use while crawling
-=======
 	if(LAZYACCESS(modifiers, BUTTON4) || LAZYACCESS(modifiers, BUTTON5))
 		return
 
@@ -88,7 +85,6 @@
 		return
 
 	if(stat || paralysis || stunned)
->>>>>>> 4924a73ba2 (Start of TG Click Code Port (#18734))
 		return
 
 	face_atom(A) // change direction to face what you clicked on

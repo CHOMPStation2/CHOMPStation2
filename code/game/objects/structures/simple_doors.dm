@@ -79,12 +79,8 @@
 /obj/structure/simple_door/attack_hand(mob/user as mob)
 	return TryToSwitchState(user)
 
-<<<<<<< HEAD
 /* // CHOMPEDIT: disabling becaue alt-clicking to view a turf is pretty important.
-/obj/structure/simple_door/AltClick(mob/user as mob)
-=======
 /obj/structure/simple_door/click_alt(mob/user as mob)
->>>>>>> 4924a73ba2 (Start of TG Click Code Port (#18734))
 	. = ..()
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(!Adjacent(user))
