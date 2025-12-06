@@ -248,7 +248,7 @@
 	return list(node1_connect, node2_connect, node3_connect)
 
 //CHOMPEdit Start - Keybinds for EVEEERYTHING
-/obj/machinery/atmospherics/trinary/CtrlClick(mob/user)
+/obj/machinery/atmospherics/trinary/click_ctrl(mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(allowed(user))
 		update_use_power(!use_power)

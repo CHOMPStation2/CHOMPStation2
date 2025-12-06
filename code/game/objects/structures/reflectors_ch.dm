@@ -177,7 +177,7 @@
 		setAngle(SIMPLIFY_DEGREES(new_angle))
 	return TRUE
 
-/obj/structure/reflector/AltClick(mob/user)
+/obj/structure/reflector/click_alt(mob/user)
 	if(!CanUseTopic(user))
 		return
 	else if(finished)

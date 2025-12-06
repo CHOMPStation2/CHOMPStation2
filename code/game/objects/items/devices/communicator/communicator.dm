@@ -108,7 +108,7 @@
 // Description: Checks if the user is made of silicon and returns if they are. If the user is not made of silicon and can use the communicator,
 //              removes the ID from the communicator if it has one, or sends a chat message indicating that the communicator does not have an ID.
 
-/obj/item/communicator/AltClick()
+/obj/item/communicator/click_alt()
 	if(issilicon(usr))
 		return
 
