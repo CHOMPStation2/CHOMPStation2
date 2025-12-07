@@ -256,7 +256,7 @@ Thus, the two variables affect pump operation are set in New():
 		deconstruct()
 
 //CHOMPEdit Start - Adds TGStation keybinds to save our engineers some time.
-/obj/machinery/atmospherics/binary/pump/AltClick(mob/user)
+/obj/machinery/atmospherics/binary/pump/click_alt(mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(allowed(user))
 		to_chat(user, span_notice("You set the [name] to max output"))
@@ -265,7 +265,7 @@ Thus, the two variables affect pump operation are set in New():
 	else
 		to_chat(user, span_warning("Access denied."))
 
-/obj/machinery/atmospherics/binary/pump/CtrlClick(mob/user)
+/obj/machinery/atmospherics/binary/pump/click_ctrl(mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(allowed(user))
 		update_use_power(!use_power)
@@ -301,4 +301,3 @@ Thus, the two variables affect pump operation are set in New():
 		icon_state = "off"
 	else
 		icon_state = "[use_power ? "on" : "off"]"
-

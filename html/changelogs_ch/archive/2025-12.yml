@@ -31,3 +31,31 @@
   FluffMedic:
   - bugfix: A certain Tyr boss mechanic functions as intended, and one tyr wrecked
       shuttles is more accurate
+2025-12-05:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: windows should no longer be just white from an invalid iframe
+  - admin: re-added the 'reload configuration' verb to reload config from disk
+  - bugfix: fixed the hairs I tried to add a bit ago
+  - bugfix: sun subsystem overruns
+  - bugfix: nightshift subsystem overruns
+  - bugfix: some remaining hitching issues
+  Will:
+  - bugfix: Phased shadekin are no longer knocked down or thrown when a shuttle they
+      are inside of moves.
+2025-12-07:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: update dependencies
+  Diana:
+  - qol: You can now alt-shift click someone to open the inventory menu (as if you
+      drag-dropped them onto yourself)
+  - qol: Admins can now tag datums via ctrl-middle click
+  - refactor: Honey I refactored click code!
+  - code_imp: Cleans up click code.
+  - code_imp: Adds framework for allowing objects to ignore ctrl click and not allowed
+      to be dragged
+  - bugfix: Fixes a bug where joining in the game would cause 180 topic calls to be
+      made (still happens) causing you to be rate limited.
+  FluffMedic:
+  - rscadd: Two new Tyr weapons
+  - balance: Tyr gun buffed, Tyr foes retuned a fair bit to favour longer fights
+  - bugfix: Shield boss stops spamming re-shielding

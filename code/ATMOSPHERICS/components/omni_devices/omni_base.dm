@@ -303,7 +303,7 @@
 	return null
 
 //CHOMPEdit Start - Keybinds for EVEEERYTHING
-/obj/machinery/atmospherics/omni/CtrlClick(mob/user)
+/obj/machinery/atmospherics/omni/click_ctrl(mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(allowed(user))
 		update_use_power(!use_power)

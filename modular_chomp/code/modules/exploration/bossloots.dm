@@ -41,11 +41,12 @@
 	name = "tyrian energy blade"
 	slot_flags = SLOT_BELT | SLOT_BACK //should make a proper sprite some time but spriting energy is hard
 	desc = "A forgien blade made via techniques of ages old. Gains a diffrent effect base off your stance."
-	description_info = "Attacking whilst on grab intent weakens the target's healing, attacking whilst on disarm weakens the target's melee potential, and attacking whilst on harm has a 2% chance to deal guarnteed massive damage."
+	description_info = "Attacking whilst on grab intent weakens the target's healing, attacking whilst on disarm weakens the target's melee potential, and attacking whilst on harm has a 2% chance to deal guaranteed massive damage."
 	active_force = 30
 	active_armourpen = 30
 	projectile_parry_chance = 20
 	defend_chance = 20
+	colorable = FALSE
 
 	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
 	icon_state = "sabre"
