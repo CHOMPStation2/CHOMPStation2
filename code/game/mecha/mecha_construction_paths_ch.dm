@@ -28,7 +28,7 @@
 
 
 /datum/construction/reversible/mecha/scarab
-	result = "/obj/mecha/combat/scarab"
+	result = /obj/mecha/combat/scarab
 	steps = list(
 					//1
 					list("key"=IS_WELDER,

@@ -306,7 +306,7 @@
 /turf/simulated/shuttlewalls/can_engrave()
 	return (material && material.hardness >= 10 && material.hardness <= 100)
 
-/turf/simulated/shuttlewalls/AltClick(mob/user)
+/turf/simulated/shuttlewalls/click_alt(mob/user)
 	if(isliving(user))
 		var/mob/living/livingUser = user
 		if(try_graffiti(livingUser, livingUser.get_active_hand()))

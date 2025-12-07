@@ -32,14 +32,14 @@
 	icon_state = "drop_marker"
 	mouse_opacity = 0 //no touching the attack
 	spread_range = 3
-	var/fuse_time = 2 SECONDS
+	var/fuse_time = 3.5 SECONDS
 
 /obj/item/grenade/shooter/auto_explode/Initialize(mapload)
 	..()
 	addtimer(CALLBACK(src, PROC_REF(detonate)), fuse_time, TIMER_DELETE_ME)
 
 /obj/item/grenade/shooter/auto_explode/blade_boss_long
-	spread_range = 2
+	spread_range = 1
 	projectile_types = list(/obj/item/projectile/bullet/astral_blade)
 
 /obj/item/grenade/shooter/auto_explode/blade_boss_short
@@ -47,5 +47,5 @@
 	projectile_types = list(/obj/item/projectile/bullet/astral_blade/short)
 
 /obj/item/grenade/shooter/auto_explode/tyr_flora
-	spread_range = 2
+	spread_range = 1
 	projectile_types = list(/obj/item/projectile/energy/neurotoxin/toxic/tyr_flora)

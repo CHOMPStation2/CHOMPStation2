@@ -1,31 +1,9 @@
-/datum/design_techweb/tyrenergyballchain
-	name = "Tyrian Melee Weapon"
-	id = "tyr_meleegun"
-	build_type = PROTOLATHE
-	materials = list(MAT_BRONZE = 12000,MAT_DIAMOND = 4000,MAT_URANIUM = 3000,MAT_COPPER = 3000,MAT_GOLD = 3000,MAT_METALHYDROGEN = 3000,MAT_QUARTZ = 3000,MAT_EAGATE = 3000)
-	build_path = /obj/item/gun/energy/energyballchain
-	category = list(
-		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
-
-/datum/design_techweb/tyrenergyshotgun
-	name = "Tyrian Enforcer Firearm"
-	id = "tyr_shotgun"
-	build_type = PROTOLATHE
-	materials = list(MAT_BRONZE = 12000,MAT_DIAMOND = 4000,MAT_URANIUM = 3000,MAT_COPPER = 3000,MAT_GOLD = 3000,MAT_METALHYDROGEN = 3000,MAT_QUARTZ = 3000,MAT_EAGATE = 3000)
-	build_path = /obj/item/gun/energy/curse_tyrshotgun
-	category = list(
-		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
-
 /datum/design_techweb/tyrenergyrifle
-	name = "Tyrian Infantry Firearm"
+	name = "Tyrian Longarm"
 	id = "tyr_rifle"
 	build_type = PROTOLATHE
 	materials = list(MAT_BRONZE = 12000,MAT_DIAMOND = 4000,MAT_URANIUM = 3000,MAT_COPPER = 3000,MAT_GOLD = 3000,MAT_METALHYDROGEN = 3000,MAT_QUARTZ = 3000,MAT_EAGATE = 3000)
-	build_path = /obj/item/gun/energy/curse_blaster
+	build_path = /obj/item/gun/energy/tyr_rifle
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
 	)
@@ -49,6 +27,28 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_BRONZE = 10000,MAT_DIAMOND = 6000,MAT_COPPER = 8000,MAT_METALHYDROGEN = 2000,MAT_QUARTZ = 2000,MAT_EAGATE = 6000)
 	build_path = /obj/item/melee/energy/tyr_sabre
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design_techweb/tyr_katar
+	name = "Tyrian Energy Katar"
+	id = "tyr_katar"
+	build_type = PROTOLATHE
+	materials = list(MAT_BRONZE = 10000,MAT_DIAMOND = 6000,MAT_COPPER = 8000,MAT_METALHYDROGEN = 2000,MAT_QUARTZ = 2000,MAT_EAGATE = 6000)
+	build_path = /obj/item/melee/energy/tyr_katar
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design_techweb/tyr_hammer
+	name = "Tyrian Energy Hammer"
+	id = "tyr_hammer"
+	build_type = PROTOLATHE
+	materials = list(MAT_BRONZE = 10000,MAT_DIAMOND = 6000,MAT_COPPER = 8000,MAT_METALHYDROGEN = 2000,MAT_QUARTZ = 2000,MAT_EAGATE = 6000)
+	build_path = /obj/item/melee/energy/tyr_hammer
 	category = list(
 		RND_CATEGORY_EQUIPMENT
 	)

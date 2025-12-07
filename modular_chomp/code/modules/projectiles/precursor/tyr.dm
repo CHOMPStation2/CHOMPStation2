@@ -25,40 +25,25 @@
 	check_armour = "melee"
 	damage_type = BRUTE
 
-/obj/item/projectile/energy/wp_shotgun
-	name = "laser blast"
-	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
-	icon_state = "shotgun_blast"
-	damage = 25
-	range = 5
-	check_armour = "bullet"
-	damage_type = BRUTE
-
-/obj/item/projectile/energy/wp_shotgun/on_hit(var/atom/movable/target, var/blocked = 0)
-	if(isliving(target))
-		var/mob/living/L = target
-		var/throwdir = get_dir(firer,L)
-		L.throw_at(get_edge_target_turf(L, throwdir), 3, 10)
-		return 1
-
-/obj/item/projectile/energy/wp_blaster
+/obj/item/projectile/energy/tyr_rifle
 	name = "laser blast"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "blaster_blast"
 	damage = 35
-	range = 5
+	armor_penetration = 15
+	range = 6
 	penetrating = 2
 	check_armour = "laser"
 
 /obj/item/projectile/beam/precursor_tyr
 	name = "laser"
 	icon_state = "laser"
-	damage = 8
-	armor_penetration = 30
+	damage = 9
+	armor_penetration = 40
 	penetrating = 2
 	damage_type = BURN
 	check_armour = "laser"
-	range = 5
+	range = 4
 	eyeblur = 0 //no no no no no
 	hitscan = 1
 	hud_state = "laser"
@@ -69,79 +54,35 @@
 	range = 0
 	embed_chance = 0
 	spread_submunition_damage = FALSE
-	submunition_spread_max = 150
-	submunition_spread_min = 60
-	submunitions = list(/obj/item/projectile/beam/precursor_tyr = 5)
+	submunition_spread_max = 180
+	submunition_spread_min = 80
+	submunitions = list(/obj/item/projectile/beam/precursor_tyr = 7)
 
-/obj/item/gun/energy/energyballchain
-	name = "tyrian energy club"
-	desc = "A strange alien weapon from tyr."
-	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
-	icon_state = "violence"
-	item_state = "violence"
-	wielded_item_state = "placeholder"
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
-
-	charge_cost = 625 //Uses all it's charge in a single shot.
-	battery_lock = 1 //No changing
-
-	accept_cell_type = /obj/item/cell/device
-	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
-	projectile_type = /obj/item/projectile/energy/spikeenergy_ball
-
-	force = 45 //functions as a melee weapon too! Ain't great, but still works.
-
-	recoil_mode = 0
-	charge_meter = 1
-
-	move_delay = 0
-	one_handed_penalty = 50
-
-/obj/item/gun/energy/curse_tyrshotgun
-	name = "tyrian enforcer firearm"
-	desc = "A strange alien weapon from tyr."
+/obj/item/gun/energy/tyr_rifle
+	name = "tyrian longarm"
+	desc = "A strange alien weapon from tyr. Has a button to swap fire modes."
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "shotgun"
 	item_state = "shotgun"
 	wielded_item_state = "placeholder"
 	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
 
-	charge_cost = 625 //Four shots
+	charge_cost = 160 //15 shots sort of
 	battery_lock = 1 //No changing
 
 	accept_cell_type = /obj/item/cell/device
 	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
-	projectile_type = /obj/item/projectile/energy/wp_shotgun
+	projectile_type = /obj/item/projectile/energy/tyr_rifle
+
+	force = 35
 
 	recoil_mode = 0
 	charge_meter = 1
 
 	firemodes = list(
-		list(mode_name="explosive", projectile_type=/obj/item/projectile/energy/wp_shotgun, charge_cost = 625),
-		list(mode_name="spray", projectile_type=/obj/item/projectile/bullet/tyrshotburst, charge_cost = 625),
+		list(mode_name="single", projectile_type=/obj/item/projectile/energy/tyr_rifle, charge_cost = 160),
+		list(mode_name="area", projectile_type=/obj/item/projectile/bullet/tyrshotburst, charge_cost = 312),
 		)
-
-	move_delay = 0
-	one_handed_penalty = 50
-
-/obj/item/gun/energy/curse_blaster
-	name = "tyrian infantry firearm"
-	desc = "A strange alien weapon from tyr."
-	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
-	icon_state = "solider_blaster"
-	item_state = "solider_blaster"
-	wielded_item_state = "placeholder"
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
-
-	charge_cost = 250
-	battery_lock = 1 //No changing
-
-	accept_cell_type = /obj/item/cell/device
-	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
-	projectile_type = /obj/item/projectile/energy/wp_blaster
-
-	recoil_mode = 0
-	charge_meter = 1
 
 	move_delay = 0
 	one_handed_penalty = 50
@@ -163,8 +104,8 @@
 	icon_state = "javelin"
 	damage_type = SEARING
 	check_armour = "melee"
-	damage = 23
-	armor_penetration = 30
+	damage = 20 //16 with intended armor
+	armor_penetration = 20
 	speed = 10
 	color = "#FF6600"
 	modifier_type_to_apply = /datum/modifier/deep_wounds //reduced healing
@@ -181,8 +122,7 @@
 	name = "bluespace slash"
 	icon_state = "astral_sea_blade"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
-	damage = 30 //21 with intended armor
-	armor_penetration = 20
+	damage = 25 //15
 	damage_type = BRUTE
 	check_armour = "melee"
 	embed_chance = 0
@@ -190,36 +130,36 @@
 	penetrating = 5
 	crawl_destroy = TRUE
 
-/obj/item/projectile/bullet/astral_blade/short
-	speed = 0.3
-	range = 4
+/obj/item/projectile/bullet/astral_blade/artillery
+	range = 3
 
-/obj/item/projectile/bullet/tyr_bladeburst
-	use_submunitions = 1
-	range = 0
-	embed_chance = 0
-	spread_submunition_damage = FALSE
-	submunition_spread_max = 200
-	submunition_spread_min = 120
-	submunitions = list(/obj/item/projectile/bullet/astral_blade = 3)
+/obj/item/projectile/bullet/astral_blade/artillery/secondary
+	damage = 15
+	speed = 0.5
+
+/obj/item/projectile/bullet/astral_blade/short
+	damage = 20
+	speed = 0.3
+	range = 2
 
 /obj/item/projectile/energy/neurotoxin/toxic/tyr_flora
 	damage = 20 //deals 10 damage with the armor I am balancing for
 	agony = 0
 	speed = 12
 	armor_penetration = 50
+	penetrating = 5
 
 /obj/item/projectile/arc/fragmentation/tyr_mortar
 	icon_state = "mortar"
 	fragment_amount = 10
 	spread_range = 3
 	fragment_types = list(
-		/obj/item/projectile/energy/eclipse/tyrjavelin, /obj/item/projectile/energy/eclipse/tyrjavelin, \
-		/obj/item/projectile/energy/eclipse/tyrjavelin, /obj/item/projectile/energy/eclipse/tyrjavelin/super_slow
+		/obj/item/projectile/bullet/astral_blade/artillery, /obj/item/projectile/bullet/astral_blade/artillery, \
+		/obj/item/projectile/bullet/astral_blade/artillery, /obj/item/projectile/bullet/astral_blade/artillery/secondary
 		)
 
 /obj/item/projectile/energy/agate_lighting
-	damage = 18
+	damage = 15
 	damage_type = ELECTROCUTE
 	icon_state = "tesla_projectile"
 	armor_penetration = 30
@@ -228,5 +168,5 @@
 	crawl_destroy = TRUE
 
 /obj/item/projectile/energy/agate_lighting/fast
-	damage = 30
-	speed = 2
+	damage = 20
+	speed = 3

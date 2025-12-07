@@ -5,10 +5,10 @@
 	prereq_ids = list(TECHWEB_NODE_MOD_ANOMALY_SUIT)
 	design_ids = list(
 		"tyr_rifle",
-		"tyr_shotgun",
-		"tyr_meleegun",
 		"magnet_belt",
 		"tyr_sabre",
+		"tyr_katar",
+		"tyr_hammer",
 		"tyr_barrier",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
