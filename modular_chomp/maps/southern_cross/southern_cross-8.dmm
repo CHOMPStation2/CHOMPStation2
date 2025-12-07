@@ -741,6 +741,9 @@
 	},
 /turf/simulated/shuttle/floor/skipjack,
 /area/shuttle/syndicate_elite/mothership)
+"abR" = (
+/turf/simulated/shuttle/plating,
+/area/shuttle/syndicate_elite/mothership)
 "acE" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/paleblue{
@@ -9778,9 +9781,6 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
-"iBf" = (
-/turf/simulated/floor/airless,
-/area/shuttle/syndicate_elite/mothership)
 "iBk" = (
 /obj/effect/floor_decal/milspec/color/black,
 /obj/effect/floor_decal/techfloor{
@@ -88110,8 +88110,8 @@ cfK
 cfK
 cfK
 abN
+abR
 hKH
-iBf
 vFi
 asc
 asc
