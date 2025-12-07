@@ -8379,13 +8379,6 @@
 	},
 /turf/simulated/floor/carpet/retro,
 /area/shadekin)
-"hoC" = (
-/turf/simulated/floor/weird_things/dark{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/space)
 "hoQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -68258,7 +68251,7 @@ asc
 asc
 asc
 asc
-hoC
+asc
 asc
 asc
 asc
@@ -69805,7 +69798,7 @@ asc
 asc
 asc
 asc
-hoC
+asc
 asc
 asc
 vFi
