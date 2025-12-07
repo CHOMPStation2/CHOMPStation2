@@ -1,6 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "Two new Tyr weapons"
-  - balance: "Tyr gun buffed, Tyr foes retuned a fair bit to favour longer fights"
-  - bugfix: "Shield boss stops spamming re-shielding"
