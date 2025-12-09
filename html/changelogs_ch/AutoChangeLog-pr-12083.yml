@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Adds a new neutral trait 'unique mind-structure' which causes sleevemates to be unable to tell if you are in the proper sleeve or not!"
+  - bugfix: "Fakedeath tag now makes you show up as DEAD to sleevemates."
