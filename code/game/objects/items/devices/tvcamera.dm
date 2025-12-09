@@ -310,7 +310,7 @@
 
 /obj/item/clothing/accessory/bodycam/proc/update_feed()
 	if(bcamera.status)
-		SEND_SIGNAL(bcamera, COMSIG_OBSERVER_MOVED) // Forward the movement signal
+		SEND_SIGNAL(bcamera, COMSIG_MOVABLE_ATTEMPTED_MOVE) // Forward the movement signal
 
 /obj/item/clothing/accessory/bodycam/update_icon()
 	..()

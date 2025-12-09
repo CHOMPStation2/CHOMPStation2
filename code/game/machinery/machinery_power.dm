@@ -108,7 +108,7 @@
 	if(!recursive_set && loc && !isturf(loc))
 		recursive_set = TRUE
 		AddComponent(/datum/component/recursive_move)
-		RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(update_power_on_move)) //we only need this for recursive moving
+		RegisterSignal(src, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(update_power_on_move)) //we only need this for recursive moving
 	//ChompEDIT END
 
 	/* No
