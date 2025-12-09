@@ -76,19 +76,14 @@
 // Do not do power stuff in New/Initialize until after ..()
 /obj/machinery/Initialize(mapload)
 	. = ..()
-<<<<<<< HEAD
 
 	//ChompEDIT START -- only add this if we init on a non-turf (and non-null)
 	if(!recursive_set && loc && !isturf(loc))
 		recursive_set = TRUE
 		AddComponent(/datum/component/recursive_move)
-		RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(update_power_on_move)) //we only need this for recursive moving
+		RegisterSignal(src, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(update_power_on_move)) //we only need this for recursive moving
 	//ChompEDIT END
 
-=======
-	RegisterSignal(src, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(update_power_on_move))
-	AddComponent(/datum/component/recursive_move)
->>>>>>> 7ff489ec36 (TG Signal Port (#18741))
 	var/power = POWER_CONSUMPTION
 	REPORT_POWER_CONSUMPTION_CHANGE(0, power)
 	power_init_complete = TRUE
