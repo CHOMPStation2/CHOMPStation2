@@ -1,0 +1,18 @@
+author: "VictorZisthus"
+delete-after: True
+changes:
+  - maptweak: "Updated select escape pods and shuttles with handrails and floor-tube lighting to improve space efficiency. Think of it like being able to pack in more prey without sacrificing otherwise workable space! Most shuttles and ships received this change, though some only had a single handrail added near surgery tables where applicable."
+  - maptweak: "Removed a few instances of lingering xmas gear."
+  - maptweak: "Added a multitool to the other botany locker. Apparently hydro trays have a use for those. Who knew?"
+  - maptweak: "Removed terminology relating to the first and second floors of the wilderness shelter, as there can be only one. Updated camera coverage around the wilderness shelter."
+  - maptweak: "Added a grinder to the dilapidated chef area above cargo."
+  - maptweak: "Moved the AI shell spawner, and added a second one."
+  - maptweak: "Fixed an issue with the engine's waste management pressure valve."
+  - maptweak: "Added firelocks to staircases to prevent horrid depressurization events from completely locking out the main manual Z travel method."
+  - maptweak: "Replaced simulated space and rocks on the centcom Z level with their unsimulated variants for performance."
+  - maptweak: "Rearranged some paperwork stuff in security and IA. Gave the IA's some fancy pens that can change ink colors!"
+  - maptweak: "Buffed the command subgrid, as it powers the AI subgrid."
+  - maptweak: "Preset Atmos and Command subgrids to run independent of master, to better show folks that it's good to set that stuff up during a power surge. The lungs and brain of the station keep trudging on..."
+  - maptweak: "Added two low-power pumps (preset to default portable pump pressure) to the portable pump connectors to prevent backflow and overpressure into the line. This will make upgrades or edits to the line much less of a safety hazard to crew health. Also applied these changes to backup atmos."
+  - maptweak: "Mirrored the layout of both large escape pods."
+  - maptweak: "The HoS, Warden, and Captain have pinpointers in their lockers now. They can sniff out more than just the disk. Please use them wisely or centcom will remove them."
