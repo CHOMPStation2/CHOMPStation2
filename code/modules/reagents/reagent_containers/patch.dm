@@ -40,7 +40,11 @@
 			to_chat(H, span_notice("\The [src] is placed on your [affecting]."))
 			M.drop_from_inventory(src) //icon update
 			if(reagents.total_volume)
+<<<<<<< HEAD
 				reagents.trans_to_mob(M, reagents.total_volume, CHEM_TOUCH) //CHEM_TOUCH //CHOMPEdit
+=======
+				reagents.trans_to_mob(M, reagents.total_volume, CHEM_TOUCH)
+>>>>>>> dfe47e084f (Patch fix, Neurotoxins, and Paralysis (#18853))
 			qdel(src)
 			return 1
 
@@ -74,7 +78,11 @@
 		M.drop_from_inventory(src) //icon update
 
 		if(reagents.total_volume)
+<<<<<<< HEAD
 			reagents.trans_to_mob(M, reagents.total_volume, CHEM_TOUCH)	//CHEM_TOUCH //CHOMPEdit
+=======
+			reagents.trans_to_mob(M, reagents.total_volume, CHEM_TOUCH)	//CHEM_TOUCH
+>>>>>>> dfe47e084f (Patch fix, Neurotoxins, and Paralysis (#18853))
 		qdel(src)
 
 		return 1
