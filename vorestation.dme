@@ -5207,6 +5207,7 @@
 #include "modular_chomp\code\modules\economy\vending_machines_vr.dm"
 #include "modular_chomp\code\modules\emotes\definitions\audiable.dm"
 #include "modular_chomp\code\modules\emotes\definitions\audible_pain.dm"
+#include "modular_chomp\code\modules\event\anomalies.dm"
 #include "modular_chomp\code\modules\event\bluespacelocker.dm"
 #include "modular_chomp\code\modules\event\dangerinfestation.dm"
 #include "modular_chomp\code\modules\event\electrical_fire.dm"
