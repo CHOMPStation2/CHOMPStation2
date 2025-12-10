@@ -708,11 +708,7 @@
 #include "code\datums\cinematics\malf_doomsday.dm"
 #include "code\datums\cinematics\nuke_cinematics.dm"
 #include "code\datums\components\_component.dm"
-<<<<<<< HEAD
-#include "code\datums\components\connect_containers_ch.dm"
-=======
 #include "code\datums\components\connect_containers.dm"
->>>>>>> 9c979f58bd (Countdown effect + couple of components (#18802))
 #include "code\datums\components\connect_loc_behalf.dm"
 #include "code\datums\components\connect_mob_behalf.dm"
 #include "code\datums\components\connect_range.dm"
