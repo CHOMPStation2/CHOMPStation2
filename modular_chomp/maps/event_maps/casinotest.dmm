@@ -270,7 +270,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "ajs" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
@@ -471,7 +471,7 @@
 /turf/simulated/floor/glass{
 	desc = "A glassy floor with simulated space, deceptively fragile looking as if jumping may break the glass."
 	},
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "asd" = (
 /obj/machinery/vending/coffee,
 /turf/simulated/floor/wood/alt/tile,
@@ -661,7 +661,7 @@
 /turf/simulated/floor/wood/alt{
 	color = "red"
 	},
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "aBN" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/under/sexybunny_white/sexybunny_black,
@@ -1076,7 +1076,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "aRS" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 4
@@ -1359,7 +1359,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "bgV" = (
 /obj/structure/table/glass,
 /obj/item/reagent_containers/food/condiment/small/packet/honey{
@@ -1422,7 +1422,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "biT" = (
 /obj/effect/spider/stickyweb,
 /turf/simulated/wall/golddiamond,
@@ -1514,7 +1514,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/purcarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "bmL" = (
 /obj/structure/bed/chair/oldsofa{
 	dir = 8
@@ -1569,7 +1569,7 @@
 "bpg" = (
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "bpQ" = (
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/outdoors/grass/sif,
@@ -1826,7 +1826,7 @@
 /turf/simulated/floor/glass{
 	desc = "A glassy floor with simulated space, deceptively fragile looking as if jumping may break the glass."
 	},
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "bIM" = (
 /obj/structure/bed/chair/oldsofa/right{
 	dir = 4
@@ -1948,7 +1948,7 @@
 	},
 /obj/item/deck/cards/casino,
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "bPz" = (
 /obj/structure/closet/crate/bin,
 /obj/effect/floor_decal/spline/fancy{
@@ -2102,7 +2102,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "bUE" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -2199,7 +2199,7 @@
 	portal_id = "casinostairs2"
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_hall)
+/area/casino/dorm_hall)
 "bXJ" = (
 /obj/structure/table/glass,
 /obj/structure/event/present,
@@ -2224,7 +2224,7 @@
 /turf/simulated/floor/glass{
 	desc = "A glassy floor with simulated space, deceptively fragile looking as if jumping may break the glass."
 	},
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "bYL" = (
 /obj/structure/flora/grass/brown,
 /obj/structure/flora/grass/green,
@@ -2590,7 +2590,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "ctN" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /turf/simulated/floor/outdoors/grass/sif/forest{
@@ -2924,7 +2924,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_hall)
+/area/casino/dorm_hall)
 "cNu" = (
 /obj/structure/sink{
 	pixel_y = -8;
@@ -2969,14 +2969,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "cPy" = (
 /obj/structure/table/gamblingtable,
 /obj/structure/sign/christmas/lights{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "cPF" = (
 /turf/simulated/floor/carpet/turcarpet,
 /area/casino/north_foyer)
@@ -3199,7 +3199,7 @@
 /turf/simulated/floor/glass{
 	desc = "A glassy floor with simulated space, deceptively fragile looking as if jumping may break the glass."
 	},
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "cXe" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3419,7 +3419,7 @@
 	color = "grey"
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "djf" = (
 /obj/machinery/shower{
 	pixel_y = 16
@@ -3544,7 +3544,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/brown,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "dnS" = (
 /obj/random/plushie,
 /obj/machinery/light{
@@ -3580,7 +3580,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "dqL" = (
 /obj/structure/bed/chair/comfy/red{
 	dir = 4
@@ -3594,7 +3594,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "drX" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/disposal/deliveryChute{
@@ -3626,7 +3626,7 @@
 /area/casino/lodge)
 "dtg" = (
 /turf/simulated/wall/golddiamond,
-/area/casino/dorms/dorm_hall)
+/area/casino/dorm_hall)
 "dtC" = (
 /obj/structure/flora/tree/pine{
 	icon_state = "pine_2"
@@ -4000,7 +4000,7 @@
 /turf/simulated/floor/wood/alt{
 	color = "red"
 	},
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "dOM" = (
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/full,
@@ -4071,7 +4071,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "dSU" = (
 /obj/effect/effect/snow,
 /turf/simulated/floor/outdoors/dirt{
@@ -4110,7 +4110,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "dUH" = (
 /obj/structure/sign/christmas/wreath{
 	dir = 4
@@ -4282,7 +4282,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/gaycarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "ebH" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 1
@@ -4488,7 +4488,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "eox" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -4593,7 +4593,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "ewj" = (
 /mob/living/simple_mob/animal/sif/kururak/hibernate,
 /turf/simulated/floor/outdoors/dirt{
@@ -4737,7 +4737,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "eBI" = (
 /obj/structure/flora/grass/both,
 /obj/structure/flora/grass/both,
@@ -4990,7 +4990,7 @@
 	anchored = 1
 	},
 /turf/simulated/floor/wood/sif,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "eMt" = (
 /obj/machinery/vending/wardrobe/lawdrobe{
 	req_access = null
@@ -5531,7 +5531,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "frV" = (
 /obj/structure/flora/rocks2,
 /obj/structure/flora/ausbushes/brflowers,
@@ -5697,7 +5697,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "fCR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5909,7 +5909,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "fNn" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 8
@@ -6067,7 +6067,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "fZr" = (
 /obj/machinery/power/terminal{
 	dir = 4
@@ -6385,7 +6385,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "glB" = (
 /obj/machinery/slot_machine,
 /obj/machinery/light{
@@ -7006,7 +7006,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/gaycarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "gUF" = (
 /obj/item/storage/pill_bottle/dice{
 	pixel_x = -8;
@@ -7080,7 +7080,7 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "gWU" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -7098,7 +7098,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/carpet/purcarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "gXs" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/toy/eight_ball/conch,
@@ -7705,7 +7705,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "hBn" = (
 /obj/machinery/light{
 	dir = 4
@@ -8167,7 +8167,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "hTk" = (
 /turf/simulated/floor/outdoors/grass/heavy{
 	outdoors = 0
@@ -8654,7 +8654,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/carpet/purcarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "iif" = (
 /obj/effect/mist,
 /turf/simulated/floor/water/pool,
@@ -8741,7 +8741,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "ioV" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/ammo_magazine/cell_mag/combat,
@@ -8764,7 +8764,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/carpet/purcarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "irj" = (
 /obj/machinery/optable,
 /turf/simulated/floor/tiled/white{
@@ -8890,7 +8890,7 @@
 "izf" = (
 /obj/structure/casino_table/roulette_table,
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "izq" = (
 /turf/simulated/floor/fakesnow{
 	icon_state = "ice_dark"
@@ -8942,7 +8942,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/carpet/brown,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "iCz" = (
 /obj/machinery/light{
 	dir = 8
@@ -8993,7 +8993,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/gaycarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "iEq" = (
 /obj/structure/flora/grass/both,
 /turf/simulated/floor/outdoors/snow/sif/planetuse{
@@ -9120,7 +9120,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "iOn" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/laundry_basket,
@@ -9255,7 +9255,7 @@
 /turf/simulated/floor/wood/alt{
 	color = "red"
 	},
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "iYM" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 1
@@ -9287,7 +9287,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "iZv" = (
 /obj/structure/table/glass,
 /obj/item/reagent_containers/food/condiment/small/packet/coffee{
@@ -9613,7 +9613,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/wood/sif,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "joZ" = (
 /turf/simulated/floor/carpet/oracarpet,
 /area/casino/north_foyer)
@@ -9681,7 +9681,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "jvG" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 8
@@ -9904,7 +9904,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "jHj" = (
 /obj/item/bikehorn/rubberducky/red{
 	color = "black";
@@ -10120,7 +10120,7 @@
 /area/casino/south_foyer)
 "jSE" = (
 /turf/simulated/floor/carpet/gaycarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "jSS" = (
 /obj/structure/bed/chair/oldsofa{
 	dir = 4
@@ -10189,7 +10189,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "jVj" = (
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/outdoors/grass/heavy{
@@ -10509,7 +10509,7 @@
 	},
 /obj/item/deck/cards/casino,
 /turf/simulated/floor/carpet/gaycarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "kmq" = (
 /obj/effect/spresent,
 /obj/structure/flora/lily3,
@@ -10700,7 +10700,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/gaycarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "kwT" = (
 /obj/machinery/light,
 /turf/simulated/floor/glass{
@@ -10715,7 +10715,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "kyd" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -10948,7 +10948,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "kLf" = (
 /turf/unsimulated/mineral,
 /area/casino/wilderness)
@@ -11697,7 +11697,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet/brown,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "lvi" = (
 /obj/structure/railing/grey{
 	color = "yellow"
@@ -11989,7 +11989,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "lJQ" = (
 /obj/machinery/media/jukebox/casinojukebox{
 	pixel_y = -1
@@ -12094,7 +12094,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "lPv" = (
 /obj/structure/bonfire/permanent/sifwood,
 /turf/simulated/floor/outdoors/dirt{
@@ -12377,7 +12377,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "mcY" = (
 /obj/effect/floor_decal/spline/fancy/wood/three_quarters,
 /obj/structure/stripper_pole,
@@ -12562,7 +12562,7 @@
 "mka" = (
 /obj/structure/table/gamblingtable,
 /turf/simulated/floor/carpet/gaycarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "mku" = (
 /obj/structure/bed/chair/oldsofa{
 	dir = 4
@@ -12827,7 +12827,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "mzG" = (
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal/deliveryChute{
@@ -12955,7 +12955,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/purcarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "mCR" = (
 /obj/machinery/vending/cigarette,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -13093,7 +13093,7 @@
 	},
 /obj/machinery/media/jukebox/casinojukebox,
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "mHV" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/disposal/deliveryChute{
@@ -13260,7 +13260,7 @@
 /area/casino/south_foyer)
 "mSx" = (
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_hall)
+/area/casino/dorm_hall)
 "mSM" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -13451,7 +13451,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/carpet/gaycarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "nch" = (
 /obj/structure/window/phoronreinforced,
 /obj/structure/table/bench/wooden,
@@ -13497,7 +13497,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "nee" = (
 /obj/structure/flora/lily2,
 /obj/structure/sign/christmas/lights{
@@ -13813,7 +13813,7 @@
 /turf/simulated/floor/glass{
 	desc = "A glassy floor with simulated space, deceptively fragile looking as if jumping may break the glass."
 	},
-/area/casino/dorms/dorm_hall)
+/area/casino/dorm_hall)
 "nxi" = (
 /obj/structure/bed/chair/bar_stool,
 /obj/effect/floor_decal/spline/fancy{
@@ -14000,7 +14000,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/carpet/purcarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "nES" = (
 /turf/unsimulated/mineral,
 /area/casino/disposals_maze)
@@ -14056,7 +14056,7 @@
 "nHY" = (
 /obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "nIl" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -14071,7 +14071,7 @@
 "nIs" = (
 /obj/effect/floor_decal/spline/plain/three_quarters,
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_hall)
+/area/casino/dorm_hall)
 "nIw" = (
 /obj/structure/disposalpipe/segment,
 /turf/unsimulated/mineral,
@@ -14098,7 +14098,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet/gaycarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "nJA" = (
 /obj/machinery/bodyscanner,
 /obj/machinery/light{
@@ -14122,7 +14122,7 @@
 	color = "grey"
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "nKZ" = (
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -14148,7 +14148,7 @@
 /turf/simulated/floor/glass{
 	desc = "A glassy floor with simulated space, deceptively fragile looking as if jumping may break the glass."
 	},
-/area/casino/dorms/dorm_hall)
+/area/casino/dorm_hall)
 "nLZ" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/water{
@@ -14258,7 +14258,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/carpet/gaycarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "nOW" = (
 /obj/item/gun/projectile/shotgun/doublebarrel,
 /obj/item/tool/screwdriver,
@@ -14556,7 +14556,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "nZU" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -14627,7 +14627,7 @@
 /turf/simulated/floor/wood/alt{
 	color = "red"
 	},
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "ogc" = (
 /turf/simulated/wall/log_sif,
 /area/casino/dragon_vault)
@@ -14849,7 +14849,7 @@
 /obj/item/a_gift,
 /obj/item/a_gift,
 /turf/simulated/floor/wood/sif,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "orx" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -14901,7 +14901,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "otB" = (
 /obj/structure/bed/chair/wood,
 /turf/simulated/floor/wood/sif,
@@ -15219,7 +15219,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "oKB" = (
 /obj/machinery/disposal,
 /turf/simulated/floor/wood/sif,
@@ -15321,7 +15321,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/gaycarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "oSa" = (
 /obj/item/juke_remote,
 /turf/simulated/floor/wood/alt,
@@ -15542,7 +15542,7 @@
 	},
 /obj/effect/floor_decal/spline/plain/three_quarters,
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_hall)
+/area/casino/dorm_hall)
 "oZJ" = (
 /obj/item/glass_jar/fish,
 /turf/simulated/floor/wood/sif,
@@ -16092,7 +16092,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "pAP" = (
 /obj/item/pickaxe/silver,
 /turf/simulated/floor/wood/sif,
@@ -16776,7 +16776,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "qdt" = (
 /obj/structure/bed/chair/sofa/corner/yellow{
 	dir = 4
@@ -16838,7 +16838,7 @@
 "qfO" = (
 /obj/machinery/slot_machine,
 /turf/simulated/wall/golddiamond,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "qgp" = (
 /obj/structure/window/phoronreinforced{
 	dir = 8
@@ -16880,7 +16880,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "qiv" = (
 /obj/machinery/chem_master/condimaster{
 	name = "CondiMaster Neo"
@@ -16942,7 +16942,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/brown,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "qlR" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/stack/material/log/sif{
@@ -17177,7 +17177,7 @@
 	},
 /obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "qwU" = (
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -17753,7 +17753,7 @@
 	},
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "rfT" = (
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/outdoors/dirt{
@@ -17951,7 +17951,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/purcarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "rlu" = (
 /obj/structure/table/glass,
 /obj/item/camera,
@@ -18453,7 +18453,7 @@
 /obj/structure/table/marble,
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "rJY" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -18503,7 +18503,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/brown,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "rNr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -18839,7 +18839,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "rYL" = (
 /obj/structure/table/fancyblack,
 /obj/random/action_figure,
@@ -19283,7 +19283,7 @@
 "swR" = (
 /obj/structure/casino_table/roulette_chart,
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "swT" = (
 /obj/item/juke_remote,
 /turf/simulated/floor/wood/sif,
@@ -19300,7 +19300,7 @@
 "sxf" = (
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_hall)
+/area/casino/dorm_hall)
 "sxl" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 8
@@ -19313,14 +19313,14 @@
 	dir = 10
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "syl" = (
 /obj/structure/curtain/open/bed{
 	name = "casino curtain"
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/gaycarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "sym" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
@@ -19347,7 +19347,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "sAY" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 6
@@ -19495,7 +19495,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "sGQ" = (
 /obj/structure/bed/chair/oldsofa/left{
 	dir = 8
@@ -19560,7 +19560,7 @@
 /area/casino/dorms/dorm10)
 "sIe" = (
 /turf/simulated/floor/wood/sif,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "sIx" = (
 /obj/structure/cliff/automatic{
 	dir = 4
@@ -19891,7 +19891,7 @@
 /turf/simulated/floor/glass{
 	desc = "A glassy floor with simulated space, deceptively fragile looking as if jumping may break the glass."
 	},
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "sZt" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 6
@@ -19924,7 +19924,7 @@
 	pixel_y = 5
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "sZP" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/effect/snow,
@@ -20036,7 +20036,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/blucarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "tdH" = (
 /obj/machinery/disposal/deliveryChute{
 	dir = 8
@@ -20416,7 +20416,7 @@
 "tuj" = (
 /obj/effect/spider/stickyweb,
 /turf/simulated/wall/golddiamond,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "tuT" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -21531,7 +21531,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "uxf" = (
 /obj/item/toy/eight_ball,
 /obj/structure/table/hardwoodtable,
@@ -21670,7 +21670,7 @@
 /turf/simulated/floor/cult{
 	icon_state = "cult-narsie"
 	},
-/area/casino/dorms/dorm_hall)
+/area/casino/dorm_hall)
 "uDz" = (
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/fakesnow{
@@ -21761,7 +21761,7 @@
 /turf/simulated/floor/wood/alt{
 	color = "red"
 	},
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "uGN" = (
 /mob/living/simple_mob/vore/vore_hostile/abyss_lurker{
 	dir = 8
@@ -21967,7 +21967,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "uNS" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 8;
@@ -22020,7 +22020,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/carpet/brown,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "uRE" = (
 /obj/effect/spider/stickyweb,
 /obj/effect/weaversilk/wall,
@@ -22864,7 +22864,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood/sif,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "vHd" = (
 /obj/structure/sign/christmas/lights{
 	dir = 4
@@ -22964,13 +22964,13 @@
 /turf/simulated/floor/wood/alt{
 	color = "red"
 	},
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "vQU" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "vRM" = (
 /obj/structure/safe/floor{
 	pixel_x = -32
@@ -23266,7 +23266,7 @@
 	},
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "vYS" = (
 /obj/structure/salvageable/server,
 /turf/simulated/floor/tiled/techfloor,
@@ -23458,7 +23458,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/wood/sif,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "wjH" = (
 /obj/machinery/atm{
 	pixel_x = -32
@@ -23638,7 +23638,7 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "wrI" = (
 /obj/structure/table/glass,
 /obj/item/reagent_containers/food/drinks/cup{
@@ -23672,7 +23672,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/purcarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "wsi" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -23987,7 +23987,7 @@
 "wKa" = (
 /obj/machinery/slot_machine,
 /turf/simulated/wall/golddiamond,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "wMf" = (
 /obj/item/bone/arm,
 /turf/simulated/floor/flesh/mover{
@@ -24251,7 +24251,7 @@
 /turf/simulated/floor/glass{
 	desc = "A glassy floor with simulated space, deceptively fragile looking as if jumping may break the glass."
 	},
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "wYR" = (
 /obj/structure/railing{
 	dir = 4
@@ -24482,7 +24482,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/bronze,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "xjS" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -24701,7 +24701,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/brown,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "xtx" = (
 /obj/machinery/power/smes/buildable,
 /obj/structure/cable/green{
@@ -24719,7 +24719,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "xun" = (
 /obj/structure/sign/christmas/wreath{
 	dir = 4
@@ -24823,7 +24823,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "xAm" = (
 /obj/structure/table/rack/shelf,
 /obj/item/towel/random{
@@ -24918,7 +24918,7 @@
 "xBX" = (
 /obj/structure/casino_table/roulette_table,
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "xCx" = (
 /obj/structure/bed/chair/sofa/left/yellow{
 	dir = 8
@@ -24995,7 +24995,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet/brown,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "xFu" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/sif{
@@ -25203,7 +25203,7 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/oracarpet,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "xVy" = (
 /obj/structure/flora/grass/brown,
 /mob/living/simple_mob/vore/rabbit/white,
@@ -25288,7 +25288,7 @@
 /area/casino/north_foyer)
 "ybN" = (
 /turf/simulated/wall/golddiamond,
-/area/casino/dorms/dorm_north_foyer)
+/area/casino/dorm_north_foyer)
 "ycK" = (
 /obj/machinery/vending/entertainer,
 /turf/simulated/floor/wood/alt/parquet,
@@ -25321,7 +25321,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/cult,
-/area/casino/dorms/dorm_south_foyer)
+/area/casino/dorm_south_foyer)
 "yeg" = (
 /obj/effect/weaversilk/floor,
 /obj/item/storage/vore_egg/bugcocoon,
