@@ -2644,6 +2644,11 @@
 #include "code\modules\clothing\masks\breath_vr.dm"
 #include "code\modules\clothing\masks\gasmask.dm"
 #include "code\modules\clothing\masks\gasmask_vr.dm"
+<<<<<<< HEAD
+=======
+#include "code\modules\clothing\masks\hailer.dm"
+#include "code\modules\clothing\masks\masquerade_mask.dm"
+>>>>>>> bfae150289 (Ports over masquerade masks from Nova Sector (#18856))
 #include "code\modules\clothing\masks\miscellaneous.dm"
 #include "code\modules\clothing\masks\miscellaneous_vr.dm"
 #include "code\modules\clothing\masks\shiny_vr.dm"
