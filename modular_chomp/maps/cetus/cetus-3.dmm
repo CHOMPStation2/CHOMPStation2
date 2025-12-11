@@ -222,9 +222,6 @@
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/jrthreeport)
-"aaA" = (
-/turf/simulated/floor/tiled,
-/area/space)
 "aaB" = (
 /turf/simulated/wall/solidrock{
 	blocks_nonghost_incorporeal = 1
@@ -45000,7 +44997,7 @@ mco
 mco
 mco
 mco
-aaA
+mco
 mco
 mco
 mco
