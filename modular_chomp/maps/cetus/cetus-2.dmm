@@ -799,13 +799,13 @@
 	blocks_nonghost_incorporeal = 1
 	},
 /area/crew_quarters/cetus/atrium/primary)
-"abx" = (
+"abw" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/atrium/primary)
-"aby" = (
+"abx" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 4
 	},
@@ -815,13 +815,13 @@
 	},
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/atrium/primary)
-"abz" = (
+"aby" = (
 /obj/structure/event/present{
 	pixel_y = 13
 	},
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/atrium/primary)
-"abA" = (
+"abz" = (
 /obj/structure/event/present{
 	pixel_y = 13;
 	pixel_x = -19
@@ -831,20 +831,20 @@
 	},
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/atrium/primary)
-"abB" = (
+"abA" = (
 /obj/structure/event/present{
 	pixel_y = 9;
 	pixel_x = -19
 	},
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/atrium/primary)
-"abC" = (
+"abB" = (
 /turf/unsimulated/wall/fakeglass{
 	blocks_nonghost_incorporeal = 1;
 	block_tele = 1
 	},
 /area/crew_quarters/cetus/atrium/primary)
-"abD" = (
+"abC" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 10
 	},
@@ -854,7 +854,7 @@
 	blocks_nonghost_incorporeal = 1
 	},
 /area/crew_quarters/cetus/atrium/primary)
-"abE" = (
+"abD" = (
 /obj/effect/floor_decal/techfloor/orange,
 /turf/unsimulated/floor{
 	icon_state = "dark";
@@ -862,7 +862,7 @@
 	blocks_nonghost_incorporeal = 1
 	},
 /area/crew_quarters/cetus/atrium/primary)
-"abF" = (
+"abE" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 6
 	},
@@ -872,7 +872,7 @@
 	blocks_nonghost_incorporeal = 1
 	},
 /area/crew_quarters/cetus/atrium/primary)
-"abG" = (
+"abF" = (
 /obj/structure/table/bench/wooden,
 /obj/structure/sign/christmas/lights{
 	dir = 8;
@@ -880,24 +880,24 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
-"abH" = (
+"abG" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
 /obj/structure/event/present,
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/atrium/primary)
-"abI" = (
+"abH" = (
 /obj/structure/flora/tree/pine/xmas/presents,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 4
 	},
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/atrium/primary)
-"abJ" = (
+"abI" = (
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/atrium/primary)
-"abK" = (
+"abJ" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -910,16 +910,27 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
-"abL" = (
+"abK" = (
 /turf/unsimulated/wall/fakeglass2{
 	block_tele = 1;
 	blocks_nonghost_incorporeal = 1
 	},
 /area/crew_quarters/cetus/atrium/primary)
-"abM" = (
+"abL" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
+/turf/unsimulated/floor{
+	icon_state = "dark";
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
+/area/crew_quarters/cetus/atrium/primary)
+"abM" = (
+/obj/effect/simple_portal/linked{
+	portal_id = "casino"
+	},
+/obj/effect/floor_decal/plaque,
 /turf/unsimulated/floor{
 	icon_state = "dark";
 	block_tele = 1;
@@ -945,17 +956,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/Brig)
 "abO" = (
-/obj/effect/simple_portal/linked{
-	portal_id = "casino"
-	},
-/obj/effect/floor_decal/plaque,
-/turf/unsimulated/floor{
-	icon_state = "dark";
-	block_tele = 1;
-	blocks_nonghost_incorporeal = 1
-	},
-/area/crew_quarters/cetus/atrium/primary)
-"abP" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
 	},
@@ -965,7 +965,7 @@
 	blocks_nonghost_incorporeal = 1
 	},
 /area/crew_quarters/cetus/atrium/primary)
-"abQ" = (
+"abP" = (
 /obj/structure/table/bench/wooden,
 /obj/structure/sign/christmas/lights{
 	dir = 1;
@@ -977,7 +977,7 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
-"abR" = (
+"abQ" = (
 /obj/machinery/light/spot{
 	dir = 4
 	},
@@ -987,17 +987,21 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
-"abS" = (
+"abR" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/atrium/primary)
-"abT" = (
+"abS" = (
 /obj/structure/micro_tunnel/random{
 	dir = 1
 	},
 /turf/simulated/floor/fakesnow,
+/area/crew_quarters/cetus/atrium/primary)
+"abT" = (
+/obj/effect/floor_decal/grass_edge,
+/turf/simulated/open,
 /area/crew_quarters/cetus/atrium/primary)
 "abU" = (
 /turf/unsimulated/wall/fakeglass{
@@ -1350,10 +1354,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Reception)
-"acC" = (
-/obj/effect/floor_decal/grass_edge,
-/turf/simulated/open,
-/area/crew_quarters/cetus/atrium/primary)
 "acU" = (
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 10
@@ -106293,12 +106293,12 @@ ozP
 kDK
 kDK
 kDK
-abK
-abK
-abK
+abJ
+abJ
+abJ
 sCl
-abK
-abK
+abJ
+abJ
 clP
 ntY
 wGZ
@@ -107329,7 +107329,7 @@ aci
 qyN
 acd
 qWu
-acC
+abT
 qWu
 qWu
 qWu
@@ -108362,8 +108362,8 @@ qWu
 vCU
 abs
 abU
-abL
-abC
+abK
+abB
 abs
 abo
 abi
@@ -108620,8 +108620,8 @@ qWu
 qWu
 abY
 abV
-abM
-abD
+abL
+abC
 abt
 abp
 abi
@@ -108878,8 +108878,8 @@ qWu
 qWu
 abZ
 abW
-abO
-abE
+abM
+abD
 abv
 abp
 abi
@@ -109136,8 +109136,8 @@ qWu
 qWu
 aca
 abX
-abP
-abF
+abO
+abE
 abt
 abp
 cZd
@@ -109394,8 +109394,8 @@ qWu
 vCU
 abs
 abU
-abL
-abC
+abK
+abB
 abs
 abq
 abj
@@ -109652,9 +109652,9 @@ qWu
 qWu
 acb
 qWu
-abx
-abx
-abx
+abw
+abw
+abw
 iVK
 abj
 abe
@@ -109910,8 +109910,8 @@ qWu
 qWu
 qWu
 xDc
-abQ
-abG
+abP
+abF
 tdd
 vmM
 abk
@@ -110168,9 +110168,9 @@ qWu
 qWu
 qWu
 xDc
-abR
-abH
-aby
+abQ
+abG
+abx
 abr
 wKK
 agq
@@ -110426,9 +110426,9 @@ nvC
 qWu
 qWu
 xDc
-abS
-abI
-abz
+abR
+abH
+aby
 abr
 wKK
 agq
@@ -110684,9 +110684,9 @@ snK
 uQN
 iVK
 iVK
-abT
+abS
 unF
-abA
+abz
 abr
 wKK
 agq
@@ -110940,11 +110940,11 @@ aKg
 oHE
 fra
 uQN
-abJ
-abJ
-abJ
-abJ
-abB
+abI
+abI
+abI
+abI
+abA
 ikE
 fhQ
 agq
