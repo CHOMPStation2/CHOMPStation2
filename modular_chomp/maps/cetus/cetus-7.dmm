@@ -720,11 +720,6 @@
 /obj/machinery/vending/boozeomat,
 /turf/simulated/shuttle/wall/dark,
 /area/shuttle/administration)
-"ahW" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/leafybush,
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/shadekin)
 "aib" = (
 /obj/machinery/mech_recharger,
 /turf/unsimulated/floor{
@@ -1469,11 +1464,6 @@
 	color = "teal"
 	},
 /area/holodeck/source_chess)
-"aVA" = (
-/obj/structure/flora/ausbushes/leafybush,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/shadekin)
 "aWB" = (
 /obj/machinery/light{
 	dir = 8
@@ -1679,11 +1669,6 @@
 	pixel_y = 5
 	},
 /turf/simulated/floor/wood,
-/area/shadekin)
-"bhX" = (
-/obj/structure/flora/mushroom,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/mud/cetus,
 /area/shadekin)
 "bjw" = (
 /obj/machinery/sleeper{
@@ -1971,11 +1956,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership/elite_squad)
-"bwq" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/grass2,
-/area/shadekin)
 "bws" = (
 /obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor/carpet/graycarpet,
@@ -2070,11 +2050,10 @@
 	},
 /area/centcom/specops)
 "bDk" = (
-/obj/structure/flora/underwater/grass1,
 /obj/machinery/light/fluorescent{
 	dir = 1
 	},
-/turf/simulated/floor/water/indoors/station,
+/turf/simulated/floor/outdoors/ice/turfpack/station,
 /area/shadekin)
 "bDI" = (
 /turf/unsimulated/floor{
@@ -2337,11 +2316,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/neutral,
-/area/shadekin)
-"bOS" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/lavendergrass,
-/turf/simulated/floor/outdoors/mud/cetus,
 /area/shadekin)
 "bPm" = (
 /obj/structure/table/reinforced,
@@ -2736,9 +2710,11 @@
 /area/centcom/bar)
 "ckJ" = (
 /obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/leafybush,
-/obj/structure/flora/ausbushes/lavendergrass,
-/turf/simulated/floor/grass2,
+/obj/structure/flora/tree/winter1{
+	pixel_y = -2;
+	pixel_x = -61
+	},
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/shadekin)
 "ckL" = (
 /obj/machinery/autolathe{
@@ -5234,7 +5210,7 @@
 /area/centcom/terminal)
 "eSU" = (
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/mud/cetus,
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/shadekin)
 "eTi" = (
 /obj/structure/table/rack/gun_rack/steel,
@@ -5553,9 +5529,8 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "frQ" = (
-/obj/structure/flora/underwater/plant3,
 /obj/machinery/light/fluorescent,
-/turf/simulated/floor/water/indoors/station,
+/turf/simulated/floor/outdoors/ice/turfpack/station,
 /area/shadekin)
 "fsD" = (
 /obj/machinery/door/airlock/maintenance/int{
@@ -5622,11 +5597,6 @@
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/response_ship)
-"fxD" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/palebush,
-/turf/simulated/floor/grass2,
-/area/shadekin)
 "fxL" = (
 /obj/item/clothing/mask/gas/swat/vox,
 /turf/unsimulated/floor{
@@ -6093,7 +6063,7 @@
 /area/holodeck/source_beach)
 "ggh" = (
 /obj/structure/lattice,
-/turf/simulated/floor/water/indoors/station,
+/turf/simulated/floor/outdoors/ice/turfpack/station,
 /area/shadekin)
 "ggj" = (
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -6159,10 +6129,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/main_hall)
-"gjv" = (
-/obj/structure/flora/lily2,
-/turf/simulated/floor/water/indoors/station,
-/area/shadekin)
 "gjw" = (
 /mob/living/simple_mob/animal/passive/cat/kitten{
 	name = "Enola"
@@ -6290,7 +6256,7 @@
 /turf/simulated/floor/holofloor/desert,
 /area/holodeck/source_picnicarea)
 "gpK" = (
-/turf/simulated/floor/water/indoors/station,
+/turf/simulated/floor/outdoors/ice/turfpack/station,
 /area/shadekin)
 "gqt" = (
 /obj/machinery/door/airlock/glass,
@@ -8795,11 +8761,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/main_hall)
-"iMC" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/leafybush,
-/turf/simulated/floor/grass2,
-/area/shadekin)
 "iMR" = (
 /obj/item/ore,
 /turf/unsimulated/floor{
@@ -9073,10 +9034,6 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/escape/centcom)
-"jcu" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/grass2,
-/area/shadekin)
 "jee" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/unsimulated/floor{
@@ -9939,10 +9896,6 @@
 /obj/structure/holostool,
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_theatre)
-"jTV" = (
-/obj/structure/flora/underwater/grass1,
-/turf/simulated/floor/water/indoors/station,
-/area/shadekin)
 "jUW" = (
 /obj/machinery/suit_cycler/syndicate{
 	locked = 0
@@ -11928,16 +11881,6 @@
 "lRp" = (
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_theatre)
-"lRq" = (
-/obj/structure/flora/ausbushes/fernybush,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/grass2,
-/area/shadekin)
-"lRw" = (
-/obj/structure/flora/underwater/seaweed1,
-/obj/structure/flora/underwater/grass1,
-/turf/simulated/floor/water/indoors/station,
-/area/shadekin)
 "lRH" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
@@ -12278,10 +12221,6 @@
 	name = "plating"
 	},
 /area/wizard_station)
-"mkR" = (
-/obj/structure/flora/underwater/plant1,
-/turf/simulated/floor/water/indoors/station,
-/area/shadekin)
 "mlz" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1381;
@@ -12416,10 +12355,6 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/shuttle/plating,
 /area/shuttle/syndicate)
-"msJ" = (
-/obj/structure/flora/underwater/seaweed3,
-/turf/simulated/floor/water/indoors/station,
-/area/shadekin)
 "mui" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -12486,10 +12421,6 @@
 	icon_state = "white"
 	},
 /area/shuttle/trade)
-"mxa" = (
-/obj/structure/flora/tree/jungle_small,
-/turf/simulated/floor/grass2,
-/area/shadekin)
 "mxg" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -13387,11 +13318,6 @@
 "ntO" = (
 /turf/simulated/floor/holofloor/reinforced,
 /area/holodeck/source_plating)
-"ntW" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/reedbush,
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/shadekin)
 "nub" = (
 /obj/machinery/computer/station_alert/all,
 /obj/structure/window/reinforced{
@@ -13608,7 +13534,7 @@
 "nFd" = (
 /obj/structure/lattice,
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/mud/cetus,
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/shadekin)
 "nFg" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
@@ -14633,10 +14559,6 @@
 /obj/structure/shuttle/window,
 /turf/simulated/shuttle/plating,
 /area/shuttle/transport1/centcom)
-"oUd" = (
-/obj/structure/flora/underwater/plant2,
-/turf/simulated/floor/water/indoors/station,
-/area/shadekin)
 "oUh" = (
 /obj/effect/wingrille_spawn/reinforced/crescent,
 /turf/unsimulated/floor{
@@ -15546,12 +15468,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/shadekin)
-"qaR" = (
-/obj/structure/lattice,
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/fernybush,
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/shadekin)
 "qbl" = (
 /obj/structure/target_stake,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -15698,9 +15614,12 @@
 	},
 /area/centcom/specops)
 "qng" = (
-/obj/structure/flora/tree/jungle,
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/grass2,
+/obj/structure/flora/tree/pine/xmas/presents{
+	pixel_x = -6;
+	pixel_y = -13
+	},
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/shadekin)
 "qnI" = (
 /obj/machinery/door/airlock/multi_tile/glass{
@@ -17815,10 +17734,6 @@
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/shadekin)
-"sBo" = (
-/obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/simulated/floor/grass2,
-/area/shadekin)
 "sBy" = (
 /obj/machinery/light/yellowed{
 	dir = 1
@@ -19195,8 +19110,7 @@
 /turf/simulated/floor/plating,
 /area/shadekin)
 "ufm" = (
-/obj/structure/flora/ausbushes/leafybush,
-/turf/simulated/floor/outdoors/mud/cetus,
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/shadekin)
 "ufx" = (
 /obj/machinery/door/window/holowindoor{
@@ -20725,7 +20639,7 @@
 /area/shuttle/merchant)
 "vIG" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/simulated/floor/outdoors/mud/cetus,
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/shadekin)
 "vJB" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -20769,11 +20683,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_boxingcourt)
-"vNs" = (
-/obj/structure/lattice,
-/obj/structure/flora/lily1,
-/turf/simulated/floor/water/indoors/station,
-/area/shadekin)
 "vNt" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1381;
@@ -21573,9 +21482,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/shadekin)
-"wKW" = (
-/turf/simulated/floor/outdoors/mud/cetus,
 /area/shadekin)
 "wLc" = (
 /obj/structure/bed/chair{
@@ -62554,7 +62460,7 @@ cus
 bnU
 bnU
 bnU
-qaR
+nFd
 kTB
 kTB
 tfg
@@ -62808,8 +62714,8 @@ ydh
 ydh
 ydh
 tMW
-bwq
-sBo
+eSU
+vIG
 eSU
 bnU
 bnU
@@ -63066,12 +62972,12 @@ ydh
 ydh
 ydh
 tMW
-fxD
-ahW
+eSU
+eSU
 hel
 hel
 bnU
-aVA
+eSU
 kTB
 rTw
 tTY
@@ -63324,13 +63230,13 @@ ydh
 ydh
 ydh
 eld
-mxa
+ufm
 hel
 ggh
-vNs
-jTV
-ntW
-bhX
+ggh
+gpK
+eSU
+eSU
 lZH
 tfg
 tfg
@@ -63583,11 +63489,11 @@ ydh
 ydh
 kVf
 ckJ
-mkR
+gpK
 ggh
-jTV
-lRw
-gjv
+gpK
+gpK
+gpK
 vIG
 pKi
 eSU
@@ -63840,12 +63746,12 @@ ydh
 ydh
 tfg
 fRb
-iMC
+eSU
 gpK
-jTV
+gpK
 qng
-jcu
-jTV
+eSU
+gpK
 gpK
 pKi
 ufm
@@ -64100,10 +64006,10 @@ tfg
 kVf
 kVf
 bDk
-jTV
-lRq
+gpK
+eSU
 vIG
-jTV
+gpK
 frQ
 tTY
 tTY
@@ -64356,13 +64262,13 @@ ydh
 tfg
 ydh
 tfg
-ntW
-jTV
-jTV
-jTV
-oUd
+eSU
 gpK
-ntW
+gpK
+gpK
+gpK
+gpK
+eSU
 lRi
 tTY
 tTY
@@ -64614,11 +64520,11 @@ tfg
 tfg
 ydh
 tfg
-bOS
+eSU
 vIG
 wSi
-jTV
-msJ
+gpK
+gpK
 ggh
 nFd
 bnU
@@ -64872,7 +64778,7 @@ ydh
 ydh
 tfg
 tfg
-wKW
+ufm
 kVf
 ggh
 ggh

@@ -67,6 +67,7 @@
 #define Z_NAME_ALIAS_REDGATE				"REDGATE"
 #define Z_NAME_ALIAS_CENTCOM				"CENTRAL COMMAND"
 #define Z_NAME_ALIAS_MISC					"MISC"
+#define Z_NAME_ALIAS_CASINO					"CASINO"
 
 // Gateways (Aliased to Z_NAME_ALIAS_GATEWAY)
 #define Z_NAME_GATEWAY_CARP_FARM			"Gateway - Carp Farm"

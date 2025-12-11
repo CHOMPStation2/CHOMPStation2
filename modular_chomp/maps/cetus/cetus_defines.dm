@@ -76,7 +76,7 @@
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/shuttle/ninja, /area/thirddeck/roof, /area/hallway/secondary/entry/D2/arrivals, /area/asteroid/cetus, /area/asteroid/cetus/d1, /area/asteroid/cetus/d1/jr, /area/asteroid/cetus/d2, /area/asteroid/cetus/d2/jr, /area/asteroid/cetus/d3, /area/asteroid/cetus/d3/jr)
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber, /area/maintenance/cetus/mainsupport, /area/maintenance/cetus/auxsupport)
 
-	planet_datums_to_make = list(/datum/planet/sif, /datum/planet/thor, /datum/planet/tyr) //This must be added to load maps at round start otherwise they will have weather or sun.
+	planet_datums_to_make = list(/datum/planet/sif) //This must be added to load maps at round start otherwise they will have weather or sun.
 
 	unit_test_z_levels = list(
 		Z_LEVEL_CETUS_STATION_ONE,
@@ -93,8 +93,7 @@
 		list(Z_NAME_CETUS_TRANSIT),
 		list(Z_NAME_VR_WORLD_CH),
 		list(Z_NAME_FUELDEPOT_CH),
-		list(Z_NAME_PLANET_THOR_CH),
-		list(Z_NAME_PLANET_TYR_CH),
+		list(Z_NAME_CETUS_CASINO)
 		)
 
 	lateload_gateway = list(
@@ -261,7 +260,7 @@
 	name = Z_NAME_CETUS_TRANSIT
 	mappath = "modular_chomp/maps/cetus/cetus-8.dmm"
 	associated_map_datum = /datum/map_z_level/cetus_lateload/transit
-
+/*
 //Thor Z-Level
 /datum/map_z_level/cetus_lateload/thor
 	name = Z_NAME_PLANET_THOR_CH
@@ -279,3 +278,15 @@
 
 /datum/map_template/common_lateload/tyr
 	associated_map_datum = /datum/map_z_level/cetus_lateload/valley
+*/
+
+/datum/map_z_level/cetus_lateload/casino
+	name = Z_NAME_CETUS_CASINO
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
+	base_turf = /turf/simulated/floor/outdoors/rocks
+
+/datum/map_template/cetus_lateload/casino
+	name = Z_NAME_CETUS_CASINO
+	name_alias = Z_NAME_ALIAS_CASINO
+	mappath = "modular_chomp/maps/southern_cross/southern_cross-6.dmm" //REPLACE WITH CASINO BEFORE MERGE
+	associated_map_datum = /datum/map_z_level/cetus_lateload/casino

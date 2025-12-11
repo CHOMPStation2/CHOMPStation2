@@ -33,6 +33,8 @@
 #define Z_NAME_CETUS_MISC						"Cetus - Misc" // Aliased to Z_NAME_ALIAS_MISC
 #define Z_NAME_CETUS_CENTCOM					"Cetus - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
 #define Z_NAME_CETUS_TRANSIT					"Cetus - Transit"
+#define Z_NAME_CETUS_CASINO						"Golden Goose - Casino Dock Site"
+
 
 // Relic Base
 #define Z_LEVEL_RB_CATACOMBS				1
