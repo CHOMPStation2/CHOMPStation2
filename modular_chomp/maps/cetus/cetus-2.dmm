@@ -578,6 +578,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
+/obj/effect/floor_decal/snow/floor,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
 "abe" = (
@@ -751,11 +752,12 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain,
-/obj/machinery/door/blast/multi_tile/three_tile_hor{
-	id = "casinodoor"
-	},
 /obj/structure/sign/christmas/lights{
 	dir = 1
+	},
+/obj/machinery/door/blast/regular{
+	id = "casinodoor";
+	name = "Casino Entrance"
 	},
 /turf/unsimulated/floor{
 	icon_state = "cult";
@@ -785,26 +787,9 @@
 	dir = 1;
 	pixel_y = -2
 	},
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating";
-	block_tele = 1;
-	blocks_air = 1;
-	blocks_nonghost_incorporeal = 1
-	},
-/area/crew_quarters/cetus/atrium/primary)
-"abw" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/industrial/warning{
-	layer = 3;
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/plain,
-/obj/structure/sign/christmas/lights{
-	dir = 1
+/obj/machinery/door/blast/regular{
+	id = "casinodoor";
+	name = "Casino Entrance"
 	},
 /turf/unsimulated/floor{
 	icon_state = "cult";
@@ -963,6 +948,7 @@
 /obj/effect/simple_portal/linked{
 	portal_id = "casino"
 	},
+/obj/effect/floor_decal/plaque,
 /turf/unsimulated/floor{
 	icon_state = "dark";
 	block_tele = 1;
@@ -1364,6 +1350,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Reception)
+"acC" = (
+/obj/effect/floor_decal/grass_edge,
+/turf/simulated/open,
+/area/crew_quarters/cetus/atrium/primary)
 "acU" = (
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 10
@@ -27878,7 +27868,6 @@
 	id = "vacantcomissary";
 	name = "Comissary Shutters Control";
 	pixel_x = -26;
-	req_access = list(28);
 	pixel_y = 25
 	},
 /turf/simulated/floor/plating,
@@ -107340,7 +107329,7 @@ aci
 qyN
 acd
 qWu
-qWu
+acC
 qWu
 qWu
 qWu
@@ -109149,7 +109138,7 @@ aca
 abX
 abP
 abF
-abw
+abt
 abp
 cZd
 qwi
