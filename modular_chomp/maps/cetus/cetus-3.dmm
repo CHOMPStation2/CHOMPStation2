@@ -222,17 +222,17 @@
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/jrthreeport)
-"aaB" = (
+"aaA" = (
 /turf/simulated/wall/solidrock{
 	blocks_nonghost_incorporeal = 1
 	},
 /area/crew_quarters/cetus/atrium/primary)
-"aaC" = (
+"aaB" = (
 /turf/simulated/wall/solidrock{
 	blocks_nonghost_incorporeal = 1
 	},
 /area/security/nuke_storage)
-"aaD" = (
+"aaC" = (
 /obj/structure/sign/christmas/lights{
 	dir = 1;
 	pixel_y = 7
@@ -243,7 +243,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf3)
-"aaE" = (
+"aaD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
@@ -263,14 +263,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf3)
-"aaF" = (
+"aaE" = (
 /obj/structure/sign/christmas/lights{
 	dir = 4;
 	pixel_x = 7
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf3)
-"aaG" = (
+"aaF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
@@ -283,27 +283,27 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf3)
-"aaH" = (
+"aaG" = (
 /obj/structure/sign/christmas/lights{
 	dir = 8;
 	pixel_x = -7
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf3)
-"aaI" = (
+"aaH" = (
 /obj/structure/sign/christmas/lights{
 	dir = 8;
 	pixel_x = -7
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
-"aaJ" = (
+"aaI" = (
 /obj/structure/sign/christmas/lights{
 	pixel_y = -7
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf3)
-"aaK" = (
+"aaJ" = (
 /obj/structure/curtain/open{
 	name = "theater curtain";
 	color = "#701006";
@@ -320,7 +320,7 @@
 	},
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/theater)
-"aaL" = (
+"aaK" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -328,23 +328,23 @@
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/santaslug,
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/theater)
-"aaM" = (
+"aaL" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/theater)
-"aaN" = (
+"aaM" = (
 /obj/structure/flora/tree/pine,
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/theater)
-"aaO" = (
+"aaN" = (
 /obj/structure/flora/tree/pine/xmas/presents{
 	pixel_y = -17
 	},
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/theater)
-"aaP" = (
+"aaO" = (
 /obj/structure/lattice,
 /obj/structure/catwalk{
 	pixel_x = -1
@@ -63475,7 +63475,7 @@ uHL
 oFW
 cjF
 eyX
-aaI
+aaH
 dvB
 oCq
 sba
@@ -77159,10 +77159,10 @@ qAu
 itv
 jHs
 bHF
-aaC
 aaB
-aaB
-aaB
+aaA
+aaA
+aaA
 gxH
 aVY
 eTS
@@ -77416,11 +77416,11 @@ hjB
 xFu
 hjB
 xPI
-aaC
-aaC
 aaB
 aaB
-aaB
+aaA
+aaA
+aaA
 etf
 aVY
 ooY
@@ -77672,13 +77672,13 @@ uFG
 uFG
 uFG
 uFG
-aaC
-aaC
-aaC
 aaB
 aaB
 aaB
-aaB
+aaA
+aaA
+aaA
+aaA
 aVY
 ooY
 ooY
@@ -77930,13 +77930,13 @@ jOC
 gxH
 iKN
 lkl
-aaB
-aaB
-aaB
-aaB
-aaB
-aaB
-aaB
+aaA
+aaA
+aaA
+aaA
+aaA
+aaA
+aaA
 aVY
 ooY
 ooY
@@ -78188,13 +78188,13 @@ oYg
 oYg
 rvQ
 lkl
-aaB
-aaB
-aaB
-aaB
-aaB
-aaB
-aaB
+aaA
+aaA
+aaA
+aaA
+aaA
+aaA
+aaA
 aVY
 ooY
 ooY
@@ -94177,13 +94177,13 @@ bOu
 vGU
 eHk
 sIJ
-aaF
-aaF
+aaE
+aaE
 jSP
-aaF
+aaE
 iKg
-aaF
-aaF
+aaE
+aaE
 lgF
 soK
 jVJ
@@ -94434,7 +94434,7 @@ eWp
 bOu
 uZT
 wVQ
-aaJ
+aaI
 bGf
 bjM
 bjM
@@ -94442,7 +94442,7 @@ adx
 bjM
 bjM
 fQk
-aaD
+aaC
 lgF
 dpX
 nau
@@ -95201,7 +95201,7 @@ fDu
 iPv
 vQW
 okA
-aaP
+aaO
 wju
 kTf
 qsS
@@ -95461,8 +95461,8 @@ odi
 okA
 bdx
 wju
-aaN
-aaL
+aaM
+aaK
 gMr
 iqP
 dif
@@ -95719,8 +95719,8 @@ vQW
 okA
 wGk
 wju
-aaO
-aaM
+aaN
+aaL
 kzd
 gSg
 gOJ
@@ -96239,7 +96239,7 @@ rdX
 red
 rdX
 lyB
-aaK
+aaJ
 sUj
 sUj
 srB
@@ -96506,7 +96506,7 @@ oTi
 mGl
 mGl
 vCw
-aaE
+aaD
 sZX
 xPV
 vGU
@@ -96757,13 +96757,13 @@ bOu
 bOu
 oMe
 lAU
-aaH
-aaH
-uwS
-aaH
-kSe
-aaH
 aaG
+aaG
+uwS
+aaG
+kSe
+aaG
+aaF
 bkS
 aEE
 vGU
