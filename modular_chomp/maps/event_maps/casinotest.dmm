@@ -1,4 +1,281 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.98;
+	pixel_x = 10
+	},
+/obj/item/bedsheet/hopdouble{
+	layer = 3.88;
+	pixel_y = -6;
+	pixel_x = 20
+	},
+/obj/item/bedsheet/hopdouble{
+	layer = 3.87;
+	pixel_y = -6;
+	pixel_x = 8
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/casino/dorms/dorm5)
+"aab" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.99
+	},
+/obj/item/bedsheet/hopdouble{
+	layer = 3.89;
+	pixel_y = -6
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/casino/dorms/dorm5)
+"aac" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.98;
+	pixel_x = 10
+	},
+/obj/item/bedsheet/orangedouble{
+	layer = 3.88;
+	pixel_y = -6;
+	pixel_x = 20
+	},
+/obj/item/bedsheet/orangedouble{
+	layer = 3.87;
+	pixel_x = 8;
+	pixel_y = -6
+	},
+/turf/simulated/floor/carpet/brown,
+/area/casino/dorms/dorm6)
+"aad" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.99
+	},
+/obj/item/bedsheet/orangedouble{
+	layer = 3.89;
+	pixel_y = -6
+	},
+/turf/simulated/floor/carpet/brown,
+/area/casino/dorms/dorm6)
+"aae" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.98;
+	pixel_x = 10
+	},
+/obj/item/bedsheet/cedouble{
+	pixel_y = -6;
+	pixel_x = 8;
+	layer = 3.87
+	},
+/obj/item/bedsheet/cedouble{
+	pixel_y = -6;
+	pixel_x = 20;
+	layer = 3.88
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/casino/dorms/dorm8)
+"aaf" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.99
+	},
+/obj/item/bedsheet/cedouble{
+	pixel_y = -6;
+	layer = 3.89
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/casino/dorms/dorm8)
+"aag" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.98;
+	pixel_x = 10
+	},
+/obj/item/bedsheet/rddouble{
+	layer = 3.87;
+	pixel_x = 8;
+	pixel_y = -6
+	},
+/obj/item/bedsheet/rddouble{
+	layer = 3.88;
+	pixel_x = 20;
+	pixel_y = -6
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/casino/dorms/dorm9)
+"aah" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.99
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_y = -6;
+	layer = 3.89
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/casino/dorms/dorm9)
+"aai" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.98;
+	pixel_x = 10
+	},
+/obj/item/bedsheet/hosdouble{
+	pixel_x = 8;
+	pixel_y = -6;
+	layer = 3.87
+	},
+/obj/item/bedsheet/hosdouble{
+	pixel_x = 20;
+	pixel_y = -6;
+	layer = 3.88
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/casino/dorms/dorm10)
+"aaj" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.99
+	},
+/obj/item/bedsheet/hosdouble{
+	pixel_y = -6;
+	layer = 3.89
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/casino/dorms/dorm10)
+"aak" = (
+/obj/structure/bed/double/padded{
+	pixel_x = 10;
+	layer = 2.99
+	},
+/obj/item/bedsheet/hopdouble{
+	layer = 3.88;
+	pixel_y = 0;
+	pixel_x = 8
+	},
+/obj/item/bedsheet/hopdouble{
+	pixel_x = 20;
+	layer = 3.89
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/casino/dorms/dorm5)
+"aal" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.98;
+	pixel_x = 10
+	},
+/obj/item/bedsheet/hosdouble{
+	layer = 3.88;
+	pixel_y = -6;
+	pixel_x = 20
+	},
+/obj/item/bedsheet/hosdouble{
+	layer = 3.87;
+	pixel_y = -6;
+	pixel_x = 8
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/casino/dorms/dorm1)
+"aam" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.99
+	},
+/obj/item/bedsheet/hosdouble{
+	layer = 3.89;
+	pixel_y = -6
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/casino/dorms/dorm1)
+"aan" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.98;
+	pixel_x = 10
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_y = -6;
+	pixel_x = 20;
+	layer = 3.88
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_x = 8;
+	pixel_y = -6;
+	layer = 3.87
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/casino/dorms/dorm2)
+"aao" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.99
+	},
+/obj/item/bedsheet/rddouble{
+	layer = 3.89;
+	pixel_y = -6
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/casino/dorms/dorm2)
+"aap" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.98;
+	pixel_x = 10
+	},
+/obj/item/bedsheet/cedouble{
+	layer = 3.87;
+	pixel_y = -6;
+	pixel_x = 8
+	},
+/obj/item/bedsheet/cedouble{
+	layer = 3.88;
+	pixel_y = -6;
+	pixel_x = 20
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/casino/dorms/dorm3)
+"aaq" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.99
+	},
+/obj/item/bedsheet/cedouble{
+	layer = 3.89;
+	pixel_y = -6
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/casino/dorms/dorm3)
+"aar" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.98;
+	pixel_x = 10
+	},
+/obj/item/bedsheet/orangedouble{
+	layer = 3.87;
+	pixel_y = -6;
+	pixel_x = 8
+	},
+/obj/item/bedsheet/orangedouble{
+	layer = 3.88;
+	pixel_y = -6;
+	pixel_x = 20
+	},
+/turf/simulated/floor/carpet/brown,
+/area/casino/dorms/dorm4)
+"aas" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.99
+	},
+/obj/item/bedsheet/orangedouble{
+	layer = 3.89;
+	pixel_y = -6
+	},
+/turf/simulated/floor/carpet/brown,
+/area/casino/dorms/dorm4)
 "aat" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -6,6 +283,61 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet,
 /area/casino/lodge)
+"aau" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.98;
+	pixel_x = 10
+	},
+/obj/item/bedsheet/hopdouble{
+	pixel_x = 8;
+	pixel_y = -6;
+	layer = 3.87
+	},
+/obj/item/bedsheet/hopdouble{
+	pixel_x = 20;
+	pixel_y = -6;
+	layer = 3.88
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/casino/dorms/dorm5)
+"aav" = (
+/obj/machinery/atm,
+/turf/simulated/wall/golddiamond,
+/area/casino/south_foyer)
+"aaw" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.98;
+	pixel_x = 10
+	},
+/obj/item/bedsheet/hosdouble{
+	pixel_x = 8;
+	pixel_y = -6;
+	layer = 3.87
+	},
+/obj/item/bedsheet/hosdouble{
+	pixel_x = 20;
+	pixel_y = -6;
+	layer = 3.88
+	},
+/turf/simulated/floor/carpet,
+/area/casino/helm)
+"aax" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -6;
+	layer = 2.99
+	},
+/obj/item/bedsheet/hosdouble{
+	pixel_y = -6;
+	layer = 3.89
+	},
+/turf/simulated/floor/carpet,
+/area/casino/helm)
+"aay" = (
+/obj/machinery/atm,
+/turf/simulated/wall/golddiamond,
+/area/casino/north_foyer)
 "abk" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -394,16 +726,15 @@
 "anV" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
+	layer = 2.99
 	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+/obj/item/bedsheet/orangedouble{
+	pixel_x = 20;
+	layer = 3.89
 	},
-/obj/item/bedsheet/hosdouble{
+/obj/item/bedsheet/orangedouble{
+	layer = 3.88;
 	pixel_x = 8
-	},
-/obj/item/bedsheet/hosdouble{
-	pixel_x = 20
 	},
 /turf/simulated/floor/carpet/brown,
 /area/casino/dorms/dorm6)
@@ -742,27 +1073,7 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/casino/south_foyer)
 "aFB" = (
-/obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
 /obj/structure/bed/double/padded,
-/obj/item/bedsheet/cedouble{
-	pixel_y = 26;
-	pixel_x = -24
-	},
-/obj/item/bedsheet/cedouble{
-	pixel_y = 26;
-	pixel_x = -12
-	},
-/obj/item/bedsheet/cedouble{
-	pixel_y = 26
-	},
-/obj/item/bedsheet/cedouble{
-	pixel_x = -24
-	},
-/obj/item/bedsheet/cedouble{
-	pixel_x = -12
-	},
 /obj/item/bedsheet/cedouble,
 /turf/simulated/floor/carpet/turcarpet,
 /area/casino/dorms/dorm8)
@@ -3281,10 +3592,15 @@
 "daI" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
+	layer = 2.99
 	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+/obj/item/bedsheet/cedouble{
+	pixel_x = 20;
+	layer = 3.89
+	},
+/obj/item/bedsheet/cedouble{
+	layer = 3.88;
+	pixel_x = 8
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/casino/dorms/dorm3)
@@ -3693,28 +4009,7 @@
 /turf/simulated/floor/cult,
 /area/casino/south_foyer)
 "dxk" = (
-/obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
 /obj/structure/bed/double/padded,
-/obj/item/bedsheet/hosdouble,
-/obj/item/bedsheet/orangedouble{
-	pixel_y = 26;
-	pixel_x = -24
-	},
-/obj/item/bedsheet/orangedouble{
-	pixel_x = -12;
-	pixel_y = 26
-	},
-/obj/item/bedsheet/orangedouble{
-	pixel_y = 26
-	},
-/obj/item/bedsheet/orangedouble{
-	pixel_x = -24
-	},
-/obj/item/bedsheet/orangedouble{
-	pixel_x = -12
-	},
 /obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/carpet/brown,
 /area/casino/dorms/dorm6)
@@ -5044,28 +5339,7 @@
 /turf/simulated/floor/cult,
 /area/casino/south_foyer)
 "eQp" = (
-/obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
 /obj/structure/bed/double/padded,
-/obj/item/bedsheet/hosdouble,
-/obj/item/bedsheet/orangedouble{
-	pixel_y = 26;
-	pixel_x = -24
-	},
-/obj/item/bedsheet/orangedouble{
-	pixel_x = -12;
-	pixel_y = 26
-	},
-/obj/item/bedsheet/orangedouble{
-	pixel_y = 26
-	},
-/obj/item/bedsheet/orangedouble{
-	pixel_x = -24
-	},
-/obj/item/bedsheet/orangedouble{
-	pixel_x = -12
-	},
 /obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/carpet/brown,
 /area/casino/dorms/dorm4)
@@ -5611,10 +5885,15 @@
 "fxu" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
+	layer = 2.99
 	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+/obj/item/bedsheet/hopdouble{
+	layer = 3.89;
+	pixel_x = 20
+	},
+/obj/item/bedsheet/hopdouble{
+	layer = 3.88;
+	pixel_x = 8
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/casino/dorms/dorm5)
@@ -7039,24 +7318,15 @@
 "gVF" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
-	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+	layer = 2.99
 	},
 /obj/item/bedsheet/hosdouble{
-	pixel_y = 26;
+	layer = 3.88;
 	pixel_x = 8
 	},
 /obj/item/bedsheet/hosdouble{
-	pixel_x = 8
-	},
-/obj/item/bedsheet/hosdouble{
-	pixel_y = 26;
-	pixel_x = 20
-	},
-/obj/item/bedsheet/hosdouble{
-	pixel_x = 20
+	pixel_x = 20;
+	layer = 3.89
 	},
 /turf/simulated/floor/carpet,
 /area/casino/helm)
@@ -7573,16 +7843,15 @@
 "hub" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
+	layer = 2.99
 	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+/obj/item/bedsheet/orangedouble{
+	pixel_x = 20;
+	layer = 3.89
 	},
-/obj/item/bedsheet/hosdouble{
+/obj/item/bedsheet/orangedouble{
+	layer = 3.88;
 	pixel_x = 8
-	},
-/obj/item/bedsheet/hosdouble{
-	pixel_x = 20
 	},
 /turf/simulated/floor/carpet/brown,
 /area/casino/dorms/dorm4)
@@ -9175,17 +9444,6 @@
 	icon_state = "ice_dark"
 	},
 /area/casino/disposals_maze)
-"iTr" = (
-/obj/machinery/atm{
-	pixel_x = -32
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
-/turf/simulated/floor/glass{
-	desc = "A glassy floor with simulated space, deceptively fragile looking as if jumping may break the glass."
-	},
-/area/casino/north_foyer)
 "iTR" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -9597,13 +9855,7 @@
 /turf/simulated/floor/tiled,
 /area/casino/engineering)
 "joE" = (
-/obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
 /obj/structure/bed/double/padded,
-/obj/item/bedsheet/hosdouble{
-	pixel_y = 26
-	},
 /obj/item/bedsheet/hosdouble,
 /turf/simulated/floor/carpet,
 /area/casino/helm)
@@ -9994,18 +10246,6 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/casino/dorms/dorm1)
-"jMY" = (
-/obj/machinery/disposal/wall/cleaner{
-	dir = 4;
-	name = "Resleeving lost & found bin";
-	pixel_x = -35
-	},
-/turf/simulated/floor/outdoors/dirt{
-	can_atmos_pass = 0;
-	outdoors = 0;
-	temperature = 300
-	},
-/area/casino/wilderness)
 "jND" = (
 /obj/structure/sign/levels/dorms{
 	dir = 5
@@ -10061,10 +10301,15 @@
 "jPn" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
+	layer = 2.99
 	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+/obj/item/bedsheet/rddouble{
+	pixel_x = 20;
+	layer = 3.89
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_x = 8;
+	layer = 3.88
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/casino/dorms/dorm2)
@@ -10797,9 +11042,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/chipmachine{
-	pixel_x = -32
-	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/casino/south_foyer)
 "kAC" = (
@@ -10864,13 +11106,7 @@
 	},
 /area/casino/wilderness)
 "kDR" = (
-/obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
 /obj/structure/bed/double/padded,
-/obj/item/bedsheet/hosdouble{
-	pixel_y = 26
-	},
 /obj/item/bedsheet/hosdouble,
 /turf/simulated/floor/carpet/bcarpet,
 /area/casino/dorms/dorm1)
@@ -11263,27 +11499,7 @@
 	},
 /area/casino/disposals_maze)
 "lbg" = (
-/obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
 /obj/structure/bed/double/padded,
-/obj/item/bedsheet/rddouble{
-	pixel_x = -24;
-	pixel_y = 26
-	},
-/obj/item/bedsheet/rddouble{
-	pixel_y = 26;
-	pixel_x = -12
-	},
-/obj/item/bedsheet/rddouble{
-	pixel_y = 26
-	},
-/obj/item/bedsheet/rddouble{
-	pixel_x = -24
-	},
-/obj/item/bedsheet/rddouble{
-	pixel_x = -12
-	},
 /obj/item/bedsheet/rddouble,
 /turf/simulated/floor/carpet/oracarpet,
 /area/casino/dorms/dorm2)
@@ -11511,27 +11727,7 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/casino/south_foyer)
 "lkW" = (
-/obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
 /obj/structure/bed/double/padded,
-/obj/item/bedsheet/rddouble{
-	pixel_x = -24;
-	pixel_y = 26
-	},
-/obj/item/bedsheet/rddouble{
-	pixel_y = 26;
-	pixel_x = -12
-	},
-/obj/item/bedsheet/rddouble{
-	pixel_y = 26
-	},
-/obj/item/bedsheet/rddouble{
-	pixel_x = -24
-	},
-/obj/item/bedsheet/rddouble{
-	pixel_x = -12
-	},
 /obj/item/bedsheet/rddouble,
 /turf/simulated/floor/carpet/oracarpet,
 /area/casino/dorms/dorm9)
@@ -14678,24 +14874,15 @@
 "oiA" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
-	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+	layer = 2.99
 	},
 /obj/item/bedsheet/hosdouble{
-	pixel_y = 26;
+	pixel_x = 20;
+	layer = 3.89
+	},
+/obj/item/bedsheet/hosdouble{
+	layer = 3.88;
 	pixel_x = 8
-	},
-/obj/item/bedsheet/hosdouble{
-	pixel_x = 8
-	},
-/obj/item/bedsheet/hosdouble{
-	pixel_y = 26;
-	pixel_x = 20
-	},
-/obj/item/bedsheet/hosdouble{
-	pixel_x = 20
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/casino/dorms/dorm10)
@@ -16000,13 +16187,7 @@
 /turf/simulated/floor/wood/alt/parquet,
 /area/casino/helm)
 "pyH" = (
-/obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
 /obj/structure/bed/double/padded,
-/obj/item/bedsheet/hosdouble{
-	pixel_y = 26
-	},
 /obj/item/bedsheet/hosdouble,
 /turf/simulated/floor/carpet/bcarpet,
 /area/casino/dorms/dorm10)
@@ -16143,9 +16324,6 @@
 	},
 /obj/machinery/light{
 	dir = 8
-	},
-/obj/machinery/chipmachine{
-	pixel_x = -32
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/casino/north_foyer)
@@ -19231,10 +19409,15 @@
 "sth" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
+	layer = 2.99
 	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+/obj/item/bedsheet/cedouble{
+	layer = 3.88;
+	pixel_x = 8
+	},
+/obj/item/bedsheet/cedouble{
+	pixel_x = 20;
+	layer = 3.89
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/casino/dorms/dorm8)
@@ -21732,24 +21915,16 @@
 "uGj" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
-	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+	layer = 2.99
 	},
 /obj/item/bedsheet/hosdouble{
-	pixel_y = 26;
+	pixel_y = 0;
+	pixel_x = 20;
+	layer = 3.89
+	},
+/obj/item/bedsheet/hosdouble{
+	layer = 3.88;
 	pixel_x = 8
-	},
-/obj/item/bedsheet/hosdouble{
-	pixel_x = 8
-	},
-/obj/item/bedsheet/hosdouble{
-	pixel_y = 26;
-	pixel_x = 20
-	},
-/obj/item/bedsheet/hosdouble{
-	pixel_x = 20
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/casino/dorms/dorm1)
@@ -24462,10 +24637,16 @@
 "xib" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
+	layer = 2.99
 	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+/obj/item/bedsheet/rddouble{
+	layer = 3.88;
+	pixel_x = 8
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_x = 20;
+	pixel_y = 0;
+	layer = 3.89
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/casino/dorms/dorm9)
@@ -24615,27 +24796,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/casino/south_foyer)
 "xqD" = (
-/obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
 /obj/structure/bed/double/padded,
-/obj/item/bedsheet/hopdouble{
-	pixel_y = 26;
-	pixel_x = -24
-	},
-/obj/item/bedsheet/hopdouble{
-	pixel_x = -12;
-	pixel_y = 26
-	},
-/obj/item/bedsheet/hopdouble{
-	pixel_y = 26
-	},
-/obj/item/bedsheet/hopdouble{
-	pixel_x = -24
-	},
-/obj/item/bedsheet/hopdouble{
-	pixel_x = -12
-	},
 /obj/item/bedsheet/hopdouble,
 /turf/simulated/floor/carpet/blucarpet,
 /area/casino/dorms/dorm5)
@@ -24926,27 +25087,7 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/casino/south_foyer)
 "xCP" = (
-/obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
 /obj/structure/bed/double/padded,
-/obj/item/bedsheet/cedouble{
-	pixel_y = 26;
-	pixel_x = -24
-	},
-/obj/item/bedsheet/cedouble{
-	pixel_y = 26;
-	pixel_x = -12
-	},
-/obj/item/bedsheet/cedouble{
-	pixel_y = 26
-	},
-/obj/item/bedsheet/cedouble{
-	pixel_x = -24
-	},
-/obj/item/bedsheet/cedouble{
-	pixel_x = -12
-	},
 /obj/item/bedsheet/cedouble,
 /turf/simulated/floor/carpet/turcarpet,
 /area/casino/dorms/dorm3)
@@ -28060,7 +28201,7 @@ tFp
 pog
 nzm
 eYc
-qEN
+aal
 uGj
 qEN
 vyH
@@ -28079,7 +28220,7 @@ uNm
 uNm
 mfy
 uNm
-uNm
+aaa
 fxu
 eEN
 mfk
@@ -28318,7 +28459,7 @@ tFp
 pog
 nzm
 eYc
-qEN
+aam
 kDR
 eLx
 vyH
@@ -28337,7 +28478,7 @@ bqS
 oYQ
 mfy
 elg
-uNm
+aab
 xqD
 eEN
 mfk
@@ -30640,7 +30781,7 @@ tFp
 pog
 nzm
 rot
-vOu
+aan
 jPn
 vOu
 hZc
@@ -30659,7 +30800,7 @@ wmT
 wmT
 giO
 wmT
-wmT
+aac
 anV
 toa
 mfk
@@ -30898,7 +31039,7 @@ tFp
 pog
 nzm
 rot
-vOu
+aao
 lbg
 xnV
 hZc
@@ -30917,7 +31058,7 @@ kGw
 hCM
 giO
 whv
-wmT
+aad
 dxk
 toa
 mfk
@@ -33220,7 +33361,7 @@ jSV
 pog
 nzm
 bdX
-uxq
+aap
 daI
 uxq
 nNR
@@ -33239,7 +33380,7 @@ upu
 upu
 loF
 upu
-upu
+aae
 sth
 bVE
 mfk
@@ -33478,7 +33619,7 @@ tFp
 pog
 nzm
 bdX
-uxq
+aaq
 xCP
 amu
 nNR
@@ -33497,7 +33638,7 @@ vFt
 way
 loF
 wQI
-upu
+aaf
 aFB
 bVE
 mfk
@@ -35800,7 +35941,7 @@ jSV
 pog
 nzm
 itD
-pcc
+aar
 hub
 pcc
 pZO
@@ -35819,7 +35960,7 @@ gAq
 gAq
 eny
 gAq
-gAq
+aag
 xib
 dFc
 mfk
@@ -36058,7 +36199,7 @@ tFp
 pog
 nzm
 itD
-pcc
+aas
 eQp
 bMW
 pZO
@@ -36077,7 +36218,7 @@ fiC
 pOw
 eny
 eIW
-gAq
+aah
 lkW
 dFc
 mfk
@@ -38380,8 +38521,8 @@ tFp
 pog
 nzm
 eEN
-uNm
-fxu
+aau
+aak
 uNm
 mfy
 uNm
@@ -38399,7 +38540,7 @@ xIr
 xIr
 ohZ
 xIr
-xIr
+aai
 oiA
 lSe
 mfk
@@ -38638,7 +38779,7 @@ tFp
 pog
 nzm
 eEN
-uNm
+aab
 xqD
 elg
 mfy
@@ -38657,7 +38798,7 @@ vSK
 qHB
 ohZ
 epd
-xIr
+aaj
 pyH
 lSe
 mfk
@@ -40903,7 +41044,7 @@ oGK
 oGK
 oGK
 rVW
-jMY
+rVW
 rVW
 rVW
 rVW
@@ -51429,10 +51570,10 @@ sES
 cgP
 uyd
 kjq
-kjq
+aay
 sXm
 qyi
-kjq
+ltd
 kjq
 kjq
 kjq
@@ -51446,10 +51587,10 @@ dJz
 caB
 eVK
 caB
-eVK
+qKD
 gWy
 gWy
-eVK
+aav
 eVK
 yji
 cgi
@@ -51687,7 +51828,7 @@ sES
 cgP
 oua
 pBO
-iTr
+pBO
 okg
 okg
 pCO
@@ -51707,7 +51848,7 @@ cfa
 kAj
 vOI
 vOI
-goS
+vOI
 vOI
 jWq
 lZq
@@ -63059,7 +63200,7 @@ iQF
 iQF
 wXn
 wXn
-wXn
+aaw
 gVF
 bHN
 bHN
@@ -63317,7 +63458,7 @@ iQF
 iQF
 wXn
 wXn
-wXn
+aax
 joE
 bHN
 oOt
