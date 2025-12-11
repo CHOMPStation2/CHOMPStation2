@@ -7140,12 +7140,7 @@
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
 "dJi" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/casino{
 	pixel_x = -3;
 	pixel_y = -1
 	},
@@ -11371,12 +11366,7 @@
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)
 "gDk" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/casino{
 	pixel_y = -1
 	},
 /obj/item/storage/toolbox/mechanical{
@@ -12309,8 +12299,6 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/white/border,
 /obj/machinery/iv_drip,
-/obj/machinery/iv_drip,
-/obj/machinery/iv_drip,
 /turf/simulated/shuttle/floor,
 /area/survivalpod)
 "hgr" = (
@@ -13140,12 +13128,7 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
 "hMm" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/casino{
 	pixel_y = -1
 	},
 /obj/item/suit_cooling_unit,
@@ -15076,12 +15059,7 @@
 /turf/simulated/floor/tiled/kafel_full/purple,
 /area/survivalpod/superpose/GrandLibrary)
 "jnw" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/casino{
 	pixel_y = -1
 	},
 /obj/item/multitool,
@@ -17997,12 +17975,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
 "lnr" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/casino{
 	pixel_y = -1
 	},
 /obj/item/storage/toolbox/mechanical{
@@ -20830,12 +20803,7 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
 "nhW" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/casino{
 	pixel_y = -1
 	},
 /obj/item/reagent_containers/food/drinks/bottle/small/beer,
@@ -21825,7 +21793,6 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "nZb" = (
-/obj/machinery/iv_drip,
 /obj/machinery/iv_drip,
 /obj/machinery/vending/wallmed1{
 	dir = 8;
@@ -25930,10 +25897,6 @@
 	dir = 6
 	},
 /obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair/smallmotor,
-/obj/structure/bed/chair/wheelchair/smallmotor,
 /obj/structure/bed/chair/wheelchair/smallmotor,
 /obj/structure/window/reinforced,
 /obj/machinery/light/floortube,
@@ -26449,12 +26412,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/casino{
 	pixel_y = -1
 	},
 /obj/item/stock_parts/micro_laser,
@@ -29089,12 +29047,7 @@
 /obj/structure/fans{
 	pixel_y = 16
 	},
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/casino{
 	pixel_y = -14
 	},
 /obj/structure/table/reinforced,
@@ -35341,12 +35294,7 @@
 /obj/item/coin/phoron,
 /obj/item/coin/phoron,
 /obj/item/coin/phoron,
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Phoron storage";
+/obj/machinery/smartfridge/survival_pod/casino{
 	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/black,
