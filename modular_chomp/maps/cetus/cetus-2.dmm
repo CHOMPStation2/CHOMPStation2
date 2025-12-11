@@ -751,7 +751,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain,
-/obj/machinery/door/blast/multi_tile/three_tile_hor,
+/obj/machinery/door/blast/multi_tile/three_tile_hor{
+	id = "casinodoor"
+	},
 /obj/structure/sign/christmas/lights{
 	dir = 1
 	},
@@ -887,6 +889,10 @@
 /area/crew_quarters/cetus/atrium/primary)
 "abG" = (
 /obj/structure/table/bench/wooden,
+/obj/structure/sign/christmas/lights{
+	dir = 8;
+	pixel_x = -7
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
 "abH" = (
@@ -978,6 +984,10 @@
 /obj/structure/sign/christmas/lights{
 	dir = 1;
 	pixel_y = 7
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8;
+	pixel_x = -7
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
@@ -1340,6 +1350,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Reception)
+"acB" = (
+/obj/structure/waterfall/top,
+/obj/effect/mist,
+/obj/structure/fans/tiny,
+/obj/structure/sign/christmas/lights{
+	dir = 1;
+	pixel_y = 7
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4;
+	pixel_x = 7
+	},
+/turf/simulated/open,
+/area/crew_quarters/sauna)
 "acU" = (
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 10
@@ -34017,6 +34041,10 @@
 /obj/structure/waterfall/top,
 /obj/effect/mist,
 /obj/structure/fans/tiny,
+/obj/structure/sign/christmas/lights{
+	dir = 1;
+	pixel_y = 7
+	},
 /turf/simulated/open,
 /area/crew_quarters/sauna)
 "loi" = (
@@ -40709,6 +40737,10 @@
 /obj/structure/waterfall/top,
 /obj/effect/mist,
 /obj/structure/fans/tiny,
+/obj/structure/sign/christmas/lights{
+	dir = 1;
+	pixel_y = 7
+	},
 /turf/simulated/floor/water/hotspring,
 /area/crew_quarters/sauna)
 "nCL" = (
@@ -57650,6 +57682,10 @@
 "tdd" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8;
+	pixel_x = -7
 	},
 /turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/atrium/primary)
@@ -110138,7 +110174,7 @@ pDS
 etb
 sdN
 siH
-loe
+acB
 qWu
 qWu
 qWu

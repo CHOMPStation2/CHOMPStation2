@@ -288,5 +288,5 @@
 /datum/map_template/cetus_lateload/casino
 	name = Z_NAME_CETUS_CASINO
 	name_alias = Z_NAME_ALIAS_CASINO
-	mappath = "modular_chomp/maps/southern_cross/southern_cross-6.dmm" //REPLACE WITH CASINO BEFORE MERGE
+	mappath = "modular_chomp/maps/event_maps/casinotest.dmm" //REPLACE WITH CASINO BEFORE MERGE
 	associated_map_datum = /datum/map_z_level/cetus_lateload/casino
