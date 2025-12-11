@@ -77,7 +77,7 @@
 		// Temporary power failure, but mitigatead by subgrids
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grid Check",				/datum/event/grid_check, 				0,		list(DEPARTMENT_RESEARCH = 10, DEPARTMENT_ENGINEERING = 25), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grub Infestation",			/datum/event/grub_infestation,			-20,	list(DEPARTMENT_SECURITY = 40, DEPARTMENT_ENGINEERING = 40), TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Hallucination Anomaly",	/datum/event/anomaly/hallucination,		-20,	list(DEPARTMENT_MEDICAL = 10, DEPARTMENT_RESEARCH = 10), TRUE)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Hallucination Anomaly",	/datum/event/anomaly/hallucination,		-20,	list(DEPARTMENT_MEDICAL = 10, DEPARTMENT_RESEARCH = 10), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Hostile Runtime",			/datum/event/hostile_runtime,			-20,	list(DEPARTMENT_ENGINEERING = 40), min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Infected Room",			/datum/event/disease_outbreak/floor,	-50,	list(DEPARTMENT_MEDICAL = 25, JOB_JANITOR = 10, DEPARTMENT_ANY = 1), TRUE, min_jobs = list(DEPARTMENT_MEDICAL = 2)),
 		// Pure RP fun, no mechanical effects.
