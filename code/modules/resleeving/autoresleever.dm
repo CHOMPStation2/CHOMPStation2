@@ -95,11 +95,7 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
 		chosen_species = GLOB.all_species[ghost_client.prefs.species]
 
-<<<<<<< HEAD
 	if((chosen_species.spawn_flags & SPECIES_IS_WHITELISTED) || (chosen_species.spawn_flags & SPECIES_IS_RESTRICTED))
-=======
-	if(chosen_species.flags & NO_SLEEVE) // Sanity. Prevents species like Xenochimera, Proteans, etc from rejoining the round via resleeve, as they should have their own methods of doing so already, as agreed to when you whitelist as them.
->>>>>>> 81acf7df5c (fix disposal template loading (#18883))
 		to_chat(ghost, span_warning("This species cannot be resleeved!"))
 		return
 	// CHOMPEdit End: Add checks for Whitelist + Resleeving
