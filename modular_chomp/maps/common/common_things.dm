@@ -92,8 +92,8 @@
 	portal_id = "retreat_east"
 
 /obj/machinery/smartfridge/survival_pod/casino
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+	icon = 'icons/obj/vending.dmi'
+	icon_base = "smartfridge"
+	icon_contents = "boxes"
+	icon_state = "smartfridge"
+	name = "Advanced storage"
