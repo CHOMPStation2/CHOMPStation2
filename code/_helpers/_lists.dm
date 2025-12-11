@@ -151,9 +151,17 @@
 	return 0
 
 //Checks for specific paths in a list
-/proc/is_path_in_list(var/atom/A, var/list/L)
+/**
+ * Arguments:
+ * A : Typepath to check
+ * L : A list of typepath to check A against
+ * zebra: Wether to use the value of the path in the list instead of just returning TRUE when a match is found
+ */
+/proc/is_path_in_list(var/atom/A, var/list/L, zebra = FALSE)
 	for(var/path in L)
 		if(ispath(A, path))
+			if(ispath(A, path))
+				return !zebra || L[path]
 			return 1
 	return 0
 
@@ -1066,7 +1074,6 @@ GLOBAL_LIST_EMPTY(json_cache)
 		retval += to_flatten[i]
 	return retval
 
-//CHOMPAdd start
 /proc/pick_weight(list/list_to_pick)
 	var/total = 0
 	var/item
@@ -1082,22 +1089,3 @@ GLOBAL_LIST_EMPTY(json_cache)
 			return item
 
 	return null
-
-///Converts a bitfield to a list of numbers (or words if a wordlist is provided)
-/proc/bitfield_to_list(bitfield = 0, list/wordlist)
-	var/list/return_list = list()
-	if(islist(wordlist))
-		var/max = min(wordlist.len, 24)
-		var/bit = 1
-		for(var/i in 1 to max)
-			if(bitfield & bit)
-				return_list += wordlist[i]
-			bit = bit << 1
-	else
-		for(var/bit_number = 0 to 23)
-			var/bit = 1 << bit_number
-			if(bitfield & bit)
-				return_list += bit
-
-	return return_list
-//CHOMPAdd end
