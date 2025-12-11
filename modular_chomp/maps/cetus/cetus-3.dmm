@@ -2446,6 +2446,7 @@
 /area/maintenance/cetus/arcade)
 "bqt" = (
 /obj/structure/girder,
+/obj/machinery/light/small/emergency,
 /turf/simulated/floor/plating,
 /area/crew_quarters/cetus/atrium/primary)
 "bqw" = (
@@ -14137,6 +14138,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
+/obj/machinery/light/small/emergency,
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "itJ" = (
@@ -16201,15 +16203,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
-"jHs" = (
-/obj/structure/railing/overhang/hazard{
-	dir = 1
-	},
-/obj/structure/railing/overhang/hazard{
-	dir = 8
-	},
-/turf/simulated/floor/redgrid,
-/area/security/nuke_storage)
 "jHG" = (
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/carpet/graycarpet,
@@ -31139,6 +31132,9 @@
 	name = "secure briefcase"
 	},
 /obj/effect/floor_decal/industrial/warning/cee,
+/obj/machinery/light/small/emergency{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "sft" = (
@@ -40706,10 +40702,6 @@
 "xPG" = (
 /turf/simulated/open,
 /area/quartermaster/storage)
-"xPI" = (
-/obj/machinery/light/small/emergency,
-/turf/simulated/floor/redgrid,
-/area/security/nuke_storage)
 "xPV" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -77157,8 +77149,8 @@ vmd
 xgw
 qAu
 itv
-jHs
-bHF
+aaB
+aaB
 aaB
 aaA
 aaA
@@ -77415,7 +77407,7 @@ oAK
 hjB
 xFu
 hjB
-xPI
+aaB
 aaB
 aaB
 aaA
