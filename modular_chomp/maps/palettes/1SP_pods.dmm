@@ -8758,12 +8758,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/survivalpod/superpose/HydroCave)
 "eIo" = (
-/obj/structure/sign/vacuum{
-	desc = "A beacon used by a teleporter.";
-	icon = 'icons/obj/radio.dmi';
-	icon_state = "beacon";
-	name = "tracking beacon"
-	},
+/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/HydroCave)
 "eIL" = (
@@ -11223,7 +11218,6 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "gwH" = (
-/obj/machinery/r_n_d/destructive_analyzer,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
 	},
@@ -13952,10 +13946,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/template_noop)
-"irG" = (
-/obj/machinery/r_n_d/destructive_analyzer,
-/turf/simulated/shuttle/floor/purple,
-/area/survivalpod/superpose/ScienceShip)
 "irM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1;
@@ -14294,13 +14284,6 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/CrashedInfestedShip)
-"iIC" = (
-/obj/machinery/mecha_part_fabricator{
-	req_access = list(300)
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/shuttle/floor/voidcraft,
-/area/survivalpod)
 "iJp" = (
 /obj/structure/sign/mining/survival{
 	dir = 1
@@ -17542,7 +17525,6 @@
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
 "lcu" = (
-/obj/machinery/r_n_d/protolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
@@ -17778,15 +17760,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/HydroCave)
-"lgy" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/computer/rdconsole/core{
-	dir = 8;
-	id = 300;
-	req_access = list(300)
-	},
-/turf/simulated/shuttle/floor/voidcraft,
-/area/survivalpod)
 "lgM" = (
 /obj/machinery/smartfridge/survival_pod,
 /obj/item/storage/mre/random,
@@ -18725,12 +18698,6 @@
 /obj/random/junk,
 /turf/template_noop,
 /area/survivalpod/superpose/MethLab)
-"lJD" = (
-/obj/machinery/computer/rdconsole/core{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/voidcraft,
-/area/template_noop)
 "lKg" = (
 /obj/machinery/vending/assist{
 	contraband = null;
@@ -20127,10 +20094,6 @@
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
 "mLJ" = (
-/obj/machinery/computer/rdconsole/core{
-	dir = 4;
-	req_access = null
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light{
 	dir = 8
@@ -21178,7 +21141,6 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
 "nza" = (
-/obj/machinery/r_n_d/destructive_analyzer,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod)
@@ -21593,12 +21555,6 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/Dinner)
-"nMu" = (
-/obj/machinery/computer/rdconsole/core{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/purple,
-/area/survivalpod/superpose/ScienceShip)
 "nNa" = (
 /obj/effect/decal/remains/deer,
 /turf/simulated/floor/gorefloor2,
@@ -23052,7 +23008,6 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "oIA" = (
-/obj/machinery/r_n_d/protolathe,
 /obj/structure/sign/periodic{
 	pixel_y = 29
 	},
@@ -25896,7 +25851,6 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 6
 	},
-/obj/structure/bed/chair/wheelchair,
 /obj/structure/bed/chair/wheelchair/smallmotor,
 /obj/structure/window/reinforced,
 /obj/machinery/light/floortube,
@@ -26802,13 +26756,6 @@
 	},
 /turf/template_noop,
 /area/template_noop)
-"qiS" = (
-/obj/machinery/mecha_part_fabricator{
-	req_access = null
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/template_noop)
 "qjr" = (
 /obj/structure/grille,
 /obj/structure/shuttle/window,
@@ -26990,9 +26937,6 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "qoz" = (
-/obj/machinery/computer/rdconsole/core{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 8;
 	layer = 3
@@ -31437,11 +31381,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LoneHome)
-"tRO" = (
-/obj/machinery/r_n_d/protolathe,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/shuttle/floor/voidcraft,
-/area/survivalpod)
 "tSm" = (
 /obj/machinery/light{
 	dir = 8
@@ -31594,7 +31533,6 @@
 "tZn" = (
 /obj/machinery/light/small,
 /obj/structure/table/standard,
-/obj/item/bikehorn/fluff/chew_ire,
 /turf/simulated/floor,
 /area/survivalpod/superpose/Dinner)
 "tZx" = (
@@ -31795,11 +31733,7 @@
 /turf/simulated/floor/tiled/white,
 /area/survivalpod)
 "ueO" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/survivalpod/superpose/ScienceShip)
 "ufh" = (
 /obj/machinery/autolathe,
@@ -31896,11 +31830,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/ScienceShip)
 "uhM" = (
-/obj/machinery/computer/crew{
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_screen = null;
-	icon_state = "console-c"
-	},
+/obj/machinery/computer/crew/abductor,
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
@@ -31937,10 +31867,6 @@
 /obj/item/bedsheet/yellowdouble,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/Farm)
-"uiv" = (
-/obj/machinery/r_n_d/destructive_analyzer,
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/template_noop)
 "uiD" = (
 /obj/structure/table/gamblingtable,
 /obj/machinery/chemical_dispenser/bar_alc/full,
@@ -35646,12 +35572,7 @@
 /obj/machinery/newscaster{
 	pixel_y = -28
 	},
-/obj/structure/sign/vacuum{
-	desc = "A beacon used by a teleporter.";
-	icon = 'icons/obj/radio.dmi';
-	icon_state = "beacon";
-	name = "tracking beacon"
-	},
+/obj/item/radio/beacon,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
 "wYI" = (
@@ -35660,15 +35581,6 @@
 	health = 8000000000;
 	maxhealth = 8000000000;
 	name = "durable grey railing"
-	},
-/obj/machinery/r_n_d/server{
-	health = 800000000;
-	id_with_download_string = "300";
-	id_with_upload_string = "300";
-	name = "Technomancer R&D Server";
-	produces_heat = 0;
-	server_id = 300;
-	use_power = 0
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod)
@@ -37106,10 +37018,6 @@
 /obj/fiftyspawner/steel,
 /turf/simulated/floor,
 /area/survivalpod/superpose/WoodenCamp)
-"xZI" = (
-/obj/machinery/r_n_d/protolathe,
-/turf/simulated/shuttle/floor/purple,
-/area/survivalpod/superpose/ScienceShip)
 "yaE" = (
 /obj/structure/closet/secure_closet/egg/xenomorph,
 /turf/simulated/floor,
@@ -38807,7 +38715,7 @@ ktQ
 rHR
 brT
 wRf
-lJD
+wRf
 ktD
 wRf
 wRf
@@ -44646,7 +44554,7 @@ lrs
 vIX
 ktQ
 wyB
-uiv
+tFt
 tFt
 kxa
 igB
@@ -44716,7 +44624,7 @@ wRf
 xUg
 ktQ
 rHR
-qiS
+lcu
 vjk
 sdi
 ufh
@@ -54217,7 +54125,7 @@ jFN
 duO
 wYI
 auy
-tRO
+nza
 saF
 elG
 dal
@@ -54731,7 +54639,7 @@ qTA
 qBN
 gVG
 ihi
-lgy
+nza
 nza
 elG
 dal
@@ -54989,7 +54897,7 @@ aWG
 olR
 ihi
 nqN
-iIC
+nza
 elG
 wdk
 ktQ
@@ -72446,9 +72354,9 @@ ktQ
 bej
 xmO
 iLe
-xZI
-irG
-nMu
+qyr
+qyr
+qyr
 iLe
 xmO
 bej
