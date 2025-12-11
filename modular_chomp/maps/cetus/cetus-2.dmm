@@ -1133,6 +1133,20 @@
 /turf/simulated/open,
 /area/crew_quarters/cetus/atrium/primary)
 "acj" = (
+/obj/structure/waterfall/top,
+/obj/effect/mist,
+/obj/structure/fans/tiny,
+/obj/structure/sign/christmas/lights{
+	dir = 1;
+	pixel_y = 7
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4;
+	pixel_x = 7
+	},
+/turf/simulated/open,
+/area/crew_quarters/sauna)
+"ack" = (
 /obj/structure/catwalk{
 	pixel_x = -1
 	},
@@ -1146,7 +1160,7 @@
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/atrium/secondaryf2)
-"ack" = (
+"acl" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass{
 	name = "Central Access"
@@ -1156,7 +1170,7 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/primary/central_four)
-"acl" = (
+"acm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -1169,16 +1183,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/primary/central_two)
-"acm" = (
-/obj/structure/lattice,
-/obj/structure/catwalk{
-	pixel_x = -1
-	},
-/obj/structure/sign/christmas/lights{
-	pixel_y = -7
-	},
-/turf/simulated/open,
-/area/crew_quarters/cetus/atrium/secondaryf2)
 "acn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1203,6 +1207,23 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "aco" = (
+/obj/structure/lattice,
+/obj/structure/catwalk{
+	pixel_x = -1
+	},
+/obj/structure/sign/christmas/lights{
+	pixel_y = -7
+	},
+/turf/simulated/open,
+/area/crew_quarters/cetus/atrium/secondaryf2)
+"acp" = (
+/obj/machinery/recharge_station,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/research_restroom_sc)
+"acq" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -1222,14 +1243,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_two)
-"acp" = (
-/obj/machinery/recharge_station,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/rnd/research_restroom_sc)
-"acq" = (
+"acr" = (
 /obj/structure/lattice,
 /obj/structure/catwalk{
 	pixel_x = -1
@@ -1240,7 +1254,7 @@
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/atrium/secondaryf2)
-"acr" = (
+"acs" = (
 /obj/structure/catwalk{
 	pixel_x = -1
 	},
@@ -1255,7 +1269,7 @@
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/atrium/secondaryf2)
-"acs" = (
+"act" = (
 /obj/structure/catwalk{
 	pixel_x = -1
 	},
@@ -1266,25 +1280,11 @@
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/atrium/secondaryf2)
-"act" = (
+"acu" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/christmas/lights{
 	dir = 4;
 	pixel_x = 7
-	},
-/turf/simulated/floor/tiled,
-/area/crew_quarters/cetus/atrium/secondaryf2)
-"acu" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/obj/structure/sign/christmas/lights{
-	dir = 4;
-	pixel_x = 7
-	},
-/obj/structure/sign/christmas/lights{
-	pixel_y = -7
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf2)
@@ -1301,6 +1301,20 @@
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/atriumdeck2)
 "acw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4;
+	pixel_x = 7
+	},
+/obj/structure/sign/christmas/lights{
+	pixel_y = -7
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/atrium/secondaryf2)
+"acx" = (
 /obj/item/stool/padded,
 /obj/structure/sign/christmas/lights{
 	dir = 8;
@@ -1308,7 +1322,7 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
-"acx" = (
+"acy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -1317,7 +1331,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf2)
-"acy" = (
+"acz" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
@@ -1327,14 +1341,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf2)
-"acz" = (
+"acA" = (
 /obj/structure/sign/christmas/lights{
 	dir = 8;
 	pixel_x = -7
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
-"acA" = (
+"acB" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -1350,20 +1364,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Reception)
-"acB" = (
-/obj/structure/waterfall/top,
-/obj/effect/mist,
-/obj/structure/fans/tiny,
-/obj/structure/sign/christmas/lights{
-	dir = 1;
-	pixel_y = 7
-	},
-/obj/structure/sign/christmas/lights{
-	dir = 4;
-	pixel_x = 7
-	},
-/turf/simulated/open,
-/area/crew_quarters/sauna)
 "acU" = (
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 10
@@ -105271,7 +105271,7 @@ djh
 djh
 rJe
 jcJ
-ack
+acl
 hco
 hco
 orQ
@@ -107586,8 +107586,8 @@ qFE
 sqz
 fIJ
 nTz
-acz
-acw
+acA
+acx
 eFs
 heG
 qWu
@@ -110174,7 +110174,7 @@ pDS
 etb
 sdN
 siH
-acB
+acj
 qWu
 qWu
 qWu
@@ -113009,9 +113009,9 @@ djj
 jlb
 jlb
 jlb
-acl
-aco
-acl
+acm
+acq
+acm
 szG
 qAm
 qAm
@@ -125391,7 +125391,7 @@ glB
 jpJ
 uuH
 aCA
-act
+acu
 sIg
 pVO
 fyY
@@ -125648,7 +125648,7 @@ sTX
 glB
 cFw
 jkx
-acu
+acw
 nxZ
 sQA
 faG
@@ -125905,13 +125905,13 @@ sKf
 sKf
 mbf
 xpQ
-acx
+acy
 nxZ
 oco
 oWt
-acq
+acr
 woG
-acm
+aco
 poY
 oco
 sQA
@@ -126163,10 +126163,10 @@ pIW
 gjL
 mbf
 lGH
-acx
+acy
 vcc
 hsw
-acr
+acs
 kjr
 woG
 kjr
@@ -126421,10 +126421,10 @@ sKf
 jse
 xmr
 vnF
-acx
+acy
 vcc
 hsw
-acs
+act
 tFh
 wYL
 ajB
@@ -126679,7 +126679,7 @@ bLt
 gTU
 eXY
 fQL
-acy
+acz
 iqe
 tov
 sIr
@@ -126940,7 +126940,7 @@ bCI
 pKS
 vcc
 hsw
-acs
+act
 kfj
 oSE
 tjr
@@ -127202,7 +127202,7 @@ pvH
 kjr
 woG
 kjr
-acj
+ack
 vcc
 hsw
 acc
@@ -127451,15 +127451,15 @@ hxb
 hxb
 bQF
 bLt
-acA
+acB
 fDG
 qZU
 poY
 oco
 sQA
-acq
+acr
 woG
-acm
+aco
 nxZ
 oco
 oWt
@@ -127715,9 +127715,9 @@ qxI
 wYX
 poY
 oWt
-acq
+acr
 woG
-acm
+aco
 poY
 oWt
 acf
