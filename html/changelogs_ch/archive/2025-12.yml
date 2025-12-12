@@ -199,3 +199,17 @@
   - code_imp: Added connect_loc element
   Will:
   - balance: Ice slips you repeatedly instead of a set distance
+2025-12-12:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: tgui-core 5.5.10
+  - rscadd: continuous medigun
+  - bugfix: some bad flag compares
+  - bugfix: disposal template loading being broken
+  Guti:
+  - rscadd: Added TG-like anomalies
+  - rscadd: Added anomaly cores
+  Will:
+  - refactor: Ventcrawl item whitelist is now a proc instead of a list instantiated
+      on every single mob in the world
+  - bugfix: promies and proteans properly reequip their radio when they return to
+      human form from blob
