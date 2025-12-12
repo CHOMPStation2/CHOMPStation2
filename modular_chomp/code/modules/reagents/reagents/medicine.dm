@@ -397,7 +397,7 @@
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE
 	mrate_static = TRUE
-	metabolism = 0.5
+	metabolism = 0.1
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 	modifier_to_add = /datum/modifier/life_cloak
