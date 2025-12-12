@@ -56,22 +56,28 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Nothing",					/datum/event/nothing,					1600),
 		// Leaks gas into an unoccupied room.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Appendicitis", 			/datum/event/spontaneous_appendicitis, 	-30,	list(DEPARTMENT_MEDICAL = 30), TRUE, min_jobs = list(DEPARTMENT_MEDICAL = 2)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bluespace Anomaly",		/datum/event/anomaly/bluespace,			-20,	list(DEPARTMENT_RESEARCH = 30, DEPARTMENT_ANY = 2), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bluespace Lockers",		/datum/event/bluespace_locker,			10,		list(DEPARTMENT_RESEARCH = 25, DEPARTMENT_ANY = 2), TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bioscrambler Anomaly",		/datum/event/anomaly/bioscrambler,		-20,	list(DEPARTMENT_MEDICAL = 30, DEPARTMENT_RESEARCH = 10), TRUE, min_jobs = list(DEPARTMENT_MEDICAL = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Atmos Leak",				/datum/event/atmos_leak, 				30,		list(DEPARTMENT_ENGINEERING = 25), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE,  "Camera Damage",			/datum/event/camera_damage,				20, 	list(DEPARTMENT_SECURITY = 5, DEPARTMENT_ENGINEERING = 20), min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		// Just disables comms for a short while.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Communication Blackout",	/datum/event/communications_blackout,	500,	list(JOB_AI = 100, DEPARTMENT_SECURITY = 50), TRUE),
-		// Just blows out a few lights
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Dimensional Anomaly",		/datum/event/anomaly/dimensional,		-20,	list(DEPARTMENT_RESEARCH = 30, DEPARTMENT_ANY = 2), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Drone Pod Drop",			/datum/event/drone_pod_drop,			10,		list(DEPARTMENT_RESEARCH = 40), TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Flux Anomaly",				/datum/event/anomaly/flux,				-30,	list(DEPARTMENT_ENGINEERING = 30, DEPARTMENT_RESEARCH = 20), TRUE),
+		// Just blows out a few lights
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Electrical Storm",			/datum/event/electrical_storm, 			250,	list(DEPARTMENT_ENGINEERING = 20, JOB_JANITOR = 150), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Exotic Infestation",		/datum/event/dangerinfestation, 		-30,	list(DEPARTMENT_ENGINEERING = 20, DEPARTMENT_RESEARCH = 5, DEPARTMENT_ANY = 2)),
 		//Escaped slime event itself needs to be rejiggered because of the mob refactor.
 		//new /datum/event_meta(EVENT_LEVEL_MODERATE, "Escaped Slimes",			/datum/event/escaped_slimes, 			-40,	list(DEPARTMENT_RESEARCH = 30, DEPARTMENT_SECURITY = 20)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Gravity Anomaly", 			/datum/event/anomaly/grav, 				-20,	list(DEPARTMENT_ENGINEERING = 30, DEPARTMENT_RESEARCH = 20, DEPARTMENT_ANY = 2), TRUE),
 		// This one is just too fun.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Gravity Failure",			/datum/event/gravity,	 				75,		list(DEPARTMENT_ENGINEERING = 60), TRUE),
 		// Temporary power failure, but mitigatead by subgrids
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grid Check",				/datum/event/grid_check, 				0,		list(DEPARTMENT_RESEARCH = 10, DEPARTMENT_ENGINEERING = 25), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grub Infestation",			/datum/event/grub_infestation,			-20,	list(DEPARTMENT_SECURITY = 40, DEPARTMENT_ENGINEERING = 40), TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Hallucination Anomaly",	/datum/event/anomaly/hallucination,		-20,	list(DEPARTMENT_MEDICAL = 10, DEPARTMENT_RESEARCH = 10), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Hostile Runtime",			/datum/event/hostile_runtime,			-20,	list(DEPARTMENT_ENGINEERING = 40), min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Infected Room",			/datum/event/disease_outbreak/floor,	-50,	list(DEPARTMENT_MEDICAL = 25, JOB_JANITOR = 10, DEPARTMENT_ANY = 1), TRUE, min_jobs = list(DEPARTMENT_MEDICAL = 2)),
 		// Pure RP fun, no mechanical effects.
@@ -82,7 +88,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meteor Shower",			/datum/event/meteor_wave,				-50,	list(DEPARTMENT_ENGINEERING = 45), TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 2)),
 		//New CHOMPStation event. Mice and lizards grow into rats and lizardmen respectively.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Mutants",					/datum/event/mutants,					20,		list(DEPARTMENT_ANY = 15, DEPARTMENT_SECURITY = 25), TRUE),
-		// Opens doors in brig.  So just RP fun
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Pyroclastic Anomaly", 		/datum/event/anomaly/pyro,				-30,	list(DEPARTMENT_ENGINEERING = 30, DEPARTMENT_RESEARCH = 20), TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Radiation Storm",			/datum/event/radiation_storm, 			50,		list(DEPARTMENT_MEDICAL = 50), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Rogue Drones",				/datum/event/rogue_drone, 				-30,	list(DEPARTMENT_SECURITY = 25, JOB_HEAD_OF_SECURITY = 35, JOB_WARDEN = 35), min_jobs = list(DEPARTMENT_SECURITY = 2)),
 		// Radiation, but only in space.
