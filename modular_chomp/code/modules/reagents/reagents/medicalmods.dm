@@ -95,7 +95,7 @@
 		holder.adjustFireLoss(-75)
 		holder.adjustOxyLoss(-100)
 		GLOB.dead_mob_list.Remove(holder)
-		if((M in GLOB.living_mob_list) || (M in GLOB.dead_mob_list))
+		if((holder in GLOB.living_mob_list) || (holder in GLOB.dead_mob_list))
 			WARNING("Mob [holder] was defibbed but already in the living or dead list still!")
 		GLOB.living_mob_list += holder
 		holder.timeofdeath = 0
