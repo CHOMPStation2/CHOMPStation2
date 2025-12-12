@@ -390,6 +390,46 @@
 	blocks_nonghost_incorporeal = 1
 	},
 /area/casino/disposals_maze)
+"aaF" = (
+/obj/random/cash,
+/turf/simulated/floor/outdoors/ironsand{
+	outdoors = 0
+	},
+/area/casino/sand_maze)
+"aaG" = (
+/obj/random/cash/big,
+/turf/simulated/floor/outdoors/ironsand{
+	outdoors = 0
+	},
+/area/casino/sand_maze)
+"aaH" = (
+/obj/random/material/refined,
+/obj/random/chips/better,
+/turf/simulated/floor/outdoors/ironsand{
+	outdoors = 0
+	},
+/area/casino/sand_maze)
+"aaI" = (
+/obj/random/chips/good,
+/obj/random/chips/good,
+/turf/simulated/floor/outdoors/ironsand{
+	outdoors = 0
+	},
+/area/casino/sand_maze)
+"aaJ" = (
+/obj/random/multiple/ore_pile,
+/obj/random/chips/good,
+/turf/simulated/floor/outdoors/ironsand{
+	outdoors = 0
+	},
+/area/casino/sand_maze)
+"aaK" = (
+/obj/random/multiple/ore_pile,
+/obj/random/chips,
+/turf/simulated/floor/outdoors/ironsand{
+	outdoors = 0
+	},
+/area/casino/sand_maze)
 "abk" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -1766,15 +1806,6 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/casino/dorms/dorm10)
-"bgW" = (
-/obj/effect/map_effect/portal/master/side_a{
-	dir = 1;
-	portal_id = "casinomaze5"
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "biO" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
@@ -1845,15 +1876,6 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/casino/helm)
-"bkd" = (
-/obj/effect/map_effect/portal/master/side_a{
-	dir = 4;
-	portal_id = "casinomaze3"
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "bkp" = (
 /obj/structure/sign/christmas/wreath,
 /obj/structure/event/present,
@@ -2751,15 +2773,6 @@
 	},
 /turf/simulated/floor/cult,
 /area/casino/south_foyer)
-"chx" = (
-/obj/effect/map_effect/portal/master/side_b{
-	dir = 1;
-	portal_id = "casinomaze4"
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "ciV" = (
 /obj/structure/table/glass,
 /obj/item/starcaster_news,
@@ -3175,15 +3188,6 @@
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/casino/helm)
-"cHx" = (
-/obj/effect/map_effect/portal/master/side_b{
-	dir = 8;
-	portal_id = "casinomaze2"
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "cIG" = (
 /obj/structure/casino_table/blackjack_m{
 	dir = 1
@@ -6326,10 +6330,7 @@
 /turf/simulated/floor/redgrid/off,
 /area/casino/mountains)
 "fSA" = (
-/obj/effect/map_effect/portal/master/side_a{
-	dir = 1;
-	portal_id = "casinomaze7"
-	},
+/obj/random/chips,
 /turf/simulated/floor/outdoors/ironsand{
 	outdoors = 0
 	},
@@ -8980,12 +8981,6 @@
 /obj/structure/girder/displaced,
 /turf/simulated/floor/plating,
 /area/casino/wilderness)
-"ihE" = (
-/obj/effect/map_effect/portal/line/side_b,
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "ihN" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 9
@@ -10078,14 +10073,6 @@
 /obj/structure/table/sifwooden_reinforced,
 /turf/simulated/floor/carpet/blucarpet,
 /area/casino/storage)
-"jzu" = (
-/obj/effect/map_effect/portal/master/side_b{
-	portal_id = "casinomaze5"
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "jzP" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -10487,7 +10474,11 @@
 /turf/simulated/floor/carpet/blucarpet,
 /area/casino/storage)
 "jUQ" = (
-/turf/simulated/floor/lava,
+/obj/effect/blocker,
+/turf/simulated/floor/lava{
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
 /area/casino/sand_maze)
 "jVg" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -10575,15 +10566,6 @@
 /obj/structure/table/sifwooden_reinforced,
 /turf/simulated/floor/carpet/blucarpet,
 /area/casino/storage)
-"jXy" = (
-/obj/effect/map_effect/portal/master/side_b{
-	dir = 1;
-	portal_id = "casinomaze6"
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "jZq" = (
 /obj/structure/table/glass,
 /obj/item/storage/box/donkpockets{
@@ -11245,12 +11227,6 @@
 	},
 /turf/simulated/floor/carpet/brown,
 /area/casino/north_foyer)
-"kIW" = (
-/obj/effect/map_effect/portal/line/side_a,
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "kJh" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
@@ -11889,9 +11865,7 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/casino/dorms/dorm5)
 "lrD" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 1
-	},
+/obj/random/chips/better,
 /turf/simulated/floor/outdoors/ironsand{
 	outdoors = 0
 	},
@@ -12823,14 +12797,6 @@
 	},
 /turf/simulated/wall/golddiamond,
 /area/casino/engineering)
-"mjM" = (
-/obj/effect/map_effect/portal/master/side_b{
-	portal_id = "casinomaze1"
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "mka" = (
 /obj/structure/table/gamblingtable,
 /turf/simulated/floor/carpet/gaycarpet,
@@ -13416,15 +13382,6 @@
 /obj/random/mug,
 /turf/simulated/floor/carpet/brown,
 /area/casino/dorms/dorm4)
-"mMi" = (
-/obj/effect/map_effect/portal/master/side_b{
-	dir = 8;
-	portal_id = "casinomaze3"
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "mMp" = (
 /mob/living/simple_mob/vore/rabbit/black,
 /turf/simulated/floor/outdoors/snow/sif/planetuse{
@@ -13481,14 +13438,6 @@
 	icon_state = "ice_dark"
 	},
 /area/casino/disposals_maze)
-"mOT" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "mPd" = (
 /turf/simulated/floor/water,
 /area/casino/wilderness)
@@ -15210,15 +15159,6 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/casino/wizard_home)
-"oxi" = (
-/obj/effect/map_effect/portal/master/side_a{
-	dir = 4;
-	portal_id = "casinomaze2"
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "oxz" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 8
@@ -17976,15 +17916,6 @@
 /obj/item/aliencoin/phoron,
 /turf/simulated/floor/flock,
 /area/casino/disposals_maze)
-"rfI" = (
-/obj/effect/map_effect/portal/master/side_a{
-	dir = 1;
-	portal_id = "casinomaze1"
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "rfQ" = (
 /obj/machinery/light/floortube{
 	dir = 1;
@@ -22338,14 +22269,6 @@
 /obj/structure/bed/chair/oldsofa/left,
 /turf/simulated/floor/carpet/purcarpet,
 /area/casino/north_foyer)
-"uXd" = (
-/obj/effect/map_effect/portal/master/side_a{
-	portal_id = "casinomaze4"
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "uXe" = (
 /obj/structure/fence,
 /turf/simulated/floor/outdoors/dirt{
@@ -22821,9 +22744,7 @@
 /turf/simulated/floor/cult,
 /area/casino/south_foyer)
 "vuC" = (
-/obj/effect/map_effect/portal/master/side_a{
-	portal_id = "casinomaze6"
-	},
+/obj/random/chips/good,
 /turf/simulated/floor/outdoors/ironsand{
 	outdoors = 0
 	},
@@ -23122,14 +23043,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/casino/security)
-"vKr" = (
-/obj/effect/map_effect/portal/master/side_b{
-	portal_id = "casinomaze7"
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "vKQ" = (
 /obj/machinery/button/remote/blast_door{
 	id = "Casinodormshutters6";
@@ -24012,14 +23925,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/casino/security)
-"wxd" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "wyh" = (
 /obj/structure/bed/chair/comfy/red{
 	dir = 4
@@ -25380,14 +25285,6 @@
 	icon_state = "ice_dark"
 	},
 /area/casino/mountains)
-"xUb" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/ironsand{
-	outdoors = 0
-	},
-/area/casino/sand_maze)
 "xUh" = (
 /obj/structure/bed/chair/oldsofa/left{
 	dir = 8
@@ -26192,13 +26089,13 @@ tFp
 owu
 tFp
 tFp
-tFp
+aaF
 pog
 tFp
 tFp
 tFp
-jSV
-rfI
+aaJ
+lrD
 pog
 pog
 pog
@@ -26453,10 +26350,10 @@ tFp
 jSV
 ktO
 tFp
+fSA
 tFp
-tFp
-tFp
-lrD
+fSA
+aaI
 pog
 pog
 pog
@@ -26712,16 +26609,16 @@ jSV
 pog
 tFp
 tFp
-tFp
-tFp
 lrD
+tFp
+vuC
 pog
 pog
 pog
 pog
 tFp
 tFp
-tFp
+vuC
 pog
 nzm
 tPp
@@ -26970,7 +26867,7 @@ tFp
 tFp
 tFp
 jSV
-tFp
+fSA
 pog
 pog
 pog
@@ -27223,10 +27120,10 @@ tFp
 jSV
 pog
 tFp
+aaF
 tFp
 tFp
-tFp
-tFp
+fSA
 tFp
 tFp
 ktO
@@ -27235,8 +27132,8 @@ pog
 pog
 pog
 pog
-tFp
-tFp
+lrD
+aaF
 tFp
 ktO
 nzm
@@ -27432,7 +27329,7 @@ trD
 trD
 trD
 xCU
-kVM
+xCU
 aFO
 iXT
 oOt
@@ -27485,8 +27382,8 @@ tFp
 jSV
 jSV
 tFp
+fSA
 tFp
-tFp
 pog
 pog
 pog
@@ -27494,7 +27391,7 @@ pog
 pog
 pog
 tFp
-tFp
+aaF
 tFp
 pog
 nzm
@@ -27689,7 +27586,7 @@ trD
 trD
 trD
 trD
-kVM
+xCU
 aFO
 oOt
 pkN
@@ -29768,7 +29665,7 @@ tFp
 tFp
 tFp
 pog
-tFp
+aaF
 tFp
 tFp
 ktO
@@ -30026,9 +29923,9 @@ tFp
 tFp
 tFp
 ktO
-tFp
+lrD
 cSq
-tFp
+aaF
 pog
 pog
 pog
@@ -30041,9 +29938,9 @@ pog
 pog
 pog
 ktO
-oxi
-wxd
-wxd
+tFp
+tFp
+tFp
 pog
 tFp
 tFp
@@ -30061,7 +29958,7 @@ tFp
 tFp
 tFp
 tFp
-tFp
+aaF
 tFp
 tFp
 pog
@@ -30285,7 +30182,7 @@ tFp
 tFp
 pog
 sci
-tFp
+lrD
 jAo
 pog
 pog
@@ -30308,7 +30205,7 @@ tFp
 tFp
 pog
 tFp
-tFp
+fSA
 tFp
 pog
 tFp
@@ -30321,7 +30218,7 @@ tFp
 tFp
 tFp
 cSq
-tFp
+aaF
 pog
 tFp
 tFp
@@ -30567,7 +30464,7 @@ tFp
 pog
 tFp
 tFp
-tFp
+fSA
 pog
 tFp
 tFp
@@ -31082,7 +30979,7 @@ tFp
 jSV
 pog
 tFp
-tFp
+aaF
 tFp
 pog
 tFp
@@ -31598,7 +31495,7 @@ tFp
 tFp
 pog
 tFp
-tFp
+fSA
 tFp
 pog
 tFp
@@ -31841,13 +31738,9 @@ tFp
 tFp
 tFp
 pog
-tFp
-tFp
-tFp
-tFp
-tFp
-pog
-tFp
+lrD
+aaF
+aaF
 tFp
 tFp
 pog
@@ -31856,6 +31749,10 @@ tFp
 tFp
 pog
 tFp
+tFp
+tFp
+pog
+fSA
 cSq
 tFp
 pog
@@ -32373,7 +32270,7 @@ tFp
 ktO
 tFp
 tFp
-tFp
+aaF
 ktO
 tFp
 tFp
@@ -39845,7 +39742,7 @@ tFp
 tFp
 tFp
 tFp
-tFp
+aaF
 tFp
 jAo
 pog
@@ -40105,7 +40002,7 @@ tFp
 tFp
 tFp
 cSq
-tFp
+aaF
 pog
 tFp
 tFp
@@ -40390,7 +40287,7 @@ tFp
 tFp
 pog
 tFp
-cSq
+aaH
 tFp
 pog
 tFp
@@ -40647,9 +40544,9 @@ tFp
 jSV
 tFp
 pog
+aaF
 tFp
-tFp
-tFp
+aaG
 pog
 tFp
 jSV
@@ -42193,7 +42090,7 @@ tFp
 pog
 tFp
 tFp
-tFp
+fSA
 tFp
 tFp
 tFp
@@ -42966,7 +42863,7 @@ tFp
 tFp
 pog
 tFp
-tFp
+fSA
 tFp
 pog
 tFp
@@ -43223,9 +43120,9 @@ tFp
 tFp
 tFp
 pog
-cHx
-mOT
-mOT
+fSA
+tFp
+tFp
 pog
 tFp
 tFp
@@ -43481,9 +43378,9 @@ tFp
 tFp
 tFp
 pog
-tFp
-tFp
-tFp
+lrD
+aaG
+lrD
 pog
 tFp
 tFp
@@ -44760,7 +44657,7 @@ pog
 pog
 pog
 tFp
-tFp
+fSA
 tFp
 pog
 tFp
@@ -44984,7 +44881,7 @@ oOt
 trD
 pog
 tFp
-tFp
+fSA
 tFp
 pog
 tFp
@@ -45013,8 +44910,8 @@ tFp
 tFp
 tFp
 pog
-tFp
-mjM
+aaF
+fSA
 tFp
 tFp
 tFp
@@ -45271,10 +45168,10 @@ tFp
 tFp
 tFp
 pog
+lrD
 tFp
-ihE
 tFp
-tFp
+fSA
 tFp
 tFp
 jSV
@@ -45499,7 +45396,7 @@ oOt
 oOt
 trD
 pog
-tFp
+fSA
 cSq
 tFp
 pog
@@ -45529,9 +45426,9 @@ tFp
 tFp
 tFp
 pog
+fSA
 tFp
-ihE
-tFp
+fSA
 tFp
 tFp
 tFp
@@ -45758,7 +45655,7 @@ oOt
 trD
 pog
 sci
-tFp
+fSA
 jAo
 pog
 tFp
@@ -46290,7 +46187,7 @@ tFp
 tFp
 pog
 tFp
-tFp
+lrD
 tFp
 tFp
 tFp
@@ -49691,7 +49588,7 @@ tFp
 pog
 jSV
 tFp
-tFp
+fSA
 pog
 pog
 pog
@@ -49949,7 +49846,7 @@ tFp
 pog
 tFp
 tFp
-tFp
+lrD
 pog
 tFp
 tFp
@@ -50205,9 +50102,9 @@ jSV
 jSV
 tFp
 pog
-mMi
-mOT
-mOT
+aaF
+tFp
+tFp
 pog
 tFp
 tFp
@@ -50464,8 +50361,8 @@ tFp
 tFp
 pog
 tFp
-tFp
-tFp
+fSA
+aaF
 pog
 tFp
 tFp
@@ -52994,7 +52891,7 @@ tFp
 tFp
 tFp
 tFp
-tFp
+lrD
 tFp
 tFp
 pog
@@ -53035,9 +52932,9 @@ pog
 pog
 pog
 ktO
-bkd
-wxd
-wxd
+tFp
+tFp
+lrD
 pog
 tFp
 jSV
@@ -53052,7 +52949,7 @@ tFp
 tFp
 tFp
 tFp
-tFp
+fSA
 tFp
 jAo
 pog
@@ -53293,7 +53190,7 @@ tFp
 tFp
 tFp
 tFp
-tFp
+fSA
 tFp
 tFp
 pog
@@ -53312,7 +53209,7 @@ tFp
 tFp
 tFp
 cSq
-tFp
+fSA
 pog
 tFp
 tFp
@@ -58461,9 +58358,9 @@ tFp
 tFp
 tFp
 pog
-kIW
 tFp
 tFp
+fSA
 tFp
 pog
 tFp
@@ -58719,7 +58616,7 @@ tFp
 tFp
 tFp
 pog
-kIW
+fSA
 tFp
 tFp
 tFp
@@ -61272,9 +61169,9 @@ jSV
 pog
 jSV
 tFp
+aaF
 tFp
-chx
-tFp
+fSA
 pog
 owu
 owu
@@ -61531,7 +61428,7 @@ pog
 tFp
 tFp
 tFp
-xUb
+fSA
 tFp
 ktO
 tFp
@@ -61789,8 +61686,8 @@ pog
 tFp
 tFp
 tFp
-xUb
 tFp
+aaF
 pog
 tFp
 tFp
@@ -63605,9 +63502,9 @@ tFp
 tFp
 tFp
 tFp
-tFp
-jXy
-tFp
+aaF
+lrD
+lrD
 pog
 tFp
 tFp
@@ -63862,9 +63759,9 @@ tFp
 tFp
 jSV
 tFp
-tFp
-tFp
-xUb
+fSA
+fSA
+aaF
 tFp
 pog
 tFp
@@ -64118,11 +64015,11 @@ tFp
 tFp
 tFp
 tFp
+aaF
 tFp
 tFp
 tFp
-tFp
-xUb
+fSA
 tFp
 pog
 tFp
@@ -64395,8 +64292,8 @@ tFp
 tFp
 tFp
 pog
-uXd
 tFp
+aaF
 tFp
 tFp
 pog
@@ -64653,7 +64550,7 @@ tFp
 tFp
 tFp
 pog
-kIW
+aaF
 tFp
 tFp
 tFp
@@ -64911,9 +64808,9 @@ tFp
 jSV
 tFp
 pog
-kIW
 tFp
-tFp
+lrD
+aaF
 tFp
 pog
 tFp
@@ -70067,7 +69964,7 @@ tFp
 tFp
 tFp
 pog
-tFp
+fSA
 jAo
 tFp
 pog
@@ -70585,7 +70482,7 @@ tFp
 ktO
 tFp
 tFp
-tFp
+fSA
 pog
 tFp
 tFp
@@ -70858,7 +70755,7 @@ tFp
 tFp
 pog
 tFp
-tFp
+aaF
 tFp
 fSA
 pog
@@ -71116,7 +71013,7 @@ tFp
 tFp
 pog
 tFp
-tFp
+fSA
 tFp
 lrD
 pog
@@ -71376,7 +71273,7 @@ pog
 tFp
 tFp
 jSV
-lrD
+tFp
 pog
 tFp
 tFp
@@ -71632,7 +71529,7 @@ owu
 owu
 pog
 tFp
-tFp
+aaF
 tFp
 ktO
 pog
@@ -72095,7 +71992,7 @@ pog
 ktO
 pog
 tFp
-tFp
+aaF
 tFp
 pog
 tFp
@@ -72147,7 +72044,7 @@ tFp
 tFp
 tFp
 pog
-tFp
+fSA
 tFp
 tFp
 pog
@@ -72347,8 +72244,8 @@ trD
 trD
 trD
 pog
-tFp
-vKr
+vuC
+fSA
 tFp
 tFp
 tFp
@@ -72374,7 +72271,7 @@ tFp
 tFp
 tFp
 tFp
-tFp
+fSA
 tFp
 ktO
 tFp
@@ -72606,10 +72503,10 @@ trD
 trD
 pog
 tFp
-ihE
 tFp
 tFp
-tFp
+aaG
+aaF
 jSV
 tFp
 tFp
@@ -72863,9 +72760,9 @@ trD
 trD
 trD
 pog
+fSA
 tFp
-ihE
-tFp
+lrD
 tFp
 tFp
 tFp
@@ -75461,9 +75358,9 @@ tFp
 tFp
 tFp
 tFp
-tFp
-tFp
-bgW
+fSA
+vuC
+lrD
 pog
 tFp
 tFp
@@ -75481,7 +75378,7 @@ tFp
 tFp
 tFp
 pog
-tFp
+fSA
 cSq
 tFp
 tFp
@@ -75712,16 +75609,16 @@ trD
 trD
 pog
 tFp
-tFp
+fSA
 jSV
 tFp
 tFp
-jSV
+aaK
 tFp
+aaG
 tFp
-tFp
-tFp
-lrD
+vuC
+vuC
 pog
 tFp
 tFp
@@ -75740,8 +75637,8 @@ tFp
 tFp
 pog
 jAo
-tFp
-tFp
+fSA
+fSA
 tFp
 tFp
 tFp
@@ -75974,12 +75871,12 @@ tFp
 tFp
 tFp
 tFp
+fSA
 tFp
 tFp
 tFp
 tFp
 tFp
-lrD
 pog
 tFp
 tFp
@@ -76256,7 +76153,7 @@ tFp
 tFp
 pog
 tFp
-jzu
+tFp
 tFp
 tFp
 tFp
@@ -76514,7 +76411,7 @@ tFp
 tFp
 pog
 tFp
-ihE
+tFp
 tFp
 tFp
 tFp
@@ -76772,9 +76669,9 @@ jSV
 tFp
 pog
 tFp
-ihE
 tFp
 tFp
+fSA
 tFp
 tFp
 tFp
