@@ -71,3 +71,11 @@
 	temp_range = list(T0C + 180, T0C + 200)
 
 
+/decl/chemical_reaction/distilling/phoenixbreath
+	name = REAGENT_PHOENIXBREATH
+	id = REAGENT_ID_PHOENIXBREATH
+	result = REAGENT_ID_PHOENIXBREATH
+	required_reagents = list(REAGENT_ID_SHOCKCHEM = 1, REAGENT_ID_LIQUIDLIFE = 1, REAGENT_ID_NEOLIQUIDFIRE = 1, REAGENT_ID_QUADCORD = 1, REAGENT_ID_PHORON = 1, REAGENT_ID_MINDBREAKER = 1)
+	result_amount = 6
+
+	temp_range = list(T0C + 100, T0C + 120)
