@@ -217,7 +217,6 @@
 		CASINO_PRIZE("Implant: Wrist sword", /obj/item/implantcase/sword, 1, 1000, "implants"),
 		CASINO_PRIZE("Genemod: No breath", /obj/item/dnainjector/set_trait/nobreathe, 1, 1000, "implants"),
 		CASINO_PRIZE("Genemod: Regenerate", /obj/item/dnainjector/set_trait/regenerate, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: Remote view", /obj/item/dnainjector/set_trait/remoteview, 1, 1000, "implants"),
 		CASINO_PRIZE("Genemod: Sprinter", /obj/item/dnainjector/set_trait/haste, 1, 1000, "implants"),
 		CASINO_PRIZE("Genemod: Telekinesis", /obj/item/dnainjector/set_trait/tk, 1, 1000, "implants"),
 		CASINO_PRIZE("Genemod: X-ray", /obj/item/dnainjector/set_trait/xray, 1, 1000, "implants"),
