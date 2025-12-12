@@ -113,5 +113,5 @@
 	on_expired_text = span_notice("Your body returns to normal.")
 	stacks = MODIFIER_STACK_EXTEND
 
-	disable_duration_percent =2
-	incoming_damage_percent = 3
+	disable_duration_percent = 2
+	incoming_damage_percent = 1.5
