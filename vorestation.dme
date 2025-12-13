@@ -5259,6 +5259,7 @@
 #include "modular_chomp\code\game\objects\effects\spiders.dm"
 #include "modular_chomp\code\game\objects\effects\step_triggers.dm"
 #include "modular_chomp\code\game\objects\items\contraband.dm"
+#include "modular_chomp\code\game\objects\items\gunbox.dm"
 #include "modular_chomp\code\game\objects\items\target_toy.dm"
 #include "modular_chomp\code\game\objects\items\clockwork\ratvarian_spear.dm"
 #include "modular_chomp\code\game\objects\items\devices\flipper.dm"

@@ -233,6 +233,7 @@
 		/obj/item/retail_scanner/security,	//CHOMPStation addition
 		/obj/item/clothing/glasses/hud/security,	//CHOMPStation addition
 		/obj/item/ticket_printer,			//CHOMPStation addition
+		/obj/item/gunbox/sec_officer,			//CHOMPStation addition
 		)
 
 /obj/structure/closet/secure_closet/security/Initialize(mapload)
