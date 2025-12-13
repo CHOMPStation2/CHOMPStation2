@@ -245,7 +245,7 @@
 				new /obj/item/clothing/mask/breath(C)
 		if("health")
 			//hopefully won't be necessary, but there were an awful lot of hazards to get through...
-			//CHOMPEDIT begin
+			//CHOMPEdit Start
 			var/obj/structure/closet/crate/medical/C = new(src.loc)
 			if(prob(40))
 				new /obj/item/storage/firstaid/regular(C)
@@ -259,8 +259,8 @@
 				new /obj/item/storage/firstaid/combat(C)
 			if(prob(15))
 				new /obj/item/storage/firstaid/adv(C)
-			if(prob(5))
-				new /obj/item/storage/firstaid/experimental(C) //CHOMP Add CHOMPEDIT end
+			if(prob(5)) //CHOMPEdit End
+				new /obj/item/storage/firstaid/experimental(C) //CHOMPedit Add
 		if("snacks")
 			//you're come so far, you must be in need of refreshment
 			var/obj/structure/closet/crate/freezer/C = new(src.loc)
