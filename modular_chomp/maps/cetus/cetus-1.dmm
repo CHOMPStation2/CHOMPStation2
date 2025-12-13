@@ -40,7 +40,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "aai" = (
 /obj/machinery/door/firedoor/glass,
@@ -451,6 +451,90 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jrfore)
+"aaT" = (
+/obj/structure/table/hardwoodtable,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "bar";
+	layer = 3.1;
+	name = "Bar Shutters"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1;
+	pixel_y = -4
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cetus/meteor/bar)
+"aaU" = (
+/turf/unsimulated/floor{
+	icon_state = "white";
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
+/area/crew_quarters/cetus/meteor/pool)
+"aaV" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 9
+	},
+/turf/unsimulated/floor{
+	icon_state = "white";
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
+/area/crew_quarters/cetus/meteor/pool)
+"aaW" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	icon_state = "white";
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
+/area/crew_quarters/cetus/meteor/pool)
+"aaX" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 5
+	},
+/turf/unsimulated/floor{
+	icon_state = "white";
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
+/area/crew_quarters/cetus/meteor/pool)
+"aaY" = (
+/turf/simulated/floor/water/deep/pool{
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
+/area/crew_quarters/cetus/meteor/pool)
+"aaZ" = (
+/turf/simulated/floor/water/pool/station{
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
+/area/crew_quarters/cetus/meteor/pool)
+"aba" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/mob/living/simple_mob/vore/reindeer/festive,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/meteor/atrium)
+"abb" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/tree/pine/xmas/presents,
+/turf/simulated/floor/fakesnow,
+/area/crew_quarters/cetus/meteor/atrium)
 "abi" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -1615,7 +1699,7 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 4
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "aIe" = (
 /obj/structure/cable/green{
@@ -1690,9 +1774,11 @@
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/two)
 "aKf" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/obj/structure/flora/tree/jungle,
-/turf/simulated/floor/grass,
+/obj/structure/flora/tree/winter1{
+	pixel_y = -9;
+	pixel_x = -33
+	},
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "aKp" = (
 /obj/machinery/door/firedoor/glass,
@@ -1828,9 +1914,9 @@
 /turf/simulated/shuttle/wall/voidcraft/green,
 /area/maintenance/cetus/meteor/pond)
 "aNt" = (
-/obj/structure/flora/ausbushes/fernybush,
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/grass2,
+/obj/structure/flora/tree/winter1,
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "aNB" = (
 /obj/effect/floor_decal/spline/plain,
@@ -1911,7 +1997,10 @@
 /area/security/cetus/meteor/hallway)
 "aPE" = (
 /obj/effect/floor_decal/spline/fancy,
-/turf/simulated/floor/water/deep/pool,
+/turf/simulated/floor/water/deep/pool{
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
 /area/crew_quarters/cetus/meteor/pool)
 "aPG" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -2329,6 +2418,10 @@
 	layer = 3.1;
 	name = "Bar Shutters"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1;
+	pixel_y = -2
+	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
 "bas" = (
@@ -2402,8 +2495,7 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/cetus/atriumd1)
 "bbN" = (
-/obj/structure/flora/ausbushes/fernybush,
-/turf/simulated/floor/grass2,
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "bcc" = (
 /obj/random/maintenance/security,
@@ -2548,7 +2640,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "bgb" = (
 /obj/machinery/lapvend,
@@ -3106,11 +3198,10 @@
 /area/crew_quarters/sleep/cetus/meteor/dorm7)
 "bzM" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/obj/structure/flora/ausbushes/sunnybush,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 1
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "bzO" = (
 /turf/simulated/floor/plating,
@@ -3806,11 +3897,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jrfore)
-"bQd" = (
-/obj/structure/flora/ausbushes/leafybush,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/maintenance/cetus/meteor/pond)
 "bQA" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -3943,11 +4029,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/gravgen)
-"bUv" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/palebush,
-/turf/simulated/floor/grass2,
-/area/maintenance/cetus/meteor/pond)
 "bUA" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
@@ -4074,11 +4155,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
-"bWh" = (
-/mob/living/simple_mob/vore/pitcher_plant,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/grass2,
-/area/maintenance/cetus/meteor/pond)
 "bWs" = (
 /obj/effect/floor_decal/industrial/stand_clear/yellow,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -4094,10 +4170,6 @@
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm3)
-"bWR" = (
-/obj/structure/flora/underwater/grass1,
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/pond)
 "bXj" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -4138,7 +4210,7 @@
 "bZx" = (
 /obj/structure/lattice,
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/mud/cetus,
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "bZI" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
@@ -4215,7 +4287,7 @@
 /area/security/cetus/meteor/hallway)
 "cbC" = (
 /obj/structure/flora/ausbushes/stalkybush,
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "cbV" = (
 /obj/structure/table/woodentable,
@@ -4359,6 +4431,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
@@ -4541,12 +4616,12 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/central)
 "cks" = (
-/obj/structure/flora/ausbushes/ywflowers,
 /obj/machinery/firealarm{
 	layer = 3.3;
 	pixel_y = 26
 	},
-/turf/simulated/floor/grass,
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "ckz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4927,7 +5002,7 @@
 /area/maintenance/cetus/meteor/jraft)
 "ctD" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "ctX" = (
 /obj/machinery/door/airlock/multi_tile/metal{
@@ -5279,18 +5354,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
-"cFw" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating{
-	icon_state = "dmg1"
-	},
-/area/maintenance/cetus/meteor/pond)
 "cFZ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -5880,7 +5943,10 @@
 /area/security/cetus/meteor/hallway)
 "cVN" = (
 /obj/effect/floor_decal/spline/fancy,
-/turf/simulated/floor/water/pool/station,
+/turf/simulated/floor/water/pool/station{
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
 /area/crew_quarters/cetus/meteor/pool)
 "cVT" = (
 /obj/item/storage/toolbox/mechanical,
@@ -6060,13 +6126,6 @@
 "cZO" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/ab_StripBar)
-"cZT" = (
-/obj/structure/flora/underwater/grass1,
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 4
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/pond)
 "daj" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -6287,6 +6346,9 @@
 /obj/machinery/door/window/southleft{
 	name = "Bar";
 	req_access = list(25)
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
@@ -7239,7 +7301,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/unsimulated/floor{
+	icon_state = "dark";
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
 /area/crew_quarters/cetus/meteor/pool)
 "dOH" = (
 /obj/structure/railing/overhang/grey{
@@ -7610,7 +7676,7 @@
 /area/maintenance/cetus/meteor/foremed)
 "eai" = (
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/mud/cetus,
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "eaj" = (
 /obj/structure/disposalpipe/segment,
@@ -7964,6 +8030,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
@@ -9136,10 +9205,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
-"eOX" = (
-/obj/structure/flora/underwater/seaweed3,
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/pond)
 "ePc" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -9394,8 +9459,8 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/shieldgen)
 "eVo" = (
-/obj/structure/flora/ausbushes/leafybush,
-/turf/simulated/floor/grass,
+/obj/structure/flora/bush,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "eVG" = (
 /obj/structure/table/rack,
@@ -9592,6 +9657,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-6"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/plating,
 /area/rnd/cetus/meteor/carbonresearch)
 "fbI" = (
@@ -10232,16 +10298,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/barrestrooms)
-"fua" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/pond)
 "fuf" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass{
@@ -10464,6 +10520,9 @@
 	id = "bar";
 	layer = 3.1;
 	name = "Bar Shutters"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
@@ -11138,7 +11197,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
 /area/crew_quarters/cetus/meteor/pool)
 "fSN" = (
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers,
@@ -11486,11 +11547,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery_hallway)
-"gfG" = (
-/obj/structure/flora/mushroom,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/maintenance/cetus/meteor/pond)
 "ggY" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced,
@@ -13696,7 +13752,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "hqA" = (
 /obj/structure/railing/overhang/grey,
@@ -13842,11 +13898,6 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
-"hue" = (
-/mob/living/simple_mob/vore/pitcher,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/maintenance/cetus/meteor/pond)
 "huk" = (
 /obj/structure/sign/poster{
 	dir = 1
@@ -14841,7 +14892,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "hSi" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
@@ -15942,11 +15993,6 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
-"ivh" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/grass2,
-/area/maintenance/cetus/meteor/pond)
 "ivA" = (
 /obj/structure/closet/firecloset/full,
 /obj/machinery/light{
@@ -17160,7 +17206,11 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/unsimulated/floor{
+	icon_state = "white";
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
 /area/crew_quarters/cetus/meteor/pool)
 "jcM" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -18750,7 +18800,7 @@
 "jNg" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/effect/floor_decal/spline/fancy/wood/corner,
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "jNq" = (
 /turf/simulated/floor/outdoors/rocks/cetus/edge,
@@ -19004,11 +19054,6 @@
 "jRG" = (
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/hallway)
-"jRJ" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/leafybush,
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/maintenance/cetus/meteor/pond)
 "jRM" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/radio/intercom{
@@ -19016,7 +19061,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "jRT" = (
 /obj/effect/floor_decal/spline/plain,
@@ -19511,10 +19556,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
-"kev" = (
-/obj/structure/flora/underwater/plant1,
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/pond)
 "kfl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -20106,7 +20147,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
 "ksd" = (
-/turf/simulated/floor/water/indoors/station,
+/turf/simulated/floor/outdoors/ice/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "ksi" = (
 /obj/structure/cable/green{
@@ -21085,7 +21126,7 @@
 /area/maintenance/cetus/stylist)
 "kVj" = (
 /obj/structure/lattice,
-/turf/simulated/floor/water/indoors/station,
+/turf/simulated/floor/outdoors/ice/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "kVz" = (
 /turf/simulated/wall,
@@ -21238,10 +21279,6 @@
 "lbu" = (
 /turf/simulated/floor/tiled/eris/dark/violetcorener,
 /area/maintenance/ab_StripBar)
-"lbw" = (
-/obj/structure/flora/tree/jungle_small,
-/turf/simulated/floor/grass2,
-/area/maintenance/cetus/meteor/pond)
 "lby" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -21440,7 +21477,7 @@
 	c_tag = "CIV - D1 Utility Atrium 3";
 	dir = 9
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "lgn" = (
 /obj/structure/closet/emcloset,
@@ -21966,9 +22003,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
 "lrI" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/reedbush,
-/turf/simulated/floor/outdoors/mud/cetus,
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "lrM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -22794,11 +22830,6 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
-"lSr" = (
-/obj/structure/flora/ausbushes/leafybush,
-/obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/grass,
-/area/crew_quarters/cetus/meteor/atrium)
 "lSA" = (
 /obj/structure/loot_pile/surface/medicine_cabinet{
 	pixel_y = 32
@@ -22814,11 +22845,6 @@
 "lUm" = (
 /turf/simulated/floor/outdoors/rocks/cetus/edge,
 /area/space)
-"lUn" = (
-/obj/structure/flora/tree/jungle,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/grass2,
-/area/maintenance/cetus/meteor/pond)
 "lUQ" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
@@ -23216,8 +23242,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
 "mem" = (
-/obj/structure/flora/lily2,
-/turf/simulated/floor/water/indoors/station,
+/mob/living/simple_mob/vore/reindeer,
+/turf/simulated/floor/outdoors/ice/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "meC" = (
 /obj/structure/table/standard,
@@ -23286,7 +23312,7 @@
 /area/space)
 "mgT" = (
 /obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "mgV" = (
 /obj/structure/cable/green{
@@ -24430,6 +24456,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = 22
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/cetus/meteor/dangerousspecimens)
 "mLV" = (
@@ -24799,6 +24828,9 @@
 /obj/item/stack/material/plastic{
 	amount = 2
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/cetus/meteor/dangerousspecimens)
 "mXr" = (
@@ -24815,10 +24847,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
-"mXO" = (
-/obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/maintenance/cetus/meteor/pond)
 "mXW" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -25411,6 +25439,9 @@
 	c_tag = "ENG - Engine Core 2";
 	dir = 5
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "nrr" = (
@@ -25833,11 +25864,10 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/cetus/meteor/hallway2)
 "nBZ" = (
-/obj/structure/flora/underwater/grass1,
 /obj/machinery/light/fluorescent{
 	dir = 1
 	},
-/turf/simulated/floor/water/indoors/station,
+/turf/simulated/floor/outdoors/ice/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "nCd" = (
 /obj/structure/cable/green{
@@ -25929,7 +25959,11 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/unsimulated/floor{
+	icon_state = "white";
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
 /area/crew_quarters/cetus/meteor/pool)
 "nDZ" = (
 /obj/structure/cable/green{
@@ -25949,12 +25983,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
-"nEt" = (
-/obj/structure/lattice,
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/fernybush,
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/maintenance/cetus/meteor/pond)
 "nEB" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 6
@@ -27718,13 +27746,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm2)
-"ovd" = (
-/obj/effect/floor_decal/rust,
-/obj/random/coin,
-/turf/simulated/floor/plating{
-	icon_state = "dmg1"
-	},
-/area/maintenance/cetus/meteor/pond)
 "ovL" = (
 /obj/machinery/floodlight{
 	dir = 8
@@ -30466,14 +30487,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
-"pVv" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/lavendergrass,
-/obj/structure/micro_tunnel/random{
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/maintenance/cetus/meteor/pond)
 "pVA" = (
 /obj/machinery/light/fluorescent{
 	dir = 4
@@ -31723,7 +31736,11 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/unsimulated/floor{
+	icon_state = "white";
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
 /area/crew_quarters/cetus/meteor/pool)
 "qww" = (
 /turf/simulated/floor/water/indoors/station,
@@ -32720,11 +32737,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/cetus/meteor/hallway1)
-"qVu" = (
-/obj/structure/flora/underwater/seaweed1,
-/obj/structure/flora/underwater/grass1,
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/pond)
 "qVy" = (
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/atmospherics/binary/pump{
@@ -33218,10 +33230,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
-"rjy" = (
-/obj/structure/flora/underwater/plant2,
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/pond)
 "rkc" = (
 /mob/living/simple_mob/vore/pitcher{
 	pixel_y = 5;
@@ -33640,15 +33648,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/maintenance/cetus/workshop)
-"rur" = (
-/obj/structure/flora/ausbushes/genericbush,
-/turf/simulated/floor/grass,
-/area/crew_quarters/cetus/meteor/atrium)
-"ruy" = (
-/obj/structure/flora/ausbushes/genericbush,
-/obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/grass,
-/area/crew_quarters/cetus/meteor/atrium)
 "ruJ" = (
 /obj/machinery/light/spot{
 	dir = 8
@@ -34232,9 +34231,8 @@
 /turf/simulated/shuttle/floor/black,
 /area/maintenance/cetus/meteor/pond)
 "rJM" = (
-/obj/structure/flora/underwater/plant3,
 /obj/machinery/light/fluorescent,
-/turf/simulated/floor/water/indoors/station,
+/turf/simulated/floor/outdoors/ice/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "rJZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -34324,11 +34322,10 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "rOd" = (
-/obj/structure/flora/ausbushes/leafybush,
 /obj/effect/landmark{
 	name = "blobstart"
 	},
-/turf/simulated/floor/outdoors/mud/cetus,
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "rOj" = (
 /obj/effect/floor_decal/borderfloorwhite{
@@ -34587,7 +34584,11 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/unsimulated/floor{
+	icon_state = "white";
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
 /area/crew_quarters/cetus/meteor/pool)
 "rVg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -34956,10 +34957,6 @@
 /obj/machinery/light/small/emergency,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
-"sgN" = (
-/obj/structure/flora/ausbushes,
-/turf/simulated/floor/grass,
-/area/crew_quarters/cetus/meteor/atrium)
 "sgW" = (
 /obj/structure/toilet{
 	dir = 1
@@ -36425,6 +36422,7 @@
 /obj/machinery/alarm{
 	pixel_y = 25
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/white,
 /area/rnd/cetus/meteor/carbonresearch)
 "sSa" = (
@@ -36525,9 +36523,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/meteor/hallway1)
-"sUa" = (
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/maintenance/cetus/meteor/pond)
 "sUb" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -36579,6 +36574,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/plating,
 /area/rnd/cetus/meteor/carbonresearch)
 "sUI" = (
@@ -37053,7 +37049,11 @@
 /area/medical/Surgery_Room_1)
 "tjq" = (
 /obj/structure/table/bench/standard,
-/turf/simulated/floor/tiled/kafel_full,
+/turf/unsimulated/floor{
+	icon_state = "white";
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1
+	},
 /area/crew_quarters/cetus/meteor/pool)
 "tjr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -37409,7 +37409,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
 "tsa" = (
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "tsi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -37841,8 +37841,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/pond)
 "tEv" = (
-/obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/grass,
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "tEP" = (
 /obj/machinery/door/airlock{
@@ -39075,17 +39075,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/dronefab)
-"uhb" = (
-/obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/mud/cetus,
-/area/maintenance/cetus/meteor/pond)
 "uhd" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -39964,7 +39953,7 @@
 /area/chapel/chapel_morgue/cetus/crypt)
 "uEK" = (
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "uEP" = (
 /obj/structure/table/steel,
@@ -40546,7 +40535,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "uRv" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -41842,7 +41831,8 @@
 /area/security/cetus/meteor/hallway)
 "vvH" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/grass,
+/obj/structure/flora/tree/pine,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "vwE" = (
 /obj/machinery/firealarm{
@@ -42660,9 +42650,11 @@
 /area/maintenance/cetus/meteor/jraft)
 "vRE" = (
 /obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/leafybush,
-/obj/structure/flora/ausbushes/lavendergrass,
-/turf/simulated/floor/grass2,
+/obj/structure/flora/tree/winter1{
+	pixel_y = -2;
+	pixel_x = -61
+	},
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "vRJ" = (
 /turf/simulated/wall/r_wall,
@@ -42836,11 +42828,6 @@
 /obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
-"vXm" = (
-/mob/living/simple_mob/vore/pitcher,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/grass2,
-/area/maintenance/cetus/meteor/pond)
 "vXq" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -42949,7 +42936,7 @@
 /obj/structure/cable{
 	icon_state = "2-5"
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "wdt" = (
 /obj/structure/disposalpipe/segment{
@@ -43384,8 +43371,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 "wkb" = (
-/obj/structure/loot_pile/maint/technical,
-/turf/simulated/floor/outdoors/mud/cetus,
+/obj/random/trash_pile,
+/turf/simulated/floor/outdoors/snow/turfpack/station,
 /area/maintenance/cetus/meteor/pond)
 "wkk" = (
 /obj/machinery/power/emitter/antique,
@@ -43731,11 +43718,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
-"wvC" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/leafybush,
-/turf/simulated/floor/grass2,
-/area/maintenance/cetus/meteor/pond)
 "wvN" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/kit/paint/ripley/flames_blue{
@@ -45256,6 +45238,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "xeE" = (
@@ -45286,7 +45269,7 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/fakesnow,
 /area/crew_quarters/cetus/meteor/atrium)
 "xfm" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -45475,11 +45458,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/cetus/engine/space)
-"xjN" = (
-/obj/structure/lattice,
-/obj/structure/flora/lily1,
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/pond)
 "xjW" = (
 /obj/structure/table/standard,
 /obj/item/surgical/hemostat,
@@ -45851,6 +45829,7 @@
 "xwc" = (
 /obj/effect/floor_decal/industrial/warning/tile,
 /obj/effect/floor_decal/industrial/warning/color/tile/red,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "xwY" = (
@@ -46389,6 +46368,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
@@ -47266,10 +47248,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm1)
-"ydq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/shuttle/floor/black,
-/area/maintenance/cetus/meteor/pond)
 "ydu" = (
 /obj/machinery/atmospherics/unary/freezer{
 	icon_state = "freezer"
@@ -75364,7 +75342,7 @@ bbN
 pDI
 shZ
 cpp
-nEt
+bZx
 uYx
 uYx
 bNw
@@ -75618,12 +75596,12 @@ qFw
 qFw
 qFw
 dIu
-ivh
-bWh
-uhb
-ydq
+eai
+lrI
+eai
 cpp
-mXO
+cpp
+lrI
 bNw
 uYx
 bNw
@@ -75876,12 +75854,12 @@ qFw
 qFw
 qFw
 dIu
-bUv
-jRJ
-cFw
+eai
+eai
+ddJ
 ddJ
 cpp
-bQd
+eai
 uYx
 wff
 aNh
@@ -76134,13 +76112,13 @@ qFw
 qFw
 jNq
 vnk
-lbw
+bbN
 ddJ
-fua
-xjN
-bWR
-lrI
-gfG
+kVj
+kVj
+ksd
+eai
+eai
 mWJ
 bNw
 bNw
@@ -76393,10 +76371,10 @@ jNq
 jNq
 fUz
 vRE
-kev
-fua
-bWR
-qVu
+ksd
+kVj
+ksd
+ksd
 mem
 lrI
 uLa
@@ -76650,12 +76628,12 @@ uAV
 uAV
 uAV
 rSb
-wvC
+eai
 ksd
-cZT
-lUn
-vXm
-bWR
+ksd
+eai
+eai
+ksd
 ksd
 uLa
 rOd
@@ -76910,10 +76888,10 @@ uAV
 fUz
 fUz
 nBZ
-bWR
+mem
 aNt
-eai
-bWR
+lrI
+ksd
 rJM
 aNh
 aNh
@@ -77166,13 +77144,13 @@ uAV
 slB
 slB
 bNw
-lrI
-bWR
-bWR
-bWR
-rjy
+eai
 ksd
-lrI
+ksd
+ksd
+ksd
+ksd
+eai
 lpd
 aNh
 aNh
@@ -77424,11 +77402,11 @@ slB
 slB
 slB
 bNw
-pVv
-hue
-ovd
-bWR
-eOX
+eai
+lrI
+ddJ
+ksd
+ksd
 kVj
 bZx
 olJ
@@ -77684,10 +77662,10 @@ slB
 bNw
 wkb
 fUz
-aNh
 kVj
 kVj
-sUa
+kVj
+lrI
 ocA
 ocA
 rJw
@@ -83387,11 +83365,11 @@ gZn
 rWr
 rWr
 rWr
-rWr
+aaY
 aPE
-wUa
+aaV
 jbH
-lto
+aaU
 lxQ
 gfb
 fuf
@@ -83645,9 +83623,9 @@ rWr
 rWr
 rWr
 rWr
-rWr
+aaY
 aPE
-lZu
+aaW
 tjq
 fSx
 ixl
@@ -83903,9 +83881,9 @@ kNf
 rWr
 rWr
 rWr
-rWr
+aaY
 cVN
-lZu
+aaW
 qwe
 dOE
 kPN
@@ -84161,9 +84139,9 @@ bJD
 aiM
 igf
 gZn
-gZn
+aaZ
 cVN
-lZu
+aaW
 tjq
 rUY
 tAn
@@ -84419,11 +84397,11 @@ tqY
 aiM
 igf
 viK
-gZn
+aaZ
 cVN
-ken
+aaX
 nDP
-lto
+aaU
 vsJ
 iUx
 uUS
@@ -85716,7 +85694,7 @@ hWC
 hWC
 tSA
 cXg
-aZL
+aaT
 wNG
 tZO
 aML
@@ -85974,7 +85952,7 @@ hWC
 tSA
 kHr
 tSA
-aZL
+aaT
 wNG
 tZO
 aML
@@ -100414,7 +100392,7 @@ wMw
 jKQ
 kco
 pyx
-mgT
+tEv
 jRM
 nzC
 nzC
@@ -100924,11 +100902,11 @@ fCK
 rqw
 fQv
 lWi
-vvH
+tEv
 xfe
 aMw
 aId
-vvH
+tEv
 jzE
 acg
 pyx
@@ -101181,14 +101159,14 @@ fNe
 oEt
 adq
 xQz
-vvH
+tEv
 tsa
 vvH
 cfT
-aKf
+tEv
 tsa
-vvH
-moc
+tEv
+aba
 vom
 jUQ
 nzC
@@ -101439,13 +101417,13 @@ fNe
 mdc
 rqw
 tId
-ruy
 eVo
+tsa
 gpb
 cfT
 gpb
-vvH
-rur
+tEv
+eVo
 moc
 cOW
 rqw
@@ -101697,13 +101675,13 @@ pEH
 itl
 qjJ
 hUm
-vvH
+tEv
 tEv
 gpb
 skG
 gpb
-vvH
-vvH
+tEv
+tEv
 moc
 cOW
 oMk
@@ -101955,13 +101933,13 @@ fNe
 wQg
 rqw
 tId
-vvH
-aKf
+tEv
+abb
 gpb
 cfT
 jQE
-mgT
-vvH
+tsa
+tEv
 moc
 cOW
 uQq
@@ -102213,11 +102191,11 @@ fNe
 ivV
 kKI
 tId
-vvH
-lSr
+tEv
+eVo
 tsa
 cfT
-sgN
+tsa
 aKf
 mgT
 moc
@@ -102472,11 +102450,11 @@ cks
 jzE
 edD
 pyx
-vvH
+tEv
 jNg
 qfj
 bzM
-vvH
+tEv
 nbX
 jWo
 lWi
@@ -102727,7 +102705,7 @@ aPG
 jjE
 fNe
 bfI
-vvH
+tEv
 fUb
 bId
 rwN
