@@ -213,3 +213,22 @@
       on every single mob in the world
   - bugfix: promies and proteans properly reequip their radio when they return to
       human form from blob
+2025-12-13:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: 'Fixes the insivible head issue for dullahans
+
+      Change/fix: removed neck light cover from frame option 2 to show the neck light'
+  - qol: You can now eat monkeys via eating the cube directly instead of having to
+      wet it then eat it to avoid being chestbusted
+  - balance: Pulled punches are now affected by species brutemod, and don't have an
+      inherent damage bonus
+  - balance: Pulled punches no longer use species unarmed bonus. You're holding back,
+      not hitting with full strength
+  - bugfix: xenochimerae cannot pull their special unarmed attack when feral
+  Diana:
+  - bugfix: Fixes a bug that prevented moving/unremoving storage items
+  Guti:
+  - code_imp: Made anomalies defines use SECONDS instead of EVENT_SECONDS
+  Nova:
+  - bugfix: Fix shadekin voices always being known in phase.
+  - qol: Add ability to reveal/hide voice in shadekin control panel.
