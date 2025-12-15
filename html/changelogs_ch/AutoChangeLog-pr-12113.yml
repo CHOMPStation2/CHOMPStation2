@@ -1,0 +1,7 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - balance: "Phoenix Breath is reworked and now made at the distiller. Now gives a modifier that will undo death, give a large heal but for the next 5 mins you take x1.5 damage. New Recipe: Shock Grub Chem, Neo Bicard, Neo Kelotane, Quadcord, Mindbreaker(T0C + 100, T0C + 120)"
+  - balance: "combat and experimental kits are rarer"
+  - bugfix: "An admeme weapon being obtainable"
+  - bugfix: "Metroids should give meat now"
