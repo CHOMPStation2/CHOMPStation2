@@ -4,8 +4,8 @@
 
 /obj/item/gunbox/sec_officer/attack_self(mob/living/user)
 	var/list/options = list()
-	options["Laser Rifle"] = list(/obj/item/gun/energy/laser, /obj/item/cell/device/weapon, /obj/item/cell/device/weapon)
-	options["Energy Shotgun"] = list(/obj/item/gun/projectile/pistol, /obj/item/ammo_magazine/m9mm/compact, /obj/item/ammo_magazine/m9mm/compact, /obj/item/ammo_magazine/m9mm/compact, /obj/item/ammo_magazine/m9mm/compact)
+	options["Laser Pistol"] = list(/obj/item/gun/energy/gun, /obj/item/cell/device/weapon, /obj/item/cell/device/weapon)
+	options["Normal Pistol"] = list(/obj/item/gun/projectile/pistol, /obj/item/ammo_magazine/m9mm/compact, /obj/item/ammo_magazine/m9mm/compact, /obj/item/ammo_magazine/m9mm/compact, /obj/item/ammo_magazine/m9mm/compact)
 	var/choice = tgui_input_list(user,"Please, select an option.", "Lethal Gun!", options)
 	if(!choice)
 		return
