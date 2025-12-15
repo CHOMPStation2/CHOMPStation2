@@ -387,31 +387,22 @@
 	holder.adjustCloneLoss(-1)
 
 
-/datum/reagent/phoenixbreath
+/datum/reagent/modapplying/phoenixbreath
 	name = REAGENT_PHOENIXBREATH
 	id = REAGENT_ID_PHOENIXBREATH
-	description = "An improvement on the original soul dew chemical"
+	description = "An experimental chem that will bring those back from the brink, with severe side effects"
 	taste_description = "ash"
 	reagent_state = LIQUID
-	color = "#FFFFFF"
+	color = "#fcac00"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE
-	affects_dead = TRUE
 	mrate_static = TRUE
-	metabolism = 0.5
+	metabolism = 0.1
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
+	modifier_to_add = /datum/modifier/life_cloak
+	modifier_duration = 3 SECONDS
 
-/datum/reagent/phoenixbreath/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal
-	if(M.stat == DEAD)
-		M.adjustOxyLoss(-3 * removed * chem_effective)
-		M.heal_organ_damage(4 * removed * chem_effective, 4 * removed * chem_effective)
-		M.adjustToxLoss(-3 * removed * chem_effective)
-	M.adjustOxyLoss(-2 * removed * chem_effective)
-	M.heal_organ_damage(4 * removed * chem_effective, 4 * removed * chem_effective)
-	M.adjustToxLoss(-2 * removed * chem_effective)
-	M.add_chemical_effect(CE_PAINKILLER, 10 * M.species.chem_strength_pain)
 
 /datum/reagent/dryagent
 	name = REAGENT_DRYAGENT
