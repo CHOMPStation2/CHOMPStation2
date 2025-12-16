@@ -243,3 +243,18 @@
   - bugfix: Wounds now use the proper gender
   Willbird:
   - bugfix: control clicking turf no longer runtimes attempting to pull it
+2025-12-16:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: TGUI window drag and resize should be smoother on low end systems.
+  - rscdel: Removed the TGUI kitchensink component view
+  - rscadd: Added a new data explorer for TGUI dev mode
+  FluffMedic:
+  - balance: 'Phoenix Breath is reworked and now made at the distiller. Now gives
+      a modifier that will undo death, give a large heal but for the next 5 mins you
+      take x1.5 damage. New Recipe: Shock Grub Chem, Neo Bicard, Neo Kelotane, Quadcord,
+      Mindbreaker(T0C + 100, T0C + 120)'
+  - balance: combat and experimental kits are rarer
+  - bugfix: An admeme weapon being obtainable
+  - bugfix: Metroids should give meat now
+  Guti:
+  - rscadd: Random anomalies event
