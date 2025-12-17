@@ -222,6 +222,146 @@
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/jrthreeport)
+"aaA" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeas)
+"aaB" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/open,
+/area/maintenance/cetus/threefp)
+"aaC" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaE" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaF" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaG" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaI" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaJ" = (
+/obj/machinery/atmospherics/binary/pump,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaK" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaL" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaM" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaN" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/green,
+/obj/machinery/meter,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaO" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaP" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaR" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/shallow/fp)
 "aaZ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -1055,9 +1195,6 @@
 /area/maintenance/cetus/threefp)
 "azR" = (
 /obj/item/stool/padded,
-/obj/machinery/light/small/yellowed{
-	dir = 1
-	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "aAK" = (
@@ -1916,6 +2053,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -3408,6 +3549,10 @@
 /area/bridge/sleep/HoP_Quarters)
 "ccl" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "cdf" = (
@@ -7243,6 +7388,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-10"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "esR" = (
@@ -7340,6 +7488,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -7747,8 +7898,8 @@
 /turf/simulated/wall,
 /area/bridge/Deck3_Corridor)
 "eGr" = (
-/obj/structure/table/gamblingtable,
 /obj/item/deck/egy,
+/obj/structure/casino_table/blackjack_m,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "eGM" = (
@@ -7922,6 +8073,9 @@
 "eKO" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -12384,6 +12538,9 @@
 	pixel_x = 6
 	},
 /obj/item/capture_crystal,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "hth" = (
@@ -16963,12 +17120,12 @@
 /turf/simulated/floor/lino,
 /area/maintenance/cetus/arcade)
 "kiV" = (
-/obj/structure/table/gamblingtable,
 /obj/item/material/ashtray/glass,
 /obj/item/trash/cigbutt/cigarbutt{
 	pixel_y = 4;
 	pixel_x = 4
 	},
+/obj/structure/casino_table/blackjack_l,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "kjb" = (
@@ -19103,11 +19260,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
-	},
-/obj/machinery/access_button{
-	name = "interior access button";
-	pixel_x = -32;
-	pixel_y = 23
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/door/int_door,
@@ -22852,12 +23004,12 @@
 /turf/simulated/open,
 /area/maintenance/cetus/threeap)
 "nqR" = (
-/obj/structure/table/gamblingtable,
 /obj/item/storage/dicecup/loaded{
 	pixel_y = 14;
 	pixel_x = 6
 	},
 /obj/item/storage/dicecup,
+/obj/structure/casino_table/blackjack_r,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "nqU" = (
@@ -25219,6 +25371,9 @@
 "oKn" = (
 /obj/machinery/disposal,
 /obj/machinery/light,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "oKw" = (
@@ -26417,6 +26572,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "pAg" = (
@@ -27946,6 +28104,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -30682,6 +30844,10 @@
 	tag_north = 1;
 	tag_west = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "rYL" = (
@@ -31138,6 +31304,10 @@
 "som" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -32797,6 +32967,10 @@
 	pixel_x = 32;
 	pixel_y = 32
 	},
+/obj/machinery/access_button{
+	name = "interior access button";
+	pixel_y = 23
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "tre" = (
@@ -33671,6 +33845,9 @@
 /area/crew_quarters/cetus/theater)
 "tMb" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "tMM" = (
@@ -34911,6 +35088,10 @@
 "uzk" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold4w/visible/red,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "uzq" = (
@@ -39579,6 +39760,10 @@
 "xmx" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -61691,7 +61876,7 @@ pBT
 auz
 qwE
 qWO
-uHL
+aaB
 nHb
 cjM
 irU
@@ -62742,7 +62927,7 @@ xYJ
 cjF
 cgu
 aUu
-vwJ
+cUR
 gMJ
 mhO
 uow
@@ -73027,7 +73212,7 @@ rRw
 uee
 uee
 bCI
-tSn
+aaR
 iHb
 iHb
 rRw
@@ -93682,7 +93867,7 @@ rmt
 nVD
 fBA
 adQ
-xEe
+aaC
 oKn
 vco
 mUM
@@ -93940,7 +94125,7 @@ uFE
 uFE
 ipk
 rYn
-yjs
+aaD
 gSj
 vco
 hty
@@ -94196,7 +94381,7 @@ yjs
 yjs
 gcT
 adQ
-ipk
+aaE
 uzk
 ehL
 rVR
@@ -94453,8 +94638,8 @@ yjs
 yjs
 hcE
 yjs
-rmt
-yjs
+aaF
+aaD
 lyx
 yjs
 oSI
@@ -94710,8 +94895,8 @@ uqP
 yjs
 yjs
 yjs
-yjs
-rmt
+aaH
+aaG
 nVD
 xEe
 ygP
@@ -94967,7 +95152,7 @@ vwN
 mYd
 yjs
 ygP
-ccl
+aaI
 ccl
 vLO
 psT
@@ -95225,7 +95410,7 @@ vwN
 oOm
 yjs
 som
-ehL
+aaJ
 dQy
 rCT
 upv
@@ -95481,7 +95666,7 @@ xMe
 fOf
 yjs
 ciM
-yjs
+aaH
 xmx
 yjs
 rmt
@@ -95518,7 +95703,7 @@ vjW
 wBc
 loZ
 vjW
-vjW
+aaA
 gxW
 nDK
 dDs
@@ -95739,7 +95924,7 @@ rmt
 eLl
 ary
 qry
-pmr
+aaK
 eqr
 pmr
 vbb
@@ -95995,7 +96180,7 @@ eDJ
 nxc
 pxs
 eLl
-sDF
+aaL
 bfe
 vQW
 pEZ
@@ -96252,8 +96437,8 @@ fof
 qbk
 qhg
 rmt
-eLl
-yjs
+aaM
+aaD
 kVV
 ehL
 eqr
@@ -96510,7 +96695,7 @@ rRp
 yjs
 aOU
 eug
-fOf
+aaN
 yjs
 ciM
 yjs
@@ -97542,7 +97727,7 @@ eua
 ufI
 iHa
 dCw
-pOh
+aaO
 rmt
 ciM
 xUO
@@ -97800,7 +97985,7 @@ iKP
 lOR
 cTI
 dCg
-ccl
+aaP
 psT
 wdU
 bUh
@@ -98058,7 +98243,7 @@ cIs
 fDR
 qoM
 pSg
-yjs
+aaQ
 rLa
 lNQ
 skq

@@ -15,6 +15,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twofp)
+"aac" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/security/Brig)
 "aad" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/binary/pump/on{
@@ -418,6 +427,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twojrport)
+"aaP" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-6"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/security/Brig)
 "aaT" = (
 /turf/simulated/wall,
 /area/security/Internal_Affairs_Office)
@@ -55360,6 +55381,10 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/machinery/light_switch{
+	pixel_x = 12;
+	pixel_y = 25
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer_auxiliary)
 "sJu" = (
@@ -109178,8 +109203,8 @@ lCE
 hty
 jZe
 hty
-lCE
-hty
+aaP
+aac
 jLj
 xJc
 vXa
@@ -110234,7 +110259,7 @@ aaI
 jRq
 ugu
 tZX
-tZX
+eXS
 hUd
 pab
 mdS

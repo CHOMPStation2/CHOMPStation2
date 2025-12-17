@@ -75,16 +75,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/aftstar)
-"aal" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/medical/medbay_primary_storage)
 "aam" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/maintenance_panel{
@@ -99,19 +89,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/aftstar)
-"aan" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/medical/medbay_primary_storage)
 "aao" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
@@ -169,6 +146,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/central)
 "aav" = (
@@ -449,6 +427,43 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/jrfore)
+"aaT" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/aftmed)
+"aaU" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d1port)
+"aaV" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/portsec)
+"aaW" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/item/stool{
+	color = "grey";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/security/cetus/meteor/brig)
+"aaX" = (
+/obj/structure/table/steel,
+/obj/item/radio/intercom{
+	desc = "Talk... listen through this.";
+	name = "Station Intercom (Brig Radio)";
+	wires = 7;
+	dir = 4;
+	pixel_y = 5
+	},
+/turf/simulated/floor/tiled,
+/area/security/cetus/meteor/brig)
+"aaY" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jrfore)
 "abi" = (
@@ -13792,6 +13807,7 @@
 /area/engineering/cetus/meteor/engineroom)
 "htp" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/star)
 "htL" = (
@@ -15288,6 +15304,11 @@
 	},
 /obj/random/medical,
 /obj/random/medical,
+/obj/item/storage/box/gloves{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/box/masks,
 /turf/simulated/floor/tiled/white,
 /area/medical/Surgery_Room_2)
 "iaJ" = (
@@ -15299,13 +15320,8 @@
 /area/crew_quarters/cetus/meteor/hallway2)
 "iba" = (
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/obj/structure/window/maintenance_panel,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/structure/barricade,
 /turf/simulated/floor/plating,
 /area/medical/medbay_primary_storage)
 "ibf" = (
@@ -16631,6 +16647,7 @@
 /area/crew_quarters/sleep/cetus/meteor/dorm3)
 "iMH" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/starsec)
 "iMJ" = (
@@ -17145,8 +17162,13 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
+/obj/machinery/door/airlock/maintenance/medical,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown Shutters";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/abmedical)
@@ -19275,6 +19297,7 @@
 /obj/structure/grille,
 /obj/item/material/shard,
 /obj/structure/window/reinforced,
+/obj/structure/casino_table/blackjack_l,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 "jYZ" = (
@@ -23505,12 +23528,6 @@
 	dir = 4
 	},
 /obj/structure/table/bench/steel,
-/obj/item/radio/intercom{
-	desc = "Talk... listen through this.";
-	name = "Station Intercom (Brig Radio)";
-	pixel_y = -21;
-	wires = 7
-	},
 /obj/machinery/camera/network/prison{
 	c_tag = "SEC - Common Brig 3";
 	dir = 1
@@ -25068,6 +25085,7 @@
 /area/crew_quarters/cetus/meteor/hallway2)
 "nhn" = (
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/foremed)
 "niP" = (
@@ -25714,6 +25732,7 @@
 /obj/machinery/light/small/yellowed{
 	dir = 1
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/star)
 "nxZ" = (
@@ -32115,6 +32134,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/structure/table/glass,
+/obj/item/storage/box/gloves{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/box/masks,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery_hallway)
 "qFg" = (
@@ -32170,6 +32195,11 @@
 	},
 /obj/random/medical,
 /obj/random/medical,
+/obj/item/storage/box/gloves{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/box/masks,
 /turf/simulated/floor/tiled/white,
 /area/medical/Surgery_Room_1)
 "qGT" = (
@@ -32927,6 +32957,13 @@
 /area/crew_quarters/cetus/meteor/hallway2)
 "raR" = (
 /obj/structure/table/steel,
+/obj/item/radio/intercom{
+	desc = "Talk... listen through this.";
+	name = "Station Intercom (Brig Radio)";
+	wires = 7;
+	dir = 4;
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled,
 /area/security/cetus/meteor/brig)
 "rba" = (
@@ -37238,6 +37275,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/portsec)
 "tmO" = (
@@ -38613,7 +38651,7 @@
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
 "tZT" = (
 /obj/machinery/disposal,
-/obj/structure/disposalpipe/up{
+/obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -39690,6 +39728,7 @@
 /area/maintenance/ab_StripBar)
 "uxH" = (
 /obj/structure/disposalpipe/segment,
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/abmedical)
 "uyj" = (
@@ -41227,6 +41266,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/foremed)
 "vjA" = (
@@ -64452,7 +64492,7 @@ sVO
 sVO
 pCK
 exN
-exN
+aaY
 qHL
 cEy
 bcr
@@ -68661,7 +68701,7 @@ qFw
 qFw
 mzI
 tXf
-dBF
+aaU
 cLp
 pMs
 iey
@@ -72048,9 +72088,9 @@ fam
 xzl
 cMW
 qSr
-aan
-aal
-aal
+iba
+iba
+iba
 iba
 qSr
 cuN
@@ -75417,7 +75457,7 @@ qOt
 lHh
 fuS
 eEu
-jgV
+aaT
 rmh
 vYk
 qFw
@@ -79739,7 +79779,7 @@ euC
 sPg
 mEg
 dOg
-tqS
+aaV
 tqS
 sPg
 mYS
@@ -82821,7 +82861,7 @@ nax
 fGU
 tmf
 fop
-raR
+aaX
 akW
 iYt
 hZN
@@ -85144,7 +85184,7 @@ hgJ
 bon
 kpC
 wFW
-mwB
+aaW
 mwB
 lWt
 ddy
