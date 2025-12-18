@@ -439,6 +439,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/security/Brig)
+"aaQ" = (
+/obj/structure/table/reinforced,
+/obj/item/form_printer{
+	pixel_y = 3;
+	pixel_x = 15
+	},
+/obj/item/flashlight/lamp{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/Internal_Affairs_Office)
 "aaT" = (
 /turf/simulated/wall,
 /area/security/Internal_Affairs_Office)
@@ -70803,7 +70815,13 @@
 /area/maintenance/cetus/auxsupport)
 "xZG" = (
 /obj/structure/table/reinforced,
-/obj/item/flashlight/lamp,
+/obj/item/form_printer{
+	pixel_y = 11;
+	pixel_x = 3
+	},
+/obj/item/flashlight/lamp{
+	pixel_x = 13
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Internal_Affairs_Office)
 "xZJ" = (
@@ -108454,7 +108472,7 @@ lZj
 jdW
 aaT
 emL
-xZG
+aaQ
 amd
 iLI
 ouW
