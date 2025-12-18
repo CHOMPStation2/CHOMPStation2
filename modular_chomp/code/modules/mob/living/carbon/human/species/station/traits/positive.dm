@@ -37,3 +37,35 @@
 
 /datum/trait/positive/brute_resist_plus // Equivalent to Brute Weakness Major, cannot be taken at the same time.
 	cost = 3 // Exact Opposite of Brute Weakness Major, except Weakness Major is 50% incoming, this is -40% incoming.
+
+
+//edits below open certain traits to custom species, based on whether a human(which is not custom) could have that trait
+/datum/trait/positive/snowwalker
+	custom_only = FALSE
+
+/datum/trait/positive/throw_resistance
+	custom_only = FALSE
+
+/datum/trait/positive/lowpressureresminor
+	custom_only = FALSE
+
+/datum/trait/positive/highpressureresminor
+	custom_only = FALSE
+
+/datum/trait/positive/pressureres
+	custom_only = FALSE
+
+/datum/trait/positive/more_blood
+	custom_only = FALSE
+
+/datum/trait/positive/heavyweight
+	custom_only = FALSE
+
+/datum/trait/positive/grappling_expert
+	custom_only = FALSE //I hate this trait, but I can't justify it being a custom only trait in my head
+
+/datum/trait/positive/densebones
+	custom_only = FALSE
+
+/datum/trait/positive/adrenaline_rush
+	custom_only = FALSE //tbh, if I were to give humans, specifically, any one trait and restrict it from other races, it would be this one
