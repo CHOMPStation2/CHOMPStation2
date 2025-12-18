@@ -378,6 +378,8 @@
 	return canmove
 
 /mob/living/silicon/robot/fire_act()
+	if(is_incorporeal())
+		return
 	if(!on_fire) //Silicons don't gain stacks from hotspots, but hotspots can ignite them
 		ignite_mob()
 
