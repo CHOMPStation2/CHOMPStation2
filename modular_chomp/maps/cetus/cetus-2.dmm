@@ -16,14 +16,17 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twofp)
 "aac" = (
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/structure/table/reinforced,
+/obj/item/form_printer{
+	pixel_y = 3;
+	pixel_x = 15
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/plating,
-/area/security/Brig)
+/obj/item/flashlight/lamp{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/Internal_Affairs_Office)
 "aad" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/binary/pump/on{
@@ -432,6 +435,15 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/security/Brig)
+"aaQ" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /obj/structure/cable/green{
 	icon_state = "2-6"
 	},
@@ -439,18 +451,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/security/Brig)
-"aaQ" = (
-/obj/structure/table/reinforced,
-/obj/item/form_printer{
-	pixel_y = 3;
-	pixel_x = 15
-	},
-/obj/item/flashlight/lamp{
-	pixel_y = 5;
-	pixel_x = -5
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/Internal_Affairs_Office)
 "aaT" = (
 /turf/simulated/wall,
 /area/security/Internal_Affairs_Office)
@@ -108472,7 +108472,7 @@ lZj
 jdW
 aaT
 emL
-aaQ
+aac
 amd
 iLI
 ouW
@@ -109221,8 +109221,8 @@ lCE
 hty
 jZe
 hty
+aaQ
 aaP
-aac
 jLj
 xJc
 vXa
