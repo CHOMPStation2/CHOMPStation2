@@ -258,3 +258,8 @@
   - bugfix: Metroids should give meat now
   Guti:
   - rscadd: Random anomalies event
+2025-12-18:
+  Diana:
+  - code_imp: Fixes signal usage in a few places
+  Guti:
+  - bugfix: Fixed Dark Maw not respecting prefs
