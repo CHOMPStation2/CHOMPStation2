@@ -1,7 +1,7 @@
 
 /datum/trait/negative/breathes
 	custom_only = FALSE
-	banned_species = list(SPECIES_VOX)
+	banned_species = list(SPECIES_VOX, SPECIES_SHADEKIN)
 
 /datum/trait/negative/schizophrenia
 	can_take = ORGANICS|SYNTHETICS //synths can't medicate for this, but it stands to reason a lifelike synth could experience hallucination-like bugs
