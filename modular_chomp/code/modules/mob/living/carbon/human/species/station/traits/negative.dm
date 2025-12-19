@@ -9,11 +9,11 @@
 //edits below open certain traits to custom species, based on whether a human(which is not custom) could have that trait
 /datum/trait/negative/less_blood
 	custom_only = FALSE
-	banned_species = list(SPECIES_PROMETHEAN, SPECIES_SHADEKIN, SPECIES_ALRAUNE)
+	banned_species = list(SPECIES_PROMETHEAN, SPECIES_SHADEKIN, SPECIES_ALRAUNE, SPECIES_TESHARI)
 
 /datum/trait/negative/less_blood_extreme
 	custom_only = FALSE
-	banned_species = list(SPECIES_PROMETHEAN, SPECIES_SHADEKIN, SPECIES_ALRAUNE)
+	banned_species = list(SPECIES_PROMETHEAN, SPECIES_SHADEKIN, SPECIES_ALRAUNE, SPECIES_TESHARI)
 
 /datum/trait/negative/low_blood_sugar
 	custom_only = FALSE
@@ -26,6 +26,7 @@
 
 /datum/trait/negative/endurance_glass
 	custom_only = FALSE
+	banned_species = list(SPECIES_TESHARI)
 
 /datum/trait/negative/light_sensitivity
 	custom_only = FALSE

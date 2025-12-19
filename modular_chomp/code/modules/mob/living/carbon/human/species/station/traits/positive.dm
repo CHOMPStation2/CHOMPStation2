@@ -48,15 +48,19 @@
 
 /datum/trait/positive/lowpressureresminor
 	custom_only = FALSE
+	banned_species = list(SPECIES_SHADEKIN)
 
 /datum/trait/positive/highpressureresminor
 	custom_only = FALSE
+	banned_species = list(SPECIES_SHADEKIN)
 
 /datum/trait/positive/pressureres
 	custom_only = FALSE
+	banned_species = list(SPECIES_SHADEKIN)
 
 /datum/trait/positive/more_blood
 	custom_only = FALSE
+	banned_species = list(SPECIES_TESHARI)
 
 /datum/trait/positive/heavyweight
 	custom_only = FALSE
@@ -66,6 +70,7 @@
 
 /datum/trait/positive/densebones
 	custom_only = FALSE
+	banned_species = list(SPECIES_UNATHI)
 
 /datum/trait/positive/adrenaline_rush
 	custom_only = FALSE //tbh, if I were to give humans, specifically, any one trait and restrict it from other races, it would be this one
