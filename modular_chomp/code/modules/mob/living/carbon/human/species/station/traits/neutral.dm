@@ -56,9 +56,11 @@
 /datum/trait/neutral/hotadapt
 	can_take = ORGANICS | SYNTHETICS //I think synths made for high heat should exist, considering they can be made spaceproof easily anyhow
 	custom_only = FALSE
+	banned_species = (SPECIES_UNATHI)
 
 /datum/trait/neutral/coldadapt
 	custom_only = FALSE
+	banned_species = (SPECIES_UNATHI)
 
 /datum/trait/neutral/abnormal_mind
 	custom_only = FALSE //I see a lot of xenochimera that have this as a trope.
