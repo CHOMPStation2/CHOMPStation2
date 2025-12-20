@@ -268,3 +268,22 @@
   - bugfix: Null rod's special powers can only be used by chaplain.
   - bugfix: Typing indicator no longer shows up when under FAKEDEATH
   - qol: Null rod no longer has a 10% chance when used to harm-intent someone's head
+2025-12-20:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Flavored donk pockets retain flavor after microwaving
+  - bugfix: robot camera replacement
+  - qol: Unstable metamorphosis ray can be repaired into an advanced one with a multitool.
+  - bugfix: Mouse army uses defines now
+  - code_imp: Adds early returns to gunboxes if no choice is made
+  - bugfix: emote spamming no longer allows for rapidly spammed muffled messages
+  Guti:
+  - rscadd: Telesci can now fuck around and find out what happens if you try to teleport
+      things from outside the universe
+  - rscadd: Hallucination anomaly confuses players
+  - bugfix: Wearing magboots keeps you grounded with gravity anomalies
+  - bugfix: Fixed phased kin being zapped by the flux anomaly
+  - code_imp: Improved the anomaly placer datum
+  Willbird:
+  - rscadd: no sleeving trait prevents characters from having a round start body record
+  zeskorion:
+  - bugfix: fixes a few things about cetus again
