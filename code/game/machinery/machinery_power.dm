@@ -76,12 +76,17 @@
 // Do not do power stuff in New/Initialize until after ..()
 /obj/machinery/Initialize(mapload)
 	. = ..()
+<<<<<<< HEAD
 	//ChompEDIT START -- only add this if we init on a non-turf (and non-null)
 	if(!recursive_set && loc && !isturf(loc))
 		recursive_set = TRUE
 		AddComponent(/datum/component/recursive_move)
 		RegisterSignal(src, COMSIG_MOVABLE_MOVED, PROC_REF(update_power_on_move)) //we only need this for recursive moving
 	//ChompEDIT END
+=======
+	RegisterSignal(src, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(update_power_on_move))
+	AddComponent(/datum/component/recursive_move)
+>>>>>>> dcdd46fb17 (Signal fixes (#18923))
 	var/power = POWER_CONSUMPTION
 	REPORT_POWER_CONSUMPTION_CHANGE(0, power)
 	power_init_complete = TRUE
@@ -90,7 +95,7 @@
 /obj/machinery/Destroy()
 	/*
 	if(ismovable(loc))
-		UnregisterSignal(loc, COMSIG_MOVABLE_MOVED) // Unregister just in case
+		UnregisterSignal(loc, COMSIG_MOVABLE_ATTEMPTED_MOVE) // Unregister just in case
 	*/
 	var/power = POWER_CONSUMPTION
 	REPORT_POWER_CONSUMPTION_CHANGE(power, 0)
@@ -111,9 +116,9 @@
 
 	/* No
 	if(ismovable(old_loc)) // Unregister recursive movement.
-		UnregisterSignal(old_loc, COMSIG_MOVABLE_MOVED)
+		UnregisterSignal(old_loc, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 	if(ismovable(loc)) // Register for recursive movement (if the thing we're inside moves)
-		RegisterSignal(loc, COMSIG_MOVABLE_MOVED, PROC_REF(update_power_on_move), override = TRUE)
+		RegisterSignal(loc, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(update_power_on_move), override = TRUE)
 	*/
 
 /obj/machinery/proc/update_power_on_move(atom/movable/mover, atom/old_loc, atom/new_loc)
