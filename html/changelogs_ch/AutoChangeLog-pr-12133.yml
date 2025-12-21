@@ -1,0 +1,4 @@
+author: "zeskorion"
+delete-after: True
+changes:
+  - balance: "expands traits available to synths and non-custom species"
