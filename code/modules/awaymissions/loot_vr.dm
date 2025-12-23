@@ -160,7 +160,7 @@
 					prob(6);/obj/item/gun/projectile/automatic/l6_saw,\
 					prob(6);/obj/item/gun/energy/lasercannon,\
 					prob(5);/obj/item/gun/projectile/automatic/bullpup,\
-					prob(5);/obj/item/gun/energy/pulse_rifle,\
+				/*	prob(5);/obj/item/gun/energy/pulse_rifle,\ CHOMPREMOVAL Why why why*/
 				/*	prob(4);/obj/item/gun/projectile/automatic/battlerifle,\ */
 					prob(3);/obj/item/gun/projectile/deagle/camo,\
 					prob(3);/obj/item/gun/energy/gun/nuclear,\
@@ -245,21 +245,22 @@
 				new /obj/item/clothing/mask/breath(C)
 		if("health")
 			//hopefully won't be necessary, but there were an awful lot of hazards to get through...
+			//CHOMPEdit Start
 			var/obj/structure/closet/crate/medical/C = new(src.loc)
-			if(prob(50))
+			if(prob(40))
 				new /obj/item/storage/firstaid/regular(C)
-			if(prob(50))
+			if(prob(40))
 				new /obj/item/storage/firstaid/fire(C)
-			if(prob(50))
+			if(prob(40))
 				new /obj/item/storage/firstaid/o2(C)
-			if(prob(50))
+			if(prob(40))
 				new /obj/item/storage/firstaid/toxin(C)
-			if(prob(25))
+			if(prob(5))
 				new /obj/item/storage/firstaid/combat(C)
-			if(prob(25))
+			if(prob(15))
 				new /obj/item/storage/firstaid/adv(C)
-			if(prob(25))
-				new /obj/item/storage/firstaid/experimental(C) //CHOMP Add
+			if(prob(5)) //CHOMPEdit End
+				new /obj/item/storage/firstaid/experimental(C) //CHOMPedit Add
 		if("snacks")
 			//you're come so far, you must be in need of refreshment
 			var/obj/structure/closet/crate/freezer/C = new(src.loc)

@@ -37,6 +37,7 @@
 	name = "Egg Laying"
 	desc = "You can lay eggs, much like an avian."
 	cost = 0
+	custom_only = FALSE
 
 /datum/trait/neutral/mobegglaying/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -51,3 +52,16 @@
 /datum/trait/neutral/succubus_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/proc/succubus_bite)
+
+/datum/trait/neutral/hotadapt
+	can_take = ORGANICS | SYNTHETICS //I think synths made for high heat should exist, considering they can be made spaceproof easily anyhow
+	custom_only = FALSE
+	banned_species = (SPECIES_UNATHI)
+
+/datum/trait/neutral/coldadapt
+	custom_only = FALSE
+	banned_species = (SPECIES_UNATHI)
+
+/datum/trait/neutral/abnormal_mind
+	custom_only = FALSE //I see a lot of xenochimera that have this as a trope.
+	can_take = ORGANICS | SYNTHETICS //I see more synths with dual minds than organics!

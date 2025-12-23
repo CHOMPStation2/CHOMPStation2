@@ -1,6 +1,9 @@
 /datum/material/durasteel //Slightly nerfed protectivness
 	protectiveness = 55
 
+/datum/material/durasteel/hull //Severly reduces protectivness
+	protectiveness = 45
+
 /datum/material/titanium //Adjusted hardness, reflective, and protection
 	hardness = 60
 	protectiveness = 30
