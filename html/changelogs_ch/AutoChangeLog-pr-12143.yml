@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - admin: "Global narrate and Admin Subtle PM can now use HTML"

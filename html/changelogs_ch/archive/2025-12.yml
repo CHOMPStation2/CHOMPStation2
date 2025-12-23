@@ -302,3 +302,7 @@
       fire while phased
   zeskorion:
   - balance: expands traits available to synths and non-custom species
+2025-12-23:
+  CHOMPStation2StaffMirrorBot:
+  - admin: Global narrate and Admin Subtle PM can now use HTML
+  - bugfix: large, chunked payloads hitting rate limits
