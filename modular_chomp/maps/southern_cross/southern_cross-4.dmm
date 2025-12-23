@@ -173,6 +173,54 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
+"aaB" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/thirddeck/aft)
+"aaC" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/open,
+/area/hallway/primary/thirddeck/aft)
+"aaD" = (
+/obj/structure/table/marble,
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/aftport)
+"aaE" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/solar/aftstarboardsolar)
+"aaF" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -25
+	},
+/turf/simulated/open,
+/area/hallway/primary/thirddeck/central)
+"aaG" = (
+/obj/effect/landmark/free_ai_shell,
+/turf/simulated/floor/bluegrid,
+/area/ai/ai_upload)
+"aaH" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/solar/forestarboardsolar)
 "aaM" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -415,6 +463,10 @@
 	id = "AI";
 	pixel_y = -24
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/ai)
 "ajO" = (
@@ -1425,9 +1477,6 @@
 	dir = 4
 	},
 /obj/structure/window/phoronreinforced,
-/obj/machinery/light/floortube{
-	dir = 8
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -1552,7 +1601,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/obj/effect/landmark/free_ai_shell,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "bng" = (
@@ -3659,6 +3707,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
 	},
+/obj/machinery/light/floortube{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
 "dfh" = (
@@ -3722,7 +3773,6 @@
 /obj/machinery/ai_status_display{
 	pixel_y = -32
 	},
-/obj/item/toy/xmastree,
 /turf/simulated/floor/bluegrid,
 /area/ai/ai_upload)
 "djL" = (
@@ -3796,6 +3846,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -28
 	},
+/obj/effect/landmark/free_ai_shell,
 /turf/simulated/floor/bluegrid,
 /area/ai/ai_upload)
 "dnd" = (
@@ -5259,7 +5310,7 @@
 /area/maintenance/substation/command)
 "elH" = (
 /obj/structure/cable/green{
-	icon_state = "0-4"
+	icon_state = "2-4"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -5567,10 +5618,6 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hop/quarters)
 "evA" = (
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/structure/cable/green,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -5579,6 +5626,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
@@ -6003,13 +6053,17 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/engine_default{
 	RCon_tag = "Substation - Command"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor,
 /area/maintenance/substation/command)
 "eJK" = (
-/obj/machinery/power/breakerbox/activated{
+/obj/machinery/power/breakerbox{
 	RCon_tag = "Command Substation Bypass"
 	},
 /turf/simulated/floor,
@@ -7152,9 +7206,6 @@
 	dir = 4
 	},
 /obj/structure/window/phoronreinforced,
-/obj/machinery/light/floortube{
-	dir = 8
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/purple{
 	dir = 4
@@ -8987,9 +9038,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/obj/structure/closet/walllocker/emerglocker{
-	pixel_y = -32
-	},
+/obj/structure/closet/walllocker/emerglocker/south,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod7/station)
 "hih" = (
@@ -9519,9 +9568,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/structure/closet/walllocker/medical{
-	pixel_y = 30
-	},
+/obj/structure/closet/walllocker/medical/north,
 /obj/effect/shuttle_landmark/southern_cross/escape_pod8/station,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod8/station)
@@ -9533,9 +9580,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
-/obj/structure/closet/walllocker/emerglocker{
-	pixel_y = 32
-	},
+/obj/structure/closet/walllocker/emerglocker/north,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod8/station)
 "hIh" = (
@@ -10450,6 +10495,7 @@
 /obj/machinery/keycard_auth{
 	pixel_x = -26
 	},
+/obj/item/pinpointer/advpinpointer,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hos/quarters)
 "izz" = (
@@ -11099,7 +11145,7 @@
 /obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 8
 	},
-/obj/structure/table,
+/obj/structure/table/fancyblack,
 /turf/simulated/floor/carpet,
 /area/maintenance/thirddeck/aftstarboard)
 "jgM" = (
@@ -11264,18 +11310,15 @@
 	},
 /turf/simulated/floor/carpet,
 /area/bridge/meeting_room)
-"jnq" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/open,
-/area/hallway/primary/thirddeck/central)
 "joC" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
@@ -11447,9 +11490,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/structure/closet/walllocker/medical{
-	pixel_y = -30
-	},
+/obj/structure/closet/walllocker/medical/south,
 /obj/effect/shuttle_landmark/southern_cross/escape_pod7/station,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod7/station)
@@ -11625,6 +11666,11 @@
 /area/maintenance/thirddeck/aftport)
 "jHg" = (
 /obj/item/geiger/wall/south,
+/obj/machinery/air_sensor{
+	frequency = 1491;
+	id_tag = "pa_room";
+	output = 63
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
 "jHs" = (
@@ -11986,6 +12032,9 @@
 /area/hallway/primary/thirddeck/central)
 "jSS" = (
 /obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -12548,6 +12597,7 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/machinery/door/firedoor/glass/hidden/steel,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
 "kvb" = (
@@ -14074,6 +14124,7 @@
 	dir = 1;
 	req_access = list(20)
 	},
+/obj/item/pinpointer/advpinpointer,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
 "lUe" = (
@@ -15816,7 +15867,6 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
-/obj/item/toy/xmastree,
 /turf/simulated/floor/tiled,
 /area/bridge)
 "nst" = (
@@ -16261,9 +16311,6 @@
 	dir = 4
 	},
 /obj/structure/window/phoronreinforced,
-/obj/machinery/light/floortube{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -17306,6 +17353,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/light/floortube{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
 "owK" = (
@@ -18331,14 +18381,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/thirddeck/aftstarboardcentral)
-"ppx" = (
-/obj/machinery/air_sensor{
-	frequency = 1491;
-	id_tag = "pa_room";
-	output = 63
-	},
-/turf/simulated/floor/reinforced,
-/area/rnd/research/particleaccelerator)
 "ppD" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/plating,
@@ -20389,6 +20431,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/light/floortube{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
 "rbF" = (
@@ -23115,6 +23160,11 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 22
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "tjZ" = (
@@ -23914,6 +23964,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "tWG" = (
@@ -23930,6 +23981,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "tWX" = (
@@ -24457,10 +24509,6 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/crew_quarters/sleep/vistor_room_9)
 "utQ" = (
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -21
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -24482,6 +24530,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "uul" = (
+/obj/machinery/light/floortube{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
 "uuq" = (
@@ -24509,6 +24560,9 @@
 /obj/effect/floor_decal/corner/blue/bordercorner,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
+	},
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
@@ -26031,12 +26085,6 @@
 /obj/random/obstruction,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsport)
-"vAn" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/thirddeck/roof)
 "vAp" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -44677,7 +44725,7 @@ dgt
 dgt
 dgt
 dgt
-xbg
+ffp
 apc
 apc
 apc
@@ -44935,7 +44983,7 @@ dgt
 dgt
 dgt
 dgt
-xbg
+ffp
 apc
 apc
 apc
@@ -45193,7 +45241,7 @@ dgt
 dgt
 dgt
 dgt
-xbg
+ffp
 apc
 apc
 apc
@@ -45416,7 +45464,7 @@ jvH
 jvH
 jvH
 jvH
-apc
+voo
 flb
 voo
 jvH
@@ -45451,7 +45499,7 @@ dgt
 dgt
 dgt
 dgt
-xbg
+ffp
 apc
 apc
 apc
@@ -45675,7 +45723,7 @@ apc
 apc
 apc
 apc
-flb
+sjC
 dgt
 dgt
 dgt
@@ -45709,7 +45757,7 @@ dgt
 dgt
 dgt
 dgt
-xbg
+ffp
 apc
 apc
 apc
@@ -45933,7 +45981,7 @@ epg
 epg
 apc
 apc
-flb
+sjC
 dgt
 dgt
 dgt
@@ -45967,7 +46015,7 @@ dgt
 dgt
 dgt
 dgt
-xbg
+ffp
 apc
 apc
 apc
@@ -46191,7 +46239,7 @@ epg
 apc
 apc
 apc
-flb
+sjC
 dgt
 dgt
 dgt
@@ -46225,7 +46273,7 @@ dgt
 dgt
 dgt
 dgt
-xbg
+ffp
 aqj
 aqj
 aqj
@@ -46449,7 +46497,7 @@ aqj
 apc
 apc
 apc
-flb
+sjC
 dgt
 dgt
 dgt
@@ -46483,7 +46531,7 @@ dgt
 dgt
 dgt
 dgt
-xbg
+ffp
 apc
 apc
 apc
@@ -46707,7 +46755,7 @@ aqj
 apc
 apc
 apc
-flb
+sjC
 dgt
 dgt
 dgt
@@ -46741,7 +46789,7 @@ dgt
 dgt
 dgt
 dgt
-xbg
+ffp
 apc
 apc
 apc
@@ -46965,7 +47013,7 @@ apc
 apc
 apc
 apc
-flb
+sjC
 dgt
 dgt
 dgt
@@ -47223,7 +47271,7 @@ apc
 apc
 apc
 apc
-flb
+sjC
 dgt
 dgt
 dgt
@@ -47258,8 +47306,8 @@ dgt
 dgt
 dgt
 ffp
-apc
-apc
+bXW
+bXW
 apc
 apc
 aqj
@@ -47481,7 +47529,7 @@ lQR
 dgt
 dgt
 dgt
-flb
+sjC
 dgt
 dgt
 dgt
@@ -47739,7 +47787,7 @@ lQR
 dgt
 dgt
 dgt
-flb
+sjC
 dgt
 dgt
 dgt
@@ -47997,7 +48045,7 @@ lQR
 dgt
 dgt
 dgt
-flb
+sjC
 dgt
 dgt
 dgt
@@ -54481,7 +54529,7 @@ tcw
 tcw
 tld
 lcO
-qlf
+aaD
 dIo
 ppD
 ieB
@@ -61985,7 +62033,7 @@ tiC
 twr
 tVe
 utQ
-kqE
+aaB
 kle
 aaj
 vlA
@@ -62500,8 +62548,8 @@ wzy
 tkI
 twu
 tWU
-uuq
-upp
+aaC
+kqE
 rNC
 aaj
 vlA
@@ -62709,7 +62757,7 @@ cEX
 cJI
 cSS
 cZQ
-cZQ
+aaG
 dsu
 dBh
 dNq
@@ -62727,8 +62775,8 @@ hSU
 ijw
 iKC
 tgj
-jnq
 jRX
+aaF
 kuz
 kTs
 luc
@@ -81571,7 +81619,7 @@ dgt
 dgt
 dgt
 dgt
-vAn
+hsJ
 dgt
 dgt
 dgt
@@ -81798,7 +81846,7 @@ apc
 afc
 fUI
 uul
-ppx
+uul
 uul
 fUI
 kNG
@@ -81829,7 +81877,7 @@ dgt
 dgt
 dgt
 dgt
-vAn
+hsJ
 dgt
 dgt
 dgt
@@ -82087,7 +82135,7 @@ dgt
 dgt
 dgt
 dgt
-vAn
+hsJ
 dgt
 dgt
 dgt
@@ -82345,7 +82393,7 @@ dgt
 dgt
 dgt
 dgt
-vAn
+hsJ
 dgt
 dgt
 dgt
@@ -82603,7 +82651,7 @@ dgt
 dgt
 apc
 apc
-gHR
+aaE
 apc
 apc
 apc
@@ -82861,7 +82909,7 @@ dgt
 dgt
 apc
 apc
-gHR
+aaE
 apc
 apc
 aqj
@@ -83119,7 +83167,7 @@ dgt
 dgt
 apc
 apc
-gHR
+aaE
 apc
 apc
 aqj
@@ -83377,7 +83425,7 @@ dgt
 dgt
 apc
 apc
-gHR
+aaE
 aqj
 aqj
 aqj
@@ -83635,7 +83683,7 @@ dgt
 dgt
 apc
 apc
-gHR
+aaE
 apc
 apc
 apc
@@ -83893,7 +83941,7 @@ dgt
 dgt
 apc
 apc
-gHR
+aaE
 apc
 apc
 apc
@@ -84891,7 +84939,7 @@ apc
 apc
 apc
 apc
-hWT
+aaH
 apc
 apc
 apc
@@ -85149,7 +85197,7 @@ rlI
 rlI
 rlI
 tfe
-tfe
+hWT
 tfe
 rlI
 rlI

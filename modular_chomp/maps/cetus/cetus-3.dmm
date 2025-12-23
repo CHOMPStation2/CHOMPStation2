@@ -6,6 +6,112 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
+"aab" = (
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d3docks)
+"aac" = (
+/obj/structure/lattice,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -27
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/d3docks)
+"aad" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d3docks)
+"aae" = (
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d3docks)
+"aaf" = (
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d3bar)
+"aag" = (
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
+/area/maintenance/cetus/shallow/flooded)
+"aah" = (
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
+/area/maintenance/cetus/shallow/flooded)
+"aai" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/threeap)
+"aaj" = (
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/shallow/ap)
+"aak" = (
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/nanites)
+"aal" = (
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threecp)
 "aam" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -19,6 +125,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
 /area/bridge)
+"aan" = (
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/bridge/Deck3_Corridor)
 "aao" = (
 /obj/machinery/door/airlock/glass_mining,
 /obj/machinery/door/firedoor/glass,
@@ -29,6 +144,224 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/quartermaster/mininglockerroom)
+"aap" = (
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/bridge/Deck3_Corridor)
+"aaq" = (
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/jrthreeport)
+"aar" = (
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/jrthreestar)
+"aas" = (
+/obj/effect/floor_decal/asteroid,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/jrthreestar)
+"aat" = (
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/jrthreestar)
+"aau" = (
+/obj/structure/lattice,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/jrthreestar)
+"aav" = (
+/obj/item/stack/tile/maintenance_panel,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/jrthreeport)
+"aaw" = (
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/jrthreeport)
+"aax" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance,
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/jrthreeport)
+"aay" = (
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/jrthreeport)
+"aaz" = (
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/jrthreeport)
+"aaA" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeas)
+"aaB" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/open,
+/area/maintenance/cetus/threefp)
+"aaC" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaE" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaF" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaG" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaI" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaJ" = (
+/obj/machinery/atmospherics/binary/pump,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaK" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaL" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaM" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaN" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/green,
+/obj/machinery/meter,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaO" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaP" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"aaR" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/shallow/fp)
 "aaZ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -91,6 +424,7 @@
 	dir = 6
 	},
 /obj/random/maintenance/cargo,
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "abt" = (
@@ -381,10 +715,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile,
 /area/maintenance/cetus/shallow/derelict/dock)
-"akN" = (
-/obj/machinery/light/small/yellowed,
-/turf/simulated/wall/r_wall,
-/area/maintenance/cetus/d3bar)
 "akS" = (
 /obj/structure/table/rack/wood,
 /obj/effect/landmark/costume/plaguedoctor,
@@ -447,12 +777,6 @@
 /obj/random/pottedplant,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/fp)
-"alY" = (
-/obj/structure/prop/dark_node/dust{
-	node_range = 3
-	},
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/maintenance/cetus/jrthreeport)
 "amd" = (
 /turf/simulated/floor/glass,
 /area/maintenance/cetus/shallow/flooded)
@@ -871,9 +1195,6 @@
 /area/maintenance/cetus/threefp)
 "azR" = (
 /obj/item/stool/padded,
-/obj/machinery/light/small/yellowed{
-	dir = 1
-	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "aAK" = (
@@ -1732,6 +2053,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -2815,7 +3140,7 @@
 	dir = 4;
 	layer = 3.3
 	},
-/obj/structure/window/basic{
+/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
 /turf/simulated/open,
@@ -3224,6 +3549,10 @@
 /area/bridge/sleep/HoP_Quarters)
 "ccl" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "cdf" = (
@@ -3578,6 +3907,9 @@
 /area/tcomm/chamber)
 "cpf" = (
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = null
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
 "cpt" = (
@@ -5013,6 +5345,13 @@
 /area/maintenance/cetus/jrthreeport)
 "djO" = (
 /obj/structure/girder,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/jrthreestar)
 "dkj" = (
@@ -7049,6 +7388,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-10"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "esR" = (
@@ -7146,6 +7488,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -7553,8 +7898,8 @@
 /turf/simulated/wall,
 /area/bridge/Deck3_Corridor)
 "eGr" = (
-/obj/structure/table/gamblingtable,
 /obj/item/deck/egy,
+/obj/structure/casino_table/blackjack_m,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "eGM" = (
@@ -7624,10 +7969,10 @@
 /area/maintenance/cetus/shallow/derelict/medbay)
 "eHS" = (
 /obj/structure/lattice,
-/obj/structure/window/basic{
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
-/obj/structure/window/basic,
 /turf/simulated/open,
 /area/maintenance/cetus/threeap)
 "eHT" = (
@@ -7728,6 +8073,9 @@
 "eKO" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -8134,6 +8482,9 @@
 "eYc" = (
 /obj/structure/disposalpipe/segment,
 /obj/random/obstruction,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/maintenance/cetus/shallow/flooded)
 "eYF" = (
@@ -8557,13 +8908,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_ForPort)
-"fmN" = (
-/obj/structure/lattice,
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/turf/simulated/open,
-/area/maintenance/cetus/d3docks)
 "fmU" = (
 /obj/structure/lattice,
 /obj/structure/disposaloutlet{
@@ -8573,7 +8917,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/obj/structure/window/basic{
+/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
 /turf/simulated/open,
@@ -9047,7 +9391,7 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/trunk,
-/obj/structure/window/basic,
+/obj/structure/window/maintenance_panel,
 /turf/simulated/open,
 /area/maintenance/cetus/threeap)
 "fzh" = (
@@ -9119,6 +9463,9 @@
 	dir = 4
 	},
 /obj/structure/loot_pile/maint/trash,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefp)
 "fAT" = (
@@ -10298,12 +10645,6 @@
 /obj/machinery/meter,
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
-"gov" = (
-/obj/structure/railing/grey{
-	dir = 1
-	},
-/turf/simulated/open,
-/area/maintenance/cetus/d3docks)
 "goF" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -10925,7 +11266,14 @@
 /obj/structure/disposalpipe/down{
 	dir = 2
 	},
-/obj/machinery/light/small/yellowed{
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
 	dir = 1
 	},
 /turf/simulated/open,
@@ -12190,6 +12538,9 @@
 	pixel_x = 6
 	},
 /obj/item/capture_crystal,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "hth" = (
@@ -12854,8 +13205,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
 "hPK" = (
-/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/cetus/Galleryf2)
 "hQj" = (
@@ -13587,10 +13943,10 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/structure/window/basic{
+/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
-/obj/structure/window/basic{
+/obj/structure/window/maintenance_panel{
 	dir = 1
 	},
 /turf/simulated/open,
@@ -15295,17 +15651,6 @@
 	id = "maintnanites"
 	},
 /area/maintenance/cetus/nanites)
-"jnC" = (
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/turf/simulated/floor/water/pool/station{
-	name = "flooded tiles"
-	},
-/area/maintenance/cetus/shallow/flooded)
 "jnM" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/glass,
@@ -16590,10 +16935,10 @@
 /area/maintenance/cetus/shallow/derelict/kitchen)
 "kew" = (
 /obj/structure/railing/grey{
-	dir = 8
-	},
-/obj/structure/railing/grey{
 	dir = 1
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
 	},
 /turf/simulated/open,
 /area/maintenance/cetus/threeap)
@@ -16775,12 +17120,12 @@
 /turf/simulated/floor/lino,
 /area/maintenance/cetus/arcade)
 "kiV" = (
-/obj/structure/table/gamblingtable,
 /obj/item/material/ashtray/glass,
 /obj/item/trash/cigbutt/cigarbutt{
 	pixel_y = 4;
 	pixel_x = 4
 	},
+/obj/structure/casino_table/blackjack_l,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "kjb" = (
@@ -17270,6 +17615,7 @@
 "kwp" = (
 /obj/structure/table/bench/steel,
 /obj/random/contraband/nofail,
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "kwS" = (
@@ -18915,11 +19261,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/machinery/access_button{
-	name = "interior access button";
-	pixel_x = -32;
-	pixel_y = 23
-	},
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/plating,
@@ -19610,16 +19951,6 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
-"lIQ" = (
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/obj/structure/lattice,
-/obj/machinery/light/small/yellowed{
-	dir = 1
-	},
-/turf/simulated/open,
-/area/maintenance/cetus/d3docks)
 "lIY" = (
 /obj/structure/bed/pod,
 /obj/machinery/light/small/yellowed,
@@ -20660,7 +20991,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/firstdeck/vaultcheckpoint)
 "mkt" = (
-/obj/structure/railing/grey{
+/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
 /turf/simulated/open,
@@ -21001,7 +21332,7 @@
 /obj/structure/disposaloutlet{
 	pixel_y = -6
 	},
-/obj/structure/window/basic{
+/obj/structure/window/maintenance_panel{
 	dir = 1
 	},
 /turf/simulated/open,
@@ -21797,12 +22128,6 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
-"mTm" = (
-/obj/structure/prop/dark_node/dust{
-	node_range = 4
-	},
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/maintenance/cetus/jrthreeport)
 "mTD" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
@@ -22679,12 +23004,12 @@
 /turf/simulated/open,
 /area/maintenance/cetus/threeap)
 "nqR" = (
-/obj/structure/table/gamblingtable,
 /obj/item/storage/dicecup/loaded{
 	pixel_y = 14;
 	pixel_x = 6
 	},
 /obj/item/storage/dicecup,
+/obj/structure/casino_table/blackjack_r,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "nqU" = (
@@ -23868,9 +24193,12 @@
 	},
 /area/maintenance/cetus/nanites)
 "oaB" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = null
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
@@ -24247,6 +24575,7 @@
 	id = "maintdelivery";
 	dir = 4
 	},
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "olW" = (
@@ -25042,6 +25371,9 @@
 "oKn" = (
 /obj/machinery/disposal,
 /obj/machinery/light,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "oKw" = (
@@ -25056,6 +25388,9 @@
 /area/space)
 "oKZ" = (
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = null
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threecp)
 "oLn" = (
@@ -26237,6 +26572,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "pAg" = (
@@ -26521,10 +26859,10 @@
 	dir = 4;
 	layer = 3.3
 	},
-/obj/structure/window/basic{
+/obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/obj/structure/disposalpipe/trunk{
+/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -27766,6 +28104,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -29044,6 +29386,10 @@
 /area/maintenance/cetus/shallow/fp)
 "rgM" = (
 /obj/structure/lattice,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/jrthreestar)
 "rgT" = (
@@ -30498,6 +30844,10 @@
 	tag_north = 1;
 	tag_west = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "rYL" = (
@@ -30955,6 +31305,10 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "soK" = (
@@ -31289,6 +31643,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = null
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
@@ -31828,6 +32185,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/foresubstation)
 "sUA" = (
@@ -32609,6 +32967,10 @@
 	pixel_x = 32;
 	pixel_y = 32
 	},
+/obj/machinery/access_button{
+	name = "interior access button";
+	pixel_y = 23
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "tre" = (
@@ -32938,7 +33300,7 @@
 /obj/structure/disposaloutlet{
 	pixel_y = -6
 	},
-/obj/structure/window/basic{
+/obj/structure/window/maintenance_panel{
 	dir = 1
 	},
 /turf/simulated/open,
@@ -33252,6 +33614,13 @@
 /area/maintenance/cetus/shallow/derelict/hallway)
 "tHf" = (
 /obj/structure/girder,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/jrthreestar)
 "tHr" = (
@@ -33437,6 +33806,10 @@
 	dir = 4
 	},
 /obj/structure/lattice,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefp)
 "tLs" = (
@@ -33472,6 +33845,9 @@
 /area/crew_quarters/cetus/theater)
 "tMb" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "tMM" = (
@@ -34421,6 +34797,7 @@
 /area/maintenance/cetus/d3docks)
 "urO" = (
 /obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "usf" = (
@@ -34711,6 +35088,10 @@
 "uzk" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold4w/visible/red,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "uzq" = (
@@ -35861,6 +36242,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threecp)
@@ -37087,6 +37471,7 @@
 	},
 /obj/random/junk,
 /obj/random/junk,
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "vUP" = (
@@ -37608,7 +37993,7 @@
 /obj/structure/disposalpipe/up{
 	dir = 1
 	},
-/obj/structure/window/basic{
+/obj/structure/window/maintenance_panel{
 	dir = 1
 	},
 /turf/simulated/open,
@@ -39375,6 +39760,10 @@
 "xmx" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -52129,7 +52518,7 @@ exB
 gFb
 ilK
 vVV
-nNS
+aaq
 jlZ
 aib
 aib
@@ -52379,7 +52768,7 @@ jjz
 jjz
 kwh
 kwh
-meK
+aax
 exB
 jjz
 jjz
@@ -52647,7 +53036,7 @@ exB
 meK
 ilK
 ugz
-nNS
+aaq
 aib
 aib
 aib
@@ -53154,7 +53543,7 @@ jlZ
 kwh
 kwh
 vVV
-ilK
+aav
 gFb
 exB
 jjz
@@ -53163,7 +53552,7 @@ jjz
 vVV
 kCk
 gwd
-nNS
+aaq
 aib
 aib
 aib
@@ -53411,8 +53800,8 @@ aib
 jlZ
 jlZ
 jlZ
-ilK
-ilK
+aay
+aaw
 vVV
 vVV
 vVV
@@ -53676,10 +54065,10 @@ aib
 aib
 aib
 aib
-nNS
+aaq
 ilK
 kCk
-nNS
+aaq
 iWR
 aFK
 nPV
@@ -53927,7 +54316,7 @@ aib
 aib
 jlZ
 jlZ
-kwh
+aaz
 kwh
 jlZ
 aib
@@ -54192,10 +54581,10 @@ jlZ
 jlZ
 jlZ
 jlZ
-nNS
+aaq
 ilK
 tIj
-nNS
+aaq
 iWR
 djd
 ngY
@@ -54446,7 +54835,7 @@ kwh
 kwh
 jlZ
 jlZ
-alY
+kwh
 kwh
 jlZ
 jlZ
@@ -54708,7 +55097,7 @@ kwh
 kwh
 kwh
 jlZ
-nNS
+aaq
 vgN
 ffm
 vlw
@@ -54968,7 +55357,7 @@ kwh
 kwh
 jlZ
 jlZ
-nNS
+aaq
 jlZ
 iWR
 htM
@@ -55218,7 +55607,7 @@ aib
 aib
 aib
 jlZ
-mTm
+kwh
 kwh
 kwh
 kwh
@@ -55737,7 +56126,7 @@ jlZ
 kwh
 kwh
 jlZ
-acY
+kwh
 jlZ
 jlZ
 kwh
@@ -59865,7 +60254,7 @@ rbU
 rbU
 rbU
 rbU
-qpB
+aas
 qHf
 gnS
 jlZ
@@ -60123,7 +60512,7 @@ rbU
 qpB
 rbU
 rbU
-wjs
+aat
 rgM
 asv
 asv
@@ -60382,7 +60771,7 @@ rbU
 rbU
 rbU
 tHf
-rbU
+aar
 duw
 rbU
 rak
@@ -60897,7 +61286,7 @@ gnS
 gnS
 rbU
 rbU
-rgM
+aau
 rbU
 rbU
 rbU
@@ -61487,7 +61876,7 @@ pBT
 auz
 qwE
 qWO
-uHL
+aaB
 nHb
 cjM
 irU
@@ -62538,7 +62927,7 @@ xYJ
 cjF
 cgu
 aUu
-vwJ
+cUR
 gMJ
 mhO
 uow
@@ -63067,7 +63456,7 @@ rDQ
 cei
 pek
 abs
-nqN
+mFy
 kBR
 tps
 tps
@@ -63325,7 +63714,7 @@ vMg
 dAG
 lAp
 vUN
-nqN
+mFy
 kBR
 tps
 gKy
@@ -63583,7 +63972,7 @@ tys
 gYY
 ivQ
 olO
-nqN
+mFy
 kBR
 tps
 jcf
@@ -63827,7 +64216,7 @@ hPK
 cjF
 cjF
 pjz
-odI
+aak
 pcU
 wDj
 odI
@@ -63841,7 +64230,7 @@ drz
 gmY
 uow
 uow
-nqN
+mFy
 kBR
 nzS
 jcf
@@ -64618,8 +65007,8 @@ vwJ
 pse
 uow
 iVr
-lCI
-lCI
+aai
+aai
 bOQ
 gKy
 gKy
@@ -66410,7 +66799,7 @@ rOA
 uyA
 uow
 uow
-uow
+vwJ
 qeV
 uow
 qCR
@@ -66425,12 +66814,12 @@ oeI
 cQY
 kBR
 tps
-tps
+aah
+aah
 mbr
 mbr
 mbr
-mbr
-jnC
+deK
 deK
 deK
 deK
@@ -66668,7 +67057,7 @@ fcc
 uyA
 aMA
 kwp
-uow
+vwJ
 edV
 bff
 ieU
@@ -66926,7 +67315,7 @@ rOA
 hrV
 aMA
 uow
-uow
+vwJ
 afP
 uow
 uow
@@ -68462,11 +68851,11 @@ swj
 eUl
 otT
 wsv
-rzI
+aal
 sJi
 eon
 oTu
-rzI
+aal
 uSY
 mpp
 hrV
@@ -68978,11 +69367,11 @@ otT
 otT
 otT
 otT
-rzI
+aal
 sJi
 eon
 qff
-rzI
+aal
 xAe
 bpF
 bpF
@@ -69245,7 +69634,7 @@ mjH
 hrV
 hrV
 hrV
-rzI
+aal
 rRw
 rRw
 aVY
@@ -69496,13 +69885,13 @@ otT
 otT
 wsv
 wsv
-rzI
+aal
 bLQ
-rzI
+aal
 bJf
-rzI
+aal
 wsv
-rzI
+aal
 wsv
 rRw
 rRw
@@ -70014,9 +70403,9 @@ otT
 wsv
 wsv
 bMz
-rzI
+aal
 gNe
-rzI
+aal
 rRw
 rRw
 rRw
@@ -70044,7 +70433,7 @@ tps
 kBR
 tps
 dUN
-tps
+aag
 tps
 noW
 tgZ
@@ -70275,9 +70664,9 @@ bMz
 wsv
 bMz
 wsv
-rzI
+aal
 wsv
-rzI
+aal
 aVY
 aVY
 aVY
@@ -70530,9 +70919,9 @@ svB
 fNC
 iHb
 upy
-rzI
+aal
 upy
-rzI
+aal
 mjH
 yiP
 qff
@@ -71046,11 +71435,11 @@ oVE
 chR
 iHb
 kFu
-rzI
+aal
 wsv
-rzI
+aal
 wsv
-rzI
+aal
 wsv
 etf
 aVY
@@ -71581,9 +71970,9 @@ ooY
 byh
 aVY
 oYg
-etf
+aaj
 tKc
-etf
+aaj
 rRw
 rRw
 ifh
@@ -72823,7 +73212,7 @@ rRw
 uee
 uee
 bCI
-tSn
+aaR
 iHb
 iHb
 rRw
@@ -76686,12 +77075,12 @@ gnR
 pDO
 gnR
 gnR
-mrP
+aap
 mrP
 mrP
 eGf
 mrP
-mrP
+aan
 mrP
 odM
 wvE
@@ -76743,7 +77132,7 @@ djn
 xMY
 djn
 kOk
-djn
+aaf
 kOk
 rRw
 rRw
@@ -77260,7 +77649,7 @@ dOs
 pVi
 mYw
 pJE
-djn
+aaf
 rRw
 rRw
 rRw
@@ -77292,7 +77681,7 @@ iba
 sqs
 iba
 iba
-cpf
+aab
 iba
 iba
 iba
@@ -77775,11 +78164,11 @@ lQu
 cNR
 djn
 kOk
-djn
+aaf
 kOk
-djn
+aaf
 kOk
-djn
+aaf
 kOk
 rRw
 rRw
@@ -77805,7 +78194,7 @@ tgZ
 kxY
 kxY
 kxY
-sqs
+aiH
 iba
 qUt
 kxY
@@ -78038,15 +78427,15 @@ vSJ
 rfZ
 oeu
 vSJ
-djn
+aaf
 kOk
-djn
+aaf
 kOk
-djn
+aaf
 kOk
-djn
+aaf
 kOk
-djn
+aaf
 kOk
 kxY
 eUr
@@ -78062,8 +78451,8 @@ kxY
 kxY
 kxY
 bUf
-kxY
-dbT
+rAY
+aae
 iba
 qUt
 kxY
@@ -78320,10 +78709,10 @@ iba
 cNs
 xpd
 aiH
-kxY
-fmN
+rAY
+aae
 iba
-qUt
+aac
 kxY
 mco
 mco
@@ -78554,15 +78943,15 @@ cim
 jbe
 eIU
 vSJ
-akN
+aaf
 kOk
-djn
+aaf
 kOk
-djn
+aaf
 kOk
-djn
+aaf
 kOk
-djn
+aaf
 nDg
 kxY
 uAa
@@ -78579,8 +78968,8 @@ cNs
 toE
 aiH
 mZo
-oVq
-gov
+aae
+iba
 qUt
 kxY
 mco
@@ -78837,8 +79226,8 @@ cNs
 oVq
 aiH
 aiH
-toE
-gov
+aae
+iba
 qUt
 kxY
 mco
@@ -79070,7 +79459,7 @@ rnw
 mnc
 tsR
 mYw
-djn
+aaf
 rRw
 rRw
 rRw
@@ -79095,7 +79484,7 @@ cNs
 oVq
 aiH
 rAY
-lIQ
+aae
 iba
 qUt
 kxY
@@ -79317,7 +79706,7 @@ aVY
 ooY
 aNH
 aVY
-djn
+aaf
 kOk
 pJE
 pJE
@@ -79353,7 +79742,7 @@ elE
 aNk
 gJh
 rAY
-sqs
+aae
 iba
 qUt
 kxY
@@ -79577,7 +79966,7 @@ uEN
 aVY
 rRw
 kOk
-djn
+aaf
 pJE
 pJE
 pJE
@@ -79586,7 +79975,7 @@ rnw
 mnc
 tsR
 mYw
-djn
+aaf
 rRw
 rRw
 rRw
@@ -79612,7 +80001,7 @@ rAY
 eSu
 rAY
 cpf
-cpf
+aad
 sBw
 kxY
 mco
@@ -79837,13 +80226,13 @@ rRw
 rRw
 kOk
 kOk
-djn
+aaf
 kOk
 jiZ
 jQq
 mnc
 vSJ
-djn
+aaf
 kOk
 rRw
 rRw
@@ -80096,13 +80485,13 @@ rRw
 rRw
 rRw
 rRw
-djn
+aaf
 kOk
-lQu
+aaf
 kle
-djn
+aaf
 kOk
-djn
+aaf
 kOk
 djn
 rRw
@@ -80355,7 +80744,7 @@ tbG
 tbG
 rRw
 rRw
-djn
+aaf
 ePT
 hGv
 nis
@@ -80616,9 +81005,9 @@ rRw
 kOk
 oqO
 nic
-djn
+aaf
 kOk
-djn
+aaf
 kOk
 djn
 rRw
@@ -93478,7 +93867,7 @@ rmt
 nVD
 fBA
 adQ
-xEe
+aaC
 oKn
 vco
 mUM
@@ -93736,7 +94125,7 @@ uFE
 uFE
 ipk
 rYn
-yjs
+aaD
 gSj
 vco
 hty
@@ -93992,7 +94381,7 @@ yjs
 yjs
 gcT
 adQ
-ipk
+aaE
 uzk
 ehL
 rVR
@@ -94249,8 +94638,8 @@ yjs
 yjs
 hcE
 yjs
-rmt
-yjs
+aaF
+aaD
 lyx
 yjs
 oSI
@@ -94506,8 +94895,8 @@ uqP
 yjs
 yjs
 yjs
-yjs
-rmt
+aaH
+aaG
 nVD
 xEe
 ygP
@@ -94763,7 +95152,7 @@ vwN
 mYd
 yjs
 ygP
-ccl
+aaI
 ccl
 vLO
 psT
@@ -95021,7 +95410,7 @@ vwN
 oOm
 yjs
 som
-ehL
+aaJ
 dQy
 rCT
 upv
@@ -95277,7 +95666,7 @@ xMe
 fOf
 yjs
 ciM
-yjs
+aaH
 xmx
 yjs
 rmt
@@ -95314,7 +95703,7 @@ vjW
 wBc
 loZ
 vjW
-vjW
+aaA
 gxW
 nDK
 dDs
@@ -95535,7 +95924,7 @@ rmt
 eLl
 ary
 qry
-pmr
+aaK
 eqr
 pmr
 vbb
@@ -95791,7 +96180,7 @@ eDJ
 nxc
 pxs
 eLl
-sDF
+aaL
 bfe
 vQW
 pEZ
@@ -96048,8 +96437,8 @@ fof
 qbk
 qhg
 rmt
-eLl
-yjs
+aaM
+aaD
 kVV
 ehL
 eqr
@@ -96306,7 +96695,7 @@ rRp
 yjs
 aOU
 eug
-fOf
+aaN
 yjs
 ciM
 yjs
@@ -97338,7 +97727,7 @@ eua
 ufI
 iHa
 dCw
-pOh
+aaO
 rmt
 ciM
 xUO
@@ -97596,7 +97985,7 @@ iKP
 lOR
 cTI
 dCg
-ccl
+aaP
 psT
 wdU
 bUh
@@ -97854,7 +98243,7 @@ cIs
 fDR
 qoM
 pSg
-yjs
+aaQ
 rLa
 lNQ
 skq

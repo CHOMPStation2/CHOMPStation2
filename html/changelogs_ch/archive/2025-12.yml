@@ -59,3 +59,250 @@
   - rscadd: Two new Tyr weapons
   - balance: Tyr gun buffed, Tyr foes retuned a fair bit to favour longer fights
   - bugfix: Shield boss stops spamming re-shielding
+2025-12-10:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Adds a new neutral trait 'unique mind-structure' which causes sleevemates
+      to be unable to tell if you are in the proper sleeve or not!
+  - bugfix: Fakedeath tag now makes you show up as DEAD to sleevemates.
+  - rscadd: Generic mob spawner grenades
+  - code_imp: Repathed casino grenades to be a subtype of spawner grenades instead.
+  DIana:
+  - code_imp: Enables distillery files.
+  Diana:
+  - code_imp: Fixes a runtime pertaining to MMI holders.
+  - bugfix: Nar'Sie will no longer convert some otherwise indestructable turf types
+      into cult turf.
+  - bugfix: Some clothing items now use their proper in_hand sprite.
+  - bugfix: Disabling fire alarms will no longer make it go off passively
+  - bugfix: Keycard auth frames will no longer give duplicate parts.
+  - code_imp: Signals. Everywhere.
+  Ryumi:
+  - rscadd: Added a unicorn horn to character customization, (Sprite by opheliathedeadful
+      on Discord.)
+  VictorZisthus:
+  - maptweak: Updated select escape pods and shuttles with handrails and floor-tube
+      lighting to improve space efficiency. Think of it like being able to pack in
+      more prey without sacrificing otherwise workable space! Most shuttles and ships
+      received this change, though some only had a single handrail added near surgery
+      tables where applicable.
+  - maptweak: Removed a few instances of lingering xmas gear.
+  - maptweak: Added a multitool to the other botany locker. Apparently hydro trays
+      have a use for those. Who knew?
+  - maptweak: Removed terminology relating to the first and second floors of the wilderness
+      shelter, as there can be only one. Updated camera coverage around the wilderness
+      shelter.
+  - maptweak: Added a grinder to the dilapidated chef area above cargo.
+  - maptweak: Moved the AI shell spawner, and added a second one.
+  - maptweak: Fixed an issue with the engine's waste management pressure valve.
+  - maptweak: Added firelocks to staircases to prevent horrid depressurization events
+      from completely locking out the main manual Z travel method.
+  - maptweak: Replaced simulated space and rocks on the centcom Z level with their
+      unsimulated variants for performance.
+  - maptweak: Rearranged some paperwork stuff in security and IA. Gave the IA's some
+      fancy pens that can change ink colors!
+  - maptweak: Buffed the command subgrid, as it powers the AI subgrid.
+  - maptweak: Preset Atmos and Command subgrids to run independent of master, to better
+      show folks that it's good to set that stuff up during a power surge. The lungs
+      and brain of the station keep trudging on...
+  - maptweak: Added two low-power pumps (preset to default portable pump pressure)
+      to the portable pump connectors to prevent backflow and overpressure into the
+      line. This will make upgrades or edits to the line much less of a safety hazard
+      to crew health. Also applied these changes to backup atmos.
+  - maptweak: Mirrored the layout of both large escape pods.
+  - maptweak: The HoS, Warden, and Captain have pinpointers in their lockers now.
+      They can sniff out more than just the disk. Please use them wisely or centcom
+      will remove them.
+  Will:
+  - rscadd: Catslug belly markings for shelter gate and door
+  zeskorion:
+  - rscadd: maintenance panels to cetus
+  - bugfix: a few cetus fixes
+2025-12-11:
+  CHOMPStation2StaffMirrorBot:
+  - qol: added missing medical coats and labcoat to loadouts
+  - rscadd: 'Four types of masquerade mask, ported over from Nova sector.
+
+      [/:cl:]
+
+      <img width="41" height="311" alt="M1" src="https://github.com/user-attachments/assets/6eaa6a54-b29f-4344-8c3a-cbd44d3b3d02"
+      />
+
+      <img width="47" height="304" alt="M2" src="https://github.com/user-attachments/assets/6e5aa4fd-0ee0-4b3b-b647-9a8fe4b06895"
+      />
+
+      <img width="37" height="310" alt="M3" src="https://github.com/user-attachments/assets/a903a215-ae12-450c-8f0e-d4837dd8d48a"
+      />
+
+      <img width="35" height="302" alt="M4" src="https://github.com/user-attachments/assets/d970974a-b52b-48b6-b7d4-73c5da84e8e7"
+      />'
+  Diana:
+  - bugfix: Laser pointers can no longer be too strong and fail to flash someone's
+      eyes/EMP camera because of it
+  - bugfix: Laser pointering someone without eyes will no longer break the laser pointer
+      forever
+  - bugfix: You can no flash blind people with the laser pointer
+  - bugfix: Laser pointers now respect welding masks, welding goggles, and anything
+      else with normal flash immunity.
+  - bugfix: Laser pointers now take flash sensitivity into effect
+  - qol: Laser pointers now do their job better, dealing increasing damage and effects
+      based on severity.
+  - code_imp: Cleans up the laser pointer code to make it more easily readable.
+  - bugfix: You can take both growing & shrinking once more
+  - qol: Jams Sensors now blocks all forms of tracking, such as GPS an tracking implants!
+  - spellcheck: Fixes a typo in the prisoner implant where tracking implants would
+      show up as chemical implants.
+  - bugfix: Non-rig suits (softsuits, voidsuits) no longer drain phasers energy
+  - spellcheck: Removes an unneeded space when you fail limb connection surgery
+  - bugfix: Fixes a bug where removing organs would use their op_name instead of their
+      actual name
+  - bugfix: Attaching a limb to someone when that limb has an attached child will
+      now attach its child as well.
+  - bugfix: When you cut a bone with a bonesaw, it now breaks
+  - bugfix: When you use the bonegel steps after cutting a bone with the bonesaw,
+      it now heals the bone.
+  - bugfix: Fixing an internal organ will no longer lead to it instantly dying of
+      germs
+  - bugfix: Water will no longer fix necrosis
+  - qol: You can now remove implants from the head if brain damage isn't fixed.
+  - qol: You no longer have to stop the bleeding to remove implants.
+  - balance: Gun circuits will no longer allow fire while obscured inside of items
+      such as crates, lockers, or bags.
+  - balance: Gun circuits will now have their complexity increased based on how large
+      the gun you place inside it is.
+  - code_imp: Cleans up the gun circuit code a little to use early returns.
+  - bugfix: Protean rigs can be worn by individuals with the shadekin species base
+      sprite.
+  - qol: Paralysis no longer KOs you. Instead, you are able to see and hear everything
+      going on around you, just not interact, move, or anything of that manner! Additionally,
+      you can not use 'me' while paralyzed, but can however use 'subtle!'
+  - bugfix: Medical patches no longer apply to the blood and result in topical medications
+      killing you.
+  - qol: Medications now apply at an efficiency of 25% into the bloodstream if a patch
+      is not a topical medication.
+  - qol: Fakedeath doesn't immediately out you via raising toxins damage under scanners.
+  - qol: Lichpowder no longer suffocates you to death.
+  - qol: Zombiepowder now does a much lower suffocation damage.
+  - rscadd: Adds a new way to make zombiepowder which uses 5u potassiumchlorophoride,
+      5u sleep toxin, 5u chloral, and 5u mercury for 2u of zombie powder.
+  - bugfix: Fakedeath now applies to PDA scanners as well
+  - bugfix: Medications that are dermal can now be used via patches again.
+  - bugfix: Status flags will no longer show above individuals that are mimicking
+      death.
+  - qol: Medications that are not dermal now are absorbed into the blood at 25% efficiency.
+  - code_imp: Gets rid of a unneeded proc in custom_emote
+  - bugfix: Fakdeath will no longer break medical scanners
+  FluffMedic:
+  - balance: Durasteel hull nerfed
+  Guti:
+  - rscadd: Added countdown effect for ghosts to look at different counting down objects
+  - code_imp: Added connect_containers and effect_remover component
+  - code_imp: Added connect_loc element
+  Will:
+  - balance: Ice slips you repeatedly instead of a set distance
+2025-12-12:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: tgui-core 5.5.10
+  - rscadd: continuous medigun
+  - bugfix: some bad flag compares
+  - bugfix: disposal template loading being broken
+  Guti:
+  - rscadd: Added TG-like anomalies
+  - rscadd: Added anomaly cores
+  Will:
+  - refactor: Ventcrawl item whitelist is now a proc instead of a list instantiated
+      on every single mob in the world
+  - bugfix: promies and proteans properly reequip their radio when they return to
+      human form from blob
+2025-12-13:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: 'Fixes the insivible head issue for dullahans
+
+      Change/fix: removed neck light cover from frame option 2 to show the neck light'
+  - qol: You can now eat monkeys via eating the cube directly instead of having to
+      wet it then eat it to avoid being chestbusted
+  - balance: Pulled punches are now affected by species brutemod, and don't have an
+      inherent damage bonus
+  - balance: Pulled punches no longer use species unarmed bonus. You're holding back,
+      not hitting with full strength
+  - bugfix: xenochimerae cannot pull their special unarmed attack when feral
+  Diana:
+  - bugfix: Fixes a bug that prevented moving/unremoving storage items
+  Guti:
+  - code_imp: Made anomalies defines use SECONDS instead of EVENT_SECONDS
+  Nova:
+  - bugfix: Fix shadekin voices always being known in phase.
+  - qol: Add ability to reveal/hide voice in shadekin control panel.
+2025-12-14:
+  Diana:
+  - bugfix: Sleevemates will no longer apply fakedeath status instead of checking
+      for it
+  - bugfix: Health hud will now properly show someone with FAKEDEATH as DEAD
+  - bugfix: Bodyscanners will treat someone with FAKEDEATH as if they were dead.
+  - bugfix: Hacktool now works again.
+  - bugfix: Fixes a runtime with abnormal mind trait.
+  - bugfix: Wounds now use the proper gender
+  Willbird:
+  - bugfix: control clicking turf no longer runtimes attempting to pull it
+2025-12-16:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: TGUI window drag and resize should be smoother on low end systems.
+  - rscdel: Removed the TGUI kitchensink component view
+  - rscadd: Added a new data explorer for TGUI dev mode
+  FluffMedic:
+  - balance: 'Phoenix Breath is reworked and now made at the distiller. Now gives
+      a modifier that will undo death, give a large heal but for the next 5 mins you
+      take x1.5 damage. New Recipe: Shock Grub Chem, Neo Bicard, Neo Kelotane, Quadcord,
+      Mindbreaker(T0C + 100, T0C + 120)'
+  - balance: combat and experimental kits are rarer
+  - bugfix: An admeme weapon being obtainable
+  - bugfix: Metroids should give meat now
+  Guti:
+  - rscadd: Random anomalies event
+2025-12-18:
+  Diana:
+  - code_imp: Fixes signal usage in a few places
+  Guti:
+  - bugfix: Fixed Dark Maw not respecting prefs
+2025-12-19:
+  Diana:
+  - bugfix: Null rod's special powers can only be used by chaplain.
+  - bugfix: Typing indicator no longer shows up when under FAKEDEATH
+  - qol: Null rod no longer has a 10% chance when used to harm-intent someone's head
+2025-12-20:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Flavored donk pockets retain flavor after microwaving
+  - bugfix: robot camera replacement
+  - qol: Unstable metamorphosis ray can be repaired into an advanced one with a multitool.
+  - bugfix: Mouse army uses defines now
+  - code_imp: Adds early returns to gunboxes if no choice is made
+  - bugfix: emote spamming no longer allows for rapidly spammed muffled messages
+  Guti:
+  - rscadd: Telesci can now fuck around and find out what happens if you try to teleport
+      things from outside the universe
+  - rscadd: Hallucination anomaly confuses players
+  - bugfix: Wearing magboots keeps you grounded with gravity anomalies
+  - bugfix: Fixed phased kin being zapped by the flux anomaly
+  - code_imp: Improved the anomaly placer datum
+  Willbird:
+  - rscadd: no sleeving trait prevents characters from having a round start body record
+  zeskorion:
+  - bugfix: fixes a few things about cetus again
+2025-12-21:
+  CHOMPStation2StaffMirrorBot:
+  - rscdel: VBOs with unknown licensing
+  - code_imp: unit test simple mob belly_fullscreens
+  Diana:
+  - code_imp: Properly has some signals apply.
+  FluffMedic:
+  - rscadd: Lethal armament for sec
+  TheCaramelion:
+  - rscdel: Deactivated appreciation day
+  Willbird:
+  - bugfix: Fixes shadekin getting set on fire while in phase, and being able to spread
+      fire while phased
+  zeskorion:
+  - balance: expands traits available to synths and non-custom species
+2025-12-23:
+  CHOMPStation2StaffMirrorBot:
+  - admin: Global narrate and Admin Subtle PM can now use HTML
+  - bugfix: large, chunked payloads hitting rate limits
