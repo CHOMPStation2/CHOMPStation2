@@ -257,7 +257,7 @@
 		/obj/item/stack/material/deuterium = 35,
 		/obj/item/stack/material/bronze = 35,
 		/obj/item/slime_extract/sepia = 3000,
-		/obj/item/gun/energy/sickshot = 2400
+		/obj/item/gun/energy/sickshot = 2400,
 		/obj/item/projectile/beam/ratminer = 5000
 		)
 
