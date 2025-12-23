@@ -237,7 +237,7 @@
 /obj/item/projectile/kinetic
 	name = "kinetic force"
 	icon_state = null
-	damage = 30
+	damage = 10
 	damage_type = BRUTE
 	check_armour = "bomb"
 	range = 4
@@ -249,7 +249,7 @@
 	var/obj/item/gun/energy/kinetic_accelerator/kinetic_gun
 
 /obj/item/projectile/kinetic/premium
-	damage = 40
+	damage = 20
 	damage_type = BRUTE
 	range = 5
 
