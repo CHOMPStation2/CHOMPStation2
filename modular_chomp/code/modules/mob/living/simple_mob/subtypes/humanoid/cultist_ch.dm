@@ -183,6 +183,8 @@
 
 //Thank you Ears for the teshari bellies
 /mob/living/simple_mob/humanoid/cultist/tesh
+	maxHealth = 50
+	health = 50
 	vore_active = 1
 	vore_capacity = 6
 	vore_max_size = RESIZE_HUGE

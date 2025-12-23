@@ -78,7 +78,7 @@
 
 /obj/item/projectile/scatter/ratminer
 	spread_submunition_damage = FALSE
-	damage = 20
+	damage = 5
 	range = 0
 
 	submunition_spread_max = 300
@@ -91,7 +91,7 @@
 /obj/item/projectile/beam/ratminer
 	name = "slicer beam"
 	icon_state = "ratmining"
-	damage = 20
+	damage = 5
 	light_color = "#77A6E1"
 	hud_state = "laser_disabler"
 

@@ -18,8 +18,8 @@
 	step_in = 2 //Fast
 	step_energy_drain = 0 //These should use fuel instead of energy
 
-	health = 400
-	maxhealth = 400
+	health = 30
+	maxhealth = 30
 
 	infra_luminosity = 6
 
@@ -446,8 +446,8 @@
 
 	ground_capable = TRUE
 
-	health = 200
-	maxhealth = 200
+	health = 150
+	maxhealth = 150
 
 /obj/mecha/combat/fighter/pinnace/loaded/Initialize(mapload) //Loaded version with guns
 	. = ..()

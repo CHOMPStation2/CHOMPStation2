@@ -921,6 +921,9 @@
 	},
 /turf/simulated/floor/boxing,
 /area/surface/outpost/main/gym)
+"bR" = (
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/shuttle/shuttle3/mining)
 "bS" = (
 /obj/structure/table/glass,
 /obj/item/paicard,
@@ -2717,6 +2720,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
+"fe" = (
+/obj/effect/shuttle_landmark{
+	docking_controller = "mining_dock_3";
+	landmark_tag = "shuttle3_mining";
+	name = "Wilderness Landing Site"
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/shuttle/shuttle3/mining)
 "ff" = (
 /obj/effect/shuttle_landmark{
 	base_area = /area/surface/outside/landing/plains;
@@ -2992,6 +3003,12 @@
 	},
 /turf/simulated/wall,
 /area/surface/outpost/mining_main/exterior)
+"fF" = (
+/obj/effect/map_effect/portal/master/side_a/caves_to_wilderness/river{
+	dir = 8
+	},
+/turf/simulated/wall/solidrock,
+/area/surface/outside/plains/normal)
 "fG" = (
 /obj/item/stool,
 /turf/simulated/floor/plating,
@@ -3347,6 +3364,12 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/showers)
+"gq" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 8
+	},
+/turf/simulated/wall/solidrock,
+/area/surface/outside/plains/normal)
 "gr" = (
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 8
@@ -3371,9 +3394,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
+"gt" = (
+/turf/simulated/wall/solidrock,
+/area/surface/outside/plains/normal)
 "gu" = (
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/plains/outpost)
+"gv" = (
+/obj/effect/map_effect/portal/master/side_a/caves_to_wilderness{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/area/surface/outside/plains/mountains)
 "gw" = (
 /obj/machinery/fusion_fuel_compressor,
 /obj/structure/cable/cyan{
@@ -3411,6 +3443,12 @@
 /obj/effect/floor_decal/corner/white/border,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
+"gA" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/area/surface/outside/plains/mountains)
 "gB" = (
 /obj/machinery/button/windowtint{
 	id = "sauna_tint1";
@@ -83815,13 +83853,13 @@ yT
 yT
 yT
 yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
+bR
+bR
+bR
+bR
+bR
+bR
+bR
 yT
 yT
 yT
@@ -84067,19 +84105,19 @@ yT
 yT
 yT
 yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
 yT
 yT
 yT
@@ -84324,19 +84362,19 @@ yT
 yT
 yT
 yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
 yT
 yT
 yT
@@ -84582,18 +84620,18 @@ yT
 yT
 yT
 yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
 yT
 yT
 yT
@@ -84840,18 +84878,18 @@ yT
 yT
 yT
 yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
 yT
 yT
 yT
@@ -85098,18 +85136,18 @@ WP
 yT
 yT
 yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
 yT
 yT
 yT
@@ -85356,19 +85394,19 @@ WP
 WP
 yT
 yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
 yT
 yT
 yT
@@ -85615,19 +85653,19 @@ WP
 WP
 WP
 yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+bR
+fe
+bR
+bR
+bR
+bR
 yT
 yT
 yT
@@ -85879,13 +85917,13 @@ yT
 yT
 yT
 yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
+bR
+bR
+bR
+bR
+bR
+bR
+bR
 yT
 yT
 yT
@@ -91034,9 +91072,9 @@ WP
 WP
 WP
 WP
-XE
-XE
-XE
+WP
+WP
+WP
 XE
 XE
 XE
@@ -91289,11 +91327,11 @@ Mh
 tY
 WP
 WP
-XE
-XE
-XE
-XE
-XE
+WP
+WP
+WP
+WP
+WP
 XE
 XE
 XE
@@ -91330,8 +91368,8 @@ XE
 XE
 XE
 XE
-XE
-XE
+bP
+bP
 bP
 bP
 pW
@@ -91545,13 +91583,13 @@ xL
 xL
 xL
 PO
-XE
-XE
-XE
-XE
-XE
-XE
-XE
+WP
+WP
+WP
+WP
+WP
+WP
+WP
 XE
 XE
 XE
@@ -91588,11 +91626,11 @@ XE
 XE
 XE
 XE
-XE
-XE
-XE
-XE
-XE
+bP
+bP
+bP
+bP
+bP
 fp
 xL
 xL
@@ -91803,12 +91841,12 @@ xL
 xL
 xL
 PO
-XE
-XE
-XE
-XE
-XE
-XE
+WP
+WP
+WP
+WP
+WP
+WP
 XE
 XE
 XE
@@ -91845,12 +91883,12 @@ XE
 XE
 XE
 XE
-XE
-XE
-XE
-XE
-XE
-XE
+bP
+bP
+bP
+bP
+bP
+bP
 fp
 xL
 xL
@@ -92061,12 +92099,12 @@ xL
 xL
 xL
 PO
-XE
-XE
-XE
-XE
-XE
-XE
+gt
+WP
+WP
+WP
+WP
+WP
 XE
 XE
 XE
@@ -92103,11 +92141,12 @@ Vg
 Vg
 Vg
 Vg
+gA
+gA
+gA
+gA
+gv
 Vg
-Vg
-Vg
-Vg
-Vg
 gG
 gG
 gG
@@ -92318,13 +92357,12 @@ gG
 gG
 gG
 gG
-gG
-gG
-Vg
-Vg
-Vg
-Vg
-Vg
+gt
+gq
+gq
+gq
+gq
+fF
 Vg
 Vg
 Vg

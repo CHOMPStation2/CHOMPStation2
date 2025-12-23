@@ -524,7 +524,8 @@
 	impact_type = /obj/effect/projectile/impact/xray
 
 /obj/item/projectile/beam/energy_net/on_hit(var/atom/netted)
-	do_net(netted)
+	if(prob(40))
+		do_net(netted)
 	..()
 
 /obj/item/projectile/beam/energy_net/proc/do_net(var/mob/M)

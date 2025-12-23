@@ -5,16 +5,16 @@
 	initial_icon = "durand"
 	step_in = 4
 	dir_in = 1 //Facing North.
-	health = 300
-	maxhealth = 300			//Don't forget to update the /old variant if  you change this number.
+	health = 225
+	maxhealth = 225			//Don't forget to update the /old variant if  you change this number.
 	deflect_chance = 20
 	max_temperature = 30000
 	infra_luminosity = 8
 	force = 40
 	wreckage = /obj/effect/decal/mecha_wreckage/durand
 
-	damage_minimum = 15			//Big stompy
-	minimum_penetration = 25
+	damage_minimum = 5			//Big stompy
+	minimum_penetration = 0
 
 	max_hull_equip = 2
 	max_weapon_equip = 1
@@ -82,5 +82,5 @@
 /obj/mecha/combat/durand/old/Initialize(mapload)
 	. = ..()
 	health = 25
-	maxhealth = 250	//Just slightly worse.
+	maxhealth = 187	//Just slightly worse.
 	cell.charge = rand(0, (cell.charge/2))

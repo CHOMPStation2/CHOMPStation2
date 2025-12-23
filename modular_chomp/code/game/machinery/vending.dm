@@ -228,6 +228,38 @@
 		/obj/item/circuitboard/defenseonelisk = 5000
 		)
 
+/obj/machinery/vending/starhunter_neon
+	name = "Startravler Trade"
+	desc = "A foxfolk sits at a manmade store stall."
+	vend_delay = 1
+	icon = 'modular_chomp/icons/mob/starhunters.dmi'
+	icon_state = "shop_keeper"
+	products	= list(/obj/item/kinetic_crusher/glaive = 3,
+		/obj/item/kinetic_crusher = 3,
+		/obj/item/gun/energy/mininglaser = 3,
+		/obj/item/stack/material/phoron = 50,
+		/obj/item/stack/material/uranium = 50,
+		/obj/item/stack/material/tritium = 50,
+		/obj/item/stack/material/deuterium = 50,
+		/obj/item/stack/material/bronze = 50,
+		/obj/item/slime_extract/sepia = 5,
+		/obj/item/gun/energy/sickshot = 3,
+		/obj/item/gun/energy/ratminer = 1
+		)
+
+	prices     = list(/obj/item/kinetic_crusher/glaive = 1600,
+		/obj/item/kinetic_crusher = 1600,
+		/obj/item/gun/energy/mininglaser = 2200,
+		/obj/item/stack/material/phoron = 35,
+		/obj/item/stack/material/uranium = 35,
+		/obj/item/stack/material/tritium = 35,
+		/obj/item/stack/material/deuterium = 35,
+		/obj/item/stack/material/bronze = 35,
+		/obj/item/slime_extract/sepia = 3000,
+		/obj/item/gun/energy/sickshot = 2400,
+		/obj/item/gun/energy/ratminer = 4500
+		)
+
 //Some stuff to let sec do things
 /obj/machinery/vending/nifsoft_shop
 	req_log_access = ACCESS_SECURITY

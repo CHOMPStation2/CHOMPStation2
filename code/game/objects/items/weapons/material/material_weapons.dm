@@ -19,7 +19,7 @@
 	var/unbreakable = 0		//Doesn't lose health
 	var/fragile = 0			//Shatters when it dies
 	var/dulled = 0			//Has gone dull
-	var/can_dull = 1		//Can it go dull?
+	var/can_dull = 0		//Can it go dull?
 	var/force_divisor = 0.5
 	var/thrown_force_divisor = 0.5
 	var/dulled_divisor = 0.5	//Just drops the damage by half

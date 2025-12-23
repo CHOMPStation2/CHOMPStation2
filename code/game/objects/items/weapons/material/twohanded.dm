@@ -88,13 +88,13 @@
 	desc = "Truly, the weapon of a madman. Who would think to fight fire with an axe?"
 	description_info = "This weapon can cleave, striking nearby lesser, hostile enemies close to the primary target.  It must be held in both hands to do this."
 	unwielded_force_divisor = 0.25
-	force_divisor = 0.7 // 10/42 with hardness 60 (steel) and 0.25 unwielded divisor
+	force_divisor = 0.4 // 10/42 with hardness 60 (steel) and 0.25 unwielded divisor
 	dulled_divisor = 0.75	//Still metal on a stick
 	sharp = TRUE
 	edge = TRUE
 	w_class = ITEMSIZE_LARGE
 	slot_flags = SLOT_BACK
-	force_wielded = 30
+	force_wielded = 24
 	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
 	applies_material_colour = 0
 	can_cleave = TRUE
@@ -138,7 +138,7 @@
 	base_icon = "scythe"
 	name = "scythe"
 	desc = "A sharp and curved blade on a long fibremetal handle, this tool makes it easy to reap what you sow."
-	force_divisor = 0.65
+	force_divisor = 0.35
 	origin_tech = list(TECH_MATERIAL = 2, TECH_COMBAT = 2)
 	attack_verb = list("chopped", "sliced", "cut", "reaped")
 
@@ -151,7 +151,7 @@
 	force = 10
 	w_class = ITEMSIZE_HUGE //CHOMP Edit
 	slot_flags = SLOT_BACK
-	force_divisor = 0.5 			// 15 when wielded with hardness 30 (glass)
+	force_divisor = 0.3 			// 15 when wielded with hardness 30 (glass)
 	unwielded_force_divisor = 0.375
 	thrown_force_divisor = 1.5 		// 22.5 when thrown with weight 15 (glass)
 	throw_speed = 3

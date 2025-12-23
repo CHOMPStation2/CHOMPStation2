@@ -212,7 +212,7 @@ Protectiveness | Armor %
 	icon_state = "armor_light"
 	body_parts_covered = CHEST
 	slot = ACCESSORY_SLOT_ARMOR_C
-	material_armor_modifier = 0.8
+	material_armor_modifier = 0.5
 	material_slowdown_modifier = 0.5 //Subtracted from total slowdown
 	material_slowdown_multiplier = 0.4 //Multiplied by total slowdown
 
@@ -223,7 +223,7 @@ Protectiveness | Armor %
 	icon_state = "armor_medium"
 	body_parts_covered = CHEST
 	slot = ACCESSORY_SLOT_ARMOR_C
-	material_armor_modifier = 1.2
+	material_armor_modifier = 0.9
 	material_slowdown_modifier = 0
 	material_slowdown_multiplier = 0.5
 
@@ -234,7 +234,7 @@ Protectiveness | Armor %
 	icon_state = "armor_tactical"
 	body_parts_covered = CHEST
 	slot = ACCESSORY_SLOT_ARMOR_C
-	material_armor_modifier = 1.2
+	material_armor_modifier = 0.9
 	material_slowdown_modifier = 0.5
 	material_slowdown_multiplier = 0.4
 
@@ -248,7 +248,7 @@ Protectiveness | Armor %
 	gender = PLURAL
 	body_parts_covered = ARMS
 	slot = ACCESSORY_SLOT_ARMOR_A
-	material_armor_modifier = 0.8
+	material_armor_modifier = 0.5
 	material_slowdown_modifier = 0.8
 	material_slowdown_multiplier = 0.4
 
@@ -262,7 +262,7 @@ Protectiveness | Armor %
 	gender = PLURAL
 	body_parts_covered = LEGS
 	slot = ACCESSORY_SLOT_ARMOR_L
-	material_armor_modifier = 0.8
+	material_armor_modifier = 0.5
 	material_slowdown_modifier = 0.8
 	material_slowdown_multiplier = 0.4
 

@@ -1000,7 +1000,6 @@
 /area/derelict/eva/annex)
 "eN" = (
 /obj/structure/table/standard,
-/obj/item/ammo_casing/microbattery/combat/final,
 /turf/simulated/floor/tiled/old_tile/beige,
 /area/derelict/eva/annex)
 "eO" = (

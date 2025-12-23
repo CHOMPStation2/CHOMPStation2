@@ -63,7 +63,7 @@
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
-		M.heal_organ_damage(4 * removed * chem_effective, 0)
+		M.heal_organ_damage(1.5 * removed * chem_effective, 0)
 
 /datum/reagent/bicaridine/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -151,7 +151,7 @@
 		chem_effective = 0.5
 		M.adjustBruteLoss(2 * removed) //Mends burns, but has negative effects with a Promethean's skeletal structure.
 	if(alien != IS_DIONA)
-		M.heal_organ_damage(0, 4 * removed * chem_effective)
+		M.heal_organ_damage(0, 1.5 * removed * chem_effective)
 
 /datum/reagent/dermaline
 	name = REAGENT_DERMALINE
@@ -342,8 +342,8 @@
 		if(alien == IS_SLIME)
 			chem_effective = 0.5
 		M.adjustOxyLoss(-3 * removed * chem_effective)
-		M.heal_organ_damage(1.5 * removed, 1.5 * removed * chem_effective)
-		M.adjustToxLoss(-1.5 * removed * chem_effective)
+		M.heal_organ_damage(0.5 * removed, 0.5 * removed * chem_effective)
+		M.adjustToxLoss(-0.5 * removed * chem_effective)
 
 /datum/reagent/tricordrazine/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)

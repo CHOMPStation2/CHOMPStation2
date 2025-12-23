@@ -775,3 +775,56 @@
 
 /area/outpost/mining_station/dock
 	name = "Mining Station Dock"
+
+//event stuff
+/area/surface/outside/archipelago
+	name = "Chesapeake Archipelago"
+	icon_state = "bluenew"
+
+/area/surface/outside/archipelago/mountains
+	name = "Mountains"
+	icon_state = "darkred"
+	outdoors = OUTDOORS_NO
+
+/area/surface/outside/archipelago/mouse_hideaway
+	name = "Cheese Resistance Fortification"
+	icon_state = "purple"
+	outdoors = OUTDOORS_NO
+
+/area/surface/outside/archipelago/pirate_hideaway
+	name = "Artic Claw Hideout"
+	icon_state = "purple"
+	outdoors = OUTDOORS_NO
+
+/area/surface/outside/archipelago/occult
+	name = "Old Ruins"
+	icon_state = "red"
+	outdoors = OUTDOORS_NO
+
+/area/surface/outside/archipelago/mouse_hideaway/a
+
+/area/surface/outside/archipelago/mouse_hideaway/b
+
+/area/surface/outside/archipelago/mouse_hideaway/c
+
+/area/surface/outside/archipelago/mouse_hideaway/d
+
+/area/surface/outside/archipelago/mouse_hideaway/e
+
+/area/surface/outside/archipelago/mouse_hideaway/f
+
+/area/surface/outside/archipelago/pirate_hideaway/a
+
+/area/surface/outside/archipelago/pirate_hideaway/b
+
+/area/surface/outside/archipelago/pirate_hideaway/c
+
+/area/surface/outside/archipelago/pirate_hideaway/d
+
+/area/surface/outside/archipelago/pirate_hideaway/e
+
+/area/surface/outside/archipelago/occult/a
+
+/area/surface/outside/archipelago/occult/b
+
+/area/surface/outside/archipelago/occult/c

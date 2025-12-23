@@ -95,6 +95,7 @@
 //			PROJECTILES			//
 //								//
 //////////////////////////////////
+/*
 /obj/item/projectile/bullet/rifle/a556 //5.56mm NATO
 	damage = 30
 	hud_state = "rifle"
@@ -147,3 +148,4 @@
 	penetrating = 2
 	armor_penetration=30
 	hud_state = "sniper_fire"
+*/

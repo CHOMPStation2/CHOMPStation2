@@ -15,7 +15,7 @@
 	required_type = null	// List, if it exists. Exosuits meant to use the component.
 
 	integrity_danger_mod = 0.4	// Multiplier for comparison to max_integrity before problems start.
-	max_integrity = 120
+	max_integrity = 90
 
 	internal_damage_flag = MECHA_INT_TEMP_CONTROL
 
@@ -23,14 +23,14 @@
 
 	var/deflect_chance = 10
 	var/list/damage_absorption = list(
-		"brute"=	0.8,
-		"fire"=		1.2,
-		"bullet"=	0.9,
-		"laser"=	1,
-		"energy"=	1,
-		"bomb"=		1,
-		"bio"=		1,
-		"rad"=		1
+		"brute"=	0.9,
+		"fire"=		1.3,
+		"bullet"=	1,
+		"laser"=	1.1,
+		"energy"=	1.1,
+		"bomb"=		1.1,
+		"bio"=		1.1,
+		"rad"=		1.1
 		)
 
 	//var/damage_minimum = 10 CHOMPremove, mecha nerfs
@@ -41,34 +41,34 @@
 	name = "blast-resistant mecha plating"
 
 	step_delay = 2
-	max_integrity = 80
+	max_integrity = 60
 
 	damage_absorption = list(
-		"brute"=0.8,
-		"fire"=0.8,
-		"bullet"=1.2,
-		"laser"=1.2,
-		"energy"=1,
-		"bomb"=0.5,
-		"bio"=1,
-		"rad"=1
+		"brute"=0.9,
+		"fire"=0.9,
+		"bullet"=1.3,
+		"laser"=1.3,
+		"energy"=1.1,
+		"bomb"=0.6,
+		"bio"=1.1,
+		"rad"=1.1
 		)
 
 /obj/item/mecha_parts/component/armor/lightweight
 	name = "lightweight mecha plating"
 
-	max_integrity = 50
+	max_integrity = 40
 	step_delay = 0
 
 	damage_absorption = list(
-		"brute"=1,
-		"fire"=1.4,
-		"bullet"=1.1,
-		"laser"=1.2,
-		"energy"=1,
-		"bomb"=1,
-		"bio"=1,
-		"rad"=1
+		"brute"=1.1,
+		"fire"=1.5,
+		"bullet"=1.2,
+		"laser"=1.3,
+		"energy"=1.1,
+		"bomb"=1.1,
+		"bio"=1.1,
+		"rad"=1.1
 		)
 
 /obj/item/mecha_parts/component/armor/reinforced
@@ -76,17 +76,17 @@
 
 	step_delay = 4
 
-	max_integrity = 80
+	max_integrity = 60
 
 	//minimum_penetration = 10 //CHOMPremove
 
 	damage_absorption = list(
-		"brute"=0.7,
-		"fire"=1,
-		"bullet"=0.7,
-		"laser"=0.85,
-		"energy"=1,
-		"bomb"=0.8
+		"brute"=0.8,
+		"fire"=1.1,
+		"bullet"=0.8,
+		"laser"=0.95,
+		"energy"=1.1,
+		"bomb"=0.9
 		)
 
 /obj/item/mecha_parts/component/armor/military
@@ -94,7 +94,7 @@
 
 	step_delay = 6 //CHOMPedit
 
-	max_integrity = 100
+	max_integrity = 75
 
 	emp_resistance = 2
 
@@ -104,11 +104,11 @@
 	// minimum_penetration = 20 //chompedit making this less OP, was 25, is now 20 //Chompedit 2, were removing these
 
 	damage_absorption = list(
-		"brute"=0.5,
-		"fire"=1.1,
-		"bullet"=0.65,
-		"laser"=0.85,
-		"energy"=0.9,
+		"brute"=0.6,
+		"fire"=1.2,
+		"bullet"=0.75,
+		"laser"=0.95,
+		"energy"=1.0,
 		"bomb"=0.8
 		)
 
@@ -130,7 +130,7 @@
 
 	step_delay = 3
 
-	max_integrity = 100
+	max_integrity = 75
 
 	emp_resistance = 3
 
@@ -146,7 +146,7 @@
 		"bullet"=0.8,
 		"laser"=0.7,
 		"energy"=0.85,
-		"bomb"=1
+		"bomb"=1.1
 		)
 
 /obj/item/mecha_parts/component/armor/marshal/attach(var/obj/mecha/target, var/mob/living/user)
@@ -168,12 +168,12 @@
 	step_delay = 5
 
 	damage_absorption = list(
-		"brute"=0.6,
-		"fire"=0.8,
-		"bullet"=0.6,
-		"laser"=0.5,
-		"energy"=0.65,
-		"bomb"=0.8
+		"brute"=0.7,
+		"fire"=0.9,
+		"bullet"=0.7,
+		"laser"=0.6,
+		"energy"=0.75,
+		"bomb"=0.9
 		)
 
 /obj/item/mecha_parts/component/armor/military/marauder
@@ -181,7 +181,7 @@
 
 	step_delay = 4
 
-	max_integrity = 150
+	max_integrity = 85
 
 	emp_resistance = 3
 
@@ -192,12 +192,12 @@
 	// minimum_penetration = 25 //CHOMPremove
 
 	damage_absorption = list(
-		"brute"=0.5,
-		"fire"=0.7,
-		"bullet"=0.45,
-		"laser"=0.6,
-		"energy"=0.7,
-		"bomb"=0.7
+		"brute"=0.6,
+		"fire"=0.9,
+		"bullet"=0.55,
+		"laser"=0.9,
+		"energy"=0.9,
+		"bomb"=0.9
 		)
 
 /obj/item/mecha_parts/component/armor/military/marauder/attach(var/obj/mecha/target, var/mob/living/user)
@@ -222,12 +222,12 @@
 	//Chompedit end
 
 	damage_absorption = list(
-		"brute"=0.7,
-		"fire"=0.7,
-		"bullet"=0.7,
-		"laser"=0.7,
-		"energy"=0.7,
-		"bomb"=0.7
+		"brute"=0.8,
+		"fire"=0.8,
+		"bullet"=0.8,
+		"laser"=0.8,
+		"energy"=0.8,
+		"bomb"=0.8
 		)
 
 /obj/item/mecha_parts/component/armor/alien/attach(var/obj/mecha/target, var/mob/living/user)
@@ -249,10 +249,10 @@
 	emp_resistance = 2
 	required_type = list(/obj/mecha/combat/fighter)
 	damage_absorption = list(
-		"brute"=0.8,
-		"fire"=0.8,
-		"bullet"=1,
-		"laser"=1,
-		"energy"=0.8,
-		"bomb"=0.5
+		"brute"=0.9,
+		"fire"=0.9,
+		"bullet"=1.1,
+		"laser"=1.1,
+		"energy"=0.9,
+		"bomb"=0.6
 		)
