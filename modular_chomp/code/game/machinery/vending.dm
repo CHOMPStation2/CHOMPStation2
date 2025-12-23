@@ -257,8 +257,7 @@
 		/obj/item/stack/material/deuterium = 35,
 		/obj/item/stack/material/bronze = 35,
 		/obj/item/slime_extract/sepia = 3000,
-		/obj/item/gun/energy/sickshot = 2400,
-		/obj/item/gun/energy/ratminer = 4500
+		/obj/item/gun/energy/sickshot = 2400
 		)
 
 //Some stuff to let sec do things
