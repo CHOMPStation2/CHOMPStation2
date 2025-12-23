@@ -233,6 +233,7 @@
 	desc = "A foxfolk sits at a manmade store stall."
 	vend_delay = 1
 	icon = 'modular_chomp/icons/mob/starhunters.dmi'
+	use_power = 0
 	icon_state = "shop_keeper"
 	products	= list(/obj/item/kinetic_crusher/glaive = 3,
 		/obj/item/kinetic_crusher = 3,
