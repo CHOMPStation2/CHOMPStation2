@@ -73,7 +73,7 @@
 	mob_bonus_damage = 12
 	armor_penetration = 0
 
-/obj/item/projectile/energy/phase/heavy/cannon.
+/obj/item/projectile/energy/phase/heavy/cannon
 	range = 7
 	damage = 5
 	mob_bonus_damage = 15
