@@ -90,15 +90,15 @@
 
 /obj/item/projectile/beam/ratminer
 	name = "slicer beam"
-//	icon_state = "ratmining"
 	damage = 5
 	light_color = "#77A6E1"
 	hud_state = "laser_disabler"
-/*
-	muzzle_type = /obj/effect/projectile/muzzle/ratminer
-	tracer_type = /obj/effect/projectile/tracer/ratminer
-	impact_type = /obj/effect/projectile/impact/ratminer
-	*/
+
+	icon_state = "laser"
+
+	muzzle_type = /obj/effect/projectile/muzzle/laser
+	tracer_type = /obj/effect/projectile/tracer/laser
+	impact_type = /obj/effect/projectile/impact/laser
 
 /obj/item/projectile/beam/ratminer/on_range()
 	strike_thing()
