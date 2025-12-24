@@ -22,7 +22,7 @@
 	damage = 5
 	armor_penetration = 0 //why was polaris obssesed with lasers having 10 AP
 
-obj/item/projectile/beam/mininglaser
+/obj/item/projectile/beam/mininglaser
 	damage = 5
 	armor_penetration = 20
 
