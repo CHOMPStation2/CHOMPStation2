@@ -313,3 +313,10 @@
   - code_imp: move icon_states usage fully to rust g based icon_states_fast
   - bugfix: preview breaking on fast image swapping
   - bugfix: bad layer order on some vore overlays
+2025-12-26:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: edited dullahan sprites
+  Diana:
+  - bugfix: Critical condition now works like it did before.
+  Willburd:
+  - bugfix: runtime during vore unit tests on some downstream maps
