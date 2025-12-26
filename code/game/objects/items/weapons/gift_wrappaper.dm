@@ -310,8 +310,7 @@
 		/obj/item/rig/ert/janitor,
 		/obj/item/rig/industrial,
 		/obj/item/rig/internalaffairs,
-		/obj/item/rig/medical) //Below here is items that need to be upported.
-		/*
+		/obj/item/rig/medical, //Below here is items that need to be upported. //CHOMPEdit - Enable Start
 		/obj/item/lego,
 		/obj/item/clothing/glasses/monocoole,
 		/obj/item/rig/ch/pursuit,
@@ -342,19 +341,15 @@
 		/obj/item/storage/box/casino/costume_blackbunny,
 		/obj/item/storage/box/casino/costume_sexymime,
 		/obj/item/storage/box/casino/costume_sexyclown,
-		/obj/item/storage/box/casino/costume_nyangirl)
-		*/
+		/obj/item/storage/box/casino/costume_nyangirl) //CHOMPEdit - Enable End
 
 
 	var/gift_type_chaos = pick(
 		/obj/item/dnainjector/set_trait/hulk,
 		/obj/item/spellbook,
-		/obj/item/book/tome/imbued) //Below here is items that need to be upported.
-	/*
+		/obj/item/book/tome/imbued, //Below here is items that need to be upported. //CHOMPEdit - Enable Start
 		/obj/item/grenade/spawnergrenade/casino/infinitycake,
-		/obj/item/grenade/spawnergrenade/casino/universal_technomancer,
-		/obj/item/grenade/spawnergrenade/casino/gygax/gorilla,
-	*/
+		/obj/item/grenade/spawnergrenade/casino/universal_technomancer) //CHOMPEdit - Enable End
 
 	var/obj/item/I = null
 
