@@ -6,6 +6,7 @@
 	id = REAGENT_ID_CLARIDYL
 	description = "Claridyl is an advanced medicine that cures all of your problems. Notice: Clarydil does not claim to fix marriages, car loans, student debt or insomnia and may cause severe pain."
 	taste_description = "sugar"
+	scannable = SCANNABLE_BENEFICIAL
 	reagent_state = LIQUID
 	color = "#AAAAFF"
 	overdose = REAGENTS_OVERDOSE * 100
@@ -62,6 +63,7 @@
 	id = REAGENT_ID_EDEN
 	description = "The ultimate anti toxin unrivaled, it corrects impurities within the body but punishes those who attain them with a burning sensation"
 	taste_description = "peace"
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#00FFBE"
 	overdose = REAGENTS_OVERDOSE * 1
 	metabolism = 0
@@ -92,6 +94,7 @@
 /datum/reagent/tercozolam
 	name = REAGENT_TERCOZOLAM
 	id = REAGENT_ID_TERCOZOLAM
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#afeb17"
 	metabolism = 0.05
 	description = "A well respected drug used for treatment of schizophrenia in specific."
@@ -105,6 +108,7 @@
 /datum/reagent/hannoa
 	name = REAGENT_HANNOA
 	id = REAGENT_ID_HANNOA
+	scannable = SCANNABLE_BENEFICIAL
 	description = "A powerful clotting agent that treats brute damage very quickly but takes a long time to be metabolised. Overdoses easily, reacts badly with other chemicals."
 	taste_description = "paint"
 	reagent_state = LIQUID
@@ -150,6 +154,7 @@
 /datum/reagent/bullvalene //This is for the third sap. It converts Brute Oxy and burn into slightly less toxins.
 	name = REAGENT_BULLVALENE
 	id = REAGENT_ID_BULLVALENE
+	scannable = SCANNABLE_BENEFICIAL
 	description = "A catalytic chemical that can treat a wide variety of ailments at the cost of toxifying the host's body."
 	taste_description = "sulfur"
 	reagent_state = LIQUID
@@ -174,6 +179,7 @@
 /datum/reagent/serazine
 	name = REAGENT_SERAZINE
 	id = REAGENT_ID_SERAZINE
+	scannable = SCANNABLE_BENEFICIAL
 	description = "A sweet tasting flower extract, it has very mild anti toxic properties, help with hallucinations and drowsyness, and can be used to make potent drugs."
 	taste_description = "sweet nectar"
 	reagent_state = LIQUID
@@ -192,6 +198,7 @@
 /datum/reagent/alizene
 	name = REAGENT_ALIZENE
 	id = REAGENT_ID_ALIZENE
+	scannable = SCANNABLE_BENEFICIAL
 	description = "A derivative from bicaridine enhanced by serazine to more effectively mend flesh, but is ineffective against internal hemorrhage."
 	taste_description = "bittersweet"
 	taste_mult = 3

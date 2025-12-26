@@ -5,6 +5,7 @@
 	description = "A frothy green liquid, for causing cellular-level hetrogenous structure merging."
 	reagent_state = LIQUID
 	color = "#10881A"
+	scannable = SCANNABLE_BENEFICIAL
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
