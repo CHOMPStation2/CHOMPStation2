@@ -5,6 +5,7 @@
 	id = REAGENT_ID_AMORPHOROVIR
 	metabolism = 100 //set high enough that it does not process multiple times(delay implemented below)
 	description = "the bloods DNA in this seems aggressive"
+	scannable = SCANNABLE_BENEFICIAL
 	taste_description = "this shouldn't be here" //unobtainable ingame
 	color = "#7F0000"
 	var/gender_change = null //set the gender variable here so we can set it to others in varients
@@ -72,6 +73,7 @@
 	id = REAGENT_ID_CLEANSINGAGENT
 	description = "An agent that purges one's body of toxins."
 	reagent_state = LIQUID
+	scannable = SCANNABLE_ADVANCED
 	color = "#225722"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE
@@ -94,6 +96,7 @@
 	id = REAGENT_ID_PURIFYINGAGENT
 	description = "An agent that purges one's body of rads and toxins."
 	reagent_state = LIQUID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#225722"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE
@@ -116,6 +119,7 @@
 	id = REAGENT_ID_BURNCARD
 	description = "A more powerful variation of bicard that also burns the subject."
 	taste_description = "bitterness"
+	scannable = SCANNABLE_BENEFICIAL
 	taste_mult = 3
 	reagent_state = LIQUID
 	color = "#BF0000"
@@ -155,6 +159,7 @@
 	id = REAGENT_ID_FLAMECURE
 	description = "Used to rapidly clot internal hemorrhages by burning the wounded areas"
 	reagent_state = LIQUID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#4246C7"
 	overdose = REAGENTS_OVERDOSE * 0.5
 	scannable = 1
@@ -189,6 +194,7 @@
 	description = "An advancement of kelotane that scars and breaks apart the user's flesh to remove the burnt tissue."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#FF6600"
 	overdose = REAGENTS_OVERDOSE * 0.2
 	scannable = 1
@@ -210,6 +216,7 @@
 	description = "A strange chemical that will stablize bloodflow by burning the subject"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#00BFFF"
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
@@ -225,6 +232,7 @@
 /datum/reagent/livingagent
 	name = REAGENT_LIVINGAGENT
 	id = REAGENT_ID_LIVINGAGENT
+	scannable = SCANNABLE_BENEFICIAL
 	description = "Fill the body with life, while making it more senstive to stimulus."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
@@ -238,7 +246,6 @@
 	..()
 	M.druggy = max(M.druggy, 5)
 	M.Confuse(5)
-	//YW ADDITIONS END
 
 /datum/reagent/livingagent/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -254,6 +261,7 @@
 	name = REAGENT_PERFORMANCEPEAKER
 	id = REAGENT_ID_PERFORMANCEPEAKER
 	description = "A chemical created to bring a body to peak condition except it's highly toxic"
+	scannable = SCANNABLE_ADVANCED
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#006666"
@@ -278,6 +286,7 @@
 	description = "An experimental drug that solely works upon dead bodies"
 	taste_description = "ash"
 	reagent_state = LIQUID
+	scannable = SCANNABLE_ADVANCED
 	color = "#666699"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 2
@@ -299,6 +308,7 @@
 	id = REAGENT_ID_QUADCORD
 	description = "An experimental drug that is meant to further enhance tricord"
 	taste_description = "bitterness"
+	scannable = SCANNABLE_BENEFICIAL
 	reagent_state = LIQUID
 	color = "#FF3399"
 	scannable = 1
@@ -324,6 +334,7 @@
 	description = "An experimental that removes many ailments, such as poison and stiffening of muscles via frost"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#660066"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 0.5
@@ -352,6 +363,7 @@
 	description = "An experimental drug that mimics rapid regeneration seen in squishy creatures."
 	taste_description = "sweet"
 	reagent_state = LIQUID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#00CCFF"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 0.5
@@ -393,6 +405,7 @@
 	description = "An experimental chem that will bring those back from the brink, with severe side effects"
 	taste_description = "ash"
 	reagent_state = LIQUID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#fcac00"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE
@@ -410,6 +423,7 @@
 	description = "A desiccant. Can be used to dry things."
 	taste_description = "dryness"
 	reagent_state = LIQUID
+	scannable = SCANNABLE_ADVANCED
 	color = "#A70FFF"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE
