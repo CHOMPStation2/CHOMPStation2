@@ -323,7 +323,11 @@
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
 */
 
+<<<<<<< HEAD
 /datum/trait/positive/trauma_tolerance //CHOMPEdit renamed because we already have pain_tolerance pathname for halloss damage resistance.
+=======
+/datum/trait/positive/trauma_tolerance
+>>>>>>> 9ee9780589 (Update positive.dm (#18939))
 	name = "Grit"
 	desc = "You can keep going a little longer, a little harder when you get hurt, Injuries only inflict 85% as much pain, and slowdown from pain is 85% as effective."
 	cost = 2
