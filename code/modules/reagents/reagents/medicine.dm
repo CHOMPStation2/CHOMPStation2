@@ -9,7 +9,7 @@
 	color = "#00BFFF"
 	overdose = REAGENTS_OVERDOSE * 2
 	metabolism = REM * 0.2
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -28,7 +28,7 @@
 	color = "#00BFFF"
 	overdose = REAGENTS_OVERDOSE * 2
 	metabolism = REM * 0.2
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	touch_met = REM * 0.3
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -54,7 +54,7 @@
 	color = "#BF0000"
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0.25
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -91,7 +91,7 @@
 	reagent_state = LIQUID
 	color = "#BF0000"
 	overdose = REAGENTS_OVERDOSE * 0.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	touch_met = REM * 0.75
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -121,7 +121,7 @@
 	color = "#eae6e3"
 	overdose = REAGENTS_OVERDOSE * 0.8
 	metabolism = REM * 0.4
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -141,7 +141,7 @@
 	reagent_state = LIQUID
 	color = "#FFA800"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -163,7 +163,7 @@
 	reagent_state = LIQUID
 	color = "#FF8000"
 	overdose = REAGENTS_OVERDOSE * 0.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -183,7 +183,7 @@
 	reagent_state = LIQUID
 	color = "#FF8000"
 	overdose = REAGENTS_OVERDOSE * 0.4
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	touch_met = REM * 0.75
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -211,7 +211,7 @@
 	taste_description = "a roll of gauze"
 	reagent_state = LIQUID
 	color = "#00A000"
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -234,7 +234,7 @@
 	description = REAGENT_CARTHATOLINE + " is strong evacuant used to treat severe poisoning."
 	reagent_state = LIQUID
 	color = "#225722"
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 0 // Not used, but it shouldn't deal toxin damage anyways. Carth heals toxins!
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -273,7 +273,7 @@
 	reagent_state = LIQUID
 	color = "#0080FF"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = REM * 0.25
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
@@ -301,7 +301,7 @@
 	color = "#0040FF"
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.25
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -326,8 +326,12 @@
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#8040FF"
+<<<<<<< HEAD
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 4 //YW EDIT - TRICORD FUCKING KILLS YOU
+=======
+	scannable = SCANNABLE_BENEFICIAL
+>>>>>>> 9a8b885d38 (Scannable chems and fixes (#18899))
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -356,7 +360,7 @@
 	taste_description = "bitterness"
 	reagent_state = SOLID
 	color = "#B060FF"
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
@@ -396,7 +400,7 @@
 	color = "#8080FF"
 	metabolism = REM * 0.5
 	mrate_static = TRUE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
@@ -423,7 +427,7 @@
 	color = "#80BFFF"
 	metabolism = REM * 0.5
 	mrate_static = TRUE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
@@ -452,7 +456,7 @@
 	metabolism = REM * 0.5
 	mrate_static = TRUE
 	affects_dead = FALSE //Clarifying this here since the original intent was this ONLY works on people that have the bloodpump_corpse modifier.
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
@@ -492,7 +496,7 @@
 	color = "#94B21C"
 	metabolism = REM * 0.5
 	mrate_static = TRUE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	affects_dead = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
@@ -529,7 +533,7 @@
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE * 2
 	overdose_mod = 0.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = 0.02
 	mrate_static = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
@@ -556,7 +560,7 @@
 	color = "#CB68FC"
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = 0.02
 	mrate_static = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -582,7 +586,7 @@
 	color = "#800080"
 	overdose = 20
 	overdose_mod = 0.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = 0.02
 	mrate_static = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
@@ -612,8 +616,9 @@
 	reagent_state = LIQUID
 	color = "#99CCFF"
 	metabolism = REM * 0.05
+	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -644,6 +649,7 @@
 	reagent_state = LIQUID
 	color = "#FF3300"
 	overdose = REAGENTS_OVERDOSE * 0.5
+	scannable = SCANNABLE_ADVANCED
 	overdose_mod = 0.25
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_COMSTIM
@@ -677,7 +683,7 @@
 	color = "#FFFF66"
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -702,7 +708,7 @@
 	reagent_state = LIQUID
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -729,7 +735,7 @@
 	color = "#561EC3"
 	overdose = 10
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -764,7 +770,7 @@
 	metabolism = REM * 0.5
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -798,7 +804,7 @@
 	metabolism = REM * 0.75
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	var/repair_strength = 6
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
@@ -848,7 +854,7 @@
 	metabolism = REM * 1.5
 	overdose = 10
 	overdose_mod = 1.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -882,7 +888,7 @@
 	metabolism = REM * 1.5
 	overdose = 10
 	overdose_mod = 1.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -916,7 +922,7 @@
 	metabolism = REM * 1.5
 	overdose = 10
 	overdose_mod = 1.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -952,7 +958,7 @@
 	metabolism = REM * 1.5
 	overdose = 10
 	overdose_mod = 1.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -982,7 +988,7 @@
 	color = "#7B4D4F"
 	overdose = 20
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = REM * 0.06
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
@@ -1040,7 +1046,7 @@
 	metabolism = REM * 0.06
 	overdose = 20
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -1081,6 +1087,7 @@
 	description = REAGENT_RYETALYN + " can cure DNA, Cloning, and genetic damage via a catalytic process."
 	taste_description = "acid"
 	reagent_state = SOLID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#004000"
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
@@ -1116,6 +1123,7 @@
 	description = "A powerful oxidizer that reacts with ethanol."
 	taste_description = "bitterness"
 	reagent_state = SOLID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#605048"
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
@@ -1154,7 +1162,7 @@
 	color = "#408000"
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -1174,7 +1182,7 @@
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 1.25
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
@@ -1197,7 +1205,7 @@
 	metabolism = REM * 0.25
 	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	data = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
@@ -1228,7 +1236,7 @@
 	mrate_static = TRUE
 	overdose = 10
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	data = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
@@ -1298,7 +1306,7 @@
 	metabolism = REM * 0.4
 	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	data = 0
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -1345,6 +1353,7 @@
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#C8A5DC"
+	scannable = SCANNABLE_BENEFICIAL
 	touch_met = 5
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_CLEAN
@@ -1398,7 +1407,7 @@
 	reagent_state = LIQUID
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 	coolant_modifier = 0.5 // Okay substitute coolant
@@ -1424,7 +1433,7 @@
 	color = "#669900"
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 2
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
@@ -1474,7 +1483,7 @@
 	reagent_state = SOLID
 	color = "#555555"
 	metabolism = REM * 4 // Nanomachines gotta go fast.
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	affects_robots = TRUE
 	wiki_flag = WIKI_SPOILER
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -1495,7 +1504,7 @@
 	color = "#80af9c"
 	metabolism = REM * 0.002
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_FOOD
 
@@ -1509,7 +1518,7 @@
 	overdose = REAGENTS_OVERDOSE * 0.50
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
-
+	scannable = SCANNABLE_BENEFICIAL
 
 /datum/reagent/earthsblood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.heal_organ_damage (4 * removed, 4 * removed)
@@ -1531,7 +1540,7 @@
 	color = "#31d422"
 	overdose = 15
 	overdose_mod = 1.2
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -1588,6 +1597,7 @@
 	id = REAGENT_ID_TERCOZOLAM
 	color = "#afeb17"
 	metabolism = 0.05
+	scannable = SCANNABLE_BENEFICIAL
 	description = "A well respected drug used for treatment of schizophrenia in specific."
 	overdose = REAGENTS_OVERDOSE * 2
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
