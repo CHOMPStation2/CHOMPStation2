@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Ckeyless simplemobs will drop bones on digestion if the preds belly's 'leave remains' are set to true."
