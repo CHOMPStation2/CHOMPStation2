@@ -70,16 +70,9 @@
 Drinks Data
 */
 
-<<<<<<< HEAD
 /datum/reagent
-	var/glass_icon_file = null
-	var/glass_icon_state = null
-	var/glass_center_of_mass_x = 0
-	var/glass_center_of_mass_y = 0
-	var/glass_icon_source = null //CHOMP A way for us to have metaglass identify and decide which dmi it wants to grab sprites from - Jack
+	var/glass_icon_source = null //CHOMPEdit A way for us to have metaglass identify and decide which dmi it wants to grab sprites from - Jack
 
-=======
->>>>>>> 9a8b885d38 (Scannable chems and fixes (#18899))
 /datum/reagent/adminordrazine
 	glass_icon_state = "golden_cup"
 

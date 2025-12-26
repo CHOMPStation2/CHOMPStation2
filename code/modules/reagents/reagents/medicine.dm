@@ -326,12 +326,8 @@
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#8040FF"
-<<<<<<< HEAD
-	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 4 //YW EDIT - TRICORD FUCKING KILLS YOU
-=======
 	scannable = SCANNABLE_BENEFICIAL
->>>>>>> 9a8b885d38 (Scannable chems and fixes (#18899))
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
