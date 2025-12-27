@@ -1,6 +1,6 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss
-	health = 3000
-	maxHealth = 3000 //TG has megafauna with 2500 HP. Yet to see folks call those overly tanky. Tyr gun can deal 504 with a full clip of the single shot mode. Wanting longer fights, and this are meant for groups of three
+	health = 1000
+	maxHealth = 1000 //TG has megafauna with 2500 HP. Yet to see folks call those overly tanky. Tyr gun can deal 504 with a full clip of the single shot mode. Wanting longer fights, and this are meant for groups of three
 	faction = FACTION_TYR
 	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 100, rad = 100)
 	movement_cooldown = 40
@@ -55,7 +55,7 @@
 	icon_living = "poison_boss"
 	wreckage = /obj/item/prop/tyrlore/acid_boss
 	specialattackprojectile = /obj/item/projectile/energy/neurotoxin/toxic/tyr_flora
-	var/regeneration_strength = -20
+	var/regeneration_strength = -10
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/acid_boss/load_default_bellies()
 	. = ..()
@@ -137,14 +137,14 @@
 	name = "experiment 15"
 	desc = "A strange furball gaurded by a transparent barrier."
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
-	health = 700
-	maxHealth = 700 //shield mechanic
+	health = 200
+	maxHealth = 200 //shield mechanic
 	icon_state = "UPshield_boss"
 	icon_living = "UPshield_boss"
 	projectiletype = /obj/item/projectile/energy/eclipse/tyrjavelin
 	wreckage = /obj/item/prop/tyrlore/shield_boss
-	var/fullshield = 300
-	var/shieldrage = 300
+	var/fullshield = 200
+	var/shieldrage = 200
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/shield_boss/load_default_bellies()
 	. = ..()
@@ -173,8 +173,8 @@
 		..()
 		shieldrage -= P.damage
 		if(shieldrage < 0)
-			shieldrage = 300
-			fullshield = 300
+			shieldrage = 200
+			fullshield = 200
 			visible_message(span_boldwarning(span_orange("The shield reactivates!!.")))
 			icon_state = "UPshield_boss"
 
@@ -291,8 +291,8 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/swarm_ai
 	name = "swarm controler"
 	desc = "A massive hivebot that has shifting bits of metal upon it's body."
-	health = 700
-	maxHealth = 700
+	health = 180
+	maxHealth = 180
 	icon_state = "bright_green"
 	icon_living = "bright_green"
 	icon = 'modular_chomp/icons/mob/hivebot.dmi'
@@ -338,8 +338,8 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/medical_bot //tutortial for ADD invul mechanics
 	name = "medical robot"
 	desc = "A massive hivebot with medical equipment."
-	health = 400
-	maxHealth = 400
+	health = 150
+	maxHealth = 150
 	icon_state = "white"
 	icon_living = "white"
 	icon = 'icons/mob/hivebot.dmi'
@@ -368,8 +368,8 @@
 	icon = 'modular_chomp/icons/mob/tyr.dmi'
 	icon_state = "guardian"
 	icon_living = "guardian"
-	maxHealth = 1.5 LASERS_TO_KILL // 60 hp
-	health = 1.5 LASERS_TO_KILL
+	maxHealth = 0.5 LASERS_TO_KILL // 60 hp
+	health = 0.5 LASERS_TO_KILL
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	attack_armor_pen = 80

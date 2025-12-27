@@ -121,9 +121,11 @@
 	seed_submaps(list(surface_z), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains_ch) // Center area is WIP until map editing settles down.  //CHOMPEdit bumped up from 80 to 140
 
 	// Wilderness is next.
+	/*
 	var/surface_wild_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE_WILDS]
 	seed_submaps(list(surface_wild_z), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness_ch/normal)  //CHOMPEdit bumped up from 60 to 150
 	seed_submaps(list(surface_wild_z), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness_ch/deep)  //CHOMPEdit bumped up from 60 to 150
+	*/
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )

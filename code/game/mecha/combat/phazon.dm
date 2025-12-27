@@ -6,15 +6,15 @@
 	step_in = 1
 	dir_in = 1 //Facing North.
 	step_energy_drain = 3
-	health = 250		//God this is low  //Chompedit, increased it a bit.
-	maxhealth = 250		//Don't forget to update the /old variant if  you change this number.  //Chompedit, increased health.
+	health = 187		//God this is low  //Chompedit, increased it a bit.
+	maxhealth = 187		//Don't forget to update the /old variant if  you change this number.  //Chompedit, increased health.
 	deflect_chance = 30
 	max_temperature = 25000
 	infra_luminosity = 3
 	wreckage = /obj/effect/decal/mecha_wreckage/phazon
 	add_req_access = 1
 	//operation_req_access = list()
-	internal_damage_threshold = 25
+	internal_damage_threshold = 5
 	force = 15
 	max_equip = 4
 
@@ -90,14 +90,14 @@
 	step_in = 1
 	dir_in = 1 //Facing North.
 	step_energy_drain = 3
-	health = 350
-	maxhealth = 350
+	health = 262
+	maxhealth = 262
 	deflect_chance = 30
 	inherent_damage_absorption = list("brute"=0.6,"fire"=0.7,"bullet"=0.7,"laser"=0.9,"energy"=0.7,"bomb"=0.5)
 	max_temperature = 10000
 	infra_luminosity = 3
 	wreckage = /obj/effect/decal/mecha_wreckage/janus
-	internal_damage_threshold = 25
+	internal_damage_threshold = 5
 	force = 20
 	phasing_energy_drain = 300
 //Chompedit start
@@ -164,5 +164,5 @@
 /obj/mecha/combat/phazon/old/Initialize(mapload)
 	. = ..()
 	health = 25
-	maxhealth = 150	//Just slightly worse.
+	maxhealth = 75	//Just slightly worse.
 	cell.charge = rand(0, (cell.charge/2))

@@ -13,7 +13,7 @@
 	required_type = null	// List, if it exists. Exosuits meant to use the component.
 
 	integrity_danger_mod = 0.5	// Multiplier for comparison to max_integrity before problems start.
-	max_integrity = 50
+	max_integrity = 42
 
 	internal_damage_flag = MECHA_INT_FIRE
 
@@ -24,7 +24,7 @@
 
 	step_delay = 4
 	integrity_danger_mod = 0.3
-	max_integrity = 100
+	max_integrity = 75
 
 /obj/item/mecha_parts/component/hull/lightweight
 	name = "lightweight mecha hull"

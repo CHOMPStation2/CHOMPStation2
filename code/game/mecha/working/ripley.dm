@@ -6,13 +6,13 @@
 	step_in = 5 // vorestation edit, was 6 but that's PAINFULLY slow
 	step_energy_drain = 5 // vorestation edit because 10 drained a significant chunk of its cell before you even got out the airlock
 	max_temperature = 20000
-	health = 200
-	maxhealth = 200		//Don't forget to update the /old variant if  you change this number.
+	health = 150
+	maxhealth = 150		//Don't forget to update the /old variant if  you change this number.
 	wreckage = /obj/effect/decal/mecha_wreckage/ripley
 	cargo_capacity = 10
 	var/obj/item/mining_scanner/orescanner // vorestation addition
 
-	minimum_penetration = 10
+	minimum_penetration = 0
 
 	encumbrance_gap = 2
 
@@ -146,5 +146,5 @@
 /obj/mecha/working/ripley/mining/old/Initialize(mapload)
 	. = ..()
 	health = 25
-	maxhealth = 190	//Just slightly worse.
+	maxhealth = 90	//Just slightly worse.
 	cell.charge = rand(0, cell.charge)

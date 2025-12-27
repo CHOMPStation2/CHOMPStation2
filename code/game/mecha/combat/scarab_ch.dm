@@ -7,8 +7,8 @@
 	step_in = 2 // Four legs means FAST AS FUCK BOI
 	step_energy_drain = 5 //Half of normal step drain. Faster mech, more movement.
 	opacity = 0
-	health = 250
-	maxhealth = 250
+	health = 150
+	maxhealth = 150
 	deflect_chance = 10
 	max_temperature = 20000
 	infra_luminosity = 6

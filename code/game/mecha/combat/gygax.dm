@@ -5,13 +5,13 @@
 	initial_icon = "gygax"
 	step_in = 3
 	dir_in = 1 //Facing North.
-	health = 250
-	maxhealth = 250			//Don't forget to update the /old variant if  you change this number.
+	health = 187
+	maxhealth = 187			//Don't forget to update the /old variant if  you change this number.
 	deflect_chance = 15
 	max_temperature = 25000
 	infra_luminosity = 6
 	wreckage = /obj/effect/decal/mecha_wreckage/gygax
-	internal_damage_threshold = 35
+	internal_damage_threshold = 8
 	max_equip = 3
 
 	max_hull_equip = 1
@@ -51,8 +51,8 @@
 	name = "Dark Gygax"
 	icon_state = "darkgygax"
 	initial_icon = "darkgygax"
-	health = 400
-	maxhealth = 400
+	health = 300
+	maxhealth = 300
 	deflect_chance = 25
 	max_temperature = 45000
 	overload_coeff = 1
@@ -86,8 +86,8 @@
 	name = "Serenity"
 	icon_state = "medgax"
 	initial_icon = "medgax"
-	health = 150
-	maxhealth = 150
+	health = 112
+	maxhealth = 112
 	deflect_chance = 20
 	step_in = 2
 	max_temperature = 20000
@@ -143,5 +143,5 @@
 /obj/mecha/combat/gygax/old/Initialize(mapload)
 	. = ..()
 	health = 25
-	maxhealth = 250	//Just slightly worse.
+	maxhealth = 150	//Just slightly worse.
 	cell.charge = rand(0, (cell.charge/2))

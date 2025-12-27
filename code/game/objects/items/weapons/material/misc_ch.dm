@@ -18,7 +18,7 @@
 	w_class = ITEMSIZE_LARGE
 	edge = 1
 	sharp = 1
-	force_divisor = 0.7 //42 When Wielded in line with a sword
+	force_divisor = 0.4 //42 When Wielded in line with a sword
 	thrown_force_divisor = 0.1 // 2 when thrown with weight 20 (steel) since frankly its too bulk to throw
 	//holy = 1
 

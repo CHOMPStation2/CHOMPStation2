@@ -1,5 +1,5 @@
 /obj/mecha/working
-	internal_damage_threshold = 60
+	internal_damage_threshold = 5
 	max_hull_equip = 1
 	max_weapon_equip = 0
 	max_utility_equip = 3

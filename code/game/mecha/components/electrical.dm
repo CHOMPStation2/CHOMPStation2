@@ -11,7 +11,7 @@
 	emp_resistance = 1
 
 	integrity_danger_mod = 0.4
-	max_integrity = 40
+	max_integrity = 30
 
 	step_delay = 0
 
@@ -25,7 +25,7 @@
 	name = "efficient mecha electrical harness"
 
 	emp_resistance = 0
-	max_integrity = 30
+	max_integrity = 24
 
 	relative_size = 10
 	charge_cost_mod = 0.6
