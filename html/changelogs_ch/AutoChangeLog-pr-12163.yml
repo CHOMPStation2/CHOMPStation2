@@ -1,0 +1,4 @@
+author: "whooshboom"
+delete-after: True
+changes:
+  - qol: "removes compression artifacts from the main splash screen."
