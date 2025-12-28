@@ -3007,7 +3007,7 @@
 /obj/effect/map_effect/portal/master/side_a/caves_to_wilderness/river{
 	dir = 8
 	},
-/turf/simulated/wall/solidrock,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/surface/outside/plains/normal)
 "fG" = (
 /obj/item/stool,
@@ -3368,7 +3368,7 @@
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 8
 	},
-/turf/simulated/wall/solidrock,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/surface/outside/plains/normal)
 "gr" = (
 /obj/effect/floor_decal/steeldecal/steel_decals3{
@@ -3505,7 +3505,7 @@
 /area/surface/outpost/engineering/monitoring)
 "gG" = (
 /turf/unsimulated/wall/planetary/sif,
-/area/surface/outside/plains/mountains)
+/area/surface/outside/ocean)
 "gI" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
