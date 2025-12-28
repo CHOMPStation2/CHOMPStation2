@@ -244,8 +244,7 @@
 		/obj/item/stack/material/deuterium = 50,
 		/obj/item/stack/material/bronze = 50,
 		/obj/item/slime_extract/sepia = 5,
-		/obj/item/gun/energy/sickshot = 3,
-		/obj/item/gun/energy/ratminer = 1
+		/obj/item/gun/energy/sickshot = 3
 		)
 
 	prices     = list(/obj/item/kinetic_crusher/glaive = 1600,
@@ -257,8 +256,7 @@
 		/obj/item/stack/material/deuterium = 35,
 		/obj/item/stack/material/bronze = 35,
 		/obj/item/slime_extract/sepia = 3000,
-		/obj/item/gun/energy/sickshot = 2400,
-		/obj/item/projectile/beam/ratminer = 5000
+		/obj/item/gun/energy/sickshot = 2400
 		)
 
 //Some stuff to let sec do things
