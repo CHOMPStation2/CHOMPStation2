@@ -21,12 +21,8 @@
 	accuracy = -75
 	scoped_accuracy = 75
 	one_handed_penalty = 90
-<<<<<<< HEAD
 	bolt_open = 0 //CHOMP Edit
-=======
-	var/bolt_open = 0
 	special_weapon_handling = TRUE
->>>>>>> d5849910e5 (Begin clickcode attack_self fix (#18797))
 
 /obj/item/gun/projectile/heavysniper/update_icon()
 	if(bolt_open)

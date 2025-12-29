@@ -1,8 +1,12 @@
 /obj/item/gunbox/sec_officer
 	name = "lethal armament box"
 	desc = "A secure box containing a non-lethal sidearm."
+	variant_gunbox = TRUE
 
 /obj/item/gunbox/sec_officer/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/list/options = list()
 	options["Laser Pistol"] = list(/obj/item/gun/energy/gun, /obj/item/cell/device/weapon, /obj/item/cell/device/weapon)
 	options["Normal Pistol"] = list(/obj/item/gun/projectile/pistol, /obj/item/ammo_magazine/m9mm/compact, /obj/item/ammo_magazine/m9mm/compact, /obj/item/ammo_magazine/m9mm/compact, /obj/item/ammo_magazine/m9mm/compact)

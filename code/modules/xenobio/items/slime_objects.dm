@@ -148,11 +148,7 @@
 	light_range = 6
 	on = 1 //Bio-luminesence has one setting, on.
 	power_use = 0
-<<<<<<< HEAD
-	light_system = STATIC_LIGHT
-=======
 	special_handling = TRUE
->>>>>>> d5849910e5 (Begin clickcode attack_self fix (#18797))
 
 /obj/item/flashlight/slime/Initialize(mapload)
 	. = ..()

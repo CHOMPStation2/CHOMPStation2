@@ -19,7 +19,9 @@
 
 
 /obj/item/starcaster_news/attack_self(mob/user as mob)
-
+	. = ..(user)
+	if(.)
+		return TRUE
 	user.set_machine(src)
 	tgui_interact(user) //Activates tgui. Bless tgui.
 	return

@@ -1,3 +1,4 @@
+//CHOMPEdit Start??? Somehow wedding rigs were attributed to me from 9 years ago but is not upstream and is only on here, yet there's no chomp edits?
 /obj/item/clothing/gloves/weddingring
 	name = "golden wedding ring"
 	desc = "For showing your devotion to another person. It has a golden glimmer to it."
@@ -5,8 +6,12 @@
 	item_state = "wedring_g"
 	var/partnername = ""
 	body_parts_covered = null
+	special_handling = TRUE
 
 /obj/item/clothing/gloves/weddingring/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	partnername = tgui_input_text(user, "Would you like to change the holoengraving on the ring?", "Name your betrothed", "Bae", MAX_NAME_LEN)
 	name = "[initial(name)] - [partnername]"
 
@@ -14,6 +19,7 @@
 	name = "silver wedding ring"
 	icon_state = "wedring_s"
 	item_state = "wedring_s"
+//CHOMPEdit End???
 
 /obj/item/clothing/gloves/color
 	name = "gloves"

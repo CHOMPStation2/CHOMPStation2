@@ -426,13 +426,9 @@
 		associated_account_number = user.mind.initial_account.account_number
 	if(title_strings.len)
 		var/tempname = pick(title_strings)
-<<<<<<< HEAD
 		name = tempname + " ([assignment] Contractor)"//Chompedit: Suffix contractor IDs
-=======
-		name = tempname + " ([assignment])"
 	else if(polymorphic_type == 2)
 		name = user.name + "'s ITG ID card" + " ([assignment])"
->>>>>>> d5849910e5 (Begin clickcode attack_self fix (#18797))
 	else
 		name = user.name + "'s ID card" + " ([assignment] Contractor)"//Chompedit: Suffix contractor IDs
 

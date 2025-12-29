@@ -272,7 +272,6 @@
 		cooldown_timer = world.time + cooldown_length
 		return ..()
 
-<<<<<<< HEAD
 /obj/item/toy/plushie/marketable_pip/attack_self(mob/user as mob)
 	if(!cooldown)
 		playsound(user, 'sound/effects/whistle.ogg', 10, 0)
@@ -283,8 +282,6 @@
 	cooldown = 0
 */ //CHOMPedit end
 
-=======
->>>>>>> d5849910e5 (Begin clickcode attack_self fix (#18797))
 /obj/item/toy/plushie/moth
 	name = "moth plushie"
 	desc = "A cute plushie of cartoony moth. It's ultra fluffy but leaves dust everywhere."

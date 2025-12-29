@@ -277,7 +277,7 @@
 	newflag.visible_message(span_infoplain(span_bold("[user]") + " plants [newflag] firmly in the ground."))
 	src.use(1)
 
-// Lightpoles for lumber colony
+// Lightpoles for lumber colony //CHOMPEdit Start
 /obj/item/stack/lightpole
 	name = "Trailblazers"
 	desc = "Some colourful trail lights."
@@ -289,6 +289,7 @@
 	var/base_state
 	var/on = 0
 	var/brightness_on = 4 //luminosity when on
+	custom_handling = TRUE
 
 /obj/item/stack/lightpole/Initialize(mapload)
 	. = ..()
@@ -322,7 +323,9 @@
 		..()
 
 /obj/item/stack/lightpole/attack_self(mob/user as mob)
-
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/obj/item/stack/lightpole/F = locate() in get_turf(src)
 
 	var/turf/T = get_turf(src)
@@ -344,3 +347,4 @@
 	newlightpole.icon_state = "[newlightpole.base_state]_on"
 	newlightpole.visible_message("<b>[user]</b> plants [newlightpole] firmly in the ground.")
 	src.use(1)
+//CHOMPEdit End

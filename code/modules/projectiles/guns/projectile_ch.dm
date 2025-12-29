@@ -23,6 +23,7 @@
 	var/sound_ejectchamber = 'sound/weapons/ballistics/pistol_ejectchamber.ogg'
 	var/sound_eject = 'sound/weapons/ballistics/pistol_eject.ogg'
 	var/sound_chamber = 'sound/weapons/ballistics/pistol_chamber.ogg'
+	special_handling = TRUE
 
 /obj/item/gun/projectile/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
 	if(fire_anim)
@@ -67,6 +68,9 @@
 		bolt_toggle()
 
 /obj/item/gun/projectile/attack_self(mob/user as mob)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(manual_chamber)
 		if(do_after(user, 0.4 SECONDS, src))
 			bolt_handle(user)

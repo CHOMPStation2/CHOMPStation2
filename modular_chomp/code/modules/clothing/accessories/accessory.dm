@@ -14,9 +14,7 @@
 	var/slaveckey = null	//Ckey for system to check who is the person and ensure no abuse of system or errors
 	var/slaveflavor = null	//Description to show on the SPASM
 	var/slaveooc = null		//OOC text to show on the SPASM
-
-/obj/item/clothing/accessory/collar/casinoslave/attack_self(mob/user as mob)
-	//keeping it blank so people don't tag and reset collar status
+	special_collar = TRUE
 
 /obj/item/clothing/accessory/collar/holo/casinoslave_fake
 	name = "a Sentient Prize Collar"

@@ -66,6 +66,7 @@
 	valid_accessory_slots = null
 	actions_types = list(/datum/action/item_action/toggle_visor)
 	special_handling = TRUE
+	var/name_descriptor = "riot helmet" //CHOMPEdit for visor toggle messages
 
 /obj/item/clothing/head/helmet/riot/attack_self(mob/user)
 	. = ..(user)
@@ -73,10 +74,10 @@
 		return TRUE
 	if(src.icon_state == initial(icon_state))
 		src.icon_state = "[icon_state]up"
-		to_chat(user, "You raise the visor on the riot helmet.")
+		to_chat(user, "You raise the visor on the [name_descriptor].") //CHOMPEdit  - Visor toggle messages
 	else
 		src.icon_state = initial(icon_state)
-		to_chat(user, "You lower the visor on the riot helmet.")
+		to_chat(user, "You lower the visor on the [name_descriptor].") //CHOMPEdit  - Visor toggle messages
 	update_clothing_icon()	//so our mob-overlays update
 
 /obj/item/clothing/head/helmet/laserproof

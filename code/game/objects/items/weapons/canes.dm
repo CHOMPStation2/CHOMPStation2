@@ -43,12 +43,7 @@
 		user.update_inv_l_hand(0)
 		user.update_inv_r_hand()
 		concealed_blade = null
-<<<<<<< HEAD
-	else
-		..()
-=======
 		update_icon()
->>>>>>> d5849910e5 (Begin clickcode attack_self fix (#18797))
 
 /obj/item/cane/concealed/attackby(var/obj/item/material/butterfly/W, var/mob/user)
 	if(!src.concealed_blade && istype(W))

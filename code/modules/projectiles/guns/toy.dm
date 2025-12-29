@@ -235,11 +235,8 @@
 	projectile_type = /obj/item/projectile/bullet/foam_dart
 	recoil = null
 	handle_casings = null
-<<<<<<< HEAD
 	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
-=======
 	special_weapon_handling = TRUE
->>>>>>> d5849910e5 (Begin clickcode attack_self fix (#18797))
 
 /obj/item/gun/projectile/cyborgtoy/attack_self(mob/user)
 	. = ..(user)
