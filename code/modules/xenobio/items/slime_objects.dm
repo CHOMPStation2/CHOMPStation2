@@ -148,6 +148,7 @@
 	light_range = 6
 	on = 1 //Bio-luminesence has one setting, on.
 	power_use = 0
+	light_system = STATIC_LIGHT //CHOMPEdit
 	special_handling = TRUE
 
 /obj/item/flashlight/slime/Initialize(mapload)
