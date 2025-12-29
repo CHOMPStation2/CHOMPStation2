@@ -352,3 +352,31 @@
   - bugfix: Fixed reactive armour being able to be printed in any departmental lathe
   Will:
   - bugfix: Drone ventcrawling no longer using slime's vent crawling restriction list
+2025-12-29:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: whitelist help command
+  - bugfix: xenoarch runtime properly
+  Diana:
+  - bugfix: Users with no DNA can no longer upload their non-existent DNA to a DNA
+      locking chip
+  - bugfix: Artifact casings no longer drop.
+  - code_imp: Made it a bit easier to read xenoarch spawn code
+  - bugfix: Makes illegal excavations no longer crash the server
+  - qol: Telecube spawns now spawn with a second one, allowing for immediate mating.
+  - rscadd: Alien hive node also adds the alien language to the newfound owner.
+  - rscadd: Added xenoborgs from Bubbers
+  - image: Xenoborgs added from Bubbers
+  - qol: You can manually resleeve with the autosleever if you're given the prompt
+      and accidentally close it.
+  - bugfix: Radiation component will no longer passively heal + give nutrition when
+      not irradiated
+  - bugfix: Hybrid cutters use the correct sprite, now.
+  - bugfix: Robotic multitool will no longer go invisible when used to link references
+  - bugfix: Holodeck properly clears up its landmarks
+  Guti:
+  - qol: Non-Contagious viruses can be picked up with a sample of blood
+  - qol: Added extra info description to the extrapolator
+  Kashargul:
+  - code_imp: rust-g 5.0.1
+  whooshboom:
+  - qol: removes compression artifacts from the main splash screen.
