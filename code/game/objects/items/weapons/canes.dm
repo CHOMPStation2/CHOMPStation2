@@ -29,7 +29,10 @@
 	temp_blade.active = TRUE
 	temp_blade.update_force()
 
-/obj/item/cane/concealed/attack_self(var/mob/user)
+/obj/item/cane/concealed/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(concealed_blade)
 		user.visible_message(span_warning("[user] has unsheathed \a [concealed_blade] from [user.p_their()] [src]!"), "You unsheathe \the [concealed_blade] from \the [src].")
 		// Calling drop/put in hands to properly call item drop/pickup procs
@@ -40,8 +43,12 @@
 		user.update_inv_l_hand(0)
 		user.update_inv_r_hand()
 		concealed_blade = null
+<<<<<<< HEAD
 	else
 		..()
+=======
+		update_icon()
+>>>>>>> d5849910e5 (Begin clickcode attack_self fix (#18797))
 
 /obj/item/cane/concealed/attackby(var/obj/item/material/butterfly/W, var/mob/user)
 	if(!src.concealed_blade && istype(W))
@@ -92,7 +99,10 @@
 	force = 3
 	var/on = 0
 
-/obj/item/cane/white/collapsible/attack_self(mob/user as mob)
+/obj/item/cane/white/collapsible/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	on = !on
 	if(on)
 		user.visible_message(span_infoplain(span_bold("\The [user]") + " extends the white cane."),\
