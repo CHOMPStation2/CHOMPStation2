@@ -15,6 +15,9 @@
 	pixel_y = rand(-5, 5)
 
 /obj/item/bluespace_crystal/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	user.balloon_alert_visible("[user] crushes [src]!", "Crushed [src]!") // CHOMPEdit - Balloon alert
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 	s.set_up(5, 1, get_turf(src))

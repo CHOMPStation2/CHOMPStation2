@@ -68,6 +68,10 @@
 	var/current_user                        // Used to check if the crossbow has changed hands since being drawn.
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 
+	///Var for attack_self chain
+	var/is_bow = FALSE
+	special_handling = TRUE
+
 /obj/item/gun/launcher/crossbow/update_release_force()
 	release_force = tension*release_speed
 
@@ -83,7 +87,12 @@
 	update_icon()
 	..()
 
-/obj/item/gun/launcher/crossbow/attack_self(mob/living/user as mob)
+/obj/item/gun/launcher/crossbow/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(is_bow)
+		return TRUE
 	if(tension)
 		if(bolt)
 			user.visible_message("[user] relaxes the tension on [src]'s string and removes [bolt].","You relax the tension on [src]'s string and remove [bolt].")

@@ -218,35 +218,14 @@
 	default_worn_icon = "groinpadU"
 
 ///helmet
-
-/obj/item/clothing/head/helmet/riot/modarm/attack_self(mob/user)
-	if(icon_state == src::icon_state)
-		icon_state = "modhelmup"
-		item_state = "modhelmup"
-		to_chat(user, span_notice("You raise the visor on the visored helmet."))
-	else
-		icon_state = src::icon_state
-		item_state = src::item_state
-		to_chat(user, span_notice("You lower the visor on the visored helmet."))
-	update_clothing_icon()
+/obj/item/clothing/head/helmet/riot/modarm
+	name_descriptor = "visored helmet"
 
 /obj/item/clothing/head/helmet/riot/modarm/killa
 	name = "striped visored helmet"
 	desc = "It's a heavy plasteel visored helmet designed for security work, and light combat. This one has three menacing white stripes."
 	icon_state = "modhelm_killa"
 	item_state = "modhelm_killa"
-
-/obj/item/clothing/head/helmet/riot/modarm/killa/attack_self(mob/user)
-	if(icon_state == src::icon_state)
-		icon_state = "modhelm_killaup"
-		item_state = "modhelm_killaup"
-		to_chat(user, span_notice("You raise the visor on the visored helmet."))
-	else
-		icon_state = src::icon_state
-		item_state = src::item_state
-		to_chat(user, span_notice("You lower the visor on the visored helmet."))
-	update_clothing_icon()
-
 
 ///presets
 

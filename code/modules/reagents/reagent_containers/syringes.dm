@@ -64,7 +64,10 @@
 	..()
 	update_icon()
 
-/obj/item/reagent_containers/syringe/attack_self(mob/user as mob)
+/obj/item/reagent_containers/syringe/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	switch(mode)
 		if(SYRINGE_CAPPED)
 			mode = SYRINGE_DRAW

@@ -48,6 +48,9 @@
 	. = ..()
 
 /obj/item/tvcamera/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	add_fingerprint(user)
 	user.set_machine(src)
 	show_ui(user)
@@ -176,6 +179,7 @@
 	var/obj/item/radio/bradio
 	var/datum/weakref/showing
 	var/showing_name
+	special_handling = TRUE
 
 /obj/item/clothing/accessory/bodycam/Initialize(mapload)
 	. = ..()
@@ -211,6 +215,9 @@
 	. = ..()
 
 /obj/item/clothing/accessory/bodycam/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	add_fingerprint(user)
 	//user.set_machine(src)
 	show_bodycam_ui(user)

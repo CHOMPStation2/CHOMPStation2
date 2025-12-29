@@ -180,6 +180,9 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 
 // CHOMPEdit Start
 /obj/item/survivalcapsule/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	//Can't grab when capsule is New() because templates aren't loaded then
 	if(istype(get_area(user), /area/vr))
 		to_chat(user, span_danger("\The [src] does not appear to work in VR! This is useless to you!"))

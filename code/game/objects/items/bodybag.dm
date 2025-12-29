@@ -7,10 +7,39 @@
 	icon_state = "bodybag_folded"
 	w_class = ITEMSIZE_SMALL
 
+	//Used for cryogenic bodybags
+	var/obj/item/reagent_containers/syringe/syringe
+	var/cryogenic = FALSE
+	var/robotic = FALSE
+	var/mass_grave = FALSE //CHOMPEdit
+
 /obj/item/bodybag/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(mass_grave) //CHOMPedit - TODO, upport this.
+		return FALSE //CHOMPedit - TODO, upport this.
+
+	if(cryogenic)
+		var/obj/structure/closet/body_bag/cryobag/R = new /obj/structure/closet/body_bag/cryobag(user.loc)
+		R.add_fingerprint(user)
+		if(syringe)
+			R.syringe = syringe
+			syringe = null
+		qdel(src)
+		return
+	if(robotic)
+		var/obj/structure/closet/body_bag/cryobag/robobag/R = new /obj/structure/closet/body_bag/cryobag/robobag(user.loc)
+		R.add_fingerprint(user)
+		if(syringe)
+			R.syringe = syringe
+			syringe = null
+		qdel(src)
+		return
 	var/obj/structure/closet/body_bag/R = new /obj/structure/closet/body_bag(user.loc)
 	R.add_fingerprint(user)
 	qdel(src)
+	return
 
 
 /obj/item/storage/box/bodybags
@@ -38,8 +67,12 @@
 	desc = "A large folded bag designed for the storage and transportation of cadavers."
 	icon = 'icons/obj/closets/bodybag_large.dmi'
 	w_class = ITEMSIZE_LARGE
+	mass_grave = TRUE
 
 /obj/item/bodybag/large/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/obj/structure/closet/body_bag/large/R = new /obj/structure/closet/body_bag/large(user.loc)
 	R.add_fingerprint(user)
 	qdel(src)
@@ -134,15 +167,7 @@
 	icon_state = "bodybag_folded"
 	item_state = "bodybag_cryo_folded"
 	origin_tech = list(TECH_BIO = 4)
-	var/obj/item/reagent_containers/syringe/syringe
-
-/obj/item/bodybag/cryobag/attack_self(mob/user)
-	var/obj/structure/closet/body_bag/cryobag/R = new /obj/structure/closet/body_bag/cryobag(user.loc)
-	R.add_fingerprint(user)
-	if(syringe)
-		R.syringe = syringe
-		syringe = null
-	qdel(src)
+	cryogenic = TRUE
 
 /obj/structure/closet/body_bag/cryobag
 	name = "stasis bag"

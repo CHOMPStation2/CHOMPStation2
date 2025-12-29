@@ -236,8 +236,12 @@
 	recoil = null
 	handle_casings = null
 	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
+	special_weapon_handling = TRUE
 
-/obj/item/gun/projectile/cyborgtoy/attack_self(var/mob/user)
+/obj/item/gun/projectile/cyborgtoy/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	cleanup = !cleanup
 	to_chat(user, "The [src] is now on [cleanup ? "cleanup" : "battle"] mode.")
 

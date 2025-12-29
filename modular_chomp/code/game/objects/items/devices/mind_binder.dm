@@ -17,9 +17,6 @@
 	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	return
 
-/obj/item/mindbinder/attack_self(mob/living/user)
-	return
-
 /obj/item/mindbinder/proc/toggle_self_bind()
 	if(possessed_voice.len == 1)
 		to_chat(usr,span_warning("The device beeps a warning that there is already a mind loaded!"))

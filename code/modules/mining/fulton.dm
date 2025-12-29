@@ -15,6 +15,9 @@
 	. += "It has [uses_left] use\s remaining."
 
 /obj/item/extraction_pack/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/list/possible_beacons = list()
 	for(var/obj/structure/extraction_point/EP as anything in GLOB.total_extraction_beacons)
 		if(EP.beacon_network in beacon_networks)
@@ -143,6 +146,11 @@
 	icon_state = "extraction_pointoff"
 
 /obj/item/fulton_core/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	var/turf/T = get_turf(user)
+	var/outdoors = T.is_outdoors()
 	if(do_after(user, 1.5 SECONDS, target = user) && !QDELETED(src))
 		new /obj/structure/extraction_point(get_turf(user))
 		qdel(src)
