@@ -483,3 +483,85 @@
 	icon_state = "mushroom_head_spots"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
+
+//Plating based on the YR3 synth chassis, by popular demand
+/datum/sprite_accessory/marking/ch/yr3_plating
+	name = "YR3 Plating"
+	icon_state = "yr3_plating"
+	body_parts = list(BP_TORSO, BP_HEAD, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)
+	color_blend_mode = ICON_MULTIPLY
+	digitigrade_acceptance = MARKING_ALL_LEGS
+	digitigrade_icon = 'icons/mob/human_races/markings_ch.dmi'
+
+/datum/sprite_accessory/marking/ch/yr3_plating
+	name = "YR3 Stripes"
+	icon_state = "yr3_stripes"
+	body_parts = list(BP_HEAD, BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG)
+	color_blend_mode = ICON_MULTIPLY
+	digitigrade_acceptance = MARKING_ALL_LEGS
+	digitigrade_icon = 'icons/mob/human_races/markings_ch.dmi'
+
+/datum/sprite_accessory/marking/ch/yr3_groin_plating
+	name = "YR3 Groin Plating"
+	icon_state = "yr3_groin_plating"
+	body_parts = list(BP_TORSO, BP_GROIN)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/yr3_sleek_plating
+	name = "Sleek YR3 Plating"
+	icon_state = "yr3_sleek_plating"
+	body_parts = BP_ALL
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/yr3_lights
+	name = "Sleek YR3 Lights"
+	icon_state = "yr3_sleek_lights"
+	body_parts = list(BP_HEAD, BP_TORSO, BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG)
+	color_blend_mode = ICON_MULTIPLY
+	digitigrade_acceptance = MARKING_ALL_LEGS
+	digitigrade_icon = 'icons/mob/human_races/markings_ch.dmi'
+
+/datum/sprite_accessory/marking/ch/yr3_shoulder
+	name = "YR3 Shoulderpads"
+	icon_state = "yr3_shoulder"
+	body_parts = list(BP_L_ARM, BP_R_ARM)
+	color_blend_mode = ICON_MULTIPLY
+
+//Caution symbols!
+/datum/sprite_accessory/marking/ch/hazard_sign
+	name = "Hazard Sign (Chest)"
+	icon_state = "hazard_sign"
+	do_colouration = FALSE
+	body_parts = list(BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/hazard_sign/l_leg
+	name = "Hazard Sign (Left Thigh)"
+	body_parts = list(BP_L_LEG)
+
+/datum/sprite_accessory/marking/ch/hazard_sign/r_leg
+	name = "Hazard Sign (Right Thigh)"
+	body_parts = list(BP_R_LEG)
+
+/datum/sprite_accessory/marking/ch/hazard_sign/butt
+	name = "Hazard Sign (Butt)"
+	body_parts = list(BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/hazard_sign/leftbelly
+	name = "Hazard Sign (Left side of Belly)"
+	icon_state = "hazard_sign_belly_left"
+
+/datum/sprite_accessory/marking/ch/hazard_sign/rightbelly
+	name = "Hazard Sign (Right side of Belly)"
+	icon_state = "hazard_sign_belly_right"
+
+/datum/sprite_accessory/marking/ch/hazard_sign_exclamation
+	name = "Large Hazard Exclamation Mark"
+	icon_state = "hazard_exclamation"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/hazard_sign_triangle
+	name = "Large Hazard Triangle"
+	icon_state = "hazard_triangle"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO)
