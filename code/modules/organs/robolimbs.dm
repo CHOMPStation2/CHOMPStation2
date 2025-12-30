@@ -245,21 +245,12 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Grayson"
 	desc = "This limb has a sturdy and heavy build to it."
 	icon = 'icons/mob/human_races/cyberlimbs/grayson/grayson_main.dmi'
-<<<<<<< HEAD
-	unavailable_to_build = 0 // CHOMP Edit
-	monitor_styles = "blank=grayson_off;\
-		red=grayson_red;\
-		green=grayson_green;\
-		blue=grayson_blue;\
-		rgb=grayson_rgb"
-=======
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMPEdit
 	monitor_styles = "blank=grayson_off-colored;\
 		red=grayson_red-colored;\
 		green=grayson_green-colored;\
 		blue=grayson_blue-colored;\
 		rgb=grayson_rgb-colored"
->>>>>>> 0e8dd45de2 (eye icon stuff (#18955))
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/grayson_alt1
