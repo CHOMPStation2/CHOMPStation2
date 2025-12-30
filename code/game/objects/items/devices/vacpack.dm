@@ -21,6 +21,11 @@
 			"output destination" = 8
 			)
 	var/vac_owner = null
+	var/sucksound = 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg'
+	var/suckverb = "vacuum"
+	var/suckanim = TRUE
+	var/overpowered = FALSE
+	var/pull_range = 1
 	flags = NOBLUDGEON
 
 /obj/item/vac_attachment/attack_self(mob/living/user)
@@ -28,7 +33,7 @@
 	if(!output_dest)
 		set_input = "output destination"
 	if(!set_input)
-		set_input = tgui_input_list(user, "Set your vacuum attachment's power level or output mode.", "Vac Settings", vac_settings)
+		set_input = tgui_input_list(user, "Set your [suckverb] attachment's power level or output mode.", "Vac Settings", vac_settings)
 	if(set_input)
 		if(set_input == "output destination")
 			if(vac_owner && user != vac_owner)
@@ -37,7 +42,7 @@
 			var/vac_options = list("Vore Belly", "Trash Bag") //Dont show option for borg belly if the user isnt even a borg. QOL!
 			if(isrobot(user))
 				vac_options = list("Vore Belly", "Borg Belly", "Trash Bag")
-			var/set_output = tgui_input_list(user, "Set your vacuum attachment's connection port", "Vac Settings", vac_options)
+			var/set_output = tgui_input_list(user, "Set your [suckverb] attachment's connection port", "Vac Settings", vac_options)
 			switch(set_output)
 				if("Borg Belly")
 					if(isrobot(user))
@@ -111,7 +116,22 @@
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	var/auto_setting = 1
 	if(isturf(target))
-		user.visible_message(span_filter_notice("[user] begins vacuuming the mess off \the [target.name]..."), span_notice("You begin vacuuming the mess off \the [target.name]..."))
+		if(overpowered && vac_power >= 6)
+			playsound(src, 'sound/machines/hiss.ogg', 100, 1, -1)
+			var/obj/effect/temp_visual/V = new()
+			V.duration = 20
+			V.icon = 'icons/effects/anomalies.dmi'
+			V.icon_state = "vortex"
+			V.alpha = 128
+			for(var/obj/item/I in oview(pull_range, target))
+				if(I.anchored)
+					continue
+				I.singularity_pull(target, STAGE_THREE)
+			for(var/mob/living/L in target)
+				if(L.anchored || !L.devourable || L == user || L.buckled || !L.can_be_drop_prey)
+					continue
+				L.singularity_pull(target, STAGE_THREE)
+		user.visible_message(span_filter_notice("[user] begins [suckverb]ing the mess off \the [target.name]..."), span_notice("You begin [suckverb]ing the mess off \the [target.name]..."))
 		var/list/suckables = list()
 		if(vac_power >= 1)
 			for(var/obj/effect/decal/cleanable/C in target)
@@ -148,7 +168,7 @@
 			else
 				auto_setting = vac_power
 
-			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
+			playsound(src, sucksound, auto_setting * 20, 1, -1)
 			var/vac_conga = 0
 			for(var/atom/movable/F in suckables)
 				if(is_type_in_list(F, GLOB.item_vore_blacklist) || F.loc != target)
@@ -164,9 +184,12 @@
 					if(LAZYLEN(B.contents) >= B.max_storage_space)
 						to_chat(user, span_warning("Trash bag full. Empty trash bag contents to continue."))
 						return
-				if(vac_conga < 100)
-					vac_conga += 3
-				addtimer(CALLBACK(src, PROC_REF(prepare_sucking), F, user, auto_setting, target), 0.3 SECONDS + vac_conga)
+				if(suckanim)
+					if(vac_conga < 100)
+						vac_conga += 3
+					addtimer(CALLBACK(src, PROC_REF(prepare_sucking), F, user, auto_setting, target), 0.3 SECONDS + vac_conga)
+				else
+					addtimer(CALLBACK(src, PROC_REF(handle_consumption), F, user, auto_setting), 0.5 SECONDS)
 
 			if(istype(target, /turf/simulated))
 				var/turf/simulated/T = target
@@ -189,15 +212,16 @@
 				auto_setting = min(I.w_class, 5)
 			else
 				auto_setting = vac_power
-			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
-			user.visible_message(span_filter_notice("[user] vacuums up \the [target.name]."), span_notice("You vacuum up \the [target.name]..."))
-			I.SpinAnimation(5,1)
+			playsound(src, sucksound, auto_setting * 20, 1, -1)
+			user.visible_message(span_filter_notice("[user] [suckverb]s up \the [target.name]."), span_notice("You [suckverb] up \the [target.name]..."))
+			if(suckanim)
+				I.SpinAnimation(5,1)
 			addtimer(CALLBACK(src, PROC_REF(handle_consumption), I, user, auto_setting), 0.5 SECONDS)
 			return
 
 	if(istype(target,/obj/effect/decal/cleanable))
-		playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
-		user.visible_message(span_filter_notice("[user] vacuums up \the [target.name]."), span_notice("You vacuum up \the [target.name]..."))
+		playsound(src, sucksound, auto_setting * 20, 1, -1)
+		user.visible_message(span_filter_notice("[user] [suckverb]s up \the [target.name]."), span_notice("You [suckverb] up \the [target.name]..."))
 		qdel(target)
 		return
 
@@ -214,9 +238,10 @@
 			valid_to_suck = TRUE
 			auto_setting = 6
 		if(valid_to_suck)
-			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
-			user.visible_message(span_filter_notice("[user] vacuums up \the [target.name]."), span_notice("You vacuum up \the [target.name]..."))
-			L.SpinAnimation(5,1)
+			playsound(src, sucksound, auto_setting * 20, 1, -1)
+			user.visible_message(span_filter_notice("[user] [suckverb]s up \the [target.name]."), span_notice("You [suckverb] up \the [target.name]..."))
+			if(suckanim)
+				L.SpinAnimation(5,1)
 			addtimer(CALLBACK(src, PROC_REF(handle_consumption), L, user, auto_setting), 0.5 SECONDS)
 
 /obj/item/vac_attachment/proc/prepare_sucking(atom/movable/target, mob/user, turf/target_turf)
@@ -280,3 +305,10 @@
 		var/mob/living/L = thing
 		var/mob_holder_type = L.holder_type || /obj/item/holder
 		new mob_holder_type(src, L)
+
+/obj/item/vac_attachment/scoop
+	name = "\improper Scoop Hopper"
+	desc = "Useful for scooping clutter off the floors. Even things and stuff depending on settings. Can be connected to a trash bag or vore belly. On-mob sprites can be toggled via verb in Objects tab."
+	sucksound = 'sound/machines/hatchclose.ogg'
+	suckverb = "scoop"
+	suckanim = FALSE
