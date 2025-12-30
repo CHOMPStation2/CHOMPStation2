@@ -118,7 +118,7 @@
 	if(isturf(target))
 		if(overpowered && vac_power >= 6)
 			playsound(src, 'sound/machines/hiss.ogg', 100, 1, -1)
-			var/obj/effect/temp_visual/V = new()
+			var/obj/effect/temp_visual/V = new(target)
 			V.duration = 20
 			V.icon = 'icons/effects/anomalies.dmi'
 			V.icon_state = "vortex"
