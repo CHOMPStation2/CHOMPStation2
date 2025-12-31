@@ -493,7 +493,7 @@
 	digitigrade_acceptance = MARKING_ALL_LEGS
 	digitigrade_icon = 'icons/mob/human_races/markings_ch.dmi'
 
-/datum/sprite_accessory/marking/ch/yr3_plating
+/datum/sprite_accessory/marking/ch/yr3_stripes
 	name = "YR3 Stripes"
 	icon_state = "yr3_stripes"
 	body_parts = list(BP_HEAD, BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG)
@@ -526,6 +526,26 @@
 	icon_state = "yr3_shoulder"
 	body_parts = list(BP_L_ARM, BP_R_ARM)
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/yr3_proto_frame
+	name = "YR3 Proto Headframe"
+	icon_state = "yr3_proto_frame"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/yr3_proto_neck
+	name = "YR3 Proto Neck Fur"
+	icon_state = "yr3_proto_neck"
+	body_parts = list(BP_HEAD, BP_TORSO)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/yr3_proto_fur
+	name = "YR3 Proto Fur"
+	icon_state = "yr3_proto"
+	body_parts = list(BP_TORSO, BP_HEAD, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)
+	color_blend_mode = ICON_MULTIPLY
+	digitigrade_acceptance = MARKING_ALL_LEGS
+	digitigrade_icon = 'icons/mob/human_races/markings_ch.dmi'
 
 //Caution symbols!
 /datum/sprite_accessory/marking/ch/hazard_sign

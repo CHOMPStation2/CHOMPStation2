@@ -5379,6 +5379,7 @@
 #include "modular_chomp\code\modules\lore_codex\codex.dm"
 #include "modular_chomp\code\modules\lore_codex\codex_tree.dm"
 #include "modular_chomp\code\modules\lore_codex\cooking_codex.dm"
+#include "modular_chomp\code\modules\lore_codex\robutts.dm"
 #include "modular_chomp\code\modules\materials\materials\gems.dm"
 #include "modular_chomp\code\modules\materials\materials\metals\metals.dm"
 #include "modular_chomp\code\modules\materials\materials\organic\animal_products.dm"
