@@ -1,6 +1,7 @@
 /datum/lore/codex/category/pros_by_brand
 	name = "Prosthetics By Brand"
 	data = "Here you'll find our analysis of the most popular and noteworthy brands of prosthetics. These analyses are performed by industry experts unconnected to the corporations and other entities responsible for the following designs."
+	//Chompedit- adding YR3 chassis to brand list
 	children = list(
 		/datum/lore/codex/page/robo_unbranded,
 		/datum/lore/codex/page/robo_cyber,
@@ -13,6 +14,7 @@
 		/datum/lore/codex/page/robo_bishop,
 		/datum/lore/codex/page/robo_zh,
 		/datum/lore/codex/page/robo_veymed,
+		/datum/lore/codex/page/robo_yr3
 		)
 
 /datum/lore/codex/page/robo_unbranded
