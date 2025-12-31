@@ -380,3 +380,36 @@
   - code_imp: rust-g 5.0.1
   whooshboom:
   - qol: removes compression artifacts from the main splash screen.
+2025-12-31:
+  CHOMPStation2StaffMirrorBot:
+  - qol: (mapping) broken floors can now be done via a landmark rather than a subtype
+      of that specific floor
+  - bugfix: ghosts and shadekin messing with production directions
+  - bugfix: non-greyscale monitor icons now show the correct color, regardless of
+      your eye color
+  - bugfix: hephaestus alt monitor icons should work now
+  - rscadd: Added two sets of black and recolourable long fingerless glove variants;
+      mid-forearm and elbow-length
+  - image: Fixed some stray pixels on two of the standard fingerless glove variants
+  Diana:
+  - qol: Having a spleen will no longer cause you to suffer infinite organ damage
+      while damaged by toxins. Instead, it'll convert that toxin damage into organ
+      damage.
+  - bugfix: Having your spleen rupture will now cause real internal bleeding instead
+      of fake internal bleeding
+  - refactor: All of attack_self now uses signals!
+  - bugfix: Fixes jackets not showing proper unbutton sprite
+  - bugfix: Medical implant will no longer become infected
+  Nova:
+  - qol: Add spice crate option to be requested from cargo.
+  - rscadd: '"Colour changing eyes" trait'
+  Wide Eyes:
+  - rscadd: Slimline YR3 chassis
+  - rscadd: several new monitor icons to both yr3 variants, including cbeast faces
+      and a hypno visor, and both variants now function based on eye color
+  - rscadd: several new markings- hazard signs and yr3 plating/customization variants
+  Wide Eyes, Kashargul:
+  - rscadd: '"Absorbed prey can devour" addon, which gives absorbed prey a verb in
+      the abilities tab to devour adjacent creatures into that belly!
+
+      fix:complete absorb and muffling belly addons now affect simplemobs'
