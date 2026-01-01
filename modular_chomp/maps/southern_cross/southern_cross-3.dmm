@@ -3811,7 +3811,8 @@
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/table/steel,
-/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /obj/item/personal_shield_generator/belt/security/loaded,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
