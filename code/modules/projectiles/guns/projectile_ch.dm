@@ -67,18 +67,6 @@
 	if(manual_chamber && auto_loading_type)
 		bolt_toggle()
 
-/obj/item/gun/projectile/attack_self(mob/user as mob)
-	. = ..(user)
-	if(.)
-		return TRUE
-	if(manual_chamber)
-		if(do_after(user, 0.4 SECONDS, src))
-			bolt_handle(user)
-	else if(firemodes.len > 1)
-		switch_firemodes(user)
-	else
-		unload_ammo(user)
-
 /obj/item/gun/projectile/proc/bolt_handle(mob/user)
 	var/previous_chambered = chambered
 	var/result = bolt_toggle(TRUE)
@@ -453,19 +441,6 @@
 	playsound(src, 'sound/weapons/empty.ogg', 100, 1)
 	if(!manual_chamber)
 		process_chambered()
-
-/obj/item/gun/projectile/Initialize(mapload, var/starts_loaded = 1)
-	. = ..()
-	if(manual_chamber)
-		verbs |= /obj/item/gun/projectile/verb/change_firemode
-	update_icon()
-
-/obj/item/gun/projectile/verb/change_firemode()
-	set name = "Switch firemode"
-	set category = "Object"
-	set src in view(1)
-
-	switch_firemodes(usr)
 
 /obj/item/gun/projectile/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
 	. = ..()

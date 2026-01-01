@@ -238,7 +238,10 @@
 		return TRUE
 	if(special_weapon_handling && !callback)
 		return FALSE
-	if(firemodes.len > 1)
+	if(manual_chamber) //CHOMPEdit Gun Rework
+		if(do_after(user, 0.4 SECONDS, src)) //CHOMPEdit Gun Rework
+			bolt_handle(user) //CHOMPEdit Gun Rework
+	else if(firemodes.len > 1) //CHOMPEdit Gun Rework
 		switch_firemodes(user)
 	else
 		unload_ammo(user)
