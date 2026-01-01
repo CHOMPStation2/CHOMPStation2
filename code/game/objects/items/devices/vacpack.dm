@@ -28,7 +28,7 @@
 	var/pull_range = 1
 	flags = NOBLUDGEON
 
-/obj/item/vac_attachment/attack_self(mob/living/user)
+/obj/item/vac_attachment/attack_self(mob/user)
 	. = ..(user)
 	if(.)
 		return TRUE
