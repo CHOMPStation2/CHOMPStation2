@@ -56,15 +56,18 @@
 	update_icon()
 
 /obj/item/gun/projectile/consume_next_projectile()
-	//get the next casing
-	if(loaded.len)
-		chambered = loaded[1] //load next casing.
-		if(handle_casings != HOLD_CASINGS)
-			loaded -= chambered
-	else if(ammo_magazine && ammo_magazine.stored_ammo.len)
-		chambered = ammo_magazine.stored_ammo[ammo_magazine.stored_ammo.len]
-		if(handle_casings != HOLD_CASINGS)
-			ammo_magazine.stored_ammo -= chambered
+	if(!manual_chamber) //CHOMPEdit Start - Manual Chambering
+		//get the next casing
+		if(loaded.len)
+			chambered = loaded[1] //load next casing.
+			if(handle_casings != HOLD_CASINGS)
+				loaded -= chambered
+		else if(ammo_magazine && ammo_magazine.stored_ammo.len)
+			chambered = ammo_magazine.stored_ammo[ammo_magazine.stored_ammo.len]
+			if(handle_casings != HOLD_CASINGS)
+				ammo_magazine.stored_ammo -= chambered
+	if(manual_chamber && auto_loading_type && CHECK_BITFIELD(auto_loading_type,OPEN_BOLT) && bolt_open)
+		chamber_bullet() //CHOMPEdit End - Manual Chambering
 
 	var/mob/living/M = loc // TGMC Ammo HUD
 	if(istype(M)) // TGMC Ammo HUD
@@ -82,7 +85,8 @@
 
 /obj/item/gun/projectile/handle_click_empty()
 	..()
-	process_chambered()
+	if(!manual_chamber) //CHOMPEdit - Manual Chambering
+		process_chambered() //CHOMPEdit - Manual Chambering
 
 /obj/item/gun/projectile/proc/process_chambered()
 	if (!chambered) return
@@ -197,6 +201,10 @@
 
 //attempts to unload src. If allow_dump is set to 0, the speedloader unloading method will be disabled
 /obj/item/gun/projectile/proc/unload_ammo(mob/user, var/allow_dump=1)
+	if(manual_chamber && only_open_load && !bolt_open) //CHOMPEdit - Manual Chambering
+		to_chat(user,span_warning("You must open the bolt to load or unload this gun!")) //CHOMPEdit - Manual Chambering
+		return //CHOMPEdit - Manual Chambering
+
 	if(ammo_magazine)
 		user.put_in_hands(ammo_magazine)
 		user.visible_message("[user] removes [ammo_magazine] from [src].", span_notice("You remove [ammo_magazine] from [src]."))
@@ -254,7 +262,7 @@
 
 /obj/item/gun/projectile/afterattack(atom/A, mob/living/user)
 	..()
-	if(auto_eject && ammo_magazine && ammo_magazine.stored_ammo && !ammo_magazine.stored_ammo.len)
+	if(auto_eject && ammo_magazine && ammo_magazine.stored_ammo && !ammo_magazine.stored_ammo.len && !(manual_chamber && chambered && chambered.BB != null)) //CHOMPEdit - Manual Chambering
 		ammo_magazine.loc = get_turf(src.loc)
 		user.visible_message(
 			"[ammo_magazine] falls out and clatters on the floor!",

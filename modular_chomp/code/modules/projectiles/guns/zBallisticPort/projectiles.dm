@@ -106,7 +106,6 @@
 
 /obj/item/projectile/bullet/rifle/a556/hp
 	damage = 40
-	hollow_point = TRUE
 	armor_penetration = -10
 	hud_state = "hivelo_iff"
 
