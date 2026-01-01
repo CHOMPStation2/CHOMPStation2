@@ -19,7 +19,6 @@
 	var/bolt_open = FALSE
 	var/bolt_locked = FALSE
 	var/bolt_release = "bolt release"
-	var/muzzle_velocity = 500	// meters per second
 	var/sound_ejectchamber = 'sound/weapons/ballistics/pistol_ejectchamber.ogg'
 	var/sound_eject = 'sound/weapons/ballistics/pistol_eject.ogg'
 	var/sound_chamber = 'sound/weapons/ballistics/pistol_chamber.ogg'
@@ -66,18 +65,6 @@
 		if(!manual_chamber) process_chambered()
 	if(manual_chamber && auto_loading_type)
 		bolt_toggle()
-
-/obj/item/gun/projectile/attack_self(mob/user as mob)
-	. = ..(user)
-	if(.)
-		return TRUE
-	if(manual_chamber)
-		if(do_after(user, 0.4 SECONDS, src))
-			bolt_handle(user)
-	else if(firemodes.len > 1)
-		switch_firemodes(user)
-	else
-		unload_ammo(user)
 
 /obj/item/gun/projectile/proc/bolt_handle(mob/user)
 	var/previous_chambered = chambered
@@ -198,64 +185,9 @@
 			if(chambering) output |= BOLT_CASING_CHAMBERED
 			return output
 
-
-/obj/item/gun/projectile/process_chambered()
-	if (!chambered) return 0
-
-	// Aurora forensics port, gunpowder residue.
-	if(chambered.leaves_residue)
-		var/mob/living/carbon/human/H = loc
-		if(istype(H))
-			if(!istype(H.gloves, /obj/item/clothing))
-				H.add_gunshotresidue(chambered)
-			else
-				var/obj/item/clothing/G = H.gloves
-				G.add_gunshotresidue(chambered)
-
-	switch(handle_casings)
-		if(EJECT_CASINGS) //eject casing onto ground.
-			if(chambered.caseless)
-				qdel(chambered)
-				chambered = null
-				return 0
-			else
-				chambered.loc = get_turf(src)
-				playsound(src, "casing", 50, 1)
-				chambered = null
-				return 1
-		if(CYCLE_CASINGS) //cycle the casing back to the end.
-			if(ammo_magazine)
-				ammo_magazine.stored_ammo += chambered
-			else
-				loaded += chambered
-			chambered = null
-			return 0
-
-	if(handle_casings != HOLD_CASINGS)
-		chambered = null
-	return 0
-
-/obj/item/gun/projectile/consume_next_projectile()
-	if(!manual_chamber)
-		//get the next casing
-		if(loaded.len)
-			chambered = loaded[1] //load next casing.
-			if(handle_casings != HOLD_CASINGS)
-				loaded -= chambered
-		else if(ammo_magazine && ammo_magazine.stored_ammo.len)
-			chambered = ammo_magazine.stored_ammo[ammo_magazine.stored_ammo.len]
-			if(handle_casings != HOLD_CASINGS)
-				ammo_magazine.stored_ammo -= chambered
-	if(manual_chamber && auto_loading_type && CHECK_BITFIELD(auto_loading_type,OPEN_BOLT) && bolt_open)
-		chamber_bullet()
-
-	if(chambered)
-		return chambered.BB
-	return null
-
 /obj/item/gun/projectile/proc/chamber_bullet()
 	if(chambered)
-		return 0
+		return FALSE
 	var/obj/item/ammo_casing/to_chamber
 	if(loaded.len)
 		to_chamber = loaded[1] //load next casing.
@@ -267,9 +199,9 @@
 			ammo_magazine.stored_ammo -= to_chamber
 	chambered = to_chamber
 	if(to_chamber)
-		return 1
+		return TRUE
 	else
-		return 0
+		return FALSE
 
 /obj/item/gun/projectile/load_ammo(var/obj/item/A, mob/user)
 	if(istype(A, /obj/item/ammo_magazine))
@@ -390,38 +322,6 @@
 
 	update_icon()
 
-/obj/item/gun/projectile/afterattack(atom/A, mob/living/user, adjacent, params)
-	afteratt(A,user,adjacent,params)
-	if(auto_eject && ammo_magazine && ammo_magazine.stored_ammo && !ammo_magazine.stored_ammo.len && !(manual_chamber && chambered && chambered.BB != null))
-		ammo_magazine.loc = get_turf(src.loc)
-		user.visible_message(
-			"[ammo_magazine] falls out and clatters on the floor!",
-			span_notice("[ammo_magazine] falls out and clatters on the floor!")
-			)
-		if(auto_eject_sound)
-			playsound(src, auto_eject_sound, 40, 1)
-		ammo_magazine.update_icon()
-		ammo_magazine = null
-		update_icon()
-
-/obj/item/gun/projectile/proc/afteratt(atom/A, mob/living/user, adjacent, params)
-	if(adjacent) return //A is adjacent, is the user, or is on the user's person
-
-	if(!user.aiming)
-		user.aiming = new(user)
-
-	if(user && user.client && user.aiming && user.aiming.active && user.aiming.aiming_at != A)
-		PreFire(A,user,params) //They're using the new gun system, locate what they're aiming at.
-		return
-
-	if(user && user.a_intent == I_HELP && user.read_preference(/datum/preference/toggle/safefiring)) //regardless of what happens, refuse to shoot if help intent is on
-		to_chat(user, span_warning("You refrain from firing your [src] as your intent is set to help."))
-		return
-
-	else
-		Fire(A, user, params) //Otherwise, fire normally.
-		return
-
 /obj/item/gun/projectile/special_check(var/mob/user)
 	if(..())
 		if(manual_chamber)
@@ -438,58 +338,6 @@
 				return 1
 		else
 			return 1
-
-/obj/item/gun/projectile/unload_ammo(mob/user, var/allow_dump=1)
-	if(manual_chamber && only_open_load && !bolt_open)
-		to_chat(user,span_warning("You must open the bolt to load or unload this gun!"))
-	else
-		return ..()
-
-/obj/item/gun/projectile/handle_click_empty(mob/user)
-	if (user)
-		user.visible_message("*click click*", span_danger("*click*"))
-	else
-		src.visible_message("*click click*")
-	playsound(src, 'sound/weapons/empty.ogg', 100, 1)
-	if(!manual_chamber)
-		process_chambered()
-
-/obj/item/gun/projectile/Initialize(mapload, var/starts_loaded = 1)
-	. = ..()
-	if(manual_chamber)
-		verbs |= /obj/item/gun/projectile/verb/change_firemode
-	update_icon()
-
-/obj/item/gun/projectile/verb/change_firemode()
-	set name = "Switch firemode"
-	set category = "Object"
-	set src in view(1)
-
-	switch_firemodes(usr)
-
-/obj/item/gun/projectile/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
-	. = ..()
-	var/obj/item/projectile/bullet/P = projectile
-	if(!istype(P))
-		return
-	P.velocity = muzzle_velocity
-
-//Special ammo handling bullshit
-
-/obj/item/gun/projectile/pirate/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
-	. = ..()
-	var/obj/item/projectile/bullet/P = projectile
-	if(!istype(P))
-		return
-	P.sub_velocity(P.velocity * 0.3)	//Yeah, a gun that supposedly shoots any bullet is gonna be pretty shit.
-
-/obj/item/gun/projectile/revolver/lemat/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
-	. = ..()
-	var/obj/item/projectile/bullet/P = projectile
-	P.velocity = initial(P.velocity)
-	if(!istype(P))
-		return
-	P.sub_velocity(P.velocity - 35)
 
 #undef BOLT_NOEVENT
 #undef BOLT_CLOSED

@@ -455,7 +455,6 @@
 	)
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	load_method = MAGAZINE
-	muzzle_velocity = 880
 	w_class = ITEMSIZE_HUGE
 	actions_types = list(/datum/action/item_action/use_scope)
 	accuracy = 10
