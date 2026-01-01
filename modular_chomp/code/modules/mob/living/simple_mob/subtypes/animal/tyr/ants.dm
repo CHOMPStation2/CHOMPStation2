@@ -208,7 +208,7 @@
 	visible_message(span_warning("\The [src]'s abdomen splits as it rolls over, spiderlings crawling from the wound.") )
 	for(var/i = 1 to 8)
 		new /obj/effect/spider/spiderling/antling (src.loc)
-	...()
+	..()
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/graphite //nothing special here
 	name = "graphite ant"
