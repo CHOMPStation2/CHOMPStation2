@@ -228,13 +228,13 @@
 		/obj/item/cell/device/weapon,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 		/obj/item/clothing/shoes/boots/winter/security,
-		/obj/item/flashlight/maglight,
 		/obj/item/holowarrant,				//CHOMPStation addition
 		/obj/item/retail_scanner/security,	//CHOMPStation addition
 		/obj/item/clothing/glasses/hud/security,	//CHOMPStation addition
 		/obj/item/ticket_printer,			//CHOMPStation addition
 		/obj/item/gunbox/sec_officer,			//CHOMPStation addition
-		)
+		/obj/item/clothing/mask/gas/sechailer,
+		/obj/item/flashlight/maglight)
 
 /obj/structure/closet/secure_closet/security/Initialize(mapload)
 	if(prob(50))
