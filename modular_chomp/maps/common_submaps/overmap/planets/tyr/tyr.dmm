@@ -173,9 +173,6 @@
 /obj/structure/window/plastitanium,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
-"aJ" = (
-/turf/simulated/shuttle/floor/black,
-/area/planet/tyr/precursorruins)
 "aK" = (
 /obj/structure/table/steel,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
@@ -248,10 +245,6 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/cultfanatic,
 /turf/simulated/floor,
 /area/planet/tyr/eclipse_refinery)
-"aS" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/medical_bot,
-/turf/simulated/shuttle/floor/alien,
-/area/planet/tyr/precursorruins/medical_boss)
 "aT" = (
 /obj/structure/fans/hardlight/colorable/abductor{
 	color = "#FF3300"
@@ -363,10 +356,6 @@
 /obj/structure/table/steel,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eight)
-"bs" = (
-/obj/machinery/door/blast/puzzle/tyrdoor/finale,
-/turf/simulated/shuttle/floor/alien,
-/area/planet/tyr/precursorruins)
 "bt" = (
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
@@ -398,10 +387,6 @@
 /obj/item/stack/medical/splint,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eight)
-"bA" = (
-/obj/structure/prop/blackbox/tyr_boxes/hint_b,
-/turf/simulated/shuttle/floor/alien,
-/area/planet/tyr/precursorruins)
 "bB" = (
 /obj/structure/sink/kitchen{
 	dir = 1
@@ -511,10 +496,6 @@
 /obj/machinery/biogenerator,
 /turf/simulated/floor,
 /area/planet/tyr/shuttles/one)
-"bV" = (
-/obj/structure/prop/blackbox/tyr_boxes/hint_a,
-/turf/simulated/shuttle/floor/alienplating,
-/area/planet/tyr/precursorruins)
 "bW" = (
 /obj/structure/frame,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
@@ -543,12 +524,6 @@
 /obj/structure/frame,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eleven)
-"cc" = (
-/obj/structure/fans/hardlight/colorable/abductor{
-	color = "#FF3300"
-	},
-/turf/simulated/shuttle/floor/alienplating,
-/area/planet/tyr/precursorruins)
 "cd" = (
 /obj/item/circuitboard/teleporter_station,
 /obj/structure/frame,
@@ -853,10 +828,6 @@
 /mob/living/simple_mob/mechanical/hivebot/tyr/swarm,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
-"db" = (
-/obj/structure/prop/blackbox/tyr_boxes/hint_c,
-/turf/simulated/shuttle/floor/alienplating,
-/area/planet/tyr/precursorruins)
 "dc" = (
 /obj/machinery/power/rtg/fake_reactor,
 /obj/structure/cable{
@@ -889,10 +860,6 @@
 "dh" = (
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/ship_graveyard)
-"di" = (
-/obj/structure/prop/blackbox/tyr_boxes/hint_d,
-/turf/simulated/shuttle/floor/alien,
-/area/planet/tyr/precursorruins)
 "dj" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -2249,6 +2216,10 @@
 "ih" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/planet/tyr/precursorruins/checkpoint)
+"ii" = (
+/obj/structure/prop/blackbox/tyr_boxes/hint_a,
+/turf/simulated/shuttle/floor/alienplating,
+/area/planet/tyr/precursorruins)
 "ij" = (
 /turf/simulated/shuttle/floor/alien,
 /area/planet/tyr/precursorruins/checkpoint)
@@ -2531,10 +2502,6 @@
 /obj/effect/floor_decal/stairs/dark_stairs,
 /turf/simulated/shuttle/floor/alien,
 /area/planet/tyr/precursorruins/entryway)
-"jy" = (
-/obj/machinery/door/blast/puzzle/tyrdoor/finale,
-/turf/simulated/shuttle/floor/alienplating,
-/area/planet/tyr/precursorruins)
 "jz" = (
 /obj/effect/floor_decal/stairs/dark_stairs{
 	dir = 4
@@ -2598,21 +2565,54 @@
 /turf/simulated/floor/outdoors/desert_planet/sand/tyr,
 /area/planet/tyr/ship_graveyard)
 "jS" = (
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/medical_bot,
+/turf/simulated/shuttle/floor/alien,
+/area/planet/tyr/precursorruins/medical_boss)
+"jT" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/planet/tyr/precursorruins/science_branch)
+"jU" = (
+/turf/simulated/shuttle/floor/black,
+/area/planet/tyr/precursorruins)
+"jV" = (
+/obj/machinery/door/blast/puzzle/tyrdoor/finale,
+/turf/simulated/shuttle/floor/alien,
+/area/planet/tyr/precursorruins)
+"jW" = (
+/obj/structure/prop/blackbox/tyr_boxes/hint_b,
+/turf/simulated/shuttle/floor/alien,
+/area/planet/tyr/precursorruins)
+"jX" = (
+/obj/structure/fans/hardlight/colorable/abductor{
+	color = "#FF3300"
+	},
+/turf/simulated/shuttle/floor/alienplating,
+/area/planet/tyr/precursorruins)
 "jY" = (
 /obj/structure/table/steel,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/seven)
+"jZ" = (
+/obj/machinery/door/blast/puzzle/tyrdoor/finale,
+/turf/simulated/shuttle/floor/alienplating,
+/area/planet/tyr/precursorruins)
 "ka" = (
 /obj/structure/table/steel,
 /obj/item/slime_grinder,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/seven)
+"kb" = (
+/obj/structure/prop/blackbox/tyr_boxes/hint_d,
+/turf/simulated/shuttle/floor/alien,
+/area/planet/tyr/precursorruins)
 "kc" = (
 /mob/living/simple_mob/slime/xenobio/sepia,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/seven)
+"kd" = (
+/obj/structure/prop/blackbox/tyr_boxes/hint_c,
+/turf/simulated/shuttle/floor/alienplating,
+/area/planet/tyr/precursorruins)
 "kP" = (
 /obj/structure/table/steel,
 /obj/machinery/reagentgrinder,
@@ -8442,7 +8442,7 @@ ik
 iq
 iq
 iq
-db
+kd
 Mz
 Mz
 Mz
@@ -9240,7 +9240,7 @@ ik
 ik
 ik
 ik
-bV
+ii
 Mz
 Mz
 Mz
@@ -10014,7 +10014,7 @@ ik
 ik
 ik
 ik
-cc
+jX
 iM
 iM
 iM
@@ -10267,12 +10267,12 @@ Mz
 Mz
 Mz
 Mz
-jy
+jZ
 ik
 ik
 ik
 ik
-cc
+jX
 iM
 iM
 iM
@@ -10524,13 +10524,13 @@ Mz
 Mz
 Mz
 Mz
-aJ
-jy
+jU
+jZ
 ik
 ik
 ik
 ik
-cc
+jX
 iM
 iM
 iM
@@ -10783,12 +10783,12 @@ Mz
 Mz
 Mz
 Mz
-jy
+jZ
 ik
 ik
 ik
 ik
-cc
+jX
 iM
 iM
 iM
@@ -16975,7 +16975,7 @@ iq
 iq
 iq
 iq
-di
+kb
 Mz
 Mz
 Mz
@@ -36315,11 +36315,11 @@ iq
 iq
 iq
 ik
-jy
-jy
-jy
-jy
-jy
+jZ
+jZ
+jZ
+jZ
+jZ
 jm
 jp
 jp
@@ -36573,11 +36573,11 @@ iq
 ik
 iq
 iq
-bs
-bs
-bs
-bs
-bs
+jV
+jV
+jV
+jV
+jV
 jp
 jp
 jp
@@ -36831,11 +36831,11 @@ iq
 iq
 iq
 ik
-jy
-jy
-jy
-jy
-jy
+jZ
+jZ
+jZ
+jZ
+jZ
 jm
 jp
 jp
@@ -40461,17 +40461,17 @@ jm
 iZ
 Mz
 Mz
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
-jS
+jT
+jT
+jT
+jT
+jT
+jT
+jT
+jT
+jT
+jT
+jT
 Mz
 it
 ix
@@ -40719,17 +40719,17 @@ jm
 iZ
 Mz
 Mz
-jS
-jS
-jS
-jS
-jS
+jT
+jT
+jT
+jT
+jT
 bd
-jS
-jS
-jS
-jS
-jS
+jT
+jT
+jT
+jT
+jT
 Mz
 iT
 eI
@@ -40977,17 +40977,17 @@ iZ
 iZ
 Mz
 Mz
-jS
+jT
 iW
-jS
-jS
+jT
+jT
 iY
 jc
 iY
-jS
-jS
+jT
+jT
 iW
-jS
+jT
 Mz
 it
 ix
@@ -41235,17 +41235,17 @@ iZ
 iZ
 Mz
 Mz
-jS
+jT
 fy
-jS
-jS
+jT
+jT
 iY
 jc
 iY
-jS
-jS
+jT
+jT
 iX
-jS
+jT
 Mz
 it
 eI
@@ -41751,17 +41751,17 @@ Mz
 Mz
 Mz
 Mz
-jS
-jS
-jS
-jS
+jT
+jT
+jT
+jT
 fy
 fB
 fy
-jS
-jS
-jS
-jS
+jT
+jT
+jT
+jT
 Mz
 Mz
 Mz
@@ -42012,11 +42012,11 @@ Mz
 Mz
 Mz
 Mz
-jS
+jT
 iX
 fC
 iX
-jS
+jT
 Mz
 Mz
 Mz
@@ -42528,11 +42528,11 @@ Mz
 Mz
 Mz
 Mz
-jS
+jT
 iY
 jc
 iY
-jS
+jT
 Mz
 Mz
 Mz
@@ -42786,11 +42786,11 @@ Mz
 Mz
 Mz
 Mz
-jS
+jT
 iY
 ja
 iY
-jS
+jT
 Mz
 Mz
 Mz
@@ -43302,11 +43302,11 @@ Mz
 Mz
 Mz
 Mz
-jS
+jT
 iY
 jc
 ja
-jS
+jT
 Mz
 Mz
 Mz
@@ -43560,11 +43560,11 @@ Mz
 Mz
 Mz
 Mz
-jS
+jT
 iY
 jc
 iY
-jS
+jT
 Mz
 Mz
 Mz
@@ -44076,11 +44076,11 @@ Mz
 Mz
 Mz
 Mz
-jS
+jT
 ja
 jc
 iY
-jS
+jT
 Mz
 Mz
 Mz
@@ -44334,11 +44334,11 @@ Mz
 Mz
 Mz
 Mz
-jS
+jT
 fE
 fD
 fA
-jS
+jT
 Mz
 Mz
 Mz
@@ -44850,11 +44850,11 @@ Mz
 Mz
 Mz
 Mz
-jS
+jT
 iY
 jc
 iY
-jS
+jT
 Mz
 Mz
 Mz
@@ -45106,14 +45106,14 @@ Mz
 Mz
 Mz
 Mz
-jS
-jS
-jS
+jT
+jT
+jT
 iY
 jc
 iY
-jS
-jS
+jT
+jT
 Mz
 Mz
 Mz
@@ -45364,14 +45364,14 @@ Mz
 Mz
 Mz
 Mz
-jS
-jS
+jT
+jT
 fx
 iY
 jc
 iY
 fx
-jS
+jT
 Mz
 Mz
 Mz
@@ -45622,14 +45622,14 @@ Mz
 Mz
 Mz
 Mz
-jS
+jT
 ja
 ja
 iY
 jc
 ja
-jS
-jS
+jT
+jT
 Mz
 Mz
 Mz
@@ -45880,14 +45880,14 @@ Mz
 Mz
 Mz
 Mz
-jS
+jT
 ja
 ja
 ja
 ja
 ja
-jS
-jS
+jT
+jT
 Mz
 Mz
 Mz
@@ -46144,8 +46144,8 @@ ja
 ja
 ja
 ja
-jS
-jS
+jT
+jT
 Mz
 Mz
 Mz
@@ -46402,8 +46402,8 @@ ja
 ja
 ja
 ja
-jS
-jS
+jT
+jT
 Mz
 Mz
 Mz
@@ -46654,14 +46654,14 @@ Mz
 Mz
 Mz
 Mz
-jS
+jT
 ja
 ja
 ja
 ja
 ja
-jS
-jS
+jT
+jT
 Mz
 Mz
 Mz
@@ -46912,14 +46912,14 @@ Mz
 Mz
 Mz
 Mz
-jS
+jT
 ja
 ja
 ja
 ja
 ja
 ja
-jS
+jT
 Mz
 Mz
 Mz
@@ -47170,14 +47170,14 @@ ik
 Mz
 Mz
 Mz
-jS
+jT
 ja
 ja
 ja
 ja
 ja
 ja
-jS
+jT
 Mz
 Mz
 Mz
@@ -47428,14 +47428,14 @@ ik
 Mz
 Mz
 Mz
-jS
-jS
+jT
+jT
 ja
 ja
 ja
 ja
-jS
-jS
+jT
+jT
 Mz
 Mz
 Mz
@@ -47686,14 +47686,14 @@ ik
 Mz
 Mz
 Mz
-jS
-jS
-jS
+jT
+jT
+jT
 ja
 ja
 ja
-jS
-jS
+jT
+jT
 Mz
 Mz
 Mz
@@ -47946,11 +47946,11 @@ is
 Mz
 Mz
 Mz
-jS
-jS
-jS
-jS
-jS
+jT
+jT
+jT
+jT
+jT
 Mz
 Mz
 Mz
@@ -52337,7 +52337,7 @@ Mz
 ik
 iq
 ik
-aJ
+jU
 Mz
 Mz
 Mz
@@ -52592,7 +52592,7 @@ Mz
 ik
 iq
 ik
-bs
+jV
 ik
 iq
 Mz
@@ -53359,13 +53359,13 @@ Mz
 Mz
 Mz
 Mz
-bA
+jW
 ik
 iq
 ik
 Mz
 Mz
-bs
+jV
 ik
 iq
 Mz
@@ -59526,9 +59526,9 @@ Mz
 Mz
 Mz
 Mz
-jy
-jy
-jy
+jZ
+jZ
+jZ
 Mz
 Mz
 Mz
@@ -62929,7 +62929,7 @@ iw
 iw
 iv
 iv
-aS
+jS
 iw
 iw
 iv
@@ -63700,10 +63700,10 @@ iv
 iv
 iw
 iw
-aS
+jS
 iv
 iv
-aS
+jS
 iw
 iw
 iv
