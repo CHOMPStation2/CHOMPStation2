@@ -187,7 +187,7 @@
 					var/obj/item/storage/bag/trash/B = output_dest
 					if(LAZYLEN(B.contents) >= B.max_storage_space)
 						to_chat(user, span_warning("Trash bag full. Empty trash bag contents to continue."))
-						continue
+						break
 				sucklimit -= 1
 				if(suckanim)
 					if(vac_conga < 100)
