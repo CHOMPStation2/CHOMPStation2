@@ -1,5 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "Added black gas half-masks and security black gas half-masks to loadout under masks section. Added security black gas half-masks to security lockers."
-  - image: "Added digi sprites for riot, laserproof, bulletproof and combat leg guards. Credit to @ ballisticarmoredchan (Valinari) on Chomp for sprites and concept."

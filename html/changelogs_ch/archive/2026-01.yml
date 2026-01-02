@@ -3,3 +3,20 @@
   - maptweak: modifies the CS psych office
   Willburd:
   - bugfix: Unsimmed turfs now have a properly set blast resistance
+2026-01-02:
+  Aroliacue:
+  - balance: Removed the combat medkit from the security armory on Southern Cross.
+      Replaced with two advanced (red) medkits.
+  CHOMPStation2StaffMirrorBot:
+  - qol: removed the same-limb restriction on synth limb self repairs
+  - bugfix: fixed synths being able to get disfigured at full health by being non-surgically
+      repaired.
+  - rscadd: Added new sets of modular security armor - Regular black/red and black/red/white
+      sets.
+  - image: Added icons for new black/red/white modular security armor.
+  - rscadd: Added black gas half-masks and security black gas half-masks to loadout
+      under masks section. Added security black gas half-masks to security lockers.
+  - image: "Added digi sprites for riot, laserproof, bulletproof and combat leg guards.\
+      \ Credit to @\_ballisticarmoredchan (Valinari) on Chomp for sprites and concept."
+  Diana:
+  - qol: Clicking the ammo hud will swap firemodes for guns if applicable, now.
