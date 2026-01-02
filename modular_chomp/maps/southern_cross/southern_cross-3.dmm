@@ -3059,27 +3059,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "agi" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.6
-	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 1
 	},
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/machinery/door/window/brigdoor/westright{
-	name = "Combat Armor"
-	},
+/obj/machinery/vending/security_armory_armor,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "agn" = (
@@ -3836,6 +3819,13 @@
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Combat Armor"
 	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "aiv" = (

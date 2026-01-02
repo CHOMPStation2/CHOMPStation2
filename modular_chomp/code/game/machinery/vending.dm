@@ -123,37 +123,43 @@
 
 /obj/machinery/vending/security_armor
 	name = "Security Plate Carrier Vendor"
-	desc = "A large vending machine stocked with a variety of plate carriers and accessories to accompany them."
+	desc = "A large vending machine stocked with plate carriers and accessories to accompany them."
 	vend_delay = 1
 	icon_state = "sec"
 	req_access = list(ACCESS_SECURITY)
 	products = list(
-				// The vests. No green, don't want to confuse exploration
-					/obj/item/clothing/suit/armor/pcarrier = 5,
-					/obj/item/clothing/suit/armor/pcarrier/blue = 5,
-					/obj/item/clothing/suit/armor/pcarrier/tan = 5,
-					/obj/item/clothing/suit/armor/pcarrier/navy = 5,
+				// The vests. Just in black and red, to maintain the security appearance.
+					/obj/item/clothing/suit/armor/pcarrier = 8,
+					/obj/item/clothing/head/helmet = 8,
 				// Accessories
-					/obj/item/clothing/accessory/armor/tag/nt = 5,
-					/obj/item/clothing/accessory/armor/tag/sec = 5,
-					/obj/item/clothing/accessory/storage/pouches/large = 5,
-					/obj/item/clothing/accessory/storage/pouches/large/blue = 5,
-					/obj/item/clothing/accessory/storage/pouches/large/tan = 5,
-					/obj/item/clothing/accessory/storage/pouches/large/navy = 5,
+					/obj/item/clothing/accessory/armor/tag/nt = 8,
+					/obj/item/clothing/accessory/storage/pouches = 8,
 				// Armor fittings
-					/obj/item/clothing/accessory/armor/armguards = 5,
-					/obj/item/clothing/accessory/armor/armguards/blue = 5,
-					/obj/item/clothing/accessory/armor/armguards/tan = 5,
-					/obj/item/clothing/accessory/armor/armguards/navy = 5,
-					/obj/item/clothing/accessory/armor/armguards/merc = 5,
-					/obj/item/clothing/accessory/armor/legguards = 5,
-					/obj/item/clothing/accessory/armor/legguards/blue = 5,
-					/obj/item/clothing/accessory/armor/legguards/tan = 5,
-					/obj/item/clothing/accessory/armor/legguards/navy = 5,
-					/obj/item/clothing/accessory/armor/legguards/merc = 5,
-					/obj/item/clothing/accessory/armor/armorplate/tactical = 5
+					/obj/item/clothing/accessory/armor/armguards/security = 8,
+					/obj/item/clothing/accessory/armor/legguards/security = 8,
+					/obj/item/clothing/accessory/armor/armorplate/medium = 8
 				)
 
+/obj/machinery/vending/security_armory_armor
+	name = "Security Armory Plate Carrier Vendor"
+	desc = "A large vending machine stocked with advanced plate carriers and improved accessories to accompany them."
+	vend_delay = 1
+	icon_state = "sec"
+	req_access = list(ACCESS_SECURITY)
+	products = list(
+				// The vests. Now in black, red and white to highlight the 'combat' aspect of the armor
+					/obj/item/clothing/suit/armor/pcarrier = 6,
+					/obj/item/clothing/head/helmet = 6,
+				// Accessories
+					/obj/item/clothing/accessory/armor/tag/ntwhite = 6,
+					/obj/item/clothing/accessory/storage/pouches/large = 6,
+					/obj/item/clothing/accessory/armor/helmcover/ntblack = 6,
+					/obj/item/clothing/accessory/armor/helmcover/nt = 6,
+				// Armor fittings
+					/obj/item/clothing/accessory/armor/armguards/security/white = 6,
+					/obj/item/clothing/accessory/armor/legguards/security/white = 6,
+					/obj/item/clothing/accessory/armor/armorplate/merc = 6
+				)
 
 //Temp Starhunter Fix
 /obj/machinery/vending/starhunter_farmer
