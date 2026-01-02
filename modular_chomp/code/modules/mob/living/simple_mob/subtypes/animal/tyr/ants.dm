@@ -13,12 +13,12 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 	see_in_dark = 3
-	melee_damage_lower = 16 //6.25 hits unarmored.
-	melee_damage_upper = 16 //Rng numbers are wierd
+	melee_damage_lower = 12
+	melee_damage_upper = 12
 	attack_sharp = TRUE
 	attack_edge = 1
 
-	meat_amount = 3
+	meat_amount = 7
 	meat_type = /obj/item/reagent_containers/food/snacks/tyrant
 
 	tame_items = list(/obj/item/reagent_containers/food/snacks/crabmeat = 20)
@@ -59,16 +59,6 @@
 	B.absorbchance = 0
 	B.escapechance = 25
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/bronze //knock back ant
-	name = "bronze metal ant"
-	icon_state = "bronze_ant"
-	icon_living = "bronze_ant"
-	butchery_loot = list(\
-		/obj/item/stack/material/bronze = 18\
-		)
-	meat_amount = 3
-	meat_type = /obj/item/reagent_containers/food/snacks/bronzeant
-
 /mob/living/simple_mob/animal/tyr/mineral_ants/bronze/apply_melee_effects(atom/A)
 	..()
 
@@ -95,10 +85,6 @@
 	meat_amount = 3
 	meat_type = /obj/item/reagent_containers/food/snacks/copperant
 
-	special_attack_min_range = 0
-	special_attack_max_range = 2
-	special_attack_cooldown = 10 SECONDS
-
 /mob/living/simple_mob/animal/tyr/mineral_ants/copper/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
 		visible_message(span_cult("[P] seems ineffective!."))
@@ -120,6 +106,10 @@
 	special_attack_max_range = 2
 	special_attack_cooldown = 10 SECONDS
 
+	color = "#FF7D51"
+	glow_range = 5
+	glow_intensity = 2
+
 /mob/living/simple_mob/animal/tyr/mineral_ants/agate/do_special_attack(atom/A)
 	explosion(src.loc, 2, 1, 1, 1)
 
@@ -133,17 +123,6 @@
 		)
 	meat_amount = 3
 	meat_type = /obj/item/reagent_containers/food/snacks/quartzant
-
-/mob/living/simple_mob/animal/tyr/mineral_ants/painite
-	name = "painite metal ant"
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
-	icon_state = "painite_ant"
-	icon_living = "painite_ant"
-	butchery_loot = list(\
-		/obj/item/stack/material/painite = 18\
-		)
-	meat_amount = 3
-	meat_type = /obj/item/reagent_containers/food/snacks/painiteant
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/diamond //slower, tankier, more damage
 	name = "diamond metal ant"
@@ -179,34 +158,72 @@
 	special_attack_max_range = 2
 	special_attack_cooldown = 5 SECONDS
 
+	color = "#91FF91"
+	glow_range = 5
+	glow_intensity = 2
+
 /mob/living/simple_mob/animal/tyr/mineral_ants/uranium/do_special_attack(atom/A)
 	visible_message(span_bolddanger(span_orange("The ant glows bright green!.")))
 	SSradiation.radiate(src, 15)
-
-/mob/living/simple_mob/animal/tyr/mineral_ants/tritium
-	name = "tritium ant"
-	icon_state = "tritium_ant"
-	icon_living = "tritium_ant"
-	butchery_loot = list(\
-		/obj/item/stack/material/tritium = 18\
-		)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/mhydro //secondary spawner
 	name = "mhydro ant"
 	icon_state = "mhydro_ant"
 	icon_living = "mhydro_ant"
 	butchery_loot = list(\
-		/obj/item/stack/material/mhydrogen = 6\
+		/obj/item/stack/material/mhydrogen = 12\
 		)
 	size_multiplier = 0.5
 	movement_cooldown = -1
 
+/mob/living/simple_mob/animal/tyr/mineral_ants/painite
+	name = "painite metal ant"
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+	icon_state = "painite_ant"
+	icon_living = "painite_ant"
+	butchery_loot = list(\
+		/obj/item/stack/material/painite = 18\
+		)
+	meat_amount = 3
+	meat_type = /obj/item/reagent_containers/food/snacks/painiteant
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/painite/apply_melee_effects(atom/A)
+	..()
+	if(isliving(A))
+		var/mob/living/L = A
+		to_chat(L, span_danger("You've been burned by \the [src]!"))
+		L.ignite_mob()
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/bronze
+	name = "bronze metal ant"
+	icon_state = "bronze_ant"
+	icon_living = "bronze_ant"
+	butchery_loot = list(\
+		/obj/item/stack/material/bronze = 18\
+		)
+	meat_amount = 3
+	meat_type = /obj/item/reagent_containers/food/snacks/bronzeant
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/bronze/death()
+	visible_message(span_warning("\The [src]'s abdomen splits as it rolls over, spiderlings crawling from the wound.") )
+	for(var/i = 1 to 8)
+		new /obj/effect/spider/spiderling/antling (src.loc)
+	..()
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/graphite //nothing special here
+	name = "graphite ant"
+	icon_state = "graphite_ant"
+	icon_living = "graphite_ant"
+	butchery_loot = list(\
+		/obj/item/stack/material/graphite = 18\
+		)
+
 /mob/living/simple_mob/animal/tyr/mineral_ants/builder
-	name = "concrete ant"
+	name = "tritium ant"
 	icon_state = "builder_ant"
 	icon_living = "builder_ant"
 	butchery_loot = list(\
-		/obj/item/stack/material/concrete = 6\
+		/obj/item/stack/material/tritium = 18\
 		)
 	nutrition = 150
 	var/build_type = /obj/random/ant_building
@@ -301,7 +318,7 @@ ANT STRUCTURES
 	icon_state = "hole"
 	anchored = TRUE
 
-	spawn_delay = 10 MINUTES
+	spawn_delay = 15 MINUTES
 
 	spawn_types = list(
 	/mob/living/simple_mob/animal/tyr/mineral_ants/bronze = 1,
@@ -312,12 +329,12 @@ ANT STRUCTURES
 	/mob/living/simple_mob/animal/tyr/mineral_ants/painite = 1,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/diamond = 1,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/verdantium = 1,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/tritium = 1,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/uranium = 1,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro = 1
+	/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro = 1,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/graphite = 1,
 	)
 
-	simultaneous_spawns = 3
+	simultaneous_spawns = 5
 
 	destructible = 1
 	health = 50 //Unsure why you would want to break it but you can
@@ -433,9 +450,9 @@ ANT STRUCTURES
 	/mob/living/simple_mob/animal/tyr/mineral_ants/painite,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/diamond,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/verdantium,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/tritium,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/uranium,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro)
+	/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/graphite)
 	faction = FACTION_TYR_ANT
 
 /obj/effect/ant_structure/webbarrier

@@ -20,10 +20,13 @@
 	vore_standing_too = TRUE
 	unacidable = TRUE
 	special_attack_min_range = 0
-	special_attack_max_range = 7
+	special_attack_max_range = 14
 	wreckage = /obj/item/prop/tyrlore/gatekeeper
 
 	melee_miss_chance = 0
+	see_in_dark = 14
+	melee_damage_lower = 20
+	melee_damage_upper = 20
 
 	loot_list = list(/obj/item/gun/energy/tyr_rifle  = 30,
 		/obj/item/tool/wirecutters/hybrid/alien  = 30,
@@ -198,21 +201,19 @@
 	name = "experiment 20"
 	icon_state = "crystalized"
 	icon_living = "crystalized"
-	specialattackprojectile = /obj/item/projectile/arc/fragmentation/tyr_mortar
+	health = 400
+	maxHealth = 400 //15ish hits with E sword
 	wreckage = /obj/item/prop/tyrlore/crystal_boss
+	melee_damage_lower = 40
+	melee_damage_upper = 40
+	attack_armor_pen = 40
+	melee_attack_delay = 2.5 SECONDS
+	movement_cooldown = 4
+	special_attack_cooldown = 8 SECONDS
+	evasion = 200 //forced to fight in melee lol
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/crystal_boss/do_special_attack(atom/A)
-	rng_cycle = rand(1,3)
-	switch(attackcycle)
-		if(1)
-			addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
-			attackcycle = 0
-		if(2)
-			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
-			attackcycle = 0
-		if(3)
-			addtimer(CALLBACK(src, PROC_REF(gattlingfire), A, rng_cycle, 8, 7), 0.5 SECONDS, TIMER_DELETE_ME)
-			attackcycle = 0
+	addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, 4), 1.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/naga_boss
 	name = "experiment 25"
@@ -298,10 +299,11 @@
 	icon = 'modular_chomp/icons/mob/hivebot.dmi'
 	size_multiplier = 3
 	wreckage = /obj/item/prop/tyrlore/swarm_boss
-	special_attack_cooldown = 8 SECONDS
-	melee_damage_lower = 30
-	melee_damage_upper = 30
-	movement_cooldown = 4
+	special_attack_cooldown = 12 SECONDS
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+	attack_armor_pen = 0
+	movement_cooldown = 8
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/swarm_ai/bullet_act(obj/item/projectile/P)
 	for(var/i =1 to 3)
@@ -338,8 +340,8 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/medical_bot //tutortial for ADD invul mechanics
 	name = "medical robot"
 	desc = "A massive hivebot with medical equipment."
-	health = 400
-	maxHealth = 400
+	health = 1000
+	maxHealth = 1000
 	icon_state = "white"
 	icon_living = "white"
 	icon = 'icons/mob/hivebot.dmi'
@@ -350,7 +352,7 @@
 	attack_armor_pen = 80
 	movement_cooldown = 4
 
-	special_attack_cooldown = 12 SECONDS
+	special_attack_cooldown = 25 SECONDS
 
 	var/datum/disease/base_disease = /datum/disease/advance/agate_rot
 
@@ -360,9 +362,13 @@
 		H.ContractDisease(base_disease)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/medical_bot/do_special_attack(atom/A)
-	for(var/i =1 to 2)
-		new /mob/living/simple_mob/mechanical/hivebot/tyr/heart(src.loc)
-
+	visible_message(span_boldwarning(span_orange("The beast restores itself to a prime condition!.")))
+	adjustBruteLoss(-1000)
+	adjustFireLoss(-1000)
+	adjustToxLoss(-1000)
+	adjustOxyLoss(-1000)
+	adjustCloneLoss(-1000)
+/*
 /mob/living/simple_mob/mechanical/hivebot/tyr/heart
 	name = "barrier unit"
 	icon = 'modular_chomp/icons/mob/tyr.dmi'
@@ -374,20 +380,4 @@
 	melee_damage_upper = 10
 	attack_armor_pen = 80
 	movement_cooldown = 4
-
-/mob/living/simple_mob/mechanical/hivebot/tyr/heart/handle_special()
-	if(stat != DEAD)
-		untouchable_aura()
-	..()
-
-/mob/living/simple_mob/mechanical/hivebot/tyr/heart/proc/untouchable_aura()
-	for(var/mob/living/L in orange(src, 3))
-		if(L.stat == DEAD || !IIsAlly(L))
-			continue
-		L.add_modifier(/datum/modifier/aura/heart_barrier, null, src)
-
-/datum/modifier/aura/heart_barrier
-	stacks = MODIFIER_STACK_FORBID
-	mob_overlay_state = "deflect"
-	incoming_damage_percent = 0
-	aura_max_distance = 3
+*/
