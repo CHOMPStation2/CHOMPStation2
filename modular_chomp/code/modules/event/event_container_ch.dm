@@ -22,14 +22,14 @@
 		// Severity level, event name, even type, base weight, role weights, one shot, min weight, max weight. Last two only used if set and non-zero
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Nothing",				/datum/event/nothing,						400),
 		// Bluescreens APCs, but they still work
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "APC Damage",			/datum/event/apc_damage,					20, 	list(DEPARTMENT_ENGINEERING = 20), min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "APC Damage",			/datum/event/apc_damage,					20, 	list(DEPARTMENT_ENGINEERING = 20, JOB_CHIEF_ENGINEER = 10), min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Aurora Caelus",			/datum/event/aurora_caelus,					2,		list(), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Brand Intelligence",	/datum/event/brand_intelligence,			20, 	list(JOB_JANITOR = 25),	TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Canister Leak",			/datum/event/canister_leak,					10, 	list(DEPARTMENT_ENGINEERING = 20)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Economic News",			/datum/event/economic_event,				300),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Electrified Door",		/datum/event/electrified_door,				-5, 	list(DEPARTMENT_MEDICAL = 5, DEPARTMENT_ENGINEERING = 20, JOB_AI = 10)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Electrified Door",		/datum/event/electrified_door,				-5, 	list(DEPARTMENT_MEDICAL = 5, DEPARTMENT_ENGINEERING = 20, JOB_CHIEF_ENGINEER = 10, JOB_AI = 10)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Jellyfish School",		/datum/event/jellyfish_migration,			5,		list(DEPARTMENT_ANY = 1, DEPARTMENT_SECURITY = 5, DEPARTMENT_MEDICAL = 3), TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Lone Spacefish",		/datum/event/spacefish_migration, 			0,		list(DEPARTMENT_SECURITY = 15, DEPARTMENT_ANY = 2), TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Lone Spacefish",		/datum/event/spacefish_migration, 			0,		list(DEPARTMENT_SECURITY = 15, JOB_HEAD_OF_SECURITY = 5, JOB_WARDEN = 5, DEPARTMENT_ANY = 2), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Money Hacker",			/datum/event/money_hacker, 					0, 		list(DEPARTMENT_ANY = 4), TRUE, 10, 25),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Money Lotto",			/datum/event/money_lotto, 					0, 		list(DEPARTMENT_ANY = 1), TRUE, 5, 15),
 		//new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mundane News", 		/datum/event/mundane_news, 					300),
@@ -55,7 +55,7 @@
 	available_events = list(
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Nothing",					/datum/event/nothing,					1600),
 		// Leaks gas into an unoccupied room.
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Appendicitis", 			/datum/event/spontaneous_appendicitis, 	-30,	list(DEPARTMENT_MEDICAL = 30, DEPARTMENT_ANY = 2), TRUE, min_jobs = list(DEPARTMENT_MEDICAL = 2)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Appendicitis", 			/datum/event/spontaneous_appendicitis, 	-30,	list(DEPARTMENT_MEDICAL = 30, JOB_CHIEF_MEDICAL_OFFICER = 10, DEPARTMENT_ANY = 2), TRUE, min_jobs = list(DEPARTMENT_MEDICAL = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bluespace Anomaly",		/datum/event/anomaly/bluespace,			20,		list(DEPARTMENT_RESEARCH = 40, JOB_RESEARCH_DIRECTOR = 20, DEPARTMENT_ANY = 2), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bluespace Lockers",		/datum/event/bluespace_locker,			10,		list(DEPARTMENT_RESEARCH = 30, JOB_RESEARCH_DIRECTOR = 20, DEPARTMENT_ANY = 2), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bioscrambler Anomaly",		/datum/event/anomaly/bioscrambler,		10,		list(DEPARTMENT_MEDICAL = 30, JOB_CHIEF_MEDICAL_OFFICER = 10, DEPARTMENT_RESEARCH = 20, JOB_RESEARCH_DIRECTOR = 10, DEPARTMENT_ANY = 2), TRUE, min_jobs = list(DEPARTMENT_MEDICAL = 1)),
@@ -90,9 +90,9 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Rogue Drones",				/datum/event/rogue_drone, 				-30,	list(DEPARTMENT_SECURITY = 25, JOB_HEAD_OF_SECURITY = 35, JOB_WARDEN = 35, DEPARTMENT_ANY = 2), min_jobs = list(DEPARTMENT_SECURITY = 2)),
 		// Radiation, but only in space.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Solar Storm",				/datum/event/solar_storm, 				20,		list(DEPARTMENT_ENGINEERING = 40, DEPARTMENT_SECURITY = 20, DEPARTMENT_ANY = 2), TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spacefish Migration",		/datum/event/spacefish_migration,		0, 		list(DEPARTMENT_SECURITY = 40, DEPARTMENT_MEDICAL = 10, DEPARTMENT_ANY = 2), TRUE, min_jobs = list(DEPARTMENT_SECURITY = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spacefish Migration",		/datum/event/spacefish_migration,		0, 		list(DEPARTMENT_SECURITY = 40, JOB_HEAD_OF_SECURITY = 20, JOB_WARDEN = 20, DEPARTMENT_MEDICAL = 10, DEPARTMENT_ANY = 2), TRUE, min_jobs = list(DEPARTMENT_SECURITY = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spider Infestation",		/datum/event/spider_infestation, 		-20,	list(DEPARTMENT_SECURITY = 30, JOB_HEAD_OF_SECURITY = 20, JOB_WARDEN = 20, DEPARTMENT_ANY = 2), FALSE, min_jobs = list(DEPARTMENT_SECURITY = 1)),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spontaneous Malignant Organ", 	/datum/event/spontaneous_malignant_organ, 	-30,	list(DEPARTMENT_MEDICAL = 30, DEPARTMENT_ANY = 2), TRUE, min_jobs = list(DEPARTMENT_MEDICAL = 2)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spontaneous Malignant Organ", 	/datum/event/spontaneous_malignant_organ, 	-30,	list(DEPARTMENT_MEDICAL = 30, JOB_CHIEF_MEDICAL_OFFICER = 20, DEPARTMENT_ANY = 2), TRUE, min_jobs = list(DEPARTMENT_MEDICAL = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Weather Anomaly",			/datum/event/anomaly/weather,			20,		list(DEPARTMENT_RESEARCH = 40, JOB_RESEARCH_DIRECTOR = 20, DEPARTMENT_ANY = 2), TRUE),
 	)
 	add_disabled_events(list(
