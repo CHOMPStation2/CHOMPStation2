@@ -26,6 +26,7 @@
 	var/suckverb = "vacuum"
 	var/suckanim = TRUE
 	var/pull_range = 1
+	var/max_items = 20
 	flags = NOBLUDGEON
 
 /obj/item/vac_attachment/attack_self(mob/user)
@@ -170,7 +171,10 @@
 
 			playsound(src, sucksound, auto_setting * 20, 1, -1)
 			var/vac_conga = 0
+			var/sucklimit = max_items
 			for(var/atom/movable/F in suckables)
+				if(sucklimit <= 0)
+					continue
 				if(is_type_in_list(F, GLOB.item_vore_blacklist))
 					continue
 				if(istype(F,/obj/effect/decal/cleanable))
@@ -183,13 +187,14 @@
 					var/obj/item/storage/bag/trash/B = output_dest
 					if(LAZYLEN(B.contents) >= B.max_storage_space)
 						to_chat(user, span_warning("Trash bag full. Empty trash bag contents to continue."))
-						return
+						continue
+				sucklimit -= 1
 				if(suckanim)
 					if(vac_conga < 100)
 						vac_conga += 2
 					addtimer(CALLBACK(src, PROC_REF(prepare_sucking), F, user, auto_setting, target), 0.2 SECONDS + vac_conga)
 				else
-					addtimer(CALLBACK(src, PROC_REF(handle_consumption), F, user, auto_setting), 0.5 SECONDS)
+					handle_consumption(F, user, auto_setting)
 			if(vac_conga > 0)
 				var/obj/effect/vac_visual/V = new(target)
 				V.ready(0.5 SECONDS + vac_conga)
