@@ -179,31 +179,31 @@
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/farm1)
 "K" = (
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/farm1)
 "L" = (
 /turf/simulated/floor/water,
 /area/submap/farm1)
 "M" = (
 /obj/structure/loot_pile/maint/technical,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/farm1)
 "N" = (
 /obj/machinery/power/port_gen/pacman,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/farm1)
 "O" = (
 /obj/structure/closet/crate/hydroponics/prespawned,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/farm1)
 "P" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/farm1)
 "Q" = (
 /obj/structure/table/steel,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/farm1)
 "R" = (
 /obj/structure/railing{
