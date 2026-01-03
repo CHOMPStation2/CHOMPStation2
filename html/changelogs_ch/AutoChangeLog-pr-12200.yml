@@ -1,6 +1,0 @@
-author: "Aroliacue"
-delete-after: True
-changes:
-  - rscadd: "Added a new armor vendor to the security armory."
-  - balance: "Reduced the strength of the default plate carrier equipment available in security."
-  - maptweak: "Added a new vendor to the security armory, consolidated the regular combat armor into one tile."

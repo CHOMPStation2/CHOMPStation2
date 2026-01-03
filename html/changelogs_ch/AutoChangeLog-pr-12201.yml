@@ -1,4 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - bugfix: "fixed active edges on some POIs"
