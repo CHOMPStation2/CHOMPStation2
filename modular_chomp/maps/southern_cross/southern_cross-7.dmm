@@ -32,7 +32,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/tiled/milspec/raised,
-/area/expoutpost/reactorcr)
+/area/expoutpost/reactorroom)
 "aag" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/wall/r_wall,
@@ -339,6 +339,15 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/cic)
+"aaV" = (
+/obj/effect/wingrille_spawn/reinforced_phoron,
+/obj/machinery/door/blast/radproof{
+	dir = 4;
+	id = "Aeg_EngineShroud"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/reinforced,
+/area/expoutpost/reactorroom)
 "aaW" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 10
@@ -2069,7 +2078,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/tiled/milspec/raised,
-/area/expoutpost/reactorcr)
+/area/expoutpost/reactorroom)
 "bfK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
@@ -7802,7 +7811,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/tiled/milspec/raised,
-/area/expoutpost/reactorcr)
+/area/expoutpost/reactorroom)
 "ggi" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -9743,7 +9752,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/tiled/milspec/raised,
-/area/expoutpost/reactorcr)
+/area/expoutpost/reactorroom)
 "hLp" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -11897,7 +11906,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/tiled/milspec/raised,
-/area/expoutpost/reactorcr)
+/area/expoutpost/reactorroom)
 "jEQ" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -62921,7 +62930,7 @@ sey
 cpa
 tzB
 hKH
-cLB
+aaV
 ofu
 fbZ
 vEk
@@ -63179,7 +63188,7 @@ sey
 xgb
 tzB
 jEM
-cLB
+aaV
 uap
 pMu
 mdP
@@ -63437,7 +63446,7 @@ tno
 mZx
 cWX
 ggg
-cLB
+aaV
 mfN
 haF
 tpv
@@ -63695,7 +63704,7 @@ sey
 lsn
 tHf
 bfx
-cLB
+aaV
 mfN
 cyf
 rJq
@@ -63953,7 +63962,7 @@ sey
 wIt
 tHf
 aaf
-cLB
+aaV
 dMe
 vfb
 qQa
