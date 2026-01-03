@@ -9469,7 +9469,7 @@
 	pixel_y = 34;
 	name = "Emergency Armoury";
 	id = "aeg_bridge_armory";
-	req_one_access = list(19,62,67)
+	req_one_access = list(19,62)
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "aeg_bridge_saferoom";
