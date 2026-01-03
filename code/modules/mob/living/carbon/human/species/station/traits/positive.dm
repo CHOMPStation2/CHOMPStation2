@@ -6,7 +6,6 @@
 	desc = "Allows you to move faster on average than baseline."
 	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
-	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus)
 //	banned_species = list(SPECIES_ALRAUNE, SPECIES_SHADEKIN_CREW, SPECIES_TESHARI, SPECIES_TAJARAN, SPECIES_DIONA, SPECIES_UNATHI) //Either not applicable or buffs ruin species flavour/balance
 //	custom_only = FALSE //Keeping these in comments in case we decide to open them up in future, so the species are already organised.
 
@@ -16,7 +15,7 @@
 
 	activation_message="Your leg muscles pulsate."
 	primitive_expression_messages=list("dances around.")
-	excludes = list(/datum/trait/positive/unusual_running) // you best not be naruto running in this house
+	excludes = list(/datum/trait/positive/unusual_running, /datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus, /datum/trait/positive/strength, /datum/trait/positive/strengthplus) // you best not be naruto running in this house //ChompEDIT: Actually excludes this things, also properly excludes the strength perks, otherwise you grab haste first then strength
 
 /datum/trait/positive/unusual_running
 	name = "Unusual Gait"
