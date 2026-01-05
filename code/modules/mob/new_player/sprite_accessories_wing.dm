@@ -643,9 +643,6 @@
 	color_blend_mode = ICON_MULTIPLY
 	wing_offset = 16
 
-<<<<<<< HEAD
-/* //exclusive wings // CHOMPRemove Start
-=======
 /datum/sprite_accessory/wing/xeno_queen_new
 	name = "xenomorph backplate (queen, new)"
 	desc = ""
@@ -653,8 +650,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-//exclusive wings
->>>>>>> fb74b0d980 (New xenomorph queen wings and xenomorph tail vwag fix (#18976))
+/* //exclusive wings // CHOMPRemove Start
 /datum/sprite_accessory/wing/kara
 	name = "Pterokara wings"
 	desc = ""
