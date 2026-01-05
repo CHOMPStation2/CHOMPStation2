@@ -1,6 +1,0 @@
-author: "Guti"
-delete-after: True
-changes:
-  - rscadd: "Added weather anomaly event"
-  - balance: "Various events now weight more with their heads on, and scaled as more people join in."
-  - rscdel: "Removed various events out of rotation, mostly broken or completely ignored."

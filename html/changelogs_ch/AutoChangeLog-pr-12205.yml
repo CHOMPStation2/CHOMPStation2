@@ -1,5 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - bugfix: "Makes the aegis bridge armory more consistent with other armories"
-  - bugfix: "Alters the areas so the rust computers share the area with the rust"
