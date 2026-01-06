@@ -32,7 +32,7 @@ type Data = {
 };
 
 const requirePdaInterface = require.context('./pda_screens', false, /\.tsx$/);
-<<<<<<< HEAD
+
 // CHOMPEdit Start - Add check for chompstation pda_screens
 const requirePdaInterfaceCh = require.context(
   '../chompstation/Pda/pda_screens',
@@ -40,39 +40,23 @@ const requirePdaInterfaceCh = require.context(
   /\.tsx$/,
 );
 function getPdaApp(name: string) {
-=======
-
-function getPdaApp(name: string): () => React.JSX.Element {
->>>>>>> 6cf7d1ab5f (ports the chat panel and backend updates [NO GBP] (#18895))
   let appModule: __WebpackModuleApi.RequireContext;
-
   try {
-<<<<<<< HEAD
     appModule = requirePdaInterfaceCh(`./${name}.tsx`);
   } catch (err) {
     try {
       appModule = requirePdaInterface(`./${name}.tsx`);
     } catch (err) {
       if (err.code === 'MODULE_NOT_FOUND') {
-        return routingError('notFound', name);
+        return () => <RoutingErrorWindow type="notFound" name={name} />;
       }
       throw err;
-=======
-    appModule = requirePdaInterface(`./${name}.tsx`);
-  } catch (err: any) {
-    if (err.code === 'MODULE_NOT_FOUND') {
-      return () => <RoutingErrorWindow type="notFound" name={name} />;
->>>>>>> 6cf7d1ab5f (ports the chat panel and backend updates [NO GBP] (#18895))
     }
   }
-<<<<<<< HEAD
   // CHOMPEdit End
-  const Component: () => React.JSX.Element = appModule[name];
-=======
 
   const Component = appModule[name] as (() => React.JSX.Element) | undefined;
 
->>>>>>> 6cf7d1ab5f (ports the chat panel and backend updates [NO GBP] (#18895))
   if (!Component) {
     return () => <RoutingErrorWindow type="missingExport" name={name} />;
   }
