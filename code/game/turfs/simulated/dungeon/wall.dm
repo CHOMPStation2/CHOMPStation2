@@ -66,7 +66,11 @@
 	return mining_overlay_cache["[cache_id]_[direction]"]
 
 /turf/simulated/wall/solidrock/update_icon(var/update_neighbors)
+<<<<<<< HEAD
 	cut_overlays() //ChompEDIT
+=======
+	cut_overlays()
+>>>>>>> c7c3a151ec (up ports the TG overlays subsystem update (#18945))
 	if(density)
 		var/image/I
 		for(var/i = 1 to 4)

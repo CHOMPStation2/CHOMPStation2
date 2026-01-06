@@ -23,7 +23,11 @@
 /obj/landed_holder/proc/land_on(var/turf/T)
 	//Gather destination information
 	var/obj/landed_holder/new_holder = new(null)
+<<<<<<< HEAD
 	T.lighting_clear_overlay() //CHOMP Add
+=======
+	T.lighting_clear_overlay()
+>>>>>>> c7c3a151ec (up ports the TG overlays subsystem update (#18945))
 	new_holder.turf_type = T.type
 	new_holder.dir = T.dir
 	new_holder.icon = T.icon
@@ -34,12 +38,20 @@
 
 	//Set the destination to be like us
 	var/turf/simulated/shuttle/new_dest = T.ChangeTurf(my_turf.type,,1)
+<<<<<<< HEAD
 	my_turf.lighting_clear_overlay() //CHOMP Add
+=======
+	my_turf.lighting_clear_overlay()
+>>>>>>> c7c3a151ec (up ports the TG overlays subsystem update (#18945))
 	new_dest.set_dir(my_turf.dir)
 	new_dest.icon_state = my_turf.icon_state
 	new_dest.icon = my_turf.icon
 	new_dest.copy_overlays(my_turf, TRUE)
+<<<<<<< HEAD
 	new_dest.underlays = my_turf.underlays.Copy() //CHOMP Edit
+=======
+	new_dest.underlays = my_turf.underlays.Copy()
+>>>>>>> c7c3a151ec (up ports the TG overlays subsystem update (#18945))
 	new_dest.decals = my_turf.decals
 	//Shuttle specific stuff
 	new_dest.interior_corner = my_turf.interior_corner
@@ -47,7 +59,11 @@
 	new_dest.under_turf = my_turf.under_turf
 	new_dest.join_flags = my_turf.join_flags
 	new_dest.join_group = my_turf.join_group
+<<<<<<< HEAD
 	new_dest.lighting_build_overlay() //CHOMP Add
+=======
+	new_dest.lighting_build_overlay()
+>>>>>>> c7c3a151ec (up ports the TG overlays subsystem update (#18945))
 
 	// Associate the holder with the new turf.
 	new_holder.my_turf = new_dest
@@ -64,14 +80,24 @@
 	//Change our source to whatever it was before
 	if(turf_type)
 		new_source = my_turf.ChangeTurf(turf_type,,1)
+<<<<<<< HEAD
 		new_source.lighting_clear_overlay() //CHOMP Add
+=======
+		new_source.lighting_clear_overlay()
+>>>>>>> c7c3a151ec (up ports the TG overlays subsystem update (#18945))
 		new_source.set_dir(dir)
 		new_source.icon_state = icon_state
 		new_source.icon = icon
 		new_source.copy_overlays(src, TRUE)
+<<<<<<< HEAD
 		new_source.underlays = underlays.Copy() //CHOMP Edit
 		new_source.decals = decals
 		new_source.lighting_build_overlay() //CHOMP Add
+=======
+		new_source.underlays = underlays.Copy()
+		new_source.decals = decals
+		new_source.lighting_build_overlay()
+>>>>>>> c7c3a151ec (up ports the TG overlays subsystem update (#18945))
 	else
 		new_source = my_turf.ChangeTurf(base_turf ? base_turf : get_base_turf_by_area(my_turf),,1)
 
@@ -110,13 +136,13 @@
 
 // For joined corners touching static lighting turfs, add an overlay to cancel out that part of our lighting overlay.
 /turf/simulated/shuttle/proc/update_breaklights()
-	cut_overlay(antilight_cache["[join_flags]"], TRUE)
+	cut_overlay(antilight_cache["[join_flags]"])
 	if(!(join_flags in GLOB.cornerdirs)) //We're not joined at an angle
 		return
 	//Dynamic lighting dissolver
 	var/turf/T = get_step(src, turn(join_flags,180))
 	if(!T || !T.dynamic_lighting || !get_area(T).dynamic_lighting)
-		add_overlay(antilight_cache["[join_flags]"], TRUE)
+		add_overlay(antilight_cache["[join_flags]"])
 
 /turf/simulated/shuttle/proc/underlay_update()
 	if(!takes_underlays)
