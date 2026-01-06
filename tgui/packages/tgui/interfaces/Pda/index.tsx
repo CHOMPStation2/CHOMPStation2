@@ -43,10 +43,10 @@ function getPdaApp(name: string) {
   let appModule: __WebpackModuleApi.RequireContext;
   try {
     appModule = requirePdaInterfaceCh(`./${name}.tsx`);
-  } catch (err) {
+  } catch (err: any) {
     try {
       appModule = requirePdaInterface(`./${name}.tsx`);
-    } catch (err) {
+    } catch (err: any) {
       if (err.code === 'MODULE_NOT_FOUND') {
         return () => <RoutingErrorWindow type="notFound" name={name} />;
       }
