@@ -70,3 +70,18 @@
   - bugfix: Fixed lead ingots not being grindable
   - bugfix: Teshari CE cloak can now be properly selected
   - spellcheck: Changes multiple instances of "Cheif" to "Chief"
+2026-01-06:
+  CHOMPStation2StaffMirrorBot:
+  - config: new config entries to set discord channels for round start/end announcements
+  - rscadd: Added new xenomorph queen backplate to wing menu.
+  - image: Added new sprites for xeno queen backplate.
+  - bugfix: Fixed xenomorph tail (vwag) not being able to toggle off vwag.
+  Diana:
+  - bugfix: You can no longer activate grenades in your hand while dead.
+  - code_imp: Rightclick functionality with held objects is possible now.
+  - bugfix: Fultons can no longer be deployed inside of things.
+  Guti:
+  - bugfix: Fixed Dark Maw not eating captured prey, if prefs aligned
+  Will:
+  - bugfix: Attempting to pass mob grabs to another player no longer drops a qdeleted
+      grab on the floor
