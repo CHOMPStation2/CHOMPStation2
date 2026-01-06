@@ -99,13 +99,7 @@ var/datum/planet/tyr/planet_tyr = null
 	temperature = 313
 	allowed_weather_types = list(
 		WEATHER_CLEAR			= new /datum/weather/tyr/clear(),
-		WEATHER_FIRESTART			= new /datum/weather/tyr/firestart(),
-		WEATHER_FLAMESTORM			= new /datum/weather/tyr/flamestorm(),
 		WEATHER_SANDSTORM			= new /datum/weather/tyr/sandstorm(),
-		WEATHER_HEAVYSANDSTORM			= new /datum/weather/tyr/sandstorm_fierce(),
-		WEATHER_FALLOUT_TEMP			= new /datum/weather/tyr/starrynight(),
-		WEATHER_BLIZZARD	= new /datum/weather/tyr/blizzard(),
-		WEATHER_STORM		= new /datum/weather/tyr/storm(),
 		WEATHER_FOG			= new /datum/weather/tyr/fog()
 
 		)
@@ -123,8 +117,8 @@ var/datum/planet/tyr/planet_tyr = null
 	name = "clear"
 	transition_chances = list(
 		WEATHER_CLEAR = 80,
-		WEATHER_SANDSTORM = 20
-		)
+		WEATHER_SANDSTORM = 10,
+		WEATHER_FOG = 10)
 	transition_messages = list(
 		"The sky clears up.",
 		"The sky is visible.",
@@ -134,51 +128,6 @@ var/datum/planet/tyr/planet_tyr = null
 	observed_message = "The sky is clear."
 	imminent_transition_message = "The sky is rapidly clearing up."
 
-/datum/weather/tyr/firestart
-	name = "warm winds"
-	icon_state = "ashfall_light"
-	transition_chances = list(
-		WEATHER_FIRESTART = 50,
-		WEATHER_FLAMESTORM = 50)
-	transition_messages = list(
-		"The sky begins to turn orange."
-		)
-	sky_visible = TRUE
-	observed_message = "The sky is orange."
-	imminent_transition_message = "The sky flares orange."
-
-
-/datum/weather/tyr/flamestorm
-	name = "fire storm"
-	icon_state = "ashfall_light"
-	transition_chances = list(
-		WEATHER_FLAMESTORM = 50,
-		WEATHER_CLEAR = 50)
-	transition_messages = list(
-		"The sky is engulfed by flames."
-		)
-	sky_visible = TRUE
-	observed_message = "The sky is on fire."
-	imminent_transition_message = "The sky is set ablaze."
-	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_HUMANS
-
-/datum/weather/tyr/flamestorm/planet_effect(mob/living/carbon/H)
-	if(H.z in holder.our_planet.expected_z_levels)
-		var/turf/T = get_turf(H)
-		if(!T.is_outdoors())
-			return
-
-		var/target_zone = pick(BP_ALL)
-		var/amount_blocked = H.run_armor_check(target_zone, "bio")
-
-		var/damage = rand(1,1)
-
-		if(amount_blocked >= 40)
-			return
-
-		H.apply_damage(damage, BURN, target_zone, amount_blocked, used_weapon = "burning ash")
-		if(show_message)
-			to_chat(H, effect_message)
 
 /datum/weather/tyr/sandstorm
 	name = "sandstorm"
@@ -186,7 +135,7 @@ var/datum/planet/tyr/planet_tyr = null
 	transition_chances = list(
 		WEATHER_CLEAR = 80,
 		WEATHER_SANDSTORM = 10,
-		WEATHER_HEAVYSANDSTORM = 10)
+		WEATHER_FOG = 10)
 	transition_messages = list(
 		"The sky is engulfed by sand."
 		)
@@ -213,128 +162,14 @@ var/datum/planet/tyr/planet_tyr = null
 		if(show_message)
 			to_chat(H, effect_message)
 
-/datum/weather/tyr/sandstorm_fierce
-	name = "fierce sandstorm"
-	icon_state = "sandstorm"
-	transition_chances = list(
-		WEATHER_CLEAR = 80,
-		WEATHER_SANDSTORM = 10,
-		WEATHER_HEAVYSANDSTORM = 10)
-	transition_messages = list(
-		"The sky is engulfed by sand."
-		)
-	sky_visible = TRUE
-	observed_message = "The sky is full of sand."
-	light_color = "#996600"
-	light_modifier = 0.5
-
-	imminent_transition_message = "The sky is blocked out by rock."
-	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_HUMANS
-
-/datum/weather/tyr/sandstorm_fierce/planet_effect(mob/living/carbon/H)
-	if(H.z in holder.our_planet.expected_z_levels)
-		var/turf/T = get_turf(H)
-		if(!T.is_outdoors())
-			return
-
-		var/target_zone = pick(BP_ALL)
-		var/amount_blocked = H.run_armor_check(target_zone, "melee")
-
-		var/damage = rand(5,5)
-
-		if(amount_blocked >= 40)
-			return
-
-		H.apply_damage(damage, BRUTE, target_zone, amount_blocked, used_weapon = "sand")
-		if(show_message)
-			to_chat(H, effect_message)
-
-//Anomalous/summonable weather
-/datum/weather/tyr/starrynight
-	name = "unknown"
-	icon_state = "starry_night"
-	transition_chances = list(
-		WEATHER_CLEAR = 50,
-		WEATHER_FALLOUT_TEMP = 50)
-
-	imminent_transition_message = "The sky is rapidly begins to glow."
-	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_HUMANS
-
-/datum/weather/tyr/starrynight/planet_effect(mob/living/carbon/H)
-	if(H.z in holder.our_planet.expected_z_levels)
-		var/turf/T = get_turf(H)
-		if(!T.is_outdoors())
-			return
-		H.add_modifier(/datum/modifier/starrynight_boon, 1 SECONDS, src)
-
-/datum/weather/tyr/blizzard
-	name = "blizzard"
-	icon_state = "snowfall_heavy_old"
-	temp_high = 153.15
-	temp_low = 130.15
-	transition_chances = list(
-		WEATHER_CLEAR = 50,
-		WEATHER_BLIZZARD = 50)
-	outdoor_sounds_type = /datum/looping_sound/weather/storm
-	indoor_sounds_type = /datum/looping_sound/weather/storm/indoors
-
-	imminent_transition_message = "The sky is overtaken by snow."
-
-/datum/weather/tyr/storm
-	icon_state = "fallout"
-	light_modifier = 0.7
-	light_color = "#CCFFCC"
-	temp_high = 233.15
-	temp_low = 200.15
-	transition_chances = list(
-		WEATHER_CLEAR = 50,
-		WEATHER_STORM = 50)
-	imminent_transition_message = "Sky and clouds are growing sickly green... Radiation storm is approaching, get to cover!"
-	outdoor_sounds_type = /datum/looping_sound/weather/wind
-	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
-
-	imminent_transition_message = "The sky is overtaken by green clouds."
-
-	// How much radiation a mob gets while on an outside tile.
-	var/direct_rad_low = RAD_LEVEL_LOW
-	var/direct_rad_high = RAD_LEVEL_MODERATE
-
-	// How much radiation is bursted onto a random tile near a mob.
-	var/fallout_rad_low = RAD_LEVEL_HIGH
-	var/fallout_rad_high = RAD_LEVEL_VERY_HIGH
-	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
-
-/datum/weather/tyr/storm/planet_effect(mob/living/L)
-	if(L.z in holder.our_planet.expected_z_levels)
-		irradiate_nearby_turf(L)
-		var/turf/T = get_turf(L)
-		if(!T.is_outdoors())
-			return // They're indoors, so no need to irradiate them with fallout.
-
-		L.rad_act(rand(direct_rad_low, direct_rad_high))
-
-// This makes random tiles near people radioactive for awhile.
-// Tiles far away from people are left alone, for performance.
-/datum/weather/tyr/storm/proc/irradiate_nearby_turf(mob/living/L)
-	if(!istype(L))
-		return
-	var/list/turfs = RANGE_TURFS(world.view, L)
-	var/turf/T = pick(turfs) // We get one try per tick.
-	if(!istype(T))
-		return
-	if(T.is_outdoors())
-		SSradiation.radiate(T, rand(fallout_rad_low, fallout_rad_high))
-
-
 
 /datum/weather/tyr/fog
 	light_modifier = 0.5
 	light_color = "#FF0000"
-	temp_high = 183.15
-	temp_low = 160.15
 	transition_chances = list(
-		WEATHER_CLEAR = 50,
-		WEATHER_FOG = 50)
+		WEATHER_CLEAR = 80,
+		WEATHER_SANDSTORM = 10,
+		WEATHER_FOG = 10)
 
 	imminent_transition_message = "Fog emerges from nowhere."
 

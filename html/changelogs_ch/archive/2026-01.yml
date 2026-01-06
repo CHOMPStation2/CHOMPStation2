@@ -3,3 +3,85 @@
   - maptweak: modifies the CS psych office
   Willburd:
   - bugfix: Unsimmed turfs now have a properly set blast resistance
+2026-01-02:
+  Aroliacue:
+  - balance: Removed the combat medkit from the security armory on Southern Cross.
+      Replaced with two advanced (red) medkits.
+  CHOMPStation2StaffMirrorBot:
+  - qol: removed the same-limb restriction on synth limb self repairs
+  - bugfix: fixed synths being able to get disfigured at full health by being non-surgically
+      repaired.
+  - rscadd: Added new sets of modular security armor - Regular black/red and black/red/white
+      sets.
+  - image: Added icons for new black/red/white modular security armor.
+  - rscadd: Added black gas half-masks and security black gas half-masks to loadout
+      under masks section. Added security black gas half-masks to security lockers.
+  - image: "Added digi sprites for riot, laserproof, bulletproof and combat leg guards.\
+      \ Credit to @\_ballisticarmoredchan (Valinari) on Chomp for sprites and concept."
+  Diana:
+  - qol: Clicking the ammo hud will swap firemodes for guns if applicable, now.
+2026-01-03:
+  Aroliacue:
+  - rscadd: Added a new armor vendor to the security armory.
+  - balance: Reduced the strength of the default plate carrier equipment available
+      in security.
+  - maptweak: Added a new vendor to the security armory, consolidated the regular
+      combat armor into one tile.
+  FluffMedic:
+  - rscadd: New special effects for painite, and bronze ants. Added Graphite ant with
+      no special ability
+  - rscadd: New Lore bits hidden within the Tyrian maze
+  - rscadd: Adds Lighting Fog to Tyr, removes fierce sandstorm and hidden weathers
+  - balance: nerfed ant damage, and spawn rate, increased spawn amount
+  - balance: reworked two boss fights
+  - bugfix: Area coding for both inside and outside, and for area overhaul
+  - bugfix: Also fixes the corrupted lore looking horrendous
+  - bugfix: fixed active edges on some POIs
+  Guti:
+  - rscadd: Added weather anomaly
+  - qol: Smoke from neutralized anomalies is now much short-lived
+  - bugfix: Fixed spawned anomalies from telesci not having cores
+2026-01-05:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added premade liquid options to the Swoopie mob's stomach.
+  - image: Changed Swoopie's fullscreen overlays to use animated versions.
+  - spellcheck: Changed Swoopie's throat vbellies to use fancier worded progressive
+      stages rather than numbered stages.
+  - code_imp: moves all forceMoves for vore code to nom_atom
+  - bugfix: limits belly entered messages and transfer lookups
+  - bugfix: Fixes the number of hours until a job is available.
+  Diana:
+  - bugfix: Things that 'knock you out' will properly KO you now, instead of simply
+      paralyzing you.
+  - bugfix: Plushies can be interacted with again
+  - qol: Changeling helmet can eat more than just survival rations.
+  - bugfix: Vox magclaws no longer slow you down when enabled.
+  - bugfix: Holywater thresholds adjusted for horror elements.
+  - spellcheck: fixes a typo with the bodysnatcher
+  FluffMedic:
+  - bugfix: Makes the aegis bridge armory more consistent with other armories
+  - bugfix: Alters the areas so the rust computers share the area with the rust
+  Guti:
+  - bugfix: Fixed accidental mob vore not caring about prefs
+  - rscadd: Added weather anomaly event
+  - balance: Various events now weight more with their heads on, and scaled as more
+      people join in.
+  - rscdel: Removed various events out of rotation, mostly broken or completely ignored.
+  - bugfix: Fixed lead ingots not being grindable
+  - bugfix: Teshari CE cloak can now be properly selected
+  - spellcheck: Changes multiple instances of "Cheif" to "Chief"
+2026-01-06:
+  CHOMPStation2StaffMirrorBot:
+  - config: new config entries to set discord channels for round start/end announcements
+  - rscadd: Added new xenomorph queen backplate to wing menu.
+  - image: Added new sprites for xeno queen backplate.
+  - bugfix: Fixed xenomorph tail (vwag) not being able to toggle off vwag.
+  Diana:
+  - bugfix: You can no longer activate grenades in your hand while dead.
+  - code_imp: Rightclick functionality with held objects is possible now.
+  - bugfix: Fultons can no longer be deployed inside of things.
+  Guti:
+  - bugfix: Fixed Dark Maw not eating captured prey, if prefs aligned
+  Will:
+  - bugfix: Attempting to pass mob grabs to another player no longer drops a qdeleted
+      grab on the floor

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
+import { RoutingErrorWindow } from 'tgui/routes';
 /* This is all basically stolen from routes.js. */
-import { routingError } from 'tgui/routes';
 import {
   Box,
   Button,
@@ -32,6 +32,7 @@ type Data = {
 };
 
 const requirePdaInterface = require.context('./pda_screens', false, /\.tsx$/);
+
 // CHOMPEdit Start - Add check for chompstation pda_screens
 const requirePdaInterfaceCh = require.context(
   '../chompstation/Pda/pda_screens',
@@ -42,21 +43,24 @@ function getPdaApp(name: string) {
   let appModule: __WebpackModuleApi.RequireContext;
   try {
     appModule = requirePdaInterfaceCh(`./${name}.tsx`);
-  } catch (err) {
+  } catch (err: any) {
     try {
       appModule = requirePdaInterface(`./${name}.tsx`);
-    } catch (err) {
+    } catch (err: any) {
       if (err.code === 'MODULE_NOT_FOUND') {
-        return routingError('notFound', name);
+        return () => <RoutingErrorWindow type="notFound" name={name} />;
       }
       throw err;
     }
   }
   // CHOMPEdit End
-  const Component: () => React.JSX.Element = appModule[name];
+
+  const Component = appModule[name] as (() => React.JSX.Element) | undefined;
+
   if (!Component) {
-    return routingError('missingExport', name);
+    return () => <RoutingErrorWindow type="missingExport" name={name} />;
   }
+
   return Component;
 }
 

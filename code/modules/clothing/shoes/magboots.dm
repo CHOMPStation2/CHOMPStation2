@@ -122,6 +122,9 @@
 
 	actions_types = list(/datum/action/item_action/toggle_magclaws)
 
+/obj/item/clothing/shoes/magboots/vox/set_slowdown()
+	return //voxboots suffer no slowdown penalties!
+
 //In case they somehow come off while enabled.
 /obj/item/clothing/shoes/magboots/vox/dropped(mob/user)
 	..(user)

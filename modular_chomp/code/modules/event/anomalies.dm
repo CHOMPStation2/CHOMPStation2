@@ -110,3 +110,14 @@
 	if(isnull(impact_area))
 		impact_area = placer.find_valid_area()
 	command_announcement.Announce("Pyroclastic anomaly detected on [ANOMALY_ANNOUNCE_HARMFUL_TEXT] [impact_area.name].", "Anomaly Alert")
+
+// Weather
+/datum/event/anomaly/weather
+	startWhen = 3
+	announceWhen = 1
+	anomaly_path = /obj/effect/anomaly/weather
+
+/datum/event/anomaly/pyro/announce()
+	if(isnull(impact_area))
+		impact_area = placer.find_valid_area()
+	command_announcement.Announce("Metereologic anomaly detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
