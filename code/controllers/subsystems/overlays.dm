@@ -1,5 +1,3 @@
-//CHOMPEDIT -- this file is no longer ticked. See overlays_ch.dm for the new overlays subsystem.
-
 SUBSYSTEM_DEF(overlays)
 	name = "Overlay"
 	flags = SS_NO_FIRE|SS_NO_INIT
@@ -14,11 +12,6 @@ SUBSYSTEM_DEF(overlays)
 /datum/controller/subsystem/overlays/Recover()
 	stats = SSoverlays.stats
 
-<<<<<<< HEAD
-/datum/controller/subsystem/overlays/Initialize()
-	fire(FALSE, TRUE)
-	return SS_INIT_SUCCESS
-=======
 /// Converts an overlay list into text for debug printing
 /// Of note: overlays aren't actually mutable appearances, they're just appearances
 /// Don't have access to that type tho, so this is the best you're gonna get
@@ -38,78 +31,12 @@ SUBSYSTEM_DEF(overlays)
 	stringbro.icon = icon
 	stringbro.icon_state = iconstate
 	return stringbro.appearance
->>>>>>> c7c3a151ec (up ports the TG overlays subsystem update (#18945))
 
 /proc/icon2appearance(icon)
 	var/static/image/iconbro = new()
 	iconbro.icon = icon
 	return iconbro.appearance
 
-<<<<<<< HEAD
-/datum/controller/subsystem/overlays/fire(resumed, no_mc_tick)
-	var/count = 1
-	for (var/atom/atom as anything in queue)
-		++count
-		atom?.UpdateOverlays()
-		if (no_mc_tick)
-			CHECK_TICK
-		else if (MC_TICK_CHECK)
-			queue.Cut(1, count)
-			return
-	queue.Cut()
-
-
-/datum/controller/subsystem/overlays/proc/GetStateAppearance(icon, state)
-	var/list/subcache = state_cache[icon]
-	if (!subcache)
-		subcache = list()
-		state_cache[icon] = subcache
-	if (!subcache[state])
-		var/image/image = new (icon, null, state)
-		subcache[state] = image.appearance
-		++cache_size
-	return subcache[state]
-
-
-/datum/controller/subsystem/overlays/proc/GetIconAppearance(icon)
-	if (!icon_cache[icon])
-		var/image/image = new (icon)
-		icon_cache[icon] = image.appearance
-		++cache_size
-	return icon_cache[icon]
-
-
-/datum/controller/subsystem/overlays/proc/GetAppearanceList(atom/subject, list/sources)
-	if (!sources)
-		return list()
-	if (!islist(sources))
-		sources = list(sources)
-	var/list/result = list()
-	var/icon/icon = subject.icon
-	for (var/atom/entry as anything in sources)
-		AppearanceListEntry(entry, result, icon)
-	return result
-
-//Fixes runtime with overlays present in 515
-/datum/controller/subsystem/overlays/proc/AppearanceListEntry(var/atom/entry,var/list/result,var/icon/icon)
-	if (!entry)
-		return
-	else if(islist(entry))
-		var/list/entry_list = entry
-		for(var/entry_item in entry_list)
-			AppearanceListEntry(entry_item)
-	else if (istext(entry))
-		result += GetStateAppearance(icon, entry)
-	else if (isicon(entry))
-		result += GetIconAppearance(entry)
-	else
-		if (isloc(entry))
-			if (entry.flags & OVERLAY_QUEUED)
-				entry.ImmediateOverlayUpdate()
-		if (!ispath(entry))
-			if(entry.appearance)
-				result += entry.appearance
-=======
 /atom/proc/build_appearance_list(list/build_overlays)
 	if (!islist(build_overlays))
 		build_overlays = list(build_overlays)
@@ -117,7 +44,6 @@ SUBSYSTEM_DEF(overlays)
 		var/list/prio_overlay_temp
 		if(!islist(priority_overlays))
 			prio_overlay_temp = list(priority_overlays)
->>>>>>> c7c3a151ec (up ports the TG overlays subsystem update (#18945))
 		else
 			prio_overlay_temp = priority_overlays.Copy()
 		prio_overlay_temp |= build_overlays

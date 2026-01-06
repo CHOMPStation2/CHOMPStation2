@@ -99,11 +99,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 /turf/simulated/open/update_icon()
 	cut_overlays()
 	update_icon_edge()
-<<<<<<< HEAD
-	add_overlay(GLOB.openspace_backdrop_one_for_all, TRUE) //Special grey square for projecting backdrop darkness filter on it. //ChompEDIT - add this on icon update.
-=======
 	add_overlay(GLOB.openspace_backdrop_one_for_all) //Special grey square for projecting backdrop darkness filter on it.
->>>>>>> c7c3a151ec (up ports the TG overlays subsystem update (#18945))
 
 // Straight copy from space.
 /turf/simulated/open/attackby(obj/item/C as obj, mob/user as mob)
