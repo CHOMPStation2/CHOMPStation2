@@ -11856,15 +11856,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/engine)
-"gpv" = (
-/obj/item/radio/intercom{
-	desc = "Talk... listen through this.";
-	name = "Station Intercom (Brig Radio)";
-	pixel_y = -21;
-	wires = 7
-	},
-/turf/simulated/floor/tiled,
-/area/security/cetus/meteor/brig)
 "gpy" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -82348,7 +82339,7 @@ hgJ
 hgJ
 vsE
 qHs
-gpv
+hgJ
 iTy
 qHs
 wWn

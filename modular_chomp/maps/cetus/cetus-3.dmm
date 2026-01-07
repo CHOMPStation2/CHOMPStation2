@@ -19261,7 +19261,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
@@ -32971,6 +32970,7 @@
 	name = "interior access button";
 	pixel_y = 23
 	},
+/obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "tre" = (
@@ -39700,15 +39700,6 @@
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/atrium/secondaryf3)
-"xkS" = (
-/obj/structure/cable/yellow{
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/airless,
-/area/solar/forestarboardsolar)
 "xlb" = (
 /obj/effect/floor_decal/carpet{
 	dir = 4
@@ -85576,7 +85567,7 @@ kxX
 grW
 mco
 nOU
-xkS
+kxX
 grW
 mco
 nOU
@@ -85834,7 +85825,7 @@ kxX
 grW
 mco
 nOU
-xkS
+kxX
 grW
 mco
 nOU
@@ -86092,7 +86083,7 @@ kxX
 grW
 mco
 nOU
-xkS
+kxX
 grW
 mco
 nOU
@@ -86350,7 +86341,7 @@ kxX
 grW
 mco
 nOU
-xkS
+kxX
 grW
 mco
 nOU
