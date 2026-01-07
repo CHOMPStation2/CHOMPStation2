@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Added two more admin player effects: Wet Surrounding Surfaces and Give Quest"
