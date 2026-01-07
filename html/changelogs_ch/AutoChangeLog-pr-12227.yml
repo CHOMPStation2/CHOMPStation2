@@ -1,0 +1,4 @@
+author: "wide eyes"
+delete-after: True
+changes:
+  - bugfix: "fixes airlock, solars, and hopefully fixes sec intercom"
