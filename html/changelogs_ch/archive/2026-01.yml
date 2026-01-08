@@ -101,3 +101,13 @@
       charge cells with nutrition
   - code_imp: Added the Electrovore and Obligate code, touched up cell.dm to allow
       for draining and charging
+2026-01-08:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed mech maintenance mode causing issues for clients and server whilst
+      trying to move
+  - rscadd: 'Added two more admin player effects: Wet Surrounding Surfaces and Give
+      Quest'
+  Guti:
+  - bugfix: Fixed pyroclastic anomaly sending weather anomaly alerts
+  wide eyes:
+  - bugfix: fixes airlock, solars, and hopefully fixes sec intercom
