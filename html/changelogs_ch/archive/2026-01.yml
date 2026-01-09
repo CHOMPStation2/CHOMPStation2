@@ -111,3 +111,9 @@
   - bugfix: Fixed pyroclastic anomaly sending weather anomaly alerts
   wide eyes:
   - bugfix: fixes airlock, solars, and hopefully fixes sec intercom
+2026-01-09:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: moves those alists to lists
+  - balance: Security Protolathe can now print researched device cells.
+  - code_imp: cleans up the vore fx and resist code
+  - bugfix: multiple throwing issues
