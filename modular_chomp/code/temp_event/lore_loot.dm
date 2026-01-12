@@ -21,7 +21,8 @@
 
 /obj/item/prop/astral_event/Initialize(mapload)
 	var/obj/item/gps/on/our_gps = new(src)
-	our_gps.gps_tag = "name"
+	our_gps.gps_tag = "error"
+	. = ..()
 
 /obj/item/prop/astral_event/a
 	icon_state = "keycard_a"
