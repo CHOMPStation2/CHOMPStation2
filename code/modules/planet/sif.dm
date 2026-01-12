@@ -335,8 +335,8 @@ var/datum/planet/sif/planet_sif = null
 	effect_message = span_warning("Rain falls on you, drenching you in water.")
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
-	var/min_lightning_cooldown = 5 SECONDS
-	var/max_lightning_cooldown = 1 MINUTE
+	var/min_lightning_cooldown = 8 SECONDS
+	var/max_lightning_cooldown = 21 SECONDS
 	observed_message = "An intense storm pours down over the region."
 	transition_messages = list(
 		"You feel intense winds hit you as the weather takes a turn for the worst.",
@@ -348,11 +348,8 @@ var/datum/planet/sif/planet_sif = null
 	// CHOMPEdit - change weather sounds to proper storm sounds
 
 	transition_chances = list(
-		WEATHER_RAIN = 45,
-		WEATHER_STORM = 40,
-		WEATHER_HAIL = 10,
-		WEATHER_FOG = 3,
-		WEATHER_OVERCAST = 2
+		WEATHER_FALLOUT = 5,
+		WEATHER_STORM = 95
 		)
 	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
 
@@ -546,7 +543,8 @@ var/datum/planet/sif/planet_sif = null
 	light_color = "#CCFFCC"
 	flight_failure_modifier = 30
 	transition_chances = list(
-		WEATHER_FALLOUT = 100
+		WEATHER_FALLOUT = 5,
+		WEATHER_STORM = 95
 		)
 	observed_message = "Radioactive soot and ash rains down from the heavens."
 	transition_messages = list(

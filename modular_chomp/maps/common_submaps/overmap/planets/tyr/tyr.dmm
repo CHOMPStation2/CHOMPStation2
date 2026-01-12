@@ -173,6 +173,10 @@
 /obj/structure/window/plastitanium,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
+"aJ" = (
+/mob/living/simple_mob/humanoid/astral_collective/purity,
+/turf/simulated/floor,
+/area/planet/tyr/eclipse_refinery)
 "aK" = (
 /obj/structure/table/steel,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
@@ -237,12 +241,27 @@
 	},
 /turf/simulated/floor,
 /area/planet/tyr/eclipse_refinery)
-"aQ" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/clocksgun,
-/turf/simulated/floor,
-/area/planet/tyr/eclipse_refinery)
-"aR" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/cultfanatic,
+"aS" = (
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/micro_laser/ultra,
+/obj/item/stock_parts/micro_laser/ultra,
+/obj/item/stock_parts/micro_laser/ultra,
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/item/stack/cable_coil/silver,
+/obj/item/stack/cable_coil/silver,
+/obj/item/stack/cable_coil/silver,
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/item/prop/astral_event/e,
 /turf/simulated/floor,
 /area/planet/tyr/eclipse_refinery)
 "aT" = (
@@ -65033,11 +65052,11 @@ vI
 vI
 aH
 aM
+aJ
 aM
 aM
 aM
-aM
-aM
+aJ
 aM
 aM
 aH
@@ -65550,7 +65569,7 @@ vI
 aT
 aM
 aM
-aQ
+aM
 aP
 aM
 aM
@@ -65809,7 +65828,7 @@ aH
 aM
 aM
 aM
-aP
+aS
 aM
 aM
 aP
@@ -66065,11 +66084,11 @@ vI
 vI
 aH
 aM
+aJ
 aM
 aM
 aM
-aM
-aM
+aJ
 aM
 aM
 aH
@@ -66582,7 +66601,7 @@ vI
 aT
 aM
 aM
-aR
+aM
 aP
 aM
 aM
@@ -67097,11 +67116,11 @@ vI
 OQ
 aH
 aM
+aJ
 aM
 aM
 aM
-aM
-aM
+aJ
 aM
 aM
 aH

@@ -50,6 +50,24 @@
 	outdoors = 0
 	},
 /area/surface/outside/thor/beach)
+"ae" = (
+/obj/structure/table/fancyblack,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/item/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
+	pixel_y = 5
+	},
+/obj/item/flame/candle/candelabra{
+	pixel_y = -10
+	},
+/obj/item/prop/astral_event/b,
+/turf/simulated/floor/carpet/green,
+/area/surface/thor/kitchen)
 "af" = (
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/outside/thor/jungle)
@@ -69,10 +87,32 @@
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/desert_planet/gravel/thor,
 /area/surface/outside/thor/outpost)
+"ak" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/mob/living/simple_mob/humanoid/astral_collective/ranged/wolf,
+/turf/simulated/floor/wood/alt,
+/area/surface/thor/kitchen)
 "al" = (
 /obj/item/picnic_blankets_carried,
 /obj/item/melee/umbrella/random,
 /turf/simulated/floor/outdoors/desert_planet/gravel/thor,
+/area/surface/outside/thor/outpost)
+"am" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/tesh,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/outpost)
+"an" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/mob/living/simple_mob/humanoid/astral_collective/ranged/taur,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/outpost)
 "ao" = (
 /obj/structure/bonfire,
@@ -93,6 +133,15 @@
 /obj/effect/decal/remains/ribcage,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/outside/thor/jungle)
+"ar" = (
+/mob/living/simple_mob/humanoid/astral_collective/purity,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 313;
+	oxygen = 34.1451;
+	nitrogen = 63.4124;
+	outdoors = 1
+	},
+/area/surface/outside/thor/pool)
 "as" = (
 /obj/structure/table/woodentable,
 /obj/item/reagent_containers/food/snacks/waffles{
@@ -106,6 +155,14 @@
 	},
 /turf/simulated/floor/beach/sand/desert/outdoors/thor,
 /area/surface/outside/thor/beach)
+"au" = (
+/mob/living/simple_mob/humanoid/astral_collective/purity,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/outpost)
 "av" = (
 /mob/living/simple_mob/vore/wolf/direwolf/andrews{
 	faction = "hostile";
@@ -127,6 +184,15 @@
 	outdoors = 0
 	},
 /area/surface/outside/thor/pool)
+"ax" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/wolf,
+/turf/simulated/floor/wood{
+	temperature = 313;
+	oxygen = 34.1451;
+	nitrogen = 63.4124;
+	outdoors = 1
+	},
+/area/surface/thor/kitchen)
 "ay" = (
 /obj/structure/curtain/black{
 	name = "privacy curtain";
@@ -178,6 +244,30 @@
 	},
 /obj/item/reagent_containers/food/snacks/sharkmeatcooked,
 /turf/simulated/floor/tiled/white,
+/area/surface/thor/kitchen)
+"aD" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/mob/living/simple_mob/humanoid/astral_collective/ranged/tesh,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 313;
+	oxygen = 34.1451;
+	nitrogen = 63.4124;
+	outdoors = 1
+	},
+/area/surface/outside/thor/pool)
+"aE" = (
+/obj/item/stool/padded{
+	dir = 1
+	},
+/mob/living/simple_mob/humanoid/astral_collective/ranged/taur,
+/turf/simulated/floor/wood{
+	temperature = 313;
+	oxygen = 34.1451;
+	nitrogen = 63.4124;
+	outdoors = 1
+	},
 /area/surface/thor/kitchen)
 "aF" = (
 /obj/item/stool/padded{
@@ -268,6 +358,10 @@
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/outdoors/dirt/thor/planetuse,
 /area/surface/thor/abandonedhouse)
+"aQ" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/noodle,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
+/area/surface/outside/thor/pool)
 "aR" = (
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -293,6 +387,22 @@
 /obj/item/pickaxe,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/thor/caves)
+"aW" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/taur,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/outpost)
+"aX" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/noodle,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/outpost)
 "aY" = (
 /obj/item/contraband,
 /obj/item/contraband,
@@ -314,6 +424,10 @@
 	icon_state = "dmg2"
 	},
 /area/surface/outside/thor/jungle)
+"bb" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/wolf,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
+/area/surface/outside/thor/landingpad)
 "bc" = (
 /turf/simulated/floor/outdoors/mud/thor/planetuse,
 /area/surface/outside/thor/jungle)
@@ -2381,6 +2495,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
+/mob/living/simple_mob/humanoid/astral_collective/ranged/noodle,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/jungle)
 "tp" = (
@@ -25327,7 +25442,7 @@ ZQ
 DG
 PA
 PA
-PA
+au
 PA
 PA
 PA
@@ -27647,7 +27762,7 @@ PA
 PA
 PA
 DG
-PA
+aW
 PA
 PA
 PA
@@ -28434,7 +28549,7 @@ PA
 PA
 PA
 PA
-PA
+au
 PA
 PA
 PA
@@ -29446,7 +29561,7 @@ bF
 hz
 by
 by
-OU
+bb
 OU
 OU
 OU
@@ -29711,7 +29826,7 @@ xP
 wX
 PA
 PA
-PA
+au
 BR
 DG
 PA
@@ -30759,7 +30874,7 @@ RB
 RB
 RB
 RB
-RB
+an
 RB
 RB
 WR
@@ -32039,7 +32154,7 @@ DG
 pJ
 dL
 oL
-TQ
+aE
 oy
 aF
 oy
@@ -32826,9 +32941,9 @@ Vo
 Vo
 ka
 MX
-It
+ak
 YO
-NV
+ae
 qL
 ka
 Jt
@@ -33589,7 +33704,7 @@ oL
 TQ
 oy
 oy
-oy
+ax
 oy
 rf
 OH
@@ -34612,7 +34727,7 @@ PA
 PA
 PA
 PA
-PA
+au
 PA
 BR
 DG
@@ -35394,7 +35509,7 @@ PA
 PA
 PA
 PA
-PA
+am
 PA
 PA
 PA
@@ -35916,7 +36031,7 @@ PA
 PA
 PA
 PA
-PA
+au
 PA
 PA
 PA
@@ -36160,7 +36275,7 @@ PA
 PA
 PA
 PA
-PA
+aX
 PA
 BR
 DG
@@ -36942,7 +37057,7 @@ xK
 xK
 xK
 xK
-xK
+aD
 xK
 xK
 xK
@@ -39002,6 +39117,7 @@ hC
 hC
 wu
 DH
+ar
 sT
 sT
 sT
@@ -39013,8 +39129,7 @@ sT
 sT
 sT
 sT
-sT
-sT
+ar
 wu
 SN
 IQ
@@ -40291,7 +40406,7 @@ PA
 PA
 PA
 wu
-wu
+aQ
 uP
 Ts
 SD
@@ -40565,7 +40680,7 @@ uP
 uP
 wu
 jd
-PA
+am
 PA
 PA
 PA

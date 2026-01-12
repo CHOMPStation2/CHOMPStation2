@@ -775,3 +775,43 @@
 
 /area/outpost/mining_station/dock
 	name = "Mining Station Dock"
+
+//event stuff
+/area/surface/astral_event/eclipse_base
+	name = "Collection Center"
+	ambience = AMBIENCE_HIGHSEC
+
+/area/surface/astral_event/eclipse_base/power_center
+	name = "Collection Center - Generators"
+	outdoors = OUTDOORS_NO
+
+/area/surface/astral_event/eclipse_base/sleeping_quarters
+	name = "Collection Center - Dorms"
+	outdoors = OUTDOORS_NO
+
+/area/surface/astral_event/eclipse_base/armoury
+	name = "Collection Center - Armoury"
+	outdoors = OUTDOORS_NO
+
+/area/surface/astral_event/eclipse_base/pathway
+	outdoors = OUTDOORS_YES
+
+/area/surface/astral_event/gravity_base
+	name = "Weather Manpulation Center - Perimeter"
+	outdoors = OUTDOORS_YES
+
+/area/surface/astral_event/gravity_base/inside
+	name = "Weather Manpulation Center"
+	outdoors = OUTDOORS_NO
+
+/area/surface/astral_event/redspace
+	name = "Infestation"
+	outdoors = OUTDOORS_NO
+
+/area/surface/astral_event/redspace_isle
+	name = "Hiveland"
+	outdoors = OUTDOORS_YES
+
+/area/surface/astral_event/redspace_wilderness
+	name = "Infection"
+	outdoors = OUTDOORS_YES
