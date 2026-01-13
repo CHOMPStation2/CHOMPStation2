@@ -328,17 +328,6 @@ END//
 
 DELIMITER ;
 
-<<<<<<< HEAD
--- Table structure for table `whitelist`
-CREATE TABLE `whitelist` (
-	`id` INT(11) NOT NULL AUTO_INCREMENT,
-	`ckey` VARCHAR(45) NOT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
-	`kind` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
-	`entry` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_uca1400_ai_ci',
-	PRIMARY KEY (`id`) USING BTREE,
-	UNIQUE INDEX `ckey_kind_entry` (`ckey`, `kind`, `entry`) USING BTREE
-) ENGINE=InnoDB COLLATE='utf8mb4_uca1400_ai_ci';
-
 -- CHOMPedit Start
 CREATE TABLE IF NOT EXISTS `erro_mentor` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -347,7 +336,6 @@ CREATE TABLE IF NOT EXISTS `erro_mentor` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 -- CHOMPedit End
-=======
+
 -- Also enable the event_scheduler after creating the event
 SET GLOBAL event_scheduler = ON;
->>>>>>> 13566689a1 (Fixes and cleans up the sql schema (#18994))
