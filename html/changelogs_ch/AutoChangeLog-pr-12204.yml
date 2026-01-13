@@ -1,4 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - bugfix: "fixed the bug where if haste was picked first, hardy and the strength buffs could be grabbed"

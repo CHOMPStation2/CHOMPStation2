@@ -117,3 +117,10 @@
   - balance: Security Protolathe can now print researched device cells.
   - code_imp: cleans up the vore fx and resist code
   - bugfix: multiple throwing issues
+2026-01-13:
+  CHOMPStation2StaffMirrorBot:
+  - qol: prey struggles are now intent based
+  - bugfix: Fixes the ddraig description.
+  FluffMedic:
+  - bugfix: fixed the bug where if haste was picked first, hardy and the strength
+      buffs could be grabbed
