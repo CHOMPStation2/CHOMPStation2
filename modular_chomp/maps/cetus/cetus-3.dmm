@@ -6430,6 +6430,7 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/cetus/shallow/derelict/kitchen)
 "dRl" = (
@@ -35428,10 +35429,13 @@
 /area/maintenance/cetus/shallow/derelict/hallway)
 "uIA" = (
 /obj/structure/table/woodentable,
-/obj/item/radio/subspace,
 /obj/structure/cable/green{
 	icon_state = "6-9"
 	},
+/obj/item/paicard{
+	pixel_y = 11
+	},
+/obj/item/radio/subspace,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
 "uIE" = (
@@ -41085,6 +41089,9 @@
 /obj/item/deck/cah,
 /obj/item/deck/cah/black{
 	pixel_y = -8
+	},
+/obj/item/paicard/typeb{
+	pixel_y = 17
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/lounge)
