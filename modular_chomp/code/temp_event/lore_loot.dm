@@ -14,7 +14,8 @@
 
 /obj/item/prop/astral_event
 	name = "strange keycard"
-	desc = "An alien keycard."
+	desc = "An alien object, potentially a keycard."
+	description_info = "This items carries a GPS signal. Whilst carrying this item you are at risk, and will be a target. Toss out of your inventory before retreating to dorms, leaving, etc."
 	icon = 'modular_chomp/icons/obj/weather_ruins.dmi'
 	icon_state = "keycard_a"
 	w_class = ITEMSIZE_SMALL

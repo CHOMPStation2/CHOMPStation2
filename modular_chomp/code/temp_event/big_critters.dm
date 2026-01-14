@@ -108,19 +108,16 @@
 	speed = 6
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/occult/pink/do_special_attack(atom/A)
-	rng_cycle = rand(1,4)
+	rng_cycle = rand(1,3)
 	switch(attackcycle)
 		if(1)
 			addtimer(CALLBACK(src, PROC_REF(bomb_lines), A, rng_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 			attackcycle = 0
 		if(2)
-			addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, rng_cycle, 5), 0.5 SECONDS, TIMER_DELETE_ME)
+			addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, rng_cycle, 5), 1.5 SECONDS, TIMER_DELETE_ME)
 			attackcycle = 0
 		if(3)
 			addtimer(CALLBACK(src, PROC_REF(gattlingfire), A, rng_cycle, 6, 1), 0.5 SECONDS, TIMER_DELETE_ME)
-			attackcycle = 0
-		if(4)
-			addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, rng_cycle, 4, 7), 0.5 SECONDS, TIMER_DELETE_ME)
 			attackcycle = 0
 
 
