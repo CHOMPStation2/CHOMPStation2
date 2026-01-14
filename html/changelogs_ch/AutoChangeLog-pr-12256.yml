@@ -1,0 +1,4 @@
+author: "zeskorion"
+delete-after: True
+changes:
+  - balance: "caps feralness damage bonus to chimera punches at 40"
