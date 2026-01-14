@@ -46,9 +46,6 @@
 	var/list/paths = list()
 	if(allowtumors)
 		paths += subtypesof(/obj/item/organ/internal/malignant/tumor)
-		// Disabled on Chomp
-		paths -= /obj/item/organ/internal/malignant/tumor/pinata
-		paths -= /obj/item/organ/internal/malignant/tumor/moneyorgan
 	if(allowparasites)
 		paths += subtypesof(/obj/item/organ/internal/malignant/parasite)
 	if(allowengineered)
@@ -274,7 +271,7 @@
 
 
 
-
+/* CHOMPEdit - Disabled gib tumors
 // pinata makes you eventually explode into candy
 /obj/item/organ/internal/malignant/tumor/pinata
 	name = "pinata gland"
@@ -348,7 +345,7 @@
 		T = get_turf(src)
 	new /obj/effect/decal/cleanable/confetti(T)
 	qdel(src)
-
+*/
 
 // Teleports you randomly, until it gets you killed
 /obj/item/organ/internal/malignant/tumor/bluespace
@@ -428,7 +425,7 @@
 		owner.bloodstr.add_reagent( "ethanol", stage * 2)
 		cooldown = rand(cooldownmin,cooldownmax)
 
-
+/* CHOMPEdit - Disable gib tumors
 // Prints money until you explode
 /obj/item/organ/internal/malignant/tumor/moneyorgan
 	name = "crypto-cache"
@@ -521,7 +518,7 @@
 		spawn_money(1, T)
 
 	qdel(src)
-
+*/
 
 /****************************************************
 				Parasite varients
