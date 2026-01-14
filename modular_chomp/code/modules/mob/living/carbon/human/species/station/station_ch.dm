@@ -205,7 +205,7 @@
 		H.adjustOxyLoss(-heal_rate)
 		H.adjustToxLoss(-heal_rate)
 		if (prob(5))
-			to_chat(H, span_alien("A soothing sensation falls over us..."))
+			to_chat(H, span_alien("A soothing sensation falls over our body..."))
 		return 1
 
 	// Lastly, mend broken bones. May remove this if it's abused.
@@ -213,7 +213,7 @@
 		if (E.status & ORGAN_BROKEN)
 			if (prob(mend_prob))
 				if (E.mend_fracture())
-					to_chat(H, span_alien("We feel something mend within our [E.name]."))
+					to_chat(H, span_alien("We feel something reshape and mend within our [E.name]..."))
 			return 1
 
 	return 0
