@@ -46,6 +46,9 @@
 	var/list/paths = list()
 	if(allowtumors)
 		paths += subtypesof(/obj/item/organ/internal/malignant/tumor)
+		// Disabled on Chomp
+		paths -= /obj/item/organ/internal/malignant/tumor/pinata
+		paths -= /obj/item/organ/internal/malignant/tumor/moneyorgan
 	if(allowparasites)
 		paths += subtypesof(/obj/item/organ/internal/malignant/parasite)
 	if(allowengineered)
