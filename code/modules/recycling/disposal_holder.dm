@@ -149,18 +149,10 @@
 /obj/structure/disposalholder/relaymove(mob/living/user)
 	if(!isliving(user))
 		return
-<<<<<<< HEAD
-
-
-	if(user.stat || user.last_special <= world.time)
-		return
-	user.last_special = world.time + (1 SECOND) // CHOMPEdit: Clong, clong baby.
-=======
 	// If someone has sent you here to add a delay to this proc, inform them that it is a bug with /relaymove
 	// it's a minor bug, but it results in the proc being called much more frequently than it should, and when the bug is fixed the delay will work properly.
 	if(user.stat)
 		return
->>>>>>> d8684edb94 (Refactors disposal connection components, makes them more properly connected  (#18912))
 
 	if(QDELETED(src))
 		return
