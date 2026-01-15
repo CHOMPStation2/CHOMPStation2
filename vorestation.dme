@@ -5210,6 +5210,7 @@
 #include "modular_chomp\code\datums\tgs_event_handler.dm"
 #include "modular_chomp\code\datums\autolathe\engineering_ch.dm"
 #include "modular_chomp\code\datums\autolathe\general_ch.dm"
+#include "modular_chomp\code\datums\autolathe\tools.dm"
 #include "modular_chomp\code\datums\components\dry.dm"
 #include "modular_chomp\code\datums\components\squeak.dm"
 #include "modular_chomp\code\datums\components\xenoqueen.dm"

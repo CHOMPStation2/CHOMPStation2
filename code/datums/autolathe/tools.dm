@@ -64,13 +64,7 @@
 	name = "rapid service fabricator"
 	path = /obj/item/rsf
 
-<<<<<<< HEAD
-/datum/category_item/autolathe/tools/cable_coil //CHOMPEdit  -- defaults to 1,5,10x with a 30x stack max, need to figure out 30x eventually
-	name = "cable coil"
-	path =/obj/item/stack/cable_coil
-=======
 /datum/category_item/autolathe/tools/dest_tagger
 	name = "destination tagger"
 	path = /obj/item/destTagger
 	resources = list(MAT_STEEL = 250, MAT_GLASS = 125)
->>>>>>> d8684edb94 (Refactors disposal connection components, makes them more properly connected  (#18912))
