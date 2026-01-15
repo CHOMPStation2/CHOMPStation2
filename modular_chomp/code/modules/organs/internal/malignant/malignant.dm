@@ -271,7 +271,7 @@
 
 
 
-/* CHOMPEdit - Disabled gib tumors
+/* CHOMPRemove Start- Disabled gib tumors
 // pinata makes you eventually explode into candy
 /obj/item/organ/internal/malignant/tumor/pinata
 	name = "pinata gland"
@@ -346,6 +346,7 @@
 	new /obj/effect/decal/cleanable/confetti(T)
 	qdel(src)
 */
+// CHOMPRemove End
 
 // Teleports you randomly, until it gets you killed
 /obj/item/organ/internal/malignant/tumor/bluespace
@@ -425,7 +426,7 @@
 		owner.bloodstr.add_reagent( "ethanol", stage * 2)
 		cooldown = rand(cooldownmin,cooldownmax)
 
-/* CHOMPEdit - Disable gib tumors
+/* CHOMPRemove Start - Disable gib tumors
 // Prints money until you explode
 /obj/item/organ/internal/malignant/tumor/moneyorgan
 	name = "crypto-cache"
@@ -519,6 +520,7 @@
 
 	qdel(src)
 */
+// CHOMPRemove End
 
 /****************************************************
 				Parasite varients
