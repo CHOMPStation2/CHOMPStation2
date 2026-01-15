@@ -143,3 +143,8 @@
   - code_imp: remote views with zoom hude or different sizes are easier to start
   zeskorion:
   - bugfix: cetus fixes
+2026-01-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: painting meta data runtiming
+  zeskorion:
+  - balance: caps feralness damage bonus to chimera punches at 40
