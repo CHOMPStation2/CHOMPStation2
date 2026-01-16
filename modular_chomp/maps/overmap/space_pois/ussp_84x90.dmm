@@ -1000,7 +1000,6 @@
 /area/derelict/eva/annex)
 "eN" = (
 /obj/structure/table/standard,
-/obj/item/ammo_casing/microbattery/combat/final,
 /turf/simulated/floor/tiled/old_tile/beige,
 /area/derelict/eva/annex)
 "eO" = (
@@ -1590,6 +1589,7 @@
 "hj" = (
 /obj/structure/table/reinforced,
 /obj/item/paper/djstation/maint_report,
+/obj/item/prop/deconstructable/gigacell,
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/eva/annex)
 "hk" = (
