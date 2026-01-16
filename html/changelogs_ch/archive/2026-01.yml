@@ -148,3 +148,6 @@
   - bugfix: painting meta data runtiming
   zeskorion:
   - balance: caps feralness damage bonus to chimera punches at 40
+2026-01-16:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: initial input getting dropped in the backend
