@@ -157,7 +157,8 @@
 		/obj/item/tool/wirecutters/alien = 60,
 		/obj/item/tool/wrench/alien = 60,
 		/obj/item/cell/device/weapon/recharge/alien = 30,
-		/obj/item/perfect_tele/alien = 100
+		/obj/item/perfect_tele/alien = 100,
+		/obj/item/prop/deconstructable/gigacell = 100,
 			)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/boss/do_special_attack(atom/A)

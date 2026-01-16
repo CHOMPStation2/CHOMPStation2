@@ -19,14 +19,7 @@
 	vore_pounce_maxhealth = 100
 	vore_standing_too = TRUE
 	unacidable = TRUE
-	special_attack_min_range = 0
-	special_attack_max_range = 14
 	wreckage = /obj/item/prop/tyrlore/gatekeeper
-
-	melee_miss_chance = 0
-	see_in_dark = 14
-	melee_damage_lower = 20
-	melee_damage_upper = 20
 
 	loot_list = list(/obj/item/gun/energy/tyr_rifle  = 30,
 		/obj/item/tool/wirecutters/hybrid/alien  = 30,
@@ -49,6 +42,7 @@
 		/obj/item/melee/energy/tyr_sabre = 30,
 		/obj/item/melee/energy/tyr_hammer = 30,
 		/obj/item/melee/energy/tyr_katar = 30,
+		/obj/item/prop/deconstructable/gigacell = 100,
 		)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/acid_boss
@@ -352,7 +346,8 @@
 	attack_armor_pen = 80
 	movement_cooldown = 4
 
-	special_attack_cooldown = 25 SECONDS
+	special_attack_cooldown = 15 SECONDS
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
 	var/datum/disease/base_disease = /datum/disease/advance/agate_rot
 
