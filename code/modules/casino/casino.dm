@@ -737,33 +737,14 @@
 							selected_collar.icon_state = "casinoslave"
 							selected_collar.update_icon()
 							selected_collar.name = "disabled Sentient Prize Collar: [selected_collar.sentientprizename]"
-							selected_collar.desc = "A collar worn by sentient prizes registered to a SPASM. The tag says its registered to [selected_collar.sentientprizename], but harsh red text informs you its been disabled."
+							selected_collar.desc = "A collar worn by sentient prizes on the Golden Goose Casino. The tag says its registered to [selected_collar.sentientprizename], but harsh red text informs you its been disabled." //CHOMPEdit
 							sentientprizes_ckeys_list -= selected_collar.sentientprizeckey
 							selected_collar.sentientprizeckey = null
 							collar_list -= selected_collar
 							selected_collar = null
 							return
-<<<<<<< HEAD
-						var/safety_ckey = selected_collar.sentientprizeckey
-						var/confirm = tgui_alert(user, "Are you sure you want to wipe [selected_collar.sentientprizename] entry?", "Confirm Sentient Prize", list("Yes", "No"))
-						if(confirm == "Yes")
-							if(safety_ckey == selected_collar.sentientprizeckey)
-								to_chat(user, span_warning("[selected_collar.sentientprizename] collar has been deleted from registry!"))
-								selected_collar.icon_state = "casinoslave"
-								selected_collar.update_icon()
-								selected_collar.name = "disabled Sentient Prize Collar: [selected_collar.sentientprizename]"
-								selected_collar.desc = "A collar worn by sentient prizes on the Golden Goose Casino. The tag says its registered to [selected_collar.sentientprizename], but harsh red text informs you its been disabled." //CHOMPEdit
-								sentientprizes_ckeys_list -= selected_collar.sentientprizeckey
-								selected_collar.sentientprizeckey = null
-								collar_list -= selected_collar
-								selected_collar = null
-							else
-								to_chat(user, span_warning("Registry deletion aborted! Changed collar selection!"))
-								return
-=======
 						to_chat(user, span_warning("Registry deletion aborted! Changed collar selection!"))
 						return
->>>>>>> dc5a771b78 (some code cleanup (#19031))
 
 				if("Change Prize Value")
 					setprice(user)
