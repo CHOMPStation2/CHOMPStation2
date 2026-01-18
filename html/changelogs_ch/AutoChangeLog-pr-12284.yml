@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "chat message order for event announcements"

@@ -178,3 +178,43 @@
       flushed, not just carbon humans
   Guti:
   - rscdel: Removed gib tumors from random malignant organ event
+2026-01-18:
+  Azzy.Dreemurr:
+  - qol: Mentors now have the ability to communicate more easily in the Mentor Channel
+      via the button F9
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: spasm self ownership not being reversible
+  - bugfix: some missing buttons in the vorepanel for examine messages
+  - code_imp: updates the changelog
+  - bugfix: prevents signal reg spam on holomap spam clicking
+  - bugfix: linking in motd
+  - image: Janitor catborg
+  - bugfix: ss explosion runtiming in stat entry lookups
+  - bugfix: jani catborg still using the placeholder
+  - bugfix: chat message order for event announcements
+  Guti:
+  - bugfix: Fixed Anomalies not having a randomized frequency
+  - bugfix: Fixed weather anomalies not spawning with telescience
+  - bugfix: Fixed dimensional anomaly removing all the airlocks required access
+  - code_imp: Fixed get_station_areas returning areas from other stations
+  - code_imp: Moves a couple of procs from weather anomaly to anomalous weather datum
+  - balance: You can now have up to 3 viruses in your body.
+  - balance: Viruses will have a varied range of reagents for their cures now.
+  - balance: Removed nutriment-based virus protection.
+  - balance: Cure chance lowered to 5-10
+  - balance: Headache symptom stun reduced from 15 to 5
+  - balance: Incremented the power of Tissue Hydration
+  - balance: Reduced the severity of Weight Loss symptom to 1
+  - balance: Spyndrome's stealth changed to -1, resistance to 3
+  - rscadd: Added Narcolepsy symptom
+  - bugfix: Fixed admin-created viruses having the developer warning name
+  - bugfix: Injecting diseased blood will no longer check for clothing immunity
+  - code_imp: Cleaned up a few old symptom files
+  - code_imp: Added comparators for virus resistance and symptom names
+  - spellcheck: Corrected some spelling mistakes across various symptoms
+  Tost:
+  - qol: Moved a bunch of of cleaning messages to ballons.
+  - bugfix: Advanced Mop has sprites now.
+  nova:
+  - qol: Adds option to avoid attempts at being picked up with the personal space
+      bubble trait
