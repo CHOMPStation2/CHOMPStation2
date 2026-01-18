@@ -9,18 +9,20 @@ export const Header = (props: { dateDropdown: ReactNode | null }) => {
       <h1>VOREStation Changelist</h1>
       <p>
         {'The GitHub repository can be found '}
-        <a href="https://github.com/VOREStation/VOREStation">here</a>
+        <a href="https://github.com/CHOMPStation2/CHOMPStation2">here</a>
         {', recent GitHub contributors can be found '}
-        <a href="https://github.com/VOREStation/VOREStation/pulse/monthly">
+        <a href="https://github.com/CHOMPStation2/CHOMPStation2/pulse/monthly">
           here
         </a>
         .
       </p>
       <p>
         {'Visit our wiki '}
-        <a href="https://wiki.vore-station.net/Main_Page">here</a>
+        <a href="https://wiki.chompstation13.net/index.php/Chomp_Station_Wiki">
+          here
+        </a>
         {', check out our discord server '}
-        <a href="https://discord.gg/Zd5WMuq">here</a>.
+        <a href="https://discord.com/invite/chompers">here</a>.
       </p>
       {dateDropdown}
     </Section>

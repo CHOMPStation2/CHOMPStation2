@@ -12,7 +12,7 @@ export const Footer = (props: { dateDropdown: ReactNode | null }) => {
         {'All code after '}
         <a
           href={
-            'https://github.com/VOREStation/VOREStation/commit/' +
+            'https://github.com/CHOMPStation2/CHOMPStation2/commit/' +
             '333c566b88108de218d882840e61928a9b759d8f'
           }
         >
@@ -24,11 +24,11 @@ export const Footer = (props: { dateDropdown: ReactNode | null }) => {
         {'. All code before that commit is licensed under '}
         <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL v3</a>
         {', including tools unless their readme specifies otherwise. See '}
-        <a href="https://github.com/VOREStation/VOREStation/blob/master/LICENSE">
+        <a href="https://github.com/CHOMPStation2/CHOMPStation2/blob/master/COPYING">
           LICENSE
         </a>
         {' and '}
-        <a href="https://github.com/VOREStation/VOREStation/blob/master/LICENSE-GPL3.txt">
+        <a href="https://github.com/CHOMPStation2/CHOMPStation2/blob/master/LICENSE-GPL3.txt">
           GPLv3.txt
         </a>
         {' for more details.'}
@@ -38,7 +38,7 @@ export const Footer = (props: { dateDropdown: ReactNode | null }) => {
         {' See the footer of '}
         <a
           href={
-            'https://github.com/VOREStation/VOREStation/blob/master' +
+            'https://github.com/CHOMPStation2/CHOMPStation2/blob/master' +
             '/code/__DEFINES/tgs.dm'
           }
         >
@@ -47,7 +47,7 @@ export const Footer = (props: { dateDropdown: ReactNode | null }) => {
         {' and '}
         <a
           href={
-            'https://github.com/VOREStation/VOREStation/blob/master' +
+            'https://github.com/CHOMPStation2/CHOMPStation2/blob/master' +
             '/code/modules/tgs/LICENSE'
           }
         >
