@@ -129,7 +129,7 @@
 		return
 	if(istype(O, /obj/item/reagent_containers/food))
 		balloon_alert(user, "scanning...")
-		if(!do_after(user, 10))
+		if(!do_after(user, 10, src))
 			return
 		foodcheck(O)
 		return
