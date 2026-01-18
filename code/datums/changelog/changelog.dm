@@ -31,23 +31,16 @@
 
 /datum/changelog/tgui_static_data()
 	var/list/data = list()
-
-<<<<<<< HEAD
-	for(var/archive_file in sortList(flist("html/changelogs_ch/archive/"))) // CHOMPEdit - changelog_ch
-		var/archive_date = ymlRegex.Replace(archive_file, "")
-		data["dates"] = list(archive_date) + data["dates"]
-=======
 	data["dates"] = dates
 	data["testmerges"] = testmerges
 	data["discord_url"] = CONFIG_GET(string/discordurl)
->>>>>>> 7079d13f4d (port monkey changelog update [No GBP] (#19026))
 
 	return data
 
 /datum/changelog/proc/get_dates()
 	. = list()
 	var/regex/yml_regex = regex(@"\.yml", "g")
-	for(var/archive_file in flist("html/changelogs/archive/"))
+	for(var/archive_file in flist("html/changelogs_ch/archive/")) // CHOMPEdit
 		. += replacetext(archive_file, yml_regex, "")
 
 /datum/changelog/proc/get_testmerge_data()
