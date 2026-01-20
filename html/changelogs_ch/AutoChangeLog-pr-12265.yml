@@ -1,0 +1,10 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - rscadd: "Two new bosses"
+  - rscadd: "Alien tools are printable once the conditions are met"
+  - balance: "Several things are restricted behind exploration now, Omni Part, Recharging Cells, and the alien tools mentioned"
+  - balance: "Several bosses have been buffed"
+  - bugfix: "Ants properly glow now"
+  - bugfix: "The final option and a fluff item be obtainable in explo"
+  - maptweak: "Ambush Base, it's alt, and Blackshuttledown have been altered"
