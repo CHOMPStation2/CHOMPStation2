@@ -506,6 +506,21 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/medsci)
+"aaY" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twofp)
 "abm" = (
 /obj/structure/railing/overhang/hazard,
 /obj/structure/closet/emcloset,
@@ -8571,7 +8586,7 @@
 	name = "Medical Hardsuits";
 	req_one_access = list(5)
 	},
-/obj/item/rig/medical,
+/obj/item/rig/medical/equipped,
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_monitored/storage/eva)
 "cNf" = (
@@ -12334,7 +12349,7 @@
 	name = "Security Hardsuits";
 	req_one_access = list(1)
 	},
-/obj/item/rig/hazard,
+/obj/item/rig/hazard/equipped,
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_monitored/storage/eva)
 "edl" = (
@@ -31770,6 +31785,7 @@
 	},
 /obj/machinery/light,
 /obj/structure/closet/secure_closet/research_director,
+/obj/item/aicard,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/hor)
 "kPZ" = (
@@ -66381,7 +66397,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/stationshuttle)
 "wxO" = (
-/obj/machinery/computer/cloning{
+/obj/machinery/computer/transhuman/resleeving{
 	dir = 1
 	},
 /turf/simulated/floor/bluegrid,
@@ -104368,7 +104384,7 @@ pTs
 sty
 sty
 eZn
-iue
+aaY
 aab
 txP
 txP

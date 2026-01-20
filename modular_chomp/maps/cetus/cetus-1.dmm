@@ -75,6 +75,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/aftstar)
+"aal" = (
+/obj/structure/table/bench/wooden,
+/obj/structure/fans/tiny,
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/crew_quarters/cetus/meteor/atrium)
 "aam" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/maintenance_panel{
@@ -89,6 +94,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/aftstar)
+"aan" = (
+/obj/structure/fans/tiny,
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/crew_quarters/cetus/meteor/atrium)
 "aao" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
@@ -1643,6 +1652,10 @@
 /area/engineering/cetus/jointsubstation)
 "aIl" = (
 /obj/effect/floor_decal/rust,
+/obj/structure/sink/kitchen{
+	dir = 8;
+	pixel_x = -13
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/maintenance/ab_Hydroponics)
 "aIm" = (
@@ -6447,6 +6460,10 @@
 "dnv" = (
 /obj/structure/table/darkglass,
 /obj/random/mainttoyloot,
+/obj/item/reagent_containers/glass/rag{
+	pixel_y = 16;
+	pixel_x = -12
+	},
 /turf/simulated/floor/lino,
 /area/maintenance/ab_StripBar)
 "dny" = (
@@ -29214,6 +29231,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/machinery/vending/security_armory_armor,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/cetus/meteor/armory)
 "pkC" = (
@@ -43279,6 +43297,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/reagent_containers/glass/rag{
+	pixel_y = -10;
+	pixel_x = -5
+	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
 "whp" = (
@@ -44015,6 +44037,10 @@
 /obj/structure/table/woodentable,
 /obj/item/packageWrap,
 /obj/item/tool/screwdriver,
+/obj/item/reagent_containers/glass/rag{
+	pixel_y = 16;
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/bar)
 "wzo" = (
@@ -46410,6 +46436,10 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -27
+	},
+/obj/structure/sink/kitchen{
+	pixel_y = -15;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/ab_Kitchen)
@@ -101496,7 +101526,7 @@ tId
 ruy
 eVo
 gpb
-cfT
+aan
 gpb
 vvH
 rur
@@ -101753,9 +101783,9 @@ qjJ
 hUm
 vvH
 tEv
-gpb
+aal
 skG
-gpb
+aal
 vvH
 vvH
 moc
@@ -102012,7 +102042,7 @@ tId
 vvH
 aKf
 gpb
-cfT
+aan
 jQE
 mgT
 vvH
