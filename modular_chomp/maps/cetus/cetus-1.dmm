@@ -1652,6 +1652,10 @@
 /area/engineering/cetus/jointsubstation)
 "aIl" = (
 /obj/effect/floor_decal/rust,
+/obj/structure/sink/kitchen{
+	dir = 8;
+	pixel_x = -13
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/maintenance/ab_Hydroponics)
 "aIm" = (
@@ -46432,6 +46436,10 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -27
+	},
+/obj/structure/sink/kitchen{
+	pixel_y = -15;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/ab_Kitchen)
