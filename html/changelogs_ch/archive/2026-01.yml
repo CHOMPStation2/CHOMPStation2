@@ -231,3 +231,19 @@
   - bugfix: crashes in the station disposals system
   Kashargul:
   - bugfix: food replicator runtiming
+2026-01-20:
+  CHOMPStation2StaffMirrorBot:
+  - admin: added new dbranks permission
+  - admin: updated permissions panel
+  - admin: ranks with no permission will now be displayed with the "NONE" permission
+  - bugfix: belch chance not being properly accounted for on intent based struggling
+  - bugfix: some casino vendor runtimes
+  - bugfix: stale settings in rare cases
+  Diana:
+  - bugfix: Collars, when worn in the 'suit' slot, now properly show.
+  - bugfix: Translocators work when clicked vs having to press Z
+  Guti:
+  - bugfix: Fixed being able to contract the same disease multiple times.
+  - bugfix: Fixed viruses not removing their mob reference when the mob was deleted.
+  Will:
+  - bugfix: Disposal expel runtime fixed
