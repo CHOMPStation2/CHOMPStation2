@@ -23,6 +23,11 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
+"ac" = (
+/obj/structure/table/alien/blue,
+/obj/item/prop/deconstructable/gigacell,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
 "am" = (
 /mob/living/carbon/alien/diona{
 	adult_name = "Schmeinkie";
@@ -288,7 +293,6 @@
 /obj/structure/table/alien,
 /obj/effect/floor_decal/techfloor,
 /obj/item/storage/belt/medical/alien,
-/obj/item/telecube/precursor/mated/mirrorcolor,
 /obj/item/implantcase/sprinter,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
@@ -4083,7 +4087,6 @@
 	dir = 8
 	},
 /obj/item/circuitboard/pacman,
-/obj/item/telecube/precursor/mated/zone,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -5001,7 +5004,7 @@ je
 je
 BR
 je
-fn
+ac
 fO
 SB
 Ga

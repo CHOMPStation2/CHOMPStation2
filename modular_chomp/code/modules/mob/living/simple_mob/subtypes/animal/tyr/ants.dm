@@ -109,6 +109,7 @@
 	color = "#FF7D51"
 	glow_range = 5
 	glow_intensity = 2
+	glow_toggle = TRUE
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/agate/do_special_attack(atom/A)
 	explosion(src.loc, 2, 1, 1, 1)
@@ -161,6 +162,7 @@
 	color = "#91FF91"
 	glow_range = 5
 	glow_intensity = 2
+	glow_toggle = TRUE
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/uranium/do_special_attack(atom/A)
 	visible_message(span_bolddanger(span_orange("The ant glows bright green!.")))
