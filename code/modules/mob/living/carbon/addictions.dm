@@ -10,11 +10,13 @@
 // code for exact logic. Inaprovaline is intended to suppress withdrawl effects. Reagents may override the handle_addiction proc to have their own special handling. Like reagents that kill you if you
 // do not feed their withdrawls. The handle_addiction proc also handles if you become cured of your addiction! If it returns 0, it will end your addiction.
 
-#define ADDICTION_PROC -4000
-#define SLOWADDICT_PROC -8000
-#define FASTADDICT_PROC -1000
+// CHOMPEdit Start - Faster addictions
+#define SLOWADDICT_PROC -1750
+#define ADDICTION_PROC -1000
+#define FASTADDICT_PROC -750
 #define POISONADDICT_PROC -100
-#define ADDICTION_PEAK 300
+#define ADDICTION_PEAK 250
+// CHOMPEdit End
 
 /mob/living/carbon/proc/sync_addictions()
 	SHOULD_NOT_OVERRIDE(TRUE)
