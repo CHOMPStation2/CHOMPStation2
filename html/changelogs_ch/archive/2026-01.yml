@@ -247,3 +247,22 @@
   - bugfix: Fixed viruses not removing their mob reference when the mob was deleted.
   Will:
   - bugfix: Disposal expel runtime fixed
+2026-01-21:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: some missing vanity copy traits
+  - qol: reduce protean tab flicker
+  - code_imp: moves the loading for the browser to promiseAll, similar to chat data
+      loading
+  - maptweak: Removes the window from the door to the security processing room on
+      the SD, and adds a lock to it.
+  FluffMedic:
+  - rscadd: Two new bosses
+  - rscadd: Alien tools are printable once the conditions are met
+  - balance: Several things are restricted behind exploration now, Omni Part, Recharging
+      Cells, and the alien tools mentioned
+  - balance: Several bosses have been buffed
+  - bugfix: Ants properly glow now
+  - bugfix: The final option and a fluff item be obtainable in explo
+  - maptweak: Ambush Base, it's alt, and Blackshuttledown have been altered
+  zeskorion:
+  - bugfix: cs maintenance
