@@ -646,4 +646,3 @@
 	else if(health > -getMaxHealth())
 		adjustOxyLoss(-(min(getOxyLoss(), 5)))
 		updatehealth()
-		to_chat(src, span_notice("You feel a breath of fresh air enter your lungs. It feels good."))
