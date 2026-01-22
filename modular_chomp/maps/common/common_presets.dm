@@ -69,13 +69,33 @@
 	id = "Centcom Relay"
 	autolinkers = list("cnt_relay")
 
+/obj/machinery/telecomms/relay/preset/southerncross/echidna
+	id = "Echidna Relay"
+	autolinkers = list("echidna_relay")
+
+/obj/machinery/telecomms/relay/preset/southerncross/needle
+	id = "Needle Relay"
+	autolinkers = list("needle_relay")
+
+/obj/machinery/telecomms/relay/preset/southerncross/stargazer
+	id = "Stargazer Relay"
+	autolinkers = list("stargazer_relay")
+
+/obj/machinery/telecomms/relay/preset/southerncross/ursula
+	id = "Ursula Relay"
+	autolinkers = list("ursula_relay")
+
+/obj/machinery/telecomms/relay/preset/southerncross/baby_mammoth
+	id = "Baby Mammoth Relay"
+	autolinkers = list("baby_mammoth_relay")
+
 /obj/machinery/telecomms/hub/preset/southerncross
 	id = "Hub"
 	network = "tcommsat"
 	autolinkers = list("hub",
 		"d0_relay", "d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay", "cnt_relay", "explorer", "exp_relay",
 		"science", "medical", "supply", "service", "common", "command", "engineering", "security", "unused",
-		"hb_relay", "receiverA", "broadcasterA"
+		"hb_relay", "receiverA", "broadcasterA", "echidna_relay", "needle_relay", "stargazer_relay", "ursula_relay", "baby_mammoth_relay"
 	)
 
 /obj/machinery/telecomms/hub/preset/southerncross/centcomm
