@@ -1,7 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/turf/space,
-/area/submap/DoomP)
 "ab" = (
 /obj/structure/table/standard,
 /obj/item/clothing/head/welding,
@@ -2606,8 +2603,8 @@ nf
 nf
 pa
 pa
-aa
-aa
+pa
+pa
 pa
 pa
 pa
@@ -2668,8 +2665,8 @@ nf
 nf
 pa
 pa
-aa
-aa
+pa
+pa
 pa
 pa
 pa
@@ -2730,8 +2727,8 @@ nf
 nf
 pa
 pa
-aa
-aa
+pa
+pa
 pa
 pa
 pa
