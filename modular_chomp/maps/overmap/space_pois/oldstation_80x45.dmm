@@ -1134,7 +1134,7 @@
 /area/submap/oldstation_hiveboat)
 "mu" = (
 /obj/structure/table/reinforced,
-/obj/item/gun/energy/gun/fluff/gunsword,
+/obj/item/prop/deconstructable/gigacell,
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/oldstation_tox)
 "mw" = (
@@ -1863,7 +1863,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/paper/k14,
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/oldstation_tox)
 "uy" = (

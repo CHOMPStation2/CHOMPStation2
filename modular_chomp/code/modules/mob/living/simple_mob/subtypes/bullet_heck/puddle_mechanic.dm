@@ -1,6 +1,6 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/summon_puddles(atom/A, var/next_cycle, var/puddle_item)
-	for(var/mob/living/L in view(src, 7))
-		if(L.stat != DEAD || !IIsAlly(L))
+	for(var/mob/living/L in orange(src, 14))
+		if(L.stat != DEAD && !IIsAlly(L))
 			L.add_modifier(puddle_item, 3, src)
 	attackcycle = next_cycle
 
@@ -12,6 +12,14 @@
 
 /datum/modifier/mmo_drop/on_expire()
 	if(holder.stat != DEAD)
+		var/turf/T = get_turf(holder)
+		new puddleitem(T)
+
+/datum/modifier/mmo_drop/lingering
+	var/dropchance = 50
+
+/datum/modifier/mmo_drop/lingering/tick()
+	if(holder.stat != DEAD && prob(dropchance))
 		var/turf/T = get_turf(holder)
 		new puddleitem(T)
 
@@ -49,3 +57,21 @@
 /obj/item/grenade/shooter/auto_explode/tyr_flora
 	spread_range = 1
 	projectile_types = list(/obj/item/projectile/energy/neurotoxin/toxic/tyr_flora)
+
+/obj/item/grenade/shooter/auto_explode/blood_boss
+	spread_range = 2
+	projectile_types = list(/obj/item/projectile/energy/blood_bullet)
+
+/datum/modifier/mmo_drop/lingering/blood_flower
+	puddleitem = /obj/item/grenade/shooter/auto_explode/blood_boss
+
+/obj/item/projectile/bullet/incendiary/dragonflame/occult
+	range = 4
+	speed = 4
+
+/obj/item/grenade/shooter/auto_explode/occult_fireball
+	spread_range = 2
+	projectile_types = list(/obj/item/projectile/bullet/incendiary/dragonflame/occult)
+
+/datum/modifier/mmo_drop/occult_fireball
+	puddleitem = /obj/item/grenade/shooter/auto_explode/occult_fireball

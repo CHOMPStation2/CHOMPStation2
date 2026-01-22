@@ -500,6 +500,27 @@
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/white,
 /area/medical/medsci)
+"aaX" = (
+/obj/structure/sign/nosmoking_2{
+	pixel_x = -29
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/medical/medsci)
+"aaY" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twofp)
 "abm" = (
 /obj/structure/railing/overhang/hazard,
 /obj/structure/closet/emcloset,
@@ -1230,6 +1251,10 @@
 	pixel_x = -3
 	},
 /obj/machinery/recharger,
+/obj/item/paicard{
+	pixel_y = 3;
+	pixel_x = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medsci)
 "anP" = (
@@ -8561,7 +8586,7 @@
 	name = "Medical Hardsuits";
 	req_one_access = list(5)
 	},
-/obj/item/rig/medical,
+/obj/item/rig/medical/equipped,
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_monitored/storage/eva)
 "cNf" = (
@@ -12324,7 +12349,7 @@
 	name = "Security Hardsuits";
 	req_one_access = list(1)
 	},
-/obj/item/rig/hazard,
+/obj/item/rig/hazard/equipped,
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_monitored/storage/eva)
 "edl" = (
@@ -16886,6 +16911,9 @@
 	},
 /obj/effect/floor_decal/corner/beige/diagonal,
 /obj/machinery/light,
+/obj/structure/sign/nosmoking_2{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled,
 /area/medical/Lounge)
 "fGl" = (
@@ -31757,6 +31785,7 @@
 	},
 /obj/machinery/light,
 /obj/structure/closet/secure_closet/research_director,
+/obj/item/aicard,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/hor)
 "kPZ" = (
@@ -47851,6 +47880,9 @@
 /area/crew_quarters/Gym)
 "qfS" = (
 /obj/structure/table/bench/wooden,
+/obj/item/paicard{
+	pixel_y = 11
+	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/cetus/jrlounge)
 "qgk" = (
@@ -49842,6 +49874,7 @@
 /area/hallway/primary/seconddeck/dockhallway)
 "qOc" = (
 /obj/structure/closet/secure_closet/freezer/meat,
+/obj/item/reagent_containers/food/condiment/spacespice,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen)
 "qOq" = (
@@ -66364,7 +66397,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/stationshuttle)
 "wxO" = (
-/obj/machinery/computer/cloning{
+/obj/machinery/computer/transhuman/resleeving{
 	dir = 1
 	},
 /turf/simulated/floor/bluegrid,
@@ -69311,6 +69344,7 @@
 	opacity = 0;
 	dir = 4
 	},
+/obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/rnd/Xenobiology_Lab)
 "xuO" = (
@@ -70211,6 +70245,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/sign/nosmoking_2{
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/hall)
@@ -96889,7 +96926,7 @@ gGu
 eNS
 kem
 rOy
-eNS
+aaX
 gAW
 hOO
 auc
@@ -104347,7 +104384,7 @@ pTs
 sty
 sty
 eZn
-iue
+aaY
 aab
 txP
 txP

@@ -102,3 +102,23 @@
 	min_fire_resistance = 0.8
 	effective_fire_resistance = 1
 
+//props meant to be scanned/deconstructed by science, obtained via exploration
+/obj/item/prop/deconstructable
+	name = "strange device"
+	desc = "An advanced bit of technolgy, potentially useable by science."
+	icon = 'modular_chomp/icons/obj/weather_ruins.dmi'
+	icon_state = "gigapower_core"
+	w_class = ITEMSIZE_SMALL
+
+/obj/item/prop/deconstructable/gigacell
+	name = "giga power assembly"
+
+/obj/item/cell/device/weapon/recharge/cult
+	name = "occult cell"
+	desc = "An alien technology that produces energy seemingly out of nowhere, perhaps from another realm?"
+	icon = 'icons/obj/wizard.dmi'
+	icon_state = "soulstone2"
+	charge = 300
+	maxcharge = 300
+	charge_amount = 300
+	charge_delay = 50

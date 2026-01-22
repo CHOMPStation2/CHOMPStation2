@@ -25,7 +25,11 @@
 /turf/template_noop,
 /area/submap/Blackshuttledown)
 "ah" = (
-/obj/random/mob/merc/all,
+/mob/living/simple_mob/humanoid/merc/ranged/smg,
+/turf/template_noop,
+/area/submap/Blackshuttledown)
+"ai" = (
+/mob/living/simple_mob/humanoid/merc/ranged/grenadier,
 /turf/template_noop,
 /area/submap/Blackshuttledown)
 "aj" = (
@@ -33,6 +37,11 @@
 	icon_state = "dark0";
 	name = "Unknown Shuttle"
 	},
+/area/submap/Blackshuttledown)
+"ak" = (
+/obj/effect/floor_decal/borderfloor,
+/mob/living/simple_mob/humanoid/merc/ranged/rifle,
+/turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "al" = (
 /obj/structure/shuttle/engine/heater{
@@ -122,6 +131,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
+"av" = (
+/mob/living/simple_mob/humanoid/merc/ranged/deagle,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
 "aw" = (
 /obj/structure/closet/crate/secure/loot,
 /turf/simulated/floor/tiled/steel,
@@ -170,6 +183,10 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
+/area/submap/Blackshuttledown)
+"aG" = (
+/mob/living/simple_mob/mechanical/mecha/eclipse/bomb_mauler,
+/turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "aH" = (
 /turf/simulated/shuttle/wall/dark{
@@ -369,10 +386,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
-"bn" = (
-/obj/random/mob/merc/all,
-/turf/simulated/floor/tiled/steel,
-/area/submap/Blackshuttledown)
 "bo" = (
 /obj/structure/table/steel,
 /obj/random/toolbox,
@@ -431,7 +444,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bv" = (
-/obj/structure/table/steel,
+/obj/structure/closet/crate/secure/lootsafe,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/Blackshuttledown)
 "bw" = (
@@ -453,10 +466,6 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/steel,
-/area/submap/Blackshuttledown)
-"bz" = (
-/obj/effect/floor_decal/corner/grey,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bA" = (
@@ -645,10 +654,18 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
+"ce" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/mob/living/simple_mob/humanoid/merc/ranged/laser,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
 "cf" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
+/mob/living/simple_mob/humanoid/merc/melee,
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Blackshuttledown)
 "cg" = (
@@ -666,7 +683,6 @@
 /obj/structure/toilet{
 	dir = 1
 	},
-/obj/random/mob/merc/all,
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Blackshuttledown)
 "cj" = (
@@ -725,28 +741,9 @@
 	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
-"cr" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/merc/melee/sword/poi,
-/turf/simulated/floor/tiled/steel,
-/area/submap/Blackshuttledown)
-"cs" = (
-/mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced,
-/turf/simulated/floor/tiled/steel,
-/area/submap/Blackshuttledown)
-"jW" = (
-/obj/item/stool,
-/mob/living/simple_mob/humanoid/merc/ranged/ionrifle/poi,
-/turf/simulated/floor/tiled/steel,
-/area/submap/Blackshuttledown)
-"AL" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/random/mob/merc/all,
-/turf/simulated/floor/tiled/steel,
+"ct" = (
+/mob/living/simple_mob/humanoid/merc/ranged/technician,
+/turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
 "DG" = (
 /obj/structure/table/steel,
@@ -1076,7 +1073,7 @@ aj
 bb
 bh
 bl
-bl
+av
 bl
 bl
 bF
@@ -1111,12 +1108,12 @@ aj
 aj
 RP
 bc
-AL
+az
 az
 aK
 aS
 az
-AL
+az
 bU
 aQ
 aj
@@ -1259,12 +1256,12 @@ aj
 aj
 aj
 aj
-aL
-bl
-bz
+ce
 bl
 bl
-aT
+bl
+bl
+ak
 aj
 aj
 aj
@@ -1342,7 +1339,7 @@ bM
 az
 bW
 aS
-cr
+az
 ck
 aj
 ag
@@ -1362,8 +1359,8 @@ ad
 ab
 ab
 ag
-ah
 ab
+ai
 aj
 aj
 aj
@@ -1382,8 +1379,8 @@ aT
 aj
 aj
 aj
-ah
 ab
+ai
 ag
 ab
 ab
@@ -1473,8 +1470,8 @@ ab
 af
 ab
 ag
-ab
 ah
+ab
 aj
 aj
 aj
@@ -1482,10 +1479,10 @@ aj
 aj
 aj
 bl
-jW
+bu
 bB
 Fp
-jW
+bu
 bl
 aj
 aj
@@ -1555,12 +1552,12 @@ aC
 aN
 aW
 aj
-bn
+bl
 bu
 DG
 bB
 bu
-bn
+bl
 aj
 bl
 bl
@@ -1625,7 +1622,7 @@ ab
 ab
 aj
 at
-aE
+ct
 aE
 aX
 aj
@@ -1741,10 +1738,10 @@ aP
 ba
 aj
 bo
-bn
 bl
-cs
-bn
+aG
+bl
+bl
 bR
 aj
 ca

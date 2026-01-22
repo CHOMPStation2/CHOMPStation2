@@ -12,7 +12,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases/no_movement
 	anchored = 1
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)
-
+	projectiletype = /obj/item/projectile/energy/eclipse/tyrjavelin
 	loot_list = list(/obj/item/tool/wirecutters/hybrid/alien  = 10,
 		/obj/item/tool/wrench/hybrid/alien  = 10,
 		/obj/item/tool/crowbar/hybrid/alien  = 10,
@@ -30,6 +30,7 @@
 		/obj/item/stock_parts/capacitor/hyper = 80,
 		/obj/item/stock_parts/manipulator/hyper = 80,
 		/obj/item/stock_parts/matter_bin/hyper = 80,
+		/obj/item/prop/deconstructable/gigacell = 100,
 		)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr/do_special_attack(atom/A)
@@ -40,7 +41,7 @@
 			attackcycle = 0
 		if(2)
 			specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
-			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 3, 15), 1 SECOND, TIMER_DELETE_ME)
+			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 3, 7), 1 SECOND, TIMER_DELETE_ME)
 			attackcycle = 0
 		if(3)
 			specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
@@ -73,7 +74,8 @@
 		/obj/item/prop/nanoweave/terraformers = 50,
 		/obj/item/prop/nanoweave/cyan = 50,
 		/obj/item/prop/nanoweave/lime = 50,
-		/obj/item/perfect_tele/alien = 100
+		/obj/item/perfect_tele/alien = 100,
+		/obj/item/prop/deconstructable/gigacell = 100
 			)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/nanoweavetower/do_special_attack(atom/A)
@@ -89,7 +91,7 @@
 			specialattackprojectile = /obj/item/projectile/energy/wallbreaker/boss
 			rng_cycle = rand(1,4)
 			direct_say("PROTOCOL: PRECISION. SWEEP.")
-			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 15), 2 SECONDS, TIMER_DELETE_ME)
+			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 7), 2 SECONDS, TIMER_DELETE_ME)
 			attackcycle = 0
 		if(3)
 			specialattackprojectile = /obj/item/projectile/energy/lightingspark/nanoweave

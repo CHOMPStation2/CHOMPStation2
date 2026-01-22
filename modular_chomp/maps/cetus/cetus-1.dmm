@@ -75,6 +75,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/aftstar)
+"aal" = (
+/obj/structure/table/bench/wooden,
+/obj/structure/fans/tiny,
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/crew_quarters/cetus/meteor/atrium)
 "aam" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/maintenance_panel{
@@ -89,6 +94,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/aftstar)
+"aan" = (
+/obj/structure/fans/tiny,
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/crew_quarters/cetus/meteor/atrium)
 "aao" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
@@ -1643,6 +1652,10 @@
 /area/engineering/cetus/jointsubstation)
 "aIl" = (
 /obj/effect/floor_decal/rust,
+/obj/structure/sink/kitchen{
+	dir = 8;
+	pixel_x = -13
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/maintenance/ab_Hydroponics)
 "aIm" = (
@@ -2619,6 +2632,15 @@
 "biI" = (
 /obj/machinery/light/broken,
 /obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/condiment/spacespice,
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
+	pixel_y = -2;
+	pixel_x = -5
+	},
+/obj/item/reagent_containers/food/condiment/small/peppermill{
+	pixel_y = -2;
+	pixel_x = 5
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/ab_StripBar)
 "biQ" = (
@@ -6438,6 +6460,10 @@
 "dnv" = (
 /obj/structure/table/darkglass,
 /obj/random/mainttoyloot,
+/obj/item/reagent_containers/glass/rag{
+	pixel_y = 16;
+	pixel_x = -12
+	},
 /turf/simulated/floor/lino,
 /area/maintenance/ab_StripBar)
 "dny" = (
@@ -14932,13 +14958,17 @@
 "hUL" = (
 /obj/structure/table/steel,
 /obj/item/nif/glitch/bad{
-	pixel_x = 3
+	pixel_x = -1
 	},
 /obj/item/surgical/surgicaldrill{
 	pixel_y = 5
 	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
+	},
+/obj/item/reagent_containers/glass/bottle/stoxin{
+	pixel_x = 9;
+	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/cetus/tech)
@@ -17135,6 +17165,7 @@
 /obj/item/handcuffs/cable/white,
 /obj/item/handcuffs/legcuffs/fake,
 /obj/item/bodysnatcher,
+/obj/item/reagent_containers/glass/bottle/stoxin,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/ripperdock)
 "jar" = (
@@ -19288,7 +19319,6 @@
 /obj/structure/grille,
 /obj/item/material/shard,
 /obj/structure/window/reinforced,
-/obj/structure/casino_table/blackjack_l,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 "jYZ" = (
@@ -23341,6 +23371,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/vomit/old,
+/obj/random/coin,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/hallway)
 "mhA" = (
@@ -26150,8 +26181,9 @@
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/pink/diagonal,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/random/maintenance/foodstuff,
-/obj/random/coin,
+/obj/random/maintenance/foodstuff{
+	pixel_y = 4
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/ab_Kitchen)
 "nJV" = (
@@ -28420,11 +28452,11 @@
 /turf/simulated/floor/tiled/old_tile/green,
 /area/maintenance/cetus/janitorial)
 "oNH" = (
-/obj/machinery/light/small/fluorescent{
-	dir = 4
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/machinery/light/small/fluorescent{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm5)
@@ -29199,6 +29231,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/machinery/vending/security_armory_armor,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/cetus/meteor/armory)
 "pkC" = (
@@ -31024,6 +31057,14 @@
 	dir = 6
 	},
 /obj/item/material/knife,
+/obj/item/reagent_containers/glass/bottle/sorbitol{
+	pixel_y = 23;
+	pixel_x = 9;
+	desc = "A small bottle of sorbitol. It's labelled as an artificial sweetener."
+	},
+/obj/item/reagent_containers/food/condiment/small/sugar{
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/ab_Kitchen)
 "qgd" = (
@@ -43256,6 +43297,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/reagent_containers/glass/rag{
+	pixel_y = -10;
+	pixel_x = -5
+	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
 "whp" = (
@@ -43992,6 +44037,10 @@
 /obj/structure/table/woodentable,
 /obj/item/packageWrap,
 /obj/item/tool/screwdriver,
+/obj/item/reagent_containers/glass/rag{
+	pixel_y = 16;
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/bar)
 "wzo" = (
@@ -46387,6 +46436,10 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -27
+	},
+/obj/structure/sink/kitchen{
+	pixel_y = -15;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/ab_Kitchen)
@@ -74933,7 +74986,7 @@ nYb
 dOH
 hqA
 dhn
-mHP
+msB
 cZO
 qFw
 qFw
@@ -101473,7 +101526,7 @@ tId
 ruy
 eVo
 gpb
-cfT
+aan
 gpb
 vvH
 rur
@@ -101730,9 +101783,9 @@ qjJ
 hUm
 vvH
 tEv
-gpb
+aal
 skG
-gpb
+aal
 vvH
 vvH
 moc
@@ -101989,7 +102042,7 @@ tId
 vvH
 aKf
 gpb
-cfT
+aan
 jQE
 mgT
 vvH
