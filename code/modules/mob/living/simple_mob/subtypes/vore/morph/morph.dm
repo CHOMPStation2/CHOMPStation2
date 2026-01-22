@@ -196,7 +196,11 @@
 /mob/living/simple_mob/vore/morph/will_show_tooltip()
 	return (!morphed)
 
+<<<<<<< HEAD
 /mob/living/simple_mob/vore/morph/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
+=======
+/mob/living/simple_mob/vore/morph/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE, var/allow_stripping = FALSE)
+>>>>>>> 391c96c4ef (Allows stripping people by resizing (#19038))
 	if(morphed && !ismob(form))
 		return
 	return ..()

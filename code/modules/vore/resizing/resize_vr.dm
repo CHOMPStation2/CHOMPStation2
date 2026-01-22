@@ -89,8 +89,13 @@
  * * uncapped - CHANGE_ME. Default: FALSE
  * * ignore_prefs - CHANGE_ME. Default: FALSE
  * * aura_animation - CHANGE_ME. Default: TRUE
+ * * allow_stripping - CHANGE_ME.  Default: FALSE
  */
+<<<<<<< HEAD
 /mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
+=======
+/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE, var/allow_stripping = FALSE)
+>>>>>>> 391c96c4ef (Allows stripping people by resizing (#19038))
 	if(!uncapped)
 		if((z in using_map.station_levels) && CONFIG_GET(flag/pixel_size_limit))
 			var/size_diff = ((runechat_y_offset() / size_multiplier) * new_size) // This returns 32 multiplied with the new size
@@ -147,10 +152,21 @@
 	else
 		update_transform() //Lame way
 
+<<<<<<< HEAD
 /mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
+=======
+/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE, var/allow_stripping = FALSE)
+>>>>>>> 391c96c4ef (Allows stripping people by resizing (#19038))
 	if(!resizable && !ignore_prefs)
 		return 1
+	var/previous_scale = size_multiplier
 	. = ..()
+	var/size_difference = previous_scale - size_multiplier
+	if((allow_stripping == TRUE) && (size_difference >= 0.3) || (size_difference <= -0.3))
+		if(size_strip_preference == SIZESTRIP_ITEMS)
+			drop_all_clothing(FALSE)
+		else if(size_strip_preference == SIZESTRIP_ALL)
+			drop_all_clothing(TRUE)
 	if(!ishuman(temporary_form) && isliving(temporary_form))
 		var/mob/living/temp_form = temporary_form
 		temp_form.resize(new_size, animate, uncapped, ignore_prefs, aura_animation)
@@ -162,7 +178,7 @@
 			apply_hud(index, HI)
 
 // Optimize mannequins - never a point to animating or doing HUDs on these.
-/mob/living/carbon/human/dummy/mannequin/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
+/mob/living/carbon/human/dummy/mannequin/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE, var/allow_stripping = FALSE)
 	size_multiplier = new_size
 
 /**
