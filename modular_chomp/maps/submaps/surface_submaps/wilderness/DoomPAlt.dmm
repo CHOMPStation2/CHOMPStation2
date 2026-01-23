@@ -1,5 +1,5 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"ab" = (
+"aa" = (
 /obj/structure/table/standard,
 /obj/item/clothing/head/welding,
 /obj/item/weldingtool,
@@ -7,23 +7,23 @@
 /obj/item/storage/box/monkeycubes,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
-"ac" = (
+"ab" = (
 /obj/effect/floor_decal/corner/lime/border,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
-"ad" = (
+"ac" = (
 /obj/effect/floor_decal/corner/lime/border,
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
-"ae" = (
+"ad" = (
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
-"af" = (
+"ae" = (
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
-"ag" = (
+"af" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 4
 	},
@@ -32,18 +32,18 @@
 /obj/item/toy/plushie/octopus,
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
-"ai" = (
+"ag" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 1
 	},
 /mob/living/simple_mob/mechanical/mecha/eclipse/bomb_mauler,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
-"aj" = (
+"ai" = (
 /mob/living/simple_mob/humanoid/merc/ranged/garand,
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
-"ak" = (
+"aj" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 4
 	},
@@ -51,6 +51,13 @@
 /obj/item/bedsheet,
 /obj/item/toy/plushie/lizard,
 /turf/simulated/floor/tiled/white,
+/area/submap/DoomP)
+"ak" = (
+/obj/structure/table/rack,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/prop/deconstructable/gigacell,
+/turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "al" = (
 /mob/living/simple_mob/mechanical/viscerator,
@@ -60,31 +67,24 @@
 /obj/structure/table/rack,
 /obj/item/archaeological_find,
 /obj/item/archaeological_find,
-/obj/item/prop/deconstructable/gigacell,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "an" = (
-/obj/structure/table/rack,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
-"ao" = (
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
-"ap" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
 /obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
-"aq" = (
+"ao" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/DoomP)
+"ap" = (
 /mob/living/simple_mob/humanoid/merc/ranged/space/tommylas,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
-"ar" = (
+"aq" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 4
 	},
@@ -93,37 +93,37 @@
 /obj/item/toy/plushie/crab,
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
-"as" = (
+"ar" = (
 /obj/structure/table/rack,
 /obj/item/cell/device/weapon/recharge/alien,
 /obj/item/cell/device/weapon/recharge/alien,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/DoomP)
+"as" = (
+/obj/structure/table/rack,
+/obj/item/stack/material/morphium,
+/obj/item/stack/material/morphium,
+/obj/item/stack/material/morphium,
 /obj/item/archaeological_find,
 /obj/item/archaeological_find,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "at" = (
-/obj/structure/table/rack,
-/obj/item/stack/material/morphium,
-/obj/item/stack/material/morphium,
-/obj/item/stack/material/morphium,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
-"au" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 1
 	},
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
-"av" = (
+"au" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
-"aw" = (
+"av" = (
 /obj/structure/bed/chair,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -2522,7 +2522,7 @@ wQ
 Uw
 VC
 Yl
-aw
+av
 CT
 CT
 Xi
@@ -2533,7 +2533,7 @@ NC
 IT
 Qh
 Qh
-ab
+aa
 Yl
 nf
 nf
@@ -2590,11 +2590,11 @@ CT
 KR
 Yl
 Gz
-ap
+an
 RJ
 HG
 Qh
-ae
+ad
 Br
 Yl
 nf
@@ -2840,7 +2840,7 @@ Yl
 Ow
 NC
 NC
-ai
+ag
 Qh
 Qh
 zX
@@ -3023,9 +3023,9 @@ aH
 Yl
 DO
 Yl
-as
+ar
 ao
-am
+ak
 Yl
 Yl
 Yl
@@ -3085,9 +3085,9 @@ tE
 Yl
 Hq
 Yl
-at
-aq
-an
+as
+ap
+am
 Yl
 Yl
 TI
@@ -3333,13 +3333,13 @@ Uo
 ws
 Hq
 Yl
-au
-af
+at
+ae
 Yi
-af
+ae
 Yi
-af
-ac
+ae
+ab
 Yl
 CV
 CV
@@ -3395,13 +3395,13 @@ pf
 FT
 DO
 Yl
-av
-af
-af
-aj
-af
-af
-ad
+au
+ae
+ae
+ai
+ae
+ae
+ac
 Yl
 CV
 nf
@@ -3457,13 +3457,13 @@ zk
 Yl
 Hq
 Yl
-av
+au
 Yi
-af
+ae
 Yi
-af
+ae
 Yi
-ad
+ac
 Yl
 nf
 nf
@@ -3520,11 +3520,11 @@ Yl
 Hq
 Or
 YA
-ar
+aq
 Tf
-ak
+aj
 Tf
-ag
+af
 py
 Yl
 iw
