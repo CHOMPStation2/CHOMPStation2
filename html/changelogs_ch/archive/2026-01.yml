@@ -277,3 +277,8 @@
   - bugfix: Non-revivable entities can no longer be revived via CPR
   - bugfix: Synthetics can no longer be revived via CPR
   - bugfix: You will no longer gasp after being revived via CPR if you have no lungs
+2026-01-23:
+  CHOMPStation2StaffMirrorBot:
+  - qol: adds spoiler to character directory
+  - bugfix: a crash case in the character editor
+  - code_imp: tgui dependency up
