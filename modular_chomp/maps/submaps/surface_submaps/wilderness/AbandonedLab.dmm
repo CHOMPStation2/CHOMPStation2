@@ -430,7 +430,7 @@
 /turf/simulated/wall/skipjack,
 /area/submap/AbandonedLab)
 "uu" = (
-/obj/structure/table/rack/shelf/steel,
+/obj/structure/closet/crate/secure/lootsafe/numberlock,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/AbandonedLab)
 "uC" = (
@@ -696,6 +696,7 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
+/obj/item/prop/deconstructable/gigacell,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/AbandonedLab)
 "HM" = (

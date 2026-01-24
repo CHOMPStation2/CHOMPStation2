@@ -107,13 +107,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/submap/DoomP)
-"aA" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/random/mob/merc/all,
-/turf/simulated/floor/tiled,
-/area/submap/DoomP)
 "aB" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -200,6 +193,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
+/mob/living/simple_mob/humanoid/merc/ranged/smg,
 /turf/simulated/floor/tiled,
 /area/submap/DoomP)
 "aN" = (
@@ -253,7 +247,6 @@
 	icon_state = "4-8";
 	pixel_x = 0
 	},
-/mob/living/simple_mob/humanoid/merc/melee/sword/poi,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/DoomP)
 "aU" = (
@@ -294,7 +287,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/DoomP)
 "bb" = (
-/obj/machinery/door/airlock/engineering,
+/obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/DoomP)
 "bc" = (
@@ -316,6 +309,14 @@
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/tiled,
 /area/submap/DoomP)
+"bg" = (
+/obj/structure/table/standard,
+/obj/item/clothing/head/welding,
+/obj/item/weldingtool,
+/obj/item/flame/lighter/random,
+/obj/item/storage/box/monkeycubes,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/DoomP)
 "bh" = (
 /obj/machinery/door/airlock/hatch,
 /turf/simulated/floor/tiled,
@@ -325,10 +326,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/submap/DoomP)
-"bj" = (
-/obj/random/mob/merc/armored,
-/turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "bk" = (
 /obj/machinery/door/airlock,
@@ -343,56 +340,24 @@
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
-"bn" = (
-/obj/structure/table/rack,
-/obj/item/stack/material/morphium,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/capture_crystal,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
 "bo" = (
-/obj/structure/table/rack,
-/obj/item/rig/combat/empty,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
-"bq" = (
-/obj/structure/table/rack,
-/obj/item/clothing/gloves/tactical,
-/obj/item/clothing/head/helmet/tactical,
-/obj/item/clothing/accessory/armor/armorplate/tactical,
-/obj/item/clothing/suit/storage/vest/tactical,
-/obj/item/clothing/shoes/boots/tactical,
-/obj/item/clothing/shoes/magboots/adv,
-/obj/item/clothing/suit/storage/vest/heavy/merc,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
-"br" = (
-/obj/structure/table/rack,
-/obj/item/cell/device/weapon,
-/obj/random/energy,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
-"bs" = (
-/obj/structure/table/rack,
-/obj/item/gun/projectile/contender,
-/obj/item/ammo_magazine/s357,
-/obj/item/ammo_magazine/s357,
-/obj/item/gun/projectile/contender,
-/obj/item/ammo_magazine/s357,
-/obj/item/ammo_magazine/s357,
-/obj/random/projectile/random,
-/obj/random/projectile/random,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
-"bt" = (
 /obj/structure/bed,
 /obj/item/bedsheet,
 /obj/item/toy/plushie/spider,
 /obj/effect/floor_decal/corner/lime/full{
 	dir = 8
+	},
+/mob/living/simple_mob/humanoid/merc/ranged/deagle,
+/turf/simulated/floor/tiled/white,
+/area/submap/DoomP)
+"bp" = (
+/obj/effect/floor_decal/corner/lime/border,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white,
+/area/submap/DoomP)
+"bt" = (
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
@@ -401,30 +366,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
-/area/submap/DoomP)
-"bv" = (
-/obj/structure/table/rack,
-/obj/item/stack/material/morphium,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/capture_crystal/cheap,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
-"bw" = (
-/obj/structure/table/standard,
-/obj/item/flashlight/lamp,
-/obj/effect/floor_decal/corner/lime{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/white,
-/area/submap/DoomP)
-"bx" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/random/mob/merc/all,
-/turf/simulated/floor/tiled,
 /area/submap/DoomP)
 "by" = (
 /obj/effect/floor_decal/corner/lime/border{
@@ -457,18 +398,18 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
 "bB" = (
-/obj/machinery/door/airlock,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/obj/effect/floor_decal/corner/white/diagonal,
+/turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
 "bC" = (
 /obj/machinery/door/airlock/highsecurity,
 /turf/simulated/floor/tiled,
-/area/submap/DoomP)
-"bD" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
 "bE" = (
 /obj/machinery/light/small{
@@ -498,20 +439,6 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
-"bI" = (
-/turf/simulated/floor/plating,
-/area/submap/DoomP)
-"bJ" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/sink{
-	pixel_y = 16
-	},
-/obj/effect/floor_decal/corner/white/diagonal,
-/obj/random/mob/merc/all,
-/turf/simulated/floor/tiled/white,
-/area/submap/DoomP)
 "bK" = (
 /obj/structure/lattice,
 /turf/simulated/floor/outdoors/grass/sif/forest,
@@ -534,15 +461,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/submap/DoomP)
-"bO" = (
-/obj/structure/table/standard,
-/obj/structure/bedsheetbin,
-/obj/effect/floor_decal/corner/lime{
-	dir = 1
-	},
-/obj/random/soap,
-/turf/simulated/floor/tiled/white,
-/area/submap/DoomP)
 "bP" = (
 /obj/structure/table/standard,
 /obj/item/paper,
@@ -553,6 +471,116 @@
 /area/submap/DoomP)
 "bQ" = (
 /turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/DoomP)
+"bR" = (
+/obj/effect/floor_decal/corner/lime/border,
+/turf/simulated/floor/tiled/white,
+/area/submap/DoomP)
+"bS" = (
+/obj/structure/bed/chair,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/DoomP)
+"bT" = (
+/turf/simulated/floor/tiled/white,
+/area/submap/DoomP)
+"bU" = (
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 4
+	},
+/obj/structure/bed,
+/obj/item/bedsheet,
+/obj/item/toy/plushie/octopus,
+/turf/simulated/floor/tiled/white,
+/area/submap/DoomP)
+"bV" = (
+/obj/effect/floor_decal/borderfloorwhite/corner{
+	dir = 1
+	},
+/mob/living/simple_mob/mechanical/mecha/eclipse/bomb_mauler,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/DoomP)
+"bW" = (
+/mob/living/simple_mob/humanoid/merc/ranged/garand,
+/turf/simulated/floor/tiled/white,
+/area/submap/DoomP)
+"bX" = (
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 4
+	},
+/obj/structure/bed,
+/obj/item/bedsheet,
+/obj/item/toy/plushie/lizard,
+/turf/simulated/floor/tiled/white,
+/area/submap/DoomP)
+"bY" = (
+/obj/structure/table/rack,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/prop/deconstructable/gigacell,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/DoomP)
+"bZ" = (
+/obj/structure/table/rack,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/DoomP)
+"ca" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/machinery/atmospherics/binary/pump,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/DoomP)
+"cb" = (
+/mob/living/simple_mob/humanoid/merc/ranged/space/tommylas,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/DoomP)
+"cc" = (
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 4
+	},
+/obj/structure/bed,
+/obj/item/bedsheet,
+/obj/item/toy/plushie/crab,
+/turf/simulated/floor/tiled/white,
+/area/submap/DoomP)
+"cd" = (
+/obj/structure/table/rack,
+/obj/item/cell/device/weapon/recharge/alien,
+/obj/item/cell/device/weapon/recharge/alien,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/DoomP)
+"ce" = (
+/obj/structure/table/rack,
+/obj/item/stack/material/morphium,
+/obj/item/stack/material/morphium,
+/obj/item/stack/material/morphium,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/DoomP)
+"cf" = (
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 1
+	},
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white,
+/area/submap/DoomP)
+"cg" = (
+/obj/structure/bed/chair,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/mob/living/simple_mob/humanoid/merc/ranged/laser,
+/turf/simulated/floor/tiled,
+/area/submap/DoomP)
+"ch" = (
+/mob/living/simple_mob/humanoid/merc/ranged/technician,
+/turf/simulated/floor/outdoors/grass/sif/forest,
 /area/submap/DoomP)
 "fm" = (
 /obj/effect/floor_decal/borderfloorwhite{
@@ -578,7 +606,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
 "kp" = (
-/obj/random/mob/merc/all,
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
 "kI" = (
@@ -621,14 +649,6 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/submap/DoomP)
-"nX" = (
-/obj/structure/table/standard,
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 1
-	},
-/obj/random/thermalponcho,
-/turf/simulated/floor/tiled/white,
-/area/submap/DoomP)
 "og" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -644,34 +664,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/submap/DoomP)
-"px" = (
-/obj/structure/table/standard,
-/obj/item/clothing/head/welding,
-/obj/item/weldingtool,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 10
-	},
-/obj/item/flame/lighter/random,
-/obj/item/storage/box/monkeycubes,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/submap/DoomP)
-"pB" = (
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 4
-	},
-/obj/machinery/atmospherics/binary/pump,
-/obj/random/mob/merc/all,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/submap/DoomP)
-"pL" = (
-/turf/simulated/wall{
-	can_open = 1
-	},
-/area/submap/DoomP)
-"qW" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/water/deep,
 /area/submap/DoomP)
 "rJ" = (
 /obj/effect/floor_decal/corner/lime/full{
@@ -698,16 +690,6 @@
 "xE" = (
 /obj/structure/lattice,
 /turf/simulated/floor/water/deep,
-/area/submap/DoomP)
-"yp" = (
-/obj/structure/table/rack,
-/obj/item/circuitboard/mecha/imperion/main,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "yF" = (
 /obj/structure/bed,
@@ -737,14 +719,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/submap/DoomP)
-"Db" = (
-/obj/structure/curtain/open/shower,
-/obj/machinery/shower{
-	dir = 4;
-	pixel_x = 5
-	},
-/turf/simulated/floor/plating,
-/area/submap/DoomP)
 "FE" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/effect/floor_decal/borderfloorwhite{
@@ -755,20 +729,6 @@
 "Hz" = (
 /obj/machinery/artifact,
 /turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
-"Jj" = (
-/obj/machinery/portable_atmospherics/powered/scrubber,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/submap/DoomP)
-"Jq" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 10
-	},
-/obj/random/mob/merc/all,
-/turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
 "JU" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
@@ -861,34 +821,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/submap/DoomP)
-"Re" = (
-/obj/effect/floor_decal/borderfloorwhite/corner{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/submap/DoomP)
-"TX" = (
-/obj/structure/table/standard,
-/obj/item/reagent_containers/food/snacks/pancakes/berry,
-/obj/effect/floor_decal/corner/lime/border,
-/obj/machinery/light/small,
-/turf/simulated/floor/tiled/white,
-/area/submap/DoomP)
-"Ul" = (
-/mob/living/simple_mob/mechanical/mecha/ripley/pirate/last_stand_merc{
-	faction = "syndicate"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
 "VA" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/submap/DoomP)
-"VC" = (
-/obj/structure/bed/chair,
-/mob/living/simple_mob/humanoid/merc/ranged/deagle,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
 "VV" = (
@@ -900,15 +836,6 @@
 /obj/item/toy/plushie/moth,
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
-"Wt" = (
-/obj/structure/table/rack,
-/obj/item/circuitboard/mecha/imperion/targeting,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/obj/item/archaeological_find,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DoomP)
 "Ww" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 6
@@ -919,19 +846,6 @@
 "WH" = (
 /obj/machinery/door/airlock/hatch,
 /turf/simulated/floor/tiled/asteroid_steel,
-/area/submap/DoomP)
-"WU" = (
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/submap/DoomP)
-"XV" = (
-/obj/structure/table/darkglass,
-/obj/item/gun/energy/imperial,
-/obj/item/clothing/suit/armor/swat/officer,
-/obj/item/clothing/glasses/graviton/medgravpatch,
-/obj/item/clothing/head/psy_crown/wrath,
-/obj/item/toy/plushie/carp/nebula,
-/turf/simulated/floor/plating,
 /area/submap/DoomP)
 "Yt" = (
 /obj/effect/floor_decal/borderfloorwhite{
@@ -2346,21 +2260,21 @@ ax
 aM
 aY
 bd
+bC
+JU
+JU
+JU
+ar
+bQ
+bQ
+bQ
 at
-Db
-Jj
-Db
-at
-at
-bI
-XV
-at
 ak
 ak
 ak
 ak
 ak
-qW
+ak
 ak
 ak
 af
@@ -2409,13 +2323,13 @@ aN
 aN
 be
 at
-JU
-JU
+bL
 JU
 as
 at
-pL
-at
+bQ
+bQ
+bQ
 at
 aX
 as
@@ -2466,18 +2380,18 @@ ad
 ad
 ad
 at
-aA
+az
 aO
 aN
 be
-bC
-JU
-JU
-JU
-bL
 at
-bJ
-bF
+at
+at
+at
+at
+bQ
+bQ
+bQ
 at
 af
 af
@@ -2528,18 +2442,18 @@ ad
 ad
 ad
 at
-ay
+cg
 aN
 aN
 bf
 at
-JU
-JU
-JU
-as
-at
-LW
-bG
+FE
+bH
+bH
+fm
+bQ
+bQ
+bg
 at
 af
 af
@@ -2595,13 +2509,13 @@ aO
 aN
 be
 at
-at
-ar
-at
-at
-at
-bk
-at
+LU
+ca
+vu
+kI
+bQ
+bS
+bP
 at
 af
 af
@@ -2655,15 +2569,15 @@ at
 ay
 aN
 aN
-bx
+be
 at
-FE
-bH
-bH
-fm
-bH
-bH
-px
+og
+Ra
+lc
+VA
+bQ
+bQ
+Nl
 at
 af
 af
@@ -2719,13 +2633,13 @@ aP
 aP
 bM
 at
-LU
-pB
-vu
-kI
+bz
+Zl
+YT
 bQ
-VC
-bP
+kS
+bQ
+gA
 at
 af
 af
@@ -2781,13 +2695,13 @@ aQ
 aZ
 aP
 at
-og
+Pk
 Ra
-lc
+BW
 VA
-WU
 bQ
-Nl
+bQ
+bA
 at
 aX
 as
@@ -2843,13 +2757,13 @@ at
 at
 bh
 at
-bz
-Zl
-YT
+Yt
+bH
+bH
+bV
 bQ
-kS
 bQ
-gA
+bm
 at
 af
 af
@@ -2895,7 +2809,7 @@ af
 af
 ac
 ad
-ad
+ch
 ad
 ad
 av
@@ -2905,13 +2819,13 @@ aP
 ba
 aP
 at
-Pk
-Ra
-BW
-VA
-bQ
-bQ
-bA
+MQ
+bu
+bu
+PU
+bu
+bu
+Ww
 at
 ac
 af
@@ -2967,13 +2881,13 @@ at
 at
 bN
 at
-Yt
-bH
-bH
-Re
-bQ
-bQ
-bm
+at
+WH
+at
+at
+at
+at
+at
 at
 ac
 ac
@@ -3029,13 +2943,13 @@ aR
 at
 bi
 at
-MQ
-bu
-bu
-PU
-bu
-bu
-Ww
+cd
+bl
+bY
+at
+at
+at
+at
 at
 ad
 ac
@@ -3091,13 +3005,13 @@ kU
 at
 aP
 at
-at
-WH
-at
+ce
+cb
+bZ
 at
 at
 bB
-at
+bF
 at
 ad
 ac
@@ -3153,13 +3067,13 @@ aS
 at
 aP
 at
-br
-bl
-bs
+Hz
+bE
+Hz
 at
-bv
-bl
-yp
+at
+LW
+bG
 at
 bK
 as
@@ -3215,13 +3129,13 @@ aS
 at
 aP
 at
-bq
-bj
-bq
 at
-Hz
-Ul
-Hz
+at
+at
+at
+at
+bk
+at
 at
 ad
 ac
@@ -3278,12 +3192,12 @@ at
 aP
 at
 bo
-bE
-bo
-at
-Wt
-bE
-bn
+Mc
+jD
+OV
+VV
+OV
+yF
 at
 ad
 ac
@@ -3339,13 +3253,13 @@ aU
 bb
 aP
 at
-at
-at
-at
-at
-at
-at
-at
+cf
+bT
+kp
+bT
+kp
+bT
+bp
 at
 ac
 ac
@@ -3402,12 +3316,12 @@ bc
 bi
 at
 bt
-Mc
-jD
-OV
-VV
-OV
-yF
+bT
+bT
+bW
+bT
+bT
+bR
 at
 ac
 af
@@ -3463,13 +3377,13 @@ aW
 at
 aP
 at
-nX
-Jq
-bw
-bD
-bO
+bt
 kp
-TX
+bT
+kp
+bT
+kp
+bR
 at
 af
 af
@@ -3526,11 +3440,11 @@ at
 aP
 bk
 rJ
+cc
 by
+bX
 by
-by
-by
-by
+bU
 vd
 at
 aX
