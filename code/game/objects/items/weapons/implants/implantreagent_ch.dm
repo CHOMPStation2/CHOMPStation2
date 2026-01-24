@@ -87,8 +87,9 @@
 						rimplant.reagents.remove_any(rimplant.transfer_amount)
 						if(prob(25))
 							visible_message(span_notice("[src] [pick(rimplant.random_emote)]."))
-		else
-			return
+					else
+						return
+
 /mob/living/carbon/human/proc/toggle_cascade()
 
 	set name = "Toggle cascading"
