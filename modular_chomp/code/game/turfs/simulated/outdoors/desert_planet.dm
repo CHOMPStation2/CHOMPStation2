@@ -24,7 +24,7 @@
 /turf/simulated/floor/outdoors/desert_planet/sand/attackby(var/obj/item/W, var/mob/user)
 	if(istype(W, /obj/item/shovel))
 		to_chat(user, span_notice("You begin to remove \the [src] with your [W]."))
-		if(do_after(user, 4 SECONDS * W.toolspeed))
+		if(do_after(user, 4 SECONDS * W.toolspeed, src))
 			to_chat(user, span_notice("\The [src] has been dug up, and now lies in a pile nearby."))
 			icon_state = "sand_dug"
 			new /obj/item/ore/glass (src)
@@ -104,7 +104,7 @@
 		playsound(user, P.drill_sound, 20, 1)
 		to_chat(user, span_notice("You start [P.drill_verb]."))
 
-		if(do_after(user,P.digspeed))
+		if(do_after(user,P.digspeed, src))
 
 			to_chat(user, span_notice("You finish [P.drill_verb] \the [src]."))
 			new /obj/item/stack/material/sandstone(src)

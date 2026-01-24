@@ -919,7 +919,7 @@
 /obj/item/gun/projectile/automatic/serdy/kord/afteratt(atom/A, mob/living/user, adjacent, params)
 	if(user.size_multiplier <= 0.5) //They're 50% or lower. If they fire this gun, they're gonna get obliterated.
 		to_chat(user,span_warning("You struggle to reach the trigger. Maybe shooting such a big gun isn't such a good idea..."))
-		if(do_after(user, 5 SECONDS)) //Give them a chance to take it back.
+		if(do_after(user, 5 SECONDS, src)) //Give them a chance to take it back.
 			. = ..() //RIP
 
 /obj/item/gun/projectile/automatic/serdy/kord/handle_post_fire(mob/living/user, atom/target, var/pointblank=0, var/reflex=0)
@@ -1444,7 +1444,7 @@
 			Fire_userless(user)
 			burst = burstsetting
 			return
-		if(do_after(user, 30))	//SHIT IS STEALTHY EYYYYY
+		if(do_after(user, 30, src))	//SHIT IS STEALTHY EYYYYY
 			icon_state = "sawnshotgun"
 			item_state = "sawnshotgun"
 

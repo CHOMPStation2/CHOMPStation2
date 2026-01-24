@@ -204,7 +204,7 @@
 /turf/simulated/floor/outdoors/snow/sif/planetuse/attackby(var/obj/item/W, var/mob/user)
 	if(istype(W, /obj/item/shovel))
 		to_chat(user, span_notice("You begin to remove \the [src] with your [W]."))
-		if(do_after(user, 4 SECONDS * W.toolspeed))
+		if(do_after(user, 4 SECONDS * W.toolspeed, src))
 			to_chat(user, span_notice("\The [src] has been dug up, and now lies in a pile nearby."))
 			new /obj/item/stack/material/snow(src)
 			demote()
@@ -215,7 +215,7 @@
 
 /turf/simulated/floor/outdoors/snow/sif/planetuse/attack_hand(mob/user as mob)
 	visible_message("[user] starts scooping up some snow.", "You start scooping up some snow.")
-	if(do_after(user, 1 SECOND))
+	if(do_after(user, 1 SECOND, src))
 		var/obj/S = new /obj/item/stack/material/snow(user.loc)
 		user.put_in_hands(S)
 		visible_message("[user] scoops up a pile of snow.", "You scoop up a pile of snow.")

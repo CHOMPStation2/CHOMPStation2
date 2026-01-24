@@ -280,7 +280,7 @@
 			if(cut_delay < 0)
 				cut_delay = 0
 
-			if(!do_after(user,cut_delay * W.toolspeed))
+			if(!do_after(user,cut_delay * W.toolspeed, src))
 				return
 
 			to_chat(user, span_notice("You remove the outer plating."))
@@ -303,7 +303,7 @@
 				if (W.has_tool_quality(TOOL_SCREWDRIVER))
 					to_chat(user, span_notice("You begin removing the support lines."))
 					playsound(src, W.usesound, 100, 1)
-					if(!do_after(user,40 * W.toolspeed) || !istype(src, /turf/simulated/wall) || construction_stage != 5)
+					if(!do_after(user,40 * W.toolspeed, src) || !istype(src, /turf/simulated/wall) || construction_stage != 5)
 						return
 					construction_stage = 4
 					user.update_examine_panel(src)
@@ -333,7 +333,7 @@
 				if(cut_cover)
 					to_chat(user, span_notice("You begin slicing through the metal cover."))
 					playsound(src, W.usesound, 100, 1)
-					if(!do_after(user, 60 * W.toolspeed) || !istype(src, /turf/simulated/wall) || construction_stage != 4)
+					if(!do_after(user, 60 * W.toolspeed, src) || !istype(src, /turf/simulated/wall) || construction_stage != 4)
 						return
 					construction_stage = 3
 					user.update_examine_panel(src)
@@ -343,7 +343,7 @@
 				else if (W.has_tool_quality(TOOL_SCREWDRIVER))
 					to_chat(user, span_notice("You begin screwing down the support lines."))
 					playsound(src, W.usesound, 100, 1)
-					if(!do_after(user,40 * W.toolspeed) || !istype(src, /turf/simulated/wall) || construction_stage != 4)
+					if(!do_after(user,40 * W.toolspeed, src) || !istype(src, /turf/simulated/wall) || construction_stage != 4)
 						return
 					construction_stage = 5
 					user.update_examine_panel(src)
@@ -354,7 +354,7 @@
 				if (W.has_tool_quality(TOOL_CROWBAR))
 					to_chat(user, span_notice("You struggle to pry off the cover."))
 					playsound(src, W.usesound, 100, 1)
-					if(!do_after(user,100 * W.toolspeed) || !istype(src, /turf/simulated/wall) || construction_stage != 3)
+					if(!do_after(user,100 * W.toolspeed, src) || !istype(src, /turf/simulated/wall) || construction_stage != 3)
 						return
 					construction_stage = 2
 					user.update_examine_panel(src)
@@ -365,7 +365,7 @@
 				if (W.has_tool_quality(TOOL_WRENCH))
 					to_chat(user, span_notice("You start loosening the anchoring bolts which secure the support rods to their frame."))
 					playsound(src, W.usesound, 100, 1)
-					if(!do_after(user,40 * W.toolspeed) || !istype(src, /turf/simulated/wall) || construction_stage != 2)
+					if(!do_after(user,40 * W.toolspeed, src) || !istype(src, /turf/simulated/wall) || construction_stage != 2)
 						return
 					construction_stage = 1
 					user.update_examine_panel(src)
@@ -386,7 +386,7 @@
 				if(cut_cover)
 					to_chat(user, span_notice("You begin slicing through the support rods."))
 					playsound(src, W.usesound, 100, 1)
-					if(!do_after(user,70 * W.toolspeed) || !istype(src, /turf/simulated/wall) || construction_stage != 1)
+					if(!do_after(user,70 * W.toolspeed, src) || !istype(src, /turf/simulated/wall) || construction_stage != 1)
 						return
 					construction_stage = 0
 					user.update_examine_panel(src)
@@ -397,7 +397,7 @@
 				if(W.has_tool_quality(TOOL_CROWBAR))
 					to_chat(user, span_notice("You struggle to pry off the outer sheath."))
 					playsound(src, W.usesound, 100, 1)
-					if(!do_after(user,100 * W.toolspeed) || !istype(src, /turf/simulated/wall) || !user || !W || !T )
+					if(!do_after(user,100 * W.toolspeed, src) || !istype(src, /turf/simulated/wall) || !user || !W || !T )
 						return
 					if(user.loc == T && user.get_active_hand() == W )
 						to_chat(user, span_notice("You pry off the outer sheath."))

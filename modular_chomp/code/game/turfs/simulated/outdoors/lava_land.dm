@@ -41,7 +41,7 @@
 		playsound(user, P.drill_sound, 20, 1)
 		to_chat(user, span_notice("You start [P.drill_verb]."))
 
-		if(do_after(user,P.digspeed))
+		if(do_after(user,P.digspeed, src))
 
 			to_chat(user, span_notice("You finish [P.drill_verb] \the [src]."))
 			density = FALSE
