@@ -43,7 +43,7 @@
 	var/fuse_time = 3.5 SECONDS
 
 /obj/item/grenade/shooter/auto_explode/Initialize(mapload)
-	..()
+	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(detonate)), fuse_time, TIMER_DELETE_ME)
 
 /obj/item/grenade/shooter/auto_explode/blade_boss_long
