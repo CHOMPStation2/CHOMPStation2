@@ -79,7 +79,7 @@
 			if(rimplant.cascade)
 				to_chat(src, span_notice("You feel your legs quake as your muscles fail to stand strong!"))
 				while(rimplant.reagents.total_volume >= rimplant.transfer_amount)
-					if(do_after(src,30))
+					if(do_after(src,30,src))
 						src.SetStunned(3)
 						playsound(src,'sound/vore/insert.ogg',50,1)
 						src.apply_effect(10,STUTTER,0)
