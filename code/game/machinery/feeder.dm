@@ -65,7 +65,7 @@
 		return
 
 	if(default_deconstruction_screwdriver(user, W))
-		if(do_after(user, 15))
+		if(do_after(user, 15, src))
 			to_chat(user, "You deconstruct the feeder.")
 			new /obj/item/stack/material/plastic(src.loc, 4)
 			if(beaker)

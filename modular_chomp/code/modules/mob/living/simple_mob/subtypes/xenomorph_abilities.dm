@@ -18,7 +18,7 @@
 
 	var/obj/O
 
-	if(do_after(src, xeno_build_time))
+	if(do_after(src, xeno_build_time, src))
 		switch(choice)
 			if("Resin Door")
 				O = new /obj/structure/simple_door/resin(targetLoc)

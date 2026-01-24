@@ -25,7 +25,7 @@
 		oocnotes = 1
 	to_chat(src, span_notify("You begin to reform. You will need to remain still."))
 	visible_message(span_notify("[src] rapidly contorts and shifts!"), span_danger("You begin to reform."))
-	if (do_after(src, 4 SECONDS))
+	if (do_after(src, 4 SECONDS, src))
 		if (client?.prefs)
 			client.prefs.vanity_copy_to(src, FALSE, flavour, oocnotes, FALSE)
 			visible_message(span_notify("[src] adopts a new form!"), span_danger("You have reformed."))
