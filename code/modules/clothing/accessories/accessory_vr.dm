@@ -213,7 +213,8 @@
 			. = TRUE
 		if("power")
 			on = !on
-			icon_state = "collar_shk[on]"
+			if(!istype(src, /obj/item/clothing/accessory/collar/shock/bluespace))
+				icon_state = "collar_shk[on]"
 			. = TRUE
 		if("tag")
 			var/sanitized = tgui_input_text(ui.user, "Tag text?", "Set Tag", "", MAX_NAME_LEN, encode = TRUE)
@@ -417,7 +418,7 @@
 				return
 			last_activated = world.time
 			original_size = H.size_multiplier
-			H.resize(target_size, ignore_prefs = FALSE)		//In case someone else tries to put it on you.
+			H.resize(target_size, ignore_prefs = FALSE, allow_stripping = TRUE)		//In case someone else tries to put it on you.
 			H.visible_message(span_warning("The space around [H] distorts as they change size!"),span_notice("The space around you distorts as you change size!"))
 			log_admin("Admin [key_name(M)]'s size was altered by a bluespace collar.")
 			s.set_up(3, 1, M)
@@ -427,7 +428,7 @@
 				H.visible_message(span_warning("The space around [H] twists and turns for a moment but then nothing happens."),span_notice("The space around you distorts but stay the same size."))
 				return
 			last_activated = world.time
-			H.resize(original_size, ignore_prefs = FALSE)
+			H.resize(original_size, ignore_prefs = FALSE, allow_stripping = TRUE)
 			original_size = null
 			H.visible_message(span_warning("The space around [H] distorts as they return to their original size!"),span_notice("The space around you distorts as you return to your original size!"))
 			log_admin("Admin [key_name(M)]'s size was altered by a bluespace collar.")
@@ -518,7 +519,7 @@
 				return
 			last_activated = world.time
 			original_size = H.size_multiplier
-			H.resize(target_size, ignore_prefs = FALSE)		//In case someone else tries to put it on you.
+			H.resize(target_size, ignore_prefs = FALSE, allow_stripping = TRUE)		//In case someone else tries to put it on you.
 			H.visible_message(span_warning("The space around [H] distorts as they change size!"),span_notice("The space around you distorts as you change size!"))
 			log_admin("Admin [key_name(M)]'s size was altered by a bluespace collar.")
 			s.set_up(3, 1, M)
@@ -528,7 +529,7 @@
 				H.visible_message(span_warning("The space around [H] twists and turns for a moment but then nothing happens."),span_notice("The space around you distorts but stay the same size."))
 				return
 			last_activated = world.time
-			H.resize(original_size, ignore_prefs = FALSE)
+			H.resize(original_size, ignore_prefs = FALSE, allow_stripping = TRUE)
 			original_size = null
 			H.visible_message(span_warning("The space around [H] distorts as they return to their original size!"),span_notice("The space around you distorts as you return to your original size!"))
 			log_admin("Admin [key_name(M)]'s size was altered by a bluespace collar.")
@@ -591,7 +592,7 @@
 			last_activated = world.time
 			original_size = H.size_multiplier
 			currently_shrinking = 1
-			H.resize(target_size, ignore_prefs = FALSE)		//In case someone else tries to put it on you.
+			H.resize(target_size, ignore_prefs = FALSE, allow_stripping = TRUE)		//In case someone else tries to put it on you.
 			H.visible_message(span_warning("The space around [H] distorts as they change size!"),span_notice("The space around you distorts as you change size!"))
 			log_admin("Admin [key_name(M)]'s size was altered by a bluespace collar.")
 			s.set_up(3, 1, M)
@@ -601,7 +602,7 @@
 				H.visible_message(span_warning("The space around [H] twists and turns for a moment but then nothing happens."),span_notice("The space around you distorts but stay the same size."))
 				return
 			last_activated = world.time
-			H.resize(original_size, ignore_prefs = FALSE)
+			H.resize(original_size, ignore_prefs = FALSE, allow_stripping = TRUE)
 			original_size = null
 			currently_shrinking = 0
 			H.visible_message(span_warning("The space around [H] distorts as they return to their original size!"),span_notice("The space around you distorts as you return to your original size!"))
