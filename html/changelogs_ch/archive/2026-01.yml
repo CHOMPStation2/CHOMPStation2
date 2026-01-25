@@ -300,3 +300,18 @@
       as the cure
   - spellcheck: Removed "the" when Biometallic Replication symptom picked any organ
   - code_imp: Added IMMUTABLE flag for viruses, to not allow them to change
+2026-01-25:
+  CHOMPStation2StaffMirrorBot:
+  - rscdel: no longer existing config entry
+  - bugfix: another bad object spawn in xenoarch
+  - bugfix: empty lists for auto transfer
+  - bugfix: ghost leaving VR not getting ghostized before qdel
+  - bugfix: flip no longer restores any flags badly
+  - rscadd: 'Added a new Skin Reagent trait, that allows you to pick one of six reagents
+      that coat your skin and are applied to people when they lick you. These include:
+      Ethanol, Capsaicin, Sleep Toxin, Rainbow Toxin, Paralysis Toxin and Pain Enzyme.'
+  - code_imp: Also added a new option to traits to allow you to use a single list
+      for them to select preferences, using a list variable called "multiple_choice".
+  Kashargul:
+  - bugfix: missing init hint
+  - bugfix: server crash on egg laying
