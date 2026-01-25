@@ -1,0 +1,5 @@
+author: "Diana"
+delete-after: True
+changes:
+  - code_imp: "Adds more framework for radiation component to do more fancy things."
+  - qol: "Nutrition gain from radiation gains can be toggled on/off"
