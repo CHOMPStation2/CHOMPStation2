@@ -336,7 +336,7 @@
 	radiation_nutrition = TRUE
 
 //CHOMPAdd Start
-/datum/component/radiation_effects/chomp_shadekin
+/datum/component/radiation_effects/radiation_immune
 	show_panel = FALSE
 	glows = FALSE
 	glow_toggle = FALSE

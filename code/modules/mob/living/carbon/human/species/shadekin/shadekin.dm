@@ -100,7 +100,7 @@
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
 
-	species_component = list(/datum/component/shadekin/full, /datum/component/radiation_effects/chomp_shadekin) //CHOMPEdit: Enabling full shadekin & no-power radiation component.
+	species_component = list(/datum/component/shadekin/full, /datum/component/radiation_effects/radiation_immune) //CHOMPEdit: Enabling full shadekin & no-power radiation component.
 	component_requires_late_recalc = TRUE
 
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
