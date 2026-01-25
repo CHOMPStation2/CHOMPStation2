@@ -1,9 +1,13 @@
 // Customizable Foods //////////////////////////////////////////
+<<<<<<< HEAD
 var/global/deepFriedEverything = 0
 var/global/deepFriedNutriment = 0
 var/global/foodNesting = 0
 var/global/recursiveFood = 0
 var/global/ingredientLimit = 20000
+=======
+#define INGREDIENT_LIMIT 20
+>>>>>>> de17517e42 (bunch of global vars (#19091))
 
 
 /obj/item/reagent_containers/food/snacks/customizable
@@ -27,7 +31,7 @@ var/global/ingredientLimit = 20000
 
 /obj/item/reagent_containers/food/snacks/customizable/attackby(obj/item/I, mob/user)
 	if(istype(I,/obj/item/reagent_containers/food/snacks))
-		if((contents.len >= ingMax) || (contents.len >= ingredientLimit))
+		if((contents.len >= ingMax) || (contents.len >= INGREDIENT_LIMIT))
 			to_chat(user, span_warning("That's already looking pretty stuffed."))
 			return
 
@@ -37,7 +41,7 @@ var/global/ingredientLimit = 20000
 			if(fullyCustom && SC.fullyCustom)
 				to_chat(user, span_warning("You slap yourself on the back of the head for thinking that stacking plates is an interesting dish."))
 				return
-		if(!recursiveFood && istype(I, /obj/item/reagent_containers/food/snacks/customizable))
+		if(istype(I, /obj/item/reagent_containers/food/snacks/customizable))
 			//to_chat(user, span_warning("[pick("As uniquely original as that idea is, you can't figure out how to perform it.","That would be a straining topological exercise.","This world just isn't ready for your cooking genius.","It's possible that you may have a problem.","It won't fit.","You don't think that would taste very good.","Quit goofin' around.")]"))
 			to_chat(user, span_warning("As uniquely original as that idea is, you can't figure out how to perform it."))
 			return
@@ -184,7 +188,7 @@ var/global/ingredientLimit = 20000
 
 /obj/item/reagent_containers/food/snacks/slice/bread/attackby(obj/item/I,mob/user,params)
 	if(istype(I,/obj/item/reagent_containers/food/snacks))
-		if(!recursiveFood && istype(I, /obj/item/reagent_containers/food/snacks/customizable))
+		if(istype(I, /obj/item/reagent_containers/food/snacks/customizable))
 			to_chat(user, span_warning("Sorry, no recursive food."))
 			return
 		var/obj/F = new/obj/item/reagent_containers/food/snacks/customizable/sandwich(get_turf(src),I) //boy ain't this a mouthful
@@ -216,7 +220,7 @@ var/global/ingredientLimit = 20000
 		qdel(src)
 
 	if(istype(I,/obj/item/reagent_containers/food/snacks))
-		if(!recursiveFood && istype(I, /obj/item/reagent_containers/food/snacks/customizable))
+		if(istype(I, /obj/item/reagent_containers/food/snacks/customizable))
 			to_chat(user, span_warning("Sorry, no recursive food."))
 			return
 		var/obj/F = new/obj/item/reagent_containers/food/snacks/customizable/burger(get_turf(src),I)
@@ -227,7 +231,7 @@ var/global/ingredientLimit = 20000
 
 /obj/item/reagent_containers/food/snacks/sliceable/flatdough/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/reagent_containers/food/snacks))
-		if(!recursiveFood && istype(I, /obj/item/reagent_containers/food/snacks/customizable))
+		if(istype(I, /obj/item/reagent_containers/food/snacks/customizable))
 			to_chat(user, span_warning("Sorry, no recursive food."))
 			return
 		var/obj/F = new/obj/item/reagent_containers/food/snacks/customizable/pizza(get_turf(src),I)
@@ -238,7 +242,7 @@ var/global/ingredientLimit = 20000
 
 /obj/item/reagent_containers/food/snacks/spagetti/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/reagent_containers/food/snacks))
-		if(!recursiveFood && istype(I, /obj/item/reagent_containers/food/snacks/customizable))
+		if(istype(I, /obj/item/reagent_containers/food/snacks/customizable))
 			to_chat(user, span_warning("Sorry, no recursive food."))
 			return
 		var/obj/F = new/obj/item/reagent_containers/food/snacks/customizable/pasta(get_turf(src),I)
@@ -269,7 +273,7 @@ var/global/ingredientLimit = 20000
 
 /obj/item/trash/bowl/attackby(obj/item/I, mob/user)
 	if(istype(I,/obj/item/reagent_containers/food/snacks))
-		if(!recursiveFood && istype(I, /obj/item/reagent_containers/food/snacks/customizable))
+		if(istype(I, /obj/item/reagent_containers/food/snacks/customizable))
 			to_chat(user, span_warning("Sorry, no recursive food."))
 			return
 		var/obj/F = new/obj/item/reagent_containers/food/snacks/customizable/soup(get_turf(src),I)
@@ -277,3 +281,5 @@ var/global/ingredientLimit = 20000
 		qdel(src)
 	else
 		return ..()
+
+#undef INGREDIENT_LIMIT

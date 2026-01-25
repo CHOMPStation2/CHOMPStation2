@@ -1,5 +1,5 @@
 //admin verb groups - They can overlap if you so wish. Only one of each verb will exist in the verbs list regardless
-var/list/admin_verbs_admin = list(
+GLOBAL_LIST_INIT(admin_verbs_admin, list(
 	/client/proc/toggle_vantag_hud,
 	/datum/admins/proc/set_tcrystals,
 	/datum/admins/proc/add_tcrystals,
@@ -87,19 +87,24 @@ var/list/admin_verbs_admin = list(
 	/client/proc/delbook,
 	/client/proc/toggle_spawning_with_recolour,
 	/client/proc/start_vote,
+<<<<<<< HEAD
 	/client/proc/hide_motion_tracker_feedback,
 	/client/proc/reload_alienwhitelist //ChompADD
 	)
+=======
+	/client/proc/hide_motion_tracker_feedback
+	))
+>>>>>>> de17517e42 (bunch of global vars (#19091))
 
-var/list/admin_verbs_sounds = list(
+GLOBAL_LIST_INIT(admin_verbs_sounds, list(
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,
 	/client/proc/play_server_sound,
 	/client/proc/play_web_sound,
 	/client/proc/play_z_sound
-	)
+	))
 
-var/list/admin_verbs_fun = list(
+GLOBAL_LIST_INIT(admin_verbs_fun, list(
 	/client/proc/object_talk,
 	/datum/admins/proc/cmd_admin_dress,
 	/client/proc/drop_bomb,
@@ -122,10 +127,9 @@ var/list/admin_verbs_fun = list(
 	/client/proc/getPlayerStatus,
 	/client/proc/manage_event_triggers,
 	/client/proc/fake_pdaconvos
+	))
 
-	)
-
-var/list/admin_verbs_spawn = list(
+GLOBAL_LIST_INIT(admin_verbs_spawn, list(
 	/datum/admins/proc/spawn_fruit,
 	/datum/admins/proc/spawn_custom_item,
 	/datum/admins/proc/check_custom_items,
@@ -146,9 +150,9 @@ var/list/admin_verbs_spawn = list(
 	/client/proc/AdminCreateVirus,
 	/client/proc/ReleaseVirus,
 	/client/proc/spawn_reagent
-	)
+	))
 
-var/list/admin_verbs_server = list(
+GLOBAL_LIST_INIT(admin_verbs_server, list(
 	/datum/admins/proc/capture_map,
 	/client/proc/Set_Holiday,
 	/client/proc/ToRban,
@@ -173,9 +177,9 @@ var/list/admin_verbs_server = list(
 	/client/proc/panicbunker,
 	/client/proc/paranoia_logging,
 	/client/proc/ip_reputation
-	)
+	))
 
-var/list/admin_verbs_debug = list(
+GLOBAL_LIST_INIT(admin_verbs_debug, list(
 	/client/proc/cmd_admin_list_open_jobs,
 	/client/proc/Debug2,
 	/client/proc/kill_air,
@@ -221,14 +225,19 @@ var/list/admin_verbs_debug = list(
 	/client/proc/simple_DPS,
 	/datum/admins/proc/view_feedback,
 	/client/proc/stop_sounds,
+<<<<<<< HEAD
 	/client/proc/spawn_reagent,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_alienwhitelist, //ChompADD
 	/client/proc/reload_configuration //CHOMPAdd
 	)
+=======
+	/client/proc/spawn_reagent
+	))
+>>>>>>> de17517e42 (bunch of global vars (#19091))
 
 //verbs which can be hidden - needs work
-var/list/admin_verbs_hideable = list(
+GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 //	/client/proc/deadchat,
 	/datum/admins/proc/show_traitor_panel,
 	/datum/admins/proc/toggleenter,
@@ -291,8 +300,9 @@ var/list/admin_verbs_hideable = list(
 	/datum/admins/proc/set_uplink,
 	/datum/admins/proc/set_tcrystals,
 	/client/proc/stop_sounds
-	)
-var/list/admin_verbs_mod = list(
+	))
+
+GLOBAL_LIST_INIT(admin_verbs_mod, list(
 	/client/proc/cmd_admin_pm_context,	//right-click adminPM interface,
 	/client/proc/cmd_admin_pm_panel,	//admin-pm list,
 	/datum/admins/proc/PlayerNotes,
@@ -314,11 +324,16 @@ var/list/admin_verbs_mod = list(
 	/client/proc/allow_character_respawn,   // Allows a ghost to respawn ,
 	/datum/admins/proc/sendFax,
 	/datum/admins/proc/view_persistent_data,
+<<<<<<< HEAD
 	/client/proc/start_vote,
 	/client/proc/reload_alienwhitelist //ChompADD
 )
+=======
+	/client/proc/start_vote
+))
+>>>>>>> de17517e42 (bunch of global vars (#19091))
 
-var/list/admin_verbs_event_manager = list(
+GLOBAL_LIST_INIT(admin_verbs_event_manager, list(
 	/client/proc/toggle_vantag_hud,
 	/client/proc/cmd_admin_pm_context,
 	/client/proc/cmd_admin_pm_panel,
@@ -446,7 +461,12 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/remove_hidden_area,
 	/client/proc/hide_motion_tracker_feedback,
 	/client/proc/modify_event_collector,
+<<<<<<< HEAD
 	/client/proc/induce_malfunction,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_alienwhitelist //ChompADD
 )
+=======
+	/client/proc/induce_malfunction
+))
+>>>>>>> de17517e42 (bunch of global vars (#19091))
