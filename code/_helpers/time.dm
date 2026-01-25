@@ -46,15 +46,9 @@ GLOBAL_VAR_INIT(next_station_date_change, 1 DAY)
 	if(station_time_in_ds > GLOB.next_station_date_change)
 		GLOB.next_station_date_change += 1 DAY
 		update_time = TRUE
-<<<<<<< HEAD
-	if(!station_date || update_time)
-		station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+544)) + "-" + time2text(REALTIMEOFDAY, "MM-DD") //CHOMP EDIT
-	return station_date
-=======
 	if(!GLOB.station_date || update_time)
-		GLOB.station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+300)) + "-" + time2text(REALTIMEOFDAY, "MM-DD") //VOREStation Edit
+		GLOB.station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+544)) + "-" + time2text(REALTIMEOFDAY, "MM-DD") //CHOMP EDIT
 	return GLOB.station_date
->>>>>>> de17517e42 (bunch of global vars (#19091))
 
 /// Returns UTC timestamp with the specifified format and optionally deciseconds
 /proc/time_stamp(format = "hh:mm:ss", show_ds)

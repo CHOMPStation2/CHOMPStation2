@@ -60,15 +60,9 @@ GLOBAL_LIST_INIT(cent_frequencies, list(ERT_FREQ, DTH_FREQ))
 GLOBAL_LIST_INIT(antag_frequencies, list(SYND_FREQ, RAID_FREQ))
 
 //Department channels, arranged lexically
-<<<<<<< HEAD
-var/list/DEPT_FREQS = list(AI_FREQ, BDCM_FREQ, COMM_FREQ, ENG_FREQ, ENT_FREQ, MED_FREQ, SEC_FREQ, SCI_FREQ, SRV_FREQ, SUP_FREQ) // CHOMPEdit
+GLOBAL_LIST_INIT(department_frequencies, list(AI_FREQ, BDCM_FREQ, COMM_FREQ, ENG_FREQ, ENT_FREQ, MED_FREQ, SEC_FREQ, SCI_FREQ, SRV_FREQ, SUP_FREQ)) // CHOMPEdit
 
-var/list/OFFMAP_FREQS = list(TALON_FREQ, CSN_FREQ, OUT_FREQ) //VOREStation Add CHOMPEdit: Added outsider
-=======
-GLOBAL_LIST_INIT(department_frequencies, list(AI_FREQ, COMM_FREQ, ENG_FREQ, ENT_FREQ, MED_FREQ, SEC_FREQ, SCI_FREQ, SRV_FREQ, SUP_FREQ))
-
-GLOBAL_LIST_INIT(offmap_frequencies, list(TALON_FREQ, CSN_FREQ))
->>>>>>> de17517e42 (bunch of global vars (#19091))
+GLOBAL_LIST_INIT(offmap_frequencies, list(TALON_FREQ, CSN_FREQ, OUT_FREQ)) var/list/OFFMAP_FREQS = list(TALON_FREQ, CSN_FREQ, OUT_FREQ) // CHOMPEdit: Added outsider
 
 /proc/frequency_span_class(var/frequency)
 	// Antags!

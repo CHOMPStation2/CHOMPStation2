@@ -1,13 +1,5 @@
 // Customizable Foods //////////////////////////////////////////
-<<<<<<< HEAD
-var/global/deepFriedEverything = 0
-var/global/deepFriedNutriment = 0
-var/global/foodNesting = 0
-var/global/recursiveFood = 0
-var/global/ingredientLimit = 20000
-=======
 #define INGREDIENT_LIMIT 20
->>>>>>> de17517e42 (bunch of global vars (#19091))
 
 
 /obj/item/reagent_containers/food/snacks/customizable
