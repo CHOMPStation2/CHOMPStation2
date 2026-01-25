@@ -335,8 +335,10 @@
 	radiation_healing = TRUE
 	radiation_nutrition = TRUE
 
-/datum/component/radiation_effects/chomp_shadekin //CHOMPEdit Start
+//CHOMPAdd Start
+/datum/component/radiation_effects/chomp_shadekin
 	show_panel = FALSE
 	glows = FALSE
 	glow_toggle = FALSE
-	radiation_immunity = TRUE //CHOMPEdit End
+	radiation_immunity = TRUE
+//CHOMPAdd End
