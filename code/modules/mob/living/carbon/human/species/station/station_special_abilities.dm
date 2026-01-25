@@ -1297,11 +1297,6 @@
 		M.show_message(span_warning("You lose sensation of your body."))
 	return
 
-
-//egglaying
-var/eggs = 0
-
-
 /mob/living/proc/mobegglaying()
 	set name = "Egg laying"
 	set desc = "you can lay Eggs"

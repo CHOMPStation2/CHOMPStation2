@@ -749,7 +749,7 @@
 	if(holding)
 		add_overlay("[icon_state]_knife")
 	if(contaminated)
-		add_overlay(contamination_overlay)
+		add_overlay(GLOB.contamination_overlay)
 	if(gurgled) //VOREStation Edit Start
 		wash(CLEAN_ALL)
 		gurgle_contaminate() //VOREStation Edit End

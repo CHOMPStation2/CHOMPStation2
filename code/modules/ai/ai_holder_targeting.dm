@@ -34,7 +34,8 @@
 //CHOMPEdit Begin
 // Step 1, find out what we can see.
 /datum/ai_holder/proc/list_targets()
-	. = hearers(vision_range, holder) - holder // Remove ourselves to prevent suicidal decisions. ~ SRC is the ai_holder.
+	. = ohearers(vision_range, holder) - holder // CHOMPEdit Remove ourselves to prevent suicidal decisions. ~ SRC is the ai_holder.
+	. -= GLOB.dview_mob // Not the dview mob!
 
 	var/static/list/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha))
 	var/static/list/ignore = typecacheof(list(/mob/observer))
