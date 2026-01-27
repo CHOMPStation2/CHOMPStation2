@@ -315,3 +315,13 @@
   Kashargul:
   - bugfix: missing init hint
   - bugfix: server crash on egg laying
+2026-01-27:
+  CHOMPStation2StaffMirrorBot:
+  - qol: allows to lower limit liquid gen %
+  - code_imp: converts a bunch of variables to GLOB
+  - bugfix: a few runtimes
+  Diana:
+  - code_imp: Adds more framework for radiation component to do more fancy things.
+  - qol: Nutrition gain from radiation gains can be toggled on/off
+  Guti:
+  - balance: Lowered the threshold for chemical addictions
