@@ -59,21 +59,51 @@
 	deform = 'icons/mob/human_races/r_xenomorph_hybrid.dmi'
 	tail = "tail"
 	icobase_tail = 1
-	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/strong/xeno, /datum/unarmed_attack/bite/strong/xeno) // Innate claws and bite.
-	darksight = 8 // Same as Tajarans.
 	ambiguous_genders = TRUE
-	slowdown = -0.2 // Slightly faster than average.
-	total_health = 150 // Takes a lot of effort to take a Xenomorph down.
-	brute_mod = 0.9 // Physical damage doesn't phase them as much.
-	burn_mod = 1.4 // They do NOT like fire.
-	toxins_mod = 0.9 // Slightly resistant to toxins.
-	radiation_mod = 0.9 // Somewhat resistant to radiation exposure.
-	flash_mod = 1.2 // Flashes are more effective.
-	metabolic_rate = 1.2 // Very physically active species, thus requiring more nutritional intake.
-	item_slowdown_mod = 0.9 // They carry heavy things slightly better.
+	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/strong/xeno, /datum/unarmed_attack/bite/strong/xeno) // Innate claws and bite.
+
+	total_health = 150 // Larger health pool.
+	burn_mod = 2 // Fire does not mix well with their silicon carapace.
+	toxins_mod = 0.5 // Resistant to toxins.
+	trauma_mod = 0.3 // Highly resistant to pain.
+	rad_removal_mod = 1.5 // Radiation leaves the body much faster.
+	chem_strength_heal = 0.1 // Acidic blood neutralizes most injected and ingested beneficial chemicals.
+	metabolic_rate = 1.3 // Very physically active species, thus requiring more nutritional intake.
+	chem_strength_alcohol = 1.2 // They don't handle their drinks very well.
+	throwforce_absorb_threshold = 10 // Thrown objects don't do as much.
+	darksight = 10 // Full view darksight.
+	soft_landing = TRUE // Nimble, flexible and tough enough to walk off falls from greater heights.
+
+	cold_level_1 = 150	//Default 260
+	cold_level_2 = 100	//Default 200
+	cold_level_3 = 50	//Default 120
+
+	breath_cold_level_1 = 140	//Default 240
+	breath_cold_level_2 = 90	//Default 180
+	breath_cold_level_3 = 40	//Default 100
+
+	heat_level_1 = 380	//Default 360
+	heat_level_2 = 420	//Default 400
+	heat_level_3 = 1020	//Default 1000
+
+	breath_heat_level_1 = 390	//Default 380
+	breath_heat_level_2 = 460	//Default 450
+	breath_heat_level_3 = 1260	//Default 1250
+
+	heat_discomfort_level = 320 // 46 Celsius, not so comfortable in high temperatures.
+	heat_discomfort_strings = list(
+		"Our carapace bristles in the heat."
+		)
+
+	cold_discomfort_level = 200 // -73 Celsius, very comfortable in below freezing temperatures.
+	cold_discomfort_strings = list(
+		"The cold bites through our carapace."
+		)
+
+	hazard_low_pressure = HAZARD_LOW_PRESSURE*0 // Xenomorph Hybrids are immune to space, but still need to breathe.
+	warning_low_pressure = WARNING_LOW_PRESSURE*0
+
 	mob_size = MOB_MEDIUM // Technically doesn't even need this but still adding the override just in case.
-	blood_volume = 640 // More blood to compound their high health.
-	bloodloss_rate = 1 // Bleed normally.
 	num_alternate_languages = 3
 	name_language = LANGUAGE_XENOLINGUA
 	species_language = LANGUAGE_XENOLINGUA
@@ -81,8 +111,6 @@
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN) // Can use the Hivemind language.
 	color_mult = 1
 	health_hud_intensity = 1.5
-	chem_strength_alcohol = 1.2 // They don't handle their drinks very well.
-	throwforce_absorb_threshold = 10 // Thrown objects don't do as much.
 
 	economic_modifier = 5 // While they aren't true Xenomorphs, they still draw a lot of social stigma, and are generally mistreated and underpaid as a result.
 	rarity_value = 4 // Very rare to find these guys on human stations.
@@ -138,17 +166,6 @@
 		O_EGG =         /obj/item/organ/internal/xenos/eggsac // Fluff organ.
 		)
 
-
-	heat_discomfort_level = 303.15 // 30 Celsius, not so comfortable in high temperatures.
-	heat_discomfort_strings = list(
-		"Our carapace bristles in the heat."
-		)
-
-	cold_discomfort_level = 253.15 // -20 Celsius, very comfortable in below freezing temperatures.
-	cold_discomfort_strings = list(
-		"The cold bites through our carapace."
-		)
-
 	var/weeds_plasma_rate = 3 	// Plasma regen. Much lower than actual xenos. Faster on weeds.
 	var/weeds_heal_rate = 0.5   // Health regen on weeds. No healing unless resting.
 
@@ -188,7 +205,7 @@
 		H.adjustOxyLoss(-heal_rate)
 		H.adjustToxLoss(-heal_rate)
 		if (prob(5))
-			to_chat(H, span_alien("A soothing sensation falls over us..."))
+			to_chat(H, span_alien("A soothing sensation falls over our body..."))
 		return 1
 
 	// Lastly, mend broken bones. May remove this if it's abused.
@@ -196,7 +213,7 @@
 		if (E.status & ORGAN_BROKEN)
 			if (prob(mend_prob))
 				if (E.mend_fracture())
-					to_chat(H, span_alien("We feel something mend within our [E.name]."))
+					to_chat(H, span_alien("We feel something reshape and mend within our [E.name]..."))
 			return 1
 
 	return 0
