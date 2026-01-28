@@ -46,6 +46,7 @@
 	active_armourpen = 30
 	projectile_parry_chance = 20
 	defend_chance = 20
+	lcolor = null
 	colorable = FALSE
 
 	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
@@ -121,4 +122,4 @@
 	charge = 300
 	maxcharge = 300
 	charge_amount = 300
-	charge_delay = 50
+	charge_delay = 5

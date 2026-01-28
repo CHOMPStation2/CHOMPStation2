@@ -268,6 +268,7 @@
 	slot_flags = SLOT_BELT | SLOT_BACK
 	desc = "A forgien blade made via techniques formly lost. Gains a diffrent effect base off your stance."
 	description_info = "Attacking whilst on grab intent will plant a heat bomb, attacking whilst on disarm will increase your speed for a brief moment, and attacking whilst on harm will phase out your foe's armor."
+	lcolor = null
 	colorable = FALSE
 	attackspeed = 4
 	active_force = 5
@@ -324,10 +325,11 @@
 	name = "tyrian guardian hammer"
 	slot_flags = SLOT_BELT | SLOT_BACK
 	desc = "A strange hammer made via techniques formly lost. Gains a diffrent effect base off your stance."
-	description_info = "Attacking whilst on grab intent weakens the target's healing, attacking whilst on disarm weakens the target's melee potential, and attacking whilst on harm has a 2% chance to deal guaranteed massive damage."
+	description_info = "Attacking whilst on grab intent restore the wielder's health, attacking whilst on disarm weakens the target and attacking whilst on harm can throw back the target."
+	lcolor = null
 	colorable = FALSE
 
-	active_force = 20
+	active_force = 35
 	active_armourpen = 40
 
 	attackspeed = 20
