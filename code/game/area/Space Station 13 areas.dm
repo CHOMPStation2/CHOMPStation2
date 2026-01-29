@@ -2635,7 +2635,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 */
 
 // CENTCOM
-var/list/centcom_areas = list (
+GLOBAL_LIST_INIT(centcom_areas, list(
 	/area/centcom,
 	/area/shuttle/escape/centcom,
 	/area/shuttle/escape_pod1/centcom,
@@ -2645,10 +2645,10 @@ var/list/centcom_areas = list (
 	/area/shuttle/transport1/centcom,
 	/area/shuttle/administration/centcom,
 	/area/shuttle/specops/centcom,
-)
+))
 
 //SPACE STATION 13
-var/list/the_station_areas = list (
+GLOBAL_LIST_INIT(the_station_areas, list(
 	/area/shuttle/arrival,
 	/area/shuttle/escape/station,
 	/area/shuttle/escape_pod1/station,
@@ -2688,7 +2688,7 @@ var/list/the_station_areas = list (
 	/area/ai_upload,
 	/area/ai_upload_foyer,
 	/area/ai
-)
+))
 
 
 

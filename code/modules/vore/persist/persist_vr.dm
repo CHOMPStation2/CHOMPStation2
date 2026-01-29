@@ -52,7 +52,7 @@
 			warning("Persist (P4P): [persister.mind] was loaded from ckey [persister.mind.loaded_from_ckey] mismatching the current ckey [ckey(persister.mind.key)].")
 			return //CHOMPAdd End
 		// Okay this mob has a real loaded-from-savefile mind in it!
-		var/datum/preferences/prefs = preferences_datums[persister.mind.loaded_from_ckey]
+		var/datum/preferences/prefs = GLOB.preferences_datums[persister.mind.loaded_from_ckey]
 		if(!prefs)
 			WARNING("Persist (P4P): [persister.mind] was loaded from ckey [persister.mind.loaded_from_ckey] but no prefs datum found.")
 			return
