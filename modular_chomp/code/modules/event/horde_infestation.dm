@@ -22,7 +22,7 @@
 	if(prob(50)) //50/50 chance on spiders or metroids.
 		log_game("Hord event, spiders selected.")
 		spawncount = rand(4 * severity, 10 * severity)
-		sent_spiders_to_station = 0
+		GLOB.sent_spiders_to_station = 0
 		spiders = TRUE
 
 	else
