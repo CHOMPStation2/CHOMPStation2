@@ -316,8 +316,7 @@
 
 /datum/gear/shoes/sandals_elegant/New()
 	..()
-<<<<<<< HEAD
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 //CHOMP ADDITION, trying to make a no shoes shoe option
 /datum/gear/shoes/none
@@ -345,6 +344,3 @@
 
 /obj/item/clothing/shoes/none/make_worn_icon(body_type, slot_name, inhands, default_icon, default_layer, icon/clip_mask) // override this to ensure that no worn icon is generated
 	return
-=======
-	gear_tweaks += GLOB.gear_tweak_free_color_choice
->>>>>>> 6a44700b46 (digestion toggle geartweak (#19089))

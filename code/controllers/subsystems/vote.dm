@@ -375,14 +375,9 @@ SUBSYSTEM_DEF(vote)
 				CONFIG_SET(flag/allow_vote_mode, !CONFIG_GET(flag/allow_vote_mode)) // CHOMPEdit
 
 		if(VOTE_RESTART)
-<<<<<<< HEAD
-			if(CONFIG_GET(flag/allow_vote_restart) || usr.client.holder) // CHOMPEdit
-				initiate_vote(VOTE_RESTART, usr.key)
-=======
 			if(config.allow_vote_restart || usr.client.holder)
 				if(tgui_alert(usr, "Are you sure you want to start a RESTART VOTE? You should only do this if the server is dying and no staff are around to investigate.", "RESTART VOTE", list("No", "Yes I want to start a RESTART VOTE")) == "Yes I want to start a RESTART VOTE")
 					initiate_vote(VOTE_RESTART, usr.key)
->>>>>>> e8e986e6f5 (General Cleanup (#19088))
 		if(VOTE_GAMEMODE)
 			if(CONFIG_GET(flag/allow_vote_mode) || usr.client.holder) // CHOMPEdit
 				initiate_vote(VOTE_GAMEMODE, usr.key)
