@@ -22,20 +22,24 @@
 		/obj/item/clothing/accessory/holster/waist = 3)
 
 /obj/structure/closet/wardrobe/red/Initialize(mapload)
-	if(prob(50))
-		starts_with += /obj/item/storage/backpack/security
-	else
-		starts_with += /obj/item/storage/backpack/satchel/sec
-	if(prob(50))
-		starts_with += /obj/item/storage/backpack/security
-	else
-		starts_with += /obj/item/storage/backpack/satchel/sec
-	if(prob(50))
-		starts_with += /obj/item/storage/backpack/security
-	else
-		starts_with += /obj/item/storage/backpack/satchel/sec
+	if(islist(starts_with))
+		if(prob(50))
+			starts_with += /obj/item/storage/backpack/security
+		else
+			starts_with += /obj/item/storage/backpack/satchel/sec
+		if(prob(50))
+			starts_with += /obj/item/storage/backpack/security
+		else
+			starts_with += /obj/item/storage/backpack/satchel/sec
+		if(prob(50))
+			starts_with += /obj/item/storage/backpack/security
+		else
+			starts_with += /obj/item/storage/backpack/satchel/sec
 
 	return ..()
+
+/obj/structure/closet/wardrobe/red/empty
+	starts_with = null
 
 /obj/structure/closet/wardrobe/detective
 	name = "detective wardrobe"
@@ -70,6 +74,9 @@
 		/obj/item/clothing/under/color/pink = 3,
 		/obj/item/clothing/shoes/brown = 3)
 
+/obj/structure/closet/wardrobe/pink/empty
+	starts_with = null
+
 /obj/structure/closet/wardrobe/black
 	name = "black wardrobe"
 	closet_appearance = /decl/closet_appearance/wardrobe/black
@@ -82,6 +89,23 @@
 		/obj/item/clothing/mask/bandana = 3,
 		/obj/item/storage/backpack/messenger/black)
 
+/obj/structure/closet/wardrobe/black/empty
+	starts_with = null
+
+/obj/structure/closet/wardrobe/black/talon
+	starts_with = list(
+		/obj/item/clothing/under/color/black = 4,
+		/obj/item/clothing/accessory/storage/black_vest = 4,
+		/obj/item/clothing/accessory/storage/black_drop_pouches = 4,
+		/obj/item/clothing/gloves/black = 4,
+		/obj/item/clothing/head/soft/black = 4,
+		/obj/item/clothing/mask/balaclava = 4,
+		/obj/item/clothing/mask/bandana = 4,
+		/obj/item/clothing/mask/gas/commando = 4,
+		/obj/item/storage/backpack/messenger/black = 4,
+		/obj/item/storage/backpack/dufflebag = 4,
+		/obj/item/clothing/shoes/black = 4,
+		/obj/item/clothing/shoes/boots/duty = 4)
 
 /obj/structure/closet/wardrobe/chaplain_black
 	name = "chapel wardrobe"
@@ -128,6 +152,9 @@
 		/obj/item/clothing/head/soft/green = 3,
 		/obj/item/clothing/mask/bandana/green = 3)
 
+/obj/structure/closet/wardrobe/green/empty
+	starts_with = null
+
 /obj/structure/closet/wardrobe/xenos
 	name = "xenos wardrobe"
 	closet_appearance = /decl/closet_appearance/wardrobe/xenos
@@ -150,6 +177,8 @@
 		/obj/item/clothing/under/color/prison = 3,
 		/obj/item/clothing/shoes/orange = 3)
 
+/obj/structure/closet/wardrobe/orange/empty
+	starts_with = null
 
 /obj/structure/closet/wardrobe/yellow
 	name = "yellow wardrobe"
@@ -161,6 +190,8 @@
 		/obj/item/clothing/head/soft/yellow = 3,
 		/obj/item/clothing/mask/bandana/gold = 3)
 
+/obj/structure/closet/wardrobe/yellow/empty
+	starts_with = null
 
 /obj/structure/closet/wardrobe/atmospherics_yellow
 	name = "atmospherics wardrobe"
@@ -202,6 +233,8 @@
 		/obj/item/clothing/shoes/white = 3,
 		/obj/item/clothing/head/soft/mime = 3)
 
+/obj/structure/closet/wardrobe/white/empty
+	starts_with = null
 
 /obj/structure/closet/wardrobe/pjs
 	name = "pajama wardrobe"
@@ -351,6 +384,8 @@
 		/obj/item/clothing/shoes/black = 3,
 		/obj/item/clothing/head/soft/grey = 3)
 
+/obj/structure/closet/wardrobe/grey/empty
+	starts_with = null
 
 /obj/structure/closet/wardrobe/mixed
 	name = "mixed wardrobe"
