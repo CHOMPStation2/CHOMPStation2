@@ -572,18 +572,11 @@ ADMIN_VERB(respawn_character, (R_ADMIN|R_REJUVINATE), "Spawn Character", "(Re)Sp
 	//If desired, apply equipment.
 	if(equipment)
 		if(charjob)
-<<<<<<< HEAD
-			job_master.EquipRank(new_character, charjob, 1, announce)
-			if(new_character.mind)
-				new_character.mind.assigned_role = charjob
-				new_character.mind.role_alt_title = job_master.GetPlayerAltTitle(new_character, charjob)
-		equip_custom_items(new_character)	//CHOMPEdit readded to enable custom_item.txt
-=======
 			GLOB.job_master.EquipRank(new_character, charjob, 1)
 			if(new_character.mind)
 				new_character.mind.assigned_role = charjob
 				new_character.mind.role_alt_title = GLOB.job_master.GetPlayerAltTitle(new_character, charjob)
->>>>>>> d0678d4046 (More globals (#19111))
+		equip_custom_items(new_character)	//CHOMPEdit readded to enable custom_item.txt
 
 	//If customised job title, modify here.
 	if(custom_job && custom_job_title)
