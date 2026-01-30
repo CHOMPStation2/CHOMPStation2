@@ -1,6 +1,3 @@
-#define IRCREPLYCOUNT 2
-
-
 //allows right clicking mobs to send an admin PM to their client, forwards the selected mob's client to cmd_admin_pm
 /client/proc/cmd_admin_pm_context(mob/M in GLOB.mob_list)
 	set category = null
@@ -77,98 +74,97 @@
 		return
 
 	var/client/recipient
-	var/irc = 0
 	if(istext(whom))
 		if(cmptext(copytext(whom,1,2),"@"))
 			whom = findStealthKey(whom)
-		if(whom == "IRCKEY")
-			irc = 1
-		else
-			recipient = GLOB.directory[whom]
+		recipient = GLOB.directory[whom]
 	else if(isclient(whom))
 		recipient = whom
 
+	//get message text, limit it's length.and clean/escape html
+	if(!msg)
+		msg = tgui_input_text(src, "Message:", "Private message to [key_name(recipient, 0, 0)]", multiline = TRUE, encode = FALSE)
 
-	if(irc)
-		if(!ircreplyamount)	//to prevent people from spamming irc
+	//clean the message if it's not sent by a high-rank admin
+	if(!check_rights(R_SERVER|R_DEBUG, FALSE))//no sending html to the poor bots
+		msg = trim(sanitize(copytext(msg,1,MAX_MESSAGE_LEN)))
+	if(!msg)
+		return
+
+	if (src.handle_spam_prevention(MUTE_ADMINHELP))
+		return
+
+	if(prefs.muted & MUTE_ADMINHELP)
+		to_chat(src, span_admin_pm_warning("Error: Admin-PM: You are unable to use admin PM-s (muted)."))
+		return
+
+	if(!recipient)
+		if(!current_ticket)
+			to_chat(src, span_admin_pm_warning("Error: Admin-PM: Client not found."))
+			to_chat(src, msg)
 			return
-		if(!msg)
-			msg = tgui_input_text(src, "Message:", "Private message to Administrator", multiline = TRUE, encode = FALSE)
-
-		if(!msg)
-			return
-		if(holder)
-			to_chat(src, span_admin_pm_warning("Error: Use the admin IRC channel, nerd."))
-			return
-
-
-	else
-		//get message text, limit it's length.and clean/escape html
-		if(!msg)
-			msg = tgui_input_text(src, "Message:", "Private message to [key_name(recipient, 0, 0)]", multiline = TRUE, encode = FALSE)
-
-		//clean the message if it's not sent by a high-rank admin
-		if(!check_rights(R_SERVER|R_DEBUG, FALSE)||irc)//no sending html to the poor bots
-			msg = trim(sanitize(copytext(msg,1,MAX_MESSAGE_LEN)))
-		if(!msg)
-			return
-
-		if (src.handle_spam_prevention(MUTE_ADMINHELP))
-			return
-
-		if(prefs.muted & MUTE_ADMINHELP)
-			to_chat(src, span_admin_pm_warning("Error: Admin-PM: You are unable to use admin PM-s (muted)."))
-			return
-
-		if(!recipient)
-			if(!current_ticket)
-				to_chat(src, span_admin_pm_warning("Error: Admin-PM: Client not found."))
-				to_chat(src, msg)
-				return
-			log_admin("Adminhelp: [key_name(src)]: [msg]")
-			current_ticket.MessageNoRecipient(msg)
-			return
+		log_admin("Adminhelp: [key_name(src)]: [msg]")
+		current_ticket.MessageNoRecipient(msg)
+		return
 
 	var/rawmsg = msg
 
 	var/keywordparsedmsg = keywords_lookup(msg)
 
-	if(irc)
-		to_chat(src, span_admin_pm_notice("PM to-" + span_bold("Admins") + ": [rawmsg]"))
-		admin_ticket_log(src, span_admin_pm_warning("Reply PM from-" + span_bold("[key_name(src, TRUE, TRUE)]") + " to " + span_italics("IRC") + ": [keywordparsedmsg]"))
-		ircreplyamount--
+	if(recipient.holder)
+		if(holder)	//both are admins
+			to_chat(recipient, span_admin_pm_warning("Admin PM from-" + span_bold("[key_name(src, recipient, 1)]") + ": [keywordparsedmsg]"))
+			to_chat(src, span_admin_pm_notice("Admin PM to-" + span_bold("[key_name(recipient, src, 1)]") + ": [keywordparsedmsg]"))
+
+			//omg this is dumb, just fill in both their tickets
+			var/interaction_message = span_admin_pm_notice("PM from-" + span_bold("[key_name(src, recipient, 1)]") + " to-" + span_bold("[key_name(recipient, src, 1)]") + ": [keywordparsedmsg]")
+			admin_ticket_log(src, interaction_message)
+			if(recipient != src)	//reeee
+				admin_ticket_log(recipient, interaction_message)
+
+		else		//recipient is an admin but sender is not
+			var/replymsg = span_admin_pm_warning("Reply PM from-" + span_bold("[key_name(src, recipient, 1)]") + ": [keywordparsedmsg]")
+			admin_ticket_log(src, replymsg)
+			to_chat(recipient, replymsg)
+			to_chat(src, span_admin_pm_notice("PM to-" + span_bold("Admins") + ": [msg]"))
+
+		//play the recieving admin the adminhelp sound (if they have them enabled)
+		if(recipient.prefs?.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
+			recipient << 'sound/effects/adminhelp.ogg'
+
 	else
-		if(recipient.holder)
-			if(holder)	//both are admins
-				to_chat(recipient, span_admin_pm_warning("Admin PM from-" + span_bold("[key_name(src, recipient, 1)]") + ": [keywordparsedmsg]"))
-				to_chat(src, span_admin_pm_notice("Admin PM to-" + span_bold("[key_name(recipient, src, 1)]") + ": [keywordparsedmsg]"))
+		if(holder)	//sender is an admin but recipient is not. Do BIG RED TEXT
+			if(!recipient.current_ticket)
+				new /datum/ticket(msg, recipient, TRUE, 1)
 
-				//omg this is dumb, just fill in both their tickets
-				var/interaction_message = span_admin_pm_notice("PM from-" + span_bold("[key_name(src, recipient, 1)]") + " to-" + span_bold("[key_name(recipient, src, 1)]") + ": [keywordparsedmsg]")
-				admin_ticket_log(src, interaction_message)
-				if(recipient != src)	//reeee
-					admin_ticket_log(recipient, interaction_message)
+			to_chat(recipient, span_admin_pm_warning(span_huge(span_bold("-- Administrator private message --"))))
+			to_chat(recipient, span_admin_pm_warning("Admin PM from-" + span_bold("[key_name(src, recipient, 0)]") + ": [msg]"))
+			to_chat(recipient, span_admin_pm_warning(span_italics("Click on the administrator's name to reply.")))
+			to_chat(src, span_admin_pm_notice("Admin PM to-" + span_bold("[key_name(recipient, src, 1)]") + ": [msg]"))
 
-			else		//recipient is an admin but sender is not
-				var/replymsg = span_admin_pm_warning("Reply PM from-" + span_bold("[key_name(src, recipient, 1)]") + ": [keywordparsedmsg]")
-				admin_ticket_log(src, replymsg)
-				to_chat(recipient, replymsg)
-				to_chat(src, span_admin_pm_notice("PM to-" + span_bold("Admins") + ": [msg]"))
+			admin_ticket_log(recipient, span_admin_pm_notice("PM From [key_name_admin(src)]: [keywordparsedmsg]"))
 
-			//play the recieving admin the adminhelp sound (if they have them enabled)
-			if(recipient.prefs?.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
-				recipient << 'sound/effects/adminhelp.ogg'
+			//always play non-admin recipients the adminhelp sound
+			recipient << 'sound/effects/adminhelp.ogg'
 
-		else
-			if(holder)	//sender is an admin but recipient is not. Do BIG RED TEXT
-				if(!recipient.current_ticket)
-					new /datum/ticket(msg, recipient, TRUE, 1)
+			//AdminPM popup for ApocStation and anybody else who wants to use it. Set it with POPUP_ADMIN_PM in config.txt ~Carn
+			if(CONFIG_GET(flag/popup_admin_pm))
+				spawn()	//so we don't hold the caller proc up
+					var/sender = src
+					var/sendername = key
+					var/reply = tgui_input_text(recipient, msg,"Admin PM from-[sendername]", "", multiline = TRUE)	//show message and await a reply
+					if(recipient && reply)
+						if(sender)
+							recipient.cmd_admin_pm(sender,reply)										//sender is still about, let's reply to them
+						else
+							adminhelp(reply)													//sender has left, adminhelp instead
+					return
 
-				to_chat(recipient, span_admin_pm_warning(span_huge(span_bold("-- Administrator private message --"))))
-				to_chat(recipient, span_admin_pm_warning("Admin PM from-" + span_bold("[key_name(src, recipient, 0)]") + ": [msg]"))
-				to_chat(recipient, span_admin_pm_warning(span_italics("Click on the administrator's name to reply.")))
-				to_chat(src, span_admin_pm_notice("Admin PM to-" + span_bold("[key_name(recipient, src, 1)]") + ": [msg]"))
+		else		//neither are admins
+			to_chat(src, span_admin_pm_warning("Error: Admin-PM: Non-admin to non-admin PM communication is forbidden."))
+			return
 
+<<<<<<< HEAD
 				admin_ticket_log(recipient, span_admin_pm_notice("PM From [key_name_admin(src)]: [keywordparsedmsg]"))
 
 				//always play non-admin recipients the adminhelp sound
@@ -281,3 +277,12 @@
 	return	stealth
 
 #undef IRCREPLYCOUNT
+=======
+	log_admin("PM: [key_name(src)]->[key_name(recipient)]: [rawmsg]")
+	//we don't use message_admins here because the sender/receiver might get it too
+	for(var/client/X in GLOB.admins)
+		if(!check_rights_for(X, R_ADMIN))
+			continue
+		if(X.key!=key && X.key!=recipient.key)	//check client/X is an admin and isn't the sender or recipient
+			to_chat(X, span_admin_pm_notice(span_bold("PM: [key_name(src, X, 0)]-&gt;[key_name(recipient, X, 0)]:") + " [keywordparsedmsg]"))
+>>>>>>> e8e986e6f5 (General Cleanup (#19088))
