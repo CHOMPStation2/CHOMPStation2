@@ -59,6 +59,7 @@
 	//CHOMPEdit End
 	var/category_implants	 = 1
 	var/category_event		 = 1	//For special events, holidays, etc
+	var/category_pets		 = 2
 
 /obj/machinery/casino_prize_dispenser/Initialize(mapload)
 	. = ..()
@@ -342,6 +343,8 @@
 					restriction_check = category_implants
 				if("event")
 					restriction_check = category_event
+				if("pets")
+					restriction_check = category_pets
 				else
 					to_chat(ui.user, span_warning("Prize checkout error has occurred, purchase cancelled."))
 					return FALSE
