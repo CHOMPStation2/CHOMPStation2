@@ -370,6 +370,10 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
+"aaT" = (
+/obj/item/destTagger,
+/turf/space,
+/area/space)
 "aaZ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -28275,10 +28279,6 @@
 "qvG" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/cetus/threeap)
-"qwC" = (
-/obj/item/destTagger,
-/turf/space,
-/area/space)
 "qwE" = (
 /turf/simulated/open,
 /area/maintenance/cetus/threefp)
@@ -53735,7 +53735,7 @@ mco
 mco
 mco
 mco
-qwC
+aaT
 mco
 mco
 mco

@@ -11495,15 +11495,6 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/engineering/staff_room)
-"kpY" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/outline,
-/obj/item/soap,
-/obj/structure/closet/secure_closet/medical3/snowfield,
-/turf/simulated/floor/tiled/neutral,
-/area/awaymission/snowfield/medical/medical_locker)
 "kqw" = (
 /obj/item/pen,
 /turf/simulated/floor/wood,
@@ -13178,6 +13169,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/snowfield/command/testroom)
+"lLf" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline,
+/obj/item/soap,
+/obj/structure/closet/secure_closet/medical3/snowfield,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/medical_locker)
 "lLo" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/button/remote/blast_door{
@@ -43733,8 +43733,8 @@ kOt
 kdE
 dpf
 dzK
-kpY
-kpY
+lLf
+lLf
 nPS
 vCN
 dpf

@@ -11,6 +11,17 @@
 /obj/effect/map_effect/portal/master/side_a/caves_to_wilderness,
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outpost/wall/checkpoint)
+"aac" = (
+/obj/structure/catwalk,
+/obj/structure/closet/walllocker_double/engineering/north,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/suit/radiation,
+/obj/item/geiger,
+/obj/item/geiger,
+/obj/item/clothing/head/radiation,
+/obj/item/clothing/head/radiation,
+/turf/simulated/floor/plating,
+/area/engineering/hallway/engineer_hallway)
 "aah" = (
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
@@ -20182,17 +20193,6 @@
 	},
 /turf/simulated/floor/wood/alt/panel,
 /area/chapel/main)
-"iGl" = (
-/obj/structure/catwalk,
-/obj/structure/closet/walllocker_double/engineering/north,
-/obj/item/clothing/suit/radiation,
-/obj/item/clothing/suit/radiation,
-/obj/item/geiger,
-/obj/item/geiger,
-/obj/item/clothing/head/radiation,
-/obj/item/clothing/head/radiation,
-/turf/simulated/floor/plating,
-/area/engineering/hallway/engineer_hallway)
 "iGn" = (
 /obj/effect/floor_decal/stairs/dark_stairs{
 	dir = 4
@@ -77907,7 +77907,7 @@ plZ
 pML
 qKt
 oOQ
-iGl
+aac
 lpm
 tqj
 eFA
