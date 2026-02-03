@@ -85,7 +85,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meteor Shower",			/datum/event/meteor_wave,				-50,	list(DEPARTMENT_ENGINEERING = 45, DEPARTMENT_ANY = 2), TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 2)),
 		//New CHOMPStation event. Mice and lizards grow into rats and lizardmen respectively.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Mutants",					/datum/event/mutants,					20,		list(DEPARTMENT_ANY = 15, DEPARTMENT_SECURITY = 25, DEPARTMENT_ANY = 2), TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Pyroclastic Anomaly", 		/datum/event/anomaly/pyro,				-20,	list(DEPARTMENT_ENGINEERING = 30, JOB_CHIEF_ENGINEER = 20, DEPARTMENT_RESEARCH = 20, JOB_RESEARCH_DIRECTOR = 10, DEPARTMENT_ANY = 2), TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Pyroclastic Anomaly", 		/datum/event/anomaly/pyro,				-40,	list(DEPARTMENT_ENGINEERING = 30, JOB_CHIEF_ENGINEER = 20, DEPARTMENT_RESEARCH = 20, JOB_RESEARCH_DIRECTOR = 10, DEPARTMENT_ANY = 2), TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Radiation Storm",			/datum/event/radiation_storm, 			50,		list(DEPARTMENT_MEDICAL = 50, DEPARTMENT_MEDICAL = 2), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Rogue Drones",				/datum/event/rogue_drone, 				-30,	list(DEPARTMENT_SECURITY = 25, JOB_HEAD_OF_SECURITY = 35, JOB_WARDEN = 35, DEPARTMENT_ANY = 2), min_jobs = list(DEPARTMENT_SECURITY = 2)),
 		// Radiation, but only in space.

@@ -350,3 +350,7 @@
   Will:
   - bugfix: plastique explosive explosion reduced, seismic charge unchanged
   - qol: Methane canisters can now be ordered from cargo, like all other gasses.
+2026-01-31:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: dependency up
+  - code_imp: converts the next set of globals to GLOBs

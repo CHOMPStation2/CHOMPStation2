@@ -1,4 +1,4 @@
-var/global/datum/controller/occupations/job_master
+GLOBAL_DATUM(job_master, /datum/controller/occupations)
 
 /datum/controller/occupations
 		//List of all jobs
@@ -73,7 +73,7 @@ var/global/datum/controller/occupations/job_master
 			unassigned -= player
 			job.current_positions++
 			//CHOMPadd START
-			if(job.camp_protection && round_duration_in_ds < transfer_controller.shift_hard_end - 30 MINUTES)
+			if(job.camp_protection && round_duration_in_ds < GLOB.transfer_controller.shift_hard_end - 30 MINUTES)
 				job.register_shift_key(player.client.ckey)
 			//CHOMPadd END
 			return 1
