@@ -5871,11 +5871,18 @@
 	dir = 5
 	},
 /obj/structure/closet/radiation{
-	anchored = 1;
-	starts_with = list(/obj/item/clothing/suit/radiation=4,/obj/item/clothing/head/radiation=4,/obj/item/geiger=4)
+	anchored = 1
 	},
 /obj/item/clothing/glasses/meson,
 /obj/item/clothing/glasses/meson,
+/obj/item/clothing/head/radiation,
+/obj/item/clothing/head/radiation,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/suit/radiation/teshari,
+/obj/item/geiger,
+/obj/item/geiger,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
 "dyh" = (
@@ -7829,6 +7836,12 @@
 	c_tag = "SCI - JR D3 Stairwell 3";
 	dir = 6
 	},
+/obj/item/geiger,
+/obj/item/geiger,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/head/radiation,
+/obj/item/clothing/head/radiation,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/stairwelljr3)
 "eEH" = (
@@ -28262,6 +28275,10 @@
 "qvG" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/cetus/threeap)
+"qwC" = (
+/obj/item/destTagger,
+/turf/space,
+/area/space)
 "qwE" = (
 /turf/simulated/open,
 /area/maintenance/cetus/threefp)
@@ -53718,7 +53735,7 @@ mco
 mco
 mco
 mco
-mco
+qwC
 mco
 mco
 mco
