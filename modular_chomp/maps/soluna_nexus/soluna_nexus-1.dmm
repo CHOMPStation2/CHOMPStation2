@@ -14865,9 +14865,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock2)
 "cZm" = (
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
@@ -14879,6 +14876,7 @@
 /obj/random/drinksoft,
 /obj/random/drinksoft,
 /obj/random/drinksoft,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/tiled,
 /area/maintenance/ab_GeneralStore)
 "cZn" = (
@@ -39508,14 +39506,12 @@
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ab_GeneralStore)
 "lzJ" = (
@@ -40327,13 +40323,11 @@
 /obj/random/drinksoft,
 /obj/random/drinksoft,
 /obj/random/drinksoft,
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/random/drinksoft,
 /obj/random/drinksoft,
 /obj/random/drinksoft,
 /obj/random/drinksoft,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/tiled,
 /area/maintenance/ab_GeneralStore)
 "lQb" = (
@@ -44426,10 +44420,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_1_Deck_Stairwell)
 "nmw" = (
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/effect/floor_decal/rust,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ab_Medical)
 "nmP" = (
@@ -46182,9 +46174,6 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/Custodial_Office)
 "nSH" = (
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/random/drinkbottle,
 /obj/random/drinkbottle,
 /obj/random/drinkbottle,
@@ -46199,6 +46188,7 @@
 /obj/random/drinkbottle,
 /obj/random/drinkbottle,
 /obj/random/drinksoft,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/plating,
 /area/maintenance/ab_GeneralStore)
 "nSV" = (
@@ -50075,14 +50065,12 @@
 /obj/random/meat,
 /obj/random/meat,
 /obj/effect/decal/cleanable/cobweb,
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/random/meat,
 /obj/random/meat,
 /obj/random/meat,
 /obj/random/meat,
 /obj/random/meat,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/tiled,
 /area/maintenance/ab_GeneralStore)
 "phi" = (
@@ -66841,15 +66829,13 @@
 /obj/random/organ,
 /obj/random/organ,
 /obj/random/organ,
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/random/organ,
 /obj/random/organ,
 /obj/random/organ,
 /obj/random/organ,
 /obj/random/organ,
 /obj/effect/floor_decal/rust,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/tiled,
 /area/maintenance/ab_GeneralStore)
 "vic" = (

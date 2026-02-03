@@ -3914,8 +3914,7 @@
 /area/rnd/Locker_Room)
 "agw" = (
 /obj/structure/closet/secure_closet/cargotech{
-	name = "mailman's locker";
-	starts_with = list(/obj/item/clothing/under/rank/mailman,/obj/item/clothing/head/mailman,/obj/item/clothing/shoes/black,/obj/item/radio/headset/cargo,/obj/item/radio/headset/alt/cargo,/obj/item/storage/bag/mail,/obj/item/destTagger)
+	name = "mailman's locker"
 	},
 /obj/item/clothing/under/rank/mailman2,
 /obj/item/clothing/under/rank/mailman,
@@ -3931,6 +3930,7 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 5
 	},
+/obj/item/destTagger,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/Mail_Room)
 "agx" = (
