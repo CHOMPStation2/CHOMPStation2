@@ -9734,9 +9734,7 @@
 "fsy" = (
 /obj/structure/closet/secure_closet/hydroponics{
 	anchored = 1;
-	name = "minimalist botanist's locker";
-	req_access = list(300);
-	starts_with = list(/obj/item/storage/bag/plants,/obj/item/clothing/gloves/botanic_leather,/obj/item/analyzer/plant_analyzer,/obj/item/material/minihoe,/obj/item/material/knife/machete/hatchet,/obj/item/reagent_containers/glass/beaker=2,/obj/item/tool/wirecutters/clippers/trimmers,/obj/item/reagent_containers/spray/plantbgone)
+	req_access = list(300)
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod)
@@ -15156,8 +15154,7 @@
 /obj/structure/closet/walllocker_double/survival/north{
 	dir = 1;
 	name = "Emergency Food Wall Cabinet";
-	pixel_y = -32;
-	starts_with = list(/obj/item/storage/mre/menu11=20,/obj/item/reagent_containers/food/drinks/cans/waterbottle=20)
+	pixel_y = -32
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/survivalpod)
@@ -20936,9 +20933,44 @@
 /obj/structure/table/reinforced,
 /obj/structure/closet/crate/carp{
 	desc = "All you need to start your own honey farm.";
-	name = "Beekeeping crate";
-	starts_with = list(/obj/item/beehive_assembly=5,/obj/item/bee_smoker,/obj/item/honey_frame=25,/obj/item/bee_pack=5)
+	name = "Beekeeping crate"
 	},
+/obj/item/beehive_assembly,
+/obj/item/beehive_assembly,
+/obj/item/beehive_assembly,
+/obj/item/beehive_assembly,
+/obj/item/beehive_assembly,
+/obj/item/bee_smoker,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/bee_pack,
+/obj/item/bee_pack,
+/obj/item/bee_pack,
+/obj/item/bee_pack,
+/obj/item/bee_pack,
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod)
 "npj" = (
