@@ -17567,12 +17567,15 @@
 	dir = 5
 	},
 /obj/structure/closet/secure_closet/cargotech{
-	name = "mailman's locker";
-	starts_with = list(/obj/item/clothing/under/rank/mailman,/obj/item/clothing/head/mailman,/obj/item/clothing/shoes/black,/obj/item/radio/headset/cargo,/obj/item/radio/headset/alt/cargo,/obj/item/storage/bag/mail,/obj/item/destTagger)
+	name = "mailman's locker"
 	},
 /obj/item/mail_scanner,
 /obj/item/mail_scanner,
 /obj/item/mail_scanner,
+/obj/item/clothing/under/rank/mailman,
+/obj/item/clothing/head/mailman,
+/obj/item/storage/bag/mail,
+/obj/item/destTagger,
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "hIE" = (

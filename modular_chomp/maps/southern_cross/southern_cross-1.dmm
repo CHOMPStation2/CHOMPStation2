@@ -4023,9 +4023,7 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/abcargo)
 "qi" = (
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/reinforced,
 /area/maintenance/abchemistry)
 "qk" = (
@@ -5317,13 +5315,11 @@
 /obj/random/drinksoft,
 /obj/random/drinksoft,
 /obj/random/drinksoft,
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/random/drinksoft,
 /obj/random/drinksoft,
 /obj/random/drinksoft,
 /obj/random/drinksoft,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/thrift)
 "vS" = (
@@ -7420,14 +7416,12 @@
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/thrift)
 "Fr" = (
@@ -8163,14 +8157,12 @@
 /obj/random/meat,
 /obj/random/meat,
 /obj/effect/decal/cleanable/cobweb,
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/random/meat,
 /obj/random/meat,
 /obj/random/meat,
 /obj/random/meat,
 /obj/random/meat,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/tiled,
 /area/maintenance/thrift)
 "Ip" = (
@@ -8541,14 +8533,12 @@
 /obj/random/organ,
 /obj/random/organ,
 /obj/random/organ,
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/random/organ,
 /obj/random/organ,
 /obj/random/organ,
 /obj/random/organ,
 /obj/random/organ,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/thrift)
 "Kf" = (
