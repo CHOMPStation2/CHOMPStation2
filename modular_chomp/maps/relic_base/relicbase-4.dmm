@@ -1418,10 +1418,6 @@
 /area/engineering/atmos/storage)
 "bow" = (
 /obj/random_multi/single_item/captains_spare_id,
-/obj/structure/closet/secure_closet/captains{
-	name = "station director's locker";
-	starts_with = list(/obj/item/storage/backpack/dufflebag/captain,/obj/item/clothing/head/helmet,/obj/item/clothing/suit/storage/vest,/obj/item/cartridge/captain,/obj/item/storage/lockbox/medal,/obj/item/radio/headset/heads/captain,/obj/item/radio/headset/alt/heads/captain,/obj/item/melee/telebaton,/obj/item/flash,/obj/item/storage/box/ids,/obj/item/melee/rapier,/obj/item/clothing/accessory/holster/machete/rapier)
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -1435,6 +1431,9 @@
 /obj/item/ammo_magazine/tp23s/rubber,
 /obj/item/ammo_magazine/tp23s/rubber,
 /obj/item/perfect_tele,
+/obj/structure/closet/secure_closet/captains{
+	name = "station director's locker"
+	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/heads/sc/sd)
 "bqy" = (
@@ -11396,9 +11395,6 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
-/obj/structure/closet/secure_closet/guncabinet/sidearm{
-	starts_with = null
-	},
 /obj/item/ammo_magazine/m9mm/rubber,
 /obj/item/ammo_magazine/m9mm/rubber,
 /obj/item/ammo_magazine/m9mm/rubber,
@@ -11420,6 +11416,9 @@
 /obj/item/gun/energy/gun,
 /obj/item/gun/energy/gun,
 /obj/item/gun/energy/gun,
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "emergency weapon cabinet"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "kAb" = (
@@ -18363,9 +18362,6 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 9
 	},
-/obj/structure/closet/secure_closet/guncabinet/sidearm{
-	starts_with = null
-	},
 /obj/item/ammo_magazine/m9mm/rubber,
 /obj/item/ammo_magazine/m9mm/rubber,
 /obj/item/ammo_magazine/m9mm/rubber,
@@ -18390,6 +18386,9 @@
 /obj/item/gun/energy/gun,
 /obj/item/gun/energy/gun,
 /obj/item/gun/energy/gun,
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "emergency weapon cabinet"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "qmv" = (

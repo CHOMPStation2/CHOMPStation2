@@ -13368,14 +13368,12 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloorblack/full,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/Star_Breakroom)
 "dXC" = (
@@ -48933,9 +48931,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/wood/sif,
 /area/bridge/Breakroom)
 "pLZ" = (
@@ -66114,9 +66110,6 @@
 /area/space)
 "vyo" = (
 /obj/item/storage/toolbox/lunchbox/nymph/filled,
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/machinery/light{
 	dir = 1
 	},
@@ -66125,6 +66118,7 @@
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloorblack/full,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/Port_Breakroom)
 "vyq" = (

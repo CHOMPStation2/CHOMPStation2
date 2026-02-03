@@ -556,8 +556,7 @@
 "es" = (
 /obj/structure/closet/medical_wall{
 	name = "Wilderness Shelter first-aid closet";
-	pixel_y = 31;
-	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/storage/firstaid/regular=2,/obj/item/storage/pill_bottle/spaceacillin)
+	pixel_y = 31
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -565,6 +564,11 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/item/roller,
+/obj/item/bodybag/cryobag,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/pill_bottle/spaceacillin,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
 "ez" = (
@@ -936,12 +940,16 @@
 "sJ" = (
 /obj/structure/closet/medical_wall{
 	name = "Wilderness Shelter first-aid closet";
-	pixel_y = 31;
-	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/storage/firstaid/regular=2,/obj/item/storage/pill_bottle/spaceacillin)
+	pixel_y = 31
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/item/roller,
+/obj/item/bodybag/cryobag,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/pill_bottle/spaceacillin,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "sR" = (
@@ -1088,12 +1096,36 @@
 /area/surface/outpost/shelter/exterior)
 "xj" = (
 /obj/structure/closet/walllocker_double/survival/north{
-	name = "Wilderness Shelter Emergency Survival Wall Cabinet";
-	starts_with = list(/obj/item/gps=5,/obj/item/material/knife/tacknife/survival=5,/obj/random/mre=5,/obj/item/flashlight/color/yellow=5,/obj/item/flashlight/flare=5,/obj/item/reagent_containers/food/drinks/cans/waterbottle=5,/obj/item/whetstone)
+	name = "Wilderness Shelter Emergency Survival Wall Cabinet"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/material/knife/tacknife/survival,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/item/flashlight/color/yellow,
+/obj/item/flashlight/color/yellow,
+/obj/item/flashlight/color/yellow,
+/obj/item/flashlight/color/yellow,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/whetstone,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "xA" = (
@@ -1141,12 +1173,12 @@
 	name = "Wilderness Shelter defibrillator closet";
 	pixel_y = 31;
 	req_access = null;
-	req_one_access = list(1,3,43,66,67);
-	starts_with = list(/obj/item/defib_kit/loaded)
+	req_one_access = list(1,3,43,66,67)
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/item/defib_kit/loaded,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "zb" = (
@@ -1669,9 +1701,50 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
-/obj/structure/closet/walllocker_double/survival/north{
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/structure/closet/medical_wall{
 	name = "Wilderness Shelter Emergency Food Wall Cabinet";
-	starts_with = list(/obj/random/mre=20,/obj/item/reagent_containers/food/drinks/cans/waterbottle=20)
+	pixel_y = 31;
+	desc = "A wall mounted storage cabinet. It contains a small amount of emergency supplies for wilderness survival, but they probably won't last very long."
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
@@ -1695,8 +1768,7 @@
 	name = "Wilderness Shelter defibrillator closet";
 	pixel_y = 31;
 	req_access = null;
-	req_one_access = list(1,3,43,66,67);
-	starts_with = list(/obj/item/defib_kit/loaded)
+	req_one_access = list(1,3,43,66,67)
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -1704,6 +1776,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/item/defib_kit/loaded,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
 "WL" = (
