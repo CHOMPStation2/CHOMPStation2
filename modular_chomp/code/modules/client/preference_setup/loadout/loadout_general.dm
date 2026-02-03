@@ -4,7 +4,7 @@
 
 /datum/gear/plushieteshcolor/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/medication
 	display_name = "medication selection"

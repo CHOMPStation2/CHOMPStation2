@@ -78,7 +78,7 @@
 
 /datum/gear/head/cap/white/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/halo
 	display_name = "halo (colorable)"
@@ -86,7 +86,7 @@
 
 /datum/gear/head/halo/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/cap/sol
 	display_name = "cap, sol"
@@ -134,7 +134,7 @@
 
 /datum/gear/head/hairflower/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/pin
 	display_name = "pin selection"
@@ -205,7 +205,7 @@
 
 /datum/gear/head/hijab/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/kippa
 	display_name = "kippa"
@@ -213,7 +213,7 @@
 
 /datum/gear/head/kippa/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/turban
 	display_name = "turban"
@@ -221,7 +221,7 @@
 
 /datum/gear/head/turban/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/taqiyah
 	display_name = "taqiyah"
@@ -229,7 +229,7 @@
 
 /datum/gear/head/taqiyah/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/kitty
 	display_name = "kitty ears"
@@ -246,7 +246,7 @@
 
 /datum/gear/head/rabbit/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/beanie
 	display_name = "beanie"
@@ -254,7 +254,7 @@
 
 /datum/gear/head/beanie/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/loose_beanie
 	display_name = "loose beanie"
@@ -262,7 +262,7 @@
 
 /datum/gear/head/loose_beanie/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/beretg
 	display_name = "beret"
@@ -270,7 +270,7 @@
 
 /datum/gear/head/beretg/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/sombrero
 	display_name = "sombrero"
@@ -282,7 +282,7 @@
 
 /datum/gear/head/flatcapg/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/bow/small
 	display_name = "hair bow, small (colorable)"
@@ -290,7 +290,7 @@
 
 /datum/gear/head/bow/small/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/welding
 	display_name = "welding mask selection"
@@ -422,7 +422,7 @@
 
 /datum/gear/head/giantbow/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/bows
 	display_name = "hair bow selection, colorable"
@@ -436,7 +436,7 @@
 	"back bow"=/obj/item/clothing/head/bow/back,
 	"sweet bow"=/obj/item/clothing/head/bow/sweet
 	)
-	gear_tweaks += list(new/datum/gear_tweak/path(bows), gear_tweak_free_color_choice)
+	gear_tweaks += list(new/datum/gear_tweak/path(bows), GLOB.gear_tweak_free_color_choice)
 
 /datum/gear/head/pilot
 	display_name = "pilot helmets selection"
@@ -460,7 +460,7 @@
 
 /datum/gear/head/headbando/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/maid
 	display_name = "maid headband selection"
@@ -502,7 +502,7 @@
 
 /datum/gear/head/magic_hat/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/wedding
 	display_name = "wedding veil"
@@ -510,7 +510,7 @@
 
 /datum/gear/head/wedding/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/halo/alt
 	display_name = "halo, alt"
@@ -522,7 +522,7 @@
 
 /datum/gear/head/buckethat/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/head/nonla
 	display_name = "hat, non la"
