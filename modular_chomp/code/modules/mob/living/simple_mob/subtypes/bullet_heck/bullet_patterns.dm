@@ -812,7 +812,7 @@
 		return
 	var/list/potential_targets = ai_holder.list_targets()
 	for(var/atom/entry in potential_targets)
-		if(istype(entry, /mob/living/simple_mob/humanoid/eclipse))
+		if(istype(entry, /mob/living/simple_mob/mechanical/mecha/eclipse))
 			potential_targets -= entry
 	if(potential_targets.len)
 		var/iteration = clamp(potential_targets.len, 1, 3)
@@ -860,7 +860,7 @@
 		return
 	var/list/potential_targets = ai_holder.list_targets()
 	for(var/atom/entry in potential_targets)
-		if(istype(entry, /mob/living/simple_mob/humanoid/eclipse))
+		if(istype(entry, /mob/living/simple_mob/mechanical/mecha/eclipse))
 			potential_targets -= entry
 	if(potential_targets.len)
 		var/iteration = clamp(potential_targets.len, 1, 3)

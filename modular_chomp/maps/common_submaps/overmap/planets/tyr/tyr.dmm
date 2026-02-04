@@ -163,7 +163,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/planet/tyr/precursorruins/swarm_boss)
 "aH" = (
-/turf/simulated/wall/iron,
+/turf/simulated/floor/tiled/red,
 /area/planet/tyr/eclipse_refinery)
 "aI" = (
 /obj/structure/grille,
@@ -173,84 +173,40 @@
 /obj/structure/window/plastitanium,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
+"aJ" = (
+/obj/effect/anomaly/flux{
+	move_chance = 0;
+	immortal = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/tyr,
+/area/planet/tyr/shuttles/nine)
 "aK" = (
 /obj/structure/table/steel,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
-"aL" = (
-/obj/machinery/power/rtg/advanced,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor,
-/area/planet/tyr/eclipse_refinery)
 "aM" = (
-/turf/simulated/floor,
-/area/planet/tyr/eclipse_refinery)
-"aN" = (
-/obj/machinery/power/rtg/advanced,
-/obj/structure/cable{
-	icon_state = "0-8"
+/obj/machinery/hyperpad/centre{
+	map_pad_id = "tyr_1_station";
+	map_pad_link_id = "tyr_1_away"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled,
 /area/planet/tyr/eclipse_refinery)
-"aO" = (
-/obj/item/circuitboard/industrial_reagent_waste_processor,
-/obj/item/circuitboard/industrial_reagent_vat,
-/obj/item/circuitboard/industrial_reagent_reactor,
-/obj/item/circuitboard/industrial_reagent_pump,
-/obj/item/circuitboard/industrial_reagent_pipe,
-/obj/item/circuitboard/industrial_reagent_pipe,
-/obj/item/circuitboard/industrial_reagent_pipe,
-/obj/item/circuitboard/industrial_reagent_pipe,
-/obj/item/circuitboard/industrial_reagent_pipe,
-/obj/item/circuitboard/industrial_reagent_mixer,
-/obj/item/circuitboard/industrial_reagent_hub,
-/obj/item/circuitboard/industrial_reagent_grinder,
-/obj/item/circuitboard/industrial_reagent_furnace,
-/obj/item/circuitboard/industrial_reagent_filter,
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.6
+"aS" = (
+/obj/effect/anomaly/hallucination{
+	immortal = 1;
+	move_chance = 0
 	},
-/turf/simulated/floor,
-/area/planet/tyr/eclipse_refinery)
-"aP" = (
-/obj/item/stock_parts/manipulator/pico,
-/obj/item/stock_parts/manipulator/pico,
-/obj/item/stock_parts/manipulator/pico,
-/obj/item/stock_parts/matter_bin/super,
-/obj/item/stock_parts/matter_bin/super,
-/obj/item/stock_parts/matter_bin/super,
-/obj/item/stock_parts/micro_laser/ultra,
-/obj/item/stock_parts/micro_laser/ultra,
-/obj/item/stock_parts/micro_laser/ultra,
-/obj/item/stock_parts/scanning_module/phasic,
-/obj/item/stock_parts/scanning_module/phasic,
-/obj/item/stock_parts/scanning_module/phasic,
-/obj/item/stack/cable_coil/silver,
-/obj/item/stack/cable_coil/silver,
-/obj/item/stack/cable_coil/silver,
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.6
-	},
-/turf/simulated/floor,
-/area/planet/tyr/eclipse_refinery)
-"aQ" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/clocksgun,
-/turf/simulated/floor,
-/area/planet/tyr/eclipse_refinery)
-"aR" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/cultfanatic,
-/turf/simulated/floor,
-/area/planet/tyr/eclipse_refinery)
+/turf/simulated/shuttle/floor/voidcraft/tyr,
+/area/planet/tyr/shuttles/nine)
 "aT" = (
 /obj/structure/fans/hardlight/colorable/abductor{
 	color = "#FF3300"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled,
 /area/planet/tyr/eclipse_refinery)
+"aU" = (
+/turf/simulated/wall/r_wall,
+/area/planet/tyr/caverns)
 "aV" = (
 /turf/simulated/floor/lava/tyr,
 /area/planet/tyr/eclipse_refinery)
@@ -356,6 +312,9 @@
 /obj/structure/table/steel,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eight)
+"bs" = (
+/turf/simulated/wall/r_wall,
+/area/planet/tyr/eclipse_refinery)
 "bt" = (
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
@@ -387,6 +346,10 @@
 /obj/item/stack/medical/splint,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eight)
+"bA" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat,
+/turf/simulated/floor/tiled/red,
+/area/planet/tyr/eclipse_refinery)
 "bB" = (
 /obj/structure/sink/kitchen{
 	dir = 1
@@ -496,6 +459,9 @@
 /obj/machinery/biogenerator,
 /turf/simulated/floor,
 /area/planet/tyr/shuttles/one)
+"bV" = (
+/turf/simulated/floor/tiled,
+/area/planet/tyr/eclipse_refinery)
 "bW" = (
 /obj/structure/frame,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
@@ -524,6 +490,10 @@
 /obj/structure/frame,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eleven)
+"cc" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/red,
+/area/planet/tyr/eclipse_refinery)
 "cd" = (
 /obj/item/circuitboard/teleporter_station,
 /obj/structure/frame,
@@ -828,6 +798,29 @@
 /mob/living/simple_mob/mechanical/hivebot/tyr/swarm,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
+"db" = (
+/obj/structure/closet/crate,
+/obj/random/material,
+/obj/random/material/precious,
+/obj/random/material/refined,
+/obj/random/maintenance/medical,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/turf/simulated/floor/tiled,
+/area/planet/tyr/eclipse_refinery)
 "dc" = (
 /obj/machinery/power/rtg/fake_reactor,
 /obj/structure/cable{
@@ -860,12 +853,40 @@
 "dh" = (
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/ship_graveyard)
+"di" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/taur,
+/turf/simulated/floor/tiled,
+/area/planet/tyr/eclipse_refinery)
 "dj" = (
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
 /turf/simulated/floor,
 /area/planet/tyr/shuttles/one)
+"dk" = (
+/obj/structure/closet/crate,
+/obj/random/material,
+/obj/random/material/precious,
+/obj/random/material/refined,
+/obj/random/maintenance/medical,
+/obj/item/pickaxe/jackhammer,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/turf/simulated/floor/tiled/red,
+/area/planet/tyr/eclipse_refinery)
 "dl" = (
 /obj/structure/table/woodentable,
 /obj/random/contraband,
@@ -879,6 +900,30 @@
 /obj/structure/window/plastitanium,
 /turf/simulated/floor,
 /area/planet/tyr/shuttles/one)
+"dn" = (
+/obj/structure/closet/crate,
+/obj/random/material,
+/obj/random/material/precious,
+/obj/random/material/refined,
+/obj/random/maintenance/medical,
+/obj/item/pickaxe/jackhammer,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/turf/simulated/floor/tiled,
+/area/planet/tyr/eclipse_refinery)
 "do" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 26;
@@ -896,6 +941,29 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/seven)
+"dr" = (
+/obj/structure/closet/crate,
+/obj/random/material,
+/obj/random/material/precious,
+/obj/random/material/refined,
+/obj/random/maintenance/medical,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/turf/simulated/floor/tiled/red,
+/area/planet/tyr/eclipse_refinery)
 "ds" = (
 /turf/simulated/shuttle/floor/alien,
 /area/planet/tyr/precursorruins/engi_boss)
@@ -918,6 +986,10 @@
 	},
 /turf/simulated/shuttle/floor/alienplating,
 /area/planet/tyr/precursorruins/stairwell)
+"dx" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/wolf,
+/turf/simulated/floor/tiled/red,
+/area/planet/tyr/eclipse_refinery)
 "dy" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 177;
@@ -931,6 +1003,10 @@
 	},
 /turf/simulated/shuttle/floor/alien,
 /area/planet/tyr/precursorruins/stairwell)
+"dA" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/tesh,
+/turf/simulated/floor/tiled/red,
+/area/planet/tyr/eclipse_refinery)
 "dB" = (
 /obj/effect/floor_decal/stairs/dark_stairs{
 	dir = 4
@@ -1147,6 +1223,10 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/planet/tyr/precursorruins)
+"el" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/lizard,
+/turf/simulated/floor/tiled/red,
+/area/planet/tyr/eclipse_refinery)
 "em" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 115;
@@ -1315,6 +1395,10 @@
 /obj/structure/barricade,
 /turf/simulated/tyracid,
 /area/planet/tyr/precursorruins/checkpoint)
+"eL" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/noodle,
+/turf/simulated/floor/tiled/red,
+/area/planet/tyr/eclipse_refinery)
 "eQ" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 119;
@@ -1523,7 +1607,10 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/planet/tyr/precursorruins/science_branch)
 "fz" = (
-/obj/effect/anomaly/bluespace/big,
+/obj/effect/anomaly/grav{
+	move_chance = 0;
+	immortal = 1
+	},
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/nine)
 "fA" = (
@@ -1956,29 +2043,6 @@
 /obj/item/gun/energy/tyr_rifle,
 /turf/simulated/shuttle/floor/alien,
 /area/planet/tyr/ancient_ruins/five)
-"hl" = (
-/obj/item/stock_parts/manipulator/pico,
-/obj/item/stock_parts/manipulator/pico,
-/obj/item/stock_parts/manipulator/pico,
-/obj/item/stock_parts/matter_bin/super,
-/obj/item/stock_parts/matter_bin/super,
-/obj/item/stock_parts/matter_bin/super,
-/obj/item/stock_parts/micro_laser/ultra,
-/obj/item/stock_parts/micro_laser/ultra,
-/obj/item/stock_parts/micro_laser/ultra,
-/obj/item/stock_parts/scanning_module/phasic,
-/obj/item/stock_parts/scanning_module/phasic,
-/obj/item/stock_parts/scanning_module/phasic,
-/obj/item/stack/cable_coil/silver,
-/obj/item/stack/cable_coil/silver,
-/obj/item/stack/cable_coil/silver,
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.6
-	},
-/obj/item/paper/tyr_hint,
-/turf/simulated/floor,
-/area/planet/tyr/eclipse_refinery)
 "hm" = (
 /obj/structure/table/rack,
 /obj/item/tool/crowbar/hybrid/alien,
@@ -6315,13 +6379,13 @@ dZ
 gl
 ef
 ef
+aS
 ef
 ef
 ef
 ef
 ef
-ef
-ef
+aJ
 ef
 ef
 gl
@@ -7863,13 +7927,13 @@ dZ
 gl
 ef
 ef
+aJ
 ef
 ef
 ef
 ef
 ef
-ef
-ef
+aS
 ef
 ef
 gl
@@ -11245,7 +11309,7 @@ dZ
 dZ
 dZ
 dZ
-dZ
+jL
 dZ
 dZ
 dZ
@@ -11501,12 +11565,12 @@ dZ
 dZ
 dZ
 dZ
+jL
 dZ
 dZ
 dZ
 dZ
-dZ
-dZ
+jL
 dZ
 dZ
 dZ
@@ -12015,16 +12079,16 @@ dZ
 dZ
 dZ
 dZ
+jL
+dZ
+jL
 dZ
 dZ
 dZ
+jL
 dZ
 dZ
-dZ
-dZ
-dZ
-dZ
-dZ
+jL
 dZ
 dZ
 dZ
@@ -12278,7 +12342,7 @@ dZ
 dZ
 dZ
 dZ
-dZ
+jL
 dZ
 dZ
 dZ
@@ -12539,7 +12603,7 @@ dZ
 dZ
 dZ
 dZ
-dZ
+jL
 dZ
 dZ
 dZ
@@ -12790,13 +12854,13 @@ dZ
 dZ
 dZ
 dZ
+jL
 dZ
 dZ
 dZ
 dZ
-dZ
-dZ
-dZ
+jL
+jL
 dZ
 dZ
 dZ
@@ -13046,18 +13110,18 @@ dZ
 dZ
 dZ
 dZ
+jL
+dZ
+dZ
+dZ
+jL
+jL
 dZ
 dZ
 dZ
 dZ
 dZ
-dZ
-dZ
-dZ
-dZ
-dZ
-dZ
-dZ
+jL
 dZ
 dZ
 dZ
@@ -13303,7 +13367,7 @@ dZ
 dZ
 dZ
 dZ
-dZ
+jL
 cT
 cT
 cT
@@ -13316,7 +13380,7 @@ cT
 cT
 cT
 cT
-dZ
+jL
 dZ
 dZ
 dZ
@@ -13574,7 +13638,7 @@ dU
 de
 de
 cT
-dZ
+jL
 dZ
 dZ
 dZ
@@ -13832,7 +13896,7 @@ dV
 de
 df
 cT
-dZ
+jL
 dZ
 dZ
 dZ
@@ -14077,7 +14141,7 @@ dZ
 dZ
 dZ
 dZ
-dZ
+jL
 cT
 dl
 de
@@ -63487,13 +63551,13 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
-gz
-gz
+bs
+bs
+bs
+bs
+bs
+bs
+bs
 gz
 gz
 gz
@@ -63743,15 +63807,15 @@ gz
 gz
 gz
 gz
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
 gz
+gz
+bs
+dx
+aH
+aH
+aH
+aH
+bs
 gz
 gz
 gz
@@ -64001,15 +64065,15 @@ OQ
 gz
 gz
 gz
-aH
-aL
-aL
-aL
-aL
-aL
-aL
-aH
 gz
+gz
+bs
+aH
+bV
+bV
+bV
+aH
+bs
 gz
 gz
 gz
@@ -64259,15 +64323,15 @@ vI
 OQ
 gz
 gz
-aH
-aM
-aM
-aM
-aM
-aM
-aM
-aH
 gz
+gz
+bs
+aH
+bV
+aM
+bV
+aH
+bs
 gz
 gz
 gz
@@ -64517,15 +64581,15 @@ vI
 OQ
 gz
 gz
-aH
-aM
-aN
-aN
-aN
-aN
-aM
-aH
 gz
+gz
+bs
+aH
+bV
+bV
+bV
+aH
+bs
 gz
 gz
 gz
@@ -64773,17 +64837,17 @@ vI
 vI
 vI
 OQ
-aH
-aH
-aH
-aM
-aH
-aH
-aH
-aH
-aM
-aH
+bs
 gz
+gz
+gz
+bs
+aH
+aH
+aH
+aH
+bA
+bs
 gz
 gz
 gz
@@ -65031,19 +65095,19 @@ vI
 vI
 vI
 vI
-aH
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aH
-gz
-gz
-gz
+bs
+bs
+bs
+bs
+bs
+bs
+bs
+bV
+bs
+bs
+bs
+aU
+aU
 gz
 gz
 gz
@@ -65289,17 +65353,17 @@ vI
 vI
 vI
 vI
-aT
-aM
-aM
-aM
-aO
-aM
-aM
-aO
-aM
+bs
 aH
-gz
+bV
+aH
+bs
+aH
+bV
+aH
+bV
+aH
+bs
 gz
 gz
 gz
@@ -65548,16 +65612,16 @@ vI
 vI
 vI
 aT
-aM
-aM
-aQ
-aP
-aM
-aM
-aP
-aM
+bV
+el
+bV
+bs
+bV
 aH
-gz
+bV
+aH
+bV
+bs
 gz
 gz
 gz
@@ -65805,17 +65869,17 @@ vI
 vI
 vI
 vI
+bs
 aH
-aM
-aM
-aM
-aP
-aM
-aM
-aP
-aM
+bV
 aH
-gz
+bV
+aH
+bV
+aH
+bV
+aH
+bs
 gz
 gz
 gz
@@ -66063,17 +66127,17 @@ vI
 vI
 vI
 vI
+bs
+bs
+bs
+bV
 aH
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+bV
 aH
-gz
+bV
+aH
+bV
+bs
 gz
 gz
 gz
@@ -66321,17 +66385,17 @@ aV
 vI
 vI
 vI
+bs
 aH
-aM
-aM
-aM
-aP
-aM
-aM
-aP
-aM
+bV
 aH
-gz
+bV
+aH
+bV
+aH
+bV
+aH
+bs
 gz
 gz
 gz
@@ -66580,16 +66644,16 @@ vI
 vI
 vI
 aT
-aM
-aM
-aR
-aP
-aM
-aM
-hl
-aM
+bV
+eL
+bV
+bs
+bV
 aH
-gz
+bV
+aH
+bV
+bs
 gz
 gz
 gz
@@ -66837,17 +66901,17 @@ aV
 vI
 vI
 vI
-aT
-aM
-aM
-aM
-aO
-aM
-aM
-aO
-aM
+bs
 aH
-gz
+bV
+aH
+bs
+aH
+bV
+aH
+bV
+aH
+bs
 gz
 gz
 gz
@@ -67095,17 +67159,17 @@ aV
 aV
 vI
 OQ
+bs
+bs
+bs
+bs
+bs
+bV
 aH
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+bV
 aH
-gz
+bV
+bs
 gz
 gz
 gz
@@ -67353,20 +67417,20 @@ OQ
 OQ
 OQ
 OQ
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-gz
-gz
-gz
-gz
+OQ
+OQ
+OQ
+OQ
+bs
+cc
+bs
+bs
+bs
+cc
+bs
+aU
+aU
+aU
 gz
 gz
 gz
@@ -67615,13 +67679,13 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
-gz
-gz
+bs
+bV
+aH
+bV
+aH
+bV
+bs
 gz
 gz
 gz
@@ -67873,13 +67937,13 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
-gz
-gz
+bs
+dA
+bV
+aH
+di
+aH
+bs
 gz
 gz
 gz
@@ -68131,13 +68195,13 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
-gz
-gz
+bs
+dn
+dr
+dn
+dk
+db
+bs
 gz
 gz
 gz
@@ -68389,13 +68453,13 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
-gz
-gz
+bs
+bs
+bs
+bs
+bs
+bs
+bs
 gz
 gz
 gz

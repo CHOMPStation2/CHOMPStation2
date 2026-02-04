@@ -42,6 +42,51 @@
 	s2.start()
 	attackcycle = next_cycle
 
+/obj/effect/artillery_attack
+	anchored = TRUE
+	density = FALSE
+	unacidable = TRUE
+	mouse_opacity = 0
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "drop_marker"
+	var/ammmotype = /obj/effect/falling_effect/callstrike_bomb
+
+/obj/effect/artillery_attack/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/artillery_attack/LateInitialize()
+	var/delay = rand(25, 30)
+	addtimer(CALLBACK(src, PROC_REF(spawner)), delay, TIMER_DELETE_ME)
+
+/obj/effect/artillery_attack/proc/spawner()
+	new ammmotype(src.loc)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.7 SECONDS, TIMER_DELETE_ME)
+
+/obj/effect/falling_effect/callstrike_bomb
+	falling_type = /obj/effect/callstrike
+	crushing = FALSE
+
+/obj/effect/callstrike
+	anchored = TRUE
+	density = FALSE
+	mouse_opacity = 0
+	icon ='modular_chomp/icons/obj/guns/precursor/tyr.dmi'
+
+/obj/effect/callstrike/Initialize(mapload)
+	.=..()
+	icon_state = "arti"
+
+/obj/effect/callstrike/end_fall(var/crushing = FALSE)
+	for(var/mob/living/L in loc)
+		var/target_zone = ran_zone()
+		var/blocked = L.run_armor_check(target_zone, "laser")
+
+		if(!L.apply_damage(70, BURN, target_zone, blocked))
+			break
+	playsound(src, 'sound/effects/clang2.ogg', 50, 1)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME)
+
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/gravity_surge(atom/target, var/next_cycle, var/pull_radius, var/pull_strength)
 	if(!target)
 		return

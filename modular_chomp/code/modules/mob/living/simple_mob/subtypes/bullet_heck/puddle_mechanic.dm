@@ -68,6 +68,7 @@
 /obj/item/projectile/bullet/incendiary/dragonflame/occult
 	range = 4
 	speed = 4
+	damage = 10
 
 /obj/item/grenade/shooter/auto_explode/occult_fireball
 	spread_range = 2
@@ -75,3 +76,10 @@
 
 /datum/modifier/mmo_drop/occult_fireball
 	puddleitem = /obj/item/grenade/shooter/auto_explode/occult_fireball
+
+/obj/item/grenade/shooter/auto_explode/eclipse_iceball
+	spread_range = 2
+	projectile_types = list(/obj/item/projectile/energy/eclipse_boss/chillingwind)
+
+/datum/modifier/mmo_drop/eclipse_iceball
+	puddleitem = /obj/item/grenade/shooter/auto_explode/eclipse_iceball

@@ -34,6 +34,14 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/lino,
 /area/awaymission/hiddeneclipse/miningzonea/depature)
+"aj" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/lizard,
+/turf/simulated/floor/wmarble,
+/area/awaymission/hiddeneclipse/baseneon)
+"ak" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/wolf,
+/turf/simulated/floor/bmarble,
+/area/awaymission/hiddeneclipse/baseneon)
 "al" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/lino,
@@ -46,6 +54,10 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/lino,
 /area/awaymission/hiddeneclipse/miningzonea/depature)
+"ao" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/wolf,
+/turf/simulated/floor/tiled/dark,
+/area/awaymission/hiddeneclipse/baseneon)
 "ap" = (
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/freezer,
@@ -58,6 +70,10 @@
 /mob/living/simple_mob/humanoid/possessed/industrial,
 /turf/simulated/floor/lino,
 /area/awaymission/hiddeneclipse/miningzonea/depature)
+"as" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/tesh,
+/turf/simulated/floor/wmarble,
+/area/awaymission/hiddeneclipse/baseneon)
 "at" = (
 /obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/freezer,
@@ -77,6 +93,10 @@
 /obj/machinery/gateway,
 /turf/simulated/floor/lino,
 /area/awaymission/hiddeneclipse/miningzonea/depature)
+"ax" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/noodle,
+/turf/simulated/floor/wmarble,
+/area/awaymission/hiddeneclipse/baseneon)
 "ay" = (
 /obj/machinery/gateway{
 	density = 0;
@@ -108,12 +128,20 @@
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/hiddeneclipse/miningzonea/depature)
+"aD" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/noodle,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/awaymission/hiddeneclipse/baseneon)
 "aE" = (
 /obj/machinery/gateway{
 	dir = 5
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/hiddeneclipse/miningzonea/depature)
+"aF" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/lizard,
+/turf/simulated/floor/bmarble,
+/area/awaymission/hiddeneclipse/baseneon)
 "aG" = (
 /turf/simulated/floor/water/ocean{
 	nitrogen = 63.4124;
@@ -164,6 +192,10 @@
 /obj/random/cash/big,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/hiddeneclipse/baseneon)
+"aT" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/wolf,
+/turf/simulated/floor/concrete,
+/area/awaymission/hiddeneclipse/baseneon)
 "aU" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/dark,
@@ -184,16 +216,20 @@
 /obj/random/cash/huge,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/hiddeneclipse/baseneon)
+"aX" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/taur,
+/turf/simulated/floor/wmarble,
+/area/awaymission/hiddeneclipse/baseneon)
 "aY" = (
 /obj/random/obstruction,
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
-"aZ" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/cultfanatic,
+"ba" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/lizard,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "bb" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "bc" = (
@@ -212,10 +248,6 @@
 "bg" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/bmarble,
-/area/awaymission/hiddeneclipse/baseneon)
-"bh" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit,
-/turf/simulated/floor/outdoors/grass/forest/thor,
 /area/awaymission/hiddeneclipse/baseneon)
 "bi" = (
 /obj/machinery/door/airlock/hatch,
@@ -241,6 +273,10 @@
 /obj/random/mega_nukies,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/hiddeneclipse/baseneon)
+"bl" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/lizard,
+/turf/simulated/floor/concrete,
+/area/awaymission/hiddeneclipse/baseneon)
 "bm" = (
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = null
@@ -251,12 +287,8 @@
 /obj/random/mega_nukies,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/hiddeneclipse/baseneon)
-"bn" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver,
-/turf/simulated/floor/bmarble,
-/area/awaymission/hiddeneclipse/baseneon)
 "bo" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat,
 /turf/simulated/floor/wmarble,
 /area/awaymission/hiddeneclipse/baseneon)
 "bp" = (
@@ -281,13 +313,9 @@
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/carpet,
 /area/awaymission/hiddeneclipse/baseneon)
-"bt" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter,
-/turf/simulated/floor/tiled/dark,
-/area/awaymission/hiddeneclipse/baseneon)
-"bu" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark,
-/turf/simulated/floor/tiled/dark,
+"bv" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat,
+/turf/simulated/floor/concrete,
 /area/awaymission/hiddeneclipse/baseneon)
 "bw" = (
 /obj/structure/closet/secure_closet/guncabinet{
@@ -306,6 +334,23 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/hiddeneclipse/baseneon)
+"by" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightorange,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/tesh,
+/turf/simulated/floor/tiled/techmaint,
+/area/awaymission/hiddeneclipse/baseneon)
+"bz" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/effect/floor_decal/corner/yellow{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightorange,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/wolf,
+/turf/simulated/floor/tiled/techmaint,
+/area/awaymission/hiddeneclipse/baseneon)
 "bA" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -314,6 +359,18 @@
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
+/area/awaymission/hiddeneclipse/baseneon)
+"bB" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightorange,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/taur,
+/turf/simulated/floor/tiled/techmaint,
+/area/awaymission/hiddeneclipse/baseneon)
+"bC" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/lizard,
+/turf/simulated/floor/tiled/red,
 /area/awaymission/hiddeneclipse/baseneon)
 "bD" = (
 /obj/effect/floor_decal/corner/yellow/border{
@@ -364,6 +421,14 @@
 	color = "#FF3300"
 	},
 /turf/simulated/floor/bmarble,
+/area/awaymission/hiddeneclipse/baseneon)
+"bM" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightorange,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/lizard,
+/turf/simulated/floor/tiled/techmaint,
 /area/awaymission/hiddeneclipse/baseneon)
 "bN" = (
 /obj/effect/floor_decal/corner/lime/border{
@@ -421,6 +486,11 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/hiddeneclipse/baseneon)
+"bY" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/taur,
+/turf/simulated/floor/tiled/white,
+/area/awaymission/hiddeneclipse/baseneon)
 "bZ" = (
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/dark,
@@ -441,6 +511,11 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/hydro,
 /area/awaymission/hiddeneclipse/baseneon)
+"cd" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/noodle,
+/turf/simulated/floor/tiled/white,
+/area/awaymission/hiddeneclipse/baseneon)
 "ce" = (
 /obj/item/shovel/spade,
 /obj/item/shovel/spade,
@@ -449,6 +524,10 @@
 /obj/item/seeds/random,
 /obj/item/seeds/random,
 /turf/simulated/floor/tiled/hydro,
+/area/awaymission/hiddeneclipse/baseneon)
+"cf" = (
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/crystal_boss/ufo,
+/turf/simulated/floor/reinforced,
 /area/awaymission/hiddeneclipse/baseneon)
 "cg" = (
 /obj/structure/table/standard,
@@ -546,14 +625,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/dark,
-/area/awaymission/hiddeneclipse/baseneon)
-"cz" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/clocksgun,
-/turf/simulated/floor/tiled/dark,
-/area/awaymission/hiddeneclipse/baseneon)
-"cA" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/hiddeneclipse/baseneon)
 "cB" = (
@@ -662,11 +733,6 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/awaymission/hiddeneclipse/baseneon)
-"cV" = (
-/obj/effect/floor_decal/corner/lime/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
-/turf/simulated/floor/tiled/hydro,
-/area/awaymission/hiddeneclipse/baseneon)
 "cW" = (
 /obj/effect/floor_decal/corner/lime/diagonal,
 /obj/machinery/light/small{
@@ -696,10 +762,6 @@
 /obj/random/research_sample_type3,
 /obj/structure/closet,
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/awaymission/hiddeneclipse/baseneon)
-"db" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
-/turf/simulated/floor/bmarble,
 /area/awaymission/hiddeneclipse/baseneon)
 "dc" = (
 /obj/machinery/power/rtg/advanced,
@@ -781,11 +843,6 @@
 "dp" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/machinery/light/small,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"ds" = (
-/obj/effect/floor_decal/corner/white/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
 "dt" = (
@@ -905,11 +962,6 @@
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
-"dT" = (
-/obj/effect/floor_decal/corner/lime/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
-/turf/simulated/floor/tiled/hydro,
-/area/awaymission/hiddeneclipse/baseneon)
 "dU" = (
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 1
@@ -931,41 +983,9 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/hiddeneclipse/baseneon)
-"dX" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark,
-/turf/simulated/floor/carpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"dY" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
-/turf/simulated/floor/carpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "dZ" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/floor/tiled/yellow,
-/area/awaymission/hiddeneclipse/baseneon)
-"ea" = (
-/obj/effect/floor_decal/corner/yellow/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver,
-/turf/simulated/floor/tiled/yellow,
-/area/awaymission/hiddeneclipse/baseneon)
-"eb" = (
-/obj/effect/floor_decal/corner_steel_grid/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver,
-/turf/simulated/floor/tiled/freezer,
-/area/awaymission/hiddeneclipse/baseneon)
-"ec" = (
-/obj/effect/floor_decal/corner_steel_grid/diagonal,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
-/turf/simulated/floor/tiled/freezer,
 /area/awaymission/hiddeneclipse/baseneon)
 "ed" = (
 /turf/simulated/floor/carpet/turcarpet,
@@ -1156,11 +1176,6 @@
 "eH" = (
 /obj/machinery/appliance/cooker/grill,
 /obj/effect/floor_decal/corner/white/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"eI" = (
-/obj/effect/floor_decal/corner/white/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
 "eJ" = (
@@ -1362,10 +1377,6 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/hiddeneclipse/baseneon)
-"fk" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
-/turf/simulated/floor/carpet/tealcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "fl" = (
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/old_tile/purple,
@@ -1458,7 +1469,7 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/hiddeneclipse/baseneon)
 "fy" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/taur,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/hiddeneclipse/baseneon)
 "fz" = (
@@ -1504,10 +1515,6 @@
 "fE" = (
 /obj/structure/bed/chair/bar_stool,
 /turf/simulated/floor/concrete,
-/area/awaymission/hiddeneclipse/baseneon)
-"fF" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish,
-/turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
 "fG" = (
 /obj/structure/fans/hardlight/colorable/abductor{
@@ -1564,15 +1571,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/awaymission/hiddeneclipse/baseneon)
-"fL" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
-/turf/simulated/floor/carpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"fM" = (
-/obj/effect/floor_decal/corner/yellow/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/plant,
-/turf/simulated/floor/tiled/yellow,
-/area/awaymission/hiddeneclipse/baseneon)
 "fN" = (
 /obj/effect/floor_decal/corner/lime/border,
 /turf/simulated/floor/bmarble,
@@ -1604,20 +1602,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/bmarble,
-/area/awaymission/hiddeneclipse/baseneon)
-"fV" = (
-/obj/structure/bed/chair/backed_grey{
-	dir = 1
-	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/tiled/dark,
-/area/awaymission/hiddeneclipse/baseneon)
-"fW" = (
-/obj/structure/bed/chair/backed_grey{
-	dir = 1
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
-/turf/simulated/floor/tiled/dark,
 /area/awaymission/hiddeneclipse/baseneon)
 "fX" = (
 /obj/structure/table/standard,
@@ -1799,11 +1783,6 @@
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/awaymission/hiddeneclipse/baseneon)
-"gv" = (
-/obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/plant,
-/turf/simulated/floor/tiled/old_tile/purple,
-/area/awaymission/hiddeneclipse/baseneon)
 "gw" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -1832,26 +1811,14 @@
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/hiddeneclipse/baseneon)
-"gz" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark,
-/turf/simulated/floor/wmarble,
-/area/awaymission/hiddeneclipse/baseneon)
 "gA" = (
 /obj/structure/table/marble,
 /obj/item/storage/box/monkeycubes/farwacubes,
 /obj/item/storage/box/monkeycubes/sarucubes,
 /turf/simulated/floor/carpet/turcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
-"gB" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
-/turf/simulated/floor/carpet/turcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "gC" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/plant,
-/turf/simulated/floor/bmarble,
-/area/awaymission/hiddeneclipse/baseneon)
-"gD" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/taur,
 /turf/simulated/floor/bmarble,
 /area/awaymission/hiddeneclipse/baseneon)
 "gE" = (
@@ -1896,25 +1863,6 @@
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
-"gN" = (
-/obj/effect/floor_decal/corner/white/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"gO" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
-/turf/simulated/floor/concrete,
-/area/awaymission/hiddeneclipse/baseneon)
-"gP" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter,
-/turf/simulated/floor/concrete,
-/area/awaymission/hiddeneclipse/baseneon)
-"gQ" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/servicesquish,
-/turf/simulated/floor,
-/area/awaymission/hiddeneclipse/baseneon)
 "gR" = (
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor,
@@ -1949,11 +1897,6 @@
 /area/awaymission/hiddeneclipse/baseneon)
 "hb" = (
 /turf/simulated/floor/carpet/bcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"hc" = (
-/obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/experimenter,
-/turf/simulated/floor/tiled/old_tile/purple,
 /area/awaymission/hiddeneclipse/baseneon)
 "hd" = (
 /obj/effect/floor_decal/corner/purple/bordercorner{
@@ -2030,11 +1973,6 @@
 /obj/structure/table/steel,
 /obj/item/grenade/flashbang,
 /turf/simulated/floor/tiled/dark,
-/area/awaymission/hiddeneclipse/baseneon)
-"hr" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/concrete,
 /area/awaymission/hiddeneclipse/baseneon)
 "hs" = (
 /obj/structure/closet,
@@ -2119,10 +2057,6 @@
 /obj/structure/closet,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/awaymission/hiddeneclipse/baseneon)
-"hB" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/awaymission/hiddeneclipse/baseneon)
 "hC" = (
 /obj/effect/floor_decal/corner/orange/bordercorner,
 /turf/simulated/floor/bmarble,
@@ -2205,16 +2139,6 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/hiddeneclipse/baseneon)
-"hW" = (
-/obj/structure/bed/chair/backed_grey,
-/mob/living/simple_mob/humanoid/eclipse/solar/clocksgun,
-/turf/simulated/floor/tiled/dark,
-/area/awaymission/hiddeneclipse/baseneon)
-"hX" = (
-/obj/structure/bed/chair/backed_grey,
-/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark,
-/turf/simulated/floor/tiled/dark,
-/area/awaymission/hiddeneclipse/baseneon)
 "hY" = (
 /obj/structure/closet,
 /obj/random/maintenance/foodstuff,
@@ -2244,16 +2168,12 @@
 /obj/structure/window/basic,
 /turf/simulated/floor/concrete,
 /area/awaymission/hiddeneclipse/baseneon)
-"ib" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/zaddat,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/awaymission/hiddeneclipse/baseneon)
 "ic" = (
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/awaymission/hiddeneclipse/baseneon)
 "id" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/tesh,
 /turf/simulated/floor/bmarble,
 /area/awaymission/hiddeneclipse/baseneon)
 "ie" = (
@@ -2302,14 +2222,6 @@
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/awaymission/hiddeneclipse/baseneon)
-"ik" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
-/turf/simulated/floor/wmarble,
-/area/awaymission/hiddeneclipse/baseneon)
-"il" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/experimenter,
-/turf/simulated/floor/carpet/turcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "im" = (
 /obj/machinery/recharge_station,
 /obj/machinery/light/small,
@@ -2321,11 +2233,6 @@
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/monotile,
-/area/awaymission/hiddeneclipse/baseneon)
-"io" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
-/turf/simulated/floor/concrete,
 /area/awaymission/hiddeneclipse/baseneon)
 "ip" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -2418,16 +2325,8 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
-"iD" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
-/turf/simulated/floor/carpet/bcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "iF" = (
 /obj/structure/table/reinforced,
-/turf/simulated/floor/carpet/bcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"iG" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
 /turf/simulated/floor/carpet/bcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "iH" = (
@@ -2488,10 +2387,6 @@
 /obj/random/meat,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/hiddeneclipse/baseneon)
-"iV" = (
-/mob/living/simple_mob/humanoid/eclipse/head/security,
-/turf/simulated/floor/tiled/dark,
-/area/awaymission/hiddeneclipse/baseneon)
 "iW" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/machinery/light/small{
@@ -2499,22 +2394,8 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
-"iX" = (
-/obj/effect/floor_decal/corner/white/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"iY" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/lunar/servicesquish,
-/turf/simulated/floor/concrete,
-/area/awaymission/hiddeneclipse/baseneon)
-"iZ" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
-/turf/simulated/floor/wmarble,
-/area/awaymission/hiddeneclipse/baseneon)
 "ja" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/noodle,
 /turf/simulated/floor/bmarble,
 /area/awaymission/hiddeneclipse/baseneon)
 "jb" = (
@@ -2541,7 +2422,6 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
 /turf/simulated/floor/bmarble,
 /area/awaymission/hiddeneclipse/baseneon)
 "jg" = (
@@ -2578,11 +2458,6 @@
 "jl" = (
 /obj/machinery/light/small,
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/tiled/monotile,
-/area/awaymission/hiddeneclipse/baseneon)
-"jm" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/experimenter,
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/hiddeneclipse/baseneon)
 "jn" = (
@@ -2744,10 +2619,6 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
-"jS" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/bmarble,
-/area/awaymission/hiddeneclipse/baseneon)
 "jT" = (
 /obj/structure/closet,
 /obj/item/clothing/under/swimsuit/black,
@@ -2776,11 +2647,6 @@
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
-"jW" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
-/turf/simulated/floor/concrete,
-/area/awaymission/hiddeneclipse/baseneon)
 "jX" = (
 /obj/machinery/vending/boozeomat,
 /turf/simulated/floor/wood,
@@ -2796,10 +2662,6 @@
 "kb" = (
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/hiddeneclipse/baseneon)
-"kc" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver,
-/turf/simulated/floor/wmarble,
-/area/awaymission/hiddeneclipse/baseneon)
 "kd" = (
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/old_tile/green,
@@ -2808,10 +2670,6 @@
 /obj/structure/table/standard,
 /obj/item/storage/box/monkeycubes/farwacubes,
 /turf/simulated/floor/tiled/old_tile/beige,
-/area/awaymission/hiddeneclipse/baseneon)
-"kg" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/zaddat,
-/turf/simulated/floor/tiled/old_tile/green,
 /area/awaymission/hiddeneclipse/baseneon)
 "kh" = (
 /obj/structure/grille,
@@ -2904,11 +2762,6 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/hiddeneclipse/baseneon)
-"kx" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish,
-/turf/simulated/floor/tiled/monotile,
-/area/awaymission/hiddeneclipse/baseneon)
 "ky" = (
 /obj/effect/floor_decal/corner/lime/bordercorner{
 	dir = 4
@@ -2919,23 +2772,9 @@
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/wmarble,
 /area/awaymission/hiddeneclipse/baseneon)
-"kA" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
-/turf/simulated/floor/concrete,
-/area/awaymission/hiddeneclipse/baseneon)
-"kC" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/solar/plant,
-/turf/simulated/floor/concrete,
-/area/awaymission/hiddeneclipse/baseneon)
 "kD" = (
 /obj/item/beach_ball,
 /obj/structure/table/gold,
-/turf/simulated/floor/wood,
-/area/awaymission/hiddeneclipse/baseneon)
-"kE" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver,
 /turf/simulated/floor/wood,
 /area/awaymission/hiddeneclipse/baseneon)
 "kF" = (
@@ -3092,14 +2931,6 @@
 "ld" = (
 /turf/simulated/floor/wood,
 /area/awaymission/hiddeneclipse/baseneon)
-"le" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish,
-/turf/simulated/floor/carpet/tealcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"lf" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/carpet/tealcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "lh" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/monkeycubes/farwacubes,
@@ -3170,11 +3001,6 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
-"lt" = (
-/obj/effect/floor_decal/corner/purple/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
-/turf/simulated/floor/tiled/old_tile/purple,
-/area/awaymission/hiddeneclipse/baseneon)
 "lu" = (
 /obj/structure/toilet,
 /obj/machinery/light/small{
@@ -3188,20 +3014,6 @@
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/monotile,
-/area/awaymission/hiddeneclipse/baseneon)
-"lw" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/plant,
-/turf/simulated/floor,
-/area/awaymission/hiddeneclipse/baseneon)
-"lx" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish,
-/turf/simulated/floor/concrete,
-/area/awaymission/hiddeneclipse/baseneon)
-"ly" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark,
-/turf/simulated/floor/concrete,
 /area/awaymission/hiddeneclipse/baseneon)
 "lz" = (
 /obj/random/multiple/gun/projectile/shotgun,
@@ -3371,10 +3183,6 @@
 /obj/structure/stasis_cage,
 /turf/simulated/floor/tiled/old_tile/green,
 /area/awaymission/hiddeneclipse/baseneon)
-"ma" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver,
-/turf/simulated/floor/tiled/old_tile/green,
-/area/awaymission/hiddeneclipse/baseneon)
 "md" = (
 /obj/structure/grille,
 /obj/structure/window/plastitanium{
@@ -3440,14 +3248,6 @@
 /area/awaymission/hiddeneclipse/baseneon)
 "mp" = (
 /obj/machinery/door/airlock/silver,
-/turf/simulated/floor/carpet/tealcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"mq" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/servicesquish,
-/turf/simulated/floor/carpet/tealcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"mr" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "ms" = (
@@ -3544,10 +3344,6 @@
 "mJ" = (
 /obj/machinery/vending/sovietvend,
 /turf/simulated/floor/carpet/bcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"mK" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver,
-/turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
 "mL" = (
 /obj/machinery/chemical_dispenser/bar_coffee/full,
@@ -3767,10 +3563,6 @@
 /obj/structure/table/rack/shelf,
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
-"nC" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/plant,
-/turf/simulated/floor/wood,
-/area/awaymission/hiddeneclipse/baseneon)
 "nE" = (
 /obj/machinery/power/tesla_coil/recaster,
 /turf/simulated/floor,
@@ -3784,10 +3576,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/orange/border,
-/turf/simulated/floor/bmarble,
-/area/awaymission/hiddeneclipse/baseneon)
-"nI" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
 /turf/simulated/floor/bmarble,
 /area/awaymission/hiddeneclipse/baseneon)
 "nJ" = (
@@ -3830,17 +3618,11 @@
 /area/awaymission/hiddeneclipse/baseneon)
 "nR" = (
 /obj/structure/table/bench/padded,
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
 /turf/simulated/floor/carpet/bcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "nT" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_parts/mecha_equipment/weapon/honker,
-/turf/simulated/floor/carpet/bcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"nV" = (
-/obj/structure/table/bench/padded,
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
 /turf/simulated/floor/carpet/bcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "nW" = (
@@ -3905,10 +3687,6 @@
 "oh" = (
 /obj/machinery/power/rad_collector,
 /turf/simulated/floor,
-/area/awaymission/hiddeneclipse/baseneon)
-"oi" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/wmarble,
 /area/awaymission/hiddeneclipse/baseneon)
 "oj" = (
 /obj/machinery/light/small{
@@ -3995,10 +3773,6 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/hiddeneclipse/baseneon)
-"oG" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/changeling,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
 "oH" = (
 /obj/structure/table/standard,
 /obj/item/holosign_creator/medical,
@@ -4066,10 +3840,6 @@
 /obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp/safety,
 /turf/simulated/floor/carpet/bcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
-"oR" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
-/turf/simulated/floor/carpet/oracarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "oS" = (
 /obj/structure/window/plastitanium{
 	dir = 1
@@ -4117,10 +3887,6 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
-"pa" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark,
-/turf/simulated/floor/carpet/oracarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "pb" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -4163,10 +3929,6 @@
 /obj/random/cash/huge,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
-"pm" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/experimenter,
-/turf/simulated/floor/carpet/oracarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "pn" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/carpet/oracarpet,
@@ -4195,10 +3957,6 @@
 /obj/structure/window/plastitanium{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"ps" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/plant,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
 "pt" = (
@@ -4277,20 +4035,12 @@
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/servicesquish,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "pI" = (
 /obj/structure/table/woodentable,
 /obj/item/flame/candle,
 /turf/simulated/floor/carpet/sblucarpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"pJ" = (
-/obj/structure/bed/chair/sofa/black{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
-/turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "pK" = (
 /obj/structure/table/fancyblack,
@@ -4309,11 +4059,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"pP" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
-/turf/simulated/floor/concrete,
 /area/awaymission/hiddeneclipse/baseneon)
 "pR" = (
 /obj/machinery/the_singularitygen/tesla,
@@ -4349,10 +4094,6 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
-"pY" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/plant,
-/turf/simulated/floor/carpet/oracarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "pZ" = (
 /obj/effect/floor_decal/corner/purple/bordercorner,
 /turf/simulated/floor/wmarble,
@@ -4374,21 +4115,11 @@
 /obj/structure/curtain/bed,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
-"qf" = (
-/obj/structure/table/fancyblack,
-/obj/structure/stripper_pole,
-/mob/living/simple_mob/humanoid/eclipse/head/scientist,
-/turf/simulated/floor/carpet/purcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "qg" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 10
 	},
 /turf/simulated/floor/bmarble,
-/area/awaymission/hiddeneclipse/baseneon)
-"qh" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark,
-/turf/simulated/floor/reinforced,
 /area/awaymission/hiddeneclipse/baseneon)
 "qk" = (
 /obj/structure/window/plastitanium{
@@ -4447,13 +4178,6 @@
 /obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/wmarble,
 /area/awaymission/hiddeneclipse/baseneon)
-"qs" = (
-/obj/structure/bed/chair/wood{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish,
-/turf/simulated/floor/carpet/sblucarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "qt" = (
 /obj/structure/table/woodentable,
 /obj/item/flame/candle,
@@ -4476,19 +4200,11 @@
 /obj/random/material,
 /turf/simulated/floor/carpet/oracarpet,
 /area/awaymission/hiddeneclipse/baseneon)
-"qw" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter,
-/turf/simulated/floor/wmarble,
-/area/awaymission/hiddeneclipse/baseneon)
 "qx" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"qy" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/plant,
-/turf/simulated/floor/wmarble,
 /area/awaymission/hiddeneclipse/baseneon)
 "qz" = (
 /obj/structure/window/plastitanium{
@@ -4560,7 +4276,6 @@
 /obj/structure/bed/chair/sofa/corner/black{
 	dir = 4
 	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/experimenter,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "qJ" = (
@@ -4573,10 +4288,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/purcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"qM" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/carpet/oracarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "qN" = (
 /obj/effect/floor_decal/corner/grey{
@@ -4603,13 +4314,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/awaymission/hiddeneclipse/baseneon)
-"qS" = (
-/obj/structure/bed/chair/wood{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark,
-/turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "qU" = (
 /obj/machinery/light/small{
@@ -4659,13 +4363,6 @@
 /obj/structure/bed/chair/sofa/black{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"rb" = (
-/obj/structure/bed/chair/sofa/black{
-	dir = 1
-	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/cultfanatic,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "rc" = (
@@ -4775,13 +4472,6 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/awaymission/hiddeneclipse/baseneon)
-"rv" = (
-/obj/structure/bed/chair/sofa/black{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
-/turf/simulated/floor/carpet/purcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "rw" = (
 /obj/structure/bed/chair/sofa/black{
 	dir = 8
@@ -4858,17 +4548,6 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/hiddeneclipse/baseneon)
-"rH" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish,
-/turf/simulated/floor/carpet/oracarpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"rJ" = (
-/obj/structure/bed/chair/sofa/black{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
-/turf/simulated/floor/carpet/purcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "rK" = (
 /obj/structure/sink{
 	dir = 1
@@ -4941,24 +4620,12 @@
 	},
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/awaymission/hiddeneclipse/baseneon)
-"rU" = (
-/obj/effect/floor_decal/corner/blue/diagonal,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/awaymission/hiddeneclipse/baseneon)
 "rW" = (
 /obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/blue,
-/area/awaymission/hiddeneclipse/baseneon)
-"rX" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/cultfanatic,
-/turf/simulated/floor/carpet/oracarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "rZ" = (
 /obj/machinery/light/small{
@@ -5000,16 +4667,6 @@
 /obj/structure/fans/hardlight/colorable/abductor{
 	color = "#FF3300"
 	},
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"sh" = (
-/obj/effect/floor_decal/corner/pink{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
 "si" = (
@@ -5066,31 +4723,6 @@
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
-"sr" = (
-/obj/effect/floor_decal/corner/blue/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver,
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/awaymission/hiddeneclipse/baseneon)
-"ss" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/servicesquish,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/awaymission/hiddeneclipse/baseneon)
-"st" = (
-/obj/effect/floor_decal/corner/blue/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/awaymission/hiddeneclipse/baseneon)
-"su" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/zaddat,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/awaymission/hiddeneclipse/baseneon)
-"sv" = (
-/obj/effect/floor_decal/corner/blue/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/zaddat,
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/awaymission/hiddeneclipse/baseneon)
 "sw" = (
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
 /obj/item/toy/plushie/carp,
@@ -5132,11 +4764,6 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
-"sE" = (
-/obj/structure/bed/chair/sofa/black,
-/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter,
-/turf/simulated/floor/carpet/purcarpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "sF" = (
 /obj/structure/bed/chair/sofa/corner/black,
 /obj/machinery/light/small{
@@ -5144,30 +4771,10 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
-"sG" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/tiled/monotile,
-/area/awaymission/hiddeneclipse/baseneon)
 "sI" = (
 /obj/machinery/shower,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/monotile,
-/area/awaymission/hiddeneclipse/baseneon)
-"sJ" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
-/turf/simulated/floor/tiled/monotile,
-/area/awaymission/hiddeneclipse/baseneon)
-"sL" = (
-/obj/effect/floor_decal/corner/pink{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/changeling,
-/turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
 "sM" = (
 /obj/structure/curtain/medical,
@@ -5196,30 +4803,6 @@
 	},
 /turf/simulated/shuttle/floor/alien,
 /area/awaymission/hiddeneclipse/baseneon)
-"sR" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange,
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
-/turf/simulated/floor/tiled/techmaint,
-/area/awaymission/hiddeneclipse/baseneon)
-"sS" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange,
-/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark,
-/turf/simulated/floor/tiled/techmaint,
-/area/awaymission/hiddeneclipse/baseneon)
-"sT" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange,
-/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter,
-/turf/simulated/floor/tiled/techmaint,
-/area/awaymission/hiddeneclipse/baseneon)
 "sU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/effect/floor_decal/corner/yellow{
@@ -5234,30 +4817,6 @@
 	},
 /mob/living/simple_mob/vore/spacecritter/livingice/iceberg,
 /turf/simulated/floor,
-/area/awaymission/hiddeneclipse/baseneon)
-"sX" = (
-/obj/effect/floor_decal/corner/blue/diagonal,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/zaddat,
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/awaymission/hiddeneclipse/baseneon)
-"sY" = (
-/obj/effect/floor_decal/corner/blue/diagonal,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark,
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/awaymission/hiddeneclipse/baseneon)
-"sZ" = (
-/obj/effect/floor_decal/corner/blue/diagonal,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish,
-/turf/simulated/floor/tiled/old_tile/blue,
 /area/awaymission/hiddeneclipse/baseneon)
 "ta" = (
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
@@ -5348,14 +4907,6 @@
 /obj/structure/foamedmetal,
 /turf/simulated/shuttle/floor/alien,
 /area/awaymission/hiddeneclipse/baseneon)
-"tn" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange,
-/mob/living/simple_mob/humanoid/eclipse/solar/nuclear,
-/turf/simulated/floor/tiled/techmaint,
-/area/awaymission/hiddeneclipse/baseneon)
 "to" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 10
@@ -5364,7 +4915,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/lightorange,
-/mob/living/simple_mob/humanoid/eclipse/solar/nuclear,
 /turf/simulated/floor/tiled/techmaint,
 /area/awaymission/hiddeneclipse/baseneon)
 "tp" = (
@@ -5438,38 +4988,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/hiddeneclipse/baseneon)
-"tz" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange,
-/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver,
-/turf/simulated/floor/tiled/techmaint,
-/area/awaymission/hiddeneclipse/baseneon)
-"tA" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange,
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish,
-/turf/simulated/floor/tiled/techmaint,
-/area/awaymission/hiddeneclipse/baseneon)
-"tB" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange,
-/mob/living/simple_mob/humanoid/eclipse/lunar/servicesquish,
-/turf/simulated/floor/tiled/techmaint,
-/area/awaymission/hiddeneclipse/baseneon)
-"tC" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange,
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
-/turf/simulated/floor/tiled/techmaint,
-/area/awaymission/hiddeneclipse/baseneon)
 "tD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 5
@@ -5518,13 +5036,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/floor,
-/area/awaymission/hiddeneclipse/baseneon)
-"tK" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
 "tL" = (
@@ -5624,10 +5135,6 @@
 /obj/item/storage/toolbox/lunchbox,
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
-"uc" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
-/turf/simulated/floor,
-/area/awaymission/hiddeneclipse/baseneon)
 "ud" = (
 /obj/structure/window/plastitanium{
 	dir = 4
@@ -5650,10 +5157,6 @@
 /area/awaymission/hiddeneclipse/baseneon)
 "ug" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor,
-/area/awaymission/hiddeneclipse/baseneon)
-"uh" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark,
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
 "ui" = (
@@ -5719,16 +5222,6 @@
 "ut" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/red,
-/area/awaymission/hiddeneclipse/baseneon)
-"uu" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/plant,
-/turf/simulated/floor/tiled/monotile,
-/area/awaymission/hiddeneclipse/baseneon)
-"uv" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter,
-/turf/simulated/floor/tiled/monotile,
 /area/awaymission/hiddeneclipse/baseneon)
 "ux" = (
 /obj/structure/window/plastitanium{
@@ -5799,11 +5292,6 @@
 	dir = 9
 	},
 /turf/simulated/floor,
-/area/awaymission/hiddeneclipse/baseneon)
-"uJ" = (
-/obj/structure/curtain,
-/mob/living/simple_mob/humanoid/eclipse/head/medical,
-/turf/simulated/floor/carpet/tealcarpet,
 /area/awaymission/hiddeneclipse/baseneon)
 "uK" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
@@ -5885,10 +5373,6 @@
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/hiddeneclipse/baseneon)
-"uZ" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter,
-/turf/simulated/floor,
-/area/awaymission/hiddeneclipse/baseneon)
 "va" = (
 /obj/structure/curtain,
 /obj/item/toy/plushie,
@@ -5917,10 +5401,6 @@
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/carpet/green,
 /area/awaymission/hiddeneclipse/baseneon)
-"vg" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter,
-/turf/simulated/floor/carpet,
-/area/awaymission/hiddeneclipse/baseneon)
 "vi" = (
 /obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/carpet/green,
@@ -5936,11 +5416,6 @@
 /obj/structure/closet/secure_closet/freezer/meat,
 /obj/effect/floor_decal/corner_steel_grid/diagonal,
 /turf/simulated/floor/tiled/freezer,
-/area/awaymission/hiddeneclipse/baseneon)
-"vm" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
-/turf/simulated/floor/tiled/monotile,
 /area/awaymission/hiddeneclipse/baseneon)
 "vo" = (
 /obj/machinery/computer/arcade/battle{
@@ -5962,10 +5437,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
-/turf/simulated/floor,
-/area/awaymission/hiddeneclipse/baseneon)
-"vs" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
 "vt" = (
@@ -5991,17 +5462,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/awaymission/hiddeneclipse/baseneon)
-"vw" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange,
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/nuclear,
 /turf/simulated/floor/tiled/techmaint,
 /area/awaymission/hiddeneclipse/baseneon)
 "vy" = (
@@ -6071,14 +5531,6 @@
 "vL" = (
 /turf/simulated/floor/carpet/green,
 /area/awaymission/hiddeneclipse/baseneon)
-"vM" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
-/turf/simulated/floor/carpet/green,
-/area/awaymission/hiddeneclipse/baseneon)
-"vN" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/carpet/green,
-/area/awaymission/hiddeneclipse/baseneon)
 "vO" = (
 /obj/structure/fans/hardlight/colorable/abductor{
 	color = "#FF3300"
@@ -6100,17 +5552,7 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/carpet/geo,
 /area/awaymission/hiddeneclipse/baseneon)
-"vS" = (
-/obj/structure/table/bench/padded,
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
-/turf/simulated/floor/carpet/geo,
-/area/awaymission/hiddeneclipse/baseneon)
 "vU" = (
-/turf/simulated/floor/carpet/geo,
-/area/awaymission/hiddeneclipse/baseneon)
-"vV" = (
-/obj/structure/table/bench/padded,
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
 /turf/simulated/floor/carpet/geo,
 /area/awaymission/hiddeneclipse/baseneon)
 "vW" = (
@@ -6167,14 +5609,6 @@
 	},
 /obj/effect/floor_decal/corner/lightorange,
 /obj/machinery/atmospherics/binary/pump,
-/turf/simulated/floor/tiled/techmaint,
-/area/awaymission/hiddeneclipse/baseneon)
-"wf" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange,
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
 /turf/simulated/floor/tiled/techmaint,
 /area/awaymission/hiddeneclipse/baseneon)
 "wg" = (
@@ -6328,11 +5762,6 @@
 	},
 /turf/simulated/floor/carpet/green,
 /area/awaymission/hiddeneclipse/baseneon)
-"wH" = (
-/obj/structure/table/bench/padded,
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
-/turf/simulated/floor/carpet/geo,
-/area/awaymission/hiddeneclipse/baseneon)
 "wI" = (
 /turf/simulated/floor/carpet/purple,
 /area/awaymission/hiddeneclipse/baseneon)
@@ -6357,13 +5786,6 @@
 /area/awaymission/hiddeneclipse/baseneon)
 "wP" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"wS" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
 "wT" = (
@@ -6414,11 +5836,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/floor/wood,
 /area/awaymission/hiddeneclipse/baseneon)
-"xd" = (
-/obj/structure/table/bench/padded,
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
-/turf/simulated/floor/carpet/geo,
-/area/awaymission/hiddeneclipse/baseneon)
 "xf" = (
 /obj/structure/casino_table/craps,
 /obj/structure/casino_table/roulette_chart,
@@ -6433,13 +5850,6 @@
 /obj/structure/casino_table/roulette_table,
 /obj/structure/casino_table/roulette_table/long,
 /turf/simulated/floor/carpet/geo,
-/area/awaymission/hiddeneclipse/baseneon)
-"xi" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
-/turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
 "xj" = (
 /obj/structure/window/plastitanium,
@@ -6466,11 +5876,6 @@
 	oxygen = 0;
 	phoron = 500
 	},
-/area/awaymission/hiddeneclipse/baseneon)
-"xm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter,
-/turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
 "xn" = (
 /obj/machinery/atmospherics/binary/circulator{
@@ -6534,11 +5939,6 @@
 /obj/structure/casino_table/blackjack_r,
 /turf/simulated/floor/carpet/geo,
 /area/awaymission/hiddeneclipse/baseneon)
-"xB" = (
-/obj/structure/table/bench/padded,
-/mob/living/simple_mob/humanoid/eclipse/lunar/cultfanatic,
-/turf/simulated/floor/carpet/geo,
-/area/awaymission/hiddeneclipse/baseneon)
 "xC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 6
@@ -6586,13 +5986,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
-"xP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
 "xQ" = (
 /obj/structure/fans/hardlight/colorable/abductor{
 	color = "#FF3300"
@@ -6614,10 +6007,6 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor/wood,
-/area/awaymission/hiddeneclipse/baseneon)
-"xV" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
-/turf/simulated/floor/carpet/green,
 /area/awaymission/hiddeneclipse/baseneon)
 "xW" = (
 /obj/machinery/door/airlock/silver,
@@ -6643,7 +6032,7 @@
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
 "ya" = (
-/obj/effect/map_helper/no_phaseshift/area,
+/mob/living/simple_mob/mechanical/mecha/eclipse/janus,
 /turf/simulated/shuttle/floor/alien,
 /area/awaymission/hiddeneclipse/baseneon)
 "yb" = (
@@ -6729,10 +6118,6 @@
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/carpet/green,
 /area/awaymission/hiddeneclipse/baseneon)
-"yu" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/cultfanatic,
-/turf/simulated/floor/carpet/green,
-/area/awaymission/hiddeneclipse/baseneon)
 "yv" = (
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/hiddeneclipse/baseneon)
@@ -6740,13 +6125,6 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"yy" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/changeling,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
 "yz" = (
@@ -6760,10 +6138,6 @@
 "yA" = (
 /turf/simulated/wall/r_concrete,
 /area/awaymission/hiddeneclipse)
-"yB" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/armored,
-/turf/simulated/shuttle/floor/alien,
-/area/awaymission/hiddeneclipse/baseneon)
 "yC" = (
 /obj/structure/bed/chair/bay/chair/padded{
 	dir = 8
@@ -6851,19 +6225,9 @@
 /obj/machinery/vending/boozeomat,
 /turf/simulated/floor/carpet/green,
 /area/awaymission/hiddeneclipse/baseneon)
-"yR" = (
-/obj/structure/bed/double,
-/mob/living/simple_mob/humanoid/eclipse/head/tyrlead,
-/turf/simulated/floor/carpet/blue2,
-/area/awaymission/hiddeneclipse/baseneon)
 "yS" = (
 /obj/structure/bed/double,
 /turf/simulated/floor/carpet/blue2,
-/area/awaymission/hiddeneclipse/baseneon)
-"yU" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
-/turf/simulated/floor/tiled/monotile,
 /area/awaymission/hiddeneclipse/baseneon)
 "yV" = (
 /obj/machinery/portable_atmospherics/hydroponics,
@@ -6922,25 +6286,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
-"zb" = (
-/obj/effect/floor_decal/corner/blue/diagonal,
-/obj/effect/floor_decal/corner/paleblue/diagonal{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/changeling,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"zc" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"zd" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/engimecha,
-/turf/simulated/floor/reinforced,
-/area/awaymission/hiddeneclipse/baseneon)
 "ze" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 8
@@ -6996,17 +6341,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"zk" = (
-/obj/effect/floor_decal/corner/green{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lime,
-/obj/effect/floor_decal/corner/white{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
 "zl" = (
@@ -7091,13 +6425,6 @@
 /obj/machinery/biogenerator,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
-"zw" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
 "zx" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
@@ -7108,17 +6435,6 @@
 "zy" = (
 /obj/structure/closet,
 /turf/simulated/floor/wood,
-/area/awaymission/hiddeneclipse/baseneon)
-"zz" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange,
-/mob/living/simple_mob/humanoid/eclipse/solar/nuclear,
-/turf/simulated/floor/tiled/techmaint,
 /area/awaymission/hiddeneclipse/baseneon)
 "zC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -7177,13 +6493,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
-"zJ" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
 "zK" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 8
@@ -7209,38 +6518,12 @@
 "zM" = (
 /turf/simulated/mineral/light/tyr,
 /area/awaymission/hiddeneclipse/baseneon)
-"zN" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightorange,
-/mob/living/simple_mob/humanoid/eclipse/solar/plant,
-/turf/simulated/floor/tiled/techmaint,
-/area/awaymission/hiddeneclipse/baseneon)
 "zO" = (
 /obj/machinery/door/airlock/highsecurity,
 /obj/structure/fans/hardlight/colorable/abductor{
 	color = "#FF3300"
 	},
 /turf/simulated/floor/carpet,
-/area/awaymission/hiddeneclipse/baseneon)
-"zQ" = (
-/obj/effect/floor_decal/corner/green{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lime,
-/obj/effect/floor_decal/corner/white{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/changeling,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"zR" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
-/turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
 "zS" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -7249,13 +6532,6 @@
 /obj/structure/table/standard,
 /obj/item/toy/plushie,
 /obj/item/gun/energy/sizegun,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"zT" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/eclipse/solar/plant,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
 "zU" = (
@@ -7301,10 +6577,6 @@
 /obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"zZ" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard,
-/turf/simulated/floor/reinforced,
 /area/awaymission/hiddeneclipse/baseneon)
 "Aa" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -7371,14 +6643,6 @@
 /obj/effect/floor_decal/corner/blue/diagonal,
 /obj/structure/table/standard,
 /obj/item/reagent_containers/glass/beaker/large,
-/turf/simulated/floor/tiled/white,
-/area/awaymission/hiddeneclipse/baseneon)
-"Ak" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/blue/diagonal,
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/hiddeneclipse/baseneon)
 "Am" = (
@@ -7457,11 +6721,6 @@
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/hiddeneclipse/miningzonea/depature)
-"MR" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/solar/clocksgun,
-/turf/simulated/floor/concrete,
-/area/awaymission/hiddeneclipse/baseneon)
 "Nv" = (
 /obj/machinery/light/small,
 /obj/effect/floor_decal/corner/lime/border,
@@ -7474,18 +6733,13 @@
 /mob/living/simple_mob/vore/spacecritter/livingice/iceberg,
 /turf/simulated/floor,
 /area/awaymission/hiddeneclipse/baseneon)
-"PA" = (
-/obj/structure/bed/chair/bar_stool,
-/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver,
-/turf/simulated/floor/concrete,
-/area/awaymission/hiddeneclipse/baseneon)
 "Sc" = (
 /obj/machinery/microwave/advanced,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/hiddeneclipse/miningzonea/depature)
 "SO" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat,
 /turf/simulated/floor/bmarble,
 /area/awaymission/hiddeneclipse/baseneon)
 "UM" = (
@@ -8402,7 +7656,7 @@ aQ
 aQ
 aQ
 aQ
-fk
+aQ
 aR
 aL
 aK
@@ -8635,9 +7889,9 @@ aL
 rG
 ot
 ot
-qS
+pH
 ot
-qs
+pH
 ot
 pH
 ot
@@ -9176,6 +8430,7 @@ hJ
 aL
 aL
 aQ
+aD
 aQ
 aQ
 aQ
@@ -9187,7 +8442,6 @@ aQ
 aQ
 aQ
 aQ
-aZ
 aR
 aL
 aH
@@ -9425,10 +8679,10 @@ aL
 lP
 hb
 hb
-iG
 hb
 hb
-iD
+hb
+hb
 hb
 hb
 gZ
@@ -9639,7 +8893,7 @@ aK
 aK
 aL
 aQ
-fk
+aQ
 aQ
 aQ
 aQ
@@ -9923,7 +9177,6 @@ aQ
 sC
 aL
 aQ
-bb
 aQ
 aQ
 aQ
@@ -9935,7 +9188,8 @@ aQ
 aQ
 aQ
 aQ
-aZ
+aQ
+aQ
 aQ
 gt
 hb
@@ -10199,10 +9453,10 @@ aL
 lP
 hb
 hb
-iD
 hb
 hb
-iG
+hb
+hb
 hb
 hb
 gZ
@@ -10211,7 +9465,7 @@ aQ
 aQ
 aQ
 aL
-dX
+gq
 bI
 bI
 bI
@@ -10685,11 +9939,11 @@ vL
 vL
 vL
 vL
-vM
+vL
 vf
 aL
 aQ
-fk
+aQ
 aQ
 aQ
 aQ
@@ -10937,7 +10191,7 @@ vL
 vL
 yb
 yb
-xV
+vL
 vL
 xv
 UV
@@ -10993,7 +10247,7 @@ bH
 bI
 aL
 aQ
-bb
+aQ
 aQ
 aL
 aH
@@ -11192,7 +10446,7 @@ aQ
 aL
 yQ
 vL
-yu
+vL
 yb
 yb
 vL
@@ -11218,14 +10472,15 @@ aL
 aL
 oB
 oB
-pY
+oB
 oB
 oB
 oB
 oB
 aL
 aQ
-fk
+aQ
+ba
 aQ
 aQ
 aQ
@@ -11240,10 +10495,9 @@ aQ
 aQ
 aQ
 aQ
-bb
 aQ
 aL
-dY
+gq
 bI
 bI
 bI
@@ -11459,7 +10713,7 @@ vL
 vL
 vL
 vL
-vN
+vL
 vf
 aL
 aQ
@@ -11736,7 +10990,7 @@ oB
 oB
 oB
 oB
-pa
+oB
 oB
 oB
 aL
@@ -11986,7 +11240,7 @@ oB
 oB
 oB
 oB
-rH
+oB
 oB
 oB
 aL
@@ -12219,7 +11473,7 @@ aQ
 aQ
 aQ
 aQ
-aQ
+aD
 aQ
 aQ
 bq
@@ -12261,8 +11515,6 @@ aQ
 aQ
 aL
 ho
-db
-be
 bd
 be
 bd
@@ -12277,6 +11529,8 @@ bd
 be
 bd
 be
+bd
+aj
 bd
 be
 bd
@@ -12474,10 +11728,6 @@ aK
 aK
 aL
 aQ
-fk
-aQ
-aQ
-bb
 aQ
 aQ
 aQ
@@ -12486,7 +11736,11 @@ aQ
 aQ
 aQ
 aQ
-bb
+aQ
+aQ
+aQ
+aQ
+aQ
 aQ
 aL
 vl
@@ -12501,7 +11755,7 @@ nO
 oB
 oB
 oB
-rX
+oB
 oB
 oB
 oB
@@ -13023,15 +12277,15 @@ nW
 qY
 aL
 bd
-qw
-bd
 be
 bd
 be
 bd
 be
 bd
-iZ
+be
+bd
+be
 bd
 be
 bd
@@ -13559,7 +12813,7 @@ aP
 aP
 dM
 fm
-hc
+fm
 fm
 fm
 fn
@@ -13784,7 +13038,7 @@ aQ
 aQ
 aQ
 bq
-aQ
+ba
 aQ
 aQ
 aQ
@@ -13830,7 +13084,7 @@ aN
 aN
 aN
 aN
-bh
+aN
 aN
 aN
 aN
@@ -14034,7 +13288,6 @@ yh
 yh
 aL
 aQ
-bb
 aQ
 aQ
 aQ
@@ -14045,7 +13298,8 @@ aQ
 aQ
 aQ
 aQ
-fk
+aQ
+aQ
 aQ
 aQ
 aQ
@@ -14334,7 +13588,7 @@ aL
 aL
 hL
 fm
-gv
+fm
 fm
 fn
 aL
@@ -15318,7 +14572,7 @@ aL
 yj
 yv
 pg
-yR
+yS
 pg
 yv
 yj
@@ -15341,7 +14595,7 @@ aL
 sD
 ph
 ph
-rv
+ph
 qZ
 aL
 be
@@ -15618,10 +14872,6 @@ ku
 ku
 aL
 hm
-jS
-be
-bd
-ik
 bd
 be
 bd
@@ -15630,6 +14880,10 @@ bd
 be
 bd
 be
+bd
+be
+bd
+ax
 bd
 be
 bd
@@ -15845,7 +15099,7 @@ aQ
 aL
 lv
 iL
-uv
+iL
 iL
 iL
 in
@@ -15854,7 +15108,7 @@ aQ
 aQ
 aQ
 aL
-sE
+qJ
 pi
 pK
 pi
@@ -16116,7 +15370,7 @@ qJ
 pi
 pK
 pi
-rb
+ra
 aL
 bd
 be
@@ -16620,7 +15874,7 @@ aL
 lv
 iL
 iL
-vm
+iL
 iL
 in
 aL
@@ -16630,7 +15884,7 @@ aQ
 aL
 sF
 rw
-rJ
+rw
 rw
 rc
 aL
@@ -17151,8 +16405,8 @@ pg
 pg
 aL
 bd
-oi
-bd
+be
+SO
 be
 bd
 be
@@ -17177,7 +16431,7 @@ dZ
 dZ
 dZ
 dZ
-ea
+dZ
 dG
 aL
 bD
@@ -17431,7 +16685,7 @@ bd
 hP
 aL
 dG
-fM
+dZ
 dZ
 dZ
 dZ
@@ -17919,7 +17173,7 @@ aQ
 aQ
 aL
 ho
-nI
+bd
 be
 bd
 be
@@ -17931,8 +17185,6 @@ aL
 aY
 aL
 es
-SO
-be
 bd
 be
 bd
@@ -17943,7 +17195,9 @@ bd
 be
 bd
 be
-db
+bd
+be
+bd
 hP
 aL
 dG
@@ -18201,7 +17455,7 @@ ct
 bR
 eL
 er
-be
+bo
 hO
 aL
 dG
@@ -18420,7 +17674,7 @@ aQ
 aQ
 aQ
 aQ
-fk
+aQ
 aQ
 aQ
 aQ
@@ -18933,7 +18187,7 @@ aP
 aP
 aL
 tX
-aQ
+ba
 aQ
 aL
 aL
@@ -18978,7 +18232,7 @@ es
 bd
 be
 bd
-gz
+be
 bd
 be
 bd
@@ -19461,13 +18715,13 @@ vR
 aL
 aL
 ho
-SO
-be
 bd
 be
 bd
 be
-gC
+bd
+be
+bd
 qb
 aL
 re
@@ -19715,7 +18969,7 @@ xx
 vQ
 vU
 vU
-vS
+vQ
 vp
 aL
 bd
@@ -19757,7 +19011,7 @@ fP
 aL
 bP
 bP
-eb
+bP
 bP
 bP
 bP
@@ -19968,9 +19222,9 @@ aQ
 aQ
 aQ
 aL
-vV
+vQ
 xy
-xd
+vQ
 vU
 vU
 vU
@@ -19991,7 +19245,7 @@ pg
 qI
 ph
 ph
-pJ
+ph
 ph
 aL
 es
@@ -20001,7 +19255,7 @@ aL
 fm
 fm
 fm
-lt
+fm
 fm
 fm
 fm
@@ -20472,7 +19726,6 @@ aQ
 aQ
 aQ
 aQ
-fk
 aQ
 aQ
 aQ
@@ -20481,7 +19734,8 @@ aQ
 aQ
 aQ
 aQ
-bb
+aQ
+aQ
 aQ
 aL
 hj
@@ -20506,7 +19760,7 @@ pg
 pg
 qJ
 pj
-qf
+pK
 pK
 pj
 aL
@@ -20520,7 +19774,7 @@ fm
 fm
 fm
 fm
-hc
+fm
 fm
 fm
 fn
@@ -20789,7 +20043,7 @@ fP
 aL
 bP
 bP
-ec
+vP
 bP
 bP
 bP
@@ -21246,7 +20500,7 @@ aQ
 aQ
 aL
 iL
-yU
+iL
 th
 iL
 iL
@@ -21259,9 +20513,9 @@ aQ
 aQ
 aL
 vU
-xB
+vQ
 xg
-wH
+vQ
 vU
 vQ
 vo
@@ -21300,7 +20554,7 @@ cv
 bX
 di
 eu
-bd
+aF
 be
 fx
 cs
@@ -21509,7 +20763,7 @@ iL
 iL
 iL
 iL
-vm
+iL
 iL
 aL
 aQ
@@ -21549,7 +20803,7 @@ bd
 be
 bd
 be
-db
+bd
 be
 bd
 be
@@ -22299,7 +21553,7 @@ vQ
 vq
 aL
 bd
-iZ
+be
 bd
 be
 bd
@@ -22548,9 +21802,9 @@ aQ
 aQ
 aQ
 aL
-vS
+vQ
 xy
-xd
+vQ
 vU
 vU
 vU
@@ -22794,7 +22048,7 @@ aQ
 aQ
 mp
 iL
-vm
+iL
 iL
 iL
 iL
@@ -22811,7 +22065,7 @@ xz
 vQ
 vU
 vU
-vV
+vQ
 vp
 aL
 aL
@@ -22830,9 +22084,9 @@ aL
 mJ
 hb
 hb
-nV
 nR
-nV
+nR
+nR
 nR
 hb
 hb
@@ -22845,7 +22099,7 @@ aL
 ed
 ed
 ed
-il
+ed
 ed
 ed
 ed
@@ -23058,7 +22312,7 @@ iL
 iL
 ti
 iL
-yU
+iL
 mp
 aQ
 aQ
@@ -23331,12 +22585,12 @@ vQ
 vo
 aL
 iL
-uu
 iL
 iL
 iL
 iL
-sG
+iL
+iL
 iL
 aL
 hm
@@ -23347,9 +22601,9 @@ if
 hb
 hb
 nR
-nV
 nR
-nV
+nR
+nR
 hb
 hb
 mJ
@@ -23622,7 +22876,7 @@ ed
 ed
 ed
 ed
-gB
+ed
 ed
 aL
 ed
@@ -24621,12 +23875,12 @@ aL
 aY
 aL
 iL
-uv
 iL
 iL
 iL
 iL
-sJ
+iL
+iL
 iL
 aL
 hk
@@ -24642,7 +23896,7 @@ be
 bd
 be
 bd
-kc
+aj
 bd
 be
 bd
@@ -24654,7 +23908,7 @@ be
 bd
 be
 bd
-gz
+be
 fS
 aL
 eO
@@ -25411,7 +24665,7 @@ qx
 oB
 oB
 oB
-oR
+oB
 oB
 nW
 aL
@@ -25926,7 +25180,7 @@ aL
 qx
 oB
 oB
-pm
+oB
 oB
 oB
 nY
@@ -26954,7 +26208,7 @@ aL
 nW
 oB
 oB
-qM
+oB
 oB
 oB
 aL
@@ -26969,7 +26223,7 @@ fP
 aL
 lv
 iL
-kx
+iL
 iL
 iL
 iL
@@ -27202,7 +26456,7 @@ uQ
 uN
 uP
 uy
-uc
+aP
 aP
 aL
 bd
@@ -27727,7 +26981,7 @@ fN
 aL
 nY
 oB
-pY
+oB
 oB
 oB
 oB
@@ -27735,7 +26989,7 @@ oB
 oB
 nO
 hm
-id
+bd
 be
 bd
 be
@@ -27745,7 +26999,7 @@ lu
 iK
 iL
 iL
-jm
+iL
 iK
 im
 aL
@@ -27968,12 +27222,12 @@ do
 aL
 aP
 aP
-xi
+uG
 ug
 ug
 tI
 tM
-uZ
+aP
 uQ
 ue
 ue
@@ -28493,7 +27747,7 @@ ug
 uR
 uF
 uf
-tK
+tM
 aL
 be
 bd
@@ -28746,7 +28000,7 @@ uQ
 uU
 uU
 tJ
-vs
+aP
 aP
 aP
 uG
@@ -28754,7 +28008,7 @@ ug
 tL
 aL
 hp
-oi
+bo
 bd
 be
 bd
@@ -28999,7 +28253,7 @@ do
 do
 aL
 aP
-uZ
+aP
 aP
 uf
 uf
@@ -29008,7 +28262,7 @@ aP
 uM
 uM
 uH
-uh
+aP
 tM
 aL
 be
@@ -29244,11 +28498,11 @@ do
 do
 yH
 yY
-zQ
 yY
 yY
 yY
-zk
+yY
+yY
 yY
 yY
 yH
@@ -29283,7 +28537,7 @@ yX
 hV
 yX
 mW
-bd
+ak
 nj
 fx
 cs
@@ -29519,7 +28773,7 @@ ue
 xl
 ux
 aP
-uh
+aP
 uQ
 uU
 uU
@@ -29535,8 +28789,6 @@ aY
 aY
 aL
 hp
-qy
-bd
 be
 bd
 be
@@ -29556,7 +28808,9 @@ bd
 be
 bd
 be
-gC
+bd
+be
+bd
 fT
 aL
 ed
@@ -29814,7 +29068,7 @@ be
 bp
 be
 bd
-be
+ax
 fS
 aL
 ed
@@ -30285,7 +29539,7 @@ do
 iW
 do
 do
-do
+bY
 do
 do
 do
@@ -30318,10 +29572,10 @@ nl
 ob
 nk
 mX
-mK
 aP
 aP
-lw
+aP
+aP
 aL
 hk
 be
@@ -30810,7 +30064,7 @@ do
 do
 og
 do
-do
+cd
 do
 tO
 do
@@ -31113,7 +30367,7 @@ aL
 aL
 aL
 bd
-be
+aj
 bd
 aL
 aK
@@ -31335,7 +30589,7 @@ rg
 rg
 rL
 rg
-sh
+rg
 rL
 rg
 rg
@@ -31820,7 +31074,7 @@ aK
 aK
 aL
 An
-Ak
+Ab
 Ab
 Ac
 aL
@@ -31830,7 +31084,7 @@ dp
 aL
 zn
 za
-zb
+za
 yL
 aL
 oe
@@ -32130,7 +31384,7 @@ bd
 be
 bd
 be
-gC
+bd
 be
 aL
 aY
@@ -32366,7 +31620,7 @@ aL
 rg
 rg
 rN
-sL
+rg
 rg
 rN
 rg
@@ -32609,10 +31863,10 @@ aL
 aL
 oe
 oe
-oG
+oe
 xN
 wu
-xm
+wu
 wP
 wu
 vZ
@@ -32868,10 +32122,10 @@ aL
 oe
 oe
 oe
-xP
+wb
 oe
 oe
-wS
+wb
 oe
 wb
 aL
@@ -32890,7 +32144,7 @@ do
 do
 aL
 en
-qh
+en
 en
 en
 aL
@@ -33924,10 +33178,10 @@ dS
 oe
 oe
 oe
-ps
+oe
 aL
 be
-bd
+SO
 be
 bd
 be
@@ -33942,7 +33196,7 @@ be
 bd
 be
 bd
-gD
+bd
 bd
 be
 bd
@@ -33951,7 +33205,7 @@ bd
 be
 bd
 be
-bd
+ak
 be
 aL
 aK
@@ -34146,7 +33400,7 @@ do
 do
 aL
 yw
-zR
+yw
 yw
 zs
 zs
@@ -34682,7 +33936,7 @@ do
 do
 do
 do
-do
+bY
 do
 aL
 tS
@@ -34921,7 +34175,7 @@ do
 aL
 yw
 yw
-zJ
+yw
 zs
 zs
 aL
@@ -35230,10 +34484,10 @@ aY
 aL
 iP
 bc
-hW
+cN
 gK
 gE
-fV
+cM
 bc
 aL
 cy
@@ -35958,7 +35212,7 @@ yz
 ym
 aL
 yn
-zc
+yw
 yw
 yw
 ym
@@ -36210,15 +35464,15 @@ do
 do
 aL
 ym
-zT
 yw
-zw
+yw
+yw
 ym
 aL
 ym
 yw
 yw
-yy
+yw
 ym
 aL
 ek
@@ -36231,7 +35485,7 @@ aQ
 aQ
 va
 uW
-uJ
+tU
 tU
 tU
 aQ
@@ -36245,7 +35499,7 @@ do
 dS
 oe
 oe
-ps
+oe
 oe
 oe
 oe
@@ -36506,7 +35760,7 @@ oe
 oe
 oe
 oe
-oG
+oe
 oe
 nr
 aL
@@ -36520,10 +35774,10 @@ aY
 aL
 iP
 bc
-hX
+cN
 gF
 gK
-fW
+cM
 bc
 aL
 cy
@@ -37543,7 +36797,7 @@ do
 do
 na
 be
-bd
+aF
 be
 bc
 bc
@@ -37801,7 +37055,7 @@ og
 do
 na
 hp
-kc
+be
 bd
 bc
 bc
@@ -37822,7 +37076,7 @@ bc
 bc
 bc
 bc
-bu
+bc
 bc
 aL
 aK
@@ -40143,9 +39397,9 @@ eh
 dd
 dm
 cQ
-cz
 bc
-bt
+bc
+bc
 aL
 aO
 aO
@@ -40604,7 +39858,7 @@ uk
 uk
 uk
 sP
-yB
+uk
 uk
 uk
 ya
@@ -40631,22 +39885,22 @@ bd
 be
 bd
 be
-jS
-be
+bd
+as
 bd
 be
 bd
 be
 bd
 be
-gC
+bd
 be
 aL
 lb
 bc
 bc
 iT
-iV
+bc
 bc
 bc
 bZ
@@ -40659,7 +39913,7 @@ bc
 bc
 bc
 bc
-bc
+ao
 bc
 bc
 aL
@@ -41175,9 +40429,9 @@ eh
 dd
 dm
 cR
-cA
 bc
-bu
+bc
+bc
 bi
 aO
 aO
@@ -42168,7 +41422,7 @@ sP
 aK
 aK
 aL
-tz
+nz
 nz
 nz
 nz
@@ -42427,8 +41681,8 @@ aK
 aK
 aL
 nz
-tn
 nz
+by
 nz
 nz
 nz
@@ -42445,7 +41699,7 @@ nz
 nz
 nb
 bd
-bo
+aX
 bd
 be
 bd
@@ -42686,7 +41940,7 @@ aK
 aL
 nz
 nz
-sR
+nz
 nz
 nz
 nz
@@ -43746,7 +43000,7 @@ do
 do
 do
 do
-gN
+do
 do
 do
 eS
@@ -44000,7 +43254,7 @@ jV
 do
 jV
 do
-iX
+do
 do
 do
 do
@@ -44266,7 +43520,7 @@ do
 do
 do
 do
-eI
+do
 do
 do
 dp
@@ -44766,7 +44020,7 @@ eT
 eT
 eT
 eT
-eT
+bl
 eT
 eT
 eT
@@ -45043,7 +44297,7 @@ eT
 aL
 do
 do
-ds
+do
 aL
 aL
 aL
@@ -45263,10 +44517,10 @@ nz
 nz
 nz
 nz
+bB
 nz
 nz
-tn
-sS
+nz
 aL
 aP
 aP
@@ -45275,25 +44529,25 @@ aP
 aP
 aL
 eT
-pP
+fE
 fX
 fE
 eT
 fE
 fX
 fE
-PA
-fX
-fE
-lx
-fX
-kA
 fE
 fX
 fE
 fE
 fX
-hr
+fE
+fE
+fX
+fE
+fE
+fX
+fE
 fE
 fX
 fE
@@ -45522,7 +44776,7 @@ nz
 nz
 nz
 nz
-tA
+nz
 nz
 nz
 aL
@@ -46051,24 +45305,24 @@ aL
 eT
 fE
 fX
-gO
+fE
 eT
 fE
 fX
 fE
-jW
+fE
+fX
+fE
+fE
 fX
 fE
 fE
 fX
 fE
-MR
+fE
 fX
 fE
-io
-fX
 fE
-gO
 fX
 fE
 eU
@@ -46848,7 +46102,7 @@ fE
 eT
 ry
 dt
-dT
+cE
 dt
 cE
 cE
@@ -47084,10 +46338,7 @@ eT
 eT
 fX
 eT
-eT
-eT
-fD
-eT
+bv
 eT
 fD
 eT
@@ -47095,6 +46346,9 @@ eT
 fD
 eT
 eT
+fD
+eT
+aT
 fD
 eT
 eT
@@ -47343,24 +46597,24 @@ fE
 fX
 fE
 eT
-MR
-fX
-fE
-kA
-fX
-fE
-lx
-fX
-kC
-fE
-fX
-iY
 fE
 fX
 fE
-gP
+fE
 fX
-PA
+fE
+fE
+fX
+fE
+fE
+fX
+fE
+fE
+fX
+fE
+fE
+fX
+fE
 eT
 ry
 dt
@@ -47882,7 +47136,7 @@ ry
 dt
 cE
 dt
-cV
+cE
 cE
 ci
 aL
@@ -48084,7 +47338,7 @@ en
 en
 en
 en
-zd
+en
 en
 en
 en
@@ -48115,7 +47369,7 @@ aL
 eT
 fE
 fX
-gP
+fE
 eT
 fE
 fX
@@ -48123,10 +47377,10 @@ fE
 fE
 fX
 fE
-ly
+fE
 fX
 fE
-jW
+fE
 fX
 fE
 fE
@@ -49415,7 +48669,7 @@ ld
 aL
 ld
 ld
-kE
+ld
 jZ
 aL
 be
@@ -49924,7 +49178,7 @@ be
 aL
 ld
 ld
-nC
+ld
 ld
 ld
 ld
@@ -50168,7 +49422,7 @@ nz
 nz
 nz
 nz
-sS
+nz
 nz
 nz
 nz
@@ -50419,13 +49673,13 @@ aL
 aL
 nz
 nz
+bM
 nz
 nz
 nz
 nz
 nz
-tB
-tn
+nz
 nz
 nz
 nz
@@ -50435,7 +49689,7 @@ nz
 nz
 nb
 be
-bd
+ak
 be
 aL
 oJ
@@ -51497,7 +50751,7 @@ aN
 aN
 aN
 aN
-bh
+aN
 aN
 aN
 aN
@@ -51734,14 +50988,14 @@ bd
 be
 bd
 be
-db
-be
 bd
 be
 bd
 be
+aF
+be
 bd
-ik
+as
 bg
 aL
 aP
@@ -51965,7 +51219,7 @@ nz
 nz
 nz
 nz
-wf
+nz
 vv
 nz
 aL
@@ -52224,7 +51478,7 @@ nz
 nz
 nz
 nz
-vw
+vv
 nz
 aL
 aP
@@ -52483,7 +51737,7 @@ nz
 nz
 nz
 vv
-sT
+nz
 aL
 qD
 aP
@@ -53233,7 +52487,7 @@ aK
 aK
 aK
 aL
-zN
+nz
 nz
 nz
 nz
@@ -53292,7 +52546,7 @@ aL
 hy
 aP
 aP
-gQ
+aP
 aP
 aP
 aP
@@ -53492,7 +52746,7 @@ aK
 aK
 aL
 nz
-tn
+nz
 nz
 nz
 nz
@@ -53544,7 +52798,7 @@ be
 bd
 be
 bd
-kc
+be
 hH
 aL
 is
@@ -53751,7 +53005,7 @@ aK
 aL
 nz
 nz
-tz
+nz
 nz
 nz
 nz
@@ -54068,7 +53322,7 @@ aP
 aP
 aP
 aP
-fF
+aP
 aP
 aP
 aL
@@ -54812,7 +54066,7 @@ nz
 nz
 nz
 so
-sT
+nz
 nz
 nz
 nz
@@ -54825,7 +54079,7 @@ nz
 nz
 nb
 bd
-oi
+as
 bd
 be
 bd
@@ -55070,7 +54324,7 @@ nz
 nz
 nz
 to
-sU
+bz
 sn
 nz
 nz
@@ -55326,7 +54580,7 @@ nz
 nz
 nz
 nz
-tC
+nz
 nz
 nz
 so
@@ -55610,8 +54864,8 @@ aQ
 kG
 aL
 dA
-iZ
-bd
+be
+SO
 be
 bd
 be
@@ -56380,7 +55634,7 @@ kG
 aQ
 kH
 kH
-le
+aQ
 kJ
 aL
 dB
@@ -56853,7 +56107,7 @@ nz
 nz
 nz
 ur
-tz
+nz
 aL
 aP
 tE
@@ -57110,7 +56364,7 @@ nz
 nz
 nz
 nz
-zz
+ur
 nz
 aL
 aP
@@ -57151,7 +56405,7 @@ bd
 hD
 aL
 kH
-mq
+aQ
 kH
 kH
 aQ
@@ -57367,7 +56621,7 @@ nz
 nz
 nz
 nz
-zN
+nz
 ur
 nz
 aL
@@ -57903,7 +57157,7 @@ nz
 nz
 nz
 nz
-nz
+bM
 ur
 aL
 rp
@@ -57928,7 +57182,7 @@ kI
 aQ
 kH
 kH
-lf
+aQ
 kG
 aL
 dB
@@ -58173,7 +57427,7 @@ rD
 px
 aL
 be
-db
+bd
 be
 bd
 be
@@ -58441,7 +57695,7 @@ cp
 nH
 aL
 kH
-mr
+aQ
 aQ
 aQ
 aQ
@@ -59463,7 +58717,7 @@ rs
 rr
 kz
 dA
-be
+as
 fN
 aL
 jA
@@ -59480,8 +58734,8 @@ jA
 jA
 kd
 hm
-ja
-be
+bd
+aj
 bd
 be
 bd
@@ -59492,7 +58746,7 @@ bd
 be
 bd
 be
-db
+bd
 be
 aL
 aP
@@ -60514,7 +59768,7 @@ aL
 jt
 go
 gn
-ib
+go
 gn
 go
 gn
@@ -60782,7 +60036,7 @@ en
 en
 aL
 dA
-be
+as
 bd
 aL
 aP
@@ -61004,7 +60258,7 @@ tW
 tW
 rr
 rs
-sX
+rT
 rs
 rT
 rs
@@ -61263,7 +60517,7 @@ tW
 rs
 rr
 rs
-sr
+rr
 rs
 rr
 rs
@@ -61522,7 +60776,7 @@ rr
 rs
 rW
 rs
-rU
+rW
 rs
 rr
 aL
@@ -61547,7 +60801,7 @@ jt
 go
 gn
 go
-hB
+gn
 go
 gn
 fK
@@ -62559,14 +61813,14 @@ rE
 rr
 aL
 dA
-kc
+bo
 bd
 be
 bd
 be
 bd
 be
-nI
+bd
 hI
 aL
 lY
@@ -63602,11 +62856,11 @@ bd
 hD
 aL
 jC
-ma
+jA
 jC
 jA
 jC
-kg
+jA
 jC
 aL
 dB
@@ -63872,7 +63126,7 @@ be
 hH
 aL
 gq
-vg
+bI
 bI
 bI
 bJ
@@ -65420,7 +64674,7 @@ be
 hH
 aL
 gq
-fL
+bI
 bI
 bI
 bJ
@@ -65621,7 +64875,7 @@ tW
 tW
 en
 en
-zZ
+en
 en
 en
 en
@@ -65649,7 +64903,7 @@ tW
 rr
 rs
 rT
-ss
+rs
 rT
 rs
 rr
@@ -65662,7 +64916,7 @@ aY
 aY
 aL
 dB
-ja
+bd
 be
 bd
 be
@@ -65688,7 +64942,7 @@ bd
 be
 bd
 be
-bn
+bd
 be
 aL
 aK
@@ -65881,7 +65135,7 @@ en
 en
 en
 en
-en
+cf
 en
 en
 en
@@ -65907,7 +65161,7 @@ tW
 rs
 rr
 rs
-st
+rr
 rs
 rr
 rs
@@ -66160,12 +65414,12 @@ en
 en
 en
 tW
-tW
+bC
 tW
 rr
 rs
 rW
-su
+rs
 rW
 rs
 rr
@@ -69026,7 +68280,7 @@ aP
 kS
 kn
 jG
-ik
+be
 bd
 be
 bd
@@ -70292,7 +69546,7 @@ tW
 tW
 rr
 rs
-sY
+rT
 rs
 rT
 rs
@@ -70551,7 +69805,7 @@ tW
 rs
 rr
 rs
-sv
+rr
 rs
 rr
 rs
@@ -70808,7 +70062,7 @@ tW
 tW
 rr
 rs
-sZ
+rW
 rs
 rW
 rs
@@ -71331,7 +70585,7 @@ rs
 rr
 aL
 dA
-gz
+aj
 bd
 be
 bd

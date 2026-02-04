@@ -58,6 +58,7 @@
 	size_multiplier = 2
 	maxHealth = 600
 	health = 600
+	projectiletype = /obj/item/projectile/energy/wallbreaker/boss
 	wreckage = /obj/structure/loot_pile/surface/alien/engineering
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases/no_movement
 	anchored = 1

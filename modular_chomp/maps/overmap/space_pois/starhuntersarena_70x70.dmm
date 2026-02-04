@@ -9,8 +9,8 @@
 "c" = (
 /turf/simulated/shuttle/floor/alien,
 /area/submap/starhunterarena)
-"g" = (
-/mob/living/simple_mob/humanoid/eclipse/head/stargazer,
+"d" = (
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/crystal_boss/ufo,
 /turf/simulated/floor/grass,
 /area/submap/starhunterarena)
 "j" = (
@@ -2664,7 +2664,7 @@ U
 U
 U
 U
-U
+d
 U
 U
 U
@@ -2739,7 +2739,7 @@ U
 U
 U
 U
-g
+U
 U
 U
 U
