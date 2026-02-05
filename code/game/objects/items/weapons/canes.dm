@@ -24,14 +24,7 @@
 
 /obj/item/cane/concealed/Initialize(mapload)
 	. = ..()
-<<<<<<< HEAD
-	var/obj/item/material/butterfly/switchblade/temp_blade = new(src)
-	concealed_blade = temp_blade
-	temp_blade.active = TRUE
-	temp_blade.update_force()
-=======
 	concealed_blade = new(src)
->>>>>>> e3fa3a5480 (wat (#19135))
 
 /obj/item/cane/concealed/attack_self(mob/user)
 	. = ..(user)
