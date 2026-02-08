@@ -630,9 +630,5 @@
 		return FALSE
 
 	R.module.modules += new/obj/item/borg/sight/anomalous(R.module)
-<<<<<<< HEAD
-	return 1
-*/ //ChompEDIT END
-=======
 	return TRUE
->>>>>>> 1ba50d0d5a (Allows the robot sheet snatcher to be upgraded (#19149))
+*/ //ChompEDIT END
