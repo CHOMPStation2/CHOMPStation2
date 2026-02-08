@@ -26,12 +26,6 @@
 	save_data["runechat_color"]			= pref.runechat_color
 
 /datum/category_item/player_setup_item/general/language/sanitize_character()
-<<<<<<< HEAD
-	if(!islist(pref.alternate_languages))	pref.alternate_languages = list()
-	if(pref.species)
-		var/datum/species/S = GLOB.all_species[pref.species]
-		if(!istype(S))
-=======
 	var/char_name = pref.read_preference(/datum/preference/name/real_name) || "-name not yet loaded-"
 	if(!islist(pref.alternate_languages))
 		testing("LANGSANI: Sanitizing languages on [pref.client]'s character [char_name] because their character has no languages list")
@@ -40,8 +34,8 @@
 		var/datum/species/S = GLOB.all_species[pref.species]
 		if(!istype(S))
 			testing("LANGSANI: Failed sani on [pref.client]'s character [char_name] because their species ([pref.species]) isn't in the global list")
->>>>>>> 311c0117c1 (Conversion of realname and nickname from bay (#19120))
 			return
+
 		if(pref.alternate_languages.len > (S.num_alternate_languages + pref.extra_languages))
 			testing("LANGSANI: Truncated [pref.client]'s character [char_name] language list because it was too long (len: [pref.alternate_languages.len], allowed: [S.num_alternate_languages])")
 			pref.alternate_languages.len = (S.num_alternate_languages + pref.extra_languages) // Truncate to allowed length
