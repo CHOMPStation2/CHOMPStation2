@@ -1,4 +1,4 @@
-var/list/_human_default_emotes = list(
+GLOBAL_LIST_INIT(human_default_emotes, list(
 	/decl/emote/visible/blink,
 	/decl/emote/audible/synth,
 	/decl/emote/audible/synth/beep,
@@ -99,7 +99,6 @@ var/list/_human_default_emotes = list(
 	/decl/emote/visible/vomit,
 	/decl/emote/visible/floorspin,
 	/decl/emote/visible/flip,
-	//VOREStation Add
 	/decl/emote/audible/bug_hiss,
 	/decl/emote/audible/bug_buzz,
 	/decl/emote/audible/bug_chitter,
@@ -180,6 +179,7 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/caw,
 	/decl/emote/audible/caw2,
 	/decl/emote/audible/caw_m,
+<<<<<<< HEAD
 	/decl/emote/audible/gwah,
 	//VOREStation Add End
 	//CHOMP Add start
@@ -205,6 +205,12 @@ var/list/_human_default_emotes = list(
 	//VOREStation Add Start
 
 var/list/_simple_mob_default_emotes = list(
+=======
+	/decl/emote/audible/gwah
+))
+
+GLOBAL_LIST_INIT(simple_mob_default_emotes, list(
+>>>>>>> fa113ea3f5 (next set of globals (#19131))
 	/decl/emote/visible/blink,
 	/decl/emote/visible/nod,
 	/decl/emote/visible/shake,
@@ -346,6 +352,7 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/caw,
 	/decl/emote/audible/caw2,
 	/decl/emote/audible/caw_m,
+<<<<<<< HEAD
 	/decl/emote/audible/gwah,
 	//CHOMP Add start
 	/decl/emote/audible/prbt2,
@@ -361,14 +368,18 @@ var/list/_simple_mob_default_emotes = list(
 	//CHOMP Add end
 	)
 	//VOREStation Add End
+=======
+	/decl/emote/audible/gwah
+	))
+>>>>>>> fa113ea3f5 (next set of globals (#19131))
 
 /mob/living/carbon/human/get_available_emotes()
-	. = global._human_default_emotes.Copy()
+	. = GLOB.human_default_emotes.Copy()
 	if(length(species?.default_emotes))
 		return . | species.default_emotes
 
 /mob/living/simple_mob/get_available_emotes()
-	. = global._simple_mob_default_emotes.Copy()
+	. = GLOB.simple_mob_default_emotes.Copy()
 
 /mob/living/carbon/human/verb/pose()
 	set name = "Set Pose"

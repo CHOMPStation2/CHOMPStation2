@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> fa113ea3f5 (next set of globals (#19131))
 /turf/simulated/floor/outdoors/grass
 	name = "grass"
 	icon_state = "grass0"
