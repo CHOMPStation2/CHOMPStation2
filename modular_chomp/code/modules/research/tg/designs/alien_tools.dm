@@ -59,7 +59,7 @@
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/alien_multitool
-	name = "Alien Wrench"
+	name = "Alien Multitool"
 	desc = "An alien multitool, able to idientify a wire's purpose."
 	id = "alienmultitool"
 	build_type = PROTOLATHE
