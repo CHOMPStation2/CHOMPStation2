@@ -179,10 +179,9 @@ GLOBAL_LIST_INIT(human_default_emotes, list(
 	/decl/emote/audible/caw,
 	/decl/emote/audible/caw2,
 	/decl/emote/audible/caw_m,
-<<<<<<< HEAD
 	/decl/emote/audible/gwah,
-	//VOREStation Add End
 	//CHOMP Add start
+	/decl/emote/audible/wheeze,
 	/decl/emote/audible/prbt2,
 	/decl/emote/audible/pain,
 	/decl/emote/audible/mgeow,
@@ -190,27 +189,17 @@ GLOBAL_LIST_INIT(human_default_emotes, list(
 	/decl/emote/audible/xenogrowl,
 	/decl/emote/audible/xenohiss,
 	/decl/emote/audible/xenopurr,
-	/decl/emote/audible/gwah,
 	/decl/emote/audible/wawa,
 	/decl/emote/audible/malehumanscream,
 	/decl/emote/audible/scientist/scream,
 	/decl/emote/audible/scientist/pain,
-	/decl/emote/audible/caw,
 	/decl/emote/audible/yip,
 	/decl/emote/audible/tailthump,
 	/decl/emote/audible/squeal,
 	//CHOMP Add end
-)
-
-	//VOREStation Add Start
-
-var/list/_simple_mob_default_emotes = list(
-=======
-	/decl/emote/audible/gwah
 ))
 
 GLOBAL_LIST_INIT(simple_mob_default_emotes, list(
->>>>>>> fa113ea3f5 (next set of globals (#19131))
 	/decl/emote/visible/blink,
 	/decl/emote/visible/nod,
 	/decl/emote/visible/shake,
@@ -352,26 +341,20 @@ GLOBAL_LIST_INIT(simple_mob_default_emotes, list(
 	/decl/emote/audible/caw,
 	/decl/emote/audible/caw2,
 	/decl/emote/audible/caw_m,
-<<<<<<< HEAD
 	/decl/emote/audible/gwah,
 	//CHOMP Add start
+	/decl/emote/audible/wheeze,
 	/decl/emote/audible/prbt2,
 	/decl/emote/audible/pain,
 	/decl/emote/audible/mgeow,
 	/decl/emote/audible/xenogrowl,
 	/decl/emote/audible/xenohiss,
 	/decl/emote/audible/xenopurr,
-	/decl/emote/audible/caw,
 	/decl/emote/audible/yip,
 	/decl/emote/audible/tailthump,
 	/decl/emote/audible/squeal,
 	//CHOMP Add end
-	)
-	//VOREStation Add End
-=======
-	/decl/emote/audible/gwah
 	))
->>>>>>> fa113ea3f5 (next set of globals (#19131))
 
 /mob/living/carbon/human/get_available_emotes()
 	. = GLOB.human_default_emotes.Copy()
