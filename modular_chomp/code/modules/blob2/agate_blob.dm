@@ -33,7 +33,7 @@
 
 	ranged_spores = TRUE
 	spore_range = 7
-	spore_projectile = /obj/item/projectile/energy/eclipse/tyrjavelin
+	spore_projectile = /obj/item/projectile/energy/eclipse_boss/tyrjavelin
 
 	spore_type = /mob/living/simple_mob/blob/spore/infesting
 
