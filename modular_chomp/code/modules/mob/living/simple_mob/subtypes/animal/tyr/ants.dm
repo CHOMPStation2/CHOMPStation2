@@ -106,7 +106,7 @@
 	special_attack_max_range = 2
 	special_attack_cooldown = 10 SECONDS
 
-	color = "#FF7D51"
+	glowcolor = "#FF7D51"
 	glow_range = 5
 	glow_intensity = 2
 	glow_toggle = TRUE
@@ -159,7 +159,7 @@
 	special_attack_max_range = 2
 	special_attack_cooldown = 5 SECONDS
 
-	color = "#91FF91"
+	glowcolor = "#91FF91"
 	glow_range = 5
 	glow_intensity = 2
 	glow_toggle = TRUE

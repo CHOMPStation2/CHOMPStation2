@@ -99,7 +99,7 @@
 	speed = 15
 	range = 20
 
-/obj/item/projectile/energy/eclipse/tyrjavelin //Five hits ought to end you
+/obj/item/projectile/energy/eclipse_boss/tyrjavelin //Five hits ought to end you
 	name = "energy javelin"
 	icon_state = "javelin"
 	damage_type = SEARING
@@ -111,10 +111,10 @@
 	modifier_type_to_apply = /datum/modifier/deep_wounds //reduced healing
 	modifier_duration = 1 MINUTE
 
-/obj/item/projectile/energy/eclipse/tyrjavelin/speed
+/obj/item/projectile/energy/eclipse_boss/tyrjavelin/speed
 	speed = 7
 
-/obj/item/projectile/energy/eclipse/tyrjavelin/super_slow
+/obj/item/projectile/energy/eclipse_boss/tyrjavelin/super_slow
 	speed = 15
 	damage = 30
 
