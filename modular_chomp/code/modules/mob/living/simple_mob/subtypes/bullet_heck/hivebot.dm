@@ -12,7 +12,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases/no_movement
 	anchored = 1
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)
-	projectiletype = /obj/item/projectile/energy/eclipse/tyrjavelin
+	projectiletype = /obj/item/projectile/energy/eclipse_boss/tyrjavelin
 	loot_list = list(/obj/item/tool/wirecutters/hybrid/alien  = 10,
 		/obj/item/tool/wrench/hybrid/alien  = 10,
 		/obj/item/tool/crowbar/hybrid/alien  = 10,
@@ -44,7 +44,7 @@
 			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 3, 7), 1 SECOND, TIMER_DELETE_ME)
 			attackcycle = 0
 		if(3)
-			specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
+			specialattackprojectile = /obj/item/projectile/energy/eclipse_boss/tyrjavelin
 			addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 12, 1, 0.5 SECONDS), 1 SECOND, TIMER_DELETE_ME)
 			attackcycle = 0
 

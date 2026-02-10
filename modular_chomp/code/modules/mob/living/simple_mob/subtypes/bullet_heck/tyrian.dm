@@ -134,7 +134,7 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/shield_boss
 	name = "experiment 15"
 	desc = "A strange furball gaurded by a transparent barrier."
-	specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
+	specialattackprojectile = /obj/item/projectile/energy/eclipse_boss/tyrjavelin
 	health = 700
 	maxHealth = 700 //shield mechanic
 	icon_state = "UPshield_boss"
