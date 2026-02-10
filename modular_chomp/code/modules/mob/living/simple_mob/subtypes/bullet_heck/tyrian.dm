@@ -95,7 +95,7 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/sonic_boss
 	name = "experiment 10"
 	desc = "A strange furball, the air vibrating around it."
-	specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
+	specialattackprojectile = /obj/item/projectile/energy/eclipse_boss/tyrjavelin
 	icon_state = "sonic_boss"
 	icon_living = "sonic_boss"
 	projectiletype = /obj/item/projectile/knockback/slow
@@ -134,12 +134,12 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/shield_boss
 	name = "experiment 15"
 	desc = "A strange furball gaurded by a transparent barrier."
-	specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
+	specialattackprojectile = /obj/item/projectile/energy/eclipse_boss/tyrjavelin
 	health = 700
 	maxHealth = 700 //shield mechanic
 	icon_state = "UPshield_boss"
 	icon_living = "UPshield_boss"
-	projectiletype = /obj/item/projectile/energy/eclipse/tyrjavelin
+	projectiletype = /obj/item/projectile/energy/eclipse_boss/tyrjavelin
 	wreckage = /obj/item/prop/tyrlore/shield_boss
 	var/fullshield = 300
 	var/shieldrage = 300
@@ -234,7 +234,7 @@
 	icon_state = "naga_boss"
 	icon_living = "naga_boss"
 	wreckage = /obj/item/prop/tyrlore/gravity_boss
-	specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
+	specialattackprojectile = /obj/item/projectile/energy/eclipse_boss/tyrjavelin
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/naga_boss/do_special_attack(atom/A)
 	rng_cycle = rand(1,3)
