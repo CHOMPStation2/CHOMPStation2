@@ -11,8 +11,6 @@
 	#include "cryogaia_shuttle_defs.dm"
 	#include "cryogaia_shuttles.dm"
 	#include "cryogaia_telecomms.dm"
-	#include "elevator_areas.dm"
-	#include "service_elevator_things.dm"
 	#include "residential/_residential.dm"
 	#include "residential/residential_keys.dm"
 	#include "../offmap_vr/common_offmaps.dm"

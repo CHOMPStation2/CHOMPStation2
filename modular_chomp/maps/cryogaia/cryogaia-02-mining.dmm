@@ -2481,7 +2481,7 @@
 /turf/simulated/floor/plating,
 /area/outpost/research/disposal)
 "fZ" = (
-/obj/turbolift_map_holder/lumber/serviceelevator,
+/obj/turbolift_map_holder/cryogaia/lumber/serviceelevator,
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/cryogaia/outpost/elevator/scimining)
 "ga" = (

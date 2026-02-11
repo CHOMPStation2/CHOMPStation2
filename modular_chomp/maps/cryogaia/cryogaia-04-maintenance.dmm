@@ -34002,7 +34002,7 @@
 /turf/simulated/floor/grass,
 /area/civilian/atrium/lower)
 "rLg" = (
-/obj/turbolift_map_holder/lumber/medevator,
+/obj/turbolift_map_holder/cryogaia/lumber/medevator,
 /turf/simulated/floor/plating,
 /area/cryogaia/outpost/elevator/medbasement)
 "rLW" = (
