@@ -11,6 +11,13 @@
 "aac" = (
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/cryogaia/station/excursion_overhang)
+"aad" = (
+/obj/structure/transit_tube{
+	icon_state = "E-W-Pass";
+	dir = s
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "aae" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red{
@@ -2315,14 +2322,14 @@
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
 "aUW" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -23
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway)
@@ -3836,7 +3843,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/obj/structure/cable/orange{
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -4791,19 +4798,11 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable/hybrid{
-	RCon = 0;
-	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit, modified with bluespace technology to receive power from the Serenity, this thing is expensive to run.";
-	input_level = 0;
-	input_level_max = 0;
-	max_coils = 1;
-	name = "bluespace power storage unit";
-	output_level = 1500000;
-	output_level_max = 1500000;
-	recharge_rate = 1000000
-	},
 /obj/structure/cable{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable/hybrid/max_output{
+	name = "bluespace power storage unit"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/workshop)
@@ -5561,7 +5560,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "cjZ" = (
@@ -5639,8 +5637,6 @@
 /area/hallway/secondary/entry/docking_lounge)
 "ckU" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -6021,7 +6017,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -7620,8 +7615,6 @@
 /area/bridge/blueshield)
 "cYo" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
@@ -11588,8 +11581,6 @@
 /area/hallway/primary/central_one)
 "eGo" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -11894,8 +11885,6 @@
 /area/crew_quarters/meeting)
 "eLO" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -13075,8 +13064,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_waste)
@@ -15086,8 +15073,6 @@
 /area/bridge)
 "gaB" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -16182,8 +16167,6 @@
 /area/security/hangar)
 "guK" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -18616,7 +18599,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/button/remote/airlock{
@@ -20717,9 +20699,6 @@
 	name = "Privacy Shutters";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/pink{
 	dir = 4
 	},
@@ -21802,8 +21781,6 @@
 /area/engineering/engine_room)
 "iKJ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/generic,
@@ -21856,7 +21833,7 @@
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
 	},
-/obj/structure/cable/orange{
+/obj/structure/cable{
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
@@ -23262,8 +23239,6 @@
 /area/bridge)
 "jsc" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -23527,18 +23502,13 @@
 /area/maintenance/research_starboard)
 "jwU" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
-	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Core";
-	charge = 2e+006;
-	input_attempt = 1;
-	input_level = 100000;
-	output_level = 200000
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Core"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -23665,8 +23635,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -24519,9 +24487,6 @@
 	name = "Engineering Internal Airlock";
 	req_one_access = list(13)
 	},
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -24531,6 +24496,9 @@
 	pixel_x = -6;
 	pixel_y = -25;
 	req_one_access = list(10,24,52)
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway)
@@ -28184,15 +28152,10 @@
 /turf/simulated/floor,
 /area/maintenance/engineering)
 "lsQ" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Main";
-	charge = 1e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 500000;
-	output_level = 500000
-	},
 /obj/structure/cable,
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Main"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_smes)
 "ltq" = (
@@ -29761,13 +29724,13 @@
 /turf/simulated/floor/tiled/steel,
 /area/chapel/monastery)
 "lZr" = (
-/obj/structure/cable/orange{
-	icon_state = "2-8"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway)
 "lZO" = (
@@ -30063,9 +30026,6 @@
 /turf/simulated/wall/r_wall,
 /area/bridge)
 "mfQ" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
@@ -30074,6 +30034,9 @@
 	},
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
@@ -32098,10 +32061,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/orange{
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
 "mOE" = (
@@ -32410,7 +32373,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/cable/orange{
+/obj/structure/cable{
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
@@ -32893,7 +32856,6 @@
 	name_tag = "Engine Output"
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -34325,10 +34287,10 @@
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
 "nDS" = (
-/obj/structure/cable/orange{
+/obj/machinery/door/airlock/maintenance/engi,
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance/engi,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/workshop)
 "nEn" = (
@@ -35136,12 +35098,12 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
 "nVF" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway)
@@ -35617,15 +35579,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/airlock)
 "oga" = (
-/obj/structure/cable/orange{
-	icon_state = "1-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway)
@@ -39269,12 +39231,12 @@
 	},
 /area/crew_quarters/locker)
 "pBh" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway)
 "pBy" = (
@@ -40564,12 +40526,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/detectives_office)
-"qhg" = (
-/obj/structure/transit_tube{
-	dir = 7
-	},
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
-/area/borealis2/outdoors/grounds)
 "qho" = (
 /obj/structure/flora/log2,
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia{
@@ -44079,11 +44035,11 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
 "rCk" = (
@@ -44388,7 +44344,7 @@
 "rHN" = (
 /obj/structure/closet/secure_closet/bar,
 /obj/item/storage/secure/safe{
-	pixel_z = 30
+	pixel_y = 30
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/wood,
@@ -44625,9 +44581,6 @@
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/exterior)
 "rOn" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -44635,6 +44588,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway)
@@ -45295,8 +45251,6 @@
 /area/security/airlock)
 "sce" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -45470,8 +45424,6 @@
 /area/medical/cryo)
 "sfQ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/binary/pump,
@@ -47196,8 +47148,6 @@
 	req_access = list(10)
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -48780,7 +48730,7 @@
 	},
 /obj/effect/floor_decal/corner/yellow,
 /obj/effect/decal/cleanable/generic,
-/obj/structure/cable/orange{
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -49031,7 +48981,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/yellow,
-/obj/structure/cable/orange{
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -51415,11 +51365,11 @@
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway)
 "uJZ" = (
@@ -54641,11 +54591,11 @@
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
 	},
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
@@ -58925,19 +58875,12 @@
 /area/bridge_hallway)
 "xNr" = (
 /obj/structure/table/standard,
-/obj/structure/table/standard,
 /obj/item/stack/cable_coil,
 /obj/item/multitool,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
 /obj/machinery/atmospherics/pipe/simple/visible,
+/obj/item/cell/high/empty,
+/obj/item/cell/high/empty,
 /turf/simulated/floor/tiled/white,
 /area/rnd/phoronics)
 "xNt" = (
@@ -59274,7 +59217,6 @@
 /area/cryogaia/outpost/tower/southeast)
 "xTH" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/yellow,
@@ -73382,7 +73324,7 @@ dfQ
 cpw
 dCU
 uDf
-qhg
+lGm
 uDf
 uDf
 xol
@@ -73544,7 +73486,7 @@ dfQ
 cpw
 dCU
 uDf
-msE
+aad
 uDf
 uDf
 uDf
