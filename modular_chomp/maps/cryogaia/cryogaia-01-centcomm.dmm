@@ -663,9 +663,7 @@
 	name = "Cockpit";
 	req_access = list(109)
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/unsimulated/floor/bmarble,
 /area/centcom/evac)
 "cP" = (
 /turf/unsimulated/floor{
@@ -979,7 +977,7 @@
 /obj/machinery/door/airlock/maintenance_hatch{
 	req_access = list(101)
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/unsimulated/floor/bmarble,
 /area/centcom/evac)
 "et" = (
 /obj/structure/bed/chair,
@@ -1081,7 +1079,7 @@
 	name = "Recovery Shuttle Dock Cryostorage";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/unsimulated/floor/bmarble,
 /area/centcom/evac)
 "eR" = (
 /obj/effect/floor_decal/corner/green{
@@ -1107,7 +1105,7 @@
 	name = "Recovery Shuttle Dock 2";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/unsimulated/floor/bmarble,
 /area/centcom/evac)
 "eW" = (
 /obj/machinery/computer/shuttle_control{
@@ -1258,7 +1256,7 @@
 	name = "Recovery Shuttle Dock 5";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/unsimulated/floor/bmarble,
 /area/centcom/evac)
 "fW" = (
 /obj/structure/flora/ausbushes/ywflowers,
@@ -1469,7 +1467,7 @@
 	name = "Shuttle Hatch";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor,
+/turf/unsimulated/floor/bmarble,
 /area/shuttle/supply)
 "gY" = (
 /obj/structure/table/reinforced,
@@ -1621,15 +1619,6 @@
 	icon_state = "floor_red"
 	},
 /area/shuttle/arrival/pre_game)
-"hK" = (
-/obj/machinery/door/airlock/centcom{
-	name = "General Access";
-	req_access = list(101)
-	},
-/turf/unsimulated/floor{
-	icon_state = "lino"
-	},
-/area/tdome)
 "hL" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/green{
@@ -3091,15 +3080,6 @@
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/transport1/centcom)
-"ot" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	req_access = list(101)
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/shuttle.dmi';
-	icon_state = "floor2"
-	},
-/area/centcom/evac)
 "ou" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/shuttle/floor/red,
@@ -3386,7 +3366,7 @@
 	name = "Shuttle Hatch";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor,
+/turf/unsimulated/floor/bmarble,
 /area/shuttle/escape)
 "pL" = (
 /obj/machinery/computer/security,
@@ -3435,7 +3415,7 @@
 	name = "Recovery Shuttle Dock 4";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/unsimulated/floor/bmarble,
 /area/centcom/evac)
 "pW" = (
 /obj/item/storage/toolbox/mechanical,
@@ -3798,7 +3778,7 @@
 	name = "Recovery Shuttle Dock 01";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/unsimulated/floor/bmarble,
 /area/centcom/evac)
 "rK" = (
 /obj/effect/floor_decal/carpet{
@@ -4013,7 +3993,7 @@
 	name = "Shuttle Hatch";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/plating,
+/turf/unsimulated/floor/bmarble,
 /area/shuttle/supply)
 "sI" = (
 /turf/unsimulated/floor{
@@ -4758,10 +4738,7 @@
 /area/tdome/tdomeadmin)
 "vJ" = (
 /obj/machinery/door/unpowered/shuttle,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/shuttle.dmi';
-	icon_state = "floor"
-	},
+/turf/unsimulated/floor/bmarble,
 /area/centcom/tram)
 "vL" = (
 /obj/structure/bed/chair{
@@ -5094,7 +5071,7 @@
 	name = "Recovery Shuttle Dock 02";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/unsimulated/floor/bmarble,
 /area/centcom/evac)
 "xo" = (
 /turf/simulated/shuttle/floor/white,
@@ -6135,7 +6112,7 @@
 	name = "Recovery Shuttle Dock 1";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/unsimulated/floor/bmarble,
 /area/centcom/evac)
 "Ca" = (
 /obj/machinery/computer/pod{
@@ -6494,7 +6471,7 @@
 	name = "Recovery Shuttle Dock 6";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/unsimulated/floor/bmarble,
 /area/centcom/evac)
 "DE" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -7703,7 +7680,7 @@
 	name = "Recovery Shuttle Dock 3";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/unsimulated/floor/bmarble,
 /area/centcom/evac)
 "JI" = (
 /obj/structure/table/rack,
@@ -7872,7 +7849,7 @@
 	name = "Shuttle Hatch";
 	req_access = list(13)
 	},
-/turf/simulated/shuttle/plating,
+/turf/unsimulated/floor/bmarble,
 /area/shuttle/supply)
 "Km" = (
 /obj/machinery/gibber,
@@ -8233,7 +8210,7 @@
 /area/shuttle/arrival/pre_game)
 "LV" = (
 /obj/machinery/door/airlock/external,
-/turf/simulated/shuttle/floor/yellow,
+/turf/unsimulated/floor/bmarble,
 /area/centcom/evac)
 "LW" = (
 /obj/machinery/shower{
@@ -8677,12 +8654,7 @@
 	},
 /area/centcom/security)
 "Oo" = (
-/obj/structure/showcase{
-	desc = "So that's how the shuttle moves on its own.";
-	icon = 'icons/mob/AI.dmi';
-	icon_state = "ai-red";
-	name = "Arrivals Announcement Computer"
-	},
+/obj/structure/showcase/AI,
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
@@ -10184,10 +10156,7 @@
 	name = "Shuttle Hatch";
 	req_access = list(13)
 	},
-/turf/unsimulated/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
+/turf/unsimulated/floor/bmarble,
 /area/shuttle/transport1/centcom)
 "UB" = (
 /obj/machinery/computer/crew,
@@ -19485,7 +19454,7 @@ Sn
 Sn
 Sn
 Lb
-ot
+es
 Sn
 Sn
 Sn
@@ -25458,7 +25427,7 @@ Xu
 Xu
 Xu
 Xu
-hK
+RU
 Xu
 Xu
 aZ
@@ -28050,7 +28019,7 @@ Xu
 Xu
 Xu
 Xu
-hK
+RU
 Xu
 Xu
 aZ

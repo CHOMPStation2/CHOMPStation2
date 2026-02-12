@@ -9890,12 +9890,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/mine/explored/lower_rock)
-"fQS" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/maintenance/lowfloor3)
 "fQW" = (
 /obj/structure/stairs/spawner/south,
 /turf/simulated/floor/tiled/techfloor,
@@ -19235,12 +19229,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/maintenance/lowfloor3)
-"kya" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/maintenance/medical_lower)
 "kyh" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -46646,7 +46634,7 @@ uaP
 uaP
 uaP
 uaP
-fQS
+aaa
 uaP
 dEN
 xSw
@@ -54411,7 +54399,7 @@ kBN
 gOL
 kBN
 rXv
-kya
+wCH
 ttU
 lHO
 lHO
