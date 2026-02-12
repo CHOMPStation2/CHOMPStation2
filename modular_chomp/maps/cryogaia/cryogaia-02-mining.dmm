@@ -1041,7 +1041,9 @@
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/hallway)
 "cG" = (
-/obj/machinery/disposal/deliveryChute,
+/obj/machinery/disposal/deliveryChute{
+	throw_range = 1
+	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -8042,7 +8044,6 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/south_hall)
 "uL" = (
@@ -10060,7 +10061,7 @@
 /area/outpost/mining_main/west_hall)
 "zZ" = (
 /obj/machinery/conveyor{
-	dir = 3;
+	dir = 4;
 	id = "anolongstorage"
 	},
 /turf/simulated/floor/plating{
@@ -16707,11 +16708,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/airlock)
-"Qq" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology)
 "Qr" = (
 /turf/simulated/floor/tiled,
 /area/maintenance/shelter2)
@@ -36377,7 +36373,7 @@ ta
 ta
 sp
 Ln
-Qq
+US
 ta
 hC
 Bs

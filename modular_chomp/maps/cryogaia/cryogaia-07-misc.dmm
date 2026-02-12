@@ -97,18 +97,6 @@
 	name = "plating"
 	},
 /area/wizard_station)
-"aD" = (
-/obj/structure/table/standard,
-/obj/item/storage/box/glasses/square{
-	pixel_x = 1;
-	pixel_y = 4
-	},
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
 "aF" = (
 /obj/machinery/door/airlock/hatch{
 	frequency = 1331;
@@ -181,14 +169,6 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
-"aW" = (
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
 "aX" = (
 /obj/effect/overlay/palmtree_l,
 /obj/effect/overlay/coconut,
@@ -199,9 +179,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "ba" = (
 /obj/machinery/door/airlock/hatch{
 	frequency = 1331;
@@ -249,9 +227,7 @@
 	icon_state = "cult";
 	name = "plating"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "bo" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -264,9 +240,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/plating,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "bp" = (
 /obj/structure/table/woodentable/holotable,
 /turf/simulated/floor/holofloor/wood,
@@ -290,9 +264,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/plating,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "bz" = (
 /turf/simulated/shuttle/wall/alien/blue,
 /area/unknown/dorm6)
@@ -474,9 +446,7 @@
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "cm" = (
 /obj/structure/bed/chair/holochair{
 	dir = 8
@@ -791,9 +761,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "dS" = (
 /obj/structure/holostool,
 /obj/effect/floor_decal/carpet{
@@ -1106,13 +1074,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_emptycourt)
-"fu" = (
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
 "fx" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 10
@@ -1193,9 +1154,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "fH" = (
 /obj/structure/prop/alien/power,
 /turf/simulated/shuttle/floor/alienplating,
@@ -1218,9 +1177,7 @@
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "gb" = (
 /obj/item/storage/firstaid/regular{
 	pixel_x = -2;
@@ -1288,9 +1245,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "gm" = (
 /obj/machinery/sleeper/survival_pod,
 /turf/simulated/shuttle/floor/alien,
@@ -1397,9 +1352,7 @@
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "gK" = (
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/trade/centcom)
@@ -1431,9 +1384,7 @@
 /turf/unsimulated/floor{
 	icon_state = "freezerfloor"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "gU" = (
 /obj/structure/prop/alien/dispenser,
 /turf/simulated/shuttle/floor/alien,
@@ -1520,9 +1471,7 @@
 /turf/unsimulated/floor{
 	icon_state = "freezerfloor"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "hs" = (
 /obj/machinery/computer/communications,
 /turf/unsimulated/floor{
@@ -1557,13 +1506,6 @@
 	dir = 8
 	},
 /area/holodeck/source_meetinghall)
-"hE" = (
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
 "hF" = (
 /obj/structure/table/survival_pod,
 /turf/simulated/shuttle/floor/alien,
@@ -1585,9 +1527,7 @@
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "hR" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/clothing/under/cheongsam,
@@ -1688,9 +1628,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "ik" = (
 /obj/machinery/door/airlock/alien/blue/public,
 /turf/simulated/shuttle/floor/alienplating,
@@ -1717,9 +1655,7 @@
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "is" = (
 /obj/structure/signpost,
 /turf/unsimulated/beach/sand,
@@ -1835,9 +1771,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "iV" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/button/remote/blast_door{
@@ -2096,9 +2030,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "kq" = (
 /obj/structure/table/steel_reinforced,
 /obj/random/action_figure,
@@ -2274,9 +2206,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "lj" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/captain,
@@ -2659,9 +2589,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "nb" = (
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/shuttle/floor/alien,
@@ -2717,9 +2645,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "ny" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
@@ -2859,9 +2785,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "op" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 10
@@ -2915,9 +2839,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "oG" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/coin/uranium,
@@ -3076,9 +2998,7 @@
 /area/shuttle/skipjack)
 "pM" = (
 /turf/simulated/mineral,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "pP" = (
 /obj/structure/holostool,
 /turf/simulated/floor/holofloor/tiled,
@@ -3272,9 +3192,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "qF" = (
 /obj/machinery/sleep_console,
 /turf/simulated/shuttle/floor/white,
@@ -3443,9 +3361,7 @@
 	dir = 4
 	},
 /turf/space,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "ru" = (
 /obj/item/bedsheet/green,
 /obj/machinery/light/small{
@@ -3570,9 +3486,7 @@
 /turf/unsimulated/floor{
 	icon_state = "freezerfloor"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "sb" = (
 /obj/structure/sign/scenery/map/left{
 	pixel_y = 32
@@ -3700,9 +3614,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership/elite_squad)
-"sv" = (
-/turf/unsimulated/wall,
-/area)
 "sw" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/hopdouble,
@@ -3774,9 +3685,7 @@
 	icon_state = "cult";
 	name = "plating"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "sO" = (
 /obj/effect/landmark{
 	name = "Nuclear-Code"
@@ -3815,15 +3724,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"ta" = (
-/obj/structure/table/standard,
-/obj/machinery/chemical_dispenser/bar_soft/full,
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
 "tb" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -3843,9 +3743,7 @@
 	dir = 1;
 	icon_state = "vault"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "tm" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -3918,9 +3816,7 @@
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "tK" = (
 /obj/structure/table/rack,
 /obj/item/rig/merc/empty,
@@ -4259,9 +4155,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "vs" = (
 /obj/structure/table/woodentable/holotable,
 /turf/simulated/floor/holofloor/carpet,
@@ -4307,9 +4201,7 @@
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "vG" = (
 /obj/structure/table/standard,
 /obj/item/flashlight/lamp{
@@ -4572,16 +4464,6 @@
 /obj/structure/table/survival_pod,
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm6)
-"wR" = (
-/obj/structure/urinal{
-	pixel_y = 32
-	},
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
 "wS" = (
 /turf/simulated/floor/holofloor/wmarble,
 /area/holodeck/source_chess)
@@ -4591,9 +4473,7 @@
 	icon_state = "cult";
 	name = "plating"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "wX" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -4695,9 +4575,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "xt" = (
 /obj/structure/sign/scenery/map/left{
 	pixel_y = 32
@@ -4712,9 +4590,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "xA" = (
 /turf/unsimulated/wall,
 /area/prison/solitary)
@@ -4792,9 +4668,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "xS" = (
 /obj/structure/table/standard,
 /obj/machinery/chemical_dispenser/bar_soft/full,
@@ -4836,9 +4710,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "yg" = (
 /obj/item/stool/padded,
 /turf/unsimulated/floor{
@@ -4856,9 +4728,7 @@
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "yo" = (
 /obj/structure/closet/hydrant{
 	pixel_y = 32
@@ -4932,12 +4802,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_thunderdomecourt)
-"yO" = (
-/turf/unsimulated/wall{
-	icon = 'icons/misc/title.dmi';
-	icon_state = "title"
-	},
-/area)
 "yR" = (
 /obj/machinery/mech_recharger,
 /turf/unsimulated/floor{
@@ -5153,9 +5017,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "zX" = (
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/shuttle/floor/alien,
@@ -5467,9 +5329,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "BN" = (
 /obj/machinery/door/airlock/external{
 	req_access = list(150)
@@ -5555,16 +5415,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
-"Cj" = (
-/obj/effect/landmark/start,
-/turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
-	},
-/area)
+/area/syndicate_mothership/trader)
 "Cm" = (
 /obj/effect/floor_decal/carpet{
 	dir = 8
@@ -5603,9 +5454,7 @@
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "Cu" = (
 /obj/item/storage/box/donkpockets{
 	pixel_x = 3;
@@ -5728,9 +5577,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "CX" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Barracks"
@@ -5821,9 +5668,7 @@
 	icon_state = "cult";
 	name = "plating"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Dt" = (
 /obj/structure/table/rack,
 /obj/item/flashlight/maglight,
@@ -5860,9 +5705,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "DE" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -5906,9 +5749,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "DJ" = (
 /obj/machinery/door/window{
 	dir = 1;
@@ -5936,9 +5777,7 @@
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "DQ" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -6131,9 +5970,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "EK" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -6148,9 +5985,7 @@
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "EM" = (
 /obj/structure/table/rack,
 /obj/item/clothing/shoes/magboots,
@@ -6271,9 +6106,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Fy" = (
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/shuttle/floor/alien,
@@ -6478,9 +6311,7 @@
 	icon_state = "cult";
 	name = "plating"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "GJ" = (
 /obj/machinery/smartfridge/survival_pod,
 /obj/item/storage/mre/menu11,
@@ -6838,9 +6669,7 @@
 	icon_state = "cult";
 	name = "plating"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "HS" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
@@ -6853,9 +6682,7 @@
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "HZ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -6869,9 +6696,7 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/plating,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "Ic" = (
 /obj/structure/bed/chair/holochair,
 /turf/simulated/floor/holofloor/wood,
@@ -7077,9 +6902,7 @@
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Jl" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -7092,9 +6915,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "Jp" = (
 /obj/machinery/door/airlock/external{
 	name = "Shuttle Airlock";
@@ -7164,9 +6985,7 @@
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "JJ" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/rig/internalaffairs,
@@ -7243,9 +7062,7 @@
 /area/wizard_station)
 "JY" = (
 /turf/unsimulated/wall,
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "Kb" = (
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = -32
@@ -7257,9 +7074,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "Kg" = (
 /obj/structure/window/reinforced/holowindow{
 	dir = 1
@@ -7368,19 +7183,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
-"KJ" = (
-/obj/machinery/shower{
-	dir = 1
-	},
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership/trader)
 "KL" = (
 /obj/structure/table/glass,
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -7709,9 +7512,7 @@
 	icon_state = "propulsion_r"
 	},
 /turf/space,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "My" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -7970,9 +7771,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "NL" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -7994,9 +7793,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "NP" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -8185,9 +7982,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "OO" = (
 /obj/structure/table/survival_pod,
 /turf/simulated/shuttle/floor/alien,
@@ -8202,9 +7997,7 @@
 	dir = 1;
 	icon_state = "vault"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "OQ" = (
 /obj/structure/window/reinforced/holowindow/disappearing,
 /obj/effect/floor_decal/corner/red/full,
@@ -8357,9 +8150,7 @@
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "Pv" = (
 /obj/structure/flora/grass/brown,
 /turf/unsimulated/floor{
@@ -8410,9 +8201,7 @@
 	icon_state = "cult";
 	name = "plating"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "PJ" = (
 /obj/structure/closet/alien,
 /turf/simulated/shuttle/floor/alien,
@@ -8427,9 +8216,7 @@
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "PN" = (
 /turf/simulated/shuttle/floor/white,
 /area/syndicate_mothership)
@@ -8478,9 +8265,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Qa" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8
@@ -8834,17 +8619,7 @@
 /turf/simulated/shuttle/wall{
 	icon_state = "diagonalWall3"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
-"RL" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/shuttle/ninja)
 "RQ" = (
 /turf/unsimulated/floor{
 	dir = 8;
@@ -8882,9 +8657,7 @@
 /area/holodeck/source_courtroom)
 "RZ" = (
 /turf/simulated/shuttle/wall,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "Sa" = (
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm5)
@@ -8923,9 +8696,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Ss" = (
 /obj/item/pizzabox/meat,
 /turf/simulated/shuttle/floor/red,
@@ -8969,23 +8740,6 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/mercenary)
-"SG" = (
-/obj/machinery/door/airlock/external{
-	req_access = list(150)
-	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
-"SI" = (
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
-	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
 "SJ" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -9092,9 +8846,7 @@
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Ti" = (
 /obj/effect/floor_decal/corner/blue/full,
 /turf/simulated/floor/holofloor/tiled,
@@ -9234,9 +8986,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "TV" = (
 /obj/effect/landmark{
 	name = "Holocarp Spawn Random"
@@ -9248,9 +8998,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "TY" = (
 /obj/machinery/teleport/station,
 /turf/simulated/shuttle/floor/alienplating,
@@ -9270,9 +9018,7 @@
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Ud" = (
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = 28
@@ -9412,9 +9158,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "Vg" = (
 /obj/machinery/teleport/station,
 /turf/unsimulated/floor{
@@ -9448,9 +9192,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "Vo" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -9473,9 +9215,7 @@
 "Vr" = (
 /obj/structure/shuttle/engine/propulsion,
 /turf/space,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "Vv" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/largecrate/hoverpod,
@@ -9534,9 +9274,7 @@
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "VO" = (
 /obj/structure/toilet,
 /turf/simulated/shuttle/floor/alienplating,
@@ -9560,11 +9298,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_boxingcourt)
-"VT" = (
-/turf/unsimulated/wall,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
 "VU" = (
 /obj/machinery/newscaster{
 	layer = 3.3;
@@ -9732,9 +9465,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/plating,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "WY" = (
 /obj/item/bedsheet/rd,
 /obj/structure/bed/padded,
@@ -9778,9 +9509,7 @@
 	icon_state = "propulsion_l"
 	},
 /turf/space,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "Xk" = (
 /obj/machinery/vending/medical{
 	pixel_y = -32;
@@ -9855,17 +9584,13 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "XH" = (
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "XI" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/stock_parts/matter_bin/super,
@@ -9891,9 +9616,7 @@
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "XO" = (
 /turf/unsimulated/beach/water,
 /area/beach)
@@ -9925,9 +9648,7 @@
 	dir = 8;
 	icon_state = "diagonalWall3"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/shuttle/ninja)
 "Yg" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/holofloor/grass,
@@ -9963,9 +9684,7 @@
 	dir = 8
 	},
 /turf/space,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Yq" = (
 /obj/machinery/button/remote/blast_door{
 	id = "syndieshutters_infirmary";
@@ -10168,9 +9887,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Zg" = (
 /obj/machinery/atmospherics/pipe/tank/air{
 	start_pressure = 740.5
@@ -10181,9 +9898,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "Zj" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
@@ -10201,9 +9916,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Zp" = (
 /obj/structure/window/reinforced/holowindow,
 /obj/machinery/door/window/holowindoor{
@@ -10284,9 +9997,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership/trader)
 "ZF" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/warning{
@@ -10316,9 +10027,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "ZQ" = (
 /obj/structure/table/holotable,
 /obj/machinery/readybutton,
@@ -10353,21 +10062,21 @@
 /area/holodeck/source_thunderdomecourt)
 
 (1,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-yO
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -10515,21 +10224,21 @@ qp
 qp
 "}
 (2,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -10677,21 +10386,21 @@ HM
 qp
 "}
 (3,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -10839,21 +10548,21 @@ HM
 qp
 "}
 (4,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -11001,21 +10710,21 @@ HM
 qp
 "}
 (5,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -11163,21 +10872,21 @@ HM
 qp
 "}
 (6,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -11325,21 +11034,21 @@ HM
 qp
 "}
 (7,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -11402,7 +11111,7 @@ vR
 vR
 vR
 pM
-fu
+Rg
 Tf
 Tf
 pM
@@ -11487,21 +11196,21 @@ HM
 qp
 "}
 (8,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-Cj
-sv
-sv
-sv
-sv
-sv
-sv
-sv
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -11649,21 +11358,21 @@ HM
 qp
 "}
 (9,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -11811,21 +11520,6 @@ HM
 qp
 "}
 (10,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
 zR
 zR
 zR
@@ -11835,11 +11529,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -11887,7 +11596,7 @@ Vh
 vR
 vR
 pM
-fu
+Rg
 Tf
 pM
 pM
@@ -11973,21 +11682,6 @@ HM
 qp
 "}
 (11,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
 zR
 zR
 zR
@@ -11997,11 +11691,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -12048,9 +11757,9 @@ Iq
 Vh
 vR
 vR
-VT
-fu
-fu
+yB
+Rg
+Rg
 pM
 pM
 vR
@@ -12135,21 +11844,6 @@ HM
 qp
 "}
 (12,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
 zR
 zR
 zR
@@ -12159,11 +11853,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -12207,19 +11916,19 @@ cN
 Vh
 zR
 Iq
-VT
+yB
 pM
 pM
-VT
-fu
-fu
+yB
+Rg
+Rg
 pM
 pM
 pM
 pM
 pM
-VT
-VT
+yB
+yB
 pM
 zR
 zR
@@ -12297,21 +12006,6 @@ HM
 qp
 "}
 (13,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
 zR
 zR
 zR
@@ -12321,11 +12015,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -12369,17 +12078,17 @@ cN
 Vh
 zR
 Iq
-VT
+yB
 pM
 pM
-VT
-fu
-fu
-VT
+yB
+Rg
+Rg
+yB
 pM
-VT
+yB
 hr
-SI
+Kz
 gT
 gT
 pM
@@ -12459,21 +12168,6 @@ HM
 qp
 "}
 (14,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
 zR
 zR
 zR
@@ -12483,11 +12177,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -12531,19 +12240,19 @@ cN
 Vh
 zR
 Iq
-VT
+yB
 pM
 pM
-VT
-fu
-fu
-VT
+yB
+Rg
+Rg
+yB
 pM
-VT
-wR
+yB
+mI
 rZ
-SI
-KJ
+Kz
+VZ
 pM
 vR
 vR
@@ -12621,21 +12330,6 @@ HM
 qp
 "}
 (15,1,1) = {"
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
-sv
 zR
 zR
 zR
@@ -12645,11 +12339,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -12693,24 +12402,24 @@ cN
 Vh
 zR
 Iq
-VT
+yB
 pM
 pM
 pM
-fu
-fu
-VT
+Rg
+Rg
+yB
 pM
-VT
-wR
-SI
-SI
-VT
-VT
-VT
-VT
-VT
-VT
+yB
+mI
+Kz
+Kz
+yB
+yB
+yB
+yB
+yB
+yB
 rs
 rs
 rs
@@ -12792,26 +12501,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -12855,25 +12564,25 @@ cN
 Vh
 zR
 Iq
-VT
+yB
 pM
 pM
-VT
-fu
-fu
-VT
-VT
-VT
-VT
+yB
+Rg
+Rg
+yB
+yB
+yB
+yB
 NO
 NO
-VT
-fu
-fu
-fu
-fu
-fu
-SG
+yB
+Rg
+Rg
+Rg
+Rg
+Rg
+ax
 Ft
 Ft
 BN
@@ -12945,11 +12654,6 @@ HM
 qp
 "}
 (17,1,1) = {"
-xA
-xA
-xA
-xA
-xA
 zR
 zR
 zR
@@ -12959,21 +12663,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -13017,25 +12726,25 @@ cN
 Vh
 zR
 Iq
-VT
-VT
-VT
-VT
-fu
-fu
+yB
+yB
+yB
+yB
+Rg
+Rg
 NO
-fu
+Rg
 yf
-VT
-fu
-fu
-VT
-fu
+yB
+Rg
+Rg
+yB
+Rg
 nw
-fu
-fu
-fu
-SG
+Rg
+Rg
+Rg
+ax
 TQ
 TQ
 BN
@@ -13107,11 +12816,6 @@ HM
 qp
 "}
 (18,1,1) = {"
-xA
-Eu
-xA
-Eu
-xA
 zR
 zR
 zR
@@ -13121,21 +12825,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -13179,24 +12888,24 @@ cN
 Vh
 zR
 Iq
-VT
+yB
 nw
 So
-VT
-fu
-fu
-VT
-fu
-fu
-VT
-fu
-fu
-VT
-fu
-fu
-fu
-VT
-VT
+yB
+Rg
+Rg
+yB
+Rg
+Rg
+yB
+Rg
+Rg
+yB
+Rg
+Rg
+Rg
+yB
+yB
 Yp
 Yp
 Yp
@@ -13269,11 +12978,6 @@ HM
 qp
 "}
 (19,1,1) = {"
-xA
-ua
-xA
-ua
-xA
 zR
 zR
 zR
@@ -13283,21 +12987,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -13341,22 +13050,22 @@ cN
 Vh
 zR
 Iq
-VT
-fu
-fu
-VT
-fu
-fu
-VT
+yB
+Rg
+Rg
+yB
+Rg
+Rg
+yB
 So
 nw
-VT
-fu
-fu
-VT
-fu
-fu
-fu
+yB
+Rg
+Rg
+yB
+Rg
+Rg
+Rg
 ij
 zR
 zR
@@ -13431,11 +13140,6 @@ HM
 qp
 "}
 (20,1,1) = {"
-xA
-xA
-xA
-xA
-xA
 zR
 zR
 zR
@@ -13445,21 +13149,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+tw
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -13503,22 +13212,22 @@ cN
 Vh
 zR
 Iq
-VT
+yB
 fG
-fu
+Rg
 NO
-fu
-fu
-VT
-VT
-VT
-VT
-fu
-fu
-VT
-fu
-fu
-fu
+Rg
+Rg
+yB
+yB
+yB
+yB
+Rg
+Rg
+yB
+Rg
+Rg
+Rg
 Zf
 zR
 zR
@@ -13593,11 +13302,6 @@ HM
 qp
 "}
 (21,1,1) = {"
-xA
-Eu
-xA
-Eu
-xA
 zR
 zR
 zR
@@ -13607,21 +13311,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -13665,22 +13374,22 @@ cN
 Vh
 zR
 Iq
-VT
-VT
-VT
-VT
-fu
-fu
-VT
+yB
+yB
+yB
+yB
+Rg
+Rg
+yB
 XA
 yf
-VT
-fu
-fu
-VT
-fu
-fu
-fu
+yB
+Rg
+Rg
+yB
+Rg
+Rg
+Rg
 PX
 zR
 zR
@@ -13755,11 +13464,6 @@ HM
 qp
 "}
 (22,1,1) = {"
-xA
-ua
-xA
-ua
-xA
 zR
 zR
 zR
@@ -13769,21 +13473,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -13827,24 +13536,24 @@ cN
 Vh
 zR
 Iq
-VT
+yB
 pM
 pM
-VT
-fu
-fu
+yB
+Rg
+Rg
 NO
-fu
+Rg
 nw
-VT
-fu
-fu
-VT
-VT
-VT
+yB
+Rg
+Rg
+yB
+yB
+yB
 NO
-VT
-VT
+yB
+yB
 zR
 zR
 zR
@@ -13917,11 +13626,6 @@ HM
 qp
 "}
 (23,1,1) = {"
-xA
-xA
-xA
-xA
-xA
 zR
 zR
 zR
@@ -13931,21 +13635,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -13989,24 +13698,24 @@ Vh
 Vh
 zR
 Iq
-VT
+yB
 pM
 pM
-VT
-fu
-fu
-VT
-VT
-VT
-VT
-fu
-fu
-VT
+yB
+Rg
+Rg
+yB
+yB
+yB
+yB
+Rg
+Rg
+yB
 Ds
-aW
-aW
-aW
-VT
+dB
+dB
+dB
+yB
 zR
 zR
 zR
@@ -14079,11 +13788,6 @@ HM
 qp
 "}
 (24,1,1) = {"
-xA
-Eu
-xA
-Eu
-xA
 zR
 zR
 zR
@@ -14093,21 +13797,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -14151,22 +13860,22 @@ zR
 zR
 zR
 Iq
-VT
+yB
 pM
 pM
-VT
-fu
-fu
-fu
-fu
-fu
-fu
-fu
-fu
-VT
-aW
-aW
-aW
+yB
+Rg
+Rg
+Rg
+Rg
+Rg
+Rg
+Rg
+Rg
+yB
+dB
+dB
+dB
 PH
 ij
 zR
@@ -14241,11 +13950,6 @@ HM
 qp
 "}
 (25,1,1) = {"
-xA
-ua
-xA
-ua
-xA
 zR
 zR
 zR
@@ -14255,21 +13959,26 @@ zR
 zR
 zR
 zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
-zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -14313,20 +14022,20 @@ zR
 zR
 zR
 Iq
-VT
+yB
 pM
 pM
-VT
-fu
-fu
-fu
-fu
-fu
-fu
-fu
-fu
+yB
+Rg
+Rg
+Rg
+Rg
+Rg
+Rg
+Rg
+Rg
 NO
-aW
+dB
 bl
 sN
 wV
@@ -14403,11 +14112,6 @@ qp
 qp
 "}
 (26,1,1) = {"
-xA
-xA
-xA
-xA
-xA
 zR
 zR
 zR
@@ -14417,28 +14121,33 @@ zR
 zR
 zR
 zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -14475,23 +14184,23 @@ zR
 zR
 zR
 Iq
-VT
+yB
 pM
 pM
-VT
-fu
-fu
-fu
-fu
-fu
-fu
-fu
-fu
-VT
-aW
-aW
-aW
-aW
+yB
+Rg
+Rg
+Rg
+Rg
+Rg
+Rg
+Rg
+Rg
+yB
+dB
+dB
+dB
+dB
 PX
 zR
 zR
@@ -14565,11 +14274,6 @@ zR
 zR
 "}
 (27,1,1) = {"
-xA
-Eu
-xA
-Eu
-xA
 zR
 zR
 zR
@@ -14579,28 +14283,33 @@ zR
 zR
 zR
 zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -14637,24 +14346,24 @@ zR
 zR
 zR
 Iq
-VT
+yB
 pM
 pM
-VT
-VT
-VT
+yB
+yB
+yB
 NO
 NO
-VT
-VT
-VT
-VT
-VT
+yB
+yB
+yB
+yB
+yB
 HR
-aW
-aW
+dB
+dB
 GI
-VT
+yB
 zR
 zR
 zR
@@ -14727,11 +14436,6 @@ zR
 zR
 "}
 (28,1,1) = {"
-xA
-ua
-xA
-ua
-xA
 zR
 zR
 zR
@@ -14741,28 +14445,33 @@ zR
 zR
 zR
 zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -14799,24 +14508,24 @@ zR
 zR
 zR
 Iq
-VT
+yB
 pM
 pM
 pM
 pM
 NJ
-hE
-hE
-hE
-hE
+SP
+SP
+SP
+SP
 Zm
 pM
-VT
-VT
-VT
+yB
+yB
+yB
 NO
-VT
-VT
+yB
+yB
 zR
 zR
 zR
@@ -14889,11 +14598,6 @@ zR
 zR
 "}
 (29,1,1) = {"
-xA
-xA
-xA
-xA
-xA
 zR
 zR
 zR
@@ -14903,28 +14607,33 @@ zR
 zR
 zR
 zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -14961,22 +14670,22 @@ zR
 zR
 zR
 Iq
-VT
+yB
 pM
 pM
 pM
 pM
-aD
-ta
+UR
+xS
 DG
-hE
-hE
+SP
+SP
 xQ
 pM
-VT
-fu
-fu
-fu
+yB
+Rg
+Rg
+Rg
 ij
 zR
 zR
@@ -15060,6 +14769,26 @@ zR
 zR
 zR
 zR
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
+EN
 zR
 zR
 zR
@@ -15067,26 +14796,6 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
 zR
 zR
 zR
@@ -15123,7 +14832,7 @@ zR
 zR
 zR
 Iq
-VT
+yB
 pM
 pM
 pM
@@ -15131,14 +14840,14 @@ pM
 pM
 pM
 pM
-hE
-hE
+SP
+SP
 ZP
 pM
-VT
-fu
-fu
-fu
+yB
+Rg
+Rg
+Rg
 Zf
 zR
 zR
@@ -15229,26 +14938,26 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -15285,7 +14994,7 @@ zR
 zR
 zR
 Iq
-VT
+yB
 pM
 pM
 pM
@@ -15294,13 +15003,13 @@ pM
 pM
 pM
 OL
-RL
-VT
+iX
+yB
 pM
-VT
-fu
-fu
-fu
+yB
+Rg
+Rg
+Rg
 PX
 zR
 zR
@@ -15391,26 +15100,26 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -15447,24 +15156,24 @@ zR
 zR
 zR
 Iq
-VT
+yB
 pM
 pM
 pM
 pM
 pM
 pM
-VT
-VT
-VT
-VT
+yB
+yB
+yB
+yB
 pM
-VT
-fu
-fu
-fu
-VT
-VT
+yB
+Rg
+Rg
+Rg
+yB
+yB
 rs
 rs
 rs
@@ -15553,26 +15262,26 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -15621,13 +15330,13 @@ vR
 vR
 vR
 vR
-VT
-fu
+yB
+Rg
 nw
-fu
-fu
-fu
-SG
+Rg
+Rg
+Rg
+ax
 Ft
 Ft
 BN
@@ -15715,26 +15424,26 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -15783,13 +15492,13 @@ vR
 vR
 vR
 vR
-VT
-fu
-fu
-fu
-fu
-fu
-SG
+yB
+Rg
+Rg
+Rg
+Rg
+Rg
+ax
 TQ
 TQ
 BN
@@ -15877,26 +15586,26 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -15945,12 +15654,12 @@ Vh
 Vh
 Vh
 Vh
-VT
-VT
-VT
-VT
-VT
-VT
+yB
+yB
+yB
+yB
+yB
+yB
 Yp
 Yp
 Yp
@@ -16039,26 +15748,26 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-tw
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -16201,26 +15910,26 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -16363,26 +16072,26 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -16525,26 +16234,26 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -16687,26 +16396,26 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -16833,6 +16542,11 @@ Tw
 Tw
 "}
 (41,1,1) = {"
+xA
+xA
+xA
+xA
+xA
 zR
 zR
 zR
@@ -16849,26 +16563,21 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -16995,6 +16704,11 @@ Qf
 Tw
 "}
 (42,1,1) = {"
+xA
+Eu
+xA
+Eu
+xA
 zR
 zR
 zR
@@ -17011,26 +16725,21 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -17157,6 +16866,11 @@ Qf
 Tw
 "}
 (43,1,1) = {"
+xA
+ua
+xA
+ua
+xA
 zR
 zR
 zR
@@ -17173,26 +16887,21 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -17319,6 +17028,11 @@ Qf
 Tw
 "}
 (44,1,1) = {"
+xA
+xA
+xA
+xA
+xA
 zR
 zR
 zR
@@ -17335,26 +17049,21 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -17481,6 +17190,11 @@ Qf
 Tw
 "}
 (45,1,1) = {"
+xA
+Eu
+xA
+Eu
+xA
 zR
 zR
 zR
@@ -17497,26 +17211,21 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -17643,6 +17352,11 @@ Qf
 Tw
 "}
 (46,1,1) = {"
+xA
+ua
+xA
+ua
+xA
 zR
 zR
 zR
@@ -17659,26 +17373,21 @@ zR
 zR
 zR
 zR
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
-EN
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 zR
 zR
 zR
@@ -17805,11 +17514,11 @@ Qf
 Tw
 "}
 (47,1,1) = {"
-zR
-zR
-zR
-zR
-zR
+xA
+xA
+xA
+xA
+xA
 zR
 zR
 zR
@@ -17967,11 +17676,11 @@ Qf
 Tw
 "}
 (48,1,1) = {"
-zR
-zR
-zR
-zR
-zR
+xA
+Eu
+xA
+Eu
+xA
 zR
 zR
 zR
@@ -18129,11 +17838,11 @@ Qf
 Tw
 "}
 (49,1,1) = {"
-zR
-zR
-zR
-zR
-zR
+xA
+ua
+xA
+ua
+xA
 zR
 zR
 zR
@@ -18291,11 +18000,11 @@ Qf
 Tw
 "}
 (50,1,1) = {"
-zR
-zR
-zR
-zR
-zR
+xA
+xA
+xA
+xA
+xA
 zR
 zR
 zR
@@ -18453,11 +18162,11 @@ Qf
 Tw
 "}
 (51,1,1) = {"
-zR
-zR
-zR
-zR
-zR
+xA
+Eu
+xA
+Eu
+xA
 zR
 zR
 zR
@@ -18615,11 +18324,11 @@ Qf
 Tw
 "}
 (52,1,1) = {"
-zR
-zR
-zR
-zR
-zR
+xA
+ua
+xA
+ua
+xA
 zR
 zR
 zR
@@ -18777,11 +18486,11 @@ Qf
 Tw
 "}
 (53,1,1) = {"
-zR
-zR
-zR
-zR
-zR
+xA
+xA
+xA
+xA
+xA
 zR
 zR
 zR
