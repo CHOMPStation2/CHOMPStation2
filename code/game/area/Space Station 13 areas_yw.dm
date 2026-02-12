@@ -122,7 +122,7 @@
 
 /area/civilian/atrium
 	name = "\improper Atrium"
-	icon = 'icons/turf/areas_yw.dmi'
+	icon = 'modular_chomp/icons/turf/areas_yw.dmi'
 	icon_state = "atrium_central"
 
 /area/civilian/atrium/lower

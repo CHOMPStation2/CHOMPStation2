@@ -1,6 +1,6 @@
 /area/vrworld
 	name = "VR World"
-	icon = 'icons/turf/areas_yw.dmi'
+	icon = 'modular_chomp/icons/turf/areas_yw.dmi'
 	icon_state = "vr"
 	requires_power = 0
 

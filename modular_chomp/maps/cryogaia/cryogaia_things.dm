@@ -144,7 +144,7 @@
 /obj/item/ice_pick
 	name = "ice axe"
 	desc = "A sharp tool for climbers and hikers to break up ice and keep themselves from slipping on a steep slope."
-	icon = 'icons/obj/items_yw.dmi'
+	icon = 'modular_chomp/icons/obj/items_yw.dmi'
 	icon_state = "icepick"
 	item_state = "icepick"
 	matter = list(MAT_STEEL = 12000) //Same as a knife

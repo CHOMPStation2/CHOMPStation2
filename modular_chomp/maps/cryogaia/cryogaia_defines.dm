@@ -332,7 +332,7 @@
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/cryogaia/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/cryogaia/announce_atc(var/atom/movable/AM, var/going = FALSE)
 	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
 		if(world.time < mob_announce_cooldown)
 			return
@@ -353,7 +353,7 @@
 /obj/effect/overmap/visitable/sector/cryogaia/get_space_zlevels()
 	return list() //None!
 
-/obj/effect/overmap/visitable/sector/virgo3b/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/virgo3b/announce_atc(var/atom/movable/AM, var/going = FALSE)
 	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
 		if(world.time < mob_announce_cooldown)
 			return
