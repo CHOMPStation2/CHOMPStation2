@@ -15,12 +15,3 @@
 /turf/unsimulated/floor/irongrass
 	icon ='icons/obj/clockwork_objects.dmi'
 	icon_state = "grass"
-
-
-//YW Addition - no VR for shadekins
-/mob/living/carbon/human/shadekin_ability_check()
-	. = ..()
-	if(. && istype(get_area(src), /area/vrworld))
-		to_chat(src, "<span class='danger'>The VR systems cannot comprehend this power! This is useless to you!</span>")
-		. = FALSE
-//YW add End

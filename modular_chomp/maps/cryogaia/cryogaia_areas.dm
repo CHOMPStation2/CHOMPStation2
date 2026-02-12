@@ -1,33 +1,33 @@
 //Overrides
 /area/crew_quarters/sleep/Dorm_1
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/crew_quarters/sleep/Dorm_2
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/crew_quarters/sleep/Dorm_3
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/crew_quarters/sleep/Dorm_4
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/crew_quarters/sleep/Dorm_5
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/crew_quarters/sleep/Dorm_6
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/crew_quarters/sleep/Dorm_7
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/crew_quarters/sleep/Dorm_8
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/crew_quarters/sleep/Dorm_9
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/crew_quarters/sleep/Dorm_10
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 //Outdoors Area
 
@@ -225,22 +225,22 @@
 /area/crew_quarters/sleep/Dorm_1/holo
 	name = "\improper Dorm 1 Holodeck"
 	icon_state = "dk_yellow"
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS
 
 /area/crew_quarters/sleep/Dorm_3/holo
 	name = "\improper Dorm 3 Holodeck"
 	icon_state = "dk_yellow"
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS
 
 /area/crew_quarters/sleep/Dorm_5/holo
 	name = "\improper Dorm 5 Holodeck"
 	icon_state = "dk_yellow"
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS
 
 /area/crew_quarters/sleep/Dorm_7/holo
 	name = "\improper Dorm 7 Holodeck"
 	icon_state = "dk_yellow"
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS
+	flags = RAD_SHIELDED | BLUE_SHIELDED | PHASE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS
 
 //
 /area/chapel/monastery
@@ -625,17 +625,6 @@
 /area/maintenance/substation/civilian_lower // Atmos substation
 	name = "Lower Civilian Substation"
 
-// Exclude some more areas from the atmos leak event so people don't get trapped when spawning.
-//Need to adjust areas in cryogaia for this below.
-/datum/event/atmos_leak/setup()
-/*	excluded |= /area/tether/surfacebase/tram
-	excluded |= /area/tether/surfacebase/atrium_one
-	excluded |= /area/tether/surfacebase/atrium_two
-	excluded |= /area/tether/surfacebase/atrium_three
-	excluded |= /area/teleporter/departing
-	excluded |= /area/hallway/station/upper (*/
-	..()
-
 
 /area/bridge/blueshield
 	name = "\improper Blueshield Office"
@@ -652,3 +641,223 @@
 /area/hallway/secondary/exit_link
 	name = "\improper Docking Area link"
 	icon_state = "escape"
+
+
+/area/maintenance/lowfloor1
+	name = "Maintenance"
+	icon_state = "amaint"
+	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
+
+/area/maintenance/lowfloor2
+	name = "Maintenance"
+	icon_state = "amaint"
+	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
+
+/area/maintenance/lowfloor3
+	name = "Maintenance"
+	icon_state = "amaint"
+	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
+
+/area/maintenance/lowfloor4
+	name = "Maintenance"
+	icon_state = "amaint"
+	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
+
+/area/maintenance/lowfloor5
+	name = "Maintenance"
+	icon_state = "amaint"
+	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
+
+/area/maintenance/lowfloor6
+	name = "Maintenance"
+	icon_state = "amaint"
+	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
+
+/area/maintenance/lowatmos
+	name = "Lower Engineering"
+	icon_state = "amaint"
+	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
+
+
+/area/constructionsite/medical/upper
+	name = "\improper Construction Site Medbay Loft"
+	icon_state = "medbay"
+
+/area/maintenance/mining
+	name = "Mining Maintence"
+	icon_state = "amaint"
+
+/area/maintenance/shelter
+	name = "Pulsar Radiation Shelter"
+	icon_state = "amaint"
+
+/area/maintenance/shelter2
+	name = "Pulsar Radiation Shelter"
+	icon_state = "amaint"
+
+/area/maintenance/shelter3
+	name = "Pulsar Radiation Shelter"
+	icon_state = "amaint"
+
+/area/maintenance/blueserg
+	name = "Blue Sergal"
+	icon_state = "amaint"
+
+/area/maintenance/blueserg/dorms
+	name = "Blue Sergal"
+	icon_state = "amaint"
+
+/area/maintenance/blueserg/misc
+	name = "Blue Sergal"
+	icon_state = "amaint"
+
+/area/rnd/outpost/toxinsworkshop
+	name = "\improper Research Outpost Toxins Workshop"
+	icon_state = "toxtest"
+
+/area/rnd/phoronics
+	name = "\improper Phoro-Chemistry"
+	icon_state = "toxtest"
+
+/area/rnd/xenobiology/surgery
+	name = "\improper Emergency Surgery Lab"
+	icon_state = "xeno_lab"
+
+/area/rnd/xenobiology/control
+	name = "\improper Xenobiology Control Center"
+	icon_state = "xeno_lab"
+
+/area/rnd/xenobiology/secure
+	name = "\improper High Security Xenobiology Lab"
+	icon_state = "xeno_lab"
+
+/area/rnd/xenobiology/failsafe
+	name = "\improper Xenobiology Emergency Failsafe"
+	icon_state = "xeno_lab"
+
+/area/outpost/research/exotic
+	name = "Research Outpost Exotic Particles Lab"
+
+/area/outpost/research/radio
+	name = "Research Outpost Radiospectrometery Lab"
+
+/area/outpost/research/hallway/entry
+	name = "Research Outpost Entry"
+
+
+/area/hallway/lower/dorms
+	name = "\improper Dormitory Hallway"
+	icon_state = "hallC4"
+
+/area/hallway/lower/central
+	name = "\improper Lower Central Hallway"
+	icon_state = "hallC4"
+
+/area/hallway/lower/aft
+	name = "\improper Lower Aft Hallway"
+	icon_state = "hallA"
+
+/area/hallway/lower/fore
+	name = "\improper Lower Fore Primary Hallway"
+	icon_state = "hallF"
+
+/area/hallway/primary/southeast
+	name = "\improper South Central Storage Hallway"
+	icon_state = "hallC1"
+
+/area/vacant/vacant_office
+	name = "\improper Abandoned Office"
+	icon_state = "vacant_site"
+
+/area/civilian/atrium
+	name = "\improper Atrium"
+	icon = 'icons/turf/areas_yw.dmi'
+	icon_state = "atrium_central"
+
+/area/civilian/atrium/lower
+	name = "\improper Lower Atrium"
+	icon_state = "atrium_lower"
+
+/area/civilian/atrium/central
+	name = "\improper Central Atrium"
+
+/area/civilian/atrium/upper
+	name = "\improper Upper Atrium"
+	icon_state = "atrium_upper"
+
+
+//area/vacant/vacant_office
+//	name = "\improper Abandoned Office"
+//	icon_state = "vacant_site"
+
+/area/crew_quarters/medmeeting
+	name = "\improper Medical Meeting Room"
+	icon_state = "medbay3"
+	music = 'sound/ambience/signal.ogg'
+
+/area/medical/equipstorage
+	name = "\improper Equipment Storage"
+	icon_state = "medbay2"
+	music = 'sound/ambience/signal.ogg'
+
+/area/medical/medbay_emt_storage
+	name = "\improper Medical EMT Equipment Storage"
+	icon_state = "medbay_emt_bay"
+	music = 'sound/ambience/signal.ogg'
+
+/area/quartermaster/miningwing
+	name = "\improper Cargo Mining"
+	icon_state = "mining"
+
+/area/quartermaster/disposals
+	name = "\improper Cargo - Disposals"
+	icon_state = "quart"
+
+
+/area/security/perma
+	name = "\improper Prison"
+	icon_state = "security"
+	flags = PHASE_SHIELDED
+
+/area/security/perma/bathroom
+	name = "\improper Prison Bathroom"
+	icon_state = "security"
+
+/area/security/perma/control
+	name = "\improper Prison Guard Station"
+	icon_state = "security"
+
+/area/security/perma/court
+	name = "\improper Prison Basketball Court"
+
+/area/security/airlock
+	name = "\improper Security Airlock"
+	icon_state = "security"
+
+/area/security/outpost
+	name = "\improper Security outpost"
+	icon_state = "security"
+	flags = RAD_SHIELDED | PHASE_SHIELDED
+
+/area/security/labor
+	name = "Labor camp access"
+	icon_state = "security"
+
+/area/medical/medbaymain
+	name = "\improper Medbay Primary Hallway"
+	icon_state = "medbay"
+	music = 'sound/ambience/signal.ogg'
+
+/area/medical/medbayupper
+	name = "\improper Medbay Upper Hallway"
+	icon_state = "medbay2"
+	music = 'sound/ambience/signal.ogg'
+
+/area/medical/medbayskybridge
+	name = "\improper Medbay/Departures Skybridge"
+	icon_state = "medbay4"
+	music = 'sound/ambience/signal.ogg'
+
+/area/security/shuttledock
+	name = "\improper Security Interceptor Dock"
+	icon_state = "security"

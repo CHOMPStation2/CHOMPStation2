@@ -19,41 +19,10 @@
 	icon_state = "map_vent_out"
 	external_pressure_bound = ONE_ATMOSPHERE * 1.1
 
-/* commented out because of the reworked blueprints by vore
-/obj/item/blueprints
-	SPACE_OUTSIDE_TYPES = list(
-		/area/borealis2/outdoors/exterior,
-        /area/borealis2/outdoors/grounds
-	)
-*/
-
 
 
 /obj/effect/step_trigger/teleporter/planetary_fall/borealis2/find_planet()
 	planet = planet_borealis2
-	. = ..()
-
-/obj/effect/step_trigger/lost_in_space
-	var/deathmessage = "You drift off into space, floating alone in the void until your life support runs out."
-
-/obj/effect/step_trigger/lost_in_space/Trigger(var/atom/movable/A) //replacement for shuttle dump zones because there's no empty space levels to dump to
-	if(ismob(A))
-		to_chat(A, "<span class='danger'>[deathmessage]</span>")
-	qdel(A)
-
-/obj/effect/step_trigger/lost_in_space/bluespace
-	deathmessage = "Everything goes blue as your component particles are scattered throughout the known and unknown universe."
-	var/last_sound = 0
-
-/obj/effect/step_trigger/lost_in_space/bluespace/Trigger(A)
-	if(world.time - last_sound > 5 SECONDS)
-		last_sound = world.time
-		playsound(get_turf(src), 'sound/effects/supermatter.ogg', 75, 1)
-	if(ismob(A) && prob(5))//lucky day
-		var/destturf = locate(rand(5,world.maxx-5),rand(5,world.maxy-5),pick(using_map.station_levels))
-		new /datum/teleport/instant(A, destturf, 0, 1, null, null, null, 'sound/effects/phasein.ogg')
-	else
-		return ..()
 
 
 // Invisible object that blocks z transfer to/from its turf and the turf above.
@@ -77,69 +46,6 @@
 		return FALSE
 	return TRUE
 
-//
-// TRAM STATION
-//
-//Not in use but...Might be useful in an away mission at some point. -RadiantFlash
-// The tram's electrified maglev tracks
-/turf/simulated/floor/maglev
-	name = "maglev track"
-	desc = "Magnetic levitation tram tracks. Caution! Electrified!"
-	icon = 'icons/turf/flooring/maglevs.dmi'
-	icon_state = "maglevup"
-
-	var/area/shock_area = /area/cryogaia/tram
-
-/turf/simulated/floor/maglev/Initialize()
-	. = ..()
-	shock_area = locate(shock_area)
-
-// Walking on maglev tracks will shock you! Horray!
-/turf/simulated/floor/maglev/Entered(var/atom/movable/AM, var/atom/old_loc)
-	if(isliving(AM) && prob(50))
-		track_zap(AM)
-/turf/simulated/floor/maglev/attack_hand(var/mob/user)
-	if(prob(75))
-		track_zap(user)
-/turf/simulated/floor/maglev/proc/track_zap(var/mob/living/user)
-	if (!istype(user)) return
-	if (electrocute_mob(user, shock_area, src))
-		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
-		s.set_up(5, 1, src)
-		s.start()
-
-// Tram air scrubbers for keeping arrivals clean - they work even with no area power
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram
-	name = "\improper Tram Air Scrubber"
-	icon_state = "scrubber:1"
-	on = TRUE
-
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram/powered()
-	return TRUE // Always be powered
-
-/* copy of code in another file /Chemistry 'chemavator'
-/obj/machinery/smartfridge/chemistry/chemvator
-	name = "\improper Smart Chemavator - Upper"
-	desc = "A refrigerated storage unit for medicine and chemical storage. Now sporting a fancy system of pulleys to lift bottles up and down."
-	var/obj/machinery/smartfridge/chemistry/chemvator/attached
-
-/obj/machinery/smartfridge/chemistry/chemvator/down/Destroy()
-	attached = null
-	return ..()
-
-/obj/machinery/smartfridge/chemistry/chemvator/down
-	name = "\improper Smart Chemavator - Lower"
-
-/obj/machinery/smartfridge/chemistry/chemvator/down/Initialize()
-	. = ..()
-	var/obj/machinery/smartfridge/chemistry/chemvator/above = locate(/obj/machinery/smartfridge/chemistry/chemvator,get_zstep(src,UP))
-	if(istype(above))
-		above.attached = src
-		attached = above
-		item_records = attached.item_records
-	else
-		to_chat(world,"<span class='danger'>[src] at [x],[y],[z] cannot find the unit above it!</span>")
-	*/
 
 
 /obj/machinery/smartfridge/produce/plantvator
@@ -164,108 +70,6 @@
 	else
 		to_chat(world,"<span class='danger'>[src] at [x],[y],[z] cannot find the unit above it!</span>")
 
-// Tram departure cryo doors that turn into ordinary airlock doors at round end
-/obj/machinery/cryopod/robot/door/tram
-	name = "\improper Tram Station"
-	icon = 'icons/obj/doors/Doorextglass.dmi'
-	icon_state = "door_closed"
-	can_atmos_pass = ATMOS_PASS_NO
-	base_icon_state = "door_closed"
-	occupied_icon_state = "door_locked"
-	desc = "The tram station you might've came in from.  You could leave the base easily using this."
-	on_store_message = "has departed on the tram."
-	on_store_name = "Travel Oversight"
-	on_enter_occupant_message = "The tram arrives at the platform; you step inside and take a seat."
-	on_store_visible_message_1 = "'s speakers chime, anouncing a tram has arrived to take"
-	on_store_visible_message_2 = "to the colony"
-	time_till_despawn = 10 SECONDS
-	spawnpoint_type = /datum/spawnpoint/tram
-
-/obj/machinery/cryopod/robot/door/tram/process()
-	if(emergency_shuttle.online() || emergency_shuttle.returned())
-		// Transform into a door!  But first despawn anyone inside
-		time_till_despawn = 0
-		..()
-		var/turf/T = get_turf(src)
-		var/obj/machinery/door/airlock/glass_external/door = new(T)
-		door.req_access = null
-		door.req_one_access = null
-		qdel(src)
-	// Otherwise just operate normally
-	return ..()
-
-/obj/machinery/cryopod/robot/door/tram/Bumped(var/atom/movable/AM)
-	if(!ishuman(AM))
-		return
-
-	var/mob/living/carbon/human/user = AM
-
-	var/choice = alert("Do you want to depart via the tram? Your character will leave the round.","Departure","Yes","No")
-	if(user && Adjacent(user) && choice == "Yes")
-		var/mob/observer/dead/newghost = user.ghostize()
-		newghost.timeofdeath = world.time
-		despawn_occupant(user)
-
-// Tram arrival point landmarks and datum
-// defined in another file var/global/list/latejoin_tram   = list()
-
-/obj/effect/landmark/tram
-	name = "JoinLateTram"
-	delete_me = 1
-
-/obj/effect/landmark/tram/New()
-	latejoin_tram += loc // Register this turf as tram latejoin.
-	latejoin += loc // Also register this turf as fallback latejoin, since we won't have any arrivals shuttle landmarks.
-	..()
-
-/datum/spawnpoint/tram
-	display_name = "Tram Station"
-	msg = "has arrived on the tram"
-
-/datum/spawnpoint/tram/New()
-	..()
-	turfs = latejoin_tram
-
-//
-// Holodorms
-//
-/obj/machinery/computer/HolodeckControl/holodorm
-	name = "Don't use this one!!!"
-	powerdown_program = "Off"
-	default_program = "Off"
-
-	//Smollodeck
-	active_power_usage = 500
-	item_power_usage = 100
-
-	supported_programs = list(
-	"Off"			= new/datum/holodeck_program(/area/holodeck/holodorm/source_off),
-	"Basic Dorm"	= new/datum/holodeck_program(/area/holodeck/holodorm/source_basic),
-	"Table Seating"	= new/datum/holodeck_program(/area/holodeck/holodorm/source_seating),
-	"Beach Sim"		= new/datum/holodeck_program(/area/holodeck/holodorm/source_beach),
-	"Desert Area"	= new/datum/holodeck_program(/area/holodeck/holodorm/source_desert),
-	"Snow Field"	= new/datum/holodeck_program(/area/holodeck/holodorm/source_snow),
-	"Flower Garden"	= new/datum/holodeck_program(/area/holodeck/holodorm/source_garden),
-	"Space Sim"		= new/datum/holodeck_program(/area/holodeck/holodorm/source_space),
-	"Boxing Ring"	= new/datum/holodeck_program(/area/holodeck/holodorm/source_boxing)
-	)
-
-/obj/machinery/computer/HolodeckControl/holodorm/one
-	name = "dorm one holodeck control"
-	projection_area = /area/crew_quarters/sleep/Dorm_1/holo
-
-/obj/machinery/computer/HolodeckControl/holodorm/three
-	name = "dorm three holodeck control"
-	projection_area = /area/crew_quarters/sleep/Dorm_3/holo
-
-/obj/machinery/computer/HolodeckControl/holodorm/five
-	name = "dorm five holodeck control"
-	projection_area = /area/crew_quarters/sleep/Dorm_5/holo
-
-/obj/machinery/computer/HolodeckControl/holodorm/seven
-	name = "dorm seven holodeck control"
-	projection_area = /area/crew_quarters/sleep/Dorm_7/holo
-
 // Small Ship Holodeck
 /obj/machinery/computer/HolodeckControl/houseboat
 	projection_area = /area/houseboat/holodeck_area
@@ -278,22 +82,22 @@
 	"Beach" 			= new/datum/holodeck_program(/area/houseboat/holodeck/beach),
 	"Desert" 			= new/datum/holodeck_program(/area/houseboat/holodeck/desert,
 													list(
-														'sound/effects/weather/wind/wind_2_1.ogg',
-											 			'sound/effects/weather/wind/wind_2_2.ogg',
-											 			'sound/effects/weather/wind/wind_3_1.ogg',
-											 			'sound/effects/weather/wind/wind_4_1.ogg',
-											 			'sound/effects/weather/wind/wind_4_2.ogg',
-											 			'sound/effects/weather/wind/wind_5_1.ogg'
+														'modular_chomp/sound/effects/weather/wind/wind_2_1.ogg',
+											 			'modular_chomp/sound/effects/weather/wind/wind_2_2.ogg',
+											 			'modular_chomp/sound/effects/weather/wind/wind_3_1.ogg',
+											 			'modular_chomp/sound/effects/weather/wind/wind_4_1.ogg',
+											 			'modular_chomp/sound/effects/weather/wind/wind_4_2.ogg',
+											 			'modular_chomp/sound/effects/weather/wind/wind_5_1.ogg'
 												 		)
 		 											),
 	"Snowfield" 		= new/datum/holodeck_program(/area/houseboat/holodeck/snow,
 													list(
-														'sound/effects/weather/wind/wind_2_1.ogg',
-											 			'sound/effects/weather/wind/wind_2_2.ogg',
-											 			'sound/effects/weather/wind/wind_3_1.ogg',
-											 			'sound/effects/weather/wind/wind_4_1.ogg',
-											 			'sound/effects/weather/wind/wind_4_2.ogg',
-											 			'sound/effects/weather/wind/wind_5_1.ogg'
+														'modular_chomp/sound/effects/weather/wind/wind_2_1.ogg',
+											 			'modular_chomp/sound/effects/weather/wind/wind_2_2.ogg',
+											 			'modular_chomp/sound/effects/weather/wind/wind_3_1.ogg',
+											 			'modular_chomp/sound/effects/weather/wind/wind_4_1.ogg',
+											 			'modular_chomp/sound/effects/weather/wind/wind_4_2.ogg',
+											 			'modular_chomp/sound/effects/weather/wind/wind_5_1.ogg'
 												 		)
 		 											),
 	"Space" 			= new/datum/holodeck_program(/area/houseboat/holodeck/space,
@@ -314,27 +118,6 @@
 /obj/machinery/power/supermatter/touch_map_edge()
 	qdel(src)
 
-//Airlock antitox vendor
-/obj/machinery/vending/wallmed_airlock
-	name = "Airlock NanoMed"
-	desc = "Wall-mounted Medical Equipment dispenser. This limited-use version dispenses antitoxins with mild painkillers for surface EVAs."
-	icon_state = "wallmed"
-	density = 0 //It is wall-mounted, and thus, not dense. --Superxpdude
-	products = list(/obj/item/reagent_containers/pill/airlock = 10,/obj/item/healthanalyzer = 1)
-	contraband = list(/obj/item/reagent_containers/pill/tox = 2)
-	req_log_access = access_cmo
-	has_logs = 1
-
-/obj/item/reagent_containers/pill/airlock
-	name = "\'Airlock\' Pill"
-	desc = "Neutralizes toxins and provides a mild analgesic effect."
-	icon_state = "pill2"
-
-/obj/item/reagent_containers/pill/airlock/New()
-	..()
-	reagents.add_reagent("anti_toxin", 15)
-	reagents.add_reagent("paracetamol", 5)
-
 //"Red" Armory Door
 /obj/machinery/door/airlock/multi_tile/metal/red
 	name = "Red Armory"
@@ -349,13 +132,24 @@
 /obj/machinery/door/airlock/highsecurity/red
 	name = "Bridge Holdout Armory"
 	desc =  "Only to be opened on Code red or greater."
-	req_one_access = list(access_heads)
+	req_one_access = list(ACCESS_HEADS)
 
 /obj/machinery/door/airlock/highsecurity/red/allowed(mob/user)
 	if(get_security_level() in list("green","blue"))
 		return FALSE
 
 	return ..(user)
+
+//Ice pick, mountain axe, or ice axe.YW Creation.
+/obj/item/ice_pick
+	name = "ice axe"
+	desc = "A sharp tool for climbers and hikers to break up ice and keep themselves from slipping on a steep slope."
+	icon = 'icons/obj/items_yw.dmi'
+	icon_state = "icepick"
+	item_state = "icepick"
+	matter = list(MAT_STEEL = 12000) //Same as a knife
+	force = 15 //increasing force for icepick/axe, cause it's a freaking iceaxe.
+	throwforce = 0
 
 //Freezable Airlock Door
 /obj/machinery/door/airlock/glass_external/freezable
@@ -485,86 +279,6 @@
 		..()
 //end of freezable airlock stuff.
 
-/obj/structure/closet/secure_closet/guncabinet/excursion
-	name = "expedition weaponry cabinet"
-	req_one_access = list(access_explorer,access_brig)
-
-/obj/structure/closet/secure_closet/guncabinet/excursion/New()
-	..()
-	for(var/i = 1 to 4)
-		new /obj/item/gun/energy/locked/frontier(src)
-	for(var/i = 1 to 4)
-		new /obj/item/gun/energy/locked/frontier/holdout(src)
-
-// Used at centcomm for the elevator
-/obj/machinery/cryopod/robot/door/dorms
-	spawnpoint_type = /datum/spawnpoint/tram
-
-/obj/structure/dancepole/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(O.is_wrench())
-		anchored = !anchored
-		playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
-		if(anchored)
-			to_chat(user, span_red("You secure \the [src]."))
-		else
-			to_chat(user, span_blue("You unsecure \the [src]."))
-//
-// ### Wall Machines On Full Windows ###
-// To make sure wall-mounted machines placed on full-tile windows are clickable they must be above the window
-//
-/obj/item/radio/intercom
-	layer = ABOVE_WINDOW_LAYER
-/obj/item/storage/secure/safe
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/airlock_sensor
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/alarm
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/button
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/access_button
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/computer/guestpass
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/computer/security/telescreen
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/door_timer
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/embedded_controller
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/firealarm
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/flasher
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/keycard_auth
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/light_switch
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/mineral/processing_unit_console
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/mineral/stacking_unit_console
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/newscaster
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/power/apc
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/requests_console
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/status_display
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/vending/wallmed1
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/vending/wallmed2
-	layer = ABOVE_WINDOW_LAYER
-/obj/structure/closet/fireaxecabinet
-	layer = ABOVE_WINDOW_LAYER
-/obj/structure/extinguisher_cabinet
-	layer = ABOVE_WINDOW_LAYER
-/obj/structure/mirror
-	layer = ABOVE_WINDOW_LAYER
-/obj/structure/noticeboard
-	layer = ABOVE_WINDOW_LAYER
-
 
 // Icy crystals.
 /datum/category_item/catalogue/material/trail_blazer
@@ -632,18 +346,6 @@
 	network = list(NETWORK_EXPLORATION)
 	circuit = null
 
-//Suit Storage Units
-
-/obj/machinery/suit_cycler/exploration
-	name = "Explorer suit cycler"
-	model_text = "Exploration"
-	req_one_access = list(access_pilot,access_explorer)
-
-/obj/machinery/suit_cycler/pilot
-	name = "Pilot suit cycler"
-	model_text = "Pilot"
-	req_access = null
-	req_one_access = list(access_pilot,access_explorer)
 
 /obj/effect/step_trigger/teleporter/from_plains/New()
 	..()
@@ -656,6 +358,95 @@
 	teleport_x = 2
 	teleport_y = src.y
 	teleport_z = Z_LEVEL_PLAINS
+
+/////////////////////////////
+/obj/cryogaia_away_spawner
+	name = "RENAME ME, JERK"
+	desc = "Spawns the mobs!"
+	icon = 'icons/mob/screen1.dmi'
+	icon_state = "x"
+	invisibility = 101
+	mouse_opacity = 0
+	density = 0
+	anchored = 1
+
+	//Weighted with values (not %chance, but relative weight)
+	//Can be left value-less for all equally likely
+	var/list/mobs_to_pick_from
+
+	//When the below chance fails, the spawner is marked as depleted and stops spawning
+	var/prob_spawn = 100	//Chance of spawning a mob whenever they don't have one
+	var/prob_fall = 5		//Above decreases by this much each time one spawns
+
+	//Settings to help mappers/coders have their mobs do what they want in this case
+	var/faction				//To prevent infighting if it spawns various mobs, set a faction
+	var/atmos_comp			//TRUE will set all their survivability to be within 20% of the current air
+	//var/guard				//# will set the mobs to remain nearby their spawn point within this dist
+
+	//Internal use only
+	var/mob/living/simple_mob/my_mob
+	var/depleted = FALSE
+
+/obj/cryogaia_away_spawner/Initialize()
+	. = ..()
+
+	if(!LAZYLEN(mobs_to_pick_from))
+		CRASH("Mob spawner at [x],[y],[z] ([get_area(src)]) had no mobs_to_pick_from set on it!")
+
+	START_PROCESSING(SSobj, src)
+
+/obj/cryogaia_away_spawner/process()
+	if(my_mob && my_mob.stat != DEAD)
+		return //No need
+
+	if(LAZYLEN(loc.human_mobs(world.view)))
+		return //I'll wait.
+
+	if(prob(prob_spawn))
+		prob_spawn -= prob_fall
+		var/picked_type = pickweight(mobs_to_pick_from)
+		my_mob = new picked_type(get_turf(src))
+		my_mob.low_priority = TRUE
+
+		if(faction)
+			my_mob.faction = faction
+
+		if(atmos_comp)
+			var/turf/T = get_turf(src)
+			var/datum/gas_mixture/env = T.return_air()
+			if(env)
+				my_mob.minbodytemp = env.temperature * 0.8
+				my_mob.maxbodytemp = env.temperature * 1.2
+
+				var/list/gaslist = env.gas
+				my_mob.min_oxy = gaslist["oxygen"] * 0.8
+				my_mob.min_tox = gaslist["phoron"] * 0.8
+				my_mob.min_n2 = gaslist["nitrogen"] * 0.8
+				my_mob.min_co2 = gaslist["carbon_dioxide"] * 0.8
+				my_mob.max_oxy = gaslist["oxygen"] * 1.2
+				my_mob.max_tox = gaslist["phoron"] * 1.2
+				my_mob.max_n2 = gaslist["nitrogen"] * 1.2
+				my_mob.max_co2 = gaslist["carbon_dioxide"] * 1.2
+		return
+	else
+		STOP_PROCESSING(SSobj, src)
+		depleted = TRUE
+		return
+
+//Shadekin spawner. Could have them show up on any mission, so it's here.
+//Make sure to put them away from others, so they don't get demolished by rude mobs.
+/obj/cryogaia_away_spawner/shadekin
+	name = "Shadekin Spawner"
+	icon = 'icons/mob/vore_shadekin.dmi'
+	icon_state = "spawner"
+
+	faction = "shadekin"
+	prob_spawn = 1
+	prob_fall = 1
+	//guard = 10 //Don't wander too far, to stay alive.
+	mobs_to_pick_from = list(
+		/mob/living/simple_mob/shadekin
+	)
 
 /obj/cryogaia_away_spawner/wilds
 	name = "wilds Spawner"
