@@ -11,13 +11,6 @@
 "aac" = (
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/cryogaia/station/excursion_overhang)
-"aad" = (
-/obj/structure/transit_tube{
-	icon_state = "E-W-Pass";
-	dir = s
-	},
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
-/area/borealis2/outdoors/grounds)
 "aae" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red{
@@ -73486,7 +73479,7 @@ dfQ
 cpw
 dCU
 uDf
-aad
+msE
 uDf
 uDf
 uDf

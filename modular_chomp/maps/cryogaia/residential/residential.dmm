@@ -133,8 +133,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	dir = 4;
-	icon_state = "2-8"
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
@@ -2278,9 +2277,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled,
 /area/residential/medbay)
 "nB" = (
@@ -6407,7 +6403,7 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "residential_shuttle_offsite";
 	pixel_y = 28
 	},
@@ -6938,7 +6934,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "specops_dock_pump"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,

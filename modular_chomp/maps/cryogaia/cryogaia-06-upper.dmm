@@ -183,11 +183,6 @@
 /obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
-"aA" = (
-/obj/structure/catwalk,
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/cryogaia/outpost/checkpoint)
 "aB" = (
 /obj/machinery/computer/ship/helm,
 /obj/structure/panic_button{
@@ -575,11 +570,6 @@
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
-"bv" = (
-/obj/structure/catwalk,
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/cryogaia/outpost/tower/northwest)
 "bw" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/voidcraft{
@@ -1362,20 +1352,6 @@
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/west)
-"dh" = (
-/obj/machinery/power/solar{
-	id = "portsolar";
-	name = "Port Solar Array"
-	},
-/obj/structure/cable/yellow{
-	dir = 8;
-	icon_state = "0-4"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper/solars)
 "di" = (
 /obj/machinery/vending/cola{
 	dir = 8
@@ -8894,11 +8870,10 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
-	icon_state = "0-4"
+	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-4"
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
@@ -9367,7 +9342,6 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/southeast)
 "CY" = (
@@ -9756,7 +9730,6 @@
 /area/maintenance/security_tower)
 "EH" = (
 /obj/structure/catwalk,
-/obj/structure/catwalk,
 /obj/structure/railing/grey{
 	dir = 1
 	},
@@ -9949,9 +9922,6 @@
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
 "FJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -12057,9 +12027,6 @@
 /turf/simulated/floor/tiled/white,
 /area/cryogaia/station/medical/upper)
 "QI" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -12880,9 +12847,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -15658,7 +15622,7 @@ om
 om
 om
 li
-bv
+fZ
 Yi
 Yu
 xO
@@ -15820,7 +15784,7 @@ om
 om
 om
 om
-bv
+fZ
 Yi
 Lv
 qj
@@ -23470,7 +23434,7 @@ LP
 wa
 wa
 Ny
-UF
+rj
 UL
 wa
 wa
@@ -23632,7 +23596,7 @@ LP
 LP
 wa
 qo
-UF
+rj
 Fe
 wa
 AN
@@ -23956,7 +23920,7 @@ AN
 AN
 wa
 qC
-UF
+rj
 Vx
 wa
 AN
@@ -24118,7 +24082,7 @@ AN
 AN
 wa
 yX
-UF
+rj
 Yy
 wa
 AN
@@ -24280,7 +24244,7 @@ AN
 AN
 ZP
 Yy
-UF
+rj
 Yy
 pE
 AN
@@ -24442,7 +24406,7 @@ AN
 AN
 wa
 Yy
-UF
+rj
 Yy
 wa
 AN
@@ -24604,7 +24568,7 @@ AN
 AN
 wa
 LH
-UF
+rj
 Wq
 wa
 AN
@@ -30326,7 +30290,7 @@ kq
 gI
 va
 va
-dh
+rx
 tc
 oS
 va
@@ -34404,7 +34368,7 @@ nQ
 Gf
 yC
 Ci
-aA
+Ci
 yC
 yC
 eQ

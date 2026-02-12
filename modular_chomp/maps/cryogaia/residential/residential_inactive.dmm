@@ -3609,12 +3609,6 @@
 /obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom2)
-"Vq" = (
-/obj/structure/bed/chair/comfy/purp,
-/obj/structure/bed/chair/comfy/blue,
-/obj/structure/bed/chair/comfy/purp,
-/turf/simulated/floor/carpet,
-/area/residential/mroom1)
 "Vr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/woodentable,
@@ -5743,7 +5737,7 @@ Wv
 ik
 ik
 Wd
-Vq
+eU
 Il
 kt
 oO
