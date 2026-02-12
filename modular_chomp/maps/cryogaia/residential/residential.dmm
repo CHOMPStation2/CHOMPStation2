@@ -1191,7 +1191,7 @@
 /obj/item/reagent_containers/food/drinks/cans/lemon_lime,
 /obj/item/reagent_containers/food/drinks/bottle/small/beer,
 /obj/item/reagent_containers/food/drinks/bottle/small/beer,
-/obj/item/reagent_containers/food/drinks/bottle/tequilla,
+/obj/item/reagent_containers/food/drinks/bottle/tequila,
 /obj/item/reagent_containers/food/drinks/bottle/grenadine,
 /obj/item/reagent_containers/food/drinks/bottle/orangejuice,
 /obj/item/reagent_containers/food/drinks/ice,
@@ -3628,7 +3628,7 @@
 /obj/machinery/light/small/fairylights{
 	pixel_y = 15
 	},
-/obj/item/clothing/suit/storage/toggle/hoodie/fluff,
+/obj/item/clothing/suit/storage/toggle/hoodie,
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "wJ" = (
@@ -5932,7 +5932,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/gin,
 /obj/item/reagent_containers/food/drinks/bottle/gin,
 /obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
-/obj/item/reagent_containers/food/drinks/bottle/tequilla,
+/obj/item/reagent_containers/food/drinks/bottle/tequila,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey,
@@ -7865,8 +7865,8 @@
 /area/residential/mroom5)
 "XW" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/clothing/suit/storage/teshari/cloak/fluff/strix,
-/obj/item/clothing/under/teshari/undercoat/fluff/strix,
+/obj/item/clothing/suit/storage/teshari/cloak,
+/obj/item/clothing/under/teshari/undercoat,
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/ship_bay)
 "Yb" = (

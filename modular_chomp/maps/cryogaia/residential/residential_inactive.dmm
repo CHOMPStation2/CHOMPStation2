@@ -1853,7 +1853,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/structure/reagent_dispensers/redwinevat,
 /turf/simulated/floor/tiled,
 /area/residential/mroom1)
 "wy" = (
@@ -3401,7 +3400,6 @@
 /turf/simulated/floor/wood,
 /area/residential/room8)
 "RU" = (
-/obj/structure/reagent_dispensers/redwinevat,
 /turf/simulated/floor/tiled,
 /area/residential/mroom1)
 "Sd" = (

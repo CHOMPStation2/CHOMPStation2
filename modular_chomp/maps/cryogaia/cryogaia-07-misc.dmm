@@ -1381,7 +1381,7 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "gH" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = 32
@@ -9900,7 +9900,7 @@
 "XQ" = (
 /obj/structure/sign/poster{
 	pixel_x = -32;
-	target_poster_decl_path = /decl/poster/bay_50
+	poster_decl = /decl/poster/bay_50
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)

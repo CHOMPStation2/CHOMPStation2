@@ -29979,10 +29979,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
-"lzB" = (
-/obj/machinery/computer/phoronics,
-/turf/simulated/floor/tiled/white,
-/area/rnd/phoronics)
 "lzK" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced,
@@ -33319,7 +33315,6 @@
 	health = 1e+006
 	},
 /obj/machinery/light/small,
-/obj/structure/reagent_dispensers/redwinevat,
 /turf/simulated/floor/tiled/freezer,
 /area/chapel/monastery/brew)
 "mIr" = (
@@ -34360,7 +34355,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/random/ce_pet,
+/mob/living/simple_mob/animal/passive/bird/parrot/poly,
 /turf/simulated/floor/carpet/oracarpet,
 /area/crew_quarters/heads/chief)
 "nba" = (
@@ -35769,7 +35764,7 @@
 /turf/simulated/floor/tiled,
 /area/bridge_hallway)
 "nzG" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "nzL" = (
@@ -39716,7 +39711,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway)
 "pau" = (
-/obj/structure/closet/secure_closet/CMO,
+/obj/structure/closet/secure_closet/CMO_wardrobe,
 /obj/item/pda/heads/cmo,
 /obj/item/cmo_disk_holder,
 /obj/item/defib_kit/compact/combat/loaded,
@@ -45043,7 +45038,6 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/structure/reagent_dispensers/redwinevat,
 /turf/simulated/floor/tiled/freezer,
 /area/chapel/monastery/brew)
 "rbO" = (
@@ -46925,7 +46919,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "rOc" = (
-/obj/machinery/telepad_phoronics,
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/light{
 	dir = 4
@@ -57877,7 +57870,6 @@
 	c_tag = "Monastary Freezer";
 	dir = 1
 	},
-/obj/structure/reagent_dispensers/redwinevat,
 /turf/simulated/floor/tiled/freezer,
 /area/chapel/monastery/brew)
 "wjK" = (
@@ -59347,7 +59339,6 @@
 	id = "n2_in";
 	use_power = 1
 	},
-/obj/machinery/telepad_phoronics,
 /turf/simulated/floor/phoronics,
 /area/rnd/phoronics)
 "wKb" = (
@@ -59720,7 +59711,6 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "wPa" = (
-/obj/machinery/rnd/server/robotics,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 1e+006
@@ -80369,7 +80359,7 @@ lzM
 dAF
 wJF
 uAY
-lzB
+vuQ
 vuQ
 hRv
 vuQ
