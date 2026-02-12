@@ -196,7 +196,7 @@
 		//playsound(target, holder.say_list.threaten_sound, 50, 1) // Actual aim-mode also does that so at least it's consistant.
 	else // Otherwise we are waiting for them to go away or to wait long enough for escalate.
 		var/threatlevel = target.get_threat(holder)
-		if(target in list_targets() && checkthreatened(target, threatlevel)) // Are they still visible and threatening ?
+		if((target in list_targets()) && checkthreatened(target, threatlevel)) // Are they still visible and threatening ?
 			var/should_escalate = FALSE
 
 			if(threaten_delay && last_threaten_time + threaten_delay < world.time) // Waited too long.

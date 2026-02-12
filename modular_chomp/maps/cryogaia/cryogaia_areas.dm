@@ -40,12 +40,12 @@
 	outdoors = OUTDOORS_YES
 
 /area/borealis2/outdoors/exterior
-	name = "\The wilderness"
+	name = "wilderness"
 	icon_state = "outside1unex"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/borealis2/outdoors/exterior/upper
-	name = "\The wilderness"
+	name = "wilderness"
 	icon_state = "outside2unex"
 
 //Outdoors Area - Wilderness
@@ -82,21 +82,21 @@
 
 // Outdoors Area - grounds
 /area/borealis2/outdoors/grounds
-	name = "\The outpost grounds"
+	name = "outpost grounds"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/borealis2/outdoors/grounds/upper
-	name = "\The outpost grounds"
+	name = "outpost grounds"
 	base_turf = /turf/simulated/open/cryogaia
 	icon_state = "outside2"
 
 /area/borealis2/outdoors/grounds/upper/solars
-	name = "\The solar array"
+	name = "solar array"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "panelsA"
 
 /area/borealis2/outdoors/grounds/power
-	name = "\The Exterior Powerline"
+	name = "Exterior Powerline"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "yellow"
 
