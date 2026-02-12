@@ -8233,11 +8233,9 @@
 /area/quartermaster/disposals)
 "dkt" = (
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/sensor{
@@ -21233,8 +21231,6 @@
 /area/civilian/atrium/central)
 "izi" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -23670,8 +23666,6 @@
 /area/shuttle/security)
 "jzz" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
@@ -30600,7 +30594,6 @@
 /area/engineering/storage)
 "mqj" = (
 /obj/structure/cable/green{
-	dir = 4;
 	icon_state = "16-0"
 	},
 /obj/structure/cable/green{
@@ -32371,13 +32364,9 @@
 /area/engineering/workshop)
 "mSj" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief{
@@ -39773,7 +39762,6 @@
 	pixel_y = 25
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/super/critical{
@@ -39815,7 +39803,7 @@
 	dir = 1;
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
-	frequency = 1438;
+	frequency = 1437;
 	icon_state = "map_vent_in";
 	id_tag = "cooling_out";
 	initialize_directions = 1;
@@ -41399,7 +41387,7 @@
 "qxZ" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1438;
+	frequency = 1437;
 	id = "cooling_in";
 	name = "Coolant Injector";
 	pixel_y = 1;
@@ -42001,7 +41989,7 @@
 /area/medical/patient_c)
 "qJn" = (
 /obj/machinery/air_sensor{
-	frequency = 1438;
+	frequency = 1437;
 	id_tag = "engine_sensor";
 	output = 63
 	},
@@ -43590,15 +43578,6 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
-"rrP" = (
-/obj/machinery/conveyor{
-	dir = 3;
-	id = "packageSort1"
-	},
-/turf/simulated/floor{
-	dir = 1
-	},
-/area/quartermaster/disposals)
 "rsl" = (
 /obj/structure/fireplace{
 	pixel_y = -30
@@ -49995,8 +49974,6 @@
 /area/server)
 "tWf" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -55205,8 +55182,6 @@
 /area/hallway/primary/starboard)
 "wmz" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -55889,8 +55864,6 @@
 /area/security/hangar)
 "wzG" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -79627,7 +79600,7 @@ qNF
 vnX
 dcz
 hYk
-rrP
+bcY
 bcY
 bcY
 bcY
