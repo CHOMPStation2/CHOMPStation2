@@ -2228,7 +2228,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/obj/machinery/rnd/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/workshop)
@@ -3507,7 +3507,7 @@
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "bpI" = (
-/obj/machinery/rnd/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
@@ -18473,7 +18473,7 @@
 /turf/simulated/floor/tiled/red,
 /area/security/outpost)
 "gYx" = (
-/obj/machinery/rnd/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "gZe" = (
@@ -29531,7 +29531,7 @@
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/bridge/blueshield)
 "lrZ" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/RD_wardrobe,
 /obj/item/clothing/glasses/omnihud/rnd,
 /obj/effect/floor_decal/corner_oldtile/gray/diagonal{
 	dir = 4
