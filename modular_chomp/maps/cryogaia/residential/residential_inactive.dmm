@@ -286,8 +286,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
@@ -317,8 +315,6 @@
 /area/residential/room4)
 "dv" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -447,8 +443,6 @@
 /area/residential/room10)
 "fe" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/mopbucket,
@@ -475,8 +469,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/lino,
@@ -601,8 +593,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -617,8 +607,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -779,8 +767,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -895,8 +881,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -1266,8 +1250,6 @@
 /area/space)
 "oP" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/lino,
@@ -1509,7 +1491,6 @@
 "ry" = (
 /obj/item/clothing/under/teshari/undercoat/standard/white_grey,
 /obj/item/clothing/suit/storage/teshari/beltcloak/standard/blue_grey,
-/obj/item/clothing/glasses/fluff/avigoggles_yw,
 /obj/item/communicator/watch,
 /obj/item/card/id/residential/rs12,
 /obj/structure/closet/crate/plastic{
@@ -1551,8 +1532,6 @@
 /area/residential/mroom2)
 "sr" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall,
@@ -2014,8 +1993,6 @@
 /area/residential/mroom2)
 "yW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -2056,8 +2033,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -2138,7 +2113,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/small,
@@ -2428,8 +2402,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -2584,13 +2556,6 @@
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/blue,
 /area/residential/mroom1)
-"GL" = (
-/obj/effect/floor_decal/corner/lightorange/border{
-	pixel_y = 6
-	},
-/obj/structure/hammock_kbraid_s,
-/turf/simulated/floor/tiled/old_cargo,
-/area/residential/room12)
 "GW" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "plant-03"
@@ -2741,8 +2706,6 @@
 /area/residential/room11)
 "Je" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/closet/crate/bin,
@@ -2759,7 +2722,6 @@
 /area/residential/room5)
 "Js" = (
 /obj/machinery/alarm,
-/obj/structure/bed/chair/hammock_kbraid_n,
 /turf/simulated/floor/tiled/old_cargo,
 /area/residential/room12)
 "JF" = (
@@ -2792,7 +2754,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/small,
@@ -2938,8 +2899,6 @@
 /area/residential/room3)
 "Lv" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock,
@@ -3006,8 +2965,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -3249,8 +3206,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -3471,7 +3426,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/airlock,
@@ -3486,8 +3440,6 @@
 /area/residential/mroom1)
 "SX" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/flora/pottedplant{
@@ -3555,8 +3507,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
@@ -3748,7 +3698,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/small,
@@ -3775,8 +3724,6 @@
 /area/residential/room3)
 "Xc" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall,
@@ -3916,8 +3863,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/wood,
@@ -3942,7 +3887,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood,
@@ -6646,7 +6590,7 @@ ty
 oO
 uV
 Js
-GL
+NI
 TH
 IG
 oi
