@@ -220,11 +220,11 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trade_shuttle_dock_pump"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trade_shuttle_dock_sensor";
 	pixel_x = 30;
 	pixel_y = 8
@@ -238,7 +238,7 @@
 "sG" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trade_shuttle_dock_inner";
 	locked = 1;
@@ -381,7 +381,7 @@
 /area/borealis2/outdoors/exterior/explore1/interior)
 "GZ" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trade_shuttle_dock_outer";
 	locked = 1;
@@ -419,7 +419,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trade_shuttle_dock_pump"
 	},
 /turf/simulated/floor/tiled,
@@ -437,7 +437,7 @@
 "Kg" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "trade_shuttle_dock_airlock";
 	name = "exterior access button";
 	pixel_x = 28;
@@ -445,7 +445,7 @@
 	req_access = list(13)
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trade_shuttle_dock_outer";
 	locked = 1;
@@ -479,7 +479,7 @@
 	dir = 10
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trade_shuttle_dock_airlock";
 	pixel_x = 28;
 	req_one_access = list(13);

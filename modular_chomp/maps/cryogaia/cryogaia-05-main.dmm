@@ -488,10 +488,6 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/effect/step_trigger/message{
-	message = "Entering the Upper Atrium, a air of sterile serenity pervades the hall, as it's high ceiling and ornate lighting therein invite introspection among the displays.";
-	name = "upper atrium message"
-	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "akP" = (
@@ -2577,7 +2573,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/voidcraft{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "secshuttle_door_ext";
 	locked = 1;
@@ -2591,7 +2587,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "secshuttle_docker";
 	pixel_y = 24;
 	req_one_access = list(1)
@@ -4345,7 +4341,7 @@
 "bMN" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_docker_pump_out_internal"
 	},
 /obj/structure/cable/green{
@@ -6095,7 +6091,7 @@
 /obj/effect/overmap/visitable/ship/landable/security,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_docker_pump_out_internal"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
@@ -6157,7 +6153,7 @@
 "cvg" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_vent"
 	},
 /obj/structure/cable/green{
@@ -6532,7 +6528,7 @@
 /area/rnd/phoronics)
 "cBJ" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_dock_south_starboard_outer";
 	locked = 1;
@@ -6541,7 +6537,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "escape_dock_south_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = -4;
@@ -9135,7 +9131,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "arrivals_dock_south_outer";
 	locked = 1;
@@ -9144,7 +9140,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "arrivals_dock_south_airlock";
 	name = "exterior access button";
 	pixel_x = 4;
@@ -9153,7 +9149,7 @@
 	},
 /obj/machinery/mech_sensor{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_dock_south_mech";
 	pixel_y = 19
 	},
@@ -10713,7 +10709,7 @@
 /obj/machinery/embedded_controller/radio/docking_port_multi{
 	child_names_txt = "Airlock One;Airlock Two;Airlock Three;Airlock Four";
 	child_tags_txt = "escape_dock_snorth_airlock;escape_dock_ssouth_airlock";
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock";
 	pixel_y = -25;
 	req_one_access = list(13)
@@ -10843,7 +10839,7 @@
 /area/cryogaia/outpost/tower/south)
 "enW" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_sensor";
 	master_tag = "expshuttle_docker";
 	pixel_y = 28
@@ -10853,7 +10849,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_vent"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -11194,7 +11190,7 @@
 /area/hallway/secondary/exit)
 "ewF" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "residential_shuttle_docking_left";
 	pixel_x = -30;
 	pixel_y = -30;
@@ -11764,7 +11760,7 @@
 /obj/machinery/embedded_controller/radio/docking_port_multi{
 	child_names_txt = "Airlock One;Airlock Two";
 	child_tags_txt = "arrivals_dock_north_airlock;arrivals_dock_south_airlock";
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_dock";
 	pixel_y = -25;
 	req_one_access = list(13)
@@ -12848,7 +12844,7 @@
 /area/quartermaster/storage)
 "fiw" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "specops_dock_outer";
 	locked = 1;
@@ -12857,7 +12853,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "specops_dock_airlock";
 	name = "exterior access button";
 	pixel_x = -5;
@@ -14108,7 +14104,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "arrivals_dock_south_inner";
 	locked = 1;
@@ -14324,7 +14320,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_dock_north_starboard_inner";
 	locked = 1;
@@ -17990,7 +17986,7 @@
 /area/maintenance/medbay)
 "hiX" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "cargo_bay";
 	layer = 3.3;
 	name = "cargo bay hatch controller";
@@ -18170,7 +18166,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "specops_dock_inner";
 	locked = 1;
@@ -22070,7 +22066,7 @@
 	dir = 6
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_dock";
 	pixel_x = 32;
 	req_one_access = list(19,43,67)
@@ -22999,7 +22995,7 @@
 "jnN" = (
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "specops_dock_airlock";
 	name = "interior access button";
 	pixel_x = -28;
@@ -23815,7 +23811,7 @@
 /area/engineering/storage)
 "jCX" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_dock_north_starboard_outer";
 	locked = 1;
@@ -23824,13 +23820,13 @@
 	},
 /obj/machinery/mech_sensor{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_north_mech";
 	pixel_y = -19
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "escape_dock_north_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = -4;
@@ -25778,7 +25774,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_dock_south_starboard_inner";
 	locked = 1;
@@ -26583,7 +26579,7 @@
 "kJD" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_dock_north_starboard_inner";
 	locked = 1;
@@ -26688,7 +26684,7 @@
 /area/chapel/monastery/kitchen)
 "kLz" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_south_starboard_sensor";
 	pixel_y = 25
 	},
@@ -26904,7 +26900,7 @@
 "kPE" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "cargo_bay_door";
 	locked = 1;
@@ -28083,7 +28079,7 @@
 "lqo" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_docker_pump_out_external"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -28484,7 +28480,7 @@
 /area/security/armoury)
 "lxK" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_door_int";
 	name = "Airlock Access";
 	req_one_access = list(1)
@@ -28942,7 +28938,7 @@
 "lJn" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_south_starboard_pump"
 	},
 /obj/effect/floor_decal/rust,
@@ -29743,7 +29739,7 @@
 /area/hallway/secondary/exit)
 "lZl" = (
 /obj/machinery/door/airlock/multi_tile/metal{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "secshuttle_door_ext";
 	locked = 1;
@@ -29927,7 +29923,7 @@
 /area/quartermaster/disposals)
 "mdi" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_snorth_airlock";
 	master_tag = "escape_dock";
 	pixel_y = 30;
@@ -30339,7 +30335,7 @@
 "mlk" = (
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	dir = 10;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_exterior_sensor";
 	master_tag = "secshuttle_docker";
 	pixel_y = 28
@@ -30348,7 +30344,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/voidcraft{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "secshuttle_door_ext";
 	locked = 1;
@@ -30525,7 +30521,7 @@
 /area/engineering/workshop)
 "moW" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_dock_north_starboard_outer";
 	locked = 1;
@@ -30534,7 +30530,7 @@
 	},
 /obj/machinery/mech_sensor{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_north_mech";
 	pixel_y = 19
 	},
@@ -30576,7 +30572,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/hatch{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secsh_cabin";
 	name = "Interceptor Cockpit";
 	req_one_access = list(51)
@@ -36102,7 +36098,7 @@
 /area/shuttle/security)
 "osB" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_ssouth_airlock";
 	master_tag = "escape_dock";
 	pixel_y = -30;
@@ -36185,7 +36181,7 @@
 /area/crew_quarters/bar)
 "otl" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_north_starboard_sensor";
 	pixel_y = -25
 	},
@@ -36246,7 +36242,7 @@
 "ouo" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_dock_south_starboard_inner";
 	locked = 1;
@@ -36611,7 +36607,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_dock_north_airlock";
 	master_tag = "arrivals_dock";
 	pixel_y = 30;
@@ -37957,7 +37953,7 @@
 "pdz" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "cargo_bay_door";
 	locked = 1;
@@ -39803,7 +39799,7 @@
 	dir = 1;
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
-	frequency = 1437;
+	frequency = 1438;
 	icon_state = "map_vent_in";
 	id_tag = "cooling_out";
 	initialize_directions = 1;
@@ -40513,7 +40509,7 @@
 "qfE" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_docker_pump_out_internal"
 	},
 /obj/structure/cable/green{
@@ -41387,7 +41383,7 @@
 "qxZ" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1437;
+	frequency = 1438;
 	id = "cooling_in";
 	name = "Coolant Injector";
 	pixel_y = 1;
@@ -41989,7 +41985,7 @@
 /area/medical/patient_c)
 "qJn" = (
 /obj/machinery/air_sensor{
-	frequency = 1437;
+	frequency = 1438;
 	id_tag = "engine_sensor";
 	output = 63
 	},
@@ -43752,7 +43748,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "arrivals_dock_north_inner";
 	locked = 1;
@@ -44671,7 +44667,7 @@
 "rOK" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_docker_pump_out_internal"
 	},
 /obj/machinery/light{
@@ -45544,7 +45540,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "arrivals_dock_north_outer";
 	locked = 1;
@@ -45553,7 +45549,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "arrivals_dock_north_airlock";
 	name = "exterior access button";
 	pixel_x = 4;
@@ -45562,7 +45558,7 @@
 	},
 /obj/machinery/mech_sensor{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrival_dock_north_mech";
 	pixel_y = -19
 	},
@@ -45623,11 +45619,11 @@
 "siJ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_dock_north_pump"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_dock_north_sensor";
 	pixel_y = -25
 	},
@@ -46578,7 +46574,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/voidcraft{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secsh_compartment";
 	name = "Passenger Compartment";
 	req_one_access = list(1)
@@ -47599,10 +47595,6 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/effect/step_trigger/message{
-	message = "Entering the Upper Atrium, a air of sterile serenity pervades the hall, as it's high ceiling and ornate lighting therein invite introspection among the displays.";
-	name = "upper atrium message"
-	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "sZT" = (
@@ -47969,7 +47961,7 @@
 /area/medical/surgeryobs)
 "thW" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "residential_shuttle";
 	pixel_x = 30;
 	pixel_y = -30;
@@ -48330,7 +48322,7 @@
 /area/chapel/monastery)
 "tqn" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "specops_dock_airlock";
 	pixel_y = 30;
 	req_one_access = list(13);
@@ -48340,7 +48332,7 @@
 	tag_interior_door = "specops_dock_inner"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "specops_dock_sensor";
 	pixel_y = -25
 	},
@@ -48436,7 +48428,7 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "residential_shuttle_station";
 	pixel_y = 30;
 	tag_airlock_mech_sensor = null;
@@ -48470,7 +48462,7 @@
 "trE" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_vent"
 	},
 /obj/structure/cable/green{
@@ -48491,7 +48483,7 @@
 "tsB" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "specops_dock_pump"
 	},
 /obj/machinery/light/small,
@@ -49244,7 +49236,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "secshuttle_docker";
 	pixel_x = 24;
 	pixel_y = -24;
@@ -50046,7 +50038,7 @@
 "tZc" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "cargo_bay_door";
 	locked = 1;
@@ -50819,7 +50811,7 @@
 "uwt" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_north_starboard_pump"
 	},
 /obj/effect/floor_decal/rust,
@@ -51805,7 +51797,7 @@
 /area/hallway/primary/central_one)
 "uSu" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_dock_south_starboard_outer";
 	locked = 1;
@@ -54386,12 +54378,12 @@
 "vXY" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_vent"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	cycle_to_external_air = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_docker";
 	pixel_y = 26;
 	req_one_access = list(1);
@@ -54518,7 +54510,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_dock_south_airlock";
 	master_tag = "arrivals_dock";
 	pixel_y = -30;
@@ -56526,7 +56518,7 @@
 "wLZ" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "cargo_bay_door";
 	locked = 1;
@@ -59948,7 +59940,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "secshuttle_docker_pump_out_external"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -60121,11 +60113,11 @@
 "yjB" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_dock_south_pump"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_dock_south_sensor";
 	pixel_y = 25
 	},
