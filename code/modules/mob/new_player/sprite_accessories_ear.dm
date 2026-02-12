@@ -1235,7 +1235,18 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+<<<<<<< HEAD
 /* // Special snowflake ears go below here. //CHOMPRemove - no they don't
+=======
+//'Experimental' headspikes...
+/datum/sprite_accessory/ears/backwards_headspikes
+	name = "backwards headspikes"
+	icon_state = "backwards_headspikes"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+// Special snowflake ears go below here.
+>>>>>>> 63923b0362 (headspikes (#19159))
 
 /datum/sprite_accessory/ears/kara //SatinIsle Fluff Item
 	name = "Pterokara horn"
