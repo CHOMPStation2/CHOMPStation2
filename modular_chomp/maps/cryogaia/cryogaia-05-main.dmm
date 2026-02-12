@@ -1353,10 +1353,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
-"azS" = (
-/obj/structure/sign/department/janitor,
-/turf/simulated/wall,
-/area/janitor)
 "aAi" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/polarized{
@@ -1507,7 +1503,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 4
 	},
 /obj/structure/cable/green{
@@ -2232,7 +2228,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/workshop)
@@ -3511,7 +3507,7 @@
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "bpI" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
@@ -6332,11 +6328,11 @@
 	pixel_y = 2
 	},
 /obj/item/circuitboard/destructive_analyzer,
-/obj/item/circuitboard/protolathe{
+/obj/item/circuitboard/machine/protolathe{
 	pixel_x = 3;
 	pixel_y = -2
 	},
-/obj/item/circuitboard/rdserver{
+/obj/item/circuitboard/rdservercontrol{
 	pixel_x = 6;
 	pixel_y = -4
 	},
@@ -9469,7 +9465,7 @@
 /turf/simulated/floor/tiled,
 /area/security/checkpoint)
 "dEr" = (
-/obj/machinery/computer/rdconsole/robotics,
+/obj/machinery/computer/rdconsole_tg,
 /obj/machinery/alarm/yw{
 	pixel_y = 25
 	},
@@ -10521,7 +10517,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -16947,7 +16943,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "gta" = (
-/obj/structure/reagent_dispensers/beerkeg/vat,
+/obj/structure/reagent_dispensers/beerkeg,
 /obj/structure/window/reinforced{
 	health = 1e+006
 	},
@@ -18477,7 +18473,7 @@
 /turf/simulated/floor/tiled/red,
 /area/security/outpost)
 "gYx" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/circuit_imprinter,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "gZe" = (
@@ -20644,7 +20640,6 @@
 /turf/simulated/wall/r_lead,
 /area/engineering/engine_room)
 "hPm" = (
-/obj/machinery/phoroanalyzer,
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/tiled/white,
 /area/rnd/phoronics)
@@ -22587,7 +22582,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "iEu" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+/obj/machinery/rnd/destructive_analyzer,
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = -30
 	},
@@ -28359,7 +28354,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/teleporter)
 "kSt" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "secshuttle_pd"
 	},
 /turf/simulated/floor/plating,
@@ -28688,7 +28683,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics)
 "kYQ" = (
@@ -30134,7 +30129,7 @@
 /turf/simulated/floor/tiled,
 /area/janitor)
 "lCP" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -43460,7 +43455,6 @@
 /area/borealis2/outdoors/grounds)
 "qwf" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/box/solution_trays,
 /turf/simulated/floor/tiled/white,
 /area/rnd/phoronics)
 "qww" = (
@@ -44256,7 +44250,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "qLY" = (
-/obj/structure/reagent_dispensers/beerkeg/vat,
+/obj/structure/reagent_dispensers/beerkeg,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -47449,7 +47443,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "rXh" = (
-/obj/structure/reagent_dispensers/beerkeg/vat,
+/obj/structure/reagent_dispensers/beerkeg,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 1e+006
@@ -50577,7 +50571,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "tjd" = (
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 4
 	},
 /obj/machinery/light{
@@ -59726,7 +59720,7 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "wPa" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server/robotics,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 1e+006
@@ -76746,7 +76740,7 @@ cqv
 cyR
 hEM
 mHb
-azS
+hEM
 hEM
 pls
 tjc

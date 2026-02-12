@@ -9751,7 +9751,7 @@
 	},
 /area/centcom/security)
 "SB" = (
-/obj/machinery/r_n_d/server/centcom,
+/obj/machinery/rnd/server,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},

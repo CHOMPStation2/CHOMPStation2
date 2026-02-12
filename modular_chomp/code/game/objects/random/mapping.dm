@@ -135,3 +135,15 @@ Make this if you can figure out a way to do it for every area in that z level ex
 	return pick(prob(5);/turf/simulated/floor/lava/external,
 				prob(3);/turf/simulated/floor/outdoors/rocks/caves,
 				prob(1);/turf/simulated/mineral/ignore_mapgen/cave)
+
+/obj/random/multiple/legtrap
+	name = "random legtraps"
+	desc = "Random legtraps (beartraps and mousetraps)."
+	icon = 'icons/misc/random_spawners.dmi'
+	icon_state = "generic"
+
+/obj/random/multiple/legtrap/item_to_spawn()
+	return pick(
+				prob(67);list(/obj/item/assembly/mousetrap/armed),
+				prob(33);list(/obj/item/beartrap/start_active),
+				)

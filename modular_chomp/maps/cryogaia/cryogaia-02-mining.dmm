@@ -1,7 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/machinery/light,
-/obj/machinery/botany/precisioneditor,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "ab" = (
@@ -678,7 +677,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/mid)
 "bB" = (
-/obj/item/gun/energy/phasegun/pistol,
+/obj/item/gun/energy/locked/phasegun/pistol,
 /obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
@@ -5434,7 +5433,7 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "ng" = (
-/obj/item/gun/energy/phasegun/pistol,
+/obj/item/gun/energy/locked/phasegun/pistol,
 /obj/structure/table/rack/shelf,
 /obj/machinery/camera/network/research{
 	c_tag = "Secure Xenobiology Storage";
@@ -6416,7 +6415,6 @@
 /obj/effect/floor_decal/corner/beige/full{
 	dir = 1
 	},
-/obj/item/storage/box/solution_trays,
 /obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22

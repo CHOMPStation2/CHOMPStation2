@@ -4348,7 +4348,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/reagent_containers/glass/bottle/culture/flu,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "cwo" = (
@@ -4895,8 +4894,6 @@
 /area/maintenance/blueserg/misc)
 "cOr" = (
 /obj/structure/table/glass,
-/obj/item/reagent_containers/glass/solution_tray,
-/obj/item/reagent_containers/glass/solution_tray,
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -5396,16 +5393,16 @@
 /obj/structure/safe/floor{
 	name = "Vault of Memories"
 	},
-/obj/item/dnainjector/tourmut{
+/obj/item/dnainjector/set_trait/tourettes{
 	name = "\improper DNA injector (???)"
 	},
-/obj/item/dnainjector/hallucination{
+/obj/item/dnainjector/set_trait/regenerate{
 	name = "\improper DNA injector (???)"
 	},
-/obj/item/dnainjector/firemut{
+/obj/item/dnainjector/set_trait/heatadapt{
 	name = "\improper DNA injector (???)"
 	},
-/obj/item/dnainjector/firemut{
+/obj/item/dnainjector/set_trait/heatadapt{
 	name = "\improper DNA injector (???)"
 	},
 /obj/item/clothing/under/rank/geneticist{
@@ -9132,10 +9129,6 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai_upload)
-"ffD" = (
-/obj/structure/sign/department/janitor,
-/turf/simulated/wall,
-/area/civilian/atrium/lower)
 "ffK" = (
 /obj/structure/closet/crate{
 	dir = 1
@@ -9729,10 +9722,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
-"fvG" = (
-/obj/effect/landmark/event_spawn/maintpred,
-/turf/simulated/floor/plating,
-/area/maintenance/medical_lower)
 "fvJ" = (
 /obj/item/stool/baystool/padded{
 	dir = 8
@@ -12836,11 +12825,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics)
 "hdl" = (
-/obj/machinery/mecha_part_fabricator/pros{
+/obj/machinery/mecha_part_fabricator_tg/prosthetics{
 	desc = "A machine used for construction of legit prosthetics. You weren't sure if cardboard was considered an engineering material until now.";
 	dir = 4;
-	name = "Legitimate Prosthetics Fabricator";
-	res_max_amount = 150000
+	name = "Legitimate Prosthetics Fabricator"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/maintroom5)
@@ -14417,10 +14405,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/crew_quarters/recreation_area)
-"hRi" = (
-/obj/effect/landmark/event_spawn/maintpred,
-/turf/simulated/floor/plating,
-/area/maintenance/fish)
 "hRo" = (
 /obj/structure/table/woodentable,
 /obj/effect/floor_decal/techfloor,
@@ -16332,11 +16316,6 @@
 "iHZ" = (
 /turf/simulated/floor/wood/sif,
 /area/maintenance/blueserg)
-"iIe" = (
-/obj/structure/closet/crate/freezer,
-/obj/item/reagent_containers/glass/bottle/culture/cold,
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
 "iIg" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -18201,7 +18180,7 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "jFk" = (
-/obj/machinery/clawmachine,
+/obj/machinery/computer/arcade/clawmachine,
 /turf/simulated/floor/wood/alt/tile,
 /area/crew_quarters/recreation_area)
 "jFD" = (
@@ -20681,10 +20660,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/perma/control)
-"kIZ" = (
-/obj/effect/landmark/event_spawn/maintpred,
-/turf/simulated/floor,
-/area/maintenance/chapel)
 "kJr" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -21590,7 +21565,7 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central4,
-/turf/simulated/floor/water/pool/black,
+/turf/simulated/floor/water/pool,
 /area/crew_quarters/pool)
 "lig" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -34025,12 +34000,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fish)
-"rMi" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/event_spawn/maintpred,
-/turf/simulated/floor/plating,
-/area/maintenance/medical_lower)
 "rMj" = (
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
@@ -37943,7 +37912,7 @@
 /area/tcommsat/computer)
 "tOI" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central6,
-/turf/simulated/floor/water/pool/black,
+/turf/simulated/floor/water/pool,
 /area/crew_quarters/pool)
 "tOO" = (
 /obj/effect/floor_decal/chapel{
@@ -48973,7 +48942,7 @@ hOH
 nGK
 dLH
 vKz
-iIe
+rkA
 cwj
 dEN
 dEN
@@ -49641,7 +49610,7 @@ gjz
 vpn
 vpn
 dEN
-fvG
+ixT
 aLl
 ixT
 lHO
@@ -53692,7 +53661,7 @@ dtf
 xyP
 bdo
 xVh
-hRi
+kBU
 kBU
 fES
 xVh
@@ -54652,7 +54621,7 @@ mBq
 hPz
 hPz
 hPz
-rMi
+oUs
 hPz
 opN
 ttU
@@ -57556,7 +57525,7 @@ gEZ
 ttu
 xPE
 siA
-fvG
+ixT
 aLl
 rFV
 rFV
@@ -59017,7 +58986,7 @@ fCs
 tRh
 oba
 aky
-ffD
+aky
 cpc
 aky
 aky
@@ -64010,7 +63979,7 @@ nHo
 asp
 eEU
 nHo
-kIZ
+eEU
 tnA
 xwq
 nHo
