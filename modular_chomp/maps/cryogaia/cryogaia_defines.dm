@@ -1,14 +1,4 @@
 //Normal YW map defs
-#define Z_LEVEL_CRYOGAIA_CENTCOM		1
-#define Z_LEVEL_CRYOGAIA_MINE			2
-#define Z_LEVEL_CRYOGAIA_TRANSIT		3 //added due to explosions jumping from mine leve to lower.
-#define Z_LEVEL_CRYOGAIA_LOWER			4
-#define Z_LEVEL_CRYOGAIA_MAIN			5
-#define Z_LEVEL_CRYOGAIA_UPPER			6
-#define Z_LEVEL_CRYOGAIA_MISC			7
-#define Z_LEVEL_CRYOGAIA_WILDERNESS		8
-#define Z_LEVEL_CRYOGAIA_CAVES			9
-#define Z_LEVEL_CRYOGAIA_RESIDENTIAL	10
 #define Z_LEVEL_ROGUEMINE_1				11
 #define Z_LEVEL_ROGUEMINE_2				12
 #define Z_LEVEL_OFFMAP1					13
@@ -46,8 +36,7 @@
 
 	usable_email_tlds = list("cryogaia.nt")
 	// lobby_icon = 'icons/misc/title_yw.dmi' WIP v
-	lobby_screens = list('modular_chomp/html/lobby/chompstation.webp')
-	lobby_screens = list("cryogaia")
+	lobby_screens = list('modular_chomp/html/lobby/cryogaia_static.png')
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
 	holomap_smoosh = list(list(
@@ -191,6 +180,7 @@
 
 	unit_test_z_levels = list(2,4,5,6)
 
+	/*
 	lateload_z_levels = list(
 		//list("Alien Ship - Z1 Ship"),
 		list("Asteroid Belt 1","Asteroid Belt 2"),
@@ -207,6 +197,7 @@
 	lateload_overmap = list(
 		list("Grass Cave")
 		)
+	*/
 
 	ai_shell_restricted = TRUE
 	ai_shell_allowed_levels = list(
@@ -222,6 +213,7 @@
 	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_MISC)
 	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1, Z_LEVEL_ROGUEMINE_2)
 
+	/*
 	lateload_gateway = list(
 		list("Gateway - Carp Farm"),
 		list("Gateway - Snow Field"),
@@ -231,9 +223,9 @@
 		list("Gateway - Arynthi Lake Underground B","Gateway - Arynthi Lake B"),
 		list("Gateway - Wild West")
 		)
+	*/
 
-	lateload_gateway = null //Nothing right now.
-
+	/*
 	lateload_redgate = list(
 		list("Redgate - Teppi Ranch"),
 		list("Redgate - Innland"),
@@ -249,6 +241,7 @@
 		list("Redgate - Laserdome"),
 		list("Redgate - Cascading Falls")
 		)
+	*/
 
 	planet_datums_to_make = list(/datum/planet/borealis2)
 
@@ -270,35 +263,6 @@
 		Z_LEVEL_CRYOGAIA_CAVES
 	)
 
-// Commented out due to causing a lot of bugs. The base proc plus overmap achieves this functionality anyways.
-/*
-// Short range computers see only the six main levels, others can see the surrounding surface levels.
-/datum/map/cryogaia/get_map_levels(var/srcz, var/long_range = TRUE)
-	if (long_range && (srcz in map_levels))
-		return map_levels
-	else if (srcz == Z_LEVEL_CRYOGAIA_CENTCOM)
-		return list() // Nothing on transit!
-	else if (srcz >= Z_LEVEL_CRYOGAIA_MINE && srcz <= Z_LEVEL_CRYOGAIA_UPPER)
-		return list(
-			Z_LEVEL_CRYOGAIA_MINE,
-			Z_LEVEL_CRYOGAIA_LOWER,
-			Z_LEVEL_CRYOGAIA_MAIN,
-			Z_LEVEL_CRYOGAIA_UPPER
-			)
-
-	else if (srcz == Z_LEVEL_CRYOGAIA_RESIDENTIAL)
-		return list(Z_LEVEL_CRYOGAIA_RESIDENTIAL)
-	else if(srcz >= Z_LEVEL_BEACH && srcz <= Z_LEVEL_BEACH_CAVE) //Zs 16-17
-		return list(
-			Z_LEVEL_BEACH,
-			Z_LEVEL_BEACH_CAVE)
-	else if(srcz >= Z_LEVEL_AEROSTAT && srcz <= Z_LEVEL_AEROSTAT_SURFACE) //Zs 18-19
-		return list(
-			Z_LEVEL_AEROSTAT,
-			Z_LEVEL_AEROSTAT_SURFACE)
-	else
-		return list(srcz) //prevents runtimes when using CMC. any Z-level not defined above will be 'isolated' and only show to GPSes/CMCs on that same Z (e.g. CentCom).
-*/
 
 // Overmap represetation of cryogaia
 /obj/effect/overmap/visitable/sector/cryogaia

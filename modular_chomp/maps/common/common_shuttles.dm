@@ -130,6 +130,24 @@
 	landmark_tag = "arrivals_station"
 	docking_controller = "arrivals_dock"
 
+/datum/shuttle/autodock/ferry/arrivals/cryogaia
+	shuttle_area = /area/shuttle/arrival/pre_game
+	landmark_offsite = "arrivals_offsite"
+	landmark_station = "arrivals_station"
+	docking_controller_tag = "arrivals_shuttle"
+	ceiling_type = /turf/simulated/shuttle/floor/white/cryogaia
+
+/obj/effect/shuttle_landmark/cryogaia/arrivals_offsite
+	name = "Transit to Station"
+	landmark_tag = "arrivals_offsite"
+	base_area = /area/space
+	base_turf = /turf/space
+
+/obj/effect/shuttle_landmark/cryogaia/arrivals_station
+	name = "NSB Cryogaia"
+	landmark_tag = "arrivals_station"
+	docking_controller = "arrivals_dock"
+
 //Exploration carrier
 /obj/machinery/computer/shuttle_control/exploration
 	name = "Exploration Sling Control Console"

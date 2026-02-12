@@ -1,27 +1,4 @@
 //////////////////////////////////////////////////////////////
-// Arrivals shuttle
-/datum/shuttle/autodock/ferry/arrivals/cryogaia
-	name = "Arrivals"
-	location = FERRY_LOCATION_OFFSITE
-	shuttle_area = /area/shuttle/arrival/pre_game
-	landmark_offsite = "arrivals_offsite"
-	landmark_station = "arrivals_station"
-	docking_controller_tag = "arrivals_shuttle"
-	ceiling_type = /turf/simulated/shuttle/floor/white/cryogaia
-
-/obj/effect/shuttle_landmark/premade/arrivals/arrivals_offsite
-	name = "Transit to Station"
-	landmark_tag = "arrivals_offsite"
-	base_area = /area/space
-	base_turf = /turf/space
-
-/obj/effect/shuttle_landmark/premade/arrivals/arrivals_station
-	name = "NSB Cryogaia"
-	landmark_tag = "arrivals_station"
-	docking_controller = "arrivals_dock"
-
-
-//////////////////////////////////////////////////////////////
 // Escape shuttle
 /datum/shuttle/autodock/ferry/emergency/escape
 	name = "Escape"

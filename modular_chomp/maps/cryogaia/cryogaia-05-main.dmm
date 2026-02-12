@@ -20692,7 +20692,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/south)
 "imQ" = (
-/obj/effect/shuttle_landmark/premade/arrivals/arrivals_station,
+/obj/effect/shuttle_landmark/cryogaia/arrivals_station,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "imT" = (

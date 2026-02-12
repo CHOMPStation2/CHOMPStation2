@@ -50,6 +50,18 @@
 #define Z_NAME_RB_CENTCOM					"Relic Base - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
 #define Z_NAME_RB_TRANSIT					"Relic Base - Transit"
 
+// Cryogaia
+#define Z_LEVEL_CRYOGAIA_CENTCOM		1
+#define Z_LEVEL_CRYOGAIA_MINE			2
+#define Z_LEVEL_CRYOGAIA_TRANSIT		3
+#define Z_LEVEL_CRYOGAIA_LOWER			4
+#define Z_LEVEL_CRYOGAIA_MAIN			5
+#define Z_LEVEL_CRYOGAIA_UPPER			6
+#define Z_LEVEL_CRYOGAIA_MISC			7
+#define Z_LEVEL_CRYOGAIA_WILDERNESS		8
+#define Z_LEVEL_CRYOGAIA_CAVES			9
+#define Z_LEVEL_CRYOGAIA_RESIDENTIAL	10
+
 // Named Lateload Submaps
 #define Z_NAME_FUELDEPOT_CH					"Offmap - Fueldepot CH"
 #define Z_NAME_KARA_AEROSTAT_CH				"Offmap - Kara Aerostat - Z1 Aerostat CG"

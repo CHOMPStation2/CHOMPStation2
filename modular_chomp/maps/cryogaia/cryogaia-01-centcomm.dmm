@@ -8150,7 +8150,7 @@
 	},
 /area/centcom/security)
 "Lr" = (
-/obj/effect/shuttle_landmark/premade/arrivals/arrivals_offsite,
+/obj/effect/shuttle_landmark/cryogaia/arrivals_offsite,
 /turf/simulated/shuttle/floor,
 /area/shuttle/arrival/pre_game)
 "Ls" = (
