@@ -1,4 +1,12 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/unsimulated/wall/fakeglass2,
+/area/syndicate_mothership)
+"ab" = (
+/turf/unsimulated/wall/fake_pod{
+	dir = 4
+	},
+/area/syndicate_mothership)
 "ad" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 9
@@ -77,13 +85,6 @@
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"ay" = (
-/obj/structure/flora/tree/pine,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "snow"
 	},
 /area/syndicate_mothership)
 "aA" = (
@@ -643,13 +644,6 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/skipjack)
-"dw" = (
-/turf/unsimulated/floor{
-	dir = 6;
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_corner"
-	},
-/area/syndicate_mothership)
 "dy" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/unsimulated/floor{
@@ -1080,11 +1074,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
-"fy" = (
-/turf/unsimulated/floor{
-	icon_state = "sandwater"
-	},
-/area/beach)
 "fz" = (
 /obj/effect/shuttle_landmark/transit{
 	base_area = /area/space;
@@ -1666,10 +1655,7 @@
 	name = "\improper FOURTH WALL";
 	pixel_x = -32
 	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "snow"
-	},
+/turf/simulated/floor/holofloor/snow,
 /area/syndicate_mothership)
 "iu" = (
 /turf/simulated/shuttle/wall/alien/blue/hard_corner,
@@ -1895,14 +1881,6 @@
 /obj/effect/floor_decal/corner/green/full,
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_emptycourt)
-"jo" = (
-/obj/structure/flora/grass/brown,
-/turf/unsimulated/floor{
-	dir = 4;
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_corner"
-	},
-/area/syndicate_mothership)
 "jp" = (
 /obj/machinery/door/window{
 	dir = 1;
@@ -2570,18 +2548,6 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/skipjack)
-"mU" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/unsimulated/wall,
-/area/space)
 "mX" = (
 /obj/effect/landmark{
 	name = "Trader"
@@ -2944,13 +2910,6 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
-"px" = (
-/obj/structure/flora/grass/both,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "snow"
-	},
-/area/syndicate_mothership)
 "pB" = (
 /obj/item/perfect_tele_beacon/stationary{
 	tele_name = "Unknown";
@@ -4640,10 +4599,7 @@
 /area/shuttle/mercenary)
 "xI" = (
 /obj/structure/flora/grass/both,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_corner"
-	},
+/turf/simulated/floor/holofloor/snow,
 /area/syndicate_mothership)
 "xL" = (
 /obj/machinery/door/window{
@@ -4836,12 +4792,6 @@
 	name = "plating"
 	},
 /area/syndicate_mothership/elite_squad)
-"yX" = (
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_corner"
-	},
-/area/syndicate_mothership)
 "yY" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/shuttle/syndicate_elite/mothership)
@@ -5851,13 +5801,6 @@
 /obj/structure/closet/crate/secure/loot,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
-"Eg" = (
-/turf/unsimulated/floor{
-	dir = 8;
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_corner"
-	},
-/area/syndicate_mothership)
 "Eh" = (
 /turf/space,
 /area/shuttle/alien/base)
@@ -5898,12 +5841,7 @@
 /turf/unsimulated/beach/sand,
 /area/beach)
 "Et" = (
-/turf/unsimulated/wall{
-	desc = "That looks like it doesn't open easily.";
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	name = "Shuttle Bay Blast Door"
-	},
+/turf/unsimulated/wall/fake_pod,
 /area/syndicate_mothership)
 "Eu" = (
 /obj/structure/bed,
@@ -6538,13 +6476,13 @@
 /area/shuttle/mercenary)
 "Ht" = (
 /obj/structure/table/standard,
-/obj,
-/obj,
-/obj,
-/obj,
-/obj,
-/obj,
-/obj,
+/obj/item/toy/plushie/generic,
+/obj/item/toy/plushie/generic,
+/obj/item/toy/plushie/generic,
+/obj/item/toy/plushie/generic,
+/obj/item/toy/plushie/generic,
+/obj/item/toy/plushie/generic,
+/obj/item/toy/plushie/generic,
 /turf/unsimulated/beach/sand,
 /area/beach)
 "Hu" = (
@@ -6804,10 +6742,7 @@
 /area/holodeck/source_beach)
 "IM" = (
 /obj/structure/flora/tree/pine,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_corner"
-	},
+/turf/simulated/floor/holofloor/snow,
 /area/syndicate_mothership)
 "IQ" = (
 /obj/machinery/light{
@@ -7326,10 +7261,7 @@
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/skipjack)
 "LG" = (
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "snow"
-	},
+/turf/simulated/floor/holofloor/snow,
 /area/syndicate_mothership)
 "LK" = (
 /obj/effect/landmark{
@@ -8151,13 +8083,6 @@
 	icon_state = "floor_red"
 	},
 /area/shuttle/ninja)
-"Pv" = (
-/obj/structure/flora/grass/brown,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "snow"
-	},
-/area/syndicate_mothership)
 "Pw" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1331;
@@ -8318,11 +8243,7 @@
 /area/wizard_station)
 "Qn" = (
 /obj/structure/flora/bush,
-/turf/unsimulated/floor{
-	dir = 8;
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_corner"
-	},
+/turf/simulated/floor/holofloor/snow,
 /area/syndicate_mothership)
 "Qo" = (
 /obj/structure/grille,
@@ -8491,13 +8412,6 @@
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/trade/centcom)
-"Rj" = (
-/turf/unsimulated/floor{
-	dir = 1;
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_corner"
-	},
-/area/syndicate_mothership)
 "Rp" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/utility/full,
@@ -8620,13 +8534,6 @@
 	icon_state = "diagonalWall3"
 	},
 /area/shuttle/ninja)
-"RQ" = (
-/turf/unsimulated/floor{
-	dir = 8;
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_surround"
-	},
-/area/syndicate_mothership)
 "RS" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/shuttle/trade/centcom)
@@ -9117,13 +9024,6 @@
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
-"UQ" = (
-/obj/structure/flora/bush,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "snow"
-	},
-/area/syndicate_mothership)
 "UR" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/glasses/square{
@@ -9334,13 +9234,6 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/holofloor/desert,
 /area/holodeck/holodorm/source_desert)
-"We" = (
-/turf/unsimulated/floor{
-	dir = 10;
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_corner"
-	},
-/area/syndicate_mothership)
 "Wg" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1;
@@ -9393,15 +9286,6 @@
 /obj/effect/floor_decal/sign/small_d,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
-"WA" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/mercenary)
 "WH" = (
 /obj/structure/table/rack,
 /obj/item/clothing/shoes/magboots,
@@ -9672,12 +9556,6 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
-"Yo" = (
-/turf/unsimulated/wall/fakeglass{
-	dir = 8;
-	icon_state = "fakewindows2"
-	},
-/area/syndicate_mothership)
 "Yp" = (
 /obj/structure/lattice,
 /obj/structure/window/reinforced{
@@ -9721,11 +9599,7 @@
 /area/holodeck/holodorm/source_snow)
 "Yx" = (
 /obj/structure/flora/grass/brown,
-/turf/unsimulated/floor{
-	dir = 8;
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_corner"
-	},
+/turf/simulated/floor/holofloor/snow,
 /area/syndicate_mothership)
 "YB" = (
 /obj/machinery/door/window/westright{
@@ -9976,13 +9850,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"ZA" = (
-/turf/unsimulated/floor{
-	dir = 5;
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_corner"
-	},
-/area/syndicate_mothership)
 "ZC" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 1
@@ -10036,13 +9903,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_thunderdomecourt)
-"ZR" = (
-/turf/unsimulated/floor{
-	dir = 4;
-	icon = 'icons/turf/snow.dmi';
-	icon_state = "gravsnow_corner"
-	},
-/area/syndicate_mothership)
 "ZS" = (
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/holodorm/source_boxing)
@@ -10438,7 +10298,7 @@ TE
 TE
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -10600,7 +10460,7 @@ TE
 TE
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -10762,7 +10622,7 @@ mj
 zr
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -10924,7 +10784,7 @@ TE
 mj
 TE
 xj
-fy
+tE
 GT
 XO
 XO
@@ -11086,7 +10946,7 @@ TE
 TE
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -11248,7 +11108,7 @@ TE
 TE
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -11410,7 +11270,7 @@ TE
 TE
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -11572,7 +11432,7 @@ TE
 TE
 Gh
 TE
-fy
+tE
 GT
 XO
 XO
@@ -11734,7 +11594,7 @@ TE
 TE
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -11896,7 +11756,7 @@ TE
 TE
 Eq
 TE
-fy
+tE
 GT
 XO
 XO
@@ -12058,7 +11918,7 @@ TE
 TE
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -12220,7 +12080,7 @@ TE
 TE
 Eq
 TE
-fy
+tE
 GT
 XO
 XO
@@ -12382,7 +12242,7 @@ TE
 TE
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -12544,7 +12404,7 @@ TE
 TE
 pk
 TE
-fy
+tE
 GT
 XO
 XO
@@ -12706,7 +12566,7 @@ TE
 TE
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -12868,7 +12728,7 @@ TE
 TE
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -13030,7 +12890,7 @@ fd
 mj
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -13192,7 +13052,7 @@ TE
 TE
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -13354,7 +13214,7 @@ TE
 TE
 TE
 TE
-fy
+tE
 GT
 XO
 XO
@@ -23236,7 +23096,7 @@ zR
 zR
 yB
 LG
-Pv
+Yx
 LG
 LG
 LG
@@ -23347,16 +23207,16 @@ Tw
 "}
 (83,1,1) = {"
 Vh
-mU
-mU
-mU
-mU
-mU
-mU
-mU
-mU
-mU
-mU
+sr
+sr
+sr
+sr
+sr
+sr
+sr
+sr
+sr
+sr
 Vh
 sr
 sr
@@ -23564,7 +23424,7 @@ LG
 LG
 LG
 LG
-yX
+LG
 ro
 lh
 lh
@@ -23723,10 +23583,10 @@ zR
 yB
 LG
 LG
-UQ
+Qn
 LG
 LG
-yX
+LG
 ve
 lh
 lh
@@ -23888,7 +23748,7 @@ LG
 LG
 LG
 LG
-yX
+LG
 Qo
 lh
 lh
@@ -24045,12 +23905,12 @@ zR
 zR
 zR
 yB
-Pv
+Yx
 LG
 LG
 LG
 LG
-yX
+LG
 Qo
 lh
 lh
@@ -24212,7 +24072,7 @@ LG
 LG
 LG
 LG
-yX
+LG
 Qo
 lh
 lh
@@ -24374,7 +24234,7 @@ LG
 LG
 LG
 LG
-yX
+LG
 Nc
 lh
 lh
@@ -24516,7 +24376,7 @@ SU
 SU
 Vh
 zR
-Et
+ab
 SO
 SO
 SO
@@ -24536,15 +24396,15 @@ LG
 LG
 LG
 LG
-yX
+LG
 ro
 lh
 lh
 lh
 ro
-RQ
+LG
 jt
-cP
+aa
 JL
 ro
 lh
@@ -24678,7 +24538,7 @@ oj
 oj
 DT
 zR
-Et
+ab
 Wg
 Fr
 Go
@@ -24693,9 +24553,9 @@ SO
 BB
 zR
 yB
-ay
+IM
 LG
-Pv
+Yx
 LG
 LG
 LG
@@ -24704,8 +24564,8 @@ ro
 ro
 ro
 ro
-yX
-Yo
+LG
+cP
 Rg
 Rg
 EV
@@ -24840,7 +24700,7 @@ gM
 si
 DT
 zR
-Et
+ab
 Zj
 Fr
 Go
@@ -24855,19 +24715,19 @@ np
 BB
 zR
 yB
-px
+xI
 LG
 LG
 LG
 LG
 LG
 LG
-Eg
-Eg
-Eg
 LG
-yX
-Yo
+LG
+LG
+LG
+LG
+cP
 Rg
 Nl
 ro
@@ -25002,7 +24862,7 @@ vs
 Hi
 DT
 zR
-Et
+ab
 oD
 Fr
 Go
@@ -25021,17 +24881,17 @@ LG
 LG
 LG
 LG
-Pv
+Yx
 LG
 LG
 LG
 LG
-UQ
+Qn
 LG
-yX
-Yo
+LG
+cP
 Rg
-Yo
+cP
 ro
 ro
 ro
@@ -25164,7 +25024,7 @@ vs
 Hi
 DT
 zR
-Et
+ab
 SO
 SO
 SO
@@ -25180,24 +25040,24 @@ BB
 zR
 yB
 LG
-ay
-px
+IM
+xI
 LG
 LG
 LG
 LG
 LG
-ZR
-ZR
-jo
-dw
+LG
+LG
+Yx
+LG
 mG
 Rg
 mG
-ZA
+LG
 Yx
-Eg
-We
+LG
+LG
 ro
 lh
 lh
@@ -25343,21 +25203,21 @@ zR
 yB
 LG
 LG
-ay
+IM
 LG
 LG
 LG
 LG
-yX
+LG
 jt
-cP
-cP
+aa
+aa
 JL
 yB
 ax
 yB
 yB
-Rj
+LG
 LG
 LG
 ro
@@ -25503,15 +25363,15 @@ Pj
 BB
 zR
 yB
-ay
+IM
 LG
 LG
-Pv
+Yx
 LG
 LG
-UQ
-yX
-Yo
+Qn
+LG
+cP
 Rg
 Rg
 Rg
@@ -25519,17 +25379,17 @@ Rg
 Rg
 Rg
 yB
-ZA
-ZR
-ZR
-ZR
-Eg
-Eg
-Eg
+LG
+LG
+LG
+LG
+LG
+LG
+LG
 Qn
-Eg
-Eg
-Eg
+LG
+LG
+LG
 LG
 LG
 yB
@@ -25672,8 +25532,8 @@ LG
 LG
 LG
 LG
-yX
-Yo
+LG
+cP
 Rg
 Rg
 zG
@@ -25683,7 +25543,7 @@ Rg
 yB
 yB
 Nd
-cP
+aa
 JL
 yB
 yB
@@ -25829,12 +25689,12 @@ zR
 yB
 LG
 LG
-ay
+IM
 LG
 LG
-ay
+IM
 LG
-yX
+LG
 mG
 Rg
 CE
@@ -25992,11 +25852,11 @@ yB
 LG
 LG
 LG
-ay
-px
+IM
+xI
 LG
-Pv
-yX
+Yx
+LG
 yB
 WS
 Rg
@@ -26152,13 +26012,13 @@ BB
 zR
 yB
 LG
-ay
+IM
 LG
-px
+xI
 LG
 LG
 LG
-yX
+LG
 yB
 Wi
 Rg
@@ -26315,12 +26175,12 @@ zR
 yB
 LG
 LG
-ay
+IM
 LG
-ay
-UQ
-Pv
-yX
+IM
+Qn
+Yx
+LG
 yB
 yB
 HE
@@ -26477,12 +26337,12 @@ zR
 yB
 LG
 LG
-px
+xI
 LG
-px
-px
+xI
+xI
 LG
-yX
+LG
 yB
 ri
 Rg
@@ -26637,13 +26497,13 @@ Nk
 BB
 zR
 yB
-ay
+IM
 LG
 LG
-ay
+IM
 LG
 LG
-ay
+IM
 xI
 yB
 Xo
@@ -26801,9 +26661,9 @@ zR
 yB
 LG
 LG
-ay
+IM
 LG
-ay
+IM
 LG
 LG
 IM
@@ -26964,11 +26824,11 @@ yB
 LG
 LG
 LG
-px
+xI
 LG
 LG
-ay
-yX
+IM
+LG
 yB
 yB
 yB
@@ -30402,7 +30262,7 @@ Xm
 Xm
 YK
 My
-WA
+My
 My
 My
 Xm
