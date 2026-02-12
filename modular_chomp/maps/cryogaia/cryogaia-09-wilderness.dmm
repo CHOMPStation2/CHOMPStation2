@@ -608,11 +608,6 @@
 /turf/simulated/wall,
 /area/borealis2/outdoors/exterior/explore1/interior)
 "WV" = (
-/obj/machinery/power/smes/buildable/hybrid{
-	input_level = 0;
-	output_level = 1e+006;
-	output_level_max = 1e+006
-	},
 /obj/structure/cable/cyan{
 	d2 = 8;
 	icon_state = "0-8"
@@ -620,6 +615,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
 	},
+/obj/machinery/power/smes/buildable/hybrid/max_output,
 /turf/simulated/floor/tiled,
 /area/borealis2/outdoors/exterior/traderpad/interior)
 "XQ" = (
