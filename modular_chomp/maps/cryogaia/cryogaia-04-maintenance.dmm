@@ -56,12 +56,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/maintenance/lowfloor1)
-"abI" = (
-/obj/random/obstruction,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
-/area/maintenance/medical_lower)
 "abT" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -6743,12 +6737,6 @@
 "dYs" = (
 /turf/simulated/floor,
 /area/maintenance/lowfloor1)
-"dYC" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/maintenance/chapel)
 "dYP" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -12368,7 +12356,6 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor,
@@ -12626,7 +12613,6 @@
 /area/crew_quarters/coffee_shop)
 "hlY" = (
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/ai_slipper{
@@ -18629,7 +18615,6 @@
 	dir = 10
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
@@ -24935,7 +24920,6 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/bluegrid,
@@ -26652,12 +26636,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/starboard)
-"oEz" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/maintenance/lowfloor1)
 "oEB" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 4
@@ -45406,7 +45384,7 @@ qFS
 vhb
 pko
 sUf
-fQS
+aaa
 qUH
 ixd
 qFS
@@ -48644,7 +48622,7 @@ ixT
 ixT
 ixT
 oUs
-kya
+wCH
 ttU
 aLl
 ixT
@@ -52814,7 +52792,7 @@ wKr
 hoI
 gOL
 gOL
-oEz
+aab
 kBN
 rWM
 kBN
@@ -53491,7 +53469,7 @@ iuZ
 vRU
 mBq
 mBq
-abI
+jKZ
 mBq
 mBq
 hPz
@@ -63182,7 +63160,7 @@ nkk
 nHo
 lfy
 cxf
-dYC
+aac
 nHo
 eNq
 eNq
