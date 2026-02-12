@@ -39761,7 +39761,7 @@
 	dir = 1;
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
-	frequency = 1438;
+	frequency = 1437;
 	icon_state = "map_vent_in";
 	id_tag = "cooling_out";
 	initialize_directions = 1;
@@ -41339,7 +41339,7 @@
 "qxZ" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1438;
+	frequency = 1437;
 	id = "cooling_in";
 	name = "Coolant Injector";
 	pixel_y = 1;
@@ -41941,7 +41941,7 @@
 /area/medical/patient_c)
 "qJn" = (
 /obj/machinery/air_sensor{
-	frequency = 1438;
+	frequency = 1437;
 	id_tag = "engine_sensor";
 	output = 63
 	},
