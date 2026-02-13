@@ -48,13 +48,13 @@
 	shuttle_tag = "Residential Shuttle"
 
 /obj/structure/table/leadreinforcedwood
-    icon_state = "reinf_preview"
+	icon_state = "reinf_preview"
 
 
 /obj/structure/table/leadreinforcedwood/New()
-    material = get_material_by_name("lead")
-    reinforced = get_material_by_name("wood")
-    ..()
+	material = get_material_by_name(MAT_LEAD)
+	reinforced = get_material_by_name(MAT_WOOD)
+	. = ..()
 
 // Spawn points
 
@@ -63,13 +63,13 @@ var/global/list/latejoin_residential = list()
 	name = "JoinLateResidential"
 	delete_me = 1
 
-/obj/effect/landmark/residential/New()
+/obj/effect/landmark/residential/Initialize(mapload)
 	latejoin_residential += loc // Register this turf as tram latejoin.
-	..()
+	. = ..()
 
 /datum/spawnpoint/residential
 	display_name = "NCS Serenity Residential"
-	restrict_job = list("Off-duty Worker", "Off-duty Cargo", "Off-duty Engineer", "Off-duty Medic", "Off-duty Scientist", "Off-duty Officer", JOB_ALT_VISITOR)
+	restrict_job = list(JOB_OFFDUTY_WORKER, JOB_OFFDUTY_CARGO, JOB_OFFDUTY_ENGINEER, JOB_OFFDUTY_MEDIC, JOB_OFFDUTY_SCIENTIST, JOB_OFFDUTY_OFFICER, JOB_CHEF)
 	msg = "has arrived on the NCS Serenity Residential level"
 	announce_channel = "Common"
 
