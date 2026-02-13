@@ -646,6 +646,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/mining_main/medbay)
+"bm" = (
+/turf/unsimulated/mineral/cryogaia,
+/area/mine/unexplored)
 "bn" = (
 /obj/structure/table/steel,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -656,6 +659,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_north)
+"bo" = (
+/turf/unsimulated/mineral/cryogaia,
+/area/mine/explored)
 "bp" = (
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/heating)
@@ -669,6 +675,12 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/analysis)
+"br" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 8
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/unexplored)
 "bs" = (
 /turf/simulated/wall/r_wall,
 /area/outpost/research/exotic)
@@ -756,6 +768,13 @@
 /obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
+"bC" = (
+/obj/effect/map_effect/portal/master/side_a{
+	dir = 8;
+	portal_id = "underdark"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/mine/unexplored)
 "bD" = (
 /obj/structure/cable/blue{
 	icon_state = "2-4"
@@ -798,6 +817,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/south_hall)
+"bH" = (
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/mine/unexplored)
 "bI" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4
@@ -3071,13 +3093,6 @@
 /obj/random/trash_pile,
 /turf/simulated/floor,
 /area/maintenance/mining)
-"hv" = (
-/obj/effect/map_effect/portal/master/side_a{
-	dir = 8;
-	portal_id = "underdark"
-	},
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
-/area/mine/explored)
 "hy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/blue{
@@ -3871,12 +3886,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/hallway)
-"jB" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 8
-	},
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
-/area/mine/explored)
 "jC" = (
 /obj/structure/grille,
 /obj/structure/window/phoronreinforced{
@@ -20767,168 +20776,169 @@
 /area/mine/explored)
 
 (1,1,1) = {"
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 "}
 (2,1,1) = {"
+tI
 KS
 KS
 KS
@@ -21087,10 +21097,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (3,1,1) = {"
+tI
 KS
 KS
 KS
@@ -21249,10 +21259,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (4,1,1) = {"
+tI
 KS
 KS
 KS
@@ -21411,10 +21421,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (5,1,1) = {"
+tI
 KS
 KS
 KS
@@ -21573,10 +21583,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (6,1,1) = {"
+tI
 KS
 KS
 KS
@@ -21735,10 +21745,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (7,1,1) = {"
+tI
 KS
 KS
 KS
@@ -21897,10 +21907,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (8,1,1) = {"
+tI
 KS
 KS
 KS
@@ -22059,10 +22069,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (9,1,1) = {"
+tI
 KS
 KS
 KS
@@ -22221,10 +22231,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (10,1,1) = {"
+tI
 KS
 KS
 KS
@@ -22383,10 +22393,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (11,1,1) = {"
+tI
 KS
 KS
 KS
@@ -22545,10 +22555,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (12,1,1) = {"
+tI
 KS
 KS
 KS
@@ -22707,10 +22717,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (13,1,1) = {"
+tI
 KS
 KS
 KS
@@ -22869,10 +22879,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (14,1,1) = {"
+tI
 KS
 KS
 KS
@@ -23031,10 +23041,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (15,1,1) = {"
+tI
 KS
 KS
 KS
@@ -23193,10 +23203,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (16,1,1) = {"
+tI
 KS
 KS
 KS
@@ -23355,10 +23365,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (17,1,1) = {"
+tI
 KS
 KS
 KS
@@ -23517,10 +23527,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (18,1,1) = {"
+tI
 KS
 KS
 KS
@@ -23679,10 +23689,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (19,1,1) = {"
+tI
 KS
 KS
 KS
@@ -23841,10 +23851,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (20,1,1) = {"
+tI
 KS
 KS
 KS
@@ -24003,10 +24013,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (21,1,1) = {"
+tI
 KS
 KS
 KS
@@ -24165,10 +24175,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (22,1,1) = {"
+tI
 KS
 KS
 KS
@@ -24327,10 +24337,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (23,1,1) = {"
+tI
 KS
 KS
 KS
@@ -24489,10 +24499,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (24,1,1) = {"
+tI
 KS
 KS
 KS
@@ -24651,11 +24661,10 @@ KS
 KS
 KS
 KS
-KS
-KS
+tI
 "}
 (25,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -24814,10 +24823,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (26,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -24976,10 +24985,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (27,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -25138,10 +25147,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (28,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -25300,10 +25309,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (29,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -25462,10 +25471,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (30,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -25624,10 +25633,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (31,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -25786,10 +25795,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (32,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -25948,10 +25957,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (33,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -26110,10 +26119,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (34,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -26272,10 +26281,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (35,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -26434,10 +26443,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (36,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -26596,10 +26605,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (37,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -26758,10 +26767,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (38,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -26920,10 +26929,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (39,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -27082,10 +27091,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (40,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -27244,10 +27253,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (41,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -27406,10 +27415,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (42,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -27568,10 +27577,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (43,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -27730,10 +27739,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (44,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -27892,10 +27901,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (45,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -28054,10 +28063,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (46,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -28216,10 +28225,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (47,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -28378,10 +28387,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (48,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -28540,10 +28549,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (49,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -28702,10 +28711,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (50,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -28864,10 +28873,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (51,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -29026,10 +29035,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (52,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -29188,10 +29197,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (53,1,1) = {"
-KS
+bm
 KS
 KS
 KS
@@ -29350,10 +29359,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (54,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -29512,10 +29521,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (55,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -29674,10 +29683,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (56,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -29836,10 +29845,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (57,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -29998,10 +30007,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (58,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -30160,10 +30169,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (59,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -30322,10 +30331,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (60,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -30484,10 +30493,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (61,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -30646,10 +30655,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (62,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -30808,10 +30817,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (63,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -30970,10 +30979,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (64,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -31132,10 +31141,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (65,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -31294,10 +31303,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (66,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -31456,10 +31465,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (67,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -31618,10 +31627,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (68,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -31780,10 +31789,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (69,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -31942,10 +31951,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (70,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -32104,10 +32113,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (71,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -32266,10 +32275,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (72,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -32428,10 +32437,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (73,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -32590,10 +32599,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (74,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -32752,10 +32761,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (75,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -32914,10 +32923,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (76,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -33076,10 +33085,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (77,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -33238,10 +33247,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (78,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -33400,10 +33409,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (79,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -33562,10 +33571,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (80,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -33724,10 +33733,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (81,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -33886,10 +33895,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (82,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -34048,10 +34057,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (83,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -34210,10 +34219,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (84,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -34372,10 +34381,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (85,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -34534,10 +34543,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (86,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -34696,10 +34705,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (87,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -34858,10 +34867,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (88,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -35020,10 +35029,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (89,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -35182,10 +35191,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (90,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -35344,10 +35353,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (91,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -35506,10 +35515,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (92,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -35668,10 +35677,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (93,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -35830,10 +35839,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (94,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -35992,10 +36001,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (95,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -36154,10 +36163,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (96,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -36316,10 +36325,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (97,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -36478,10 +36487,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (98,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -36640,10 +36649,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (99,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -36802,10 +36811,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (100,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -36964,10 +36973,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (101,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -37126,10 +37135,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (102,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -37288,10 +37297,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (103,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -37450,10 +37459,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (104,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -37612,10 +37621,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (105,1,1) = {"
-KS
+bm
 KS
 KS
 KS
@@ -37774,10 +37783,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (106,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -37936,10 +37945,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (107,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -38098,10 +38107,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (108,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -38260,10 +38269,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (109,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -38422,10 +38431,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (110,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -38584,10 +38593,10 @@ aW
 aW
 aW
 aW
-KS
+tI
 "}
 (111,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -38746,10 +38755,10 @@ aW
 Zl
 Zl
 aW
-KS
+tI
 "}
 (112,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -38908,10 +38917,10 @@ aW
 Zl
 Zl
 aW
-KS
+tI
 "}
 (113,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -39070,10 +39079,10 @@ aW
 Zl
 Zl
 aW
-KS
+tI
 "}
 (114,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -39232,10 +39241,10 @@ Zl
 Zl
 Zl
 aW
-KS
+tI
 "}
 (115,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -39394,10 +39403,10 @@ Zl
 Zl
 Zl
 Zl
-KS
+tI
 "}
 (116,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -39556,10 +39565,10 @@ aW
 aW
 Zl
 Zl
-KS
+tI
 "}
 (117,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -39718,10 +39727,10 @@ KS
 KS
 Zl
 Zl
-KS
+tI
 "}
 (118,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -39880,10 +39889,10 @@ KS
 KS
 Zl
 Zl
-KS
+tI
 "}
 (119,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -40042,10 +40051,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (120,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -40204,10 +40213,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (121,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -40366,10 +40375,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (122,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -40528,10 +40537,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (123,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -40690,10 +40699,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (124,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -40852,10 +40861,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (125,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -41014,10 +41023,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (126,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -41176,10 +41185,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (127,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -41338,10 +41347,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (128,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -41500,10 +41509,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (129,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -41662,10 +41671,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (130,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -41824,10 +41833,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (131,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -41986,10 +41995,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (132,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -42148,10 +42157,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (133,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -42310,10 +42319,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (134,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -42472,10 +42481,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (135,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -42634,10 +42643,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (136,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -42796,10 +42805,10 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (137,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -42958,10 +42967,10 @@ aW
 aW
 KS
 KS
-KS
+tI
 "}
 (138,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -43120,10 +43129,10 @@ aW
 aW
 KS
 KS
-KS
+tI
 "}
 (139,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -43282,10 +43291,10 @@ aW
 aW
 KS
 KS
-KS
+tI
 "}
 (140,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -43444,10 +43453,10 @@ aW
 aW
 aW
 KS
-KS
+tI
 "}
 (141,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -43606,10 +43615,10 @@ aW
 aW
 aW
 KS
-KS
+tI
 "}
 (142,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -43768,10 +43777,10 @@ Zl
 aW
 aW
 KS
-KS
+tI
 "}
 (143,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -43930,10 +43939,10 @@ Zl
 aW
 aW
 KS
-KS
+tI
 "}
 (144,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -44092,10 +44101,10 @@ Xi
 aW
 aW
 KS
-KS
+tI
 "}
 (145,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -44254,10 +44263,10 @@ Zl
 aW
 aW
 KS
-KS
+tI
 "}
 (146,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -44416,10 +44425,10 @@ Zl
 aW
 aW
 KS
-KS
+tI
 "}
 (147,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -44578,10 +44587,10 @@ Zl
 aW
 aW
 KS
-KS
+tI
 "}
 (148,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -44740,10 +44749,10 @@ Zl
 aW
 aW
 KS
-KS
+tI
 "}
 (149,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -44902,10 +44911,10 @@ Zl
 aW
 aW
 KS
-KS
+tI
 "}
 (150,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -45064,10 +45073,10 @@ Zl
 aW
 aW
 KS
-KS
+tI
 "}
 (151,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -45226,10 +45235,10 @@ Hd
 aW
 aW
 KS
-KS
+tI
 "}
 (152,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -45388,10 +45397,10 @@ aW
 aW
 aW
 KS
-KS
+tI
 "}
 (153,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -45550,10 +45559,10 @@ aW
 aW
 aW
 KS
-KS
+tI
 "}
 (154,1,1) = {"
-KS
+bm
 KS
 KS
 KS
@@ -45712,10 +45721,10 @@ aW
 aW
 KS
 KS
-KS
+tI
 "}
 (155,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -45830,8 +45839,8 @@ qk
 tN
 rv
 Zl
-FC
-FC
+Zl
+Zl
 FC
 FC
 NT
@@ -45874,10 +45883,10 @@ aW
 aW
 KS
 KS
-KS
+tI
 "}
 (156,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -45989,10 +45998,10 @@ FC
 FC
 Zl
 Ze
-FC
+Zl
 dz
 Zl
-FC
+Zl
 FC
 FC
 FC
@@ -46036,10 +46045,10 @@ aW
 aW
 KS
 KS
-KS
+tI
 "}
 (157,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -46151,10 +46160,10 @@ FC
 FC
 FC
 bi
-vT
-hv
-jB
-vT
+Zl
+dz
+Zl
+Zl
 FC
 FC
 FC
@@ -46198,10 +46207,10 @@ aW
 KS
 KS
 KS
-KS
+tI
 "}
 (158,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -46310,19 +46319,19 @@ kT
 kT
 kT
 kT
-kT
-kT
-kT
-vT
+bm
+bm
+bm
+bo
+dz
 Zl
-Zl
-vT
-kT
-kT
-FC
-Zl
-NT
-NT
+bo
+bm
+bm
+bo
+bo
+bo
+bo
 NT
 dz
 NT
@@ -46360,10 +46369,10 @@ aW
 KS
 KS
 KS
-KS
+tI
 "}
 (159,1,1) = {"
-KS
+tI
 KS
 KS
 KS
@@ -46468,25 +46477,25 @@ KS
 KS
 KS
 KS
-KS
-KS
-KS
-KS
-KS
-kT
-kT
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bC
+br
 tI
-tI
-tI
-tI
-kT
-kT
-FC
-Zl
-Zl
-Zl
-NT
-NT
+bm
+bm
+bo
+bo
+bo
+bo
+bo
+bo
 ma
 NT
 NT
@@ -46522,167 +46531,167 @@ KS
 KS
 KS
 KS
-KS
+tI
 "}
 (160,1,1) = {"
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-kT
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
-KS
+tI
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+tI
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+tI
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+tI
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+tI
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+tI
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+tI
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+tI
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+tI
+tI
+bH
+rJ
+tI
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+tI
 "}

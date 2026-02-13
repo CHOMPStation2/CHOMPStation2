@@ -51,16 +51,21 @@
 #define Z_NAME_RB_TRANSIT					"Relic Base - Transit"
 
 // Cryogaia
-#define Z_LEVEL_CRYOGAIA_CENTCOM		1
-#define Z_LEVEL_CRYOGAIA_MINE			2
-#define Z_LEVEL_CRYOGAIA_TRANSIT		3
-#define Z_LEVEL_CRYOGAIA_LOWER			4
-#define Z_LEVEL_CRYOGAIA_MAIN			5
-#define Z_LEVEL_CRYOGAIA_UPPER			6
-#define Z_LEVEL_CRYOGAIA_MISC			7
-#define Z_LEVEL_CRYOGAIA_WILDERNESS		8
-#define Z_LEVEL_CRYOGAIA_CAVES			9
-#define Z_LEVEL_CRYOGAIA_RESIDENTIAL	10
+#define Z_LEVEL_CRYOGAIA_MINE			1
+#define Z_LEVEL_CRYOGAIA_TRANSIT		2 // Not ship transit
+#define Z_LEVEL_CRYOGAIA_LOWER			3
+#define Z_LEVEL_CRYOGAIA_MAIN			4
+#define Z_LEVEL_CRYOGAIA_UPPER			5
+#define Z_LEVEL_CRYOGAIA_RESIDENTIAL	6 // SHould be lateload someday?
+
+#define Z_NAME_CRYOGAIA_MISC			"Cryogaia - Misc" // Aliased to Z_NAME_ALIAS_MISC
+#define Z_NAME_CRYOGAIA_PLAINS			"Cryogaia - Snow plains" // Aliased to Z_NAME_ALIAS_SURFACE
+#define Z_NAME_CRYOGAIA_WILDERNESS		"Cryogaia - Surface Wilds" // Aliased to Z_NAME_ALIAS_SURFACE_WILDS
+#define Z_NAME_CRYOGAIA_CENTCOM			"Cryogaia - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
+#define Z_NAME_CRYOGAIA_UNDERDARK		"Cryogaia - Underdark"
+#define Z_NAME_CRYOGAIA_VR				"VR - VR World YW"
+#define Z_NAME_CRYOGAIA_ROGUEMINE_1		"Asteroid Belt 1"
+#define Z_NAME_CRYOGAIA_ROGUEMINE_2		"Asteroid Belt 2"
 
 // Named Lateload Submaps
 #define Z_NAME_FUELDEPOT_CH					"Offmap - Fueldepot CH"

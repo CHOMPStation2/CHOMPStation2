@@ -1,20 +1,3 @@
-//Normal YW map defs
-#define Z_LEVEL_ROGUEMINE_1				11
-#define Z_LEVEL_ROGUEMINE_2				12
-#define Z_LEVEL_OFFMAP1					13
-#define Z_LEVEL_PLAINS					14
-#define Z_LEVEL_UNDERDARK				15
-#define Z_LEVEL_BEACH					16
-#define Z_LEVEL_BEACH_CAVE				17
-#define Z_LEVEL_AEROSTAT				18
-#define Z_LEVEL_AEROSTAT_SURFACE		19
-#define Z_LEVEL_DEBRISFIELD				20
-#define Z_LEVEL_FUELDEPOT				21
-#define Z_LEVEL_GATEWAY					22
-#define Z_LEVEL_OM_ADVENTURE			23
-#define Z_LEVEL_REDGATE					24
-#define Z_LEVEL_VRWORLD					25
-
 /datum/map/cryogaia
 	name = "Cryogaia"
 	full_name = "NSB Cryogaia"
@@ -23,12 +6,11 @@
 	zlevel_datum_type = /datum/map_z_level/cryogaia
 
 	use_overmap = TRUE
-	overmap_z = Z_LEVEL_CRYOGAIA_MISC
+	overmap_z = Z_NAME_ALIAS_MISC
 	overmap_size = 25
 	overmap_event_areas = 18
 
 	usable_email_tlds = list("cryogaia.nt")
-	// lobby_icon = 'icons/misc/title_yw.dmi' WIP v
 	lobby_screens = list('modular_chomp/html/lobby/cryogaia_static.png')
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
@@ -93,7 +75,7 @@
 
 	bot_patrolling = FALSE
 
-	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential","ITV Talon Cryo")
+	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage")
 	spawnpoint_died = /datum/spawnpoint/tram
 	spawnpoint_left = /datum/spawnpoint/tram
 	spawnpoint_stayed = /datum/spawnpoint/cryo
@@ -198,12 +180,20 @@
 		Z_LEVEL_CRYOGAIA_TRANSIT,
 		Z_LEVEL_CRYOGAIA_MAIN,
 		Z_LEVEL_CRYOGAIA_UPPER,
-		Z_LEVEL_CRYOGAIA_CENTCOM
+		Z_NAME_CRYOGAIA_CENTCOM
 		)
 
 	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_UPPER)
-	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_MISC)
-	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1, Z_LEVEL_ROGUEMINE_2)
+	belter_transit_z =	 	list(Z_NAME_CRYOGAIA_MISC)
+	belter_belt_z = 		list(Z_NAME_CRYOGAIA_ROGUEMINE_1, Z_NAME_CRYOGAIA_ROGUEMINE_2)
+
+	lateload_z_levels = list(
+		list(Z_NAME_CRYOGAIA_PLAINS),
+		list(Z_NAME_CRYOGAIA_WILDERNESS),
+		list(Z_NAME_CRYOGAIA_CENTCOM),
+		list(Z_NAME_CRYOGAIA_MISC),
+		list(Z_NAME_CRYOGAIA_UNDERDARK)
+		)
 
 	/*
 	lateload_gateway = list(
@@ -242,17 +232,20 @@
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, 64, 64)         // Create the mining ore distribution map.
 
+	//seed_submaps(list(Z_NAME_ALIAS_SURFACE), 240, /area/cryogaia/outpost/exploration_plains, /datum/map_template/cryogaia_lateload/plains)
+
 	return 1
 
 /datum/planet/borealis2
 	expected_z_levels = list(
 		Z_LEVEL_CRYOGAIA_MINE,
+		Z_LEVEL_CRYOGAIA_TRANSIT,
 		Z_LEVEL_CRYOGAIA_LOWER,
 		Z_LEVEL_CRYOGAIA_MAIN,
 		Z_LEVEL_CRYOGAIA_UPPER,
-		Z_LEVEL_PLAINS,
-		Z_LEVEL_CRYOGAIA_WILDERNESS,
-		Z_LEVEL_CRYOGAIA_CAVES
+		Z_NAME_ALIAS_SURFACE,
+		Z_NAME_ALIAS_SURFACE_WILDS,
+		Z_NAME_CRYOGAIA_UNDERDARK
 	)
 
 
@@ -272,13 +265,12 @@
 		"cryogaia_security_hangar"
 	)
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
-	extra_z_levels = list(Z_LEVEL_PLAINS,
-		Z_LEVEL_CRYOGAIA_WILDERNESS,
-		Z_LEVEL_CRYOGAIA_CAVES,
-		Z_LEVEL_UNDERDARK
+	extra_z_levels = list(
+		Z_NAME_ALIAS_SURFACE,
+		Z_NAME_ALIAS_SURFACE_WILDS
 	)
 
-	levels_for_distress = list(Z_LEVEL_OFFMAP1, Z_LEVEL_BEACH, Z_LEVEL_AEROSTAT, Z_LEVEL_DEBRISFIELD, Z_LEVEL_FUELDEPOT)
+	levels_for_distress = list()
 
 /obj/effect/overmap/visitable/sector/cryogaia/Crossed(var/atom/movable/AM)
 	. = ..()
@@ -327,6 +319,22 @@
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
 		SSatc.msg(message)
 
+// Lateload handling
+/datum/map_template/cryogaia_lateload
+	allow_duplicates = FALSE
+	var/associated_map_datum
+
+/datum/map_template/cryogaia_lateload/on_map_loaded(z)
+	if(!associated_map_datum || !ispath(associated_map_datum))
+		log_game("Extra z-level [src] has no associated map datum")
+		return
+
+	new associated_map_datum(using_map, z)
+	return ..()
+
+/datum/map_z_level/cryogaia_lateload/New(datum/map/map, mapZ)
+	z = mapZ
+	return ..(map)
 
 // For making the 6-in-1 holomap, we calculate some offsets ((Disabled because I don't have a clue to how to start making this for Cryogaia))
 #define CRYOGAIA_MAP_SIZE 160 // Width and height of compiled in Southern Cross z levels.
@@ -351,12 +359,11 @@
 	name = "Transit"
 	flags = MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 
-
 /datum/map_z_level/cryogaia/lower
 	name = "Subfloor"
 	z = Z_LEVEL_CRYOGAIA_LOWER
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_PERSIST
-	base_turf = /turf/simulated/open // /turf/simulated/floor/outdoors/rocks/cryogaia
+	base_turf = /turf/simulated/open
 	holomap_legend_x = 220
 	holomap_legend_y = 160
 	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X + CRYOGAIA_MAP_SIZE*1
@@ -382,17 +389,62 @@
 	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X
 	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y
 
-/datum/map_z_level/cryogaia/centcom
-	z = Z_LEVEL_CRYOGAIA_CENTCOM
-	name = "Central Command"
-	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
-
 /datum/map_z_level/cryogaia/residential
 	z = Z_LEVEL_CRYOGAIA_RESIDENTIAL
 	name = "Residential"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_CONSOLES
 
-/datum/map_z_level/cryogaia/misc
-	z = Z_LEVEL_CRYOGAIA_MISC
-	name = "Misc"
+// Wilderness Z-Level
+/datum/map_z_level/cryogaia_lateload/wilderness
+	name = Z_NAME_CRYOGAIA_WILDERNESS
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_VORESPAWN
+
+/datum/map_template/cryogaia_lateload/wilderness
+	name = Z_NAME_CRYOGAIA_WILDERNESS
+	name_alias = Z_NAME_ALIAS_SURFACE_WILDS
+	mappath = "modular_chomp/maps/cryogaia/cryogaia-09-wilderness.dmm"
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/wilderness
+
+// Plains Z-Level
+/datum/map_z_level/cryogaia_lateload/plains
+	name = Z_NAME_CRYOGAIA_PLAINS
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_VORESPAWN
+
+/datum/map_template/cryogaia_lateload/plains
+	name = Z_NAME_CRYOGAIA_PLAINS
+	name_alias = Z_NAME_ALIAS_SURFACE
+	mappath = "modular_chomp/maps/cryogaia/submaps/cryogaia_plains/cryogaia_plains.dmm"
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/plains
+
+// Misc Z-Level
+/datum/map_z_level/cryogaia_lateload/misc
+	name = Z_NAME_CRYOGAIA_MISC
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
+
+/datum/map_template/cryogaia_lateload/misc
+	name = Z_NAME_CRYOGAIA_MISC
+	name_alias = Z_NAME_ALIAS_MISC
+	mappath = "modular_chomp/maps/cryogaia/cryogaia-07-misc.dmm"
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/misc
+
+// Centcom Z-Level
+/datum/map_z_level/cryogaia_lateload/centcom
+	name = Z_NAME_CRYOGAIA_CENTCOM //"Centcom"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
+
+/datum/map_template/cryogaia_lateload/centcom
+	name = Z_NAME_CRYOGAIA_CENTCOM
+	name_alias = Z_NAME_ALIAS_CENTCOM
+	mappath = "modular_chomp/maps/cryogaia/cryogaia-01-centcomm.dmm"
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/centcom
+
+// Underdark Z-Level
+/datum/map_z_level/cryogaia_lateload/underdark
+	name = Z_NAME_CRYOGAIA_UNDERDARK
+	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
+
+/datum/map_template/cryogaia_lateload/underdark
+	name = Z_NAME_CRYOGAIA_UNDERDARK
+	name_alias = Z_NAME_ALIAS_SURFACE_MINES
+	mappath = "modular_chomp/maps/cryogaia/submaps/cryogaia_underdark.dmm"
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/centcom
