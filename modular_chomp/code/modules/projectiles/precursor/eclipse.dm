@@ -145,7 +145,7 @@
 //projectiles
 /obj/item/projectile/energy/astral_collective
 	name = "abnormal energy"
-	speed = 2
+	speed = 3
 	damage = 28 //roughly 25 with intended armour
 	damage_type = BURN //BRUTE, BURN, TOX, OXY, CLONE, HALLOSS, ELECTROCUTE, BIOACID, SEARING are the only things that should be in here
 	check_armour = "laser" //Defines what armor to use when it hits things.  Must be set to bullet, laser, energy,or bomb	//Cael - bio and rad are also valid
@@ -171,7 +171,8 @@
 	irradiate = 40
 
 /obj/item/projectile/energy/astral_collective/particle
+	damage = 1
+	armor_penetration = 100
 	icon_state = "particle"
-	damage_type = ELECTROMAG
 	incendiary = 1
-	flammability = 1
+	flammability = 3
