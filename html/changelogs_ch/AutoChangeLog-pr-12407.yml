@@ -1,5 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "mat ejection for algae farm"
-  - code_imp: "moves two list pops right to GLOB handling"
