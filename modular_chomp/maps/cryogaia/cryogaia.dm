@@ -23,8 +23,7 @@
 		#include "cryogaia-06-upper.dmm" //upper level
 		#include "cryogaia-07-misc.dmm" //misc
 		#include "cryogaia-09-wilderness.dmm" //wilderness
-		#include "cryogaia-10-caves.dmm" // caves
-		#include "residential/residential.dmm" //residential level
+		#include "submaps/cryogaia_underdark.dmm" //underdark
 	#endif
 
 	#define USING_MAP_DATUM /datum/map/cryogaia

@@ -5234,9 +5234,6 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "lF" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/structure/filingcabinet,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -13142,10 +13139,10 @@
 /area/civilian/atrium/upper)
 "VV" = (
 /obj/machinery/door/airlock/maintenance/common,
-/obj/structure/cable/green{
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper/south)
 "VY" = (

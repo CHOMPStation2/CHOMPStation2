@@ -19,6 +19,24 @@
 /obj/machinery/atmospherics/pipe/manifold/visible,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
+"ad" = (
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
+"ae" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
 "af" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -28,6 +46,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/west_hall)
+"ag" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/blue{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
 "ah" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -87,6 +120,21 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
+"an" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/blue{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
 "ao" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor,
@@ -128,6 +176,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
+"aq" = (
+/obj/structure/cable/blue{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/blue{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
 "ar" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
@@ -193,6 +250,25 @@
 	},
 /turf/simulated/floor/tiled,
 /area/gateway)
+"aw" = (
+/obj/structure/cable/blue{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
+"ax" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
 "ay" = (
 /obj/effect/floor_decal/corner/green/full{
 	dir = 8
@@ -302,6 +378,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_north)
+"aJ" = (
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
 "aK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -316,6 +398,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/tempstorage)
+"aL" = (
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
 "aM" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -459,6 +550,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/mining_main/medbay)
+"bb" = (
+/obj/machinery/light,
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
 "bc" = (
 /obj/machinery/botany,
 /turf/simulated/floor/reinforced,
@@ -491,6 +589,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
+"bg" = (
+/obj/structure/cable/blue{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
 "bh" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -1765,7 +1872,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/mixing)
 "eE" = (
-/obj/structure/cable{
+/obj/structure/cable/blue{
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled,
@@ -2201,6 +2308,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
@@ -2873,12 +2983,12 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "hm" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
+	},
+/obj/structure/cable/blue{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/shelter2)
@@ -3161,6 +3271,9 @@
 	id = "Xenobiofire";
 	name = "Threat supression igniter";
 	pixel_x = -25
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
@@ -3447,13 +3560,13 @@
 /area/outpost/mining_main/dorms2)
 "iJ" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
+	},
+/obj/structure/cable/blue{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/research/atmosia)
@@ -4456,6 +4569,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "lA" = (
@@ -4969,6 +5085,12 @@
 	name = "west bump";
 	pixel_x = -28
 	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/blue{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "mL" = (
@@ -5326,6 +5448,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/structure/cable/blue{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/blue{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "nI" = (
@@ -5387,6 +5515,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "nS" = (
@@ -8695,9 +8826,6 @@
 /obj/machinery/door/airlock/external{
 	name = "Toxins Test Chamber"
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/rnd/test_area)
 "wC" = (
@@ -8982,6 +9110,12 @@
 "xs" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
@@ -9759,6 +9893,12 @@
 "zm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
@@ -10866,11 +11006,11 @@
 /area/outpost/research/anomaly)
 "BR" = (
 /obj/machinery/door/firedoor/glass,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = null
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/shelter3)
@@ -12193,6 +12333,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "Fe" = (
@@ -12795,6 +12938,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
@@ -13571,6 +13717,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/blue{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "IG" = (
@@ -13747,6 +13899,9 @@
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 1
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
@@ -14227,6 +14382,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "Ki" = (
@@ -14250,6 +14408,9 @@
 "Km" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "Kp" = (
@@ -14472,6 +14633,9 @@
 /obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
@@ -15455,9 +15619,6 @@
 /obj/structure/window/reinforced,
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "Ni" = (
@@ -15788,6 +15949,9 @@
 "NZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "Oa" = (
@@ -16450,6 +16614,9 @@
 	dir = 8;
 	network = list("Research","Toxins Test Area")
 	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "PB" = (
@@ -16923,12 +17090,12 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/mine/explored)
 "QT" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
+	},
+/obj/structure/cable/blue{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/shelter3)
@@ -16958,6 +17125,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
@@ -17748,6 +17918,9 @@
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 28
+	},
+/obj/structure/cable/blue{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/anomaly_analysis)
@@ -19299,6 +19472,12 @@
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
@@ -37328,7 +37507,7 @@ cb
 cb
 cb
 rn
-sV
+ad
 hX
 Md
 IL
@@ -37658,7 +37837,7 @@ FX
 sV
 sV
 Ij
-Dn
+ae
 sV
 Gj
 lm
@@ -37976,13 +38155,13 @@ cb
 cb
 cb
 Ld
-sV
+ad
 xs
 Wz
 yG
 RN
 mv
-Dn
+ag
 Km
 aG
 dk
@@ -38139,7 +38318,7 @@ cb
 cb
 tV
 sV
-sV
+aJ
 sV
 hd
 RL
@@ -38301,13 +38480,13 @@ rg
 dk
 kY
 IX
-sV
+aL
 rN
 HH
 RN
 VP
-Dn
-sV
+an
+ad
 Id
 cb
 cb
@@ -38463,7 +38642,7 @@ Nb
 Nb
 Nb
 sV
-pI
+bb
 Nb
 RE
 rl
@@ -38624,8 +38803,8 @@ cb
 cb
 cb
 LA
-sV
-sV
+ad
+bg
 EO
 sV
 sV
@@ -38787,7 +38966,7 @@ cb
 cb
 MA
 sV
-sV
+aJ
 qL
 JS
 JS
@@ -38949,12 +39128,12 @@ rg
 dk
 St
 IX
+aL
 sV
-sV
-WP
+ax
 PA
-sV
-sV
+aw
+aq
 WP
 Ax
 cb
