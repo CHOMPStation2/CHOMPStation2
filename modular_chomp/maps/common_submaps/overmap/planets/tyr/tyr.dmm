@@ -334,7 +334,9 @@
 /obj/structure/safe,
 /obj/item/storage/belt/holding,
 /obj/item/personal_shield_generator/belt/fossiltank,
-/obj/item/storage/firstaid/combat,
+/obj/item/ratvarian_spear,
+/obj/item/rig/ch/clockwork,
+/obj/item/gun/energy/clockwork,
 /turf/simulated/floor/tiled,
 /area/planet/tyr/eclipse_refinery)
 "bt" = (
@@ -2256,13 +2258,6 @@
 	},
 /turf/simulated/shuttle/floor/alien,
 /area/planet/tyr/ancient_ruins/one)
-"if" = (
-/obj/structure/safe,
-/obj/item/storage/belt/holding,
-/obj/item/personal_shield_generator/belt/fossiltank,
-/obj/item/storage/firstaid/experimental,
-/turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
 "ig" = (
 /turf/simulated/floor/tiled/purple,
 /area/planet/tyr/eclipse_refinery)
@@ -68299,7 +68294,7 @@ kn
 ig
 aL
 eO
-if
+bs
 eO
 hl
 aH
