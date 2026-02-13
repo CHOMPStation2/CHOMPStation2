@@ -16,7 +16,7 @@
 		/obj/item/ammo_magazine/clip/c762/hunter = 9,
 		/obj/item/gun/projectile/shotgun/pump/rifle = 2)
 
-/obj/structure/closet/secure_closet/guncabinet/rifle/Initialize()
+/obj/structure/closet/secure_closet/guncabinet/rifle/Initialize(mapload)
 	if(prob(85))
 		starts_with += /obj/item/gun/projectile/shotgun/pump/rifle
 	else
@@ -62,7 +62,7 @@
 		/obj/item/reagent_containers/food/snacks/liquidprotein,
 		/obj/item/cataloguer)
 
-/obj/structure/closet/secure_closet/explorer/Initialize()
+/obj/structure/closet/secure_closet/explorer/Initialize(mapload)
 	if(prob(50))
 		starts_with += /obj/item/storage/backpack/explorer
 	else
@@ -72,6 +72,7 @@
 	return ..()
 
 //SAR Lockers
+
 /obj/structure/closet/secure_closet/sar
 	name = "search and rescue locker"
 	desc = "Supplies for a wilderness first responder."
@@ -146,7 +147,7 @@
 		/obj/item/radio,
 		/obj/item/gps/explorer)
 
-/obj/structure/closet/secure_closet/pilot/Initialize()
+/obj/structure/closet/secure_closet/pilot/Initialize(mapload)
 	if(prob(50))
 		starts_with += /obj/item/storage/backpack
 	else
