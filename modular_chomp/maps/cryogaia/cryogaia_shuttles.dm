@@ -1,4 +1,58 @@
 ////////////////////////////////////////
+//////// Disabled shuttles /////////////
+////////////////////////////////////////
+
+/datum/shuttle/autodock/overmap/stargazer
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/overmap/baby_mammoth
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/overmap/ursula
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/overmap/needle
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/overmap/echidna
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/overmap/spacebus
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/overmap/junker
+	defer_initialisation = TRUE
+/datum/shuttle/ferry/escape_pod/escape_pod_cryo
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/ferry/escape_pod/escape_pod_cryo
+	defer_initialisation = TRUE
+/datum/shuttle/ferry/escape_pod/large_escape_pod1
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod1
+	defer_initialisation = TRUE
+/datum/shuttle/ferry/escape_pod/large_escape_pod2
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod2
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/ferry/exploration
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/ferry/aerostat
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/multi/administration
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/multi/centcom
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/ferry/merchant
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/multi/merchant
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/multi/ert
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/multi/skipjack
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/multi/syndicate
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/multi/ninja
+	defer_initialisation = TRUE
+/datum/shuttle/autodock/web_shuttle/shuttle3
+	defer_initialisation = TRUE
+
+
+////////////////////////////////////////
 //////// Excursion Shuttle /////////////
 ////////////////////////////////////////
 // The 'shuttle' of the excursion shuttle

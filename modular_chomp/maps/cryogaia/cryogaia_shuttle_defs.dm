@@ -130,7 +130,7 @@
 
 //////////////////////////////////////////////////////////////
 // Skipjack
-/datum/shuttle/autodock/multi/skipjack
+/datum/shuttle/autodock/multi/heist
 	name = "Skipjack"
 	warmup_time = 0
 	shuttle_area = /area/shuttle/skipjack

@@ -15,13 +15,6 @@
 #define Z_LEVEL_REDGATE					24
 #define Z_LEVEL_VRWORLD					25
 
-//Camera networks
-#define NETWORK_CRYOGAIA "Cryogaia"
-// Defined in another file #define NETWORK_TCOMMS "Telecommunications" //Using different from Polaris one for better name
-// defined in another file #define NETWORK_OUTSIDE "Outside"
-// defined in another file #define NETWORK_EXPLORATION "Exploration"
-// defined in another file #define NETWORK_XENOBIO "Xenobiology"
-
 /datum/map/cryogaia
 	name = "Cryogaia"
 	full_name = "NSB Cryogaia"
@@ -70,7 +63,6 @@
 							NETWORK_CIRCUITS,
 							NETWORK_CIVILIAN,
 							NETWORK_COMMAND,
-							NETWORK_CRYOGAIA,
 							NETWORK_ENGINE,
 							NETWORK_ENGINEERING,
 							NETWORK_SUBSTATIONS,
@@ -404,12 +396,3 @@
 	z = Z_LEVEL_CRYOGAIA_MISC
 	name = "Misc"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
-
-
-//No idea
-#include "../../../maps/expedition_vr/aerostat/_aerostat.dm"
-/datum/map_template/common_lateload/away_aerostat
-	name = "Remmi Aerostat - Z1 Aerostat"
-	desc = "The Virgo 2 Aerostat away mission."
-	mappath = "maps/expedition_vr/aerostat/aerostat.dmm"
-	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
