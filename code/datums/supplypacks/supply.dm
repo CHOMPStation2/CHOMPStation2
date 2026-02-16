@@ -74,7 +74,11 @@
 			/obj/item/reagent_containers/spray/cleaner,
 			/obj/item/reagent_containers/glass/rag,
 			/obj/item/grenade/chem_grenade/cleaner = 3,
+<<<<<<< HEAD
 			/obj/item/vac_attachment, //CHOMPAdd
+=======
+			/obj/item/vac_attachment,
+>>>>>>> f800e32aca (Make vacpacks actually accessible (#19188))
 			/obj/item/clothing/glasses/hud/janitor,
 			/obj/structure/mopbucket
 			)

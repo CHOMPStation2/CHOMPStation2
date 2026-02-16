@@ -86,8 +86,12 @@
 		/obj/item/lightreplacer,
 		/obj/item/storage/bag/trash,
 		/obj/item/storage/belt/janitor,
+<<<<<<< HEAD
 		/obj/item/vac_attachment, //CHOMPAdd
 		/obj/item/holosign_creator, //CHOMPAdd
+=======
+		/obj/item/vac_attachment,
+>>>>>>> f800e32aca (Make vacpacks actually accessible (#19188))
 		/obj/item/clothing/shoes/galoshes,
 		/obj/item/clothing/glasses/hud/janitor
 		)
