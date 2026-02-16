@@ -72,7 +72,6 @@ SUBSYSTEM_DEF(vote)
 /datum/controller/subsystem/vote/proc/get_result() // Get the highest number of votes
 	var/greatest_votes = 0
 	var/total_votes = 0
-<<<<<<< HEAD
 	//CHOMPEdit Begin
 	if(mode == VOTE_CREW_TRANSFER)
 		var/transfer_votes = choices["Initiate Crew Transfer"]
@@ -91,19 +90,8 @@ SUBSYSTEM_DEF(vote)
 			if(votes > greatest_votes)
 				greatest_votes = votes
 	//CHOMPEdit End
-	if(!CONFIG_GET(flag/vote_no_default) && choices.len) // Default-vote for everyone who didn't vote // CHOMPEdit
-		var/non_voters = (GLOB.clients.len - total_votes)
-=======
-
-	for(var/option in choices)
-		var/votes = choices[option]
-		total_votes += votes
-		if(votes > greatest_votes)
-			greatest_votes = votes
-
-	if(!config.vote_no_default && length(choices)) // Default-vote for everyone who didn't vote
+	if(!CONFIG_GET(flag/vote_no_default) && length(choices)) // Default-vote for everyone who didn't vote // CHOMPEdit
 		var/non_voters = (length(GLOB.clients) - total_votes)
->>>>>>> a55b487389 (moves all subsystems to length (#19168))
 		if(non_voters > 0)
 			if(mode == VOTE_RESTART)
 				choices["Continue Playing"] += non_voters
