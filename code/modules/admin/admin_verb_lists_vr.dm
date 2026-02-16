@@ -101,11 +101,7 @@ GLOBAL_LIST_INIT(admin_verbs_fun, list(
 	/datum/admins/proc/call_drop_pod,
 	/client/proc/player_effects,
 	/client/proc/admin_lightning_strike,
-<<<<<<< HEAD
 	/client/proc/tgui_admin_lists, //CHOMPStation Add
-	/client/proc/cmd_admin_droppod_deploy,
-=======
->>>>>>> 91c841db1e (move a bunch of admin verbs to the subsystem (#19156))
 	/client/proc/adminorbit,
 	/client/proc/getPlayerStatus,
 	/client/proc/manage_event_triggers,
