@@ -751,31 +751,17 @@
 // 	build_path = /obj/item/circuitboard/mecha/gopher/main
 // 	materials = list(MAT_GLASS = 2000)
 
-<<<<<<< HEAD
 // /datum/design_techweb/mechfab/gopher/gopher_peri
 // 	name = "'Gopher' peripherals control circuit"
 // 	id = "gopher_peri"
 // 	build_path = /obj/item/circuitboard/mecha/gopher/peripherals
-// 	materials = list(MAT_GLASS = 2000)
+// 	materials = DEFAULT_CIRCUIT_MATERIALS
 
 // /datum/design_techweb/mechfab/gopher/chassis
 // 	name = "Gopher Chassis"
 // 	id = "gopher_chassis"
 // 	build_path = /obj/item/mecha_parts/micro/chassis/gopher
-// 	materials = list(MAT_STEEL = 7000)
-=======
-/datum/design_techweb/mechfab/gopher/gopher_main
-	name = "'Gopher' central control circuit"
-	id = "gopher_main"
-	build_path = /obj/item/circuitboard/mecha/gopher/main
-	materials = DEFAULT_CIRCUIT_MATERIALS
-
-/datum/design_techweb/mechfab/gopher/gopher_peri
-	name = "'Gopher' peripherals control circuit"
-	id = "gopher_peri"
-	build_path = /obj/item/circuitboard/mecha/gopher/peripherals
-	materials = DEFAULT_CIRCUIT_MATERIALS
->>>>>>> 11250fa9d3 (Experisci Expansion part 0.5 (#18631))
+// 	materials = DEFAULT_CIRCUIT_MATERIALS
 
 // /datum/design_techweb/mechfab/gopher/torso
 // 	name = "Gopher Torso"
@@ -841,50 +827,27 @@
 // 	id = "polecat_main"
 // 	// req_tech = list(TECH_DATA = 4)
 // 	build_path = /obj/item/circuitboard/mecha/polecat/main
-// 	materials = list(MAT_GLASS = 2000)
+// 	materials = DEFAULT_CIRCUIT_MATERIALS
 
-<<<<<<< HEAD
 // /datum/design_techweb/mechfab/polecat/polecat_peri
 // 	name = "'Polecat' peripherals control circuit"
 // 	id = "polecat_peri"
 // 	// req_tech = list(TECH_DATA = 4)
 // 	build_path = /obj/item/circuitboard/mecha/polecat/peripherals
-// 	materials = list(MAT_GLASS = 2000)
+// 	materials = DEFAULT_CIRCUIT_MATERIALS
 
 // /datum/design_techweb/mechfab/polecat/polecat_targ
 // 	name = "'Polecat' weapon control and targeting circuit"
 // 	id = "polecat_targ"
 // 	// req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
 // 	build_path = /obj/item/circuitboard/mecha/polecat/targeting
-// 	materials = list(MAT_GLASS = 2000)
+// 	materials = DEFAULT_CIRCUIT_MATERIALS
 
 // /datum/design_techweb/mechfab/polecat/chassis
 // 	name = "Polecat Chassis"
 // 	id = "polecat_chassis"
 // 	build_path = /obj/item/mecha_parts/micro/chassis/polecat
 // 	materials = list(MAT_STEEL = 7000)
-=======
-/datum/design_techweb/mechfab/polecat/polecat_main
-	name = "'Polecat' central control circuit"
-	id = "polecat_main"
-	// req_tech = list(TECH_DATA = 4)
-	build_path = /obj/item/circuitboard/mecha/polecat/main
-	materials = DEFAULT_CIRCUIT_MATERIALS
-
-/datum/design_techweb/mechfab/polecat/polecat_peri
-	name = "'Polecat' peripherals control circuit"
-	id = "polecat_peri"
-	// req_tech = list(TECH_DATA = 4)
-	build_path = /obj/item/circuitboard/mecha/polecat/peripherals
-	materials = DEFAULT_CIRCUIT_MATERIALS
-
-/datum/design_techweb/mechfab/polecat/polecat_targ
-	name = "'Polecat' weapon control and targeting circuit"
-	id = "polecat_targ"
-	// req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
-	build_path = /obj/item/circuitboard/mecha/polecat/targeting
-	materials = DEFAULT_CIRCUIT_MATERIALS
->>>>>>> 11250fa9d3 (Experisci Expansion part 0.5 (#18631))
 
 // /datum/design_techweb/mechfab/polecat/torso
 // 	name = "Polecat Torso"
@@ -933,50 +896,27 @@
 // 	id = "weasel_main"
 // 	// req_tech = list(TECH_DATA = 4)
 // 	build_path = /obj/item/circuitboard/mecha/weasel/main
-// 	materials = list(MAT_GLASS = 2000)
+// 	materials = DEFAULT_CIRCUIT_MATERIALS
 
-<<<<<<< HEAD
 // /datum/design_techweb/mechfab/weasel/weasel_peri
 // 	name = "'Weasel' peripherals control circuit"
 // 	id = "weasel_peri"
 // 	// req_tech = list(TECH_DATA = 4)
 // 	build_path = /obj/item/circuitboard/mecha/weasel/peripherals
-// 	materials = list(MAT_GLASS = 2000)
+// 	materials = DEFAULT_CIRCUIT_MATERIALS
 
 // /datum/design_techweb/mechfab/weasel/weasel_targ
 // 	name = "'Weasel' weapon control and targeting circuit"
 // 	id = "weasel_targ"
 // 	// req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
 // 	build_path = /obj/item/circuitboard/mecha/weasel/targeting
-// 	materials = list(MAT_GLASS = 2000)
+// 	materials = DEFAULT_CIRCUIT_MATERIALS
 
 // /datum/design_techweb/mechfab/weasel/chassis
 // 	name = "Weasel Chassis"
 // 	id = "weasel_chassis"
 // 	build_path = /obj/item/mecha_parts/micro/chassis/weasel
 // 	materials = list(MAT_STEEL = 7000)
-=======
-/datum/design_techweb/mechfab/weasel/weasel_main
-	name = "'Weasel' central control circuit"
-	id = "weasel_main"
-	// req_tech = list(TECH_DATA = 4)
-	build_path = /obj/item/circuitboard/mecha/weasel/main
-	materials = DEFAULT_CIRCUIT_MATERIALS
-
-/datum/design_techweb/mechfab/weasel/weasel_peri
-	name = "'Weasel' peripherals control circuit"
-	id = "weasel_peri"
-	// req_tech = list(TECH_DATA = 4)
-	build_path = /obj/item/circuitboard/mecha/weasel/peripherals
-	materials = DEFAULT_CIRCUIT_MATERIALS
-
-/datum/design_techweb/mechfab/weasel/weasel_targ
-	name = "'Weasel' weapon control and targeting circuit"
-	id = "weasel_targ"
-	// req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
-	build_path = /obj/item/circuitboard/mecha/weasel/targeting
-	materials = DEFAULT_CIRCUIT_MATERIALS
->>>>>>> 11250fa9d3 (Experisci Expansion part 0.5 (#18631))
 
 // /datum/design_techweb/mechfab/weasel/torso
 // 	name = "Weasel Torso"
