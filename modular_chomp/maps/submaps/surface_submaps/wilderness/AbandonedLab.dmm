@@ -69,7 +69,7 @@
 "dI" = (
 /obj/item/material/shard,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege,
 /turf/simulated/floor/tiled/steel,
 /area/submap/AbandonedLab)
 "dO" = (
