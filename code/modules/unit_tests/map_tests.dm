@@ -207,20 +207,13 @@
 /datum/unit_test/ladder_test/Run()
 	for(var/obj/structure/ladder/L in world)
 		var/turf/T = get_turf(L)
+		TEST_ASSERT(T, "[L.x].[L.y].[L.z]: Map - Ladder on invalid turf")
 		if(!T)
-			TEST_FAIL("[L.x].[L.y].[L.z]: Map - Ladder on invalid turf")
 			continue
 
 		if(L.allowed_directions & UP)
-			if(!L.target_up)
-				TEST_FAIL("[T.x].[T.y].[T.z]: Map - Ladder allows upward movement, but had no ladder above it")
+			TEST_ASSERT(L.target_up, "[T.x].[T.y].[T.z]: Map - Ladder allows upward movement, but had no ladder above it")
 		if(L.allowed_directions & DOWN)
-<<<<<<< HEAD
-			if(!L.target_down)
-				TEST_FAIL("[T.x].[T.y].[T.z]: Map - Ladder allows downward movement, but had no ladder beneath it")
-		if(T.density)
-			TEST_FAIL("[L.x].[L.y].[L.z]: Map - Ladder is inside a wall")
-=======
 			TEST_ASSERT(L.target_down, "[T.x].[T.y].[T.z]: Map - Ladder allows downward movement, but had no ladder beneath it")
 
 		TEST_ASSERT(!T.density, "[L.x].[L.y].[L.z]: Map - Ladder is inside a wall")
@@ -243,4 +236,3 @@
 
 	if(failed)
 		TEST_FAIL("Map has smes with duplicated RCon_tag")
->>>>>>> 874f7faf76 (Smes validity test (#19214))
