@@ -170,7 +170,7 @@
 	primitive_expression_messages=list("shudders.","gasps.","chokes.")
 	added_component_path = /datum/component/rotting_disability
 
-	list/banned_species	= (/datum/species/protean, /datum/species/shapeshifter/promethean)	//CHOMPStation Edit - Prometheans and Proteans dont have Genetics. 
+	banned_species	= (/datum/species/protean, /datum/species/shapeshifter/promethean)	//CHOMPStation Edit - Prometheans and Proteans dont have Genetics. 
 
 /datum/trait/negative/disability_gibbing
 	name = "Gibbingtons"
