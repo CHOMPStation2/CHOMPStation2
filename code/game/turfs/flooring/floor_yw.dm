@@ -5,7 +5,7 @@
 	icon_state = "clockwork_floor"
 //	floor_tile = /obj/item/stack/tile/bronze
 
-	initial_flooring = /decl/flooring/bronze
+	initial_flooring = /datum/decl/flooring/bronze
 
 /turf/simulated/floor/flesh/attackby()
 	return

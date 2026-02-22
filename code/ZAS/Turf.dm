@@ -255,7 +255,7 @@
 			postponed.Add(unsim)
 
 	if(!TURF_HAS_VALID_ZONE(src)) //Still no zone, make a new one. CHOMPEdit
-		var/datum/zone/newzone = new/zone()
+		var/datum/zone/newzone = new/datum/zone()
 		newzone.add(src)
 
 	#ifdef ZASDBG
