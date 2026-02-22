@@ -150,7 +150,7 @@
 /area/awaymission/snowfield/medical/patients)
 "ahY" = (
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -1822,7 +1822,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -5630,7 +5630,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -8246,7 +8246,7 @@
 /area/awaymission/snowfield/medical/surgery)
 "hzx" = (
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -9200,7 +9200,7 @@
 	dir = 1
 	},
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/oxygen/fire;
+	closet_appearance = /datum/decl/closet_appearance/oxygen/fire;
 	name = "fire-safety closet";
 	opened = 1
 	},
@@ -9967,7 +9967,7 @@
 	dir = 8
 	},
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -10695,7 +10695,7 @@
 /area/awaymission/snowfield/dorms/dorm10)
 "jGT" = (
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -10961,7 +10961,7 @@
 /area/awaymission/snowfield/hallway/southhallway)
 "jRr" = (
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -13494,7 +13494,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/clothing/suit/bio_suit/general,
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -16056,7 +16056,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/window/reinforced,
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/oxygen/fire;
+	closet_appearance = /datum/decl/closet_appearance/oxygen/fire;
 	name = "fire-safety closet";
 	opened = 1
 	},
@@ -20361,7 +20361,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -24169,7 +24169,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/oxygen/fire;
+	closet_appearance = /datum/decl/closet_appearance/oxygen/fire;
 	name = "fire-safety closet";
 	opened = 1
 	},
@@ -25583,7 +25583,7 @@
 	dir = 4
 	},
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
