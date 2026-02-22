@@ -39385,7 +39385,7 @@
 	icon_state = "0-5"
 	},
 /obj/machinery/power/smes/buildable/engine_default{
-	RCon_tag = "Telecommunications Satellite"
+	RCon_tag = "AI Chamber"
 	},
 /obj/item/smes_coil,
 /obj/item/smes_coil,
@@ -40048,7 +40048,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable/engine_default{
-	RCon_tag = "Telecommunications Satellite"
+	RCon_tag = "AI Server"
 	},
 /obj/item/smes_coil,
 /obj/item/smes_coil,
