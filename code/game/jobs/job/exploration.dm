@@ -47,7 +47,7 @@
 
 	access = list(ACCESS_EVA, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_PILOT, ACCESS_EXPLORER, ACCESS_GATEWAY, ACCESS_PATHFINDER, ACCESS_RC_ANNOUNCE)
 	minimal_access = list(ACCESS_EVA, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_PILOT, ACCESS_EXPLORER, ACCESS_GATEWAY, ACCESS_PATHFINDER, ACCESS_RC_ANNOUNCE)
-	outfit_type = /decl/hierarchy/outfit/job/pathfinder
+	outfit_type = /datum/decl/hierarchy/outfit/job/pathfinder
 	job_description = "The " + JOB_PATHFINDER + "'s job is to lead and manage expeditions, and is the primary authority on all off-station expeditions."
 	alt_titles = list(JOB_ALT_EXPEDITION_LEAD = /datum/alt_title/expedition_lead, JOB_ALT_EXPLORATION_MANAGER = /datum/alt_title/exploration_manager)
 
@@ -105,7 +105,7 @@
 	pto_type = PTO_EXPLORATION
 	access = list(ACCESS_EXPLORER, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_EVA)
 	minimal_access = list(ACCESS_EXPLORER, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_EVA)
-	outfit_type = /decl/hierarchy/outfit/job/explorer2
+	outfit_type = /datum/decl/hierarchy/outfit/job/explorer2
 	job_description = "An " + JOB_EXPLORER + " searches for interesting things, and returns them to the station."
 	alt_titles = list(JOB_ALT_SURVEYOR = /datum/alt_title/surveyor, JOB_ALT_OFFSITE_SCOUT = /datum/alt_title/offsite_scout)
 
@@ -131,9 +131,15 @@
 	economic_modifier = 6
 	minimal_player_age = 3
 	pto_type = PTO_EXPLORATION
+<<<<<<< HEAD
 	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_EVA, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS,ACCESS_EXPLORER) // CHOMPedit: No more pilot, surgery or chemistry access.
 	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE,ACCESS_EXPLORER) // CHOMPedit: No more pilot access.
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
+=======
+	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_EVA, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_PILOT)
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_PILOT)
+	outfit_type = /datum/decl/hierarchy/outfit/job/medical/sar
+>>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	job_description = "A " + JOB_FIELD_MEDIC + " works as the field doctor of expedition teams."
 	alt_titles = list(JOB_ALT_EXPEDITION_MEDIC = /datum/alt_title/expedition_medic, JOB_ALT_OFFSITE_MEDIC = /datum/alt_title/offsite_medic)
 

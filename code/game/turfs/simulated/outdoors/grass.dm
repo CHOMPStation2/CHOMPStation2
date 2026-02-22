@@ -2,7 +2,7 @@
 	name = "grass"
 	icon_state = "grass0"
 	edge_blending_priority = 4
-	initial_flooring = /decl/flooring/grass/outdoors // VOREStation Edit
+	initial_flooring = /datum/decl/flooring/grass/outdoors // VOREStation Edit
 	can_dig = TRUE
 	/*turf_layers = list( CHOMP Removal Begin
 		/turf/simulated/floor/outdoors/rocks,
@@ -34,8 +34,13 @@
 /turf/simulated/floor/outdoors/grass/sif
 	name = "growth"
 	icon_state = "grass_sif0"
+<<<<<<< HEAD
 	initial_flooring = /decl/flooring/grass/sif
 	edge_blending_priority = 3 // CHOMPedit
+=======
+	initial_flooring = /datum/decl/flooring/grass/sif
+	edge_blending_priority = 4
+>>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	grass_chance = 5
 	var/tree_chance = 0.7 //CHOMPedit
 
@@ -83,12 +88,12 @@
 	grass_chance = 50
 	//tree_chance = 20
 	edge_blending_priority = 5
-	initial_flooring = /decl/flooring/grass/outdoors/forest // VOREStation Edit
+	initial_flooring = /datum/decl/flooring/grass/outdoors/forest // VOREStation Edit
 
 /turf/simulated/floor/outdoors/grass/sif/forest
 	name = "thick growth"
 	icon_state = "grass_sif_dark0"
-	initial_flooring = /decl/flooring/grass/sif/forest
+	initial_flooring = /datum/decl/flooring/grass/sif/forest
 	edge_blending_priority = 5
 	tree_chance = 4
 	grass_chance = 1

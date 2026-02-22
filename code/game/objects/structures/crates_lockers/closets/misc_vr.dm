@@ -53,7 +53,7 @@
 /obj/structure/closet/secure_closet/explorer
 	name = "explorer locker" //CHOMP explo keep
 	req_access = list(ACCESS_EXPLORER)
-	closet_appearance = /decl/closet_appearance/secure_closet/expedition/explorer
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/expedition/explorer
 
 	starts_with = list(
 		/obj/item/clothing/under/explorer,
@@ -93,8 +93,13 @@
  */
 /obj/structure/closet/secure_closet/pathfinder
 	name = "pathfinder locker"
+<<<<<<< HEAD
 	req_access = list(ACCESS_PATHFINDER) //CHOMP explo keep
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pathfinder
+=======
+	req_access = list(ACCESS_EXPLORER)
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/expedition/pathfinder
+>>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 
 	starts_with = list(
 		/obj/item/clothing/under/explorer,
@@ -142,7 +147,7 @@
 	name = "field medic locker"
 	desc = "Supplies for a wilderness first responder."
 	req_access = list(ACCESS_MEDICAL_EQUIP)
-	closet_appearance = /decl/closet_appearance/secure_closet/expedition/sar
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/expedition/sar
 
 	starts_with = list(
 		/obj/item/storage/backpack/dufflebag/emt,
@@ -194,7 +199,7 @@
 /obj/structure/closet/secure_closet/pilot
 	name = "pilot locker"
 	req_access = list(ACCESS_PILOT)
-	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pilot
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/expedition/pilot
 
 	starts_with = list(
 		/obj/item/storage/backpack/parachute,
@@ -254,7 +259,7 @@
 	name = "autolok suit storage"
 	desc = "It's wall-mounted storage unit for an AutoLok suit."
 	icon = 'icons/obj/closets/bases/wall_double.dmi'
-	closet_appearance = /decl/closet_appearance/wall_double/autolok
+	closet_appearance = /datum/decl/closet_appearance/wall_double/autolok
 	open_sound = 'sound/machines/click.ogg'
 	close_sound = 'sound/machines/click.ogg'
 	anchored = TRUE
@@ -275,7 +280,7 @@
 	name = "emergency suit storage"
 	desc = "It's wall-mounted storage unit for an emergency suit."
 	icon = 'icons/obj/closets/bases/wall.dmi'
-	closet_appearance = /decl/closet_appearance/wall/emergency
+	closet_appearance = /datum/decl/closet_appearance/wall/emergency
 	open_sound = 'sound/machines/click.ogg'
 	close_sound = 'sound/machines/click.ogg'
 	anchored = TRUE

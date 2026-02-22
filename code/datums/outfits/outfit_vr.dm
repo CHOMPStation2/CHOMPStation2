@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/USDF/Marine
+/datum/decl/hierarchy/outfit/USDF/Marine
 	name = "USDF marine"
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban
 	shoes = /obj/item/clothing/shoes/boots/jackboots
@@ -9,7 +9,7 @@
 	r_hand = /obj/item/ammo_magazine/m95
 	back = /obj/item/gun/projectile/automatic/battlerifle
 	backpack_contents = list(/obj/item/storage/box = 1)
-	hierarchy_type = /decl/hierarchy/outfit/wizard
+	hierarchy_type = /datum/decl/hierarchy/outfit/wizard
 	head = /obj/item/clothing/head/helmet/combat/USDF
 	suit = /obj/item/clothing/suit/armor/combat/USDF
 	belt = /obj/item/storage/belt/security/tactical
@@ -18,7 +18,7 @@
 	headset_alt = /obj/item/radio/headset/centcom
 	headset_earbud = /obj/item/radio/headset/centcom
 
-/decl/hierarchy/outfit/USDF/Marine/equip_id(mob/living/carbon/human/H)
+/datum/decl/hierarchy/outfit/USDF/Marine/equip_id(mob/living/carbon/human/H)
 	var/obj/item/card/id/C = ..()
 	C.name = "[H.real_name]'s military ID Card"
 	C.icon_state = "lifetime"
@@ -28,7 +28,7 @@
 	C.registered_name = H.real_name
 	return C
 
-/decl/hierarchy/outfit/USDF/Officer
+/datum/decl/hierarchy/outfit/USDF/Officer
 	name = "USDF officer"
 	head = /obj/item/clothing/head/dress/army/command
 	shoes = /obj/item/clothing/shoes/boots/jackboots
@@ -44,7 +44,7 @@
 	headset_alt = /obj/item/radio/headset/centcom
 	headset_earbud = /obj/item/radio/headset/centcom
 
-/decl/hierarchy/outfit/USDF/Officer/equip_id(mob/living/carbon/human/H)
+/datum/decl/hierarchy/outfit/USDF/Officer/equip_id(mob/living/carbon/human/H)
 	var/obj/item/card/id/C = ..()
 	C.name = "[H.real_name]'s military ID Card"
 	C.icon_state = "lifetime"
@@ -54,8 +54,13 @@
 	C.registered_name = H.real_name
 	return C
 
+<<<<<<< HEAD
 /decl/hierarchy/outfit/solcom/representative
 	name = "SolGov Representative" //YW EDIT: SolGov
+=======
+/datum/decl/hierarchy/outfit/solcom/representative
+	name = "SolCom Representative"
+>>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	shoes = /obj/item/clothing/shoes/laceup
 	uniform = /obj/item/clothing/under/suit_jacket/navy
 	back = /obj/item/storage/backpack/satchel
@@ -68,7 +73,7 @@
 	headset_alt = /obj/item/radio/headset/centcom
 	headset_earbud = /obj/item/radio/headset/centcom
 
-/decl/hierarchy/outfit/solcom/representative/equip_id(mob/living/carbon/human/H)
+/datum/decl/hierarchy/outfit/solcom/representative/equip_id(mob/living/carbon/human/H)
 	var/obj/item/card/id/C = ..()
 	C.name = "[H.real_name]'s SolGov ID Card" //YW EDIT: SolGov
 	C.icon_state = "lifetime"
@@ -78,7 +83,7 @@
 	C.registered_name = H.real_name
 	return C
 
-/decl/hierarchy/outfit/imperial/soldier
+/datum/decl/hierarchy/outfit/imperial/soldier
 	name = "Imperial soldier"
 	head = /obj/item/clothing/head/helmet/combat/imperial
 	shoes =/obj/item/clothing/shoes/leg_guard/combat/imperial
@@ -98,7 +103,7 @@
 	headset_alt = /obj/item/radio/headset/syndicate
 	headset_earbud = /obj/item/radio/headset/syndicate
 
-/decl/hierarchy/outfit/imperial/officer
+/datum/decl/hierarchy/outfit/imperial/officer
 	name = "Imperial officer"
 	head = /obj/item/clothing/head/helmet/combat/imperial/centurion
 	shoes = /obj/item/clothing/shoes/leg_guard/combat/imperial
@@ -123,7 +128,7 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 */
 
 
-/decl/hierarchy/outfit/job/explorer2
+/datum/decl/hierarchy/outfit/job/explorer2
 	name = OUTFIT_JOB_NAME(JOB_EXPLORER)
 	shoes = /obj/item/clothing/shoes/boots/winter/explorer
 	uniform = /obj/item/clothing/under/explorer
@@ -141,7 +146,7 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	headset_alt = /obj/item/radio/headset/alt/explorer
 	headset_earbud = /obj/item/radio/headset/explorer
 
-/decl/hierarchy/outfit/job/pilot
+/datum/decl/hierarchy/outfit/job/pilot
 	name = OUTFIT_JOB_NAME(JOB_PILOT)
 	shoes = /obj/item/clothing/shoes/black
 	uniform = /obj/item/clothing/under/rank/pilot1/no_webbing
@@ -160,7 +165,7 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	headset_alt = /obj/item/radio/headset/alt/pilot
 	headset_earbud = /obj/item/radio/headset/alt/pilot
 
-/decl/hierarchy/outfit/job/medical/sar
+/datum/decl/hierarchy/outfit/job/medical/sar
 	name = OUTFIT_JOB_NAME(JOB_FIELD_MEDIC)
 	uniform = /obj/item/clothing/under/utility/blue
 	//suit = /obj/item/clothing/suit/storage/hooded/wintercoat/medical/sar
@@ -180,7 +185,7 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	headset_alt = /obj/item/radio/headset/alt/sar
 	headset_earbud = /obj/item/radio/headset/sar
 
-/decl/hierarchy/outfit/job/pathfinder
+/datum/decl/hierarchy/outfit/job/pathfinder
 	name = OUTFIT_JOB_NAME(JOB_PATHFINDER)
 	shoes = /obj/item/clothing/shoes/boots/winter/explorer
 	uniform = /obj/item/clothing/under/explorer //TODO: Uniforms.
@@ -198,6 +203,6 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	headset_alt = /obj/item/radio/headset/alt/pathfinder
 	headset_earbud = /obj/item/radio/headset/pathfinder
 
-/decl/hierarchy/outfit/job/assistant/explorer
+/datum/decl/hierarchy/outfit/job/assistant/explorer
 	id_type = /obj/item/card/id/exploration
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_COMPREHENSIVE_SURVIVAL

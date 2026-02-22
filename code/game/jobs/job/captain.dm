@@ -32,7 +32,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	pto_type = PTO_CIVILIAN
 	dept_time_required = 80 //Pending something more complicated
 
-	outfit_type = /decl/hierarchy/outfit/job/captain
+	outfit_type = /datum/decl/hierarchy/outfit/job/captain
 	job_description = "The " + JOB_SITE_MANAGER + " manages the other Command Staff, and through them the rest of the station. Though they have access to everything, \
 						they do not understand everything, and are expected to delegate tasks to the appropriate crew member. The " + JOB_SITE_MANAGER + " is expected to \
 						have an understanding of Standard Operating Procedure, and is subject to it, and legal action, in the same way as every other crew member."
@@ -102,8 +102,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO, DEPARTMENT_PLANET)
 	dept_time_required = 60
 
+<<<<<<< HEAD
 	outfit_type = /decl/hierarchy/outfit/job/hop
 	job_description = "The " + JOB_HEAD_OF_PERSONNEL + " manages the Service department and most other civilians. They also \
+=======
+	outfit_type = /datum/decl/hierarchy/outfit/job/hop
+	job_description = "The " + JOB_HEAD_OF_PERSONNEL + " manages the Service department, the Exploration team, and most other civilians. They also \
+>>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 						manage the Supply department, through the " + JOB_QUARTERMASTER + ". In addition, the " + JOB_HEAD_OF_PERSONNEL + " oversees the personal accounts \
 						of the crew, including their money and access. If necessary, the " + JOB_HEAD_OF_PERSONNEL + " is first in line to assume Acting Command." //YW EDIT
 	alt_titles = list(JOB_ALT_CREW_RESOURCE_OFFICER = /datum/alt_title/cro, JOB_ALT_DEPUTY_MANAGER = /datum/alt_title/deputy_manager, JOB_ALT_STAFF_MANAGER = /datum/alt_title/staff_manager,
@@ -165,7 +170,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	access = list(ACCESS_HEADS, ACCESS_KEYCARD_AUTH, ACCESS_RC_ANNOUNCE) //YAWN EDIT
 	minimal_access = list(ACCESS_HEADS, ACCESS_KEYCARD_AUTH, ACCESS_RC_ANNOUNCE)//YAWN EDIT
 
-	outfit_type = /decl/hierarchy/outfit/job/secretary
+	outfit_type = /datum/decl/hierarchy/outfit/job/secretary
 	job_description = "A " + JOB_COMMAND_SECRETARY + " handles paperwork duty for the Heads of Staff, so they can better focus on managing their departments. \
 						They are not Heads of Staff, and have no real authority."
 
