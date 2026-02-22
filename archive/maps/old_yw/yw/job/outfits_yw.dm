@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/job/pathfinder
+/datum/decl/hierarchy/outfit/job/pathfinder
 	name = OUTFIT_JOB_NAME("Pathfinder")
 	shoes = /obj/item/clothing/shoes/boots/winter/explorer
 	uniform = /obj/item/clothing/under/explorer //TODO: Uniforms.
@@ -14,11 +14,11 @@
 	headset_alt = /obj/item/radio/headset/explorer
 	headset_earbud = /obj/item/radio/headset/explorer
 
-/decl/hierarchy/outfit/job/pathfinder/post_equip(mob/living/carbon/human/H)
+/datum/decl/hierarchy/outfit/job/pathfinder/post_equip(mob/living/carbon/human/H)
 	..()
 	for(var/obj/item/clothing/accessory/permit/gun/planetside/permit in H.back.contents)
 		permit.set_name(H.real_name)
 
-/decl/hierarchy/outfit/job/assistant/explorer
+/datum/decl/hierarchy/outfit/job/assistant/explorer
 	id_type = /obj/item/card/id/explorer
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_COMPREHENSIVE_SURVIVAL

@@ -76,7 +76,7 @@
 	pto_type = PTO_EXPLORATION
 	access = list(ACCESS_PILOT, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_EVA, ACCESS_EXPLORER) //CHOMPedit gave pilot a little more access
 	minimal_access = list(ACCESS_PILOT, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_EVA, ACCESS_EXPLORER) //CHOMPedit gave pilot a little more access
-	outfit_type = /decl/hierarchy/outfit/job/pilot
+	outfit_type = /datum/decl/hierarchy/outfit/job/pilot
 	job_description = "A Pilot flies the various shuttles in the Vir System." //CHOMPedit: Replaces Virgo reference with Vir.
 	alt_titles = list("Co-Pilot" = /datum/alt_title/co_pilot, "Navigator" = /datum/alt_title/navigator, "Helmsman" = /datum/alt_title/helmsman)
 

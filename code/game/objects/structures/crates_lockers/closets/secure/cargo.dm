@@ -105,7 +105,7 @@
 /obj/structure/closet/lumber
 	name = "Lumberjack's equipment"
 	desc = "It's a storage unit for Lumberjack equpiment, though it seems the lock is broken."
-	closet_appearance = /decl/closet_appearance/secure_closet/lumber
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/lumber
 
 	starts_with = list(
 		/obj/item/radio/headset/miner,

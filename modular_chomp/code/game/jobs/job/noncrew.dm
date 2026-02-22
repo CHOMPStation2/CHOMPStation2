@@ -13,7 +13,7 @@
 	account_allowed = 0
 	offmap_spawn = TRUE
 
-	outfit_type = /decl/hierarchy/outfit/noncrew
+	outfit_type = /datum/decl/hierarchy/outfit/noncrew
 	job_description = {"Players taking a role of an outsider not employed by NT with no special mechanics. One superpose pod is provided.
 		-----Server rules still apply to the fullest
 		-----Outsiders are considered unauthorized personnel on Southern Cross.
@@ -28,7 +28,7 @@
 
 /datum/alt_title/spacefarer
 	title = "Spacefarer"
-	title_outfit = /decl/hierarchy/outfit/noncrew/spacefarer
+	title_outfit = /datum/decl/hierarchy/outfit/noncrew/spacefarer
 
 /*seems to be a kin only thing?
 /datum/job/noncrew/is_species_banned(species_name, brain_type)
@@ -52,7 +52,7 @@
 	offmap_spawn = TRUE
 	camp_protection = TRUE //So far leave this for shadekin
 
-	outfit_type = /decl/hierarchy/outfit/noncrew
+	outfit_type = /datum/decl/hierarchy/outfit/noncrew
 	job_description = {"Players taking a role of an outsider not employed by NT with no special mechanics. One superpose pod is provided.
 		-----Server rules still apply to the fullest
 		-----Outsiders are considered unauthorized personnel on Southern Cross.

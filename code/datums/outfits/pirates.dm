@@ -17,7 +17,7 @@
 	flags = OUTFIT_HAS_JETPACK
 
 //CHOMPAdd
-/decl/hierarchy/outfit/pirate/vox
+/datum/decl/hierarchy/outfit/pirate/vox
 	name = "Vox Raider"
 	uniform = /obj/item/clothing/under/color/black
 	suit = /obj/item/clothing/suit/armor/vox_scrap

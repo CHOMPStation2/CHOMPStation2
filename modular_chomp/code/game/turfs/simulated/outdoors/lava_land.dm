@@ -18,7 +18,7 @@
 	density = TRUE
 	opacity = TRUE
 	edge_blending_priority = 7
-	initial_flooring = /decl/flooring/lavaland/ashrock
+	initial_flooring = /datum/decl/flooring/lavaland/ashrock
 	//turf_layers = list(/turf/simulated/floor/outdoors/lavaland/ash)
 	demote_to = /turf/simulated/floor/outdoors/lavaland/ash
 	var/last_act = 0
@@ -49,7 +49,7 @@
 			demote() // Converts the turf to the next layer in turf_layers.
 	..()
 
-/decl/flooring/lavaland/ashrock
+/datum/decl/flooring/lavaland/ashrock
 	name = "ash covered stone"
 	desc = "Stone that's covered in a thin layer of ash."
 	icon_base = "ashrock"
@@ -58,13 +58,13 @@
 /turf/simulated/floor/outdoors/lavaland/basalt
 	icon_state = "basalt0"
 	edge_blending_priority = 3
-	initial_flooring = /decl/flooring/basalt
+	initial_flooring = /datum/decl/flooring/basalt
 	//turf_layers = list(/turf/simulated/floor/outdoors/lavaland/ash)
 	demote_to = /turf/simulated/floor/outdoors/lavaland/ash
 
 /turf/simulated/floor/outdoors/lavaland/basalt/get_edge_icon_state()
 	return "basalt0"
-/decl/flooring/basalt
+/datum/decl/flooring/basalt
 	name = "basalt"
 	desc = "A hard cracked black rock formed from rapidly cooling lava."
 	icon = 'modular_chomp/icons/turf/lava_land.dmi'

@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/job/security/brigphysician
+/datum/decl/hierarchy/outfit/job/security/brigphysician
 	name = OUTFIT_JOB_NAME(JOB_BRIG_PHYSICIAN)
 	uniform = /obj/item/clothing/under/rank/brigphys
 	id_type = /obj/item/card/id/security/brigphysician

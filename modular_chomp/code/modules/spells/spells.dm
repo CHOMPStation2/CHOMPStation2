@@ -1,6 +1,6 @@
 //This is pretty much just copied from construct_spells but adjusted so anyone can use them
 
-/spell/targeted/unrestricted
+/datum/spell/targeted/unrestricted
 	name = "Base Unrestricted Spell"
 	desc = "If you see this, you should probably remind coders to refactor spell code."
 
@@ -18,7 +18,7 @@
 
 	var/obj/item/spell/unrestricted/spell_obj = null //This is the var that determines what Technomancer-style spell is put into their hands.
 
-/spell/targeted/unrestricted/cast(list/targets, mob/living/user)
+/datum/spell/targeted/unrestricted/cast(list/targets, mob/living/user)
 	user.place_spell_in_hand(spell_obj)
 
 /obj/item/spell/unrestricted
@@ -127,7 +127,7 @@
 //		The actual spells
 //
 
-/spell/targeted/unrestricted/plasmastun
+/datum/spell/targeted/unrestricted/plasmastun
 	name = "Plasma Snare"
 	desc = "Fire a debillitating slowing projectile."
 
@@ -144,7 +144,7 @@
 	cooldown = 5
 	fire_sound = 'sound/weapons/weaponsounds_laserstrong.ogg'
 
-/spell/targeted/unrestricted/mend
+/datum/spell/targeted/unrestricted/mend
 	name = "Mend Target"
 	desc = "Mend a target over time."
 

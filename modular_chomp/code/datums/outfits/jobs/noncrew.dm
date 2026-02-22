@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/noncrew
+/datum/decl/hierarchy/outfit/noncrew
 	name = OUTFIT_JOB_NAME(JOB_OUTSIDER)
 	//hierarchy_type = /decl/hierarchy/outfit/noncrew
 	uniform = /obj/item/clothing/under/primitive
@@ -15,14 +15,14 @@
 	headset_alt = /obj/item/radio/headset/outsider
 	headset_earbud = /obj/item/radio/headset/outsider
 
-/decl/hierarchy/outfit/noncrew/post_equip(mob/living/carbon/human/H)
+/datum/decl/hierarchy/outfit/noncrew/post_equip(mob/living/carbon/human/H)
 	..()
 	var/obj/item/spacecash/ewallet/wallet = H.r_store
 	if(istype(wallet))
 		wallet.owner_name = H.real_name
 		wallet.worth = 1000
 
-/decl/hierarchy/outfit/noncrew/spacefarer
+/datum/decl/hierarchy/outfit/noncrew/spacefarer
 	name = OUTFIT_JOB_NAME("Spacefarer")
 	uniform = /obj/item/clothing/under/rank/pilot2
 	shoes = /obj/item/clothing/shoes/boots/jackboots/
@@ -32,7 +32,7 @@
 
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
 
-/decl/hierarchy/outfit/shadekin
+/datum/decl/hierarchy/outfit/shadekin
 	name = OUTFIT_JOB_NAME(JOB_ANOMALY)
 	//hierarchy_type = /decl/hierarchy/outfit/noncrew
 	uniform = /obj/item/clothing/under/primitive
@@ -45,7 +45,7 @@
 
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
 
-/decl/hierarchy/outfit/shadekin/post_equip(mob/living/carbon/human/H)
+/datum/decl/hierarchy/outfit/shadekin/post_equip(mob/living/carbon/human/H)
 	..()
 	var/obj/item/spacecash/ewallet/wallet = H.r_store
 	if(istype(wallet))

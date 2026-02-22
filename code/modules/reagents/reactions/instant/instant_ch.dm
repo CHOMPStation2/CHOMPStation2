@@ -1,57 +1,57 @@
-/decl/chemical_reaction/instant/claridyl
+/datum/decl/chemical_reaction/instant/claridyl
 	name = REAGENT_CLARIDYL
 	id = REAGENT_ID_CLARIDYL
 	result = REAGENT_ID_CLARIDYL
 	required_reagents = list(REAGENT_ID_LITHIUM = 1, REAGENT_ID_RADIUM = 1, REAGENT_ID_SUGAR = 1)
 	result_amount = 1
 
-/decl/chemical_reaction/instant/dyloteane
+/datum/decl/chemical_reaction/instant/dyloteane
 	name = REAGENT_DYLOTEANE
 	id = REAGENT_ID_DYLOTEANE
 	result = REAGENT_ID_DYLOTEANE
 	required_reagents = list(REAGENT_ID_ANTITOXIN = 1, REAGENT_ID_TEA = 1)
 	result_amount = 1
 
-/decl/chemical_reaction/instant/dyloteane/super
+/datum/decl/chemical_reaction/instant/dyloteane/super
 	name = "dyloteanesuper"
 	id = "dyloteanesuper"
 	result = REAGENT_ID_DYLOTEANE
 	required_reagents = list(REAGENT_ID_ANTITOXIN = 1, REAGENT_ID_TEA = 1,REAGENT_ID_SUGAR = 1)
 	result_amount = 10 //by the powers of england for sugaring your tea you gain *10 result
 
-/decl/chemical_reaction/instant/eden
+/datum/decl/chemical_reaction/instant/eden
 	name = REAGENT_EDEN
 	id = REAGENT_ID_EDEN
 	result = REAGENT_ID_EDEN
 	required_reagents = list(REAGENT_ID_ANTITOXIN = 60, REAGENT_ID_PHORON = 60)
 	result_amount = 1
 
-/decl/chemical_reaction/instant/eden/snake
+/datum/decl/chemical_reaction/instant/eden/snake
 	id = REAGENT_ID_EDENSNAKE
 	result = REAGENT_ID_EDENSNAKE
 	required_reagents = list(REAGENT_ID_EDEN = 1, REAGENT_ID_ETHANOL = 1)
 
-/decl/chemical_reaction/instant/tercozolam
+/datum/decl/chemical_reaction/instant/tercozolam
 	id = REAGENT_ID_TERCOZOLAM
 	result = REAGENT_ID_TERCOZOLAM
 	required_reagents = list(REAGENT_ID_ANTITOXIN = 1, REAGENT_ID_ETHANOL = 1, REAGENT_ID_LITHIUM = 1)
 	result_amount = 3
 
-/decl/chemical_reaction/instant/peridaxon_ch
+/datum/decl/chemical_reaction/instant/peridaxon_ch
 	name = REAGENT_PERIDAXON
 	id = "peridaxon_ch"
 	result = REAGENT_ID_PERIDAXON
 	required_reagents = list(REAGENT_ID_CORDRADAXON = 1,REAGENT_ID_GASTIRODAXON = 1, REAGENT_ID_HEPANEPHRODAXON = 1, REAGENT_ID_RESPIRODAXON = 1)
 	result_amount = 12 //More phoron-efficient alternative recipe.
 
-/decl/chemical_reaction/instant/sorbitol
+/datum/decl/chemical_reaction/instant/sorbitol
 	name = REAGENT_SORBITOL
 	id = REAGENT_ID_SORBITOL
 	result = REAGENT_ID_SORBITOL
 	required_reagents = list(REAGENT_ID_UNSORBITOL = 1, REAGENT_ID_PHORON = 1)
 	result_amount = 2
 
-/decl/chemical_reaction/instant/glucose
+/datum/decl/chemical_reaction/instant/glucose
 	name = REAGENT_GLUCOSE
 	id = REAGENT_ID_GLUCOSE
 	result = REAGENT_ID_GLUCOSE
@@ -59,28 +59,28 @@
 	result_amount = 1
 ///SAP RECIPES//////
 
-/decl/chemical_reaction/instant/myelamine_sap //This is the clotting agent used by clotting packs.
+/datum/decl/chemical_reaction/instant/myelamine_sap //This is the clotting agent used by clotting packs.
 	name = REAGENT_MYELAMINE
 	id = REAGENT_ID_MYELAMINE + "sap"
 	result = REAGENT_ID_MYELAMINE
 	required_reagents = list(REAGENT_ID_BICARIDINE = 1, REAGENT_ID_IRON = 2, REAGENT_ID_KELOTANE = 1, REAGENT_ID_BLUESAP = 1)
 	result_amount = 1
 
-/decl/chemical_reaction/instant/hannoa
+/datum/decl/chemical_reaction/instant/hannoa
 	name = REAGENT_HANNOA
 	id = REAGENT_ID_HANNOA
 	result = REAGENT_ID_HANNOA
 	required_reagents = list(REAGENT_PURPLESAP = 1, REAGENT_ID_IRON = 2, REAGENT_ID_KELOTANE = 1, REAGENT_ID_CARBON = 1)
 	result_amount = 1
 
-/decl/chemical_reaction/instant/bullvalene
+/datum/decl/chemical_reaction/instant/bullvalene
 	name = REAGENT_BULLVALENE
 	id = REAGENT_ID_BULLVALENE
 	result = REAGENT_ID_BULLVALENE
 	required_reagents = list(REAGENT_ID_DERMALINE = 1, REAGENT_ID_ORANGESAP = 1, REAGENT_ID_COPPER = 1)
 	result_amount = 1
 
-/decl/chemical_reaction/instant/nutrient
+/datum/decl/chemical_reaction/instant/nutrient
 	name = REAGENT_NUTRIMENT
 	id = REAGENT_ID_NUTRIMENT
 	result = REAGENT_ID_NUTRIMENT
@@ -90,7 +90,7 @@
 
 /////SERAZINE RECIPES//////
 
-/decl/chemical_reaction/instant/alizene
+/datum/decl/chemical_reaction/instant/alizene
 	name = REAGENT_ALIZENE
 	id = REAGENT_ID_ALIZENE
 	result = REAGENT_ID_ALIZENE
@@ -98,27 +98,27 @@
 	result_amount = 3
 
 // Frost oil reactions for material sheets
-/decl/chemical_reaction/instant/solidification/aluminium
+/datum/decl/chemical_reaction/instant/solidification/aluminium
 	name = "Solid Aluminium"
 	id = "solidaluminium"
 	required_reagents = list(REAGENT_ID_FROSTOIL = 5, REAGENT_ID_ALUMINIUM = REAGENTS_PER_SHEET)
 	sheet_to_give = /obj/item/stack/material/aluminium
 
-/decl/chemical_reaction/instant/solidification/copper
+/datum/decl/chemical_reaction/instant/solidification/copper
 	name = "Solid Copper"
 	id = "solidcopper"
 	required_reagents = list(REAGENT_ID_FROSTOIL = 5, REAGENT_ID_COPPER = REAGENTS_PER_SHEET)
 	sheet_to_give = /obj/item/stack/material/copper
 
 //YW stuff
-/decl/chemical_reaction/instant/benzilate
+/datum/decl/chemical_reaction/instant/benzilate
 	name = "Benzilate"
 	id = REAGENT_ID_BENZILATE
 	result = REAGENT_ID_BENZILATE
 	required_reagents = list(REAGENT_ID_PARACETAMOL = 1, REAGENT_ID_MINDBREAKER = 1)
 	result_amount = 2
 
-/decl/chemical_reaction/instant/phenethylamine
+/datum/decl/chemical_reaction/instant/phenethylamine
 	name = REAGENT_PHENETHYLAMINE
 	id = REAGENT_ID_PHENETHYLAMINE
 	result = REAGENT_ID_PHENETHYLAMINE
@@ -126,13 +126,13 @@
 	result_amount = 2
 
 // Xenochem stuff
-/decl/chemical_reaction/instant/xenolazarus // Moved here because upstream axed it and this file cannot conflict
+/datum/decl/chemical_reaction/instant/xenolazarus // Moved here because upstream axed it and this file cannot conflict
 	name = "Discount Lazarus"
 	id = "discountlazarus"
 	result = null
 	required_reagents = list(REAGENT_ID_MONSTERTAMER = 5, REAGENT_ID_CLONEXADONE = 5)
 
-/decl/chemical_reaction/instant/xenolazarus/on_reaction(var/datum/reagents/holder, var/created_volume) //literally all this does is mash the regenerate button
+/datum/decl/chemical_reaction/instant/xenolazarus/on_reaction(var/datum/reagents/holder, var/created_volume) //literally all this does is mash the regenerate button
 	if(ishuman(holder.my_atom))
 		var/mob/living/carbon/human/H = holder.my_atom
 		var/datum/component/xenochimera/comp = H.GetComponent(/datum/component/xenochimera)

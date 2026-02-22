@@ -5,7 +5,7 @@
 	icon_state = "gcircuit_broken"
 	initial_flooring = /decl/flooring/phoronics
 
-/decl/flooring/phoronics
+/datum/decl/flooring/phoronics
 	name = "electromagnetic tile"
 	desc = "An electromagnetic tile to create an electric field."
 	icon = 'icons/turf/flooring/circuit.dmi'
