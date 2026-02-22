@@ -21,12 +21,8 @@
 	mob_type = JOB_SILICON_AI
 	disallow_jobhop = TRUE
 	pto_type = PTO_CIVILIAN
-<<<<<<< HEAD
 	dept_time_required = 20 // CHOMPEdit
-	outfit_type = /decl/hierarchy/outfit/job/silicon/ai
-=======
 	outfit_type = /datum/decl/hierarchy/outfit/job/silicon/ai
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	job_description = "The " + JOB_AI + " oversees the operation of the station and its crew, but has no real authority over them. \
 						The " + JOB_AI + " is required to follow its Laws, and Lawbound Synthetics that are linked to it are expected to follow \
 						the " + JOB_AI + "'s commands, and their own Laws."

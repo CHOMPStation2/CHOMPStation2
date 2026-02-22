@@ -34,13 +34,8 @@
 /turf/simulated/floor/outdoors/grass/sif
 	name = "growth"
 	icon_state = "grass_sif0"
-<<<<<<< HEAD
-	initial_flooring = /decl/flooring/grass/sif
-	edge_blending_priority = 3 // CHOMPedit
-=======
 	initial_flooring = /datum/decl/flooring/grass/sif
-	edge_blending_priority = 4
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
+	edge_blending_priority = 3 // CHOMPedit
 	grass_chance = 5
 	var/tree_chance = 0.7 //CHOMPedit
 

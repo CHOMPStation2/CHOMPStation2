@@ -36,16 +36,14 @@
 	else if(istype(user))
 		user.SpinAnimation(7,1)
 
-<<<<<<< HEAD
-/decl/emote/visible/flip/slip //CHOMPAdd
+// CHOMPAdd Start
+/datum/decl/emote/visible/flip/slip
 	key = "sflip"
 	emote_message_1p = "You barely avoid falling over!"
 	emote_message_3p = "barely avoids falling over!"
+// CHOMPAdd End
 
-/decl/emote/visible/floorspin
-=======
 /datum/decl/emote/visible/floorspin
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	key = "floorspin"
 	emote_message_1p = "You spin around on the floor!"
 	emote_message_3p = "spins around on the floor!"

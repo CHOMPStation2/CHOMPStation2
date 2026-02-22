@@ -88,17 +88,13 @@
 	pda_type = /obj/item/pda/geneticist
 	belt = /obj/item/gene_scanner
 
-<<<<<<< HEAD
 	// CHOMPAdd Start - Geneticists get their cool headset
 	headset = /obj/item/radio/headset/headset_medsci
 	headset_alt = /obj/item/radio/headset/headset_medsci
 	headset_earbud = /obj/item/radio/headset/headset_medsci
 	// CHOMPAdd End
 
-/decl/hierarchy/outfit/job/medical/psychiatrist
-=======
 /datum/decl/hierarchy/outfit/job/medical/psychiatrist
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	name = OUTFIT_JOB_NAME(JOB_PSYCHIATRIST)
 	uniform = /obj/item/clothing/under/rank/psych
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat

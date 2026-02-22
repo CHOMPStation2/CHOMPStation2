@@ -93,13 +93,8 @@
  */
 /obj/structure/closet/secure_closet/pathfinder
 	name = "pathfinder locker"
-<<<<<<< HEAD
 	req_access = list(ACCESS_PATHFINDER) //CHOMP explo keep
-	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pathfinder
-=======
-	req_access = list(ACCESS_EXPLORER)
 	closet_appearance = /datum/decl/closet_appearance/secure_closet/expedition/pathfinder
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 
 	starts_with = list(
 		/obj/item/clothing/under/explorer,

@@ -982,13 +982,8 @@
 	name = "heavy grass"
 	icon_state = "grass-heavy0"
 	edge_blending_priority = 4
-<<<<<<< HEAD
-	initial_flooring = /decl/flooring/grass/heavy
-	/*turf_layers = list(
-=======
 	initial_flooring = /datum/decl/flooring/grass/heavy
-	turf_layers = list(
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
+	/*turf_layers = list(
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
 		) CHOMP Removal */

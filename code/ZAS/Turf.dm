@@ -254,13 +254,8 @@
 			if(!postponed) postponed = list()
 			postponed.Add(unsim)
 
-<<<<<<< HEAD
 	if(!TURF_HAS_VALID_ZONE(src)) //Still no zone, make a new one. CHOMPEdit
-		var/zone/newzone = new/zone()
-=======
-	if(!HAS_VALID_ZONE(src)) //Still no zone, make a new one.
-		var/datum/zone/newzone = new/datum/zone()
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
+		var/datum/zone/newzone = new/zone()
 		newzone.add(src)
 
 	#ifdef ZASDBG

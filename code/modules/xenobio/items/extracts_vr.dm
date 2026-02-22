@@ -98,13 +98,8 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/grey
 
-<<<<<<< HEAD
-/decl/chemical_reaction/instant/slime/grey_monkey/on_reaction(var/datum/reagents/holder)
-	for(var/i = 1 to 5) //CHOMPedit  Increased number of monkey cubes from 4 to 5
-=======
 /datum/decl/chemical_reaction/instant/slime/grey_monkey/on_reaction(var/datum/reagents/holder)
-	for(var/i = 1 to 4)
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
+	for(var/i = 1 to 5) //CHOMPedit  Increased number of monkey cubes from 4 to 5
 		new /obj/item/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom))
 	..()
 

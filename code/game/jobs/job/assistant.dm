@@ -102,17 +102,10 @@
 	title_outfit = /datum/decl/hierarchy/outfit/job/assistant/medic
 
 /datum/alt_title/intern_sci
-<<<<<<< HEAD
 	title = JOB_ALT_LAB_ASSISTANT //CHOMPEdit
 	title_blurb = "A " + JOB_ALT_LAB_ASSISTANT + " attempts to provide whatever the Research department needs. They are not proper " + JOB_SCIENTIST + "s, and are \
 					often in training to become a " + JOB_SCIENTIST + ". A " + JOB_ALT_LAB_ASSISTANT + " has no real authority." //CHOMPEdit
-	title_outfit = /decl/hierarchy/outfit/job/assistant/scientist
-=======
-	title = JOB_ALT_RESEARCH_INTERN
-	title_blurb = "A " + JOB_ALT_RESEARCH_INTERN + " attempts to provide whatever the Research department needs. They are not proper " + JOB_SCIENTIST + "s, and are \
-					often in training to become a " + JOB_SCIENTIST + ". A " + JOB_ALT_RESEARCH_INTERN + " has no real authority."
 	title_outfit = /datum/decl/hierarchy/outfit/job/assistant/scientist
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 
 /datum/alt_title/intern_sec
 	title = JOB_ALT_SECURITY_CADET
@@ -124,24 +117,16 @@
 	title = JOB_ALT_JR_CARGO_TECH
 	title_blurb = "A " + JOB_ALT_JR_CARGO_TECH + " attempts to provide whatever the Cargo department needs. They are not proper Cargo Technicians, and are \
 					often in training to become a " + JOB_CARGO_TECHNICIAN + ". A " + JOB_ALT_JR_CARGO_TECH + " has no real authority."
-<<<<<<< HEAD
-	title_outfit = /decl/hierarchy/outfit/job/assistant/cargo
-//CHOMP explo keep removed a wide comment field here
-=======
 	title_outfit = /datum/decl/hierarchy/outfit/job/assistant/cargo
-/*
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
+
+//CHOMP explo keep removed a wide comment field here
 /datum/alt_title/intern_exp
 	title = "Jr. " + JOB_EXPLORER + ""
 	title_blurb = "A Jr. " + JOB_EXPLORER + " attempts to provide whatever the Exploration department needs. They are not proper " + JOB_EXPLORER + "s, and are \
 					often in training to become an " + JOB_EXPLORER + ". A Jr. " + JOB_EXPLORER + " has no real authority."
-<<<<<<< HEAD
-	title_outfit = /decl/hierarchy/outfit/job/assistant/explorer
-//CHOMP explo keep removed the end of the wide comment field here
-=======
 	title_outfit = /datum/decl/hierarchy/outfit/job/assistant/explorer
-*/
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
+//CHOMP explo keep removed the end of the wide comment field here
+
 /datum/alt_title/server
 	title = JOB_ALT_SERVER
 	title_blurb = "A " + JOB_ALT_SERVER + " helps out kitchen and diner staff with various tasks, primarily food delivery. A " + JOB_ALT_SERVER + " has no real authority."

@@ -2,12 +2,8 @@
 	desc = "You shouldn't see this."
 	listing_name = "N/A"
 
-<<<<<<< HEAD
 /* //CHOMPedit: commenting out most of these posters as half are virgo staff and many others are not suitable for here.
-/decl/poster/lewd/vore_2
-=======
 /datum/decl/poster/lewd/vore_2
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	icon_state = "sbsposter2"
 	name = "AroButt"
 	desc = "A lewd view of one of the galaxy's cutest fops."
@@ -43,12 +39,8 @@
 	icon_state = "dwposter1"
 	name = "WANTED: WAR CRIMINAL"
 	desc = "A poster bringing awareness to the distinguishing costume of a known war criminal operating in Virgo-Erigonne space."
-<<<<<<< HEAD
 */ //CHOMPedit end
-/decl/poster/vore_15
-=======
 /datum/decl/poster/vore_15
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	icon_state = "dwposter2"
 	name = "Implanter"
 	desc = "A poster explaining the benefits and function of back-up implanters."
@@ -60,39 +52,23 @@
 	icon_state = "dwposter4"
 	name = "We know"
 	desc = "A poster purporting the infallibility of NanoTrasen's forensics department."
-<<<<<<< HEAD
 /* //CHOMPedit
-/decl/poster/vore_18
-	icon_state = "dwposter5"
-	name = "KAT"
-	desc = "A promotional poster for popular exotube show 'Kat-Kat Korner'"
-*/ //CHOMPedit end
-/decl/poster/vore_19
-	icon_state = "dwposter6"
-	name = "install.css"
-	desc = "A nostalgia trip."
-/* //CHOMPedit
-/decl/poster/vore_20
-	icon_state = "dwposter7"
-	name = "TALON"
-	desc = "The logo and banner of a notable group of contractors known to trade with NanoTrasen."
-*/ //CHOMPedit end
-/decl/poster/vore_21
-=======
 /datum/decl/poster/vore_18
 	icon_state = "dwposter5"
 	name = "KAT"
 	desc = "A promotional poster for popular exotube show 'Kat-Kat Korner'"
+*/ //CHOMPedit end
 /datum/decl/poster/vore_19
 	icon_state = "dwposter6"
 	name = "install.css"
 	desc = "A nostalgia trip."
+/* //CHOMPedit
 /datum/decl/poster/vore_20
 	icon_state = "dwposter7"
 	name = "TALON"
 	desc = "The logo and banner of a notable group of contractors known to trade with NanoTrasen."
+*/ //CHOMPedit end
 /datum/decl/poster/vore_21
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	icon_state = "dwposter8"
 	name = "GPA"
 	desc = "A pretentious advertisement for the drink 'Galactic Panic Attack'"
@@ -124,21 +100,13 @@
 	icon_state = "sbsposter17"
 	name = "DiveIn"
 	desc = "A limited edition holographic poster that seems to feature subliminal suggestions and conditioning."
-<<<<<<< HEAD
 /*CHOMP Edit: Remove loss poster
-/decl/poster/vore_29
-	icon_state = "sbsposter18"
-	name = "Perdition"
-	desc = "You get the feeling that whomever made this intended for you to feel very differently than you do when you look at it."
-*/
-/decl/poster/vore_30
-=======
 /datum/decl/poster/vore_29
 	icon_state = "sbsposter18"
 	name = "Perdition"
 	desc = "You get the feeling that whomever made this intended for you to feel very differently than you do when you look at it."
+*/
 /datum/decl/poster/vore_30
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	icon_state = "tgposter0"
 	name = "RIP Badger"
 	desc = "A poster depicting a badger, who seems to have died. It was a big deal a few years back."
@@ -390,12 +358,8 @@
 	icon_state = "tgposter62"
 	name = "Pin the Tail on the Corgi"
 	desc = "A concerned corgi looks at you as it stands and waits, a target overlays its rear end, seemingly waiting for someone to attatch a tail to it, which, it seems to be missing."
-<<<<<<< HEAD
 /* //CHOMPedit start
-/decl/poster/vore_94
-=======
 /datum/decl/poster/vore_94
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	icon_state = "virgologoposter"
 	name = "Virgo Orbital Research Establishment"
 	desc = "It features the logo of the local branch of Nanotrasen; Virgo Orbital Research Establishment."

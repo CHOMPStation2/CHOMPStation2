@@ -128,13 +128,8 @@ var/list/turf_edge_cache = list()
 /turf/simulated/floor/outdoors/mud
 	name = "mud"
 	icon_state = "mud_dark"
-<<<<<<< HEAD
 	edge_blending_priority = 4 // CHOMPedit
-	initial_flooring = /decl/flooring/mud
-=======
-	edge_blending_priority = 3
 	initial_flooring = /datum/decl/flooring/mud
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	can_dig = TRUE
 
 /turf/simulated/floor/outdoors/rocks

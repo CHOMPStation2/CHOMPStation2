@@ -102,13 +102,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO, DEPARTMENT_PLANET)
 	dept_time_required = 60
 
-<<<<<<< HEAD
-	outfit_type = /decl/hierarchy/outfit/job/hop
-	job_description = "The " + JOB_HEAD_OF_PERSONNEL + " manages the Service department and most other civilians. They also \
-=======
 	outfit_type = /datum/decl/hierarchy/outfit/job/hop
-	job_description = "The " + JOB_HEAD_OF_PERSONNEL + " manages the Service department, the Exploration team, and most other civilians. They also \
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
+	job_description = "The " + JOB_HEAD_OF_PERSONNEL + " manages the Service department and most other civilians. They also \
 						manage the Supply department, through the " + JOB_QUARTERMASTER + ". In addition, the " + JOB_HEAD_OF_PERSONNEL + " oversees the personal accounts \
 						of the crew, including their money and access. If necessary, the " + JOB_HEAD_OF_PERSONNEL + " is first in line to assume Acting Command." //YW EDIT
 	alt_titles = list(JOB_ALT_CREW_RESOURCE_OFFICER = /datum/alt_title/cro, JOB_ALT_DEPUTY_MANAGER = /datum/alt_title/deputy_manager, JOB_ALT_STAFF_MANAGER = /datum/alt_title/staff_manager,

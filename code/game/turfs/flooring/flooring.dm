@@ -141,12 +141,8 @@ GLOBAL_LIST_INIT(flooring_types, populate_flooring_types())
 	build_type = null
 	has_base_range = 1
 
-<<<<<<< HEAD
 //CHOMPedit: sif/forest decl. If this ends up upstream just accept the upstream version.
-/decl/flooring/grass/sif/forest
-=======
 /datum/decl/flooring/grass/sif/forest
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
 	name = "thick growth"
 	desc = "A natural moss that has adapted to the sheer cold climate."
 	flags = NONE
@@ -239,13 +235,8 @@ GLOBAL_LIST_INIT(flooring_types, populate_flooring_types())
 /datum/decl/flooring/snow/plating/drift
 	icon_base = "snowyplayingdrift"
 
-<<<<<<< HEAD
-/decl/flooring/carpet
-	name = "red carpet" //CHOMPEDIT renamed to red carpet
-=======
 /datum/decl/flooring/carpet
-	name = "carpet"
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
+	name = "red carpet" //CHOMPEDIT renamed to red carpet
 	desc = "Lush synthetic carpeting, perfectly engineered for easy cleaning."
 	icon = 'icons/turf/flooring/carpet.dmi'
 	icon_base = "carpet"

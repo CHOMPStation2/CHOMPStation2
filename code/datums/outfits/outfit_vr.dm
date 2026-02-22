@@ -54,13 +54,8 @@
 	C.registered_name = H.real_name
 	return C
 
-<<<<<<< HEAD
-/decl/hierarchy/outfit/solcom/representative
-	name = "SolGov Representative" //YW EDIT: SolGov
-=======
 /datum/decl/hierarchy/outfit/solcom/representative
-	name = "SolCom Representative"
->>>>>>> f8333a8d93 (Staticpath [MDB ignore] (#19166))
+	name = "SolGov Representative" //YW EDIT: SolGov
 	shoes = /obj/item/clothing/shoes/laceup
 	uniform = /obj/item/clothing/under/suit_jacket/navy
 	back = /obj/item/storage/backpack/satchel
