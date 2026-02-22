@@ -232,6 +232,7 @@
 	var_changes = list("gun_accuracy_mod" = -35)
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
+	excludes = list(/datum/trait/negative/thick_digits)
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -474,6 +475,7 @@
 	desc = "Your hands are not shaped in a way that allows useage of guns."
 	cost = -4
 	custom_only = FALSE
+	excludes = list(/datum/trait/negative/bad_shooter)
 
 /datum/trait/negative/thick_digits/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
