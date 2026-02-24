@@ -1,12 +1,16 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aD" = (
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "aL" = (
 /obj/item/bone/skull/tajaran,
 /obj/item/clothing/accessory/collar/gold,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "bV" = (
 /obj/structure/closet/cabinet,
@@ -32,55 +36,77 @@
 /obj/fiftyspawner/log/sif,
 /obj/item/material/knife/machete/hatchet/stone/bone,
 /obj/item/material/kitchen/rollingpin,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "cY" = (
 /obj/item/material/sword/katana,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "db" = (
 /obj/effect/decal/cleanable/filth,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "dc" = (
 /obj/effect/decal/cleanable/blood/tracks/suspicious{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "dQ" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "fw" = (
 /obj/effect/decal/remains/ribcage,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "fD" = (
 /obj/structure/outcrop/gold,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "fK" = (
 /obj/item/clothing/shoes/tribalwear,
 /obj/item/clothing/under/tribalwear/hunter,
 /obj/item/material/twohanded/spear,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "fN" = (
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "fW" = (
 /obj/effect/decal/cleanable/blood/splatter{
 	color = "red"
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "gJ" = (
 /obj/item/material/twohanded/longsword,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "hc" = (
 /obj/machinery/microwave/cookingpot,
@@ -89,7 +115,9 @@
 /area/survivalpod/superpose/DragonCave)
 "jp" = (
 /obj/structure/ledge/ledge_stairs,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "jC" = (
 /obj/effect/map_effect/interval/effect_emitter/steam,
@@ -97,7 +125,9 @@
 /area/survivalpod/superpose/DragonCave)
 "kn" = (
 /obj/structure/bonfire/permanent/sifwood,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "kT" = (
 /obj/structure/flora/lily3,
@@ -107,18 +137,26 @@
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/item/reagent_containers/food/snacks/meat,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "mV" = (
 /obj/item/bone/skull/tajaran,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "na" = (
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "nH" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "oa" = (
 /obj/structure/outcrop/lead,
@@ -133,18 +171,24 @@
 	color = "red"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "pa" = (
 /obj/effect/decal/remains/mouse,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "pD" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/seeds/wheatseed,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "pF" = (
 /obj/structure/flora/log2,
@@ -159,27 +203,37 @@
 	pixel_x = -7;
 	pixel_y = -6
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "qX" = (
 /obj/structure/curtain/black,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "qZ" = (
 /obj/effect/decal/remains/unathi,
 /obj/effect/decal/cleanable/filth,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "rj" = (
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "sB" = (
 /obj/item/ore/gold,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "sW" = (
 /obj/effect/decal/remains/tajaran,
@@ -187,14 +241,18 @@
 	color = "red"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "uh" = (
 /obj/effect/decal/remains/xeno,
 /obj/item/clothing/accessory/collar/holo,
 /obj/effect/decal/cleanable/filth,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "vd" = (
 /turf/simulated/floor/wood/alt/parquet/broken,
@@ -204,30 +262,40 @@
 /obj/item/clothing/shoes/tribalwear,
 /obj/item/material/twohanded/spear,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "wt" = (
 /obj/item/bone/skull/tajaran,
 /obj/item/clothing/accessory/collar/silver,
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "wy" = (
 /obj/effect/decal/cleanable/filth,
 /obj/effect/decal/cleanable/blood/tracks/suspicious,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "xc" = (
 /obj/item/ore/gold{
 	pixel_x = 8;
 	pixel_y = -9
 	},
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "xL" = (
 /obj/effect/decal/cleanable/blood/tracks/suspicious,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "xS" = (
 /obj/structure/outcrop/gold,
@@ -243,23 +311,33 @@
 	color = "red"
 	},
 /obj/item/coin/gold,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "yE" = (
 /obj/item/coin/gold,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "zh" = (
 /obj/item/ore/gold,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "zp" = (
 /obj/effect/decal/cleanable/blood/tracks/suspicious,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "AK" = (
 /obj/effect/decal/cleanable/blood/tracks/suspicious,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "Bh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -270,17 +348,23 @@
 /obj/item/clothing/under/tribalwear/common2,
 /obj/item/material/twohanded/spear,
 /obj/structure/dogbed,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "Bk" = (
 /obj/effect/decal/remains/lizard,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "DI" = (
 /obj/effect/decal/cleanable/blood/tracks/suspicious{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "DX" = (
 /turf/simulated/floor/wood/alt/parquet,
@@ -295,7 +379,9 @@
 	pixel_x = 11;
 	pixel_y = -5
 	},
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "EH" = (
 /turf/simulated/floor/water/hotspring,
@@ -308,13 +394,17 @@
 	pixel_x = 7;
 	pixel_y = -9
 	},
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "Ho" = (
 /obj/structure/flora/sif/subterranean{
 	icon_state = "glowplant1"
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "HG" = (
 /obj/effect/decal/cleanable/dirt,
@@ -322,24 +412,34 @@
 /area/survivalpod/superpose/DragonCave)
 "Iu" = (
 /obj/structure/flora/rocks2,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "Jp" = (
 /obj/structure/ledge/ledge_stairs{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "Kq" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "KG" = (
 /obj/structure/flora/rocks1,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "LI" = (
 /obj/structure/flora/bboulder1,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "MA" = (
 /obj/structure/dogbed,
@@ -365,7 +465,9 @@
 	pixel_x = 5;
 	pixel_y = 7
 	},
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "Pt" = (
 /obj/item/clothing/accessory/bracelet/material/gold{
@@ -377,7 +479,9 @@
 	pixel_x = 7
 	},
 /obj/item/flame/lighter/zippo/gold,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "Qa" = (
 /obj/structure/table/sifwooden_reinforced,
@@ -394,13 +498,17 @@
 	pixel_y = -8
 	},
 /obj/item/coin/gold,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "Sp" = (
 /obj/item/clothing/shoes/tribalwear,
 /obj/item/clothing/under/tribalwear/shaman,
 /obj/item/material/twohanded/spear,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "SM" = (
 /obj/item/material/twohanded/spear/flint,
@@ -417,7 +525,9 @@
 	pixel_y = -6
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "Tz" = (
 /obj/item/clothing/accessory/medal/solgov/gold/sun,
@@ -429,21 +539,29 @@
 	pixel_x = -10;
 	pixel_y = -5
 	},
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "TB" = (
 /obj/structure/flora/sif/subterranean{
 	icon_state = "glowplant2"
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "TQ" = (
 /obj/structure/outcrop/gold,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "Ud" = (
 /obj/item/stack/material/gold,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "VL" = (
 /obj/machinery/power/apc/alarms_hidden{
@@ -461,7 +579,9 @@
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/effect/decal/cleanable/filth,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "WJ" = (
 /obj/structure/flora/lily1,
@@ -469,14 +589,18 @@
 /area/survivalpod/superpose/DragonCave)
 "WN" = (
 /obj/effect/decal/cleanable/filth,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "XZ" = (
 /obj/structure/flora/sif/subterranean{
 	icon_state = "glowplant1"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/newdirt,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "Yq" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
@@ -486,17 +610,23 @@
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "Zn" = (
 /obj/effect/decal/cleanable/blood/splatter{
 	color = "red"
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 "ZE" = (
 /obj/effect/decal/remains/deer,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/survivalpod/superpose/DragonCave)
 
 (1,1,1) = {"
