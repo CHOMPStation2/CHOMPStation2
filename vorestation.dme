@@ -4445,6 +4445,7 @@
 #include "code\modules\projectiles\guns\toy.dm"
 #include "code\modules\projectiles\guns\vox.dm"
 #include "code\modules\projectiles\guns\energy\altevian_vr.dm"
+#include "code\modules\projectiles\guns\energy\bola.dm"
 #include "code\modules\projectiles\guns\energy\bsharpoon_vr.dm"
 #include "code\modules\projectiles\guns\energy\crestrose_vr.dm"
 #include "code\modules\projectiles\guns\energy\cyborg.dm"
@@ -4453,10 +4454,14 @@
 #include "code\modules\projectiles\guns\energy\hooklauncher.dm"
 #include "code\modules\projectiles\guns\energy\kinetic_accelerator_vr.dm"
 #include "code\modules\projectiles\guns\energy\laser.dm"
+<<<<<<< HEAD
 #include "code\modules\projectiles\guns\energy\laser_ch.dm"
 #include "code\modules\projectiles\guns\energy\laser_yw.dm"
 #include "code\modules\projectiles\guns\energy\netgun_vr.dm"
 #include "code\modules\projectiles\guns\energy\netgun_yw.dm"
+=======
+#include "code\modules\projectiles\guns\energy\netgun.dm"
+>>>>>>> 472a7c62e3 (Adds Bola Blaster (#19222))
 #include "code\modules\projectiles\guns\energy\nuclear.dm"
 #include "code\modules\projectiles\guns\energy\nuclear_yw.dm"
 #include "code\modules\projectiles\guns\energy\particle.dm"
