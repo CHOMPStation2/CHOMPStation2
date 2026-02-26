@@ -10,7 +10,6 @@
 	color = "#FF3300"
 	complementary_color = "#FF5125"
 	spread_modifier = 1.0
-	slow_spread_with_size = FALSE
 	ai_aggressiveness = 95
 	can_build_resources = TRUE
 	attack_message = "The tide tries to swallow you"
@@ -21,11 +20,11 @@
 	damage_type = SEARING
 	armor_check = "melee"
 	armor_pen = 30
-	damage_lower = 35
-	damage_upper = 35
+	damage_lower = 20
+	damage_upper = 20
 
-	brute_multiplier = 0.5
-	burn_multiplier = 0.5
+	brute_multiplier = 0.75
+	burn_multiplier = 0.75
 
 	can_build_factories = TRUE
 	can_build_resources = TRUE
@@ -46,7 +45,6 @@
 
 /datum/blob_type/living_agate/on_attack(obj/structure/blob/B, mob/living/victim, def_zone)
 	victim.electrocute_act(10, src, 1, def_zone)
-	victim.stun_effect_act(0, 40, BP_TORSO, src, electric = TRUE)
 
 /datum/blob_type/living_agate/on_spore_death(mob/living/simple_mob/blob/spore/S)
 	if(S.is_infesting)
