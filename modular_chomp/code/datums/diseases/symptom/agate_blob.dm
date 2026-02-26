@@ -1,10 +1,10 @@
 /datum/symptom/blobspores/agate
 	name = "Agate Infection"
 	desc = "This symptom causes the host to produce blob spores, which will leave the host at the later stages, and if the host dies, all of the spores will erupt from the host at the same time, while also producing a blob tile."
-	stealth = 7
+	stealth = 6
 	resistance = 3
 	stage_speed = -3
-	transmission = -1
+	transmission = -2
 	level = -1
 	severity = 3
 	naturally_occuring = FALSE
