@@ -370,10 +370,7 @@
 
 	use_atmos = TRUE
 
-<<<<<<< HEAD
-	max_temp = T0C + 300 //ChompEDIT
 	min_temp = T0C - 270 //ChompEDIT
-=======
 
 /obj/machinery/portable_atmospherics/powered/reagent_distillery/return_air()
 	if(connected_port)
@@ -381,4 +378,3 @@
 		if(our_port.network)
 			return our_port.network.gases[1]
 	. = ..()
->>>>>>> 6107f69299 (Chemical splash fixes, distillery fix, and syringe gun fix. (#19219))
