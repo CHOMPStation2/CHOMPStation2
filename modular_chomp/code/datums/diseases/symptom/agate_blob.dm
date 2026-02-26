@@ -5,7 +5,7 @@
 	resistance = 15
 	stage_speed = -2
 	transmission = 15
-	level = 9
+	level = -1
 	severity = 3
 	naturally_occuring = FALSE
 	symptom_delay_min = 20 SECONDS
