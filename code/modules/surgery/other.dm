@@ -1,4 +1,3 @@
-//Procedures in this file: Inernal wound patching, Implant removal.
 //////////////////////////////////////////////////////////////////
 //					INTERNAL WOUND PATCHING						//
 //////////////////////////////////////////////////////////////////
@@ -61,6 +60,7 @@
 	user.balloon_alert_visible("slips, smearing [tool] in the incision in [target]'s [affected.name]", "your hand slips, smearing [tool] in the incisiom in [affected.name]")
 	affected.take_damage(5, 0)
 
+<<<<<<< HEAD
 
 	///Has multiple stages. At or past stage 1, peridaxon can immediately treat it.
 	///0 = Not started
@@ -525,6 +525,8 @@
 	affected.createwound(BRUISE, 10)
 	..()
 
+=======
+>>>>>>> fb81ffbe83 (Amputation Repair, Surgery adjustments, and amputation vision. (#19199))
 /datum/surgery_step/internal/detoxify
 	surgery_name = "Detoxify"
 	blood_level = 1
@@ -533,7 +535,7 @@
 	max_duration = 40 //CHOMPedit
 
 /datum/surgery_step/internal/detoxify/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	return ..() && target_zone == BP_TORSO && (target.toxloss || target.oxyloss)
+	return ..() && target_zone == BP_TORSO && (target.toxloss || target.oxyloss || target.cloneloss)
 
 /datum/surgery_step/internal/detoxify/begin_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_notice("[user] begins to pull toxins from, and restore oxygen to [target]'s musculature and organs with \the [tool]."), \
@@ -547,6 +549,7 @@
 	user.balloon_alert_visible("finishes pulling toxins and restoring oxygen to [target]'s organs", "pulled toxins from and restored oxygen to the organs")
 	target.adjustToxLoss(-20)
 	target.adjustOxyLoss(-20)
+	target.adjustCloneLoss(-20)
 	..()
 
 /datum/surgery_step/internal/detoxify/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
