@@ -295,21 +295,3 @@
 	update_ports()
 
 	return null
-
-//CHOMPEdit Start - Keybinds for EVEEERYTHING
-/obj/machinery/atmospherics/omni/click_ctrl(mob/user)
-	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-	if(allowed(user))
-		update_use_power(!use_power)
-		update_icon()
-		add_fingerprint(user)
-		if(use_power)
-			configuring = 0
-			to_chat(user, span_notice("You toggle the [name] on."))
-
-		else
-			to_chat(user, span_notice("You toggle the [name] off."))
-
-	else
-		to_chat(user, span_warning("Access denied."))
-//CHOMPEdit End

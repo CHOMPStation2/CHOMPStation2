@@ -143,7 +143,7 @@
 	for(var/state in device.IconStates())
 		if(!state || findtext(state, "map"))
 			continue
-		device_icons["vent" + state] = image('icons/atmos/vent_pump.dmi', icon_state = "retro_" + state) //CHOMPEDIT - Retro vents
+		device_icons["vent" + state] = image('icons/atmos/vent_pump.dmi', icon_state = state)
 
 	device = new('icons/atmos/vent_scrubber.dmi')
 	for(var/state in device.IconStates())

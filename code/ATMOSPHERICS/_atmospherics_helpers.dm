@@ -117,11 +117,6 @@
 	var/list/specific_power_gas = list()	//the power required to remove one mole of pure gas, for each gas type
 	for (var/g in filtering)
 		if (source.gas[g] < MINIMUM_MOLES_TO_FILTER)
-			//ChompEDIT Start - scrub the remainding trace
-			if (source.gas[g] > 0.0)
-				sink.adjust_gas(g, source.gas[g], update=0)
-				source.gas -= g
-			//ChompEDIT End
 			continue
 
 		var/specific_power = calculate_specific_power_gas(g, source, sink)/ATMOS_FILTER_EFFICIENCY
