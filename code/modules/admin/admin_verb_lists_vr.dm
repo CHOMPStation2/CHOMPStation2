@@ -74,33 +74,6 @@ GLOBAL_LIST_INIT(admin_verbs_admin, list(
 	/client/proc/reload_alienwhitelist //ChompADD
 	))
 
-GLOBAL_LIST_INIT(admin_verbs_sounds, list(
-	/client/proc/play_local_sound,
-	/client/proc/play_sound,
-	/client/proc/play_server_sound,
-	/client/proc/play_web_sound,
-	/client/proc/play_z_sound
-	))
-
-GLOBAL_LIST_INIT(admin_verbs_fun, list(
-	/client/proc/object_talk,
-	/datum/admins/proc/cmd_admin_dress,
-	/client/proc/drop_bomb,
-	/datum/admins/proc/toggle_aliens,
-	/datum/admins/proc/toggle_space_ninja,
-	/client/proc/make_sound,
-	/client/proc/editappear,
-	/client/proc/roll_dices,
-	/datum/admins/proc/call_supply_drop,
-	/datum/admins/proc/call_drop_pod,
-	/client/proc/player_effects,
-	/client/proc/admin_lightning_strike,
-	/client/proc/adminorbit,
-	/client/proc/getPlayerStatus,
-	/client/proc/manage_event_triggers,
-	/client/proc/fake_pdaconvos
-	))
-
 GLOBAL_LIST_INIT(admin_verbs_spawn, list(
 	/datum/admins/proc/spawn_fruit,
 	/datum/admins/proc/spawn_custom_item,
