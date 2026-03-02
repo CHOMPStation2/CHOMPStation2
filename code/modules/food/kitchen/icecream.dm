@@ -62,7 +62,6 @@
 	reagents.add_reagent(REAGENT_ID_ICE, 5)
 
 /obj/machinery/icecream_vat/attack_hand(mob/user)
-	user.set_machine(src)
 	tgui_interact(user)
 
 /obj/machinery/icecream_vat/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui, custom_state)
@@ -80,15 +79,6 @@
 		UNTYPED_LIST_ADD(ice_data, list("index" = entry, "name" = get_flavour_name(entry), "amount_left" = product_types[entry], "ingredients" = get_ingredient_list(entry)))
 	return ice_data
 
-<<<<<<< HEAD
-/obj/machinery/icecream_vat/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
-		return
-	if(default_deconstruction_crowbar(user, O))
-		return
-	if(default_part_replacement(user, O))
-		return
-=======
 /obj/machinery/icecream_vat/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 
 	var/list/reagent_data = list()
@@ -146,7 +136,14 @@
 			return TRUE
 
 /obj/machinery/icecream_vat/attackby(obj/item/O, mob/user)
->>>>>>> 0fd2c24268 (cleans up some more update Dialog (#19208))
+	// CHOMPAdd Start - Allows for deconstruction
+	if(default_deconstruction_screwdriver(user, O))
+		return
+	if(default_deconstruction_crowbar(user, O))
+		return
+	if(default_part_replacement(user, O))
+		return
+	// CHOMPAdd End
 	if(istype(O, /obj/item/reagent_containers/food/snacks/icecream))
 		var/obj/item/reagent_containers/food/snacks/icecream/I = O
 		if(!I.ice_creamed)
