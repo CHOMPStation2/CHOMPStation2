@@ -94,17 +94,13 @@ ADMIN_VERB(admin_ghost, R_HOLDER, "Aghost", "Ghost out of your body with the opt
 		if(build_mode)
 			togglebuildmode(body)
 			ghost = body.ghostize(1, TRUE)
-			log_and_message_admins("[key_name(src)] admin-ghosted.") // CHOMPEdit - Add logging.
+			log_and_message_admins("[key_name(user)] admin-ghosted.") // CHOMPEdit - Add logging.
 			if(build_mode == "Yes")
 				togglebuildmode(ghost)
 		else
 			ghost = body.ghostize(1, TRUE)
-<<<<<<< HEAD
-			log_and_message_admins("[key_name(src)] admin-ghosted.") // CHOMPEdit - Add logging.
-		init_verbs()
-=======
+			log_and_message_admins("[key_name(user)] admin-ghosted.") // CHOMPEdit - Add logging.
 		user.init_verbs()
->>>>>>> a40cae874f (some more admin verbs (#19235))
 		if(body)
 			body.teleop = ghost
 			if(!body.key)

@@ -74,7 +74,6 @@ GLOBAL_LIST_INIT(admin_verbs_admin, list(
 	/client/proc/reload_alienwhitelist //ChompADD
 	))
 
-<<<<<<< HEAD
 GLOBAL_LIST_INIT(admin_verbs_sounds, list(
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,
@@ -96,15 +95,12 @@ GLOBAL_LIST_INIT(admin_verbs_fun, list(
 	/datum/admins/proc/call_drop_pod,
 	/client/proc/player_effects,
 	/client/proc/admin_lightning_strike,
-	/client/proc/tgui_admin_lists, //CHOMPStation Add
 	/client/proc/adminorbit,
 	/client/proc/getPlayerStatus,
 	/client/proc/manage_event_triggers,
 	/client/proc/fake_pdaconvos
 	))
 
-=======
->>>>>>> a40cae874f (some more admin verbs (#19235))
 GLOBAL_LIST_INIT(admin_verbs_spawn, list(
 	/datum/admins/proc/spawn_fruit,
 	/datum/admins/proc/spawn_custom_item,
