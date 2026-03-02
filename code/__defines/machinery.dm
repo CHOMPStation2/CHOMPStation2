@@ -84,17 +84,6 @@
 #define NETWORK_OUTSIDE "Outside"
 #define NETWORK_HALLS "Halls"
 
-<<<<<<< HEAD
-// CHOMPAdd Start
-#define NETWORK_THIRD_DECK "Third Deck"
-#define NETWORK_SECOND_DECK "Second Deck"
-#define NETWORK_FIRST_DECK "First Deck"
-#define NETWORK_SUPPLY "Supply"
-#define NETWORK_MAIN_OUTPOST "Main Outpost"
-#define NETWORK_CARRIER "Exploration Carrier"
-#define NETWORK_MAINT_DECK "Maintenance Deck"
-// CHHOMPAdd End
-=======
 // SC Networks
 #define NETWORK_FIRST_DECK  "First Deck"
 #define NETWORK_SECOND_DECK "Second Deck"
@@ -102,7 +91,6 @@
 #define NETWORK_MAIN_OUTPOST "Main Outpost"
 #define NETWORK_CARRIER "Exploration Carrier"
 #define NETWORK_MAINT_DECK "Maintenance Deck"
->>>>>>> 1fcbb216e7 (Convert some more globals (#19231))
 
 #define TRANSMISSION_WIRE		0 //Is this ever used? I don't think it is.
 #define TRANSMISSION_RADIO		1 //Radio transmissions (like airlock controller to pump)

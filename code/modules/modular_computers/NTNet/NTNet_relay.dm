@@ -110,11 +110,10 @@
 
 /obj/machinery/ntnet_relay/Initialize(mapload)
 	. = ..()
-<<<<<<< HEAD
-	if(ntnet_global)
-		ntnet_global.relays.Add(src)
-		NTNet = ntnet_global
-		ntnet_global.add_log("New quantum relay activated. Current amount of linked relays: [NTNet.relays.len]")
+	if(GLOB.ntnet_global)
+		GLOB.ntnet_global.relays.Add(src)
+		NTNet = GLOB.ntnet_global
+		GLOB.ntnet_global.add_log("New quantum relay activated. Current amount of linked relays: [NTNet.relays.len]")
 	// CHOMPAdd: PDA Multicaster Server humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
@@ -129,12 +128,6 @@
 			soundloop.mid_length = 30
 	soundloop.start() // Have to do this here bc it starts on
 	// CHOMPAdd End
-=======
-	if(GLOB.ntnet_global)
-		GLOB.ntnet_global.relays.Add(src)
-		NTNet = GLOB.ntnet_global
-		GLOB.ntnet_global.add_log("New quantum relay activated. Current amount of linked relays: [NTNet.relays.len]")
->>>>>>> 1fcbb216e7 (Convert some more globals (#19231))
 
 /obj/machinery/ntnet_relay/Destroy()
 	if(GLOB.ntnet_global)

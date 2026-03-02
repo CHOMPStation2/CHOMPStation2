@@ -343,23 +343,6 @@ GLOBAL_LIST_EMPTY(mannequins)
 //Hexidecimal numbers
 GLOBAL_LIST_INIT(hexNums, list("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"))
 
-<<<<<<< HEAD
-/*
-// Many global vars aren't GLOB type. This puts them there to be more easily inspected.
-GLOBAL_LIST_EMPTY(legacy_globals)
-
-/proc/populate_legacy_globals()
-	//Note: these lists cannot be changed to a new list anywhere in code! //Lies. TG doesn't use any var/global/list so neither will we!
-	//If they are, these will cause the old list to stay around!
-	//Check by searching for "<GLOBAL_NAME> =" in the entire codebase
-	//visual nets
-	GLOB.legacy_globals["visual_nets"] = visual_nets
-	GLOB.legacy_globals["cameranet"] = cameranet
-	GLOB.legacy_globals["cultnet"] = cultnet
-	*/
-
-=======
->>>>>>> 1fcbb216e7 (Convert some more globals (#19231))
 GLOBAL_LIST_INIT(selectable_footstep, list(
 	"Default" = FOOTSTEP_MOB_HUMAN,
 	"Claw" = FOOTSTEP_MOB_CLAW,

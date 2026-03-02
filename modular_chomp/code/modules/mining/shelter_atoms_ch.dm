@@ -171,7 +171,7 @@
 	if(!template)
 		template = null
 
-/obj/item/survivalcapsule/superpose/attack_self()
+/obj/item/survivalcapsule/superpose/attack_self(mob/user, modifiers)
 	if(!pod_initialized) // Populate list after round start as map templates might not exist when this item is created.
 		for(var/datum/map_template/shelter/superpose/shelter_type as anything in subtypesof(/datum/map_template/shelter))
 			if(!(initial(shelter_type.mappath)) || !(initial(shelter_type.superpose))) // Limits map templates to those marked for the superpose capsule.
@@ -179,7 +179,7 @@
 			template_ids += initial(shelter_type.shelter_id)
 		pod_initialized = TRUE
 	if(!template_id)
-		var/answer = tgui_input_list(usr, "Which template would you like to load?","Available Templates", template_ids)
+		var/answer = tgui_input_list(user, "Which template would you like to load?","Available Templates", template_ids)
 		if(!answer)
 			return
 		else
@@ -204,7 +204,7 @@
 	name = "superposed surfluid shuttle capsule"
 	is_ship = TRUE //So you cant just make holes in planets
 
-/obj/item/survivalcapsule/superpose/shuttle/attack_self()
+/obj/item/survivalcapsule/superpose/shuttle/attack_self(mob/user, modifiers)
 	if(!pod_initialized)
 		for(var/datum/map_template/shelter/superpose/shelter_type as anything in subtypesof(/datum/map_template/shelter/))
 			if(!(initial(shelter_type.mappath)) || !(initial(shelter_type.shuttle)))
@@ -212,7 +212,7 @@
 			template_ids += initial(shelter_type.shelter_id)
 		pod_initialized = TRUE
 	if(!template_id)
-		var/answer = tgui_input_list(usr, "Which template would you like to load?","Available Templates", template_ids)
+		var/answer = tgui_input_list(user, "Which template would you like to load?","Available Templates", template_ids)
 		if(!answer)
 			return
 		else

@@ -33,61 +33,6 @@ GLOBAL_LIST_INIT(hrefs, list(
 	var/owner = null
 	var/admin = 0
 
-<<<<<<< HEAD
-			var/datum/browser/popup = new(usr, "hsbpanel", "HSB Panel")
-			popup.set_content(hsbpanel)
-			popup.open()
-	Topic(href, href_list)
-		if(!(src.owner == usr.ckey)) return
-		if(!usr) return //I guess this is possible if they log out or die with the panel open? It happened.
-		if(href_list["hsb"])
-			switch(href_list["hsb"])
-				if("hsbtobj")
-					if(!admin) return
-					if(hsboxspawn)
-						to_world(span_world("Sandbox:  [usr.key] has disabled object spawning!"))
-						hsboxspawn = 0
-						return
-					if(!hsboxspawn)
-						to_world(span_world("Sandbox:  [usr.key] has enabled object spawning!"))
-						hsboxspawn = 1
-						return
-				if("hsbsuit")
-					var/mob/living/carbon/human/P = usr
-					if(P.wear_suit)
-						P.wear_suit.loc = P.loc
-						P.wear_suit.reset_plane_and_layer()
-						P.wear_suit = null
-					P.wear_suit = new/obj/item/clothing/suit/space(P)
-					P.wear_suit.hud_layerise()
-					if(P.head)
-						P.head.loc = P.loc
-						P.head.reset_plane_and_layer()
-						P.head = null
-					P.head = new/obj/item/clothing/head/helmet/space(P)
-					P.head.hud_layerise()
-					if(P.wear_mask)
-						P.wear_mask.loc = P.loc
-						P.wear_mask.reset_plane_and_layer()
-						P.wear_mask = null
-					P.wear_mask = new/obj/item/clothing/mask/gas(P)
-					P.wear_mask.hud_layerise()
-					if(P.back)
-						P.back.loc = P.loc
-						P.back.reset_plane_and_layer()
-						P.back = null
-					P.back = new/obj/item/tank/jetpack(P)
-					P.back.hud_layerise()
-					P.internal = P.back
-				if("hsbmetal")
-					var/obj/fiftyspawner/iron/hsb = new/obj/fiftyspawner/iron
-					hsb.loc = usr.loc
-				if("hsbglass")
-					var/obj/fiftyspawner/glass/hsb = new/obj/fiftyspawner/glass
-					hsb.loc = usr.loc
-				if("hsbairlock")
-					var/obj/machinery/door/hsb = new/obj/machinery/door/airlock
-=======
 /datum/hSB/proc/update()
 	var/hsbpanel = "<center><b>h_Sandbox Panel</b></center><hr>"
 	if(admin)
@@ -98,7 +43,6 @@ GLOBAL_LIST_INIT(hrefs, list(
 		hsbpanel += "- <a href=\"?\ref[src];hsb=[T]\">[hrefs[T]]</a><br>"
 	if(hsboxspawn)
 		hsbpanel += "- <a href=\"?\ref[src];hsb=hsbobj\">Spawn Object</a><br><br>"
->>>>>>> 1fcbb216e7 (Convert some more globals (#19231))
 
 	var/datum/browser/popup = new(usr, "hsbpanel", "HSB Panel")
 	popup.set_content(hsbpanel)
