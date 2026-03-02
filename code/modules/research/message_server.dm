@@ -86,13 +86,17 @@
 			soundloop.mid_length = 30
 	// CHOMPAdd End
 	. = ..()
-	message_servers += src
+	GLOB.message_servers += src
 	decryptkey = GenerateKey()
 	send_pda_message("System Administrator", "system", "This is an automated message. The messaging system is functioning correctly.")
 
 /obj/machinery/message_server/Destroy()
+<<<<<<< HEAD
 	message_servers -= src
 	QDEL_NULL(soundloop) // CHOMPStation Add: Hummy noises
+=======
+	GLOB.message_servers -= src
+>>>>>>> 1fcbb216e7 (Convert some more globals (#19231))
 	return ..()
 
 /obj/machinery/message_server/examine(mob/user, distance, infix, suffix)
