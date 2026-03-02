@@ -56,7 +56,6 @@
 		src.locked = !src.locked
 		to_chat(user, "Controls are now [src.locked ? "locked." : "unlocked."]")
 		. = 1
-		updateDialog()
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 	s.set_up(5, 1, src)
 	s.start()
@@ -67,7 +66,6 @@
 		if((ACCESS_CAPTAIN in C.GetAccess()) || (ACCESS_SECURITY in C.GetAccess()) || (ACCESS_ENGINE in C.GetAccess()))
 			src.locked = !src.locked
 			to_chat(user, "Controls are now [src.locked ? "locked." : "unlocked."]")
-			updateDialog()
 		else
 			to_chat(user, span_red("Access denied."))
 	else if(W.has_tool_quality(TOOL_WRENCH))
@@ -86,7 +84,6 @@
 					//	owned_capacitor = cap
 						capacitors |= cap
 						cap.owned_gen = src
-						updateDialog()
 					//	break
 		else
 			for(var/obj/machinery/shield_capacitor/capacitor in capacitors)
