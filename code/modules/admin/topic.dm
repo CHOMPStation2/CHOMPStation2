@@ -1188,8 +1188,8 @@
 		var/mob/M = locate(href_list["adminplayerobservejump"])
 
 		var/client/C = usr.client
-		if(!isobserver(usr))	C.admin_ghost()
-		sleep(2)
+		if(!isobserver(usr))
+			SSadmin_verbs.dynamic_invoke_verb(usr.client, /datum/admin_verb/admin_ghost)
 		C.do_jumptomob(M)
 
 	else if(href_list["adminplayerobservefollow"])
@@ -1199,9 +1199,9 @@
 		var/mob/M = locate(href_list["adminplayerobservefollow"])
 
 		var/client/C = usr.client
-		if(!isobserver(usr))	C.admin_ghost()
+		if(!isobserver(usr))
+			SSadmin_verbs.dynamic_invoke_verb(usr.client, /datum/admin_verb/admin_ghost)
 		var/mob/observer/dead/G = C.mob
-		sleep(2)
 		G.ManualFollow(M)
 
 	else if(href_list["check_antagonist"])
@@ -1234,8 +1234,8 @@
 		var/z = text2num(href_list["Z"])
 
 		var/client/C = usr.client
-		if(!isobserver(usr))	C.admin_ghost()
-		sleep(2)
+		if(!isobserver(usr))
+			SSadmin_verbs.dynamic_invoke_verb(usr.client, /datum/admin_verb/admin_ghost)
 		C.jumptocoord(x,y,z)
 
 	else if(href_list["viewruntime"])
