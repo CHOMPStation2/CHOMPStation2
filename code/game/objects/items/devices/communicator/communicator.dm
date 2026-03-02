@@ -307,7 +307,6 @@
 			if(id_check(user, 2))
 				to_chat(user, span_notice("You put the ID into \the [src]'s slot."))
 				add_overlay("pda-id")
-				updateSelfDialog()//Update self dialog on success.
 				return	//Return in case of failed check or when successful.
 		//CHOMPADDITION END
 	return
