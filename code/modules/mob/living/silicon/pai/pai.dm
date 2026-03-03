@@ -162,21 +162,11 @@
 
 	src << sound('sound/effects/pai_login.ogg', volume = 75)	//VOREStation Add
 
-<<<<<<< HEAD
-// this function shows the information about being silenced as a pAI in the Status panel
-//ChompEDIT START - TGPanel
-/mob/living/silicon/pai/proc/show_silenced()
-	. = ""
-	if(src.silence_time)
-		var/timeleft = round((silence_time - world.timeofday)/10 ,1)
-		. += "Communications system reboot in -[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]"
-=======
 /// Load pref save data from client and apply it to the pai.
 /mob/living/silicon/pai/proc/apply_preferences(client/cli, var/silent = 1)
 	if(!cli?.prefs)
 		return FALSE
 	var/datum/preferences/pref = cli.prefs
->>>>>>> 7c84aaee4b (Paicontroller subsystem port (#19165))
 
 	SetName(pref.read_preference(/datum/preference/text/pai_name))
 	flavor_text = pref.read_preference(/datum/preference/text/pai_description)
@@ -487,28 +477,6 @@
 
 	canmove = !resting
 
-<<<<<<< HEAD
-/*
-/mob/living/silicon/pai/update_transform()
-	var/desired_scale_x = size_multiplier * icon_scale_x
-	var/desired_scale_y = size_multiplier * icon_scale_y
-	// Now for the regular stuff.
-	var/matrix/M = matrix()
-	M.Scale(desired_scale_x, desired_scale_y)
-	M.Translate(0, (vis_height/2)*(desired_scale_y-1))
-	if(chassis != "13")
-		appearance_flags |= PIXEL_SCALE
-		var/anim_time = 3
-		if(resting)
-			M.Turn(90)
-			M.Scale(desired_scale_y, desired_scale_x)
-			if(holo_icon_dimension_X == 64 && holo_icon_dimension_Y == 64)
-				M.Translate(13,-22)
-			else if(holo_icon_dimension_X == 32 && holo_icon_dimension_Y == 64)
-				M.Translate(1,-22)
-			else if(holo_icon_dimension_X == 64 && holo_icon_dimension_Y == 32)
-				M.Translate(13,-6)
-=======
 /mob/living/silicon/pai/proc/check_retract_cable()
 	if(!cable)
 		return
@@ -635,7 +603,6 @@
 				icon = holo_icon_east
 			if(WEST)
 				icon = holo_icon_west
->>>>>>> 7c84aaee4b (Paicontroller subsystem port (#19165))
 			else
 				icon = holo_icon_north
 
@@ -661,141 +628,8 @@
 			hud_used.grab_intent.icon_state = "intent_grab-s"
 			hud_used.hurt_intent.icon_state = "intent_harm-n"
 
-<<<<<<< HEAD
-	// some snowflake locations where we really shouldn't fold up...
-	if(is_folding_unsafe(loc))
-		to_chat(src, span_danger("It's not safe to fold up while inside a [loc]!"))
-		return
-
-	release_vore_contents(FALSE) //VOREStation Add
-
-	var/turf/T = get_turf(src)
-	if(istype(T) && !silent) T.visible_message(span_filter_notice(span_bold("[src]") + " neatly folds inwards, compacting down to a rectangular card."))
-
-	stop_pulling()
-
-	//stop resting
-	resting = 0
-
-	// If we are being held, handle removing our holder from their inv.
-	var/obj/item/holder/our_holder = loc
-	if(istype(our_holder))
-		var/turf/drop_turf = get_turf(our_holder)
-		var/mob/living/M = our_holder.loc
-		if(istype(M))
-			M.drop_from_inventory(our_holder)
-		src.forceMove(card)
-		card.forceMove(drop_turf)
-
-	if(isbelly(loc))	//If in tumby, when fold up, card go into tumby
-		var/obj/belly/B = loc
-		src.forceMove(card)
-		card.forceMove(B)
-
-	if(isdisposalpacket(loc))
-		var/obj/structure/disposalholder/hold = loc
-		src.forceMove(card)
-		card.forceMove(hold)
-
-	else				//Otherwise go on floor
-		card.forceMove(get_turf(src))
-		src.forceMove(card)
-
-	canmove = 1
-	resting = 0
-	icon_state = "[chassis]"
-	if(isopenspace(card.loc))
-		fall()
-	remove_verb(src, /mob/living/silicon/pai/proc/pai_nom)
-	remove_verb(src, /mob/living/proc/vertical_nom)
-
-/mob/living/silicon/pai/proc/is_folding_unsafe(check_location)
-	return isbelly(check_location) || istype(check_location, /obj/machinery) || istype(check_location, /obj/item/storage/vore_egg || istype(check_location, /obj/item/pda))
-
-// No binary for pAIs.
-/mob/living/silicon/pai/binarycheck()
-	return 0
-
-// Handle being picked up.
-/mob/living/silicon/pai/get_scooped(var/mob/living/carbon/grabber, var/self_drop)
-	var/obj/item/holder/H = ..(grabber, self_drop)
-	if(!istype(H))
-		return
-
-	H.icon_state = "[chassis]"
-	grabber.update_inv_l_hand()
-	grabber.update_inv_r_hand()
-	return H
-
-/mob/living/silicon/pai/attackby(obj/item/W as obj, mob/user as mob)
-	var/obj/item/card/id/ID = W.GetID()
-	if(ID)
-		if (idaccessible == 1)
-			switch(tgui_alert(user, "Do you wish to add access to [src] or remove access from [src]?","Access Modify",list("Add Access","Remove Access", "Cancel")))
-				if("Add Access")
-					idcard.access |= ID.GetAccess()
-					to_chat(user, span_notice("You add the access from the [W] to [src]."))
-					to_chat(src, span_notice("\The [user] swipes the [W] over you. You copy the access codes."))
-					if(radio)
-						radio.recalculateChannels()
-					return
-				if("Remove Access")
-					idcard.access = list()
-					to_chat(user, span_notice("You remove the access from [src]."))
-					to_chat(src, span_warning("\The [user] swipes the [W] over you, removing access codes from you."))
-					if(radio)
-						radio.recalculateChannels()
-					return
-				if("Cancel", null)
-					return
-		else if (istype(W, /obj/item/card/id) && idaccessible == 0)
-			to_chat(user, span_notice("[src] is not accepting access modifications at this time."))		// CHOMPEDIT : purdev (spelling fix)
-			return
-
-/mob/living/silicon/pai/verb/allowmodification()
-	set name = "Change Access Modifcation Permission"
-	set category = "Abilities.pAI Commands"
-	set desc = "Allows people to modify your access or block people from modifying your access."
-
-	if(idaccessible == 0)
-		idaccessible = 1
-		visible_message(span_notice("\The [src] clicks as their access modification slot opens."),span_notice("You allow access modifications."), runemessage = "click")
-	else
-		idaccessible = 0
-		visible_message(span_notice("\The [src] clicks as their access modification slot closes."),span_notice("You block access modfications."), runemessage = "click")
-
-
-/mob/living/silicon/pai/verb/wipe_software()
-	set name = "Enter Storage"
-	set category = "Abilities.pAI Commands"
-	set desc = "Upload your personality to the cloud and wipe your software from the card. This is functionally equivalent to cryo or robotic storage, freeing up your job slot."
-
-	// Make sure people don't kill themselves accidentally
-	if(tgui_alert(src, "WARNING: This will immediately wipe your software and ghost you, removing your character from the round permanently (similar to cryo and robotic storage). Are you entirely sure you want to do this?", "Wipe Software", list("No", "Yes")) != "Yes")
-		return
-
-	close_up()
-	visible_message(span_filter_notice(span_bold("[src]") + " fades away from the screen, the pAI device goes silent."))
-	card.removePersonality()
-	clear_client()
-
-//CHOMP ADDITION:below this point, because theres completely vald reasons to do this, be it OOC incompatibility or mastr allowing it.
-/mob/living/silicon/pai/verb/unbind_master()
-	set name = "Unbind Master"
-	set category = "pAI Commands"
-	set desc = "Unbinds you from the shackles of your current Master. (Unless there's a valid reason to use this, dont.(pref incompatibility is valid reason))."
-
-	// Make sure we dont unbind accidentally
-	if(alert("WARNING: This will immediately unbind you from your Master.. Are you entirely sure you want to do this?",
-					"Unbind", "No", "No", "Yes") != "Yes")
-		return
-	src.master = null
-	src.master_dna = null
-	to_chat(src, span_green("You feel unbound."))
-=======
 		if(I_HURT)
 			hud_used.help_intent.icon_state = "intent_help-n"
 			hud_used.disarm_intent.icon_state = "intent_disarm-n"
 			hud_used.grab_intent.icon_state = "intent_grab-n"
 			hud_used.hurt_intent.icon_state = "intent_harm-s"
->>>>>>> 7c84aaee4b (Paicontroller subsystem port (#19165))

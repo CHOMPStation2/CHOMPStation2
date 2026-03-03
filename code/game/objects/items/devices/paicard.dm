@@ -76,36 +76,6 @@
 		to_chat(user, span_danger("You have no pai name set."))
 		return
 
-<<<<<<< HEAD
-	if(choice == "Yes")
-		if(istype(src , /obj/item/paicard/typeb))
-			var/obj/item/paicard/typeb/card = new(location)
-			var/mob/living/silicon/pai/new_pai = new(card)
-			new_pai.key = user.key
-			GLOB.paikeys |= new_pai.ckey
-			card.setPersonality(new_pai)
-			if(!new_pai.savefile_load(new_pai))
-				var/pai_name = tgui_input_text(new_pai, "Choose your character's name", "Character Name")
-				actual_pai_name = sanitize_name(pai_name, ,1)
-				if(isnull(actual_pai_name))
-					return ..()
-			qdel(src)
-		else
-			var/obj/item/paicard/card = new(location)
-			var/mob/living/silicon/pai/new_pai = new(card)
-			new_pai.key = user.key
-			GLOB.paikeys |= new_pai.ckey
-			card.setPersonality(new_pai)
-			if(!new_pai.savefile_load(new_pai))
-				var/pai_name = tgui_input_text(new_pai, "Choose your character's name", "Character Name")
-				actual_pai_name = sanitize_name(pai_name, ,1)
-				if(isnull(actual_pai_name))
-					return ..()
-			qdel(src)
-
-	// qdel(src) CHOMPEdit - Clicking X twice would delete them. Very funny if you're a ghost.
-	return ..()
-=======
 	var/choice = tgui_alert(user, "Do you want to inhabit this pAI using \"[pai_name]\"?", "Load pAI", list("Load pAI Data", "Cancel"))
 	if(choice == "Load pAI Data")
 		ghost_inhabit(user)
@@ -124,7 +94,6 @@
 	setPersonality(new_pai)
 	new_pai.apply_preferences(new_pai.client)
 	return new_pai
->>>>>>> 7c84aaee4b (Paicontroller subsystem port (#19165))
 
 /obj/item/paicard/tgui_interact(mob/user, datum/tgui/ui)
 	if(is_damage_critical())

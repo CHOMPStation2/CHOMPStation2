@@ -969,18 +969,6 @@ GLOBAL_LIST_INIT(special_roles, list(
 	"ninja" = 0,										// 10
 	"raider" = 0,										// 11
 	"diona" = 0,										// 12
-<<<<<<< HEAD
-	"mutineer" = 0,										// 13
-	"loyalist" = 0,										// 14
-	"pAI candidate" = 1,								// 15
-	"lost drone" = 1,									// 16
-	"maint pred" = 1,									// 17
-	"stowaway" = 1,										// 18 // CHOMPEdit
-	"morph" = 1,										// 19
-	"corgi" = 1,										// 20
-	"cursed sword" = 1,									// 21
-	"Ship Survivor" = 1,								// 22
-=======
 	"loyalist" = 0,										// 13
 	"pAI" = 1,											// 14
 	"lost drone" = 1,									// 15
@@ -988,7 +976,6 @@ GLOBAL_LIST_INIT(special_roles, list(
 	"corgi" = 1,										// 17
 	"cursed sword" = 1,									// 18
 	"ship survivor" = 1,								// 19
->>>>>>> 7c84aaee4b (Paicontroller subsystem port (#19165))
 ))
 
 GLOBAL_LIST_INIT(maint_mob_pred_options, list(

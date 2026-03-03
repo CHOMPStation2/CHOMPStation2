@@ -604,11 +604,8 @@
 #include "code\controllers\subsystems\nightshift.dm"
 #include "code\controllers\subsystems\overlays.dm"
 #include "code\controllers\subsystems\overmap_renamer_vr.dm"
-<<<<<<< HEAD
-#include "code\controllers\subsystems\pathfinder_ch.dm"
-=======
 #include "code\controllers\subsystems\pai.dm"
->>>>>>> 7c84aaee4b (Paicontroller subsystem port (#19165))
+#include "code\controllers\subsystems\pathfinder_ch.dm"
 #include "code\controllers\subsystems\persist_vr.dm"
 #include "code\controllers\subsystems\persistence.dm"
 #include "code\controllers\subsystems\ping.dm"
@@ -1746,11 +1743,7 @@
 #include "code\game\objects\items\devices\modkit.dm"
 #include "code\game\objects\items\devices\multitool.dm"
 #include "code\game\objects\items\devices\paicard.dm"
-<<<<<<< HEAD
 #include "code\game\objects\items\devices\paicard_ch.dm"
-#include "code\game\objects\items\devices\paicard_vr.dm"
-=======
->>>>>>> 7c84aaee4b (Paicontroller subsystem port (#19165))
 #include "code\game\objects\items\devices\personal_shield_generator_vr.dm"
 #include "code\game\objects\items\devices\pipe_painter.dm"
 #include "code\game\objects\items\devices\powersink.dm"
