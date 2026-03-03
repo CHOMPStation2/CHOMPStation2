@@ -7,7 +7,7 @@
 	name 		= "Vix"
 	icon 		= 'icons/mob/pets.dmi'
 	icon_state 	= "syndifox"
-	chassis = "syndifox"
+	chassis_name = "syndifox"
 	var/gut1 //Custom voregut temp vars
 	var/gut2
 
@@ -171,25 +171,25 @@
 
 //Custom pai handler since we need to access a child class
 //and i dont wanna inflate the original one even more with if checks
-/obj/item/paicard/flipper/attack_ghost(mob/user as mob)
+/obj/item/paicard/flipper/attack_ghost(mob/user)
 	if(pai != null) //Have a person in them already?
 		return ..()
 	if(is_damage_critical())
-		to_chat(usr, span_warning("That card is too damaged to activate!"))
+		to_chat(user, span_warning("That card is too damaged to activate!"))
 		return
 	var/time_till_respawn = user.time_till_respawn()
 	if(time_till_respawn == -1) // Special case, never allowed to respawn
-		to_chat(usr, span_warning("Respawning is not allowed!"))
+		to_chat(user, span_warning("Respawning is not allowed!"))
 	else if(time_till_respawn) // Nonzero time to respawn
-		to_chat(usr, span_warning("You can't do that yet! You died too recently. You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes."))
+		to_chat(user, span_warning("You can't do that yet! You died too recently. You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes."))
 		return
-	if(jobban_isbanned(usr, "pAI"))
-		to_chat(usr,span_warning("You cannot join a pAI card when you are banned from playing as a pAI."))
+	if(jobban_isbanned(user, "pAI"))
+		to_chat(user,span_warning("You cannot join a pAI card when you are banned from playing as a pAI."))
 		return
 
 	for(var/ourkey in GLOB.paikeys)
 		if(ourkey == user.ckey)
-			to_chat(usr, span_warning("You can't just rejoin any old pAI card!!! Your card still exists."))
+			to_chat(user, span_warning("You can't just rejoin any old pAI card!!! Your card still exists."))
 			return
 
 	var/choice = tgui_alert(user, "You sure you want to inhabit this PAI, or submit yourself to being recruited?", "Confirmation", list("Inhabit", "Recruit", "Cancel"))
@@ -239,7 +239,7 @@
 		return
 	var/oursize = size_multiplier
 	resize(1, FALSE, TRUE, TRUE, FALSE)		//We resize ourselves to normal here for a moment to let the vis_height get reset
-	chassis = "syndifox"
+	chassis_name = "syndifox"
 	vore_capacity = 1
 	vore_capacity_ex = list("stomach" = 1)
 	resize(oursize, FALSE, TRUE, TRUE, FALSE)	//And then back again now that we're sure the vis_height is correct.
