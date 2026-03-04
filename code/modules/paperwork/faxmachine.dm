@@ -1,5 +1,9 @@
 GLOBAL_LIST_EMPTY_TYPED(allfaxes, /obj/machinery/photocopier/faxmachine)
+<<<<<<< HEAD
 var/list/admin_departments = list("[using_map.boss_name]", "Solar Central Government", "Central Command Job Boards", "Supply") // YW EDIT
+=======
+var/list/admin_departments = list("[using_map.boss_name]", "Virgo-Prime Governmental Authority", "Virgo-Erigonne Job Boards", "Supply", "Talon Headquarters")
+>>>>>>> e0aabe5914 (Talon update: Porting uniforms, updating map and equipment (#19220))
 GLOBAL_LIST_EMPTY(alldepartments)
 GLOBAL_VAR(last_fax_role_request)
 
@@ -392,6 +396,8 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 		message_admins(sender, "Solar Central Government FAX", rcvdcopy, "CentComFaxReply", "#1F66A0") // Vorestation Edit //CHOMPedit
 	else if(destination == "Supply")
 		message_admins(sender, "[uppertext(using_map.boss_short)] SUPPLY FAX", rcvdcopy, "CentComFaxReply", "#5F4519")
+	else if(destination == "Talon Headquarters")
+		message_admins(sender, "TALON HEADQUARTERS FAX", rcvdcopy, "CentComFaxReply", "#e96046")
 	else
 		message_admins(sender, "[uppertext(destination)] FAX", rcvdcopy, "UNKNOWN")
 
