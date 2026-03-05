@@ -1,9 +1,5 @@
 GLOBAL_LIST_EMPTY_TYPED(allfaxes, /obj/machinery/photocopier/faxmachine)
-<<<<<<< HEAD
 var/list/admin_departments = list("[using_map.boss_name]", "Solar Central Government", "Central Command Job Boards", "Supply") // YW EDIT
-=======
-var/list/admin_departments = list("[using_map.boss_name]", "Virgo-Prime Governmental Authority", "Virgo-Erigonne Job Boards", "Supply", "Talon Headquarters")
->>>>>>> e0aabe5914 (Talon update: Porting uniforms, updating map and equipment (#19220))
 GLOBAL_LIST_EMPTY(alldepartments)
 GLOBAL_VAR(last_fax_role_request)
 

@@ -668,8 +668,6 @@
 		"TG&C jumpskirt"=/obj/item/clothing/under/rank/neo_robo_skirt
 	)
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(selector_uniforms))
-<<<<<<< HEAD
-=======
 
 //Replikant & Signalis-themed human-wear
 
@@ -792,4 +790,3 @@
 		"Old Talon Doctor Uniform"=/obj/item/clothing/under/rank/talon/proper,
 	)
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(selector_uniforms))
->>>>>>> e0aabe5914 (Talon update: Porting uniforms, updating map and equipment (#19220))
