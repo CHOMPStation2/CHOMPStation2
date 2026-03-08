@@ -301,9 +301,9 @@
 // The contents of the three lists are inherently related, so separating them into different procs would be largely redundant
 /obj/item/commcard/proc/get_GPS_lists()
 	// GPS Access
-	var/intgps[0] // Gps devices within the commcard -- Allow tag edits, turning on/off, etc
-	var/extgps[0] // Gps devices not inside the commcard -- Print locations if a gps is on
-	var/stagps[0] // Gps net status, location, whether it's on, if it's got long range
+	var/list/intgps = list() // Gps devices within the commcard -- Allow tag edits, turning on/off, etc
+	var/list/extgps = list() // Gps devices not inside the commcard -- Print locations if a gps is on
+	var/list/stagps = list() // Gps net status, location, whether it's on, if it's got long range
 	var/obj/item/gps/cumulative = new(src)
 	cumulative.tracking = FALSE
 	cumulative.local_mode = TRUE // Won't detect long-range signals automatically
@@ -333,21 +333,48 @@
 			G.tracking = FALSE // Disable the internal gps units so they don't show up in the report
 			toggled_gps += G
 
-	var/list/remote_gps = cumulative.display_list() // Fetch information for all units except the ones inside of this device
-
 	for(var/obj/item/gps/G in toggled_gps) // Reenable any internal GPS units
 		G.tracking = TRUE
 
 	stagps["enabled"] = cumulative.tracking
 	stagps["long_range_en"] = (cumulative.long_range && !cumulative.local_mode)
 
-	stagps["my_area_name"] = remote_gps["my_area_name"]
-	stagps["curr_x"] = remote_gps["curr_x"]
-	stagps["curr_y"] = remote_gps["curr_y"]
-	stagps["curr_z"] = remote_gps["curr_z"]
-	stagps["curr_z_name"] = remote_gps["curr_z_name"]
+	var/turf/curr = get_turf(cumulative)
+	var/area/my_area = get_area(cumulative)
+	stagps["my_area_name"] = strip_improper(my_area.name)
+	stagps["curr_x"] = curr.x
+	stagps["curr_y"] = curr.y
+	stagps["curr_z"] = curr.z
+	stagps["curr_z_name"] = strip_improper(using_map.get_zlevel_name(curr.z))
 
-	extgps = remote_gps["gps_list"] // Compiled by the GPS
+	var/list/gps_list = list()
+	var/z_level_det = using_map.get_map_levels(curr.z, cumulative.long_range)
+	for(var/obj/item/gps/G in GLOB.GPS_list - cumulative)
+
+		if(!cumulative.can_track(G, z_level_det))
+			continue
+
+		var/list/gps_data = list()
+		gps_data["ref"] = G
+		gps_data["gps_tag"] = G.gps_tag
+
+		var/area/A = get_area(G)
+		gps_data["area_name"] = strip_improper(A.get_name())
+
+		var/turf/T = get_turf(G)
+		gps_data["z_name"] = strip_improper(using_map.get_zlevel_name(T.z))
+		gps_data["direction"] = get_adir(curr, T)
+		gps_data["degrees"] = round(Get_Angle(curr,T))
+		gps_data["distX"] = T.x - curr.x
+		gps_data["distY"] = T.y - curr.y
+		gps_data["distance"] = get_dist(curr, T)
+		gps_data["local"] = (curr.z == T.z)
+		gps_data["x"] = T.x
+		gps_data["y"] = T.y
+
+		UNTYPED_LIST_ADD(gps_list, gps_data)
+
+	extgps = gps_list // Compiled by the GPS
 
 	qdel(cumulative) // Don't want spare GPS units building up in the contents
 
