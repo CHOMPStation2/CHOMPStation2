@@ -79445,12 +79445,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"xqI" = (
-/obj/item/gps/advanced,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "xqJ" = (
 /obj/item/clothing/under/suit_jacket/female/fluff/asuna,
 /turf/simulated/fitness{
@@ -112128,7 +112122,7 @@ rKJ
 xKG
 pGN
 gpu
-xqI
+tHP
 cKf
 mnp
 uJi
