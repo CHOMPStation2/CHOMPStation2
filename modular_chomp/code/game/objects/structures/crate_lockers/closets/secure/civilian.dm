@@ -1,5 +1,5 @@
 /obj/structure/closet/secure_closet/personal/volunteer
-	closet_appearance = /decl/closet_appearance/cabinet/secure
+	closet_appearance = /datum/decl/closet_appearance/cabinet/secure
 
 	starts_with = list(
 		/obj/item/radio/off,
