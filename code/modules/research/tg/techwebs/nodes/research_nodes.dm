@@ -125,9 +125,6 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
 
-<<<<<<< HEAD
-// Decided that we were not keen on this being able to be printed freely as we immediately saw undesirable behaviour //CHOMPEdit - Re-enable
-=======
 /datum/techweb_node/anomaly_harvesting
 	id = TECHWEB_NODE_ANOMALY_HARVESTING
 	display_name = "Anomaly Harvesting"
@@ -154,8 +151,7 @@
 	announce_channels = list(CHANNEL_SCIENCE)
 	discount_experiments = list(/datum/experiment/scanning/points/anomaly = TECHWEB_TIER_3_POINTS)
 
-/* Decided that we were not keen on this being able to be printed freely as we immediately saw undesirable behaviour
->>>>>>> 7018074d55 (Anomaly Harvesting (#19068))
+// Decided that we were not keen on this being able to be printed freely as we immediately saw undesirable behaviour // CHOMPEnable Start
 /datum/techweb_node/telekinetics
 	id = TECHWEB_NODE_TELEKINETIC_RESEARCH
 	display_name = "Applied Telekinetics Research"
@@ -166,4 +162,4 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
-// //CHOMPEdit - Re-enable
+// CHOMPEnable End
