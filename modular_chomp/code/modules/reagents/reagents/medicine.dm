@@ -76,6 +76,7 @@
 	scannable = SCANNABLE_ADVANCED
 	color = "#225722"
 	scannable = 1
+	dermal_absorption = 0.2
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -99,6 +100,7 @@
 	scannable = SCANNABLE_BENEFICIAL
 	color = "#225722"
 	scannable = 1
+	dermal_absorption = 0.2
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -124,6 +126,7 @@
 	reagent_state = LIQUID
 	color = "#BF0000"
 	overdose = REAGENTS_OVERDOSE * 0.2
+	dermal_absorption = 0.2
 	overdose_mod = 1.25
 	scannable = 1
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -162,6 +165,7 @@
 	scannable = SCANNABLE_BENEFICIAL
 	color = "#4246C7"
 	overdose = REAGENTS_OVERDOSE * 0.5
+	dermal_absorption = 0.2
 	scannable = 1
 	var/repair_strength = 9
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -197,6 +201,7 @@
 	scannable = SCANNABLE_BENEFICIAL
 	color = "#FF6600"
 	overdose = REAGENTS_OVERDOSE * 0.2
+	dermal_absorption = 0.2
 	scannable = 1
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
@@ -217,6 +222,7 @@
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	scannable = SCANNABLE_BENEFICIAL
+	dermal_absorption = 0.2
 	color = "#00BFFF"
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
@@ -236,6 +242,7 @@
 	description = "Fill the body with life, while making it more senstive to stimulus."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#8040FF"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 3
@@ -260,12 +267,13 @@
 /datum/reagent/performancepeaker
 	name = REAGENT_PERFORMANCEPEAKER
 	id = REAGENT_ID_PERFORMANCEPEAKER
-	description = "A chemical created to bring a body to peak condition except it's highly toxic"
+	description = "A chemical created to bring a body to peak condition. Highly toxic"
 	scannable = SCANNABLE_ADVANCED
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#006666"
 	scannable = 1
+	dermal_absorption = 0 //This chem is a stronger poison than a benefical chem, with a strength of 15.
 	overdose = REAGENTS_OVERDOSE * 0.5
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
@@ -337,6 +345,7 @@
 	scannable = SCANNABLE_BENEFICIAL
 	color = "#660066"
 	scannable = 1
+	dermal_absorption = 1
 	overdose = REAGENTS_OVERDOSE * 0.5
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI

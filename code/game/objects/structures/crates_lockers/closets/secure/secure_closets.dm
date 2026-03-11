@@ -12,7 +12,7 @@
 	health = 200
 	anchored = 1 //CHOMPADD - Making them properly IMMOBILE. Like the Desc says? Yeah...
 
-	closet_appearance = /decl/closet_appearance/secure_closet
+	closet_appearance = /datum/decl/closet_appearance/secure_closet
 
 /obj/structure/closet/secure_closet/can_open()
 	if(locked)

@@ -1,6 +1,12 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
+/turf/simulated/floor/holofloor/wood,
+/area/submap/Manor1)
 "ao" = (
-/mob/living/simple_mob/animal/giant_spider/carrier,
+/mob/living/simple_mob/animal/giant_spider/lurker,
 /turf/simulated/floor/carpet/bcarpet,
 /area/submap/Manor1)
 "aB" = (
@@ -67,7 +73,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "du" = (
-/mob/living/simple_mob/animal/giant_spider/carrier,
+/mob/living/simple_mob/animal/giant_spider/lurker,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -125,7 +131,6 @@
 /area/submap/Manor1)
 "fa" = (
 /obj/structure/loot_pile/surface/bones,
-/mob/living/simple_mob/animal/passive/mouse/white,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
 "ff" = (
@@ -292,20 +297,9 @@
 /obj/item/gun/energy/locked/frontier/handbow,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
-"kn" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb/dark,
-/mob/living/simple_mob/animal/passive/mouse/white,
-/turf/simulated/floor/carpet/purcarpet,
-/area/submap/Manor1)
 "kv" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/wallet/random,
-/obj/effect/spider/stickyweb,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
-"kD" = (
-/mob/living/simple_mob/animal/giant_spider/nurse,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -364,7 +358,6 @@
 	},
 /obj/effect/spider/stickyweb/dark,
 /obj/effect/spider/stickyweb/dark,
-/mob/living/simple_mob/animal/giant_spider/nurse,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ng" = (
@@ -505,7 +498,7 @@
 /area/submap/Manor1)
 "qX" = (
 /obj/effect/spider/stickyweb,
-/mob/living/simple_mob/animal/giant_spider/ion,
+/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "rh" = (
@@ -649,10 +642,6 @@
 /area/submap/Manor1)
 "wd" = (
 /obj/structure/bookcase,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
-"wi" = (
-/mob/living/simple_mob/animal/giant_spider/carrier,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "wk" = (
@@ -816,7 +805,6 @@
 	icon_state = "wooden_chair"
 	},
 /obj/effect/spider/stickyweb/dark,
-/mob/living/simple_mob/animal/giant_spider/nurse,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "BE" = (
@@ -830,7 +818,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/random/humanoidremains,
-/mob/living/simple_mob/animal/giant_spider/nurse,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "BR" = (
@@ -847,7 +834,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "CC" = (
-/mob/living/simple_mob/animal/giant_spider/ion,
+/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
 /turf/simulated/floor/carpet/bcarpet,
 /area/submap/Manor1)
 "CY" = (
@@ -869,10 +856,6 @@
 "DO" = (
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/carpet/blucarpet,
-/area/submap/Manor1)
-"Ea" = (
-/mob/living/simple_mob/animal/passive/mouse/white,
-/turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
 "Ef" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -1093,7 +1076,6 @@
 /obj/item/bone/ribs,
 /obj/item/bone/ribs,
 /obj/item/bone/skull,
-/mob/living/simple_mob/animal/passive/mouse/white,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
 "Mt" = (
@@ -1253,16 +1235,6 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
-"Rc" = (
-/obj/structure/bed/chair/wood{
-	dir = 4;
-	icon_state = "wooden_chair"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb/dark,
-/mob/living/simple_mob/animal/giant_spider/nurse,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
 "Ri" = (
 /obj/structure/coatrack,
 /obj/effect/spider/stickyweb,
@@ -1289,11 +1261,6 @@
 /obj/effect/spider/stickyweb,
 /mob/living/simple_mob/animal/giant_spider/webslinger,
 /turf/simulated/floor/tiled/hydro,
-/area/submap/Manor1)
-"RQ" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/passive/mouse/white,
-/turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
 "Sl" = (
 /obj/structure/table/standard,
@@ -1429,14 +1396,6 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
-"XX" = (
-/obj/structure/bed/chair/wood{
-	dir = 8;
-	icon_state = "wooden_chair"
-	},
-/mob/living/simple_mob/animal/giant_spider/nurse,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
 "Yd" = (
 /obj/item/material/twohanded/spear,
 /obj/effect/spider/stickyweb,
@@ -1472,7 +1431,7 @@
 /area/submap/Manor1)
 "YK" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/carrier,
+/mob/living/simple_mob/animal/giant_spider/lurker,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Zg" = (
@@ -2402,7 +2361,7 @@ OD
 yx
 xk
 xk
-xk
+aa
 Uu
 Li
 CY
@@ -2433,8 +2392,8 @@ Rs
 Rs
 xk
 CY
-yx
-yx
+qX
+qX
 eF
 eF
 eF
@@ -2445,7 +2404,7 @@ DB
 DB
 QQ
 QQ
-xk
+aa
 xk
 CY
 CY
@@ -2569,8 +2528,8 @@ ck
 LI
 LI
 BG
-XX
-XX
+Mp
+Mp
 rh
 rh
 CY
@@ -2610,8 +2569,8 @@ Yq
 ez
 ez
 NW
-kn
-RQ
+ez
+ml
 fa
 sR
 sR
@@ -2653,8 +2612,8 @@ Yq
 GY
 ez
 Ms
-kn
-Ea
+ez
+sR
 sR
 kJ
 EW
@@ -2695,7 +2654,7 @@ QQ
 QQ
 Wq
 BB
-Rc
+Wq
 nf
 rh
 yx
@@ -2811,7 +2770,7 @@ Yi
 Rs
 rh
 CY
-yx
+qX
 yx
 QR
 QR
@@ -2854,7 +2813,7 @@ Yi
 rh
 CY
 dA
-yx
+qX
 yx
 rh
 rh
@@ -2985,7 +2944,7 @@ rh
 rh
 rh
 rh
-wi
+ga
 rh
 rh
 rh
@@ -3030,7 +2989,7 @@ rh
 rh
 rh
 rh
-wi
+ga
 rQ
 xn
 hr
@@ -3113,7 +3072,7 @@ rh
 sl
 rh
 rh
-wi
+ga
 rh
 rh
 yx
@@ -3535,7 +3494,7 @@ CY
 rh
 rh
 Yo
-kD
+yx
 xk
 xk
 xK

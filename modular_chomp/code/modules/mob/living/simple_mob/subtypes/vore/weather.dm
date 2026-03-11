@@ -53,7 +53,6 @@
 	B.escapechance = 15
 
 /datum/ai_holder/simple_mob/fossiltank
-	use_astar = TRUE
 	hostile = TRUE
 	retaliate = TRUE
 	mauling = TRUE

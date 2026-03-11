@@ -199,7 +199,19 @@
 	sharp = 0
 	edge = 1
 
-// Flags.
+/*****************************Icepick********************************/
+
+//Ice pick, mountain axe, or ice axe.YW Creation.
+/obj/item/ice_pick
+	name = "ice axe"
+	desc = "A sharp tool for climbers and hikers to break up ice and keep themselves from slipping on a steep slope."
+	icon_state = "icepick"
+	item_state = "icepick"
+	matter = list(MAT_STEEL = 12000) //Same as a knife
+	force = 15 //increasing force for icepick/axe, cause it's a freaking iceaxe.
+	throwforce = 0
+
+/*****************************Flags********************************/
 
 /obj/item/stack/flag
 	name = "flags"
@@ -277,74 +289,111 @@
 	newflag.visible_message(span_infoplain(span_bold("[user]") + " plants [newflag] firmly in the ground."))
 	src.use(1)
 
-// Lightpoles for lumber colony //CHOMPEdit Start
+/*****************************Trailblazer item********************************/
+
 /obj/item/stack/lightpole
 	name = "Trailblazers"
 	desc = "Some colourful trail lights."
-	singular_name = "flag"
+	singular_name = "trailblazer"
 	amount = 10
 	max_amount = 10
 	icon = 'icons/obj/mining.dmi'
-	var/upright = 0
-	var/base_state
-	var/on = 0
-	var/brightness_on = 4 //luminosity when on
 	custom_handling = TRUE
-
-/obj/item/stack/lightpole/Initialize(mapload)
-	. = ..()
-	base_state = icon_state
-
-/obj/item/stack/lightpole/blue
-	name = "blue trail blazers"
-	singular_name = "blue trail blazer"
-	icon_state = "bluetrail_light"
-	light_color = "#599DFF"
+	var/blazer_type = /obj/structure/trailblazer
 
 /obj/item/stack/lightpole/red
 	name = "red flags"
 	singular_name = "red trail blazer"
 	icon_state = "redtrail_light"
-	light_color = "#FC0F29"
+	blazer_type = /obj/structure/trailblazer/red
 
-/obj/item/stack/lightpole/attackby(obj/item/W as obj, mob/user as mob)
-	if(upright && istype(W,src.type))
-		src.attack_hand(user)
-	else
-		..()
+/obj/item/stack/lightpole/blue
+	name = "blue trail blazers"
+	singular_name = "blue trail blazer"
+	icon_state = "bluetrail_light"
+	blazer_type = /obj/structure/trailblazer/blue
 
-/obj/item/stack/lightpole/attack_hand(user as mob)
-	if(upright)
-		upright = 0
-		icon_state = base_state
-		anchored = 0
-		src.visible_message("<b>[user]</b> knocks down [src].")
-	else
-		..()
+/obj/item/stack/lightpole/yellow
+	name = "red flags"
+	singular_name = "red trail blazer"
+	icon_state = "yellowtrail_light"
+	blazer_type = /obj/structure/trailblazer/yellow
 
-/obj/item/stack/lightpole/attack_self(mob/user as mob)
+/obj/item/stack/lightpole/attack_self(mob/user)
 	. = ..(user)
 	if(.)
 		return TRUE
-	var/obj/item/stack/lightpole/F = locate() in get_turf(src)
 
-	var/turf/T = get_turf(src)
-	if(!T || !istype(T,/turf/snow/snow2))
-		user << "The flag won't stand up in this terrain."
+	var/turf/T = get_turf(user)
+	if(!T || (!istype(T,/turf/simulated/mineral) && !istype(T,/turf/simulated/floor/outdoors) && !istype(T,/turf/simulated/floor/snow) && !istype(T,/turf/snow)))
+		to_chat(user, span_warning("The light won't stand up in this terrain."))
+		return TRUE
+	var/obj/structure/trailblazer/F = locate() in get_turf(src)
+	if(F)
+		to_chat(user, span_warning("There is already a light here."))
+		return TRUE
+	if(!do_after(user, 8 SECONDS, target = src))
+		return TRUE
+
+	var/obj/structure/trailblazer/newlightpole = new blazer_type(T)
+	newlightpole.visible_message("\The [user] plants \the [newlightpole] firmly in the ground.")
+	use(1)
+
+/*****************************Trailblazer structure********************************/
+
+/datum/category_item/catalogue/material/trail_blazer
+	name = "Ice Colony Equipment - Trailblazer"
+	desc = "This is a glowing stick embedded in the ground with a light on top, commonly used in snowy installations and in tundra conditions."
+	value = CATALOGUER_REWARD_EASY
+
+/obj/structure/trailblazer
+	name = "trail blazer"
+	desc = "A glowing stick- light."
+	icon = 'icons/obj/mining.dmi'
+	icon_state = "redtrail_light_on"
+	density = TRUE
+	anchored = TRUE
+	var/stack_type = /obj/item/stack/lightpole/red
+	catalogue_data = list(/datum/category_item/catalogue/material/trail_blazer)
+
+/obj/structure/trailblazer/Initialize(mapload)
+	. = ..()
+	set_color()
+	AddElement(/datum/element/climbable)
+
+/obj/structure/trailblazer/proc/set_color()
+	icon_state = "redtrail_light_on"
+	set_light(2, 2, "#FF0000")
+
+/obj/structure/trailblazer/attack_hand(mob/user)
+	if(do_after(user, 8 SECONDS, target = src))
+		visible_message("\The [user] knocks down \the [src].")
+		new stack_type(get_turf(src), 1)
+		qdel(src)
 		return
 
-	if(F && F.upright)
-		user << "There is already a flag here."
-		return
+/obj/structure/trailblazer/red
+	name = "trail blazer"
+	desc = "A glowing stick- light.This one is glowing red."
+	icon_state = "redtrail_light_on"
+	stack_type = /obj/item/stack/lightpole/red
 
-	var/obj/item/stack/lightpole/newlightpole = new src.type(T)
-	newlightpole.amount = 1
-	newlightpole.upright = 1
-	brightness_on = 2
-	set_light(brightness_on)
-	anchored = 1
-	newlightpole.name = newlightpole.singular_name
-	newlightpole.icon_state = "[newlightpole.base_state]_on"
-	newlightpole.visible_message("<b>[user]</b> plants [newlightpole] firmly in the ground.")
-	src.use(1)
-//CHOMPEdit End
+/obj/structure/trailblazer/blue
+	name = "trail blazer"
+	desc = "A glowing stick- light. This one is glowing blue."
+	icon_state = "bluetrail_light_on"
+	stack_type = /obj/item/stack/lightpole/blue
+
+/obj/structure/trailblazer/blue/set_color()
+	icon_state = "bluetrail_light_on"
+	set_light(2, 2, "#C4FFFF")
+
+/obj/structure/trailblazer/yellow
+	name = "trail blazer"
+	desc = "A glowing stick- light. This one is glowing yellow."
+	icon_state = "yellowtrail_light_on"
+	stack_type = /obj/item/stack/lightpole/yellow
+
+/obj/structure/trailblazer/yellow/set_color()
+	icon_state = "yellowtrail_light_on"
+	set_light(2, 2, "#ffea00")

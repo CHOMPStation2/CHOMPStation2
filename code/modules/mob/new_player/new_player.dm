@@ -21,10 +21,6 @@
 
 	var/created_for
 
-/mob/new_player/Initialize(mapload)
-	. = ..()
-	add_verb(src, /mob/proc/insidePanel)
-
 /mob/new_player/Destroy()
 	GLOB.new_player_list -= src
 	if(manifest_dialog)
@@ -493,7 +489,7 @@
 
 /mob/new_player/get_gender()
 	if(!client || !client.prefs) ..()
-	return client.prefs.biological_gender
+	return client.prefs.read_preference(/datum/preference/choiced/gender/biological)
 
 /mob/new_player/is_ready()
 	return ready && ..()

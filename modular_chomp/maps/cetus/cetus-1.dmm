@@ -585,6 +585,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
+"abn" = (
+/obj/machinery/light/small,
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/kafel_full,
+/area/crew_quarters/cetus/meteor/barrestrooms)
 "abr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -37233,6 +37238,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/bordercee,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/two)
 "tgB" = (
@@ -85555,7 +85563,7 @@ fBn
 gZo
 cGi
 mFC
-kWp
+abn
 bBI
 slB
 slB

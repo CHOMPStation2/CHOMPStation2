@@ -159,7 +159,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	// Didn't load a character, so let's randomize
 	set_biological_gender(pick(MALE, FEMALE))
-	update_preference_by_type(/datum/preference/name/real_name, random_name(identifying_gender, species))
+	update_preference_by_type(/datum/preference/name/real_name, random_name(read_preference(/datum/preference/choiced/gender/identifying), species))
 	b_type = RANDOM_BLOOD_TYPE
 
 	if(client)
@@ -301,7 +301,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.set_species(species)
 	// Special Case: This references variables owned by two different datums, so do it here.
 	if(read_preference(/datum/preference/toggle/human/name_is_always_random))
-		update_preference_by_type(/datum/preference/name/real_name, random_name(identifying_gender, species))
+		update_preference_by_type(/datum/preference/name/real_name, random_name(read_preference(/datum/preference/choiced/gender/identifying), species))
 
 	// Ask the preferences datums to apply their own settings to the new mob
 	player_setup.copy_to_mob(character)
@@ -437,8 +437,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		if(character.dna)
 			character.dna.real_name = character.real_name
 		character.nickname = read_preference(/datum/preference/name/nickname)
-	character.gender = biological_gender
-	character.identifying_gender = identifying_gender
+	character.gender = read_preference(/datum/preference/choiced/gender/biological)
+	character.identifying_gender = read_preference(/datum/preference/choiced/gender/identifying)
 
 	character.h_style	= h_style
 
@@ -503,12 +503,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	wing_color3.apply_pref_to(character, read_preference(/datum/preference/color/human/wing_color3))
 
 	var/datum/preference/numeric/wing_alpha = GLOB.preference_entries[/datum/preference/numeric/human/wing_alpha]
-	wing_alpha.apply_pref_to(character,read_preference(/datum/preference/numeric/human/wing_alpha))
+	wing_alpha.apply_pref_to(character, read_preference(/datum/preference/numeric/human/wing_alpha))
 
 	var/datum/preference/numeric/skin_color = GLOB.preference_entries[/datum/preference/color/human/skin_color]
-	skin_color.apply_pref_to(character,read_preference(/datum/preference/color/human/skin_color))
+	skin_color.apply_pref_to(character, read_preference(/datum/preference/color/human/skin_color))
 
-	character.set_gender(biological_gender)
+	var/datum/preference/color/human/eyes_color = GLOB.preference_entries[/datum/preference/color/human/eyes_color]
+	eyes_color.apply_pref_to(character, read_preference(/datum/preference/color/human/eyes_color))
+
+	character.set_gender(read_preference(/datum/preference/choiced/gender/biological))
 
 	// Destroy/cyborgize organs and limbs.
 	if (convert_to_prosthetics) //should only really be run for proteans
@@ -554,7 +557,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		for(var/BP in mark_datum.body_parts)
 			var/obj/item/organ/external/O = character.organs_by_name[BP]
 			if(O)
-				if(!islist(body_markings[M][BP])) continue
+				if(!islist(body_markings[M][BP]))
+					continue
 				O.markings[M] = list("color" = body_markings[M][BP]["color"], "datum" = mark_datum, "priority" = priority, "on" = body_markings[M][BP]["on"])
 	character.markings_len = priority
 

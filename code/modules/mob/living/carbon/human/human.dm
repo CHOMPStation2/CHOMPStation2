@@ -167,6 +167,9 @@
 		RigPanel(R)
 
 /mob/living/carbon/human/ex_act(severity)
+	if(is_incorporeal()) // Can't explode shadekin in phase
+		return
+
 	if(!blinded)
 		flash_eyes()
 
@@ -1475,6 +1478,13 @@
 		if(eyes && istype(eyes) && !(eyes.status & ORGAN_CUT_AWAY))
 			return 1
 	return 0
+
+/mob/living/carbon/human/has_lungs()
+	if(internal_organs_by_name[O_LUNGS])
+		var/obj/item/organ/lungs = internal_organs_by_name[O_LUNGS]
+		if(lungs && istype(lungs) && !(lungs.status & ORGAN_CUT_AWAY))
+			return TRUE
+	return FALSE
 
 /mob/living/carbon/human/slip(var/slipped_on, stun_duration=8)
 	var/list/equipment = list(src.w_uniform,src.wear_suit,src.shoes)

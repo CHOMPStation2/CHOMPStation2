@@ -37,7 +37,7 @@
 			H.add_overlay(effect_overlay)
 		if(spells.len)
 			for(var/thing in spells)
-				var/spell/SP = new thing(H)
+				var/datum/spell/SP = new thing(H)
 				H.add_spell(SP)
 				remove_spells += SP
 		if(slowdown_to_set != 0)
@@ -55,7 +55,7 @@
 		if(effect_icon)
 			H.cut_overlay(effect_overlay)
 		if(remove_spells.len)
-			for(var/spell/SP in remove_spells)
+			for(var/datum/spell/SP in remove_spells)
 				H.remove_spell(SP)
 				qdel(SP)
 		if(slowdown_to_set != 0)

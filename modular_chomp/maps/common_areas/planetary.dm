@@ -172,8 +172,9 @@
 	icon_state = "explored"
 
 /area/surface/cave/explored/trader
-	name = "Trader Hideout"
+	name = "Astral Collective Refinery"
 	icon_state = "hideaway"
+	requires_power = FALSE
 
 /area/surface/cave/unexplored/normal
 	name = "Tunnels"

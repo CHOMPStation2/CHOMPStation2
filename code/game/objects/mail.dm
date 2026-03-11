@@ -334,7 +334,7 @@
 	name = "mail crate"
 	desc = "An official mail crate from CentCom"
 	points_per_crate = 0
-	closet_appearance = /decl/closet_appearance/crate/nanotrasen
+	closet_appearance = /datum/decl/closet_appearance/crate/nanotrasen
 
 /obj/structure/closet/crate/mail/full/Initialize(mapload)
 	. = ..()
@@ -377,6 +377,15 @@
 		/obj/item/mail_scanner,
 		/obj/item/pen
 	)
+
+/obj/item/storage/bag/mail/borg
+	name = "letter compartment"
+	desc = "A compartment specifically made for small postage."
+
+/obj/item/storage/bag/mail/borg/proc/upgrade()
+	name += " of holding"
+	storage_slots = 45
+	max_storage_space = 75
 
 // Mail Scanner
 /obj/item/mail_scanner

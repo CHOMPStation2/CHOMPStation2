@@ -300,7 +300,7 @@
 	. = ..()
 
 /turf/simulated/floor/outdoors/grass/heavy/randomgen
-	initial_flooring = /decl/flooring/grass/heavy
+	initial_flooring = /datum/decl/flooring/grass/heavy
 	name = "heavy grass"
 	icon_state = "grass-heavy0"
 	edge_blending_priority = 4
@@ -318,7 +318,7 @@
 	icon_state = "snow"
 	edge_blending_priority = 6
 	movement_cost = 2
-	initial_flooring = /decl/flooring/snow
+	initial_flooring = /datum/decl/flooring/snow
 	demote_to = /turf/simulated/floor/outdoors/dirt
 
 /turf/simulated/floor/outdoors/snow/thor/planetuse/Entered(atom/A)

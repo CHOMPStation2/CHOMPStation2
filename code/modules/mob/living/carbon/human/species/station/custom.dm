@@ -51,26 +51,26 @@
 
 	//CHOMPEdit Start - add a bunch of default emotes
 	default_emotes = list(
-		/decl/emote/audible/teshsqueak,
-		/decl/emote/audible/teshchirp,
-		/decl/emote/audible/teshtrill,
-		/decl/emote/audible/vox_shriek,
-		/decl/emote/audible/squish,
-		/decl/emote/audible/chirp,
-		/decl/emote/visible/bounce,
-		/decl/emote/visible/jiggle,
-		/decl/emote/visible/lightup,
-		/decl/emote/visible/vibrate,
-		/decl/emote/audible/gnarl,
-		/decl/emote/audible/purr,
-		/decl/emote/audible/purrlong,
-		/decl/emote/human/swish,
-		/decl/emote/human/wag,
-		/decl/emote/human/sway,
-		/decl/emote/human/qwag,
-		/decl/emote/human/fastsway,
-		/decl/emote/human/swag,
-		/decl/emote/human/stopsway
+		/datum/decl/emote/audible/teshsqueak,
+		/datum/decl/emote/audible/teshchirp,
+		/datum/decl/emote/audible/teshtrill,
+		/datum/decl/emote/audible/vox_shriek,
+		/datum/decl/emote/audible/squish,
+		/datum/decl/emote/audible/chirp,
+		/datum/decl/emote/visible/bounce,
+		/datum/decl/emote/visible/jiggle,
+		/datum/decl/emote/visible/lightup,
+		/datum/decl/emote/visible/vibrate,
+		/datum/decl/emote/audible/gnarl,
+		/datum/decl/emote/audible/purr,
+		/datum/decl/emote/audible/purrlong,
+		/datum/decl/emote/human/swish,
+		/datum/decl/emote/human/wag,
+		/datum/decl/emote/human/sway,
+		/datum/decl/emote/human/qwag,
+		/datum/decl/emote/human/fastsway,
+		/datum/decl/emote/human/swag,
+		/datum/decl/emote/human/stopsway
 	)
 	//CHOMPEdit End
 

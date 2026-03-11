@@ -121,3 +121,14 @@
 	if(isnull(impact_area))
 		impact_area = placer.find_valid_area()
 	command_announcement.Announce("Metereologic anomaly detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
+
+// Dust
+/datum/event/anomaly/dust
+	startWhen = 3
+	announceWhen = 15
+	anomaly_path = /obj/effect/anomaly/dust
+
+/datum/event/anomaly/dust/announce()
+	if(isnull(impact_area))
+		impact_area = placer.find_valid_area()
+	command_announcement.Announce("Anomalous dust particles detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")

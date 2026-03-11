@@ -130,10 +130,11 @@
 	holder.adjustCloneLoss(-8)
 
 /datum/modifier/astralcollect_titan
-	max_health_percent = 1.8
+	max_health_percent = 2
+	slowdown = 2
 
 /datum/modifier/astralcollect_armour
-	incoming_damage_percent = 0.65
+	incoming_damage_percent = 0.7
 
 /datum/modifier/astralcollect_mistake
 	mob_overlay_state = "poisoned"
@@ -241,7 +242,7 @@
 	name = "Astral Collective Unit"
 	projectile_accuracy = 10
 	needs_reload = TRUE
-	special_attack_cooldown = 7 SECONDS
+	special_attack_cooldown = 10 SECONDS
 	reload_max = 7
 	reload_time = 1.5 SECONDS
 	ranged_cooldown = 65
@@ -267,6 +268,12 @@
 	health = 125
 	maxHealth = 125
 
+	special_attack_cooldown = 20 SECONDS
+	reload_max = 15
+	reload_time = 3.5 SECONDS
+	ranged_cooldown = 85
+	movement_cooldown = 0
+
 /mob/living/simple_mob/humanoid/astral_collective/ranged/taur/do_special_attack(atom/A)
 	expirmental = rand(1,5)
 	switch(expirmental)
@@ -287,8 +294,14 @@
 	icon_state = "tesh"
 	icon_living = "tesh"
 	projectiletype = /obj/item/projectile/energy/astral_collective/particle
-	health = 75
-	maxHealth = 75
+	health = 50
+	maxHealth = 50
+
+	special_attack_cooldown = 5 SECONDS
+	reload_max = 2
+	reload_time = 2 SECONDS
+	ranged_cooldown = 40
+	movement_cooldown = -1
 
 /mob/living/simple_mob/humanoid/astral_collective/ranged/tesh/do_special_attack(atom/A)
 	if((health / maxHealth) <= 0.5)
@@ -302,6 +315,10 @@
 	icon_state = "wolf"
 	icon_living = "wolf"
 	projectiletype = /obj/item/projectile/energy/astral_collective/green
+	special_attack_cooldown = 13 SECONDS
+	reload_max = 5
+	reload_time = 0.5 SECONDS
+	ranged_cooldown = 70
 
 /mob/living/simple_mob/humanoid/astral_collective/ranged/wolf/do_special_attack(atom/A)
 	gravity_surge(A)
@@ -315,6 +332,11 @@
 	health = 150
 	maxHealth = 150
 
+	needs_reload = FALSE
+	special_attack_cooldown = 20 SECONDS
+	ranged_cooldown = 90
+	movement_cooldown = 3
+
 /mob/living/simple_mob/humanoid/astral_collective/ranged/lizard/do_special_attack(atom/A)
 	if((health / maxHealth) <= 0.5)
 		repair_self(A)
@@ -325,7 +347,9 @@
 	desc = "An armoured zaddat."
 	icon_state = "zaddat"
 	icon_living = "zaddat"
-	special_attack_cooldown = 1 SECOND
+	needs_reload = FALSE
+	special_attack_cooldown = 6 SECONDS
+	ranged_cooldown = 30
 
 /mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat/do_special_attack(atom/A)
 	projectiletype = pick(/obj/item/projectile/energy/astral_collective/anti_mecha, /obj/item/projectile/energy/astral_collective/armour_breaker, /obj/item/projectile/energy/astral_collective/searing, /obj/item/projectile/energy/astral_collective/green, /obj/item/projectile/energy/astral_collective/particle)
@@ -385,8 +409,10 @@
 	if(!target)
 		return FALSE
 	for(var/mob/living/L in orange(src, 14))
-		if(L.stat != DEAD && !IIsAlly(L))
-			L.add_modifier(/datum/modifier/mmo_drop/blade_boss_short, 3, src)
+		if(IIsAlly(L))
+			Beam(L, icon_state = "purple_lightning", time = 2.5 SECONDS, maxdistance = INFINITY)
+			L.adjustBruteLoss(-30)
+			L.adjustFireLoss(-30)
 
 /mob/living/simple_mob/humanoid/astral_collective/proc/repair_self(atom/target)
 	if(!target)

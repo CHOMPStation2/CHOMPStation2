@@ -518,6 +518,35 @@
 	},
 /turf/simulated/floor/boxing/gym,
 /area/maintenance/cetus/jrthreestar)
+"abi" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "d3lounge"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/crew_quarters/cetus/lounge)
+"abj" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/bridge/Deck3_Corridor)
+"abk" = (
+/obj/item/megaphone{
+	pixel_x = -13
+	},
+/turf/simulated/wall,
+/area/crew_quarters/heads/sc/restroom)
 "abn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -7716,6 +7745,7 @@
 /area/crew_quarters/heads/sc/restroom)
 "eyz" = (
 /obj/machinery/lapvend,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/lounge)
 "eyA" = (
@@ -20846,6 +20876,7 @@
 	dir = 1;
 	req_access = list(20)
 	},
+/obj/item/pinpointer/advpinpointer,
 /turf/simulated/floor/wood,
 /area/bridge/sleep/Captain_Quarters)
 "mcw" = (
@@ -21110,6 +21141,9 @@
 /obj/machinery/disposal/wall{
 	dir = 8;
 	pixel_x = 35
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/lounge)
@@ -29664,7 +29698,7 @@
 /obj/structure/table/bench/wooden,
 /obj/item/melee/chainofcommand{
 	pixel_y = 35;
-	pixel_x = -15
+	pixel_x = -10
 	},
 /obj/random_multi/single_item/captains_spare_id,
 /turf/simulated/floor/carpet,
@@ -34635,6 +34669,11 @@
 	c_tag = "CIV - Waste Disposal";
 	dir = 4
 	},
+/obj/machinery/button/remote/driver{
+	id = "trash";
+	pixel_x = -26;
+	pixel_y = -11
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "ugc" = (
@@ -37087,6 +37126,10 @@
 	},
 /obj/structure/table/bench/wooden,
 /obj/item/storage/box/donut,
+/obj/item/flame/lighter/zippo/gold{
+	pixel_y = 2;
+	pixel_x = 18
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/sd)
 "vEe" = (
@@ -37284,7 +37327,9 @@
 /area/crew_quarters/cetus/escapepodfore)
 "vLc" = (
 /obj/structure/table/woodentable,
-/obj/item/megaphone,
+/obj/item/megaphone{
+	pixel_x = -13
+	},
 /obj/machinery/recharger,
 /obj/item/storage/secure/safe{
 	pixel_x = 5;
@@ -39385,7 +39430,7 @@
 	icon_state = "0-5"
 	},
 /obj/machinery/power/smes/buildable/engine_default{
-	RCon_tag = "Telecommunications Satellite"
+	RCon_tag = "AI Chamber"
 	},
 /obj/item/smes_coil,
 /obj/item/smes_coil,
@@ -39426,6 +39471,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "wPT" = (
@@ -40048,7 +40094,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable/engine_default{
-	RCon_tag = "Telecommunications Satellite"
+	RCon_tag = "AI Server"
 	},
 /obj/item/smes_coil,
 /obj/item/smes_coil,
@@ -41407,6 +41453,7 @@
 	id = "forestarboardsolar";
 	name = "Fore-Starboard Solar Array"
 	},
+/obj/structure/cable/yellow,
 /turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
 	},
@@ -76863,10 +76910,10 @@ wwt
 fFY
 pTQ
 cbH
-wAJ
-dhV
-dhV
-aGD
+abj
+hjn
+hjn
+abi
 eyz
 miN
 jlP
@@ -78389,7 +78436,7 @@ rhv
 bhd
 bhd
 bhd
-occ
+abk
 occ
 occ
 hRN

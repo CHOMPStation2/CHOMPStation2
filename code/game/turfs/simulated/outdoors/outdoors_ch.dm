@@ -45,7 +45,7 @@
 	icon_state = "snow"
 	edge_blending_priority = 6
 	movement_cost = 2
-	initial_flooring = /decl/flooring/snow
+	initial_flooring = /datum/decl/flooring/snow
 
 /turf/simulated/floor/outdoors/snow/sif/planetuse/Entered(atom/A)
 	if(isliving(A))

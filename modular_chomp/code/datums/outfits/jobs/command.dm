@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/job/bridge_officer
+/datum/decl/hierarchy/outfit/job/bridge_officer
 	name = OUTFIT_JOB_NAME("Bridge Officer")
 	uniform = /obj/item/clothing/under/utility
 	shoes = /obj/item/clothing/shoes/boots/winter/explorer

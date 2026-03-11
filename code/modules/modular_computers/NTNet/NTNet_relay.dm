@@ -57,12 +57,12 @@
 	if((dos_overload > dos_capacity) && !dos_failure)
 		dos_failure = 1
 		update_icon()
-		ntnet_global.add_log("Quantum relay switched from normal operation mode to overload recovery mode.")
+		GLOB.ntnet_global.add_log("Quantum relay switched from normal operation mode to overload recovery mode.")
 	// If the DoS buffer reaches 0 again, restart.
 	if((dos_overload == 0) && dos_failure)
 		dos_failure = 0
 		update_icon()
-		ntnet_global.add_log("Quantum relay switched from overload recovery mode to normal operation mode.")
+		GLOB.ntnet_global.add_log("Quantum relay switched from overload recovery mode to normal operation mode.")
 	..()
 
 /obj/machinery/ntnet_relay/tgui_interact(mob/user, datum/tgui/ui)
@@ -91,16 +91,16 @@
 			dos_overload = 0
 			dos_failure = 0
 			update_icon()
-			ntnet_global.add_log("Quantum relay manually restarted from overload recovery mode to normal operation mode.")
+			GLOB.ntnet_global.add_log("Quantum relay manually restarted from overload recovery mode to normal operation mode.")
 			. = TRUE
 		if("toggle")
 			enabled = !enabled
-			ntnet_global.add_log("Quantum relay manually [enabled ? "enabled" : "disabled"].")
+			GLOB.ntnet_global.add_log("Quantum relay manually [enabled ? "enabled" : "disabled"].")
 			update_icon()
 			. = TRUE
 		if("purge")
-			ntnet_global.banned_nids.Cut()
-			ntnet_global.add_log("Manual override: Network blacklist cleared.")
+			GLOB.ntnet_global.banned_nids.Cut()
+			GLOB.ntnet_global.add_log("Manual override: Network blacklist cleared.")
 			. = TRUE
 
 /obj/machinery/ntnet_relay/Initialize(mapload)
@@ -110,10 +110,10 @@
 
 /obj/machinery/ntnet_relay/Initialize(mapload)
 	. = ..()
-	if(ntnet_global)
-		ntnet_global.relays.Add(src)
-		NTNet = ntnet_global
-		ntnet_global.add_log("New quantum relay activated. Current amount of linked relays: [NTNet.relays.len]")
+	if(GLOB.ntnet_global)
+		GLOB.ntnet_global.relays.Add(src)
+		NTNet = GLOB.ntnet_global
+		GLOB.ntnet_global.add_log("New quantum relay activated. Current amount of linked relays: [NTNet.relays.len]")
 	// CHOMPAdd: PDA Multicaster Server humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
@@ -130,9 +130,9 @@
 	// CHOMPAdd End
 
 /obj/machinery/ntnet_relay/Destroy()
-	if(ntnet_global)
-		ntnet_global.relays.Remove(src)
-		ntnet_global.add_log("Quantum relay connection severed. Current amount of linked relays: [NTNet.relays.len]")
+	if(GLOB.ntnet_global)
+		GLOB.ntnet_global.relays.Remove(src)
+		GLOB.ntnet_global.add_log("Quantum relay connection severed. Current amount of linked relays: [NTNet.relays.len]")
 		NTNet = null
 	for(var/datum/computer_file/program/ntnet_dos/D in dos_sources)
 		D.target = null

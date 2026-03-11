@@ -3,9 +3,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp{
-	loot_list = list(/obj/item/prop/alien/junk = 20, /obj/item/prop/alien/junk = 20)
-	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -23,27 +21,84 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"ac" = (
-/obj/structure/table/alien/blue,
-/obj/item/prop/deconstructable/gigacell,
+"ad" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
-"am" = (
-/mob/living/carbon/alien/diona{
-	adult_name = "Schmeinkie";
-	can_namepick_as_adult = 0;
-	desc = "An overfed diona nymph that looks weirdly like scrumbulous, currently has a hollocollar tagged 'Schmeinkie' on it";
-	faction = "hivebot";
-	health = 150;
-	maxHealth = 150;
-	name = "Schmeinkie";
-	voice_name = "Schmeinkie"
+"ae" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
 	},
-/turf/simulated/floor/greengrid{
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"af" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/obj/effect/floor_decal/techfloor/hole{
+	dir = 4
+	},
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
 	temperature = 243.15
 	},
+/area/submap/DerelictEngine)
+"ag" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/random/trash,
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"ah" = (
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/area/template_noop)
+"ai" = (
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_bullet{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"aj" = (
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"ak" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_bullet{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"al" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
+/turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "an" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -61,10 +116,14 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"ap" = (
-/mob/living/simple_mob/mechanical/hivebot/swarm,
-/turf/template_noop,
-/area/template_noop)
+"ao" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/gibspawner/robot,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
 "aq" = (
 /obj/structure/grille/cult{
 	name = "Alien grille"
@@ -81,8 +140,141 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
+"ar" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"as" = (
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/template_noop)
+"at" = (
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"au" = (
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/shuttle/floor/alien{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/DerelictEngine)
+"av" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"aw" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"ax" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"ay" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
+/turf/simulated/floor/tiled/techfloor{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/DerelictEngine)
+"az" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
+/turf/simulated/floor/tiled/techfloor{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/DerelictEngine)
+"aA" = (
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_bullet,
+/turf/simulated/floor/greengrid{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/DerelictEngine)
+"aB" = (
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
+/turf/simulated/floor/tiled/techfloor{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/DerelictEngine)
+"aC" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
+/turf/simulated/floor/tiled/techfloor{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/DerelictEngine)
+"aD" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
+"aE" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/dot,
+/turf/simulated/shuttle/floor/alien{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/DerelictEngine)
+"aF" = (
+/obj/effect/decal/remains/xeno,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege,
+/turf/simulated/shuttle/floor/alienplating/external,
+/area/submap/DerelictEngine)
 "aG" = (
 /obj/effect/decal/remains/xeno,
+/turf/simulated/shuttle/floor/alien{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/DerelictEngine)
+"aH" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege,
 /turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -109,7 +301,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
-/obj/random/mob/robotic/hivebot,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
 /turf/simulated/floor/plating{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -126,13 +318,6 @@
 /obj/item/material/shard/phoron,
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
-"bn" = (
-/obj/structure/girder/reinforced,
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
 "bp" = (
 /obj/structure/bed/alien,
 /turf/simulated/shuttle/floor/alienplating/external,
@@ -169,19 +354,6 @@
 "bN" = (
 /turf/simulated/floor/outdoors/rocks,
 /area/template_noop)
-"bX" = (
-/mob/living/simple_mob/mechanical/hivebot/tank,
-/turf/template_noop,
-/area/template_noop)
-"cE" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser{
-	loot_list = list(/obj/item/prop/alien/junk = 20)
-	},
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
 "cH" = (
 /obj/structure/prop/alien/pod/hybrid,
 /turf/simulated/floor/tiled/techfloor{
@@ -228,31 +400,10 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"dh" = (
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/techfloor/hole{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
 "dy" = (
 /obj/structure/shuttle/engine/propulsion/burst,
 /obj/structure/shuttle/engine/propulsion/burst,
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
-/area/submap/DerelictEngine)
-"dC" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser,
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/alien{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
 /area/submap/DerelictEngine)
 "dG" = (
 /obj/machinery/door/airlock/alien/blue/public,
@@ -328,6 +479,7 @@
 	dir = 1
 	},
 /obj/effect/gibspawner/human/xenochimera,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "eV" = (
@@ -361,6 +513,9 @@
 	dir = 8
 	},
 /obj/random/trash,
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -400,17 +555,15 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/dot,
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"fJ" = (
-/mob/living/simple_mob/mechanical/hivebot/tank,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
-/area/template_noop)
 "fO" = (
 /turf/simulated/shuttle/wall/alien,
 /area/submap/DerelictEngine)
@@ -492,20 +645,12 @@
 	pixel_x = 7;
 	pixel_y = 10
 	},
-/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"hb" = (
-/mob/living/simple_mob/humanoid/merc/ranged/ionrifle{
-	health = 15;
-	maxHealth = 15
-	},
-/turf/simulated/floor/outdoors/rocks/sif/planetuse,
-/area/template_noop)
 "ht" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
@@ -588,6 +733,9 @@
 /area/submap/DerelictEngine)
 "ib" = (
 /obj/random/trash,
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -625,10 +773,6 @@
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
-"iu" = (
-/obj/random/mob/robotic/hivebot,
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
 "iz" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -639,7 +783,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -653,7 +796,6 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
 /obj/effect/floor_decal/techfloor/hole/right{
 	dir = 8
 	},
@@ -673,6 +815,7 @@
 /area/submap/DerelictEngine)
 "iO" = (
 /obj/effect/gibspawner/robot,
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "iP" = (
@@ -708,16 +851,6 @@
 	oxygen = 20.7263;
 	temperature = 243.15
 	},
-/area/submap/DerelictEngine)
-"ja" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/merc/ranged/ionrifle{
-	health = 15;
-	maxHealth = 15
-	},
-/turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "je" = (
 /turf/simulated/shuttle/floor/alienplating/external,
@@ -865,19 +998,11 @@
 /obj/effect/gibspawner/human,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
-"lE" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/radiation{
-	loot_list = list(/obj/item/prop/alien/junk = 20)
-	},
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
 "lV" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 9
 	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "lX" = (
@@ -921,14 +1046,6 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"mu" = (
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_melee,
-/turf/simulated/floor/greengrid{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
 "mD" = (
 /obj/item/material/shard/phoron{
 	pixel_x = 7;
@@ -946,15 +1063,6 @@
 	},
 /obj/item/stock_parts/micro_laser,
 /turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
-"mI" = (
-/obj/effect/decal/remains/xeno,
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/fragmentation,
-/turf/simulated/shuttle/floor/alien{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
 /area/submap/DerelictEngine)
 "mM" = (
 /obj/effect/floor_decal/techfloor{
@@ -1154,6 +1262,7 @@
 /obj/effect/floor_decal/techfloor/hole/right{
 	dir = 1
 	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege,
 /turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -1161,6 +1270,9 @@
 	},
 /area/submap/DerelictEngine)
 "pt" = (
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -1226,10 +1338,6 @@
 	},
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
-"ql" = (
-/obj/item/gps/internal/poi,
-/turf/simulated/shuttle/wall/alien,
-/area/submap/DerelictEngine)
 "qn" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -1255,29 +1363,12 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"qA" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
-/obj/effect/decal/remains/xeno,
-/turf/simulated/shuttle/floor/alien{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
 "qH" = (
 /obj/structure/particle_accelerator/fuel_chamber{
 	anchored = 1;
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
-"qJ" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser,
-/turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
 	temperature = 243.15
@@ -1321,9 +1412,6 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser{
-	loot_list = list(/obj/item/prop/alien/junk = 20)
-	},
 /obj/item/material/shard/phoron{
 	pixel_x = 7;
 	pixel_y = 10
@@ -1346,31 +1434,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DerelictEngine)
-"rh" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 4
-	},
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 8
-	},
-/obj/effect/floor_decal/techfloor/hole{
-	dir = 4
-	},
-/obj/random/mob/robotic/hivebot,
-/turf/simulated/floor/tiled/techfloor{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
-"rl" = (
-/obj/random/mob/robotic/hivebot,
-/turf/simulated/floor/greengrid{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
 "rI" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -1379,6 +1442,9 @@
 	dir = 8
 	},
 /obj/item/surgical/retractor/alien,
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -1408,11 +1474,6 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"sn" = (
-/obj/random/trash,
-/obj/random/mob/robotic/hivebot,
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
 "sq" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 9
@@ -1429,6 +1490,7 @@
 /area/submap/DerelictEngine)
 "st" = (
 /obj/random/trash,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
 /turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -1492,17 +1554,6 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"tl" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/obj/random/mob/robotic/hivebot,
-/turf/simulated/floor/tiled/techfloor{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
 "ts" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 6
@@ -1533,7 +1584,6 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 9
 	},
-/obj/random/mob/robotic/hivebot,
 /turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -1626,6 +1676,7 @@
 	icon_state = "4-8"
 	},
 /obj/item/clothing/under/psysuit,
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_bullet,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -1770,6 +1821,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/decal/remains/xeno,
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_bullet,
 /turf/simulated/floor/plating{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -1888,25 +1940,10 @@
 /obj/effect/decal/remains/xeno,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
-"xz" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/mob/living/simple_mob/humanoid/merc/ranged{
-	health = 15;
-	maxHealth = 15
-	},
-/turf/simulated/shuttle/floor/alien{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
 "xC" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 6
 	},
-/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -1923,6 +1960,9 @@
 /obj/effect/floor_decal/techfloor/hole{
 	dir = 4
 	},
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "xR" = (
@@ -1934,17 +1974,6 @@
 	},
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/floor/tiled/techfloor{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
-"yg" = (
-/mob/living/simple_mob/humanoid/merc/melee/sword/poi{
-	health = 15;
-	maxHealth = 15
-	},
-/turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
 	temperature = 243.15
@@ -1972,10 +2001,6 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"yk" = (
-/mob/living/simple_mob/mechanical/hivebot/swarm,
-/turf/simulated/floor/outdoors/rocks/sif/planetuse,
-/area/template_noop)
 "yA" = (
 /obj/structure/table/alien,
 /obj/effect/floor_decal/techfloor{
@@ -1983,6 +2008,7 @@
 	},
 /obj/item/prop/alien/junk,
 /obj/item/perfect_tele/alien,
+/obj/item/prop/deconstructable/gigacell,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -2014,27 +2040,14 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"yQ" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 8
-	},
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 4
-	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid{
-	loot_list = list(/obj/item/prop/alien/junk = 20)
-	},
-/turf/simulated/floor/tiled/techfloor{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
 "yZ" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
 /obj/effect/gibspawner/robot,
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "zb" = (
@@ -2189,13 +2202,6 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"AT" = (
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
 "AX" = (
 /obj/structure/loot_pile/surface/alien/end,
 /turf/simulated/floor/greengrid{
@@ -2324,7 +2330,6 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 5
 	},
-/obj/random/mob/robotic/hivebot,
 /turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -2434,33 +2439,6 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"Ee" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline{
-	loot_list = list(/obj/item/prop/alien/junk = 20)
-	},
-/obj/effect/floor_decal/techfloor{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
-"Em" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/mob/living/simple_mob/humanoid/merc/ranged/ionrifle{
-	health = 15;
-	maxHealth = 15
-	},
-/turf/simulated/shuttle/floor/alien{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
-"Et" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/strong/guard,
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
 "Eu" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -2549,13 +2527,6 @@
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
-"FC" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/obj/random/mob/robotic/hivebot,
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
 "FE" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 9
@@ -2598,7 +2569,6 @@
 /area/submap/DerelictEngine)
 "FS" = (
 /obj/structure/closet/alien,
-/obj/item/shield_projector/line,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -2609,6 +2579,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 5
 	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -2657,7 +2628,6 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 9
 	},
-/mob/living/simple_mob/mechanical/hivebot/tank/meatshield,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -2805,6 +2775,7 @@
 /obj/effect/floor_decal/techfloor/hole{
 	dir = 4
 	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -2868,19 +2839,9 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"Je" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/obj/random/mob/robotic/hivebot,
-/turf/simulated/floor/tiled/techfloor{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
 "Jg" = (
 /obj/effect/gibspawner/human,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
 /turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -3076,28 +3037,13 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"Ma" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/fragmentation,
-/turf/simulated/shuttle/floor/alien{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
 "MC" = (
-/mob/living/simple_mob/mechanical/hivebot/precusor/lobber,
+/mob/living/simple_mob/mechanical/hivebot/precusor/machinegun,
 /turf/simulated/floor/greengrid{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
 	temperature = 243.15
 	},
-/area/submap/DerelictEngine)
-"MD" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid,
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "MG" = (
 /obj/structure/table/alien/blue,
@@ -3234,9 +3180,6 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid{
-	loot_list = list(/obj/item/prop/alien/junk = 20)
-	},
 /obj/effect/decal/remains/xeno,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
@@ -3255,31 +3198,6 @@
 /obj/item/cell/device/weapon/recharge/alien/omni/empty,
 /obj/item/gun/energy/laser/sleek,
 /turf/simulated/floor/tiled/techfloor{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
-"Pe" = (
-/obj/effect/floor_decal/techfloor/orange,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser{
-	loot_list = list(/obj/item/prop/alien/junk = 20)
-	},
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
-"Pn" = (
-/obj/random/mob/robotic/hivebot,
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
 	temperature = 243.15
@@ -3405,13 +3323,6 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"Qm" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/obj/random/mob/robotic/hivebot,
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
 "Qv" = (
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/template_noop)
@@ -3438,7 +3349,9 @@
 	},
 /area/submap/DerelictEngine)
 "QS" = (
-/obj/random/mob/robotic/hivebot,
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -3476,19 +3389,6 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/smes/buildable/alien_royal,
-/turf/simulated/floor/tiled/techfloor{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
-"Ro" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_bullet{
-	loot_list = list(/obj/item/prop/alien/junk = 20)
-	},
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -3574,17 +3474,6 @@
 "SF" = (
 /turf/template_noop,
 /area/template_noop)
-"SJ" = (
-/obj/effect/decal/cleanable/generic,
-/mob/living/simple_mob/mechanical/hivebot/precusor/laser{
-	loot_list = list(/obj/item/prop/alien/junk = 20, /obj/item/prop/alien/junk = 20, /obj/item/storage/belt/utility/alien = 50)
-	},
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
 "ST" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -3603,15 +3492,6 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"SV" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid{
-	loot_list = list(/obj/item/prop/alien/junk = 20)
-	},
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
 "SW" = (
 /obj/effect/gibspawner/robot,
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
@@ -3624,6 +3504,7 @@
 	icon_state = "4-8"
 	},
 /obj/item/trash/material/metal,
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -3653,23 +3534,6 @@
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
-"TK" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 8
-	},
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 4
-	},
-/obj/effect/floor_decal/techfloor/hole{
-	dir = 4
-	},
-/obj/random/mob/robotic/hivebot,
-/turf/simulated/floor/tiled/techfloor{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/DerelictEngine)
 "TO" = (
 /obj/effect/floor_decal/techfloor/orange/corner,
 /obj/structure/cable/green{
@@ -3689,7 +3553,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/random/mob/robotic/hivebot,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -3723,15 +3587,6 @@
 	oxygen = 20.7263;
 	temperature = 243.15
 	},
-/area/submap/DerelictEngine)
-"Ui" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 1
-	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp{
-	loot_list = list(/obj/item/prop/alien/junk = 20, /obj/item/prop/alien/junk = 20)
-	},
-/turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "Um" = (
 /obj/structure/bed/alien,
@@ -3864,6 +3719,9 @@
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "Vs" = (
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/shuttle/floor/voidcraft{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -3900,7 +3758,6 @@
 	},
 /area/submap/DerelictEngine)
 "VQ" = (
-/obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/plating{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -3991,15 +3848,6 @@
 	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
-"Xm" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 1
-	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline{
-	loot_list = list(/obj/item/prop/alien/junk = 20)
-	},
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
 "Xp" = (
 /mob/living/simple_mob/humanoid/merc/ranged{
 	health = 15;
@@ -4009,6 +3857,9 @@
 /area/template_noop)
 "Xq" = (
 /obj/random/trash,
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/template_noop,
 /area/template_noop)
 "XE" = (
@@ -4142,7 +3993,6 @@
 	pixel_x = -9;
 	pixel_y = -7
 	},
-/obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -4165,14 +4015,6 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
-"YW" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp,
-/turf/simulated/shuttle/floor/alien{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
 /area/submap/DerelictEngine)
 "Zh" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -4215,7 +4057,7 @@
 SF
 SF
 SF
-vU
+SF
 SF
 SF
 Qv
@@ -4263,8 +4105,8 @@ SF
 (2,1,1) = {"
 SF
 jl
-SF
-SF
+vU
+vU
 Qv
 Qv
 KU
@@ -4311,9 +4153,9 @@ SF
 "}
 (3,1,1) = {"
 SF
-SF
+vU
 Xp
-Qv
+Nr
 KU
 jl
 KU
@@ -4338,11 +4180,11 @@ Qv
 Qv
 Qv
 KU
+Qv
+SF
 Nr
-SF
-Qv
-SF
-Qv
+vU
+Nr
 SF
 SF
 SF
@@ -4359,9 +4201,9 @@ SF
 SF
 "}
 (4,1,1) = {"
-vU
 SF
-fJ
+vU
+Nr
 jl
 KU
 KU
@@ -4389,9 +4231,9 @@ KU
 KU
 Qv
 KU
-fJ
-hb
-Qv
+Nr
+pR
+Nr
 Qv
 Qv
 SF
@@ -4424,10 +4266,10 @@ WQ
 Is
 Is
 mM
-Ro
 QW
-Je
 QW
+ay
+ay
 uJ
 fO
 EC
@@ -4438,9 +4280,9 @@ KU
 Qv
 KU
 Qv
-KU
-KU
-Qv
+ah
+ah
+Nr
 KU
 KU
 KU
@@ -4489,7 +4331,7 @@ SF
 KU
 SF
 KU
-ap
+SF
 KU
 SF
 Qv
@@ -4519,13 +4361,13 @@ fO
 fO
 QT
 YJ
-MD
 YJ
 YJ
 YJ
 YJ
 YJ
-lE
+YJ
+YJ
 YJ
 xs
 fO
@@ -4543,7 +4385,7 @@ SF
 SF
 SF
 SF
-yk
+KU
 KU
 SF
 Qv
@@ -4577,7 +4419,7 @@ je
 LG
 LG
 je
-iu
+je
 gy
 bp
 TB
@@ -4593,9 +4435,9 @@ QY
 SF
 Qv
 Qv
-KU
-Qv
-KU
+ah
+Nr
+ah
 Qv
 KU
 SF
@@ -4611,8 +4453,8 @@ jl
 jl
 fO
 AX
-am
-mu
+HS
+HS
 dG
 Vb
 Vb
@@ -4630,7 +4472,7 @@ Vb
 yj
 Vb
 tj
-dC
+iW
 TF
 fO
 fO
@@ -4642,9 +4484,9 @@ dy
 SF
 KU
 SF
-Qv
+Nr
 Xp
-fJ
+Nr
 SF
 KU
 bN
@@ -4679,8 +4521,8 @@ jG
 fO
 zY
 Ec
-jG
-jG
+fH
+fH
 Os
 fO
 fO
@@ -4691,10 +4533,10 @@ QY
 KU
 KU
 KU
-KU
-KU
-Qv
+ah
+ah
 Nr
+Qv
 SF
 Qv
 KU
@@ -4709,7 +4551,7 @@ hZ
 fO
 fO
 AX
-rl
+HS
 jD
 fO
 gy
@@ -4728,9 +4570,9 @@ gy
 gy
 QT
 YJ
+ae
+ae
 YJ
-YJ
-Qm
 Um
 fO
 fO
@@ -4856,11 +4698,11 @@ tx
 DJ
 QT
 fO
-Ma
+LG
 VA
 fO
 cH
-Ee
+bk
 HZ
 Qf
 UW
@@ -4880,9 +4722,9 @@ LG
 pr
 fO
 gy
-ja
 YJ
-YJ
+al
+al
 Ku
 lD
 YJ
@@ -4902,14 +4744,14 @@ jl
 fG
 lX
 ps
-qA
+aG
 RF
 fO
-Ns
+aE
 eV
 fO
 aJ
-bk
+aD
 uH
 Tz
 we
@@ -4922,19 +4764,19 @@ PK
 aG
 je
 BR
-Wk
+av
 LG
 aG
-LG
-Iv
+au
+at
 pr
 hZ
 Vn
 zb
 zb
 aO
-Et
-je
+Iv
+ai
 wd
 fO
 fO
@@ -4951,8 +4793,8 @@ bl
 fY
 mN
 wx
-qJ
-je
+LG
+Wk
 gy
 je
 pr
@@ -4960,7 +4802,7 @@ fO
 RU
 aa
 HE
-XW
+aC
 nO
 HS
 iQ
@@ -4971,21 +4813,21 @@ Qk
 PU
 je
 BR
+av
 je
 je
-iu
-je
-je
+at
+at
 je
 RW
-Et
+je
+sl
+sl
 LG
-LG
-yg
 iO
 WV
 je
-iu
+je
 Pw
 gy
 or
@@ -5004,13 +4846,13 @@ je
 je
 BR
 je
-ac
+fn
 fO
 SB
 Ga
 TP
 tP
-HS
+aA
 iB
 iB
 iB
@@ -5020,15 +4862,15 @@ IS
 tj
 Vb
 gy
-Vb
+aw
 gy
 fO
 gy
-dh
+db
 Vb
 wp
 Vb
-xz
+iW
 tj
 iW
 fO
@@ -5039,7 +4881,7 @@ Vb
 MZ
 db
 yZ
-Vb
+ad
 Bd
 pt
 KU
@@ -5048,17 +4890,17 @@ KU
 jl
 hZ
 hZ
-ql
+fO
 JX
 UV
 gy
-rh
+wM
 Yp
 fO
 Uv
 GM
 IM
-SJ
+CL
 VQ
 iB
 nZ
@@ -5081,7 +4923,7 @@ Bh
 ka
 fO
 fO
-QS
+PF
 PF
 Vy
 PF
@@ -5108,7 +4950,7 @@ SB
 lV
 aP
 BX
-HS
+aA
 iB
 iB
 iB
@@ -5117,17 +4959,17 @@ zf
 IS
 XT
 YJ
-bn
 YJ
+ax
 gy
 fO
 gy
-AT
+YJ
 YJ
 wp
 YJ
 DJ
-Em
+DJ
 DJ
 fO
 pg
@@ -5136,10 +4978,10 @@ sv
 YJ
 XE
 qT
-Ku
-YJ
+ag
+ae
 VX
-SF
+vU
 Qv
 "}
 (20,1,1) = {"
@@ -5147,16 +4989,16 @@ bG
 fY
 iK
 wx
-qJ
-xv
+LG
+aF
 gy
 je
 pF
 fO
 Ok
-Ui
+aD
 LT
-XW
+aC
 nO
 iQ
 HS
@@ -5167,26 +5009,26 @@ Qk
 od
 cQ
 BR
+av
 je
 je
-iu
 Vs
-je
+at
 je
 wp
-Et
+je
 Jg
 st
 LG
-je
+Iv
 eq
 je
-sn
+eq
 BG
 gy
 or
 fH
-wM
+af
 hZ
 hZ
 KU
@@ -5195,18 +5037,18 @@ KU
 cX
 fY
 PF
-wx
-sl
+aH
+LG
 RF
 fO
-Ns
+aE
 eV
 fO
 zr
 eR
 wq
 uP
-PF
+aB
 zf
 PF
 fy
@@ -5216,19 +5058,19 @@ ZH
 LG
 je
 BR
-Wk
+av
 LG
 ez
-LG
-Iv
+au
+at
 pF
 fO
 wd
 eV
 zb
 DQ
-Et
 je
+aj
 wd
 fO
 fO
@@ -5248,11 +5090,11 @@ Ct
 tj
 zk
 fO
-mI
+aG
 CV
 fO
 DA
-Xm
+bk
 by
 wh
 xR
@@ -5273,10 +5115,10 @@ rb
 hZ
 fO
 Vb
-Vb
-yZ
+ar
+ao
 db
-Vb
+ak
 Bd
 gy
 gy
@@ -5308,7 +5150,7 @@ YH
 Ao
 nM
 hY
-Pe
+IS
 fn
 zw
 Vn
@@ -5414,9 +5256,9 @@ gy
 gy
 Fd
 il
-Vb
+ad
 xQ
-FC
+Vb
 vC
 fO
 fO
@@ -5450,12 +5292,12 @@ gy
 ms
 ht
 Yl
-TK
+RB
 jU
 vl
 iQ
 Vg
-yQ
+jU
 OZ
 Lb
 jG
@@ -5463,7 +5305,7 @@ jG
 qn
 lY
 uA
-jG
+fH
 rI
 lY
 fO
@@ -5479,7 +5321,7 @@ Qv
 SF
 SF
 SF
-vU
+SF
 SF
 SF
 SF
@@ -5506,17 +5348,17 @@ qH
 hW
 YJ
 OB
-Pn
+DJ
 YJ
 YJ
 fg
-cE
+YJ
 DJ
 DJ
 EM
 fO
 fO
-Ns
+LG
 Vk
 Yr
 EC
@@ -5526,8 +5368,8 @@ KU
 SF
 KU
 Nr
-SF
-Qv
+vU
+Nr
 SF
 SF
 SF
@@ -5554,7 +5396,7 @@ TV
 Yu
 Yl
 je
-YW
+LG
 LG
 je
 je
@@ -5574,9 +5416,9 @@ SF
 SF
 Qv
 KU
-KU
+ah
 pR
-Qv
+Nr
 Qv
 SF
 SF
@@ -5597,7 +5439,7 @@ fO
 fO
 zk
 db
-SV
+Vb
 Vb
 Vb
 Vb
@@ -5623,9 +5465,9 @@ SF
 SF
 SF
 SF
-KU
-SF
-KU
+ah
+vU
+ah
 KU
 Tt
 SF
@@ -5636,7 +5478,7 @@ SF
 SF
 SF
 SF
-vU
+SF
 SF
 SF
 SF
@@ -5671,7 +5513,7 @@ SF
 SF
 SF
 SF
-vU
+SF
 SF
 Qv
 KU
@@ -5684,9 +5526,9 @@ SF
 (31,1,1) = {"
 SF
 SF
-SF
-SF
-SF
+vU
+vU
+vU
 SF
 SF
 SF
@@ -5695,13 +5537,13 @@ SF
 hZ
 fO
 el
-iZ
-iZ
+az
+az
 pB
 iF
 iZ
-tl
-iZ
+az
+az
 Ng
 fO
 EC
@@ -5715,7 +5557,7 @@ SF
 SF
 Qv
 SF
-Nr
+Qv
 SF
 SF
 SF
@@ -5733,9 +5575,9 @@ SF
 (32,1,1) = {"
 SF
 SF
-bX
+vU
 Xp
-SF
+vU
 SF
 SF
 SF
@@ -5760,10 +5602,10 @@ KU
 KU
 KU
 SF
+SF
+ah
 vU
-KU
-SF
-SF
+vU
 SF
 KU
 KU
@@ -5782,11 +5624,11 @@ KU
 (33,1,1) = {"
 SF
 SF
-SF
-SF
-SF
-SF
 vU
+vU
+vU
+SF
+SF
 SF
 SF
 SF
@@ -5810,9 +5652,9 @@ Qv
 Qv
 SF
 KU
-SF
-hb
-bX
+vU
+pR
+vU
 KU
 SF
 SF
@@ -5859,9 +5701,9 @@ SF
 SF
 Qv
 SF
-SF
-KU
-Tt
+vU
+ah
+as
 SF
 KU
 KU

@@ -51,7 +51,7 @@
 	var/shown_robot_modules = 0 //Used to determine whether they have the module menu shown or not
 	var/atom/movable/screen/robot_modules_background
 
-	var/ui_theme
+	var/ui_theme = "ntos"
 	var/selecting_module = FALSE
 
 //3 Modules can be activated at any one time.
@@ -1446,6 +1446,8 @@
 /mob/living/silicon/robot/buckle_mob(mob/living/M, forced = FALSE, check_loc = TRUE)
 	if(forced)
 		return ..() // Skip our checks
+	if(is_incorporeal(src) || is_incorporeal(M))
+		return FALSE
 	if(lying)
 		return FALSE
 	if(!ishuman(M))
@@ -1586,6 +1588,13 @@
 			return robot_snatcher
 		else if(!robot_snatcher)
 			return "" // Return this to have the analyzer show an error if the module is missing. FALSE / NULL are used for missing upgrades themselves
+		return FALSE
+	if(given_type == /obj/item/borg/upgrade/restricted/adv_mailbag)
+		var/obj/item/storage/bag/mail/borg/letter_bag = has_upgrade_module(/obj/item/storage/bag/mail/borg)
+		if(letter_bag && letter_bag.storage_slots > letter_bag::storage_slots)
+			return letter_bag
+		else if(!letter_bag)
+			return ""
 		return FALSE
 	if(given_type == /obj/item/borg/upgrade/restricted/advrped)
 		return has_upgrade_module(/obj/item/storage/part_replacer/adv)

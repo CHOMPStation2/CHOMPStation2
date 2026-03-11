@@ -89,12 +89,13 @@
 	if(air_contents.temperature < FIRE_MAX_TEMP) // May as well limit this
 		var/starting_energy = air_contents.temperature * air_contents.heat_capacity()
 		if(starting_energy > 0)
-			air_contents.temperature = min((starting_energy + vsc.fire_fuel_energy_release * (gas_exchange * 1.025)) / air_contents.heat_capacity(), FIRE_MAX_TEMP)
+			air_contents.temperature = min((starting_energy + GLOB.vsc.fire_fuel_energy_release * (gas_exchange * 1.025)) / air_contents.heat_capacity(), FIRE_MAX_TEMP)
 	air_contents.update_values()
 
 	// Affect contents
 	for(var/mob/living/L in loc)
-		L.FireBurn(firelevel, air_contents.temperature, air_contents.return_pressure()) // Burn the mobs!
+		if(!L.is_incorporeal())
+			L.FireBurn(firelevel, air_contents.temperature, air_contents.return_pressure()) // Burn the mobs!
 
 	loc.fire_act(air_contents, air_contents.temperature, air_contents.volume)
 	for(var/atom/A in loc)

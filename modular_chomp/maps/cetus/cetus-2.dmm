@@ -56869,7 +56869,8 @@
 "tcX" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock{
-	name = "Showers"
+	name = "Showers";
+	req_access = list(1)
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/security/Restroom)

@@ -1,7 +1,7 @@
-/decl/emote/audible/wheeze
+/datum/decl/emote/audible/wheeze
 	emote_sound = 'sound/voice/wheeze.ogg'
 
-/decl/emote/audible/prbt2
+/datum/decl/emote/audible/prbt2
 	key = "prbt2"
 	emote_message_1p = "You prbt."
 	emote_message_3p = "prbts."
@@ -9,7 +9,7 @@
 	emote_message_3p_target = "prbts at TARGET."
 	emote_sound = 'sound/voice/prbt2.ogg'
 
-/decl/emote/audible/gasp/get_emote_sound(var/atom/user)
+/datum/decl/emote/audible/gasp/get_emote_sound(var/atom/user)
 	..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
@@ -27,7 +27,7 @@
 				"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
 			)
 
-/decl/emote/audible/mgeow
+/datum/decl/emote/audible/mgeow
 	key = "mgeow"
 	emote_message_1p = "You mgeow."
 	emote_message_3p = "mgeows."
@@ -35,7 +35,7 @@
 	emote_message_3p_target = "mgeow at TARGET."
 	emote_sound = 'sound/voice/mgeow.ogg'
 
-/decl/emote/audible/xenogrowl
+/datum/decl/emote/audible/xenogrowl
 	key = "xenogrowl"
 	emote_message_1p = "You growl unnervingly."
 	emote_message_3p = "growls unnervingly."
@@ -43,7 +43,7 @@
 	emote_message_3p_target = "growls unnervingly at TARGET."
 	emote_sound = 'sound/voice/emotes/xenogrowl.ogg'
 
-/decl/emote/audible/xenohiss
+/datum/decl/emote/audible/xenohiss
 	key = "xenohiss"
 	emote_message_1p = "You hiss unnervingly."
 	emote_message_3p = "hisses unnervingly."
@@ -51,7 +51,7 @@
 	emote_message_3p_target = "hisses unnervingly at TARGET."
 	emote_sound = 'sound/voice/emotes/xenohiss.ogg'
 
-/decl/emote/audible/xenopurr
+/datum/decl/emote/audible/xenopurr
 	key = "xenopurr"
 	emote_message_1p = "You purr unnervingly."
 	emote_message_3p = "purrs unnervingly."
@@ -59,7 +59,7 @@
 	emote_message_3p_target = "purrs unnervingly at TARGET."
 	emote_sound = 'sound/voice/emotes/xenopurr.ogg'
 
-/decl/emote/audible/gwah
+/datum/decl/emote/audible/gwah
 	key = "gwah"
 	emote_message_1p = "You gwah."
 	emote_message_3p = "gwahs."
@@ -67,7 +67,7 @@
 	emote_message_3p_target = "gwahs at TARGET."
 	emote_sound = 'sound/voice/emotes/gwah.ogg'
 
-/decl/emote/audible/wawa
+/datum/decl/emote/audible/wawa
 	key = "wawa"
 	emote_message_1p = "You wawa."
 	emote_message_3p = "wawas."
@@ -75,11 +75,11 @@
 	emote_message_3p_target = "wawas at TARGET."
 	emote_sound = 'sound/voice/emotes/wawa.ogg'
 
-/decl/emote/audible/scientist //placeholder, do not use in anything
+/datum/decl/emote/audible/scientist //placeholder, do not use in anything
 	key = "hlscientist"
 	emote_message_3p = "does science."
 
-/decl/emote/audible/scientist/scream
+/datum/decl/emote/audible/scientist/scream
 	key = "hlscream"
 	emote_message_1p = "You scream."
 	emote_message_3p = "screams."
@@ -93,7 +93,7 @@
 		'sound/voice/scream/scientist/scream25.ogg',
 	)
 
-/decl/emote/audible/scientist/pain
+/datum/decl/emote/audible/scientist/pain
 	key = "hlpain"
 	emote_message_1p = "You shout in pain."
 	emote_message_3p = "shouts in pain."
@@ -105,11 +105,11 @@
 		'sound/voice/pain/scientist/sci_pain5.ogg',
 	)
 
-/decl/emote/audible/scientist/get_emote_sound(var/atom/user)
+/datum/decl/emote/audible/scientist/get_emote_sound(var/atom/user)
 	. = ..()
 	.["vol"] *= 0.4 //these boys are pretty loud on their own lol
 
-/decl/emote/audible/yip // sounds sourced from: https://introdile.itch.io/kobold-generator with permission from the creator
+/datum/decl/emote/audible/yip // sounds sourced from: https://introdile.itch.io/kobold-generator with permission from the creator
 	key = "yip"
 	emote_message_1p = "You yip."
 	emote_message_3p = "yips!"
@@ -121,7 +121,7 @@
 		'sound/voice/emotes/yip3.ogg',
 	)
 
-/decl/emote/audible/squeal // Sound sourced from: https://github.com/Baystation12/Baystation12/blob/bd2f0bd5e38cf2bb0888e3ae879708bed20243b4/sound/voice/LizardSqueal.ogg, licensed Creative Commons 3.0 BY-SA.
+/datum/decl/emote/audible/squeal // Sound sourced from: https://github.com/Baystation12/Baystation12/blob/bd2f0bd5e38cf2bb0888e3ae879708bed20243b4/sound/voice/LizardSqueal.ogg, licensed Creative Commons 3.0 BY-SA.
 	key = "squeal"
 	emote_message_1p = "You squeal."
 	emote_message_3p = "squeals."
@@ -129,7 +129,7 @@
 	emote_message_3p_target = "squeals at TARGET."
 	emote_sound = 'sound/voice/emotes/squealemote.ogg'
 
-/decl/emote/audible/tailthump // Sound sourced from https://freesound.org/s/389665/ Licensed Creative Commons 0
+/datum/decl/emote/audible/tailthump // Sound sourced from https://freesound.org/s/389665/ Licensed Creative Commons 0
 	key = "tailthump"
 	emote_message_1p = "You thump your tail."
 	emote_message_3p = "thumps their tail."

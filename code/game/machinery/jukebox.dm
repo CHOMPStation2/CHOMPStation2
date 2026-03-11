@@ -74,7 +74,6 @@
 			current_track = null
 			playing = 0
 			update_icon()
-	updateDialog()
 	start_stop_song()
 
 // Tells the media manager to start or stop playing based on current settings.
@@ -96,7 +95,6 @@
 	if(hacked == newhacked)
 		return
 	hacked = newhacked
-	updateDialog()
 
 /obj/machinery/media/jukebox/attackby(obj/item/W as obj, mob/user as mob)
 	src.add_fingerprint(user)
@@ -256,6 +254,9 @@
 /obj/machinery/media/jukebox/attack_hand(var/mob/user as mob)
 	interact(user)
 
+/obj/machinery/media/jukebox/allow_pai_interaction(mob/living/silicon/pai/user, proximity_flag)
+	return proximity_flag
+
 /obj/machinery/media/jukebox/proc/explode()
 	walk_to(src,0)
 	src.visible_message(span_danger("\The [src] blows apart!"), 1)
@@ -308,7 +309,6 @@
 	update_use_power(USE_POWER_ACTIVE)
 	update_icon()
 	start_stop_song()
-	updateDialog()
 
 // Advance to the next track - Don't start playing it unless we were already playing
 /obj/machinery/media/jukebox/proc/NextTrack()
@@ -319,7 +319,6 @@
 	current_track = tracks[newTrackIndex]
 	if(playing)
 		start_stop_song()
-	updateDialog()
 
 // Advance to the next track - Don't start playing it unless we were already playing
 /obj/machinery/media/jukebox/proc/PrevTrack()
@@ -330,7 +329,6 @@
 	current_track = tracks[newTrackIndex]
 	if(playing)
 		start_stop_song()
-	updateDialog()
 
 //Pre-hacked Jukebox, has the full sond list unlocked
 /obj/machinery/media/jukebox/hacked

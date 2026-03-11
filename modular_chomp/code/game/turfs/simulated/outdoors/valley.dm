@@ -7,7 +7,7 @@
 
 	grass_chance = 3
 
-	initial_flooring = /decl/flooring/grass/sif
+	initial_flooring = /datum/decl/flooring/grass/sif
 
 	animals = "valley"
 
@@ -22,7 +22,7 @@
 
 	grass_chance = 3
 
-	initial_flooring = /decl/flooring/dirt
+	initial_flooring = /datum/decl/flooring/dirt
 
 	animals = "valleyedge"
 
@@ -40,20 +40,20 @@
 
 	grass_chance = 15
 
-	initial_flooring = /decl/flooring/dirt
+	initial_flooring = /datum/decl/flooring/dirt
 
 	animals = "sifcave"
 
 	grass = "sifcave"
 
 /*
-/decl/flooring/grass/sif/valleycave
+/datum/decl/flooring/grass/sif/valleycave
 	icon = ""
 	icon_state = "bordercolorcee"
 
 
-/decl/flooring/grass/sif/valleyedge
+/datum/decl/flooring/grass/sif/valleyedge
 
 
-/decl/flooring/grass/sif/valley
+/datum/decl/flooring/grass/sif/valley
 */
