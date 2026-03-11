@@ -2379,12 +2379,8 @@
 #include "code\modules\alarm\fire_alarm.dm"
 #include "code\modules\alarm\motion_alarm.dm"
 #include "code\modules\alarm\power_alarm.dm"
-<<<<<<< HEAD
-=======
 #include "code\modules\anomalies\anomaly.dm"
 #include "code\modules\anomalies\anomaly_harvester.dm"
-#include "code\modules\appreciation\appreciation.dm"
->>>>>>> 7018074d55 (Anomaly Harvesting (#19068))
 #include "code\modules\artifice\cursedform.dm"
 #include "code\modules\artifice\deadringer.dm"
 #include "code\modules\artifice\telecube.dm"
