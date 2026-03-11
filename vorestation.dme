@@ -2786,7 +2786,6 @@
 #include "code\modules\clothing\suits\solgov.dm"
 #include "code\modules\clothing\suits\solgov_vr.dm"
 #include "code\modules\clothing\suits\storage.dm"
-#include "code\modules\clothing\suits\storage_yw.dm"
 #include "code\modules\clothing\suits\utility.dm"
 #include "code\modules\clothing\suits\utility_vr.dm"
 #include "code\modules\clothing\suits\wiz_robe.dm"

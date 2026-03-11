@@ -289,31 +289,6 @@
 	newflag.visible_message(span_infoplain(span_bold("[user]") + " plants [newflag] firmly in the ground."))
 	src.use(1)
 
-<<<<<<< HEAD
-// Lightpoles for lumber colony //CHOMPEdit Start
-/obj/item/stack/lightpole
-	name = "Trailblazers"
-	desc = "Some colourful trail lights."
-	singular_name = "flag"
-	amount = 10
-	max_amount = 10
-	icon = 'icons/obj/mining.dmi'
-	var/upright = 0
-	var/base_state
-	var/on = 0
-	var/brightness_on = 4 //luminosity when on
-	custom_handling = TRUE
-
-/obj/item/stack/lightpole/Initialize(mapload)
-	. = ..()
-	base_state = icon_state
-
-/obj/item/stack/lightpole/blue
-	name = "blue trail blazers"
-	singular_name = "blue trail blazer"
-	icon_state = "bluetrail_light"
-	light_color = "#599DFF"
-=======
 /*****************************Trailblazer item********************************/
 
 /obj/item/stack/lightpole
@@ -325,57 +300,11 @@
 	icon = 'icons/obj/mining.dmi'
 	custom_handling = TRUE
 	var/blazer_type = /obj/structure/trailblazer
->>>>>>> a73267de09 (Cryogaia Archiving Part 1 (#19184))
 
 /obj/item/stack/lightpole/red
 	name = "red flags"
 	singular_name = "red trail blazer"
 	icon_state = "redtrail_light"
-<<<<<<< HEAD
-	light_color = "#FC0F29"
-
-/obj/item/stack/lightpole/attackby(obj/item/W as obj, mob/user as mob)
-	if(upright && istype(W,src.type))
-		src.attack_hand(user)
-	else
-		..()
-
-/obj/item/stack/lightpole/attack_hand(user as mob)
-	if(upright)
-		upright = 0
-		icon_state = base_state
-		anchored = 0
-		src.visible_message("<b>[user]</b> knocks down [src].")
-	else
-		..()
-
-/obj/item/stack/lightpole/attack_self(mob/user as mob)
-	. = ..(user)
-	if(.)
-		return TRUE
-	var/obj/item/stack/lightpole/F = locate() in get_turf(src)
-
-	var/turf/T = get_turf(src)
-	if(!T || !istype(T,/turf/snow/snow2))
-		user << "The flag won't stand up in this terrain."
-		return
-
-	if(F && F.upright)
-		user << "There is already a flag here."
-		return
-
-	var/obj/item/stack/lightpole/newlightpole = new src.type(T)
-	newlightpole.amount = 1
-	newlightpole.upright = 1
-	brightness_on = 2
-	set_light(brightness_on)
-	anchored = 1
-	newlightpole.name = newlightpole.singular_name
-	newlightpole.icon_state = "[newlightpole.base_state]_on"
-	newlightpole.visible_message("<b>[user]</b> plants [newlightpole] firmly in the ground.")
-	src.use(1)
-//CHOMPEdit End
-=======
 	blazer_type = /obj/structure/trailblazer/red
 
 /obj/item/stack/lightpole/blue
@@ -468,4 +397,3 @@
 /obj/structure/trailblazer/yellow/set_color()
 	icon_state = "yellowtrail_light_on"
 	set_light(2, 2, "#ffea00")
->>>>>>> a73267de09 (Cryogaia Archiving Part 1 (#19184))
