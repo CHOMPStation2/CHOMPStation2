@@ -3512,7 +3512,7 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1
 	},
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "btv" = (
@@ -13446,7 +13446,7 @@
 	},
 /area/civilian/atrium/central)
 "ftk" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/grounds)
 "ftu" = (
@@ -14141,7 +14141,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/workshop)
 "fIS" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
 "fJa" = (
@@ -28658,7 +28658,7 @@
 /turf/simulated/floor/greengrid,
 /area/server)
 "lCQ" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/exterior)
 "lDj" = (
@@ -31882,7 +31882,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "mKU" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
 "mLh" = (
@@ -38712,7 +38712,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "prG" = (
@@ -39422,7 +39422,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "pGA" = (
@@ -41807,7 +41807,7 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
 	},
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "qGR" = (
@@ -46835,7 +46835,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "sGM" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/exterior)
 "sGN" = (
