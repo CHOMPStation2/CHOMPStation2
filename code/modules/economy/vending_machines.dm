@@ -557,15 +557,11 @@
 					/obj/item/gun/energy/stunrevolver = 4,
 					/obj/item/reagent_containers/spray/pepper = 6,
 					/obj/item/taperoll/police = 6,
-<<<<<<< HEAD
-					/obj/item/clothing/glasses/omnihud/sec = 6,
-					/obj/item/clothing/accessory/bodycam = 10) // CHOMPAdd
-=======
 					/obj/item/cell/device/weapon = 8,
 					/obj/item/hailer = 3,
 					/obj/item/flashlight/maglight = 3,
-					/obj/item/clothing/glasses/omnihud/sec = 6)
->>>>>>> dd4bad9446 (Declutters Security Locker Contents, Buffs Legcuff Storage (#19268))
+					/obj/item/clothing/glasses/omnihud/sec = 6,
+					/obj/item/clothing/accessory/bodycam = 10) // CHOMPAdd
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,
 					/obj/item/storage/box/donut = 2,
 					/obj/item/implanter/compliance = 1)
