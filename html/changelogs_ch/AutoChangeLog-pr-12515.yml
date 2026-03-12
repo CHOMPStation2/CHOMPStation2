@@ -1,6 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - code_imp: "cleans up some tgui types"
-  - code_imp: "updates tgui dependencies"
-  - qol: "adds search to gps"

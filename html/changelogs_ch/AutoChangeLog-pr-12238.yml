@@ -1,0 +1,12 @@
+author: "Aroliacue"
+delete-after: True
+changes:
+  - balance: "Xenomorph Hybrids are now immune to space."
+  - balance: "Xenomorph Hybrids now take more damage from burns."
+  - balance: "Xenomorph Hybrids are now significantly harder to heal with chemicals."
+  - balance: "Xenomorph Hybrids dissipate rads faster and have innate toxin resistance."
+  - balance: "Xenomorph Hybrids are now highly resistant to pain."
+  - balance: "Xenomorph Hybrid subtypes have been rebalanced."
+  - balance: "Xenomorph Hybrids no longer have innate shredding."
+  - bugfix: "Corrected Xenomorph Hybrid Praetorian subtype providing additional movespeed instead of slowdown."
+  - bugfix: "Corrected excessive melee damage being applied to the 'strong' melee subtypes."

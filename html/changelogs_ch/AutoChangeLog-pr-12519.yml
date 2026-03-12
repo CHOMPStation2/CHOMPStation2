@@ -1,0 +1,5 @@
+author: "Wide Eyes"
+delete-after: True
+changes:
+  - rscadd: "adds anomaly research to cetus"
+  - bugfix: "few cetus fixes"
