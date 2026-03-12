@@ -173,3 +173,33 @@
   CHOMPStation2StaffMirrorBot:
   - bugfix: text edit state being held too long
   - qol: Cargo borgs may work as mailman
+2026-03-12:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: improves performance of belly resetting
+  - rscadd: Exploration snowsuits
+  - rscadd: Victorian style coats
+  - rscadd: Trailblazer light structures
+  - rscadd: Sec spider pet Lorenzo
+  - rscadd: Chicken pet commander clucky
+  - rscadd: random steptrap spawner
+  - rscadd: Icepick for iced airlock breaking (map flavor too)
+  - rscadd: Mine lighting techweb entry for marker beacons and trailblazers
+  - rscadd: Debris Removal techweb entry for shovels and icepicks
+  - code_imp: cleans up some tgui types
+  - code_imp: updates tgui dependencies
+  - qol: adds search to gps
+  Cerami:
+  - bugfix: Specify the default spawn type.
+  Guti:
+  - rscadd: Added the ability to harvest anomalies
+  - rscadd: Added the Anomaly Scanner, Anomaly Harvester, and Anomalous Particle Gun
+  - rscadd: Xenoarch tech web
+  TheCaramelion:
+  - maptweak: Added anomaly harvesting tools to Southern Cross
+  Will:
+  - image: adds a turf edge to concrete slabs
+  - rscadd: cargo borgs get a destination tagger and package wrapper
+  - bugfix: package wrapper no longer drops its tube inside your mob when emptied
+  - refactor: package wrapper and gift wrap cleaned up
+  zeskorion:
+  - bugfix: cleans up P.I.S.S.

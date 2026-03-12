@@ -33399,12 +33399,7 @@
 /area/hallway/secondary/entry/D3)
 "lpS" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/smartfridge/sheets/persistent_lossy{
-	desc = "An industrial sized storage unit for materials. Following company policy with B-Shift, this particular storage unit will retain a percentage of its material in-between crew transfers.";
-	name = "\improper Persistent Industrial Sheet Storage";
-	req_one_access = list(31,48)
-	},
-/obj/structure/fans/tiny,
+/obj/effect/wingrille_spawn/reinforced/polarized,
 /turf/simulated/floor/plating,
 /area/quartermaster/QM_Office)
 "lqa" = (
