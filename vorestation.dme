@@ -5268,6 +5268,7 @@
 #include "modular_chomp\code\game\jobs\job\noncrew.dm"
 #include "modular_chomp\code\game\jobs\job\security.dm"
 #include "modular_chomp\code\game\jobs\job\silicon.dm"
+#include "modular_chomp\code\game\machinery\air_alarm.dm"
 #include "modular_chomp\code\game\machinery\airconditioner_ch.dm"
 #include "modular_chomp\code\game\machinery\autolathe_armory.dm"
 #include "modular_chomp\code\game\machinery\bluespace_denier.dm"
