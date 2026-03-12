@@ -140,10 +140,7 @@
 	containertype = /obj/structure/largecrate/animal/otie/phoron
 	containername = "VARMAcorp adaptive beta subject (Experimental)"
 	access = ACCESS_XENOBIOLOGY
-<<<<<<< HEAD
 //CHOMEdit End
-=======
-*/ //VORESTATION AI TEMPORARY REMOVAL. Oties commented out cuz broke.
 
 /datum/supply_pack/sci/anomaly_harvesting
 	name = "Anomaly Harvesting crate"
@@ -151,4 +148,3 @@
 	cost = 300
 	containertype = /obj/structure/largecrate/anomaly
 	access = ACCESS_RESEARCH
->>>>>>> 9a37ecee96 (Anomaly Harvesting Tweaks (#19278))
