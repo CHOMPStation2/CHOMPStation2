@@ -370,7 +370,7 @@
 "alY" = (
 /obj/structure/catwalk,
 /obj/effect/mist,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/chapel/main)
 "amj" = (
 /obj/machinery/light_construct{
@@ -1491,7 +1491,7 @@
 "aSt" = (
 /obj/effect/mist,
 /obj/structure/catwalk,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/maintenance/fish)
 "aSJ" = (
 /obj/structure/grille,
@@ -1886,7 +1886,7 @@
 "bfy" = (
 /obj/structure/catwalk,
 /obj/effect/decal/shadow/floor,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/maintenance/fish)
 "bfU" = (
 /turf/simulated/floor,
@@ -6815,7 +6815,7 @@
 /area/maintenance/security_lower)
 "ebB" = (
 /obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/chapel/main)
 "ebE" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -9446,7 +9446,7 @@
 "fzy" = (
 /obj/effect/mist,
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/crew_quarters/fitness)
 "fzO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -10154,7 +10154,7 @@
 /obj/structure/catwalk,
 /obj/effect/mist,
 /obj/effect/decal/shadow/floor,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/chapel/main)
 "gaL" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -11252,7 +11252,7 @@
 /obj/effect/decal/shadow/floor,
 /obj/effect/mist,
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/crew_quarters/fitness)
 "gCj" = (
 /obj/structure/table/standard,
@@ -13114,7 +13114,7 @@
 /area/crew_quarters/sleep/Dorm_2)
 "hzq" = (
 /obj/structure/catwalk,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/maintenance/fish)
 "hzE" = (
 /obj/structure/cable/green{
@@ -16003,7 +16003,7 @@
 /obj/effect/mist,
 /obj/effect/decal/shadow/floor,
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/crew_quarters/fitness)
 "iWB" = (
 /obj/effect/floor_decal/corner/white/border{
@@ -17601,7 +17601,7 @@
 "jLX" = (
 /obj/effect/mist,
 /obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/chapel/main)
 "jMc" = (
 /obj/machinery/camera/network/northern_star{
@@ -18845,7 +18845,7 @@
 	},
 /obj/effect/mist,
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/crew_quarters/fitness)
 "kpA" = (
 /obj/structure/disposalpipe/segment,
@@ -22364,7 +22364,7 @@
 /area/crew_quarters/coffee_shop)
 "mih" = (
 /obj/structure/catwalk,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/chapel/main)
 "miq" = (
 /obj/machinery/vending/coffee,
@@ -24586,7 +24586,7 @@
 	flags = null
 	},
 /obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/chapel/main)
 "ntK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -25199,7 +25199,7 @@
 	},
 /obj/effect/mist,
 /obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/chapel/main)
 "nPH" = (
 /turf/simulated/wall,
@@ -28302,7 +28302,7 @@
 /obj/effect/floor_decal/spline/plain,
 /obj/effect/mist,
 /obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/chapel/main)
 "pwK" = (
 /obj/structure/cable/green{
@@ -30647,7 +30647,7 @@
 /area/chapel/main)
 "qMS" = (
 /obj/effect/catwalk_plated/white,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/crew_quarters/pool)
 "qNz" = (
 /obj/structure/cable{
@@ -31667,7 +31667,7 @@
 /obj/effect/mist,
 /obj/structure/catwalk,
 /obj/effect/decal/shadow/floor,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/maintenance/fish)
 "ruu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -36771,7 +36771,7 @@
 	flags = null
 	},
 /obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/fakesprings,
+/turf/simulated/floor/cryogaia_springs,
 /area/chapel/main)
 "uhz" = (
 /obj/effect/decal/cleanable/dirt,
