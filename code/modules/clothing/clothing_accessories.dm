@@ -68,11 +68,7 @@
 /obj/item/clothing/examine(mob/user)
 	. = ..(user)
 	if(LAZYLEN(accessories))
-<<<<<<< HEAD
-		. += "It has the following attached: [counting_english_list(accessories, user)]" //CHOMPEdit
-=======
 		. += "It has the following attached: [counting_english_list(user.client, accessories)]"
->>>>>>> 547e887c31 (Cleanup (#19283))
 
 /**
  *  Attach accessory A to src
