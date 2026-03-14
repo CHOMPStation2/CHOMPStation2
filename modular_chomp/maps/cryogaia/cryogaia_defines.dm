@@ -177,8 +177,7 @@
 		list(Z_NAME_CRYOGAIA_CENTCOM),
 		list(Z_NAME_CRYOGAIA_MISC),
 		list(Z_NAME_CRYOGAIA_UNDERDARK),
-		list(Z_NAME_BEACH, Z_NAME_BEACH_CAVE),
-		list(Z_NAME_FUELDEPOT)
+		list(Z_NAME_BEACH, Z_NAME_BEACH_CAVE)
 		)
 
 	lateload_gateway = list(
