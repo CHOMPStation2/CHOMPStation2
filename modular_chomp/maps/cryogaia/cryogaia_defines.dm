@@ -154,10 +154,6 @@
 
 	unit_test_z_levels = list(2,4,5,6)
 
-	lateload_overmap = list(
-		list(Z_NAME_OM_GRASS_CAVE),
-		)
-
 	ai_shell_restricted = TRUE
 	ai_shell_allowed_levels = list(
 		Z_LEVEL_CRYOGAIA_MINE,
@@ -170,6 +166,8 @@
 
 	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_UPPER)
 	belter_transit_z =	 	list(Z_NAME_CRYOGAIA_MISC)
+	belter_belt_z = 		list(Z_NAME_CRYOGAIA_ROGUEMINE_1,
+									Z_NAME_CRYOGAIA_ROGUEMINE_2)
 
 	lateload_z_levels = list(
 		list(Z_NAME_CRYOGAIA_PLAINS),
@@ -180,16 +178,23 @@
 		)
 
 	lateload_gateway = list(
-		list(Z_NAME_GATEWAY_SNOW_FIELD_CH),
-		list(Z_NAME_GATEWAY_MADNESS_LAB_CH),
-		list(Z_NAME_GATEWAY_ABANDONED_CITY_CH),
-		list(Z_NAME_GATEWAY_SKYSCRAPER_CH),
-		list(Z_NAME_GATEWAY_HIDDEN_ECLIPSE_CH)
+		list(Z_NAME_GATEWAY_CARP_FARM),
+		list(Z_NAME_GATEWAY_SNOW_FIELD),
+		list(Z_NAME_GATEWAY_LISTENING_POST),
+		list(list(Z_NAME_GATEWAY_HONLETH_A, Z_NAME_GATEWAY_HONLETH_B)),
+		list(Z_NAME_GATEWAY_ARYNTHI_CAVE_A,Z_NAME_GATEWAY_ARYNTHI_A),
+		list(Z_NAME_GATEWAY_ARYNTHI_CAVE_B,Z_NAME_GATEWAY_ARYNTHI_B),
+		list(Z_NAME_GATEWAY_WILD_WEST),
+		)
+
+	lateload_overmap = list(
+		list(Z_NAME_OM_GRASS_CAVE),
 		)
 
 	lateload_redgate = list(
 		list(Z_NAME_REDGATE_TEPPI_RANCH),
 		list(Z_NAME_REDGATE_INNLAND),
+//		list(Z_NAME_REDGATE_ABANDONED_ISLAND),	//This will come back later
 		list(Z_NAME_REDGATE_DARK_ADVENTURE),
 		list(Z_NAME_REDGATE_EGGNOG_CAVE, Z_NAME_REDGATE_EGGNOG_TOWN),
 		list(Z_NAME_REDGATE_STAR_DOG),
@@ -201,6 +206,8 @@
 		list(Z_NAME_REDGATE_LASERDOME),
 		list(Z_NAME_REDGATE_CASCADING_FALLS),
 		list(Z_NAME_REDGATE_JUNGLE_CAVE, Z_NAME_REDGATE_JUNGLE),
+		list(Z_NAME_REDGATE_FACILITY),
+		list(Z_NAME_REDGATE_CASINO_CANAL_LOWER, Z_NAME_REDGATE_CASINO_CANAL),
 		)
 
 	planet_datums_to_make = list(/datum/planet/borealis2)
@@ -209,7 +216,9 @@
 
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, 64, 64)         // Create the mining ore distribution map.
+
 	//seed_submaps(list(Z_NAME_ALIAS_SURFACE), 240, /area/cryogaia/outpost/exploration_plains, /datum/map_template/cryogaia_lateload/plains)
+
 	return 1
 
 /datum/planet/borealis2
