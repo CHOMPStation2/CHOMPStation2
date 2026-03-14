@@ -22,6 +22,8 @@
 		#include "cryogaia-06-upper.dmm" //upper level
 	#endif
 
+	#include "submaps/rogue_mines/_rogue_mines.dm"
+
 	#define USING_MAP_DATUM /datum/map/cryogaia
 
 	// todo: map.dmm-s here
