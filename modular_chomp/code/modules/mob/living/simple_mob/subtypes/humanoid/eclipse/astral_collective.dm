@@ -86,7 +86,9 @@
 		/obj/random/material/refined = 50,
 		/obj/random/material/precious = 40,
 		/obj/random/janusmodule = 3,
-		/obj/item/dnainjector/random_verybad = 10,
+		/obj/item/slime_extract/bluespace = 10,
+		/obj/item/slime_extract/ruby = 10,
+		/obj/item/slime_extract/sapphire = 10,
 		/obj/item/stock_parts/scanning_module/omni = 10,
 		/obj/item/stock_parts/micro_laser/omni = 10,
 		/obj/item/stock_parts/capacitor/omni = 10,
@@ -120,7 +122,7 @@
 	evasion = 20
 
 /datum/modifier/astralcollect_regen
-	mob_overlay_state = "poisoned"
+	mob_overlay_state = "pink_sparkles"
 
 /datum/modifier/astralcollect_regen/tick()
 	holder.adjustBruteLoss(-8)
@@ -226,16 +228,16 @@
 	health = 200
 	maxHealth = 200
 
-	special_attack_cooldown = 3 SECONDS
+	special_attack_cooldown = 7 SECONDS
 	special_attack_min_range = 0
-	special_attack_max_range = 14
+	special_attack_max_range = 4
 
 /mob/living/simple_mob/humanoid/astral_collective/purity/do_special_attack(atom/A)
-	adjustBruteLoss(-3)
-	adjustFireLoss(-3)
-	adjustToxLoss(-3)
-	adjustOxyLoss(-3)
-	adjustCloneLoss(-3)
+	playsound(src, 'sound/effects/ghost2.ogg', 20, 1)
+	for(var/mob/living/M in orange(src, 4))
+		if(M.get_ear_protection() == 0)
+			M.Confuse(10)
+
 
 //the ranged mobs
 /mob/living/simple_mob/humanoid/astral_collective/ranged
@@ -255,7 +257,7 @@
 	projectiletype = /obj/item/projectile/energy/astral_collective/anti_mecha
 
 /mob/living/simple_mob/humanoid/astral_collective/ranged/noodle/do_special_attack(atom/A)
-	if((health / maxHealth) <= 0.5)
+	if((health / maxHealth) <= 0.3)
 		alpha = 180
 	teleport_self(A)
 
@@ -304,8 +306,9 @@
 	movement_cooldown = -1
 
 /mob/living/simple_mob/humanoid/astral_collective/ranged/tesh/do_special_attack(atom/A)
-	if((health / maxHealth) <= 0.5)
-		selfexplode_attack(A)
+	if((health / maxHealth) <= 0.3)
+		visible_message(span_boldwarning(span_orange("The teshari holds up a grenade.")))
+		addtimer(CALLBACK(src, PROC_REF(selfexplode_attack), A), 1.5 SECONDS, TIMER_DELETE_ME)
 	else
 		teleport_attack(A)
 
@@ -338,7 +341,7 @@
 	movement_cooldown = 3
 
 /mob/living/simple_mob/humanoid/astral_collective/ranged/lizard/do_special_attack(atom/A)
-	if((health / maxHealth) <= 0.5)
+	if((health / maxHealth) <= 0.3)
 		repair_self(A)
 	air_strike(A)
 
@@ -358,7 +361,7 @@
 	if(!Proj)
 		return
 	if(prob(60))
-		visible_message(span_bolddanger("[Proj] is blocked by the shield."))
+		visible_message(span_boldwarning(span_orange("[Proj] is blocked by the shield.")))
 		if(Proj.firer)
 			ai_holder.react_to_attack(Proj.firer)
 		return
@@ -396,7 +399,7 @@
 /mob/living/simple_mob/humanoid/astral_collective/proc/selfexplode_attack(atom/target)
 	if(!target)
 		return FALSE
-	explosion(src.loc, 2, 3, 4, 5)
+	explosion(src.loc, 1, 1, 1, 1)
 
 /mob/living/simple_mob/humanoid/astral_collective/proc/gravity_surge(atom/target)
 	if(!target)
@@ -410,7 +413,7 @@
 		return FALSE
 	for(var/mob/living/L in orange(src, 14))
 		if(IIsAlly(L))
-			Beam(L, icon_state = "purple_lightning", time = 2.5 SECONDS, maxdistance = INFINITY)
+			Beam(L, icon_state = "g_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
 			L.adjustBruteLoss(-30)
 			L.adjustFireLoss(-30)
 

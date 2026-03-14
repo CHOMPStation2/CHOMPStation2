@@ -105,11 +105,17 @@
 /area/planet/tyr/shuttles/rock_two
 
 
-/area/planet/tyr/eclipse_refinery
-	name = "Eclipse Refinery"
+/area/planet/tyr/ac_mainbase
+	name = "Astral Collective - Warp Point"
 	icon_state = "green"
 	outdoors = OUTDOORS_NO
+	requires_power = FALSE
 
+/area/planet/tyr/ac_secondary
+	name = "Astral Collective - Watchtower"
+	icon_state = "green"
+	outdoors = OUTDOORS_NO
+	requires_power = FALSE
 
 /area/planet/tyr/caverns
 	name = "Tyr Caverns"
