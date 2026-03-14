@@ -64,8 +64,6 @@
 #define Z_NAME_CRYOGAIA_CENTCOM			"Cryogaia - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
 #define Z_NAME_CRYOGAIA_UNDERDARK		"Cryogaia - Underdark"
 #define Z_NAME_CRYOGAIA_VR				"VR - VR World YW"
-#define Z_NAME_CRYOGAIA_ROGUEMINE_1		"Asteroid Belt 1"
-#define Z_NAME_CRYOGAIA_ROGUEMINE_2		"Asteroid Belt 2"
 
 // Named Lateload Submaps
 #define Z_NAME_FUELDEPOT_CH					"Offmap - Fueldepot CH"

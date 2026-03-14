@@ -154,24 +154,9 @@
 
 	unit_test_z_levels = list(2,4,5,6)
 
-	/*
-	lateload_z_levels = list(
-		//list("Alien Ship - Z1 Ship"),
-		list("Asteroid Belt 1","Asteroid Belt 2"),
-		list("Offmap Ship - Talon V2"),
-		list("Snow plains"),
-		list("Cryogaia - Underdark"),
-		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
-		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
-		list("Debris Field - Z1 Space"),
-		list("Fuel Depot - Z1 Space"),
-		list("VR World")
-		)
-
 	lateload_overmap = list(
-		list("Grass Cave")
+		list(Z_NAME_OM_GRASS_CAVE),
 		)
-	*/
 
 	ai_shell_restricted = TRUE
 	ai_shell_allowed_levels = list(
@@ -185,45 +170,45 @@
 
 	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_UPPER)
 	belter_transit_z =	 	list(Z_NAME_CRYOGAIA_MISC)
-	belter_belt_z = 		list(Z_NAME_CRYOGAIA_ROGUEMINE_1, Z_NAME_CRYOGAIA_ROGUEMINE_2)
 
 	lateload_z_levels = list(
 		list(Z_NAME_CRYOGAIA_PLAINS),
 		list(Z_NAME_CRYOGAIA_WILDERNESS),
 		list(Z_NAME_CRYOGAIA_CENTCOM),
 		list(Z_NAME_CRYOGAIA_MISC),
-		list(Z_NAME_CRYOGAIA_UNDERDARK)
+		list(Z_NAME_CRYOGAIA_UNDERDARK),
+		list(Z_NAME_BEACH, Z_NAME_BEACH_CAVE),
+		list(Z_NAME_FUELDEPOT)
 		)
 
-	/*
 	lateload_gateway = list(
-		list("Gateway - Carp Farm"),
-		list("Gateway - Snow Field"),
-		list("Gateway - Listening Post"),
-		list(list("Gateway - Honleth Highlands A", "Gateway - Honleth Highlands B")),
-		list("Gateway - Arynthi Lake Underground A","Gateway - Arynthi Lake A"),
-		list("Gateway - Arynthi Lake Underground B","Gateway - Arynthi Lake B"),
-		list("Gateway - Wild West")
+		list(Z_NAME_GATEWAY_CARP_FARM),
+		list(Z_NAME_GATEWAY_SNOW_FIELD),
+		list(Z_NAME_GATEWAY_LISTENING_POST),
+		list(list(Z_NAME_GATEWAY_HONLETH_A, Z_NAME_GATEWAY_HONLETH_B)),
+		list(Z_NAME_GATEWAY_ARYNTHI_CAVE_A,Z_NAME_GATEWAY_ARYNTHI_A),
+		list(Z_NAME_GATEWAY_ARYNTHI_CAVE_B,Z_NAME_GATEWAY_ARYNTHI_B),
+		list(Z_NAME_GATEWAY_WILD_WEST),
 		)
-	*/
 
-	/*
 	lateload_redgate = list(
-		list("Redgate - Teppi Ranch"),
-		list("Redgate - Innland"),
-//		list("Redgate - Abandoned Island"),	//This will come back later
-		list("Redgate - Dark Adventure"),
-		list("Redgate - Eggnog Town Underground","Redgate - Eggnog Town"),
-		list("Redgate - Star Dog"),
-		list("Redgate - Hotsprings"),
-		list("Redgate - Rain City"),
-		list("Redgate - Islands Underwater","Redgate - Islands"),
-		list("Redgate - Moving Train", "Redgate - Moving Train Upper Level"),
-		list("Redgate - Fantasy Dungeon", "Redgate - Fantasy Town"),
-		list("Redgate - Laserdome"),
-		list("Redgate - Cascading Falls")
+		list(Z_NAME_REDGATE_TEPPI_RANCH),
+		list(Z_NAME_REDGATE_INNLAND),
+//		list(Z_NAME_REDGATE_ABANDONED_ISLAND),	//This will come back later
+		list(Z_NAME_REDGATE_DARK_ADVENTURE),
+		list(Z_NAME_REDGATE_EGGNOG_CAVE, Z_NAME_REDGATE_EGGNOG_TOWN),
+		list(Z_NAME_REDGATE_STAR_DOG),
+		list(Z_NAME_REDGATE_HOTSPRINGS),
+		list(Z_NAME_REDGATE_RAIN_CITY),
+		list(Z_NAME_REDGATE_ISLANDS_UNDERWATER, Z_NAME_REDGATE_ISLANDS),
+		list(Z_NAME_REDGATE_MOVING_TRAIN, Z_NAME_REDGATE_MOVING_TRAIN_UPPER),
+		list(Z_NAME_REDGATE_FANTASY_DUNGEON, Z_NAME_REDGATE_FANTASY_TOWN),
+		list(Z_NAME_REDGATE_LASERDOME),
+		list(Z_NAME_REDGATE_CASCADING_FALLS),
+		list(Z_NAME_REDGATE_JUNGLE_CAVE, Z_NAME_REDGATE_JUNGLE),
+		list(Z_NAME_REDGATE_FACILITY),
+		list(Z_NAME_REDGATE_CASINO_CANAL_LOWER, Z_NAME_REDGATE_CASINO_CANAL),
 		)
-	*/
 
 	planet_datums_to_make = list(/datum/planet/borealis2)
 
@@ -231,9 +216,7 @@
 
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, 64, 64)         // Create the mining ore distribution map.
-
 	//seed_submaps(list(Z_NAME_ALIAS_SURFACE), 240, /area/cryogaia/outpost/exploration_plains, /datum/map_template/cryogaia_lateload/plains)
-
 	return 1
 
 /datum/planet/borealis2
