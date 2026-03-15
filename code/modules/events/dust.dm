@@ -8,7 +8,7 @@
 
 /datum/event/dust/announce()
 	if(!victim)
-		command_announcement.Announce("Debris resulting from activity on a nearby asteroid is approaching \the [location_name()]", "Dust Alert") // CHOMPEdit - Not in an asteroid
+		GLOB.command_announcement.Announce("Debris resulting from activity on a nearby asteroid is approaching \the [location_name()]", "Dust Alert") // CHOMPEdit - Not in an asteroid
 
 /datum/event/dust/tick()
 	if(prob(10))
@@ -17,7 +17,7 @@
 /datum/event/dust/end()
 	..()
 	if(!victim)
-		command_announcement.Announce("\The [location_name()] is no longer in danger of impact from space debris.", "Dust Notice")
+		GLOB.command_announcement.Announce("\The [location_name()] is no longer in danger of impact from space debris.", "Dust Notice")
 
 /datum/event/dust/proc/get_severity()
 	switch(severity)

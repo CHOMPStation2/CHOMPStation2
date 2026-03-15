@@ -83,7 +83,7 @@
 	return
 
 /turf/simulated/sky/moving/north/sif/planet_fall/find_planet()
-	return planet_sif
+	return GLOB.planet_sif
 
 /turf/simulated/floor/outdoors/dirt/sif
 
@@ -106,4 +106,4 @@
 /turf/simulated/floor/tiled/sif/planetuse
 
 /obj/effect/step_trigger/teleporter/planetary_fall/sif/find_planet()
-	planet = planet_sif
+	planet = GLOB.planet_sif

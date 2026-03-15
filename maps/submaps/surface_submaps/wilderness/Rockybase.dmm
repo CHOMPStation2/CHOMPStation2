@@ -45,27 +45,15 @@
 /area/submap/Rockybase)
 "am" = (
 /obj/effect/decal/remains/posi,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor,
 /area/submap/Rockybase)
 "an" = (
 /obj/machinery/porta_turret/poi,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor,
 /area/submap/Rockybase)
 "ao" = (
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor,
 /area/submap/Rockybase)
 "ap" = (
 /obj/structure/flora/tree/sif,
@@ -73,29 +61,17 @@
 /area/template_noop)
 "aq" = (
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor,
 /area/submap/Rockybase)
 "ar" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor,
 /area/submap/Rockybase)
 "as" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor,
 /area/submap/Rockybase)
 "at" = (
 /turf/simulated/wall/r_wall,
@@ -904,13 +880,6 @@
 "cU" = (
 /obj/machinery/vending/medical,
 /turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"cV" = (
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
 /area/submap/Rockybase)
 "cX" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2200,7 +2169,7 @@ af
 af
 af
 af
-cV
+al
 ar
 at
 aL
@@ -2237,8 +2206,8 @@ af
 af
 af
 af
-cV
-cV
+al
+al
 aq
 at
 aM
@@ -2275,7 +2244,7 @@ af
 af
 af
 af
-cV
+al
 ao
 aq
 au
@@ -2314,7 +2283,7 @@ af
 af
 af
 am
-cV
+al
 aq
 av
 aN
@@ -2351,8 +2320,8 @@ af
 af
 af
 af
-cV
-cV
+al
+al
 aq
 av
 aN
@@ -2389,8 +2358,8 @@ af
 af
 af
 af
-cV
-cV
+al
+al
 aq
 au
 at
@@ -2427,8 +2396,8 @@ af
 af
 af
 af
-cV
-cV
+al
+al
 as
 at
 aO
@@ -2466,7 +2435,7 @@ af
 af
 af
 af
-cV
+al
 ar
 at
 aP

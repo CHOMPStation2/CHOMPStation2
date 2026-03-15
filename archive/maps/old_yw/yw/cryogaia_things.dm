@@ -197,15 +197,12 @@
 		newghost.timeofdeath = world.time
 		despawn_occupant(user)
 
-// Tram arrival point landmarks and datum
-var/global/list/latejoin_tram   = list()
-
 /obj/effect/landmark/tram
 	name = "JoinLateTram"
 	delete_me = 1
 
 /obj/effect/landmark/tram/Initialize(mapload)
-	latejoin_tram += loc // Register this turf as tram latejoin.
+	GLOB.latejoin_tram += loc // Register this turf as tram latejoin.
 	latejoin += loc // Also register this turf as fallback latejoin, since we won't have any arrivals shuttle landmarks.
 	. = ..()
 
@@ -215,7 +212,7 @@ var/global/list/latejoin_tram   = list()
 
 /datum/spawnpoint/tram/New()
 	..()
-	turfs = latejoin_tram
+	turfs = GLOB.latejoin_tram
 
 //
 // Holodorms

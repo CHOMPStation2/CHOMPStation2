@@ -1,5 +1,5 @@
 var/datum/map/using_map = new USING_MAP_DATUM
-var/list/all_maps = list()
+GLOBAL_LIST_EMPTY(all_maps)
 
 /hook/startup/proc/initialise_map_list()
 	for(var/type in subtypesof(/datum/map))
@@ -12,7 +12,7 @@ var/list/all_maps = list()
 		if(!M.path)
 			log_mapping("Map '[M]' does not have a defined path, not adding to map list!")
 		else
-			all_maps[M.path] = M
+			GLOB.all_maps[M.path] = M
 	return 1
 
 
@@ -36,7 +36,7 @@ var/list/all_maps = list()
 	var/static/list/secret_levels = list() // Z-levels that (non-admin) ghosts can't get to
 	var/static/list/hidden_levels = list() // Z-levels who's contents are hidden, but not forbidden (gateways)
 	var/static/list/empty_levels = list()   // Empty Z-levels that may be used for various things
-	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to. //CHOMPedit: the number of missing chompedits is giving me an aneurysm
+	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to.
 	var/static/list/mappable_levels = list()// List of levels where mapping or other similar devices might work fully
 	var/static/list/below_blocked_levels = list()// List of levels where mapping or other similar devices might work fully
 	// End Static Lists
@@ -59,11 +59,11 @@ var/list/all_maps = list()
 	var/list/lateload_redgate = list() //VOREStation Add - The same thing as gateway, but safe-ish
 
 	var/list/allowed_jobs = list() //Job datums to use.
-							   	//Works a lot better so if we get to a point where three-ish maps are used
-							   	//We don't have to C&P ones that are only common between two of them
-							   	//That doesn't mean we have to include them with the rest of the jobs though, especially for map specific ones.
-							   	//Also including them lets us override already created jobs, letting us keep the datums to a minimum mostly.
-							   	//This is probably a lot longer explanation than it needs to be.
+								//Works a lot better so if we get to a point where three-ish maps are used
+								//We don't have to C&P ones that are only common between two of them
+								//That doesn't mean we have to include them with the rest of the jobs though, especially for map specific ones.
+								//Also including them lets us override already created jobs, letting us keep the datums to a minimum mostly.
+								//This is probably a lot longer explanation than it needs to be.
 
 	var/list/holomap_smoosh		// List of lists of zlevels to smoosh into single icons
 	var/list/holomap_offset_x = list()
@@ -214,7 +214,7 @@ var/list/all_maps = list()
 	// Try to free up a z level from existing temp sectors
 	if(!empty_levels.len)
 		for(var/Z in GLOB.map_sectors)
-			var/obj/effect/overmap/visitable/sector/temporary/T = GLOB.map_sectors[Z]
+			var/obj/effect/overmap/visitable/sector/temporary/T = GLOB.map_sectors["[Z]"]
 			T.cleanup() // If we can release some of these, do that.
 
 	// Else, we need to buy a new one.
@@ -331,7 +331,7 @@ var/list/all_maps = list()
 	if(flags & MAP_LEVEL_PLAYER) map.player_levels += z
 	if(flags & MAP_LEVEL_SEALED) map.sealed_levels += z
 	if(flags & MAP_LEVEL_XENOARCH_EXEMPT) map.xenoarch_exempt_levels += z
-	if(flags & MAP_LEVEL_VORESPAWN) map.vorespawn_levels += z //CHOMPedit: I stg stop forgetting CHOMPedit comments
+	if(flags & MAP_LEVEL_VORESPAWN) map.vorespawn_levels += z
 	if(flags & MAP_LEVEL_PERSIST) map.persist_levels += z
 	if(flags & MAP_LEVEL_EMPTY)
 		if(!map.empty_levels) map.empty_levels = list()

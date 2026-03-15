@@ -1,4 +1,4 @@
-var/datum/planet/tyr/planet_tyr = null
+GLOBAL_DATUM(planet_tyr, /datum/planet/sif)
 
 /datum/time/tyr
 	seconds_in_day = 12 HOURS
@@ -12,7 +12,7 @@ var/datum/planet/tyr/planet_tyr = null
 
 /datum/planet/tyr/New()
 	..()
-	planet_tyr = src
+	GLOB.planet_tyr = src
 	weather_holder = new /datum/weather_holder/tyr(src)
 
 /datum/planet/tyr/update_sun()
