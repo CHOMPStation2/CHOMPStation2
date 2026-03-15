@@ -357,7 +357,7 @@
 	return
 
 /obj/effect/step_trigger/teleporter/planetary_fall/thor/find_planet()
-	planet = planet_thor
+	planet = GLOB.planet_thor
 
 // Space mineral tiles are now not the default, so they get demoted to subtype status.
 /turf/simulated/mineral/thor/vacuum
