@@ -1,10 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "af" = (
 /obj/effect/floor_decal/borderfloor{
@@ -21,11 +17,7 @@
 /area/submap/Rockybase)
 "aO" = (
 /obj/machinery/porta_turret/poi,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "bm" = (
 /turf/simulated/floor/tiled/hydro,
@@ -165,11 +157,7 @@
 /area/submap/Rockybase)
 "hc" = (
 /obj/effect/decal/remains/posi,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "ih" = (
 /obj/effect/decal/remains,
@@ -708,11 +696,7 @@
 /area/submap/Rockybase)
 "Jz" = (
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "JD" = (
 /turf/simulated/wall,
@@ -796,22 +780,14 @@
 "MJ" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "MW" = (
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "Nz" = (
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "NN" = (
 /obj/structure/table/woodentable,
@@ -1055,11 +1031,7 @@
 "Yo" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "Zd" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,

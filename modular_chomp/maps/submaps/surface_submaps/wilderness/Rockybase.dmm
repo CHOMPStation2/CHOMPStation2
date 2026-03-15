@@ -45,27 +45,15 @@
 /area/submap/Rockybase)
 "am" = (
 /obj/effect/decal/remains/posi,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "an" = (
 /obj/machinery/porta_turret/poi,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "ao" = (
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "ap" = (
 /obj/structure/flora/tree/sif,
@@ -73,29 +61,17 @@
 /area/template_noop)
 "aq" = (
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "ar" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "as" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "at" = (
 /turf/simulated/wall/r_wall,
@@ -873,11 +849,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "cV" = (
-/turf/simulated/floor/plating{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "cX" = (
 /obj/effect/decal/cleanable/dirt,
