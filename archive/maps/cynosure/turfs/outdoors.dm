@@ -171,6 +171,7 @@
 	temperature = TCMB
 
 // Step trigger to fall down to planet Sif
+<<<<<<< HEAD
 /turf/simulated/sky/moving/north/sif/planet_fall/find_planet()
 	return planet_sif
 
@@ -220,3 +221,16 @@
 		user.put_in_hands(S)
 		visible_message("[user] scoops up a pile of snow.", "You scoop up a pile of snow.")
 	return
+=======
+/obj/effect/step_trigger/teleporter/planetary_fall/sif/find_planet()
+	planet = GLOB.planet_sif
+
+/turf/simulated/floor/concrete/sif/planetuse
+	oxygen		= MOLES_O2SIF
+	nitrogen	= MOLES_N2SIF
+	temperature	= TEMPERATURE_SIF
+	outdoors = OUTDOORS_YES
+
+/turf/simulated/sky/moving/north/sif/planet_fall/find_planet()
+	return GLOB.planet_sif
+>>>>>>> 72628d226c (More globals (#19247))

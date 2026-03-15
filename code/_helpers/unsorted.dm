@@ -1142,6 +1142,7 @@ GLOBAL_LIST_INIT(common_tools, list(
 /proc/reverse_direction(dir)
 	return GLOB.reverse_dir[dir]
 
+<<<<<<< HEAD
 /*
 Checks if that loc and dir has a item on the wall
 TODO - Fix this ancient list of wall items. Preferably make it dynamically populated. ~Leshana
@@ -1158,36 +1159,36 @@ var/list/WALLITEMS = list(
 	/obj/machinery/computer/guestpass, /obj/item/geiger/wall, /obj/machinery/button/windowtint, /obj/machinery/computer/id_restorer,	//CHOMPEdit
 	/obj/machinery/computer/timeclock, /obj/machinery/station_map, /obj/machinery/ai_status_display	//CHOMPEdit
 	)
+=======
+>>>>>>> 72628d226c (More globals (#19247))
 /proc/gotwallitem(loc, dir)
 	for(var/obj/O in loc)
-		for(var/item in WALLITEMS)
-			if(istype(O, item))
-				//Direction works sometimes
-				if(O.dir == dir)
-					return 1
+		if(O.flags & WALL_ITEM)
+			//Direction works sometimes
+			if(O.dir == dir)
+				return 1
 
-				//Some stuff doesn't use dir properly, so we need to check pixel instead
-				switch(dir)
-					if(SOUTH)
-						if(O.pixel_y > 10)
-							return 1
-					if(NORTH)
-						if(O.pixel_y < -10)
-							return 1
-					if(WEST)
-						if(O.pixel_x > 10)
-							return 1
-					if(EAST)
-						if(O.pixel_x < -10)
-							return 1
+			//Some stuff doesn't use dir properly, so we need to check pixel instead
+			switch(dir)
+				if(SOUTH)
+					if(O.pixel_y > 10)
+						return 1
+				if(NORTH)
+					if(O.pixel_y < -10)
+						return 1
+				if(WEST)
+					if(O.pixel_x > 10)
+						return 1
+				if(EAST)
+					if(O.pixel_x < -10)
+						return 1
 
 
 	//Some stuff is placed directly on the wallturf (signs)
 	for(var/obj/O in get_step(loc, dir))
-		for(var/item in WALLITEMS)
-			if(istype(O, item))
-				if(O.pixel_x == 0 && O.pixel_y == 0)
-					return 1
+		if(O.flags & WALL_ITEM)
+			if(O.pixel_x == 0 && O.pixel_y == 0)
+				return 1
 	return 0
 
 /proc/topic_link(var/datum/D, var/arglist, var/content)

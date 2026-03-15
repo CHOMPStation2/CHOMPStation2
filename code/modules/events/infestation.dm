@@ -165,6 +165,7 @@
 
 
 /datum/event/infestation/announce()
+<<<<<<< HEAD
 	command_announcement.Announce("Bioscans indicate that [vermstring] have been breeding in [locstring]. Clear them out, before this starts to affect productivity.", "Vermin infestation")
 
 #undef LOC_KITCHEN
@@ -177,6 +178,9 @@
 #undef LOC_HANGAR2
 #undef LOC_HANGAR3
 #undef LOC_VAULT
+=======
+	GLOB.command_announcement.Announce("Bioscans indicate that [vermstring] have been breeding all over the facility. Clear them out, before this starts to affect productivity.", "Vermin infestation")
+>>>>>>> 72628d226c (More globals (#19247))
 
 #undef VERM_MICE
 #undef VERM_LIZARDS

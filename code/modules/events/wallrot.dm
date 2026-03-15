@@ -18,8 +18,12 @@
 
 /datum/event/wallrot/announce()
 	if(center)
+<<<<<<< HEAD
 		command_announcement.Announce("Harmful fungi detected on \the [station_name()]. Hull integrity near [center.loc.name] may be compromised.", "Hazardous Biomass") //CHOMPEdit - Wording
 		// Chomp edit - Better wording as to what the hell it actually does.
+=======
+		GLOB.command_announcement.Announce("Harmful fungi detected on \the [station_name()] and [using_map.facility_type] structures nearby [center.loc.name] may be contaminated.", "Biohazard Alert")
+>>>>>>> 72628d226c (More globals (#19247))
 
 /datum/event/wallrot/start()
 	spawn()
