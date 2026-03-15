@@ -296,13 +296,8 @@ GLOBAL_DATUM(basic_robolimb, /datum/robolimb)
 	company = "Morpheus"
 	desc = "This limb is simple and functional; no effort has been made to make it look human."
 	icon = 'icons/mob/human_races/cyberlimbs/morpheus/morpheus_main.dmi'
-<<<<<<< HEAD
 	unavailable_to_build = 0 // CHOMP Edit
-	monitor_styles = standard_monitor_styles
-=======
-	unavailable_to_build = 1
 	monitor_styles = STANDARD_MONITOR_STYLES
->>>>>>> 72628d226c (More globals (#19247))
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/morpheus_alt1

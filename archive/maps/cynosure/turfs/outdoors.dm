@@ -171,9 +171,8 @@
 	temperature = TCMB
 
 // Step trigger to fall down to planet Sif
-<<<<<<< HEAD
 /turf/simulated/sky/moving/north/sif/planet_fall/find_planet()
-	return planet_sif
+	return GLOB.planet_sif
 
 //CHOMPedit: Changes to sif/planetuse snow to make it work properly as it does on Polaris, it was broken by YW edits.
 /turf/simulated/floor/outdoors/snow/sif/planetuse
@@ -181,7 +180,7 @@
 	icon_state = "snow"
 	edge_blending_priority = 6
 	movement_cost = 2
-	initial_flooring = /decl/flooring/snow
+	initial_flooring = /datum/decl/flooring/snow
 	/*turf_layers = list( CHOMP Removal Begin
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
@@ -221,16 +220,3 @@
 		user.put_in_hands(S)
 		visible_message("[user] scoops up a pile of snow.", "You scoop up a pile of snow.")
 	return
-=======
-/obj/effect/step_trigger/teleporter/planetary_fall/sif/find_planet()
-	planet = GLOB.planet_sif
-
-/turf/simulated/floor/concrete/sif/planetuse
-	oxygen		= MOLES_O2SIF
-	nitrogen	= MOLES_N2SIF
-	temperature	= TEMPERATURE_SIF
-	outdoors = OUTDOORS_YES
-
-/turf/simulated/sky/moving/north/sif/planet_fall/find_planet()
-	return GLOB.planet_sif
->>>>>>> 72628d226c (More globals (#19247))

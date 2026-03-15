@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-var/static/icon/ingame_hud_vr = icon('modular_chomp/icons/mob/hud_vore.dmi')	//CHOMPEdit - expanded vore huds
-var/static/icon/ingame_hud_med_vr = icon('icons/mob/hud_med_vr.dmi')
-=======
 GLOBAL_DATUM_INIT(ingame_hud_vr, /icon, icon('icons/mob/hud_vr.dmi'))
 GLOBAL_DATUM_INIT(ingame_hud_med_vr, /icon, icon('icons/mob/hud_med_vr.dmi'))
->>>>>>> 72628d226c (More globals (#19247))
 
 /mob/living/carbon/human/proc/remove_marking(var/datum/sprite_accessory/marking/mark_datum)
 	if (!mark_datum)

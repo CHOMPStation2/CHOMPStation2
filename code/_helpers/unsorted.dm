@@ -1142,25 +1142,6 @@ GLOBAL_LIST_INIT(common_tools, list(
 /proc/reverse_direction(dir)
 	return GLOB.reverse_dir[dir]
 
-<<<<<<< HEAD
-/*
-Checks if that loc and dir has a item on the wall
-TODO - Fix this ancient list of wall items. Preferably make it dynamically populated. ~Leshana
-*/
-var/list/WALLITEMS = list(
-	/obj/machinery/power/apc, /obj/machinery/alarm, /obj/item/radio/intercom, /obj/structure/frame,
-	/obj/structure/extinguisher_cabinet, /obj/structure/reagent_dispensers/peppertank,
-	/obj/machinery/status_display, /obj/machinery/requests_console, /obj/machinery/light_switch, /obj/structure/sign,
-	/obj/machinery/newscaster, /obj/machinery/firealarm, /obj/structure/noticeboard, /obj/machinery/button/remote,
-	/obj/machinery/computer/security/telescreen, /obj/machinery/embedded_controller/radio,
-	/obj/item/storage/secure/safe, /obj/machinery/door_timer, /obj/machinery/flasher, /obj/machinery/keycard_auth,
-	/obj/structure/mirror, /obj/structure/fireaxecabinet, /obj/machinery/computer/security/telescreen/entertainment,
-	/obj/machinery/doorbell_chime, /obj/machinery/button/doorbell, /obj/machinery/atm, /obj/machinery/recharger/wallcharger,	//CHOMPEdit
-	/obj/machinery/computer/guestpass, /obj/item/geiger/wall, /obj/machinery/button/windowtint, /obj/machinery/computer/id_restorer,	//CHOMPEdit
-	/obj/machinery/computer/timeclock, /obj/machinery/station_map, /obj/machinery/ai_status_display	//CHOMPEdit
-	)
-=======
->>>>>>> 72628d226c (More globals (#19247))
 /proc/gotwallitem(loc, dir)
 	for(var/obj/O in loc)
 		if(O.flags & WALL_ITEM)

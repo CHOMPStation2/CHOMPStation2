@@ -128,13 +128,8 @@ GLOBAL_DATUM_INIT(command_announcement, /datum/announcement/priority/command, ne
 	// Format currently matches that of newscaster feeds: Registered Name (Assigned Rank)
 	return I.assignment ? "[I.registered_name] ([I.assignment])" : I.registered_name
 
-<<<<<<< HEAD
 /proc/level_seven_announcement() // Chomp note - Do not use this.
-	command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert", new_sound = 'sound/AI/outbreak7.ogg')
-=======
-/proc/level_seven_announcement()
 	GLOB.command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert", new_sound = 'sound/AI/outbreak7.ogg')
->>>>>>> 72628d226c (More globals (#19247))
 
 /proc/ion_storm_announcement()
 	GLOB.command_announcement.Announce("It has come to our attention that \the [station_name()] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert")

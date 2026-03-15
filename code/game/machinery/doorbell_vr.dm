@@ -8,6 +8,7 @@
 	idle_power_usage = 10
 	active_power_usage = 200
 	anchored = TRUE
+	flags = WALL_ITEM
 	var/id_tag = null
 	var/chime_sound = 'sound/machines/doorbell.ogg'
 

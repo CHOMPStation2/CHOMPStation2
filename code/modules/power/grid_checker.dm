@@ -63,15 +63,9 @@
 
 /obj/machinery/power/grid_checker/proc/power_failure(var/announce = TRUE)
 	if(announce)
-<<<<<<< HEAD
-		command_announcement.Announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, \
+		GLOB.command_announcement.Announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, \
 		the station's power will be shut off for an indeterminate duration while the powernet monitor restarts automatically, or \
 		when Engineering can manually resolve the issue.", //CHOMPEdit
-=======
-		GLOB.command_announcement.Announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, \
-		the colony's power will be shut off for an indeterminate duration while the powernet monitor restarts automatically, or \
-		when Engineering can manually resolve the issue.",
->>>>>>> 72628d226c (More globals (#19247))
 		"Critical Power Failure",
 		new_sound = 'sound/AI/poweroff.ogg')
 	power_failing = TRUE

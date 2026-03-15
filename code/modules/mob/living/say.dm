@@ -16,13 +16,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	":u" = CHANNEL_SUPPLY,		".u" = CHANNEL_SUPPLY,
 	":v" = CHANNEL_SERVICE,		".v" = CHANNEL_SERVICE,
 	":p" = CHANNEL_AI_PRIVATE,	".p" = CHANNEL_AI_PRIVATE,
-<<<<<<< HEAD
-	":y" = CHANNEL_EXPLORATION,	".y" = CHANNEL_EXPLORATION,	//VOREStation Edit //CHOMP keep explo
-	":a" = CHANNEL_TALON,		".a" = CHANNEL_TALON, //VOREStation Add, //CHOMP keep explo
-=======
-	":a" = CHANNEL_EXPLORATION,	".a" = CHANNEL_EXPLORATION,
-	":y" = CHANNEL_TALON,		".y" = CHANNEL_TALON,
->>>>>>> 72628d226c (More globals (#19247))
+	":y" = CHANNEL_EXPLORATION,	".y" = CHANNEL_EXPLORATION,	//CHOMP keep explo
+	":a" = CHANNEL_TALON,		".a" = CHANNEL_TALON, //CHOMP keep explo
 	":g" = CHANNEL_CASINO,	".g" = CHANNEL_CASINO,
 
 	":R" = "right ear",	".R" = "right ear",
@@ -41,13 +36,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	":U" = CHANNEL_SUPPLY,		".U" = CHANNEL_SUPPLY,
 	":V" = CHANNEL_SERVICE,		".V" = CHANNEL_SERVICE,
 	":P" = CHANNEL_AI_PRIVATE,	".P" = CHANNEL_AI_PRIVATE,
-<<<<<<< HEAD
 	":Y" = CHANNEL_EXPLORATION,	".Y" = CHANNEL_EXPLORATION, //CHOMP keep explo
-	":A" = CHANNEL_TALON,		".A" = CHANNEL_TALON, //VOREStation Add, //CHOMP keep explo
-=======
-	":A" = CHANNEL_EXPLORATION,	".A" = CHANNEL_EXPLORATION,
-	":Y" = CHANNEL_TALON,		".Y" = CHANNEL_TALON,
->>>>>>> 72628d226c (More globals (#19247))
+	":A" = CHANNEL_TALON,		".A" = CHANNEL_TALON, //CHOMP keep explo
 	":G" = CHANNEL_CASINO,	".G" = CHANNEL_CASINO,
 
 	// Cyrillic characters on the same keys on the Russian QWERTY (phonetic) layout
@@ -68,13 +58,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	":г" = CHANNEL_SUPPLY,        ".г" = CHANNEL_SUPPLY,
 	":м" = CHANNEL_SERVICE,        ".м" = CHANNEL_SERVICE,
 	":з" = CHANNEL_AI_PRIVATE,    ".з" = CHANNEL_AI_PRIVATE,
-<<<<<<< HEAD
 	":н" = CHANNEL_EXPLORATION,    ".н" = CHANNEL_EXPLORATION, //CHOMP keep explo
-	":ф" = CHANNEL_TALON,        ".ф" = CHANNEL_TALON, //VOREStation Add //CHOMP keep explo
-=======
-	":ф" = CHANNEL_EXPLORATION,    ".ф" = CHANNEL_EXPLORATION,
-	":н" = CHANNEL_TALON,        ".н" = CHANNEL_TALON,
->>>>>>> 72628d226c (More globals (#19247))
+	":ф" = CHANNEL_TALON,        ".ф" = CHANNEL_TALON, //CHOMP keep explo
 	":п" = CHANNEL_CASINO,	".п" = CHANNEL_CASINO,
 ))
 

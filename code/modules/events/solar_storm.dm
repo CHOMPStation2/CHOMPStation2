@@ -18,11 +18,7 @@
 
 
 /datum/event/solar_storm/start()
-<<<<<<< HEAD
-	command_announcement.Announce("The solar storm has reached the [using_map.facility_type]. Please refrain from EVA and remain inside the [using_map.facility_type] until it has passed.", "Anomaly Alert")
-=======
-	GLOB.command_announcement.Announce("The solar storm has reached the [using_map.facility_type]. Please refrain from EVA and remain inside the station until it has passed.", "Anomaly Alert")
->>>>>>> 72628d226c (More globals (#19247))
+	GLOB.command_announcement.Announce("The solar storm has reached the [using_map.facility_type]. Please refrain from EVA and remain inside the [using_map.facility_type] until it has passed.", "Anomaly Alert")
 	adjust_solar_output(5)
 
 

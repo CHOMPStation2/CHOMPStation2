@@ -4,11 +4,7 @@
 	endWhen = 3
 
 /datum/event/ianstorm/announce()
-<<<<<<< HEAD
-	command_announcement.Announce("It has come to our attention that the [using_map.facility_type] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert") //CHOMPedit: removes announcement .ogg
-=======
-	GLOB.command_announcement.Announce("It has come to our attention that the [using_map.facility_type] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert", 'sound/AI/ian_storm.ogg')
->>>>>>> 72628d226c (More globals (#19247))
+	GLOB.command_announcement.Announce("It has come to our attention that the [using_map.facility_type] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert") //CHOMPedit: removes announcement .ogg
 	spawn(7 SECONDS)
 		GLOB.command_announcement.Announce("Wait. No, that's wrong. The [using_map.facility_type] passed through an IAN storm!.", "Ian Alert")
 

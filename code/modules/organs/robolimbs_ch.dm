@@ -89,7 +89,7 @@
 	desc = "Mustard-yellow industrial limb. Heavyset and thick."
 	icon = 'icons/mob/human_races/cyberlimbs/cit/antares/antares_main.dmi'
 	unavailable_to_build = TRUE
-	monitor_styles = standard_monitor_styles
+	monitor_styles = STANDARD_MONITOR_STYLES
 
 ///obj/item/disk/limb/antares
 //	company = "Antares Robotics"

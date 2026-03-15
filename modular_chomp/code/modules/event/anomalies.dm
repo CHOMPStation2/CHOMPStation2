@@ -11,7 +11,7 @@
 /datum/event/anomaly/announce()
 	if(isnull(impact_area))
 		impact_area = placer.find_valid_area()
-	command_announcement.Announce("Energetic flux wave detected on [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name].", "Anomaly Alert")
+	GLOB.command_announcement.Announce("Energetic flux wave detected on [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name].", "Anomaly Alert")
 
 /datum/event/anomaly/start()
 	var/turf/anomaly_turf
@@ -35,7 +35,7 @@
 /datum/event/anomaly/bioscrambler/announce()
 	if(isnull(impact_area))
 		impact_area = placer.find_valid_area()
-	command_announcement.Announce("Biologic trait swapping agent detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
+	GLOB.command_announcement.Announce("Biologic trait swapping agent detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
 
 // Bluespace
 /datum/event/anomaly/bluespace
@@ -46,7 +46,7 @@
 /datum/event/anomaly/bluespace/announce()
 	if(isnull(impact_area))
 		impact_area = placer.find_valid_area()
-	command_announcement.Announce("Bluespace instability detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
+	GLOB.command_announcement.Announce("Bluespace instability detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
 
 // Dimensional
 /datum/event/anomaly/dimensional
@@ -64,7 +64,7 @@
 /datum/event/anomaly/dimensional/announce()
 	if(isnull(impact_area))
 		impact_area = placer.find_valid_area()
-	command_announcement.Announce("Dimensional instability detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
+	GLOB.command_announcement.Announce("Dimensional instability detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
 
 // Flux
 
@@ -76,7 +76,7 @@
 /datum/event/anomaly/flux/announce()
 	if(isnull(impact_area))
 		impact_area = placer.find_valid_area()
-	command_announcement.Announce("Hyper-energetic flux wave detected on [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name].", "Anomaly Alert")
+	GLOB.command_announcement.Announce("Hyper-energetic flux wave detected on [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name].", "Anomaly Alert")
 
 // Gravitational
 /datum/event/anomaly/grav
@@ -87,7 +87,7 @@
 /datum/event/anomaly/grav/announce()
 	if(isnull(impact_area))
 		impact_area = placer.find_valid_area()
-	command_announcement.Announce("Gravitational anomaly detected on [ANOMALY_ANNOUNCE_HARMFUL_TEXT] [impact_area.name].", "Anomaly Alert")
+	GLOB.command_announcement.Announce("Gravitational anomaly detected on [ANOMALY_ANNOUNCE_HARMFUL_TEXT] [impact_area.name].", "Anomaly Alert")
 
 // Hallucination
 /datum/event/anomaly/hallucination
@@ -98,7 +98,7 @@
 /datum/event/anomaly/hallucination/announce()
 	if(isnull(impact_area))
 		impact_area = placer.find_valid_area()
-	command_announcement.Announce("Hallucinatory event detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
+	GLOB.command_announcement.Announce("Hallucinatory event detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
 
 // Pyroclastic
 /datum/event/anomaly/pyro
@@ -109,7 +109,7 @@
 /datum/event/anomaly/pyro/announce()
 	if(isnull(impact_area))
 		impact_area = placer.find_valid_area()
-	command_announcement.Announce("Pyroclastic anomaly detected on [ANOMALY_ANNOUNCE_HARMFUL_TEXT] [impact_area.name].", "Anomaly Alert")
+	GLOB.command_announcement.Announce("Pyroclastic anomaly detected on [ANOMALY_ANNOUNCE_HARMFUL_TEXT] [impact_area.name].", "Anomaly Alert")
 
 // Weather
 /datum/event/anomaly/weather
@@ -120,7 +120,7 @@
 /datum/event/anomaly/weather/announce()
 	if(isnull(impact_area))
 		impact_area = placer.find_valid_area()
-	command_announcement.Announce("Metereologic anomaly detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
+	GLOB.command_announcement.Announce("Metereologic anomaly detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
 
 // Dust
 /datum/event/anomaly/dust
@@ -131,4 +131,4 @@
 /datum/event/anomaly/dust/announce()
 	if(isnull(impact_area))
 		impact_area = placer.find_valid_area()
-	command_announcement.Announce("Anomalous dust particles detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
+	GLOB.command_announcement.Announce("Anomalous dust particles detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")

@@ -8,11 +8,7 @@
 
 /datum/event/dust/announce()
 	if(!victim)
-<<<<<<< HEAD
-		command_announcement.Announce("Debris resulting from activity on a nearby asteroid is approaching \the [location_name()]", "Dust Alert") // CHOMPEdit - Not in an asteroid
-=======
-		GLOB.command_announcement.Announce("Debris resulting from activity on another nearby asteroid is approaching \the [location_name()]", "Dust Alert")
->>>>>>> 72628d226c (More globals (#19247))
+		GLOB.command_announcement.Announce("Debris resulting from activity on a nearby asteroid is approaching \the [location_name()]", "Dust Alert") // CHOMPEdit - Not in an asteroid
 
 /datum/event/dust/tick()
 	if(prob(10))

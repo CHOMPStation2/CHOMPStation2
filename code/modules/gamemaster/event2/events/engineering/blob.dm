@@ -157,10 +157,6 @@
 		if(danger_level >= BLOB_DIFFICULTY_SUPERHARD)
 			lines += "Extreme caution is advised."
 
-<<<<<<< HEAD
 		//command_announcement.Announce(lines.Join("\n"), "Biohazard Alert", new_sound = 'sound/AI/outbreak7.ogg')
-		command_announcement.Announce(lines.Join("\n"), "Hazardous Biomass - URGENT!", new_sound = 'sound/AI/outbreak5.ogg')
+		GLOB.command_announcement.Announce(lines.Join("\n"), "Hazardous Biomass - URGENT!", new_sound = 'sound/AI/outbreak5.ogg')
 		// Chomp edit - Better wording and also made the alert level 5. Lower number = More urgent.
-=======
-		GLOB.command_announcement.Announce(lines.Join("\n"), "Biohazard Alert", new_sound = 'sound/AI/outbreak7.ogg')
->>>>>>> 72628d226c (More globals (#19247))

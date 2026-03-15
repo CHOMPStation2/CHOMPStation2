@@ -286,11 +286,7 @@
 	//CHOMPedit end
 
 	for(var/zlevel in levels_for_distress)
-<<<<<<< HEAD
-		priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos_ch.ogg', zlevel = zlevel) //CHOMPedit, changed sound
-=======
-		GLOB.priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos.ogg', zlevel = zlevel)
->>>>>>> 72628d226c (More globals (#19247))
+		GLOB.priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos_ch.ogg', zlevel = zlevel) //CHOMPedit, changed sound
 
 	var/image/I = image(icon, icon_state = "distress")
 	I.plane = PLANE_LIGHTING_ABOVE
@@ -309,11 +305,7 @@
 	//CHOMPedit end
 
 	for(var/zlevel in levels_for_distress)
-<<<<<<< HEAD
-		priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos_ch.ogg', zlevel = zlevel) //CHOMPedit, changed sound
-=======
-		GLOB.priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos.ogg', zlevel = zlevel)
->>>>>>> 72628d226c (More globals (#19247))
+		GLOB.priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos_ch.ogg', zlevel = zlevel) //CHOMPedit, changed sound
 
 /proc/build_overmap()
 	if(!global.using_map.use_overmap)
