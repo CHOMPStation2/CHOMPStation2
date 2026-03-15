@@ -90,6 +90,7 @@
 	icon = 'icons/obj/machines/doorbell_vr.dmi'
 	icon_state = "doorbell-standby"
 	use_power = USE_POWER_OFF
+	flags = WALL_ITEM
 
 /obj/machinery/button/doorbell/Initialize(mapload, var/dir, var/building = FALSE)
 	. = ..()
