@@ -1,3 +1,10 @@
+#define TM_MODE_BRIDGE "Bridge"
+#define TM_MODE_ENGINEERING "Engineering"
+#define TM_MODE_MEDICAL "Medical"
+#define TM_MODE_SCIENCE "Science"
+#define TM_MODE_SERVICE "Service"
+#define TM_MODE_SECURITY "Security"
+
 /obj/item/taskmanager
 	name = "Task Manager"
 	desc = "A high-tech tool used to pull surplus items from offsite storage. Select a department to begin! Has a five minute cooldown between successful uses"
@@ -15,48 +22,14 @@
 	preserve_item = FALSE
 	var/scancount = 0
 	var/scanreq = 3
-	var/mode = 0
+	var/mode = TM_MODE_BRIDGE
 	var/formatx1 = 0
 	var/formatx2 = 0
 	var/formatx3 = 0
 	var/format = ""
 	var/ready = 1
-	var/list/scannables = list()
-	var/list/scanned = list()
-	var/static/image/radial_image_bridge = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "bridge")
-	var/static/image/radial_image_engineering = image(icon= 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "eng")
-	var/static/image/radial_image_medical = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "medbay")
-	var/static/image/radial_image_science = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "sci")
-	var/static/image/radial_image_service = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "bar")
-	var/static/image/radial_image_security = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "armory")
-
-/obj/item/taskmanager/proc/check_menu(mob/living/user)
-	if(!istype(user))
-		return FALSE
-	if(user.incapacitated() || !user.Adjacent(src))
-		return FALSE
-	return TRUE
-
-
-/obj/item/taskmanager/attack_self(mob/user)
-	var/list/choices = list(
-		"Bridge" = radial_image_bridge,
-		"Engineering" = radial_image_engineering,
-		"Medical" = radial_image_medical,
-		"Science" = radial_image_science,
-		"Service" = radial_image_service,
-		"Security" = radial_image_security
-	)
-
-	var/choice = show_radial_menu(user, src, choices, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)
-	if(!check_menu(user))
-		return
-	switch(choice)
-		if("Bridge")
-			mode = 1
-			scancount = 0
-			scanned = list()
-			scannables = list(
+	var/static/list/scannables = alist(
+		TM_MODE_BRIDGE = list(
 			/mob/living/simple_mob/animal/passive/dog/corgi/Ian,
 			/obj/machinery/photocopier,
 			/obj/machinery/papershredder,
@@ -80,12 +53,8 @@
 			/obj/item/storage/box/PDAs,
 			/obj/item/gun/energy/locked/phasegun,
 			/obj/structure/closet/secure_closet/hop,
-			/obj/machinery/account_database)
-		if("Engineering")
-			mode = 2
-			scancount = 0
-			scanned = list()
-			scannables = list(
+			/obj/machinery/account_database),
+		TM_MODE_ENGINEERING = list(
 			/obj/item/book/manual/supermatter_engine,
 			/obj/machinery/computer/security/engineering,
 			/obj/item/rcd,
@@ -124,12 +93,8 @@
 			/obj/item/book/manual/wiki/engineering_guide,
 			/obj/item/book/manual/atmospipes,
 			/obj/item/pipe_painter,
-			/obj/item/geiger)
-		if("Medical")
-			mode = 3
-			scancount = 0
-			scanned = list()
-			scannables = list(
+			/obj/item/geiger),
+		TM_MODE_MEDICAL = list(
 			/obj/item/reagent_containers/spray/cleaner,
 			/obj/item/sleevemate,
 			/obj/item/defib_kit/loaded,
@@ -180,12 +145,8 @@
 			/obj/machinery/vending/wardrobe/virodrobe,
 			/obj/structure/morgue/crematorium,
 			/obj/machinery/cryopod,
-			/obj/machinery/computer/cryopod)
-		if("Science")
-			mode = 4
-			scancount = 0
-			scanned = list()
-			scannables = list(
+			/obj/machinery/computer/cryopod),
+		TM_MODE_SCIENCE = list(
 			/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 			/obj/machinery/mecha_part_fabricator_tg,
 			/obj/machinery/autolathe,
@@ -224,12 +185,8 @@
 			/obj/item/anomaly_releaser/science,
 			/obj/item/integrated_circuit_printer,
 			/obj/item/capture_crystal,
-			/obj/item/gun/energy/floragun)
-		if("Service")
-			mode = 5
-			scancount = 0
-			scanned = list()
-			scannables = list(
+			/obj/item/gun/energy/floragun),
+		TM_MODE_SERVICE = list(
 			/obj/machinery/holosign/bar,
 			/obj/item/material/kitchen/utensil/spoon,
 			/obj/item/material/kitchen/utensil/fork,
@@ -274,12 +231,8 @@
 			/obj/machinery/vending/wardrobe/bardrobe,
 			/obj/machinery/vending/wardrobe/chefdrobe,
 			/obj/machinery/vending/wardrobe/hydrobe,
-			/obj/machinery/vending/wardrobe/chapdrobe)
-		if("Security")
-			mode = 6
-			scancount = 0
-			scanned = list()
-			scannables = list(
+			/obj/machinery/vending/wardrobe/chapdrobe),
+		TM_MODE_SECURITY = list(
 			/obj/machinery/deployable/barrier,
 			/obj/machinery/flasher/portable,
 			/obj/item/storage/box/flashbangs,
@@ -339,15 +292,44 @@
 			/obj/item/ammo_magazine/m45,
 			/obj/item/ammo_magazine/ammo_box/b12g,
 			/obj/item/ammo_magazine/m9mmp90)
-		else
-			return
+	)
+	var/list/scanned = list()
+	var/static/image/radial_image_bridge = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "bridge")
+	var/static/image/radial_image_engineering = image(icon= 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "eng")
+	var/static/image/radial_image_medical = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "medbay")
+	var/static/image/radial_image_science = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "sci")
+	var/static/image/radial_image_service = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "bar")
+	var/static/image/radial_image_security = image(icon = 'modular_chomp/icons/mob/radial_ch.dmi', icon_state = "armory")
+
+/obj/item/taskmanager/proc/check_menu(mob/living/user)
+	if(!istype(user))
+		return FALSE
+	if(user.incapacitated() || !user.Adjacent(src))
+		return FALSE
+	return TRUE
+
+/obj/item/taskmanager/attack_self(mob/user)
+	. = ..()
+	var/list/choices = list(
+		TM_MODE_BRIDGE = radial_image_bridge,
+		TM_MODE_ENGINEERING = radial_image_engineering,
+		TM_MODE_MEDICAL = radial_image_medical,
+		TM_MODE_SCIENCE = radial_image_science,
+		TM_MODE_SERVICE = radial_image_service,
+		TM_MODE_SECURITY = radial_image_security
+	)
+
+	var/choice = show_radial_menu(user, src, choices, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)
+	if(!(choice in choices) || !check_menu(user))
+		return
+
+	mode = choice
+	scancount = 0
+	scanned.Cut()
 
 	scanreq = rand(3,9)
 	to_chat(user, span_notice("Changed mode to '[choice]'."))
-	playsound(src.loc, 'sound/effects/pop.ogg', 50, 0)
-	return ..()
-
-
+	playsound(loc, 'sound/effects/pop.ogg', 50, 0)
 
 /obj/item/taskmanager/afterattack(atom/target, mob/user, proximity)
 	if(!proximity)
@@ -358,7 +340,7 @@
 	if(mode == 0)
 		to_chat(user, span_notice("You must choose a department first!"))
 		return
-	if((target.type in scannables) && scancount < scanreq && !(target.type in scanned))
+	if((target.type in scannables[mode]) && scancount < scanreq && !(target.type in scanned))
 		scancount = scancount + 1
 		scanned.Add(target.type)
 		var/scansleft = scanreq - scancount
@@ -419,3 +401,10 @@
 		if (6)
 			new /obj/item/surplus_voucher/sec(T)
 			playsound(src.loc, 'sound/machines/copier.ogg', 50, 0)
+
+#undef TM_MODE_BRIDGE
+#undef TM_MODE_ENGINEERING
+#undef TM_MODE_MEDICAL
+#undef TM_MODE_SCIENCE
+#undef TM_MODE_SERVICE
+#undef TM_MODE_SECURITY
