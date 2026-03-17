@@ -156,8 +156,6 @@
 
 //CHOMPEDIT Start - Chomp Specific techwebs.
 #define TECHWEB_NODE_PHASE_WEAPONS "phase_weapons" //CHOMPEDIT ADD - Adds Phase Weaponry
-#define TECHWEB_NODE_CRYOGUN "cryogun" //CHOMPEDIT Add - Adds Cryogun
-#define TECHWEB_NODE_CASELESS_RIFLE "caseless_rifle" //CHOMPEDIT Add - Adds Caseless Rifle
 #define TECHWEB_NODE_METAMORPHOSIS_RAY "metamorphosis_ray" //CHOMPEDIT Add - Adds Caseless Rifle
 #define TECHWEB_NODE_MOD_ANOMALY_SUIT "mod_anomaly_suit" //CHOMPEDIT Add - Adds Anomaly RIGs
 #define TECHWEB_NODE_MECH_SHIELDS "mech_shields" //CHOMPEDIT Add - Adds Mech Shields
