@@ -170,6 +170,7 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SECURITY)
+<<<<<<< HEAD
 
 /datum/techweb_node/phase_weapons //CHOMPEdit Start - Adds Phase Weaponry
 	id = TECHWEB_NODE_PHASE_WEAPONS
@@ -191,6 +192,10 @@
 	announce_channels = list(CHANNEL_SECURITY) //CHOMPEdit End - Adds Phase Weaponry
 
 /datum/techweb_node/cryogun //CHOMPEdit Start
+=======
+/*
+/datum/techweb_node/cryogun
+>>>>>>> 9313193c1b (Caseless rifle and protolathe boards (#19238))
 	id = TECHWEB_NODE_CRYOGUN
 	display_name = "Cryogenic Gun"
 	description = "Specialized gun that allows for cooling down a target."
@@ -200,7 +205,11 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS) //It's actually laughably weak.
 	announce_channels = list(CHANNEL_SECURITY)
+<<<<<<< HEAD
 
+=======
+*/
+>>>>>>> 9313193c1b (Caseless rifle and protolathe boards (#19238))
 /datum/techweb_node/caseless_rifle
 	id = TECHWEB_NODE_CASELESS_RIFLE
 	display_name = "Caseless rifle"
@@ -208,6 +217,7 @@
 	prereq_ids = list(TECHWEB_NODE_EXOTIC_AMMO)
 	design_ids = list(
 		"caselessrifle",
+<<<<<<< HEAD
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_SECURITY)
@@ -222,3 +232,10 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_SECURITY) //CHOMPEdit End
+=======
+		"caselessrifle_ammo",
+		"caselessrifle_ammo_stun",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
+	announce_channels = list(CHANNEL_SECURITY)
+>>>>>>> 9313193c1b (Caseless rifle and protolathe boards (#19238))
