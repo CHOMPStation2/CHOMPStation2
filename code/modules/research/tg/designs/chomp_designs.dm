@@ -215,16 +215,6 @@
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 //Leathals And any new CHOMP weapons.
-/datum/design_techweb/caselessrifle_prototype
-	name = "Caseless Rifle"
-	id = "caselessrifle"
-	materials = list(MAT_STEEL = 7000, MAT_TITANIUM = 4000)
-	build_path = /obj/item/gun/projectile/caseless/prototype
-	build_type = PROTOLATHE
-	category = list(
-		RND_CATEGORY_WEAPONS
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/lasercannon
 	name = "Laser Cannon"
@@ -232,18 +222,6 @@
 	id = "lasercannon"
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 1000, MAT_DIAMOND = 2000, MAT_TITANIUM = 4000, MAT_LEAD = 4000, MAT_URANIUM = 5000)
 	build_path = /obj/item/gun/energy/lasercannon
-	build_type = PROTOLATHE
-	category = list(
-		RND_CATEGORY_WEAPONS
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
-
-/datum/design_techweb/cyrogun
-	name = "Cryo Gun"
-	desc = "An improperly researched and poorly built weapon, specialized in utlizing frost offensively.."
-	id = "cryogun"
-	materials = list(MAT_GLASS = 3000, MAT_MORPHIUM = 4000, MAT_DURASTEEL = 6000, MAT_LEAD = 6000, MAT_METALHYDROGEN = 3000)
-	build_path = /obj/item/gun/energy/freezegun
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
