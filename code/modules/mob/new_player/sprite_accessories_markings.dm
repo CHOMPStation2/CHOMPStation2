@@ -3053,3 +3053,12 @@ includes scars and tattoos
 	icon_state = "scug_door"
 	body_parts = list(BP_GROIN)
 	color_blend_mode = ICON_MULTIPLY
+<<<<<<< HEAD
+=======
+
+/datum/sprite_accessory/marking/moreeyes
+	name = "More Eyes"
+	icon_state = "moreeyes"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+>>>>>>> f0efa3774f (fixes keys (#19307))
