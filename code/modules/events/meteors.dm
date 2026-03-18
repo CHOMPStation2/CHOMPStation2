@@ -21,15 +21,11 @@
 	endWhen = worst_case_end()
 
 /datum/event/meteor_wave/start()
-<<<<<<< HEAD
-	affecting_z -= global.using_map.sealed_levels // Space levels only please!
+	affecting_z -= using_map.sealed_levels // Space levels only please!
 	//CHOMPAdd Start, fills gaps
 	for(var/obj/machinery/shield_gen/gen in GLOB.machines)
 		gen.fill_diffused()
 	//CHOMPAdd End
-=======
-	affecting_z -= using_map.sealed_levels // Space levels only please!
->>>>>>> 91ce60e01b (next globs (#19292))
 	..()
 
 /datum/event/meteor_wave/announce()
