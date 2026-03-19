@@ -427,13 +427,8 @@ GLOBAL_LIST_EMPTY(channel_to_radio_key)
 	else
 		if(do_sound && message)
 			blooploop(message, volume = 75)
-<<<<<<< HEAD
 			// playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/say_sounds) //CHOMPEdit - ignore_walls = TRUE
-		log_talk(message, LOG_SAY)
-=======
-			// playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = FALSE, preference = /datum/preference/toggle/say_sounds)
 		log_talk(message, LOG_SAY, color="#c0c0c0")
->>>>>>> 6c768b06ec (reimplements attack and player logs (#19313))
 	return 1
 
 /*************************************************************************/
