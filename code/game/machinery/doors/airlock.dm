@@ -1226,9 +1226,7 @@ About the new airlock wires panel:
 			qdel(src)
 			return TRUE
 	return FALSE
-<<<<<<< HEAD
 */
-=======
 
 /obj/machinery/door/airlock/examine(mob/user)
 	. = ..()
@@ -1254,4 +1252,3 @@ About the new airlock wires panel:
 
 	frozen = TRUE
 	update_icon()
->>>>>>> 31c1f0846d (Freezing Airlocks (#19281))
