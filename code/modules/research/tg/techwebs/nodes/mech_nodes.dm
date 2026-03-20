@@ -1,7 +1,6 @@
 // Main Mecha Tree
 /datum/techweb_node/mech_assembly
 	id = TECHWEB_NODE_MECH_ASSEMBLY
-	starting_node = TRUE
 	display_name = "Exosuit Assembly"
 	description = "Development of mechanical exosuits designed to contend with artificial gravity while transporting cargo."
 	prereq_ids = list(TECHWEB_NODE_ROBOTICS)
@@ -63,6 +62,9 @@
 		"weasel_head",
 		*/// CHOMPRenove End Micro Mech
 	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
+	discount_experiments = list(/datum/experiment/scanning/random/destruct_ripley_parts = TECHWEB_TIER_1_POINTS)
+	announce_channels = list(CHANNEL_SCIENCE)
 
 /datum/techweb_node/mech_equipment
 	id = TECHWEB_NODE_MECH_EQUIPMENT
