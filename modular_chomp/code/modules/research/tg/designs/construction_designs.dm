@@ -1,4 +1,4 @@
-/datum/design_techweb/light_tube
+/datum/design_techweb/fluor_light_bulb
 	name = "fluorescent light bulb"
 	id = "fluor_light_bulb"
 	build_type = AUTOLATHE | PROTOLATHE
@@ -10,7 +10,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_SERVICE
 
-/datum/design_techweb/light_tube
+/datum/design_techweb/fluor_light_tube
 	name = "fluorescent light tube"
 	id = "fluor_light_tube"
 	build_type = AUTOLATHE | PROTOLATHE
