@@ -321,3 +321,17 @@
   - bugfix: player logs per mob verbs
   Diana:
   - bugfix: Zombie powder will no longer permanently cause you to not lose halloss.
+2026-03-21:
+  CHOMPStation2StaffMirrorBot:
+  - qol: player logs now has a reload button
+  - bugfix: language and robot whitelist tgs commands
+  - bugfix: language whitelist not working
+  - bugfix: robot whitelist being non functional
+  - bugfix: job whitelist now properly checks the actual job name
+  - qol: marks whitelisted robot modules in the robot UI
+  - admin: admin whitelist tgui
+  Nova:
+  - bugfix: Fixed bot pathfinders getting stuck on diagonals
+  - qol: removed "As Unknown" from shadekin without any ID, or with a voice changer.
+  Will:
+  - rscadd: External airlocks on planets will freeze in extremely cold weather.
