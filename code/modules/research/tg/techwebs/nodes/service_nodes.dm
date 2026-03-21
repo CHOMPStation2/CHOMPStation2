@@ -275,12 +275,9 @@
 		"fryer_board",
 		"cerealmaker_board",
 		"candymachine_board",
-<<<<<<< HEAD
 		"food_replicator", //CHOMPEDIT Enable - Adds Food Replicator
-=======
 		"honey_extractor",
 		// "food_replicator",
->>>>>>> 0c8488b0ae (Move autolathe design datums to techweb datums (#19202))
 		"borgos1",
 		"range",
 		// "souppot",
