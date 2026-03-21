@@ -211,6 +211,10 @@
 		// "manurouter",
 		// "mailsorter",
 		"automatic_pipe_layer",
+		//CHOMPEdit Start
+		"fluor_light_bulb",
+		"fluor_light_tube",
+		//CHOMPEdit end
 	)
 
 /datum/techweb_node/emerge_power
