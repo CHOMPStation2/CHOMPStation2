@@ -92,45 +92,6 @@
 			addtimer(CALLBACK(src, PROC_REF(bullet_blossom), A, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
 			attackcycle = 0
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/sonic_boss
-	name = "experiment 10"
-	desc = "A strange furball, the air vibrating around it."
-	specialattackprojectile = /obj/item/projectile/energy/eclipse_boss/tyrjavelin
-	icon_state = "sonic_boss"
-	icon_living = "sonic_boss"
-	projectiletype = /obj/item/projectile/knockback/slow
-	wreckage = /obj/item/prop/tyrlore/sonic_boss
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/sonic_boss/load_default_bellies()
-	. = ..()
-	var/obj/belly/B = vore_selected
-	B.name = "alien gut"
-	B.desc = "Your ears ring as the stomach groans to life around you. The constant ringing mixing with acidic gurgling, and gutteral groans. Silver flesh kneading at your figure, whilst the beast ignores you stewing in it's gut."
-	B.digest_brute = 1.5
-	B.digest_burn = 0.5
-	B.digestchance = 0
-	B.absorbchance = 0
-	B.escapechance = 15
-
-/obj/item/projectile/knockback/slow
-	speed = 10
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/sonic_boss/do_special_attack(atom/A)
-	rng_cycle = rand(1,4)
-	switch(attackcycle)
-		if(1)
-			addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
-			attackcycle = 0
-		if(2)
-			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 5), 0.5 SECONDS, TIMER_DELETE_ME)
-			attackcycle = 0
-		if(3)
-			addtimer(CALLBACK(src, PROC_REF(rising_star), A, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
-			attackcycle = 0
-		if(4)
-			addtimer(CALLBACK(src, PROC_REF(hole_in_wall), A, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
-			attackcycle = 0
-
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/shield_boss
 	name = "experiment 15"
 	desc = "A strange furball gaurded by a transparent barrier."
@@ -228,26 +189,6 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/crystal_boss/do_special_attack(atom/A)
 	addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, 4), 1.5 SECONDS, TIMER_DELETE_ME)
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/naga_boss
-	name = "experiment 25"
-	icon_state = "naga_boss"
-	icon_living = "naga_boss"
-	wreckage = /obj/item/prop/tyrlore/gravity_boss
-	specialattackprojectile = /obj/item/projectile/energy/eclipse_boss/tyrjavelin
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/naga_boss/do_special_attack(atom/A)
-	rng_cycle = rand(1,3)
-	switch(attackcycle)
-		if(1)
-			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 5), 0.5 SECONDS, TIMER_DELETE_ME)
-			attackcycle = 0
-		if(2)
-			addtimer(CALLBACK(src, PROC_REF(gravity_surge), A, rng_cycle, 7, 1), 0.5 SECONDS, TIMER_DELETE_ME)
-			attackcycle = 0
-		if(3)
-			addtimer(CALLBACK(src, PROC_REF(rising_star), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-			attackcycle = 0
 
 //The Ai control units of Tyr
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/defense_ai

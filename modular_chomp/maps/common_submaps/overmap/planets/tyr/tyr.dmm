@@ -123,14 +123,6 @@
 /obj/structure/flora/tyr/flowers,
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
 /area/planet/tyr/caverns)
-"az" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/naga_boss,
-/turf/simulated/shuttle/floor/alien,
-/area/planet/tyr/precursorruins/science_b)
-"aA" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/sonic_boss,
-/turf/simulated/shuttle/floor/alien,
-/area/planet/tyr/precursorruins/science_c)
 "aB" = (
 /turf/simulated/shuttle/floor/alien,
 /area/planet/tyr/ancient_ruins/one)
@@ -164,7 +156,7 @@
 /area/planet/tyr/precursorruins/swarm_boss)
 "aH" = (
 /turf/simulated/floor/tiled/red,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "aI" = (
 /obj/structure/grille,
 /obj/structure/window/plastitanium{
@@ -186,37 +178,37 @@
 /area/planet/tyr/shuttles/three)
 "aL" = (
 /turf/simulated/wall/rshull,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "aM" = (
 /obj/machinery/hyperpad/centre{
 	map_pad_id = "tyr_1_station";
 	map_pad_link_id = "tyr_1_away"
 	},
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "aN" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/red,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "aO" = (
 /turf/simulated/floor/tiled/neutral,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "aP" = (
 /mob/living/simple_mob/humanoid/astral_collective/purity,
 /turf/simulated/floor/tiled/neutral,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "aQ" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/red,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "aR" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/red,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "aS" = (
 /obj/effect/anomaly/hallucination{
 	immortal = 1;
@@ -224,10 +216,16 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/nine)
+"aT" = (
+/turf/simulated/wall/rshull,
+/area/planet/tyr/ac_secondary)
+"aU" = (
+/turf/simulated/floor/tiled/neutral,
+/area/planet/tyr/ac_secondary)
 "aV" = (
 /obj/machinery/suspension_gen,
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "aW" = (
 /obj/structure/flora/tyr/flowers,
 /obj/random/tyroutcrop,
@@ -338,7 +336,7 @@
 /obj/item/rig/ch/clockwork,
 /obj/item/gun/energy/clockwork,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "bt" = (
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
@@ -370,6 +368,12 @@
 /obj/item/stack/medical/splint,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eight)
+"bA" = (
+/obj/structure/fans/hardlight/colorable/abductor{
+	color = "#b6d9f3"
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/planet/tyr/ac_secondary)
 "bB" = (
 /obj/structure/sink/kitchen{
 	dir = 1
@@ -481,7 +485,7 @@
 /area/planet/tyr/shuttles/one)
 "bV" = (
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "bW" = (
 /obj/structure/frame,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
@@ -510,6 +514,11 @@
 /obj/structure/frame,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eleven)
+"cc" = (
+/obj/structure/table/standard,
+/obj/item/paper/tyr_notes/astral_d,
+/turf/simulated/floor/tiled/red,
+/area/planet/tyr/ac_mainbase)
 "cd" = (
 /obj/item/circuitboard/teleporter_station,
 /obj/structure/frame,
@@ -711,7 +720,7 @@
 "cM" = (
 /obj/machinery/reagent_refinery/pump,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "cN" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 132;
@@ -814,6 +823,14 @@
 /mob/living/simple_mob/mechanical/hivebot/tyr/swarm,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
+"db" = (
+/obj/structure/table/standard,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/paper/tyr_notes/astral_c,
+/turf/simulated/floor/tiled/red,
+/area/planet/tyr/ac_mainbase)
 "dc" = (
 /obj/machinery/power/rtg/fake_reactor,
 /obj/structure/cable{
@@ -846,12 +863,19 @@
 "dh" = (
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/ship_graveyard)
+"di" = (
+/turf/simulated/tyracid,
+/area/planet/tyr/precursorruins/science_c)
 "dj" = (
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
 /turf/simulated/floor,
 /area/planet/tyr/shuttles/one)
+"dk" = (
+/mob/living/simple_mob/mechanical/hivebot/tyr/meteor,
+/turf/simulated/shuttle/floor/alienplating,
+/area/planet/tyr/precursorruins/entryway)
 "dl" = (
 /obj/structure/table/woodentable,
 /obj/random/contraband,
@@ -868,7 +892,7 @@
 "dn" = (
 /mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat,
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "do" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 26;
@@ -928,8 +952,9 @@
 /obj/random/material,
 /obj/random/material,
 /obj/random/material/refined,
+/obj/item/paper/tyr_notes/astral_b,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "dB" = (
 /obj/effect/floor_decal/stairs/dark_stairs{
 	dir = 4
@@ -1020,11 +1045,6 @@
 	},
 /turf/simulated/shuttle/floor/alienplating,
 /area/planet/tyr/precursorruins/entryway)
-"dP" = (
-/obj/effect/floor_decal/stairs/dark_stairs,
-/mob/living/simple_mob/mechanical/hivebot/tyr/meteor,
-/turf/simulated/shuttle/floor/alien,
-/area/planet/tyr/precursorruins)
 "dQ" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 181;
@@ -1319,20 +1339,20 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/neutral,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "eN" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/neutral,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "eO" = (
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "eP" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "eQ" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 119;
@@ -1353,7 +1373,7 @@
 "eT" = (
 /mob/living/simple_mob/humanoid/astral_collective/purity,
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "eU" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 80;
@@ -1382,7 +1402,7 @@
 "eX" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "eY" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 69;
@@ -1428,7 +1448,7 @@
 /obj/random/contraband/nofail,
 /obj/random/contraband/nofail,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "ff" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/planet/tyr/precursorruins/swarm_boss)
@@ -1669,13 +1689,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/planet/tyr/precursorruins)
-"fT" = (
-/obj/effect/floor_decal/stairs/dark_stairs{
-	dir = 4
-	},
-/mob/living/simple_mob/mechanical/hivebot/tyr/meteor,
-/turf/simulated/shuttle/floor/alien,
-/area/planet/tyr/precursorruins/entryway)
 "fU" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 149;
@@ -1792,7 +1805,7 @@
 "gp" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/red,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "gq" = (
 /turf/simulated/floor/grass,
 /area/planet/tyr/shuttles/rock_two)
@@ -1803,7 +1816,7 @@
 "gs" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "gt" = (
 /mob/living/simple_mob/mechanical/hivebot/tyr/swarm,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
@@ -1837,7 +1850,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "gB" = (
 /obj/structure/flora/tyr/lilly,
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
@@ -1971,10 +1984,6 @@
 	},
 /turf/simulated/tyracid/quantum,
 /area/planet/tyr/ancient_ruins/one)
-"hd" = (
-/mob/living/simple_mob/mechanical/hivebot/tyr/meteor,
-/turf/simulated/shuttle/floor/alien,
-/area/planet/tyr/ancient_ruins/one)
 "he" = (
 /obj/structure/fans/hardlight/colorable/abductor{
 	color = "#FF3300"
@@ -2008,7 +2017,7 @@
 "hl" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "hm" = (
 /obj/structure/table/rack,
 /obj/item/tool/crowbar/hybrid/alien,
@@ -2113,7 +2122,7 @@
 "hF" = (
 /mob/living/simple_mob/humanoid/astral_collective/ranged/lizard,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "hG" = (
 /obj/machinery/button/remote/blast_door{
 	dir = 8;
@@ -2225,14 +2234,14 @@
 "hY" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/neutral,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "hZ" = (
 /obj/structure/table/standard,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/red,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "ia" = (
 /obj/item/material/shard{
 	pixel_x = 5;
@@ -2260,11 +2269,11 @@
 /area/planet/tyr/ancient_ruins/one)
 "if" = (
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "ig" = (
 /mob/living/simple_mob/humanoid/astral_collective/ranged/wolf,
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "ih" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/planet/tyr/precursorruins/checkpoint)
@@ -2436,7 +2445,7 @@
 "iV" = (
 /obj/random/multiple/corp_crate,
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "iW" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 149;
@@ -2487,10 +2496,6 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/alienplating,
-/area/planet/tyr/precursorruins/stairwell)
-"jj" = (
-/mob/living/simple_mob/mechanical/hivebot/tyr/meteor,
-/turf/simulated/shuttle/floor/alien,
 /area/planet/tyr/precursorruins/stairwell)
 "jk" = (
 /obj/item/melee/energy/tyr_katar,
@@ -2562,7 +2567,7 @@
 /obj/random/multiple/corp_crate,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "jz" = (
 /obj/effect/floor_decal/stairs/dark_stairs{
 	dir = 4
@@ -2578,7 +2583,7 @@
 "jB" = (
 /obj/machinery/reagent_refinery/waste_processor,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "jC" = (
 /obj/structure/closet,
 /obj/random/material,
@@ -2586,7 +2591,7 @@
 /obj/random/mainttoyloot,
 /obj/random/handgun,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "jD" = (
 /obj/structure/closet,
 /obj/random/material/precious,
@@ -2594,11 +2599,11 @@
 /obj/random/material,
 /obj/random/mainttoyloot,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "jE" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "jF" = (
 /obj/structure/closet,
 /obj/item/borg/upgrade/modkit/damage,
@@ -2622,11 +2627,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "jJ" = (
 /obj/machinery/reagent_refinery/vat,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "jK" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/planet/tyr/ancient_ruins/six)
@@ -2711,33 +2716,33 @@
 "ke" = (
 /mob/living/simple_mob/humanoid/astral_collective/purity,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kf" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kg" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kh" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "ki" = (
 /mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kj" = (
 /mob/living/simple_mob/humanoid/astral_collective/ranged/wolf,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kk" = (
 /obj/structure/table/standard,
 /obj/random/toolbox,
@@ -2746,7 +2751,7 @@
 /obj/random/material,
 /obj/random/material,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kl" = (
 /obj/structure/table/standard,
 /obj/random/tool/power,
@@ -2755,7 +2760,7 @@
 /obj/random/material,
 /obj/random/material/precious,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "km" = (
 /obj/structure/table/standard,
 /obj/random/tool,
@@ -2763,14 +2768,14 @@
 /obj/random/material,
 /obj/random/material,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kn" = (
 /obj/machinery/light{
 	dir = 8;
 	layer = 3
 	},
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "ko" = (
 /obj/structure/closet,
 /obj/random/material/refined,
@@ -2779,7 +2784,7 @@
 /obj/random/mainttoyloot,
 /obj/random/mainttoyloot/nofail,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kp" = (
 /obj/structure/closet,
 /obj/random/material,
@@ -2787,11 +2792,11 @@
 /obj/random/mainttoyloot,
 /obj/random/mainttoyloot/nofail,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kq" = (
 /obj/random/multiple/corp_crate,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kr" = (
 /obj/structure/table/standard,
 /obj/random/research_sample_type1,
@@ -2799,36 +2804,36 @@
 /obj/random/material,
 /obj/random/material,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "ks" = (
 /mob/living/simple_mob/humanoid/astral_collective/ranged/tesh,
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kt" = (
 /mob/living/simple_mob/humanoid/astral_collective/ranged/noodle,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "ku" = (
 /mob/living/simple_mob/humanoid/astral_collective/purity,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kv" = (
 /obj/random/multiple/corp_crate,
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kw" = (
 /obj/random/multiple/corp_crate,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kx" = (
 /obj/structure/table/standard,
 /obj/random/tool/power,
@@ -2836,7 +2841,7 @@
 /obj/random/material,
 /obj/random/material,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "ky" = (
 /obj/structure/table/standard,
 /obj/random/tool,
@@ -2845,7 +2850,7 @@
 /obj/random/material,
 /obj/random/material/precious,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kz" = (
 /obj/structure/table/standard,
 /obj/random/tool,
@@ -2854,7 +2859,7 @@
 /obj/random/material,
 /obj/random/material,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kA" = (
 /obj/structure/table/standard,
 /obj/random/translator,
@@ -2863,7 +2868,7 @@
 /obj/random/material,
 /obj/random/material/refined,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kB" = (
 /obj/structure/table/standard,
 /obj/random/slimecore,
@@ -2871,24 +2876,24 @@
 /obj/random/material,
 /obj/random/material,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kC" = (
 /obj/machinery/reagent_refinery/filter,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kD" = (
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
 /area/planet/tyr/caverns)
 "kE" = (
 /mob/living/simple_mob/humanoid/astral_collective/ranged/noodle,
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kF" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kG" = (
 /obj/structure/table/standard,
 /obj/random/research_sample_type3,
@@ -2897,7 +2902,7 @@
 /obj/random/material,
 /obj/random/material/refined,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kH" = (
 /obj/random/tyroutcrop,
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
@@ -2907,7 +2912,7 @@
 	id = "tyr_refinery"
 	},
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kJ" = (
 /obj/structure/table/standard,
 /obj/random/tool/alien,
@@ -2916,19 +2921,20 @@
 /obj/random/material,
 /obj/random/material,
 /obj/random/material/precious,
+/obj/item/paper/tyr_notes/astral_a,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kK" = (
 /obj/machinery/reagent_refinery/grinder,
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kL" = (
 /obj/machinery/conveyor{
 	id = "tyr_refinery";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kM" = (
 /obj/structure/closet,
 /obj/random/material/precious,
@@ -2937,21 +2943,21 @@
 /obj/random/mainttoyloot,
 /obj/random/handgun,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kN" = (
 /obj/structure/closet,
 /obj/random/material,
 /obj/random/material,
 /obj/random/mainttoyloot,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kO" = (
 /obj/random/multiple/corp_crate,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kP" = (
 /obj/structure/table/steel,
 /obj/machinery/reagentgrinder,
@@ -2960,62 +2966,62 @@
 "kQ" = (
 /mob/living/simple_mob/humanoid/astral_collective/ranged/wolf,
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kR" = (
 /obj/machinery/conveyor{
 	id = "tyr_refinery"
 	},
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kS" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/neutral,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kT" = (
 /obj/structure/closet/excavation,
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kU" = (
 /obj/structure/fans/hardlight/colorable/abductor{
 	color = "#b6d9f3"
 	},
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kV" = (
 /obj/structure/fans/hardlight/colorable/abductor{
 	color = "#b6d9f3"
 	},
 /turf/simulated/floor/tiled/neutral,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kW" = (
 /obj/structure/fans/hardlight/colorable/abductor{
 	color = "#b6d9f3"
 	},
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kX" = (
 /obj/machinery/suspension_gen,
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kY" = (
 /obj/structure/closet/excavation,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "kZ" = (
 /mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/purple,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "la" = (
 /mob/living/simple_mob/humanoid/astral_collective/purity,
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
@@ -3144,7 +3150,7 @@
 "vI" = (
 /mob/living/simple_mob/humanoid/astral_collective/ranged/tesh,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "CU" = (
 /obj/random/tyroutcrop,
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
@@ -3166,7 +3172,7 @@
 /obj/random/material,
 /obj/random/material,
 /turf/simulated/floor/tiled,
-/area/planet/tyr/eclipse_refinery)
+/area/planet/tyr/ac_mainbase)
 "Uo" = (
 /turf/simulated/floor/outdoors/desert_planet/sand/tyr,
 /area/planet/tyr/caverns)
@@ -10402,7 +10408,7 @@ Mz
 Mz
 Mz
 ik
-ir
+iq
 iq
 iq
 iq
@@ -10414,7 +10420,7 @@ ik
 iq
 iq
 iq
-ir
+iq
 ik
 Mz
 Mz
@@ -11182,7 +11188,7 @@ ik
 iq
 iq
 iq
-iq
+ir
 iq
 iq
 iq
@@ -11740,7 +11746,7 @@ ik
 fb
 eZ
 ik
-ir
+iq
 ik
 Mz
 Mz
@@ -11950,7 +11956,7 @@ Mz
 Mz
 Mz
 ik
-ir
+iq
 iq
 iq
 iq
@@ -11962,7 +11968,7 @@ ik
 iq
 iq
 iq
-ir
+iq
 ik
 Mz
 Mz
@@ -13283,7 +13289,7 @@ iq
 iq
 iq
 iq
-ir
+iq
 ik
 fb
 eZ
@@ -15826,7 +15832,7 @@ iM
 iM
 eZ
 ik
-ir
+iq
 iq
 iq
 iq
@@ -16110,7 +16116,7 @@ iq
 iq
 iq
 iq
-ir
+iq
 ik
 fb
 iM
@@ -17374,17 +17380,17 @@ iM
 iM
 eZ
 ik
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
 ir
+iq
+iq
+iq
+iq
+iq
+iq
+iq
+iq
+iq
+iq
 iq
 iq
 iq
@@ -18921,7 +18927,7 @@ iM
 iM
 eZ
 ik
-ir
+iq
 iq
 iq
 iq
@@ -18956,7 +18962,7 @@ Mz
 Mz
 Mz
 ik
-ir
+iq
 iq
 iq
 iq
@@ -19705,7 +19711,7 @@ iM
 fa
 ik
 ik
-ir
+iq
 ik
 ik
 fm
@@ -20211,7 +20217,7 @@ iq
 iq
 iq
 iq
-iq
+ir
 ik
 fb
 iM
@@ -20219,7 +20225,7 @@ iM
 iM
 eZ
 ik
-iq
+ir
 ik
 ik
 fm
@@ -20253,7 +20259,7 @@ in
 io
 iE
 ik
-iq
+ir
 iq
 iq
 iq
@@ -21794,7 +21800,7 @@ Mz
 Mz
 Mz
 ik
-ir
+iq
 ik
 ik
 ik
@@ -22575,7 +22581,7 @@ ip
 ip
 iQ
 ik
-ir
+iq
 ik
 eW
 io
@@ -23091,15 +23097,15 @@ in
 in
 iD
 ik
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
 ir
+iq
+iq
+iq
+iq
+iq
+iq
+iq
+iq
 ik
 Mz
 Mz
@@ -23588,12 +23594,12 @@ iq
 iq
 iq
 iq
-iq
-iq
-iq
-iq
-iq
 ir
+iq
+iq
+iq
+iq
+iq
 ik
 Mz
 Mz
@@ -24348,7 +24354,7 @@ ik
 ik
 ik
 ik
-ir
+iq
 ik
 Mz
 Mz
@@ -26158,7 +26164,7 @@ iq
 iq
 iq
 is
-fX
+is
 is
 Mz
 Mz
@@ -27437,7 +27443,7 @@ iq
 iq
 iq
 iq
-fX
+is
 is
 Mz
 Mz
@@ -27473,7 +27479,7 @@ Mz
 Mz
 Mz
 ik
-ir
+iq
 ik
 iJ
 in
@@ -27744,7 +27750,7 @@ iJ
 in
 iD
 ik
-ir
+iq
 ik
 Mz
 Mz
@@ -28512,7 +28518,7 @@ iq
 iq
 iq
 iq
-iq
+ir
 iq
 iq
 iq
@@ -30270,7 +30276,7 @@ Mz
 Mz
 Mz
 ik
-ir
+iq
 iq
 iq
 iq
@@ -31069,7 +31075,7 @@ jf
 jf
 jf
 jh
-jj
+jh
 jh
 jf
 jf
@@ -32601,10 +32607,10 @@ Mz
 Mz
 iZ
 jm
-jq
 jp
 jp
-jq
+jp
+jp
 jm
 iZ
 Mz
@@ -32860,7 +32866,7 @@ Mz
 iZ
 jm
 jp
-jm
+dk
 jm
 jp
 jm
@@ -34914,7 +34920,7 @@ iq
 iq
 iq
 iq
-ir
+iq
 ik
 Mz
 Mz
@@ -38291,7 +38297,7 @@ dJ
 jp
 jp
 jp
-jq
+jp
 jm
 iZ
 Mz
@@ -39323,7 +39329,7 @@ dN
 jv
 ju
 dI
-fT
+jr
 jn
 iZ
 Mz
@@ -40352,7 +40358,7 @@ jm
 jp
 jp
 jp
-jp
+jq
 jm
 dJ
 jp
@@ -42920,7 +42926,7 @@ iq
 iq
 iq
 iq
-ir
+iq
 ik
 iJ
 in
@@ -43694,7 +43700,7 @@ in
 in
 iD
 ik
-iq
+ir
 iq
 iq
 iq
@@ -43991,7 +43997,7 @@ iG
 iH
 iI
 iH
-az
+iI
 iH
 iI
 iH
@@ -45240,7 +45246,7 @@ Mz
 in
 iD
 ik
-ir
+iq
 ik
 iJ
 in
@@ -47833,7 +47839,7 @@ iq
 dv
 dv
 dv
-dP
+dv
 dv
 dv
 dv
@@ -48115,10 +48121,10 @@ Mz
 Mz
 Mz
 iR
-jo
+di
 iz
 iy
-aA
+iz
 iy
 iz
 iy
@@ -49381,7 +49387,7 @@ iq
 dv
 dv
 dv
-dP
+dv
 dv
 dv
 dv
@@ -49647,7 +49653,7 @@ ik
 is
 is
 is
-is
+fX
 is
 is
 is
@@ -54362,7 +54368,7 @@ cD
 gW
 aB
 gW
-hd
+aB
 gW
 aB
 gW
@@ -55396,7 +55402,7 @@ aB
 gW
 aB
 gW
-hd
+aB
 gW
 cD
 hc
@@ -55668,7 +55674,7 @@ aB
 aB
 aB
 aB
-hd
+aB
 aB
 aB
 aB
@@ -56424,7 +56430,7 @@ gz
 gz
 cD
 gW
-hd
+aB
 aB
 aB
 aB
@@ -56442,7 +56448,7 @@ aB
 aB
 aB
 aB
-hd
+aB
 aB
 aB
 aB
@@ -61644,7 +61650,7 @@ gz
 gz
 gz
 gz
-gz
+kD
 Nc
 Nc
 Nc
@@ -61901,9 +61907,9 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
+kD
+kD
+kD
 Nc
 Nc
 Nc
@@ -62159,10 +62165,10 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
+kD
+kD
+kD
+kD
 Nc
 Nc
 Nc
@@ -62418,11 +62424,11 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
+kD
+kD
+kD
+kD
+kD
 Nc
 dZ
 dZ
@@ -62675,13 +62681,13 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
-gz
-gz
+aT
+aT
+aT
+bA
+aT
+aT
+aT
 dZ
 dZ
 dZ
@@ -62933,13 +62939,13 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
-gz
-gz
+aT
+aU
+aU
+aU
+aU
+aU
+aT
 dZ
 dZ
 dZ
@@ -63191,13 +63197,13 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
-gz
-gz
+aT
+aU
+aU
+aU
+aU
+aU
+aT
 gz
 dZ
 dZ
@@ -63449,13 +63455,13 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
-gz
-gz
+aT
+aU
+aU
+aU
+aU
+aU
+aT
 gz
 dZ
 dZ
@@ -63707,13 +63713,13 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
-gz
-gz
+aT
+aU
+aU
+aU
+aU
+aU
+aT
 gz
 gz
 dZ
@@ -63965,13 +63971,13 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
-gz
-gz
+aT
+aU
+aU
+aU
+aU
+aU
+aT
 gz
 gz
 dZ
@@ -64223,13 +64229,13 @@ gz
 gz
 gz
 gz
-gz
-gz
-gz
-gz
-gz
-gz
-gz
+aT
+aT
+aT
+aT
+aT
+aT
+aT
 gz
 gz
 dZ
@@ -64427,7 +64433,7 @@ eN
 aP
 aO
 aL
-gp
+cc
 bV
 bV
 aH
@@ -67265,7 +67271,7 @@ aL
 eX
 aL
 aL
-hZ
+db
 bV
 bV
 aH

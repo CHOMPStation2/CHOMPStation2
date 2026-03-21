@@ -57,4 +57,4 @@
 	log_and_message_admins("Bluespace lockers linked. Entry: [get_area(entry_point)] Exit: [get_area(exit_point)]")
 
 /datum/event/bluespace_locker/announce()
-	command_announcement.Announce("Bluespace anomaly detected near [station_name()]. Possible location, [get_area(pick(entry_point, exit_point))].", "Anomaly Alert")
+	GLOB.command_announcement.Announce("Bluespace anomaly detected near [station_name()]. Possible location, [get_area(pick(entry_point, exit_point))].", "Anomaly Alert")

@@ -9,6 +9,12 @@
 #define MAT_CARPET_PURPLE		"purple carpet"
 #define MAT_CARPET_ORANGE		"orange carpet"
 
+#define MAT_WISP				"strange wisp"
+#define MAT_FROSCALE			"frost scale"
+#define MAT_CRYSCALE			"crystal scale"
+#define MAT_DREAMSCALE			"furred scale"
+#define MAT_SHELLCHITIN			"shell chitin"
+
 #define RCD_FIRELOCK		"Firelock"			// Builds an emergency glass shutter
 #define RCD_WINDOOR			"Windoor"			// Build a window door
 #define RCD_FRAME			"Frame"				// Build a Machine or Computer frame

@@ -1,4 +1,4 @@
-var/const/YR3_monitor_styles = "blank=YR3_blank;\
+#define YR3_MONITOR_STYLES "blank=YR3_blank;\
 	eyes=YR3_eyes;\
 	foureyes=YR3_foureyes;\
 	slanteyes=YR3_evileyes;\
@@ -44,7 +44,7 @@ var/const/YR3_monitor_styles = "blank=YR3_blank;\
 	desc = "A limb with oddly high internal pressure tolerance."
 	icon = 'modular_chomp/icons/mob/human_races/cyberlimbs/YR3/YR3_enviroshell.dmi'
 	monitor_icon = 'modular_chomp/icons/mob/monitor_icons.dmi'
-	monitor_styles = YR3_monitor_styles
+	monitor_styles = YR3_MONITOR_STYLES
 
 /datum/robolimb/enviroshell/original
 	company = "YR3 Enviroshell- Original Xenochimera Model"
@@ -72,3 +72,5 @@ var/const/YR3_monitor_styles = "blank=YR3_blank;\
 	blood_color = "#0e1213"
 	icon = 'modular_chomp/icons/mob/human_races/cyberlimbs/YR3/YR3_sleek.dmi'
 	lifelike = TRUE
+
+#undef YR3_MONITOR_STYLES

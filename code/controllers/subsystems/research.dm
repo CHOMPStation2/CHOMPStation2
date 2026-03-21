@@ -41,10 +41,10 @@ SUBSYSTEM_DEF(research)
 	var/list/techweb_nodes_experimental = list()
 	///path = list(point type = value)
 	var/list/techweb_point_items = list(
-		/obj/item/research_sample/common = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.5),
-		/obj/item/research_sample/uncommon = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS*0.5),
-		/obj/item/research_sample/rare = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS*0.5),
-		/obj/item/research_sample/bluespace = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS*0.5),
+		/obj/item/research_sample/common = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS),
+		/obj/item/research_sample/uncommon = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS),
+		/obj/item/research_sample/rare = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS),
+		/obj/item/research_sample/bluespace = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS),
 		/obj/item/assembly/signaler/anomaly/bioscrambler = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS),
 		/obj/item/assembly/signaler/anomaly/bluespace = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS),
 		/obj/item/assembly/signaler/anomaly/dimensional = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS),
@@ -71,10 +71,22 @@ SUBSYSTEM_DEF(research)
 		/obj/item/slime_extract/green = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.75),
 		/obj/item/slime_extract/pink = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.75),
 		/obj/item/slime_extract/gold = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.75),
+		/obj/item/slime_extract/light_pink = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS),
 		/obj/item/slime_extract/oil = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS),
 		/obj/item/slime_extract/sapphire = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS),
 		/obj/item/slime_extract/emerald = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS),
-		/obj/item/slime_extract/rainbow = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
+		/obj/item/slime_extract/rainbow = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS),
+		// CHOMPAdd Start
+		/obj/item/slime_extract/sepia = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.5),
+		/obj/item/slime_extract/redspace = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.5),
+		/obj/item/slime_extract/dark = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.5),
+		/obj/item/slime_extract/plague = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.5),
+		/obj/item/slime_extract/oceanic = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.5),
+		/obj/item/slime_extract/nuclear = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.75),
+		/obj/item/slime_extract/dream = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.75),
+		/obj/item/slime_extract/nightmare = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.75),
+		/obj/item/slime_extract/sound = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS),
+		// CHOMPAdd End
 	)
 	///Allows repeated deconstruction of these items for points. These items MUST be in techweb_point_items as well.
 	var/list/techweb_repeatable_items = list(

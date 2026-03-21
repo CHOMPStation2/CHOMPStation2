@@ -38,7 +38,7 @@ SUBSYSTEM_DEF(nightshift)
 		else
 			pickedsound = 'sound/AI/bright_lights.ogg'
 	*/
-	priority_announcement.Announce(message, new_title = "Automated Lighting System Announcement", /* new_sound = pickedsound,*/ zlevel = announce_z)
+	GLOB.priority_announcement.Announce(message, new_title = "Automated Lighting System Announcement", /* new_sound = pickedsound,*/ zlevel = announce_z)
 	// CHOMPEdit End
 	//VOREStation Edit End
 

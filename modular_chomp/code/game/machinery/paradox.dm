@@ -19,6 +19,7 @@
 							/obj/item/stock_parts/capacitor = 4,
 							/obj/item/stock_parts/manipulator = 6,
 							/obj/item/stock_parts/scanning_module = 10)
+	hidden = TRUE //This needs a rework before it's enabled.
 
 /obj/machinery/paradoxrift/RefreshParts()
 	..()

@@ -172,7 +172,7 @@
 
 // Step trigger to fall down to planet Sif
 /turf/simulated/sky/moving/north/sif/planet_fall/find_planet()
-	return planet_sif
+	return GLOB.planet_sif
 
 //CHOMPedit: Changes to sif/planetuse snow to make it work properly as it does on Polaris, it was broken by YW edits.
 /turf/simulated/floor/outdoors/snow/sif/planetuse
@@ -180,7 +180,7 @@
 	icon_state = "snow"
 	edge_blending_priority = 6
 	movement_cost = 2
-	initial_flooring = /decl/flooring/snow
+	initial_flooring = /datum/decl/flooring/snow
 	/*turf_layers = list( CHOMP Removal Begin
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt

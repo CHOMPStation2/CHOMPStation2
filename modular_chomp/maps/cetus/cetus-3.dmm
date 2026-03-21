@@ -541,12 +541,6 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
-"abk" = (
-/obj/item/megaphone{
-	pixel_x = -13
-	},
-/turf/simulated/wall,
-/area/crew_quarters/heads/sc/restroom)
 "abn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -78436,7 +78430,7 @@ rhv
 bhd
 bhd
 bhd
-abk
+occ
 occ
 occ
 hRN

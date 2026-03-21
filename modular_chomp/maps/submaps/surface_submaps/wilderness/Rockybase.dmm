@@ -45,15 +45,15 @@
 /area/submap/Rockybase)
 "am" = (
 /obj/effect/decal/remains/posi,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "an" = (
 /obj/machinery/porta_turret/poi,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "ao" = (
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "ap" = (
 /obj/structure/flora/tree/sif,
@@ -61,17 +61,17 @@
 /area/template_noop)
 "aq" = (
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "ar" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "as" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "at" = (
 /turf/simulated/wall/r_wall,
@@ -847,6 +847,9 @@
 "cU" = (
 /obj/machinery/vending/medical,
 /turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"cV" = (
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "cX" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2135,7 +2138,7 @@ af
 af
 af
 af
-al
+cV
 ar
 at
 aL
@@ -2172,8 +2175,8 @@ af
 af
 af
 af
-al
-al
+cV
+cV
 aq
 at
 aM
@@ -2210,7 +2213,7 @@ af
 af
 af
 af
-al
+cV
 ao
 aq
 au
@@ -2249,7 +2252,7 @@ af
 af
 af
 am
-al
+cV
 aq
 av
 aN
@@ -2286,8 +2289,8 @@ af
 af
 af
 af
-al
-al
+cV
+cV
 aq
 av
 aN
@@ -2324,8 +2327,8 @@ af
 af
 af
 af
-al
-al
+cV
+cV
 aq
 au
 at
@@ -2362,8 +2365,8 @@ af
 af
 af
 af
-al
-al
+cV
+cV
 as
 at
 aO
@@ -2401,7 +2404,7 @@ af
 af
 af
 af
-al
+cV
 ar
 at
 aP

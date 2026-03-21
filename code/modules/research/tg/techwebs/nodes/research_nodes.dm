@@ -9,15 +9,32 @@
 		"rdconsole",
 		"bomb_tester",
 		"tech_disk",
-		// "rdservercontrol",
-		// "doppler_array",
+		"rdservercontrol",
+		"doppler_array",
 		// "experimentor",
 		"destructive_analyzer",
 		// "destructive_scanner",
+		"artifact_harvester",
+		"artifact_scanpad",
 		// "laptop",
 		// "portadrive_basic",
 		// "portadrive_advanced",
 		// "portadrive_super",
+		"electropack",
+	)
+
+/datum/techweb_node/protolathe_boards
+	id = TECHWEB_NODE_PROTOLATHE_BOARDS
+	starting_node = TRUE
+	display_name = "Protolathe Boards"
+	description = "The fundamental technology required for production of more experimental protolathe boards."
+	design_ids = list(
+		"protolathe_science",
+		"protolathe_service",
+		"protolathe_medical",
+		"protolathe_cargo",
+		"protolathe_engineering",
+		"protolathe_security",
 	)
 
 /datum/techweb_node/bluespace_theory
@@ -48,7 +65,6 @@
 		"belt_holding_utility",
 		"bluespacebeaker",
 		"bsflare",
-		"bluespace_crystal",
 		"beacon",
 		"beacon_locator",
 		"chameleon",
@@ -63,7 +79,6 @@
 		"shelter_capsule_kitchen",
 		"shelter_capsule_pocketdorm",
 		"shelter_capsule_luxuryrecroom",
-		// "ore_silo",
 		// "plumbing_receiver",
 		// "adv_watering_can",
 		// "bluespace_coffeepot",
@@ -163,3 +178,15 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
 // CHOMPEnable End
+
+/*/datum/techweb_node/paradox_rift //CHOMPEdit Start
+	id = TECHWEB_NODE_PARADOX_RIFT
+	display_name = "Paradox Rift"
+	description = "A device that creates a localized paradox, causing unpredictable effects."
+	prereq_ids = list(TECHWEB_NODE_ANOMALY_HARVESTING, TECHWEB_NODE_BLUESPACE_TRAVEL, TECHWEB_NODE_TELEPORTER)
+	design_ids = list(
+		"paradoxrift",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
+	announce_channels = list(CHANNEL_SCIENCE)
+*/ //CHOMPEdit End

@@ -9,7 +9,7 @@
 	var/refilling = FALSE //CHOMPAdd
 
 /obj/structure/toilet/Initialize(mapload)
-	if(z in global.using_map.map_levels)
+	if(z in using_map.map_levels)
 		teleplumbed = TRUE
 		exit_landmark = locate(/obj/effect/landmark/teleplumb_exit)
 		exit_container = locate(/obj/structure/biowaste_tank)

@@ -1,4 +1,4 @@
-var/datum/planet/thor/planet_thor = null
+GLOBAL_DATUM(planet_thor, /datum/planet/thor)
 
 /datum/time/thor
 	seconds_in_day = 24 HOURS
@@ -12,7 +12,7 @@ var/datum/planet/thor/planet_thor = null
 
 /datum/planet/thor/New()
 	..()
-	planet_thor = src
+	GLOB.planet_thor = src
 	weather_holder = new /datum/weather_holder/thor(src)
 
 /datum/planet/thor/update_sun()

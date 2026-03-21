@@ -203,3 +203,135 @@
   - refactor: package wrapper and gift wrap cleaned up
   zeskorion:
   - bugfix: cleans up P.I.S.S.
+2026-03-13:
+  Aroliacue:
+  - balance: Xenomorph Hybrids are now immune to space.
+  - balance: Xenomorph Hybrids now take more damage from burns.
+  - balance: Xenomorph Hybrids are now significantly harder to heal with chemicals.
+  - balance: Xenomorph Hybrids dissipate rads faster and have innate toxin resistance.
+  - balance: Xenomorph Hybrids are now highly resistant to pain.
+  - balance: Xenomorph Hybrid subtypes have been rebalanced.
+  - balance: Xenomorph Hybrids no longer have innate shredding.
+  - bugfix: Corrected Xenomorph Hybrid Praetorian subtype providing additional movespeed
+      instead of slowdown.
+  - bugfix: Corrected excessive melee damage being applied to the 'strong' melee subtypes.
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added additional starting security items to the SecTech vending machine.
+  - qol: Moved excessive clothing options from security lockers to clothing vending
+      machines.
+  - balance: Reduced weight class on legcuffs from normal to small. They now take
+      up the same space as regular handcuffs.
+  - bugfix: disposal outlets ejection when not maploaded
+  Guti:
+  - rscadd: Added "Anomaly Harvesting" crate to Cargo
+  - rscadd: Added "Anomaly harvesting kit"
+  - rscadd: Added "Latent anomaly core"
+  - code_imp: Added random core obj
+  - balance: Doubled the points from samples
+  - balance: Doubled the passive point generation of R&D's server (0.4)
+  - bugfix: Unsimulated turfs can no longer be converted by the dimensional anomaly
+  Wide Eyes:
+  - rscadd: adds anomaly research to cetus
+  - bugfix: few cetus fixes
+  zeskorion:
+  - bugfix: few more cs fixes, for anomaly science and more
+2026-03-14:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: removes invisible spawned item in xenoarch
+  - code_imp: moves some more bicon to icon2html
+2026-03-15:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: cleans up dest tagger
+  - qol: ingame logs now show the last 1000 entries per category
+  FluffMedic:
+  - rscadd: Some new Mineral Ants, and non-lethal mineral harvesting. Ant meat is
+      also universally useable
+  - rscadd: Tyr repair drones are different now
+  - balance: Astral Collective Tesh warn of their gambit attack. Gambit threshholds
+      lowered
+  - balance: AC Purity's lost their healing, gain a sound based confusion effect
+  - balance: Fossil Tank is less destructive
+  Will:
+  - code_imp: Slime research point unittest
+  - bugfix: light pink slime cores lacked a destructive analyzer point value
+2026-03-16:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: convert more globals to GLOBs
+  - bugfix: flags some more wall items as what they are
+  Kashargul:
+  - code_imp: cleans up some minor things in map system
+2026-03-17:
+  Diana:
+  - bugfix: Attempting to move while handcuffed and being pulled will no longer result
+      in a crash.
+  zeskorion:
+  - bugfix: poi active edges
+2026-03-18:
+  ARGUS:
+  - qol: The Task Manager now accepts a significantly larger variety of department
+      objects across all six departments, making it easier to complete a scan without
+      hunting for specific items.
+  - balance: Expanded scannable pools for Bridge, Engineering, Medical, Science, Service,
+      and Security departments.
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: copy slot skipping some values
+  - rscadd: Standard and Exploration Gooborg sprites
+  - rscadd: 'new markings: Skull mask, three lengths of a thin snout variant, thinner
+      lower snout sprites, snout teeth, and a snout-tip horn'
+  - bugfix: circle tattoo unevenness fixed
+  - bugfix: Copy loadout now correctly makes unique metadata entries for gear. So
+      that changing the color on one pair of glasses doesnt affect the ones in your
+      other loadout.
+  Diana:
+  - rscadd: Adds the Caseless Rifle (and its ammo) to the techweb.
+  - qol: Protolathe boards can be made via science protolathe (engineering can make
+      engineering protolathe boards) so if they're ever destroyed, they can be remade.
+  - qol: Protolathe boards can be ordered via cargo if the original science protolathe
+      is ever destroyed.
+  Guti:
+  - qol: Normal anomalies can now be scanned with the anomaly scanner for it's frequencies.
+  - qol: The anomaly scanner will indicate the user to use a releaser, if used on
+      a core.
+  - qol: Added particle descriptions when examining the anomaly scanner.
+  - bugfix: Fixed Anomalis spawning without PDA
+2026-03-19:
+  ARGUS-Memory:
+  - bugfix: Taskmaager coupon code now gives coupons
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: 2 missing parent paths for tall borgs
+  - bugfix: some more gooborgs
+  - bugfix: explo tall parent path
+  - code_imp: migrates more globals to GLOBs
+2026-03-20:
+  ARGUS:
+  - bugfix: Make the juebox volume actually work
+  - bugfix: Using the Morph appearance editor no longer silently deactivates all trait
+      genes, including Morph itself.
+  - bugfix: Changing gender or markings via appearance tools no longer wipes active
+      genetic traits.
+  - bugfix: Handle ! Say emotes properly similiar to * emotes.
+  - rscadd: Adds animation states for command raptor (the thick one)
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: RFID Slot of laptops and tablets actually are considered now for Access
+      Checks and take precedence over equipped Access.
+  - bugfix: some spawn failures
+  - admin: reimplements attack and player logs
+  - code_imp: rids of the old db connection hook... the dbcore subsystem needs to
+      handle it
+  - bugfix: player logs per mob verbs
+  Diana:
+  - bugfix: Zombie powder will no longer permanently cause you to not lose halloss.
+2026-03-21:
+  CHOMPStation2StaffMirrorBot:
+  - qol: player logs now has a reload button
+  - bugfix: language and robot whitelist tgs commands
+  - bugfix: language whitelist not working
+  - bugfix: robot whitelist being non functional
+  - bugfix: job whitelist now properly checks the actual job name
+  - qol: marks whitelisted robot modules in the robot UI
+  - admin: admin whitelist tgui
+  Nova:
+  - bugfix: Fixed bot pathfinders getting stuck on diagonals
+  - qol: removed "As Unknown" from shadekin without any ID, or with a voice changer.
+  Will:
+  - rscadd: External airlocks on planets will freeze in extremely cold weather.

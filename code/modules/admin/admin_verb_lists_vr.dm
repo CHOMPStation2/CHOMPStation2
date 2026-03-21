@@ -20,8 +20,6 @@ GLOBAL_LIST_INIT(admin_verbs_admin, list(
 	/client/proc/cmd_admin_pm_context,	//right-click adminPM interface,
 	/client/proc/cmd_admin_pm_panel,	//admin-pm list,
 	/client/proc/cmd_admin_subtle_message,	//send an message to somebody as a 'voice in their head',
-	/client/proc/cmd_admin_check_player_logs,	//checks a player's attack logs,
-	/client/proc/cmd_admin_check_dialogue_logs,	//checks a player's dialogue logs,
 	/datum/admins/proc/access_news_network,	//allows access of newscasters,
 	/client/proc/jumptocoord,			//we ghost and jump to a coordinate,
 	/client/proc/Getmob,				//teleports a mob to our location,
@@ -71,7 +69,6 @@ GLOBAL_LIST_INIT(admin_verbs_admin, list(
 	/client/proc/toggle_spawning_with_recolour,
 	/client/proc/start_vote,
 	/client/proc/hide_motion_tracker_feedback,
-	/client/proc/reload_alienwhitelist //ChompADD
 	))
 
 GLOBAL_LIST_INIT(admin_verbs_spawn, list(
@@ -162,7 +159,6 @@ GLOBAL_LIST_INIT(admin_verbs_debug, list(
 	/client/proc/stop_sounds,
 	/client/proc/spawn_reagent,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
-	/client/proc/reload_alienwhitelist, //ChompADD
 	/client/proc/reload_configuration //CHOMPAdd
 	))
 
@@ -174,8 +170,6 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/datum/admins/proc/toggleguests,
 	/datum/admins/proc/announce,
 	/client/proc/cmd_admin_subtle_message,
-	/client/proc/cmd_admin_check_player_logs,
-	/client/proc/cmd_admin_check_dialogue_logs,
 	/datum/admins/proc/access_news_network,
 	/client/proc/cmd_admin_direct_narrate,
 	/client/proc/cmd_admin_world_narrate,
@@ -229,7 +223,6 @@ GLOBAL_LIST_INIT(admin_verbs_mod, list(
 	/datum/admins/proc/sendFax,
 	/datum/admins/proc/view_persistent_data,
 	/client/proc/start_vote,
-	/client/proc/reload_alienwhitelist //ChompADD
 ))
 
 GLOBAL_LIST_INIT(admin_verbs_event_manager, list(
@@ -277,8 +270,6 @@ GLOBAL_LIST_INIT(admin_verbs_event_manager, list(
 	/client/proc/cmd_admin_pm_context,      //right-click adminPM interface,
 	/client/proc/cmd_admin_pm_panel,        //admin-pm list,
 	/client/proc/cmd_admin_subtle_message,  //send an message to somebody as a 'voice in their head',
-	/client/proc/cmd_admin_check_player_logs,       //checks a player's attack logs,
-	/client/proc/cmd_admin_check_dialogue_logs,     //checks a player's dialogue logs,
 	/datum/admins/proc/access_news_network, //allows access of newscasters,
 	/client/proc/jumptocoord,                       //we ghost and jump to a coordinate,
 	/client/proc/Getmob,                            //teleports a mob to our location,
@@ -327,5 +318,4 @@ GLOBAL_LIST_INIT(admin_verbs_event_manager, list(
 	/client/proc/modify_event_collector,
 	/client/proc/induce_malfunction,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
-	/client/proc/reload_alienwhitelist //ChompADD
 ))

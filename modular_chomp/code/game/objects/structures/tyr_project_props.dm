@@ -805,3 +805,28 @@
 	darkness, 86hils82 o82hers repor82 horrific 84isions of flames, and flesh. Fur82her <BR>\
 	in84es82iga82ion is required."
 
+/obj/item/paper/tyr_notes/astral_a
+	name = "The Bright Future"
+	info = "We have come back from the brink of defeat! By some act of divinity, fate, or pure will we discovered devices far past the brink of civilization and begun to harvest secrets. <BR>\
+	We have begun to pave the road for the bright future, but our road ahead is a long and rocky one. We shall prevail like we always have.  <BR>\
+	Those harness resources for their own comfort and gains shall be cut down, and those that remain shall flourish."
+
+/obj/item/paper/tyr_notes/astral_b
+	name = "Natural Resources of Tyr"
+	info = "So this is draft 12 of this report, and I am giving up with being professional. This is just orange phoron. Discrediting it a bit, but it's a weird thing used for fuel, energy, and maybe other things. <BR>\
+	They made bioweapons that act as a farm. This has to be important for this fallen society. The building has also shifted and keeps on slowly shifting. Which is concerning but I am here for the natural bits. <BR>\
+	Which is nothing. There is some ore, but most of it seems manufactured. The ants are man made too. Super advanced slimes perhaps? Did NT make a time machine and go back to make orange phoron but blow themselves up?<BR>\
+	Anyway rambling aside, the energized agate as the crew has been calling it seems useful to make batteries. Scanned some guns from the nearby structures and was easy enough to make. Exporting it enmass"
+
+/obj/item/paper/tyr_notes/astral_c
+	name = "Encoded Siginals"
+	info = "Signals have been constantly emitting from the tyrian superstructure. Our scanners have a guestimate of at least 5000 meters deep but uncertain if signals from deeper within are not reaching. <BR>\
+	The base itself is falling apart slowly but surely. Unsure how wise it is to enter it, with how hostile the repair drones are it has a high lethality rate thus far. To the signals themselves, it seems to be composed of data.  <BR>\
+	I belive the base recognizes it's collapsing and trying to send out the information it has. We have seen mentions of an Astral Sea, Eon War, and End Times. The data is quite corrupted but from what we've scavanged, they <BR>\
+	seem to be aware of the rift, or bluespace. There are high doubts that the Astral Sea is anything new. We've seen countless wars, but the End Times is quite concerning. Speaking of a mass disappearance of stars. needs further study."
+
+/obj/item/paper/tyr_notes/astral_d
+	name = "Requesting Backup"
+	info = "We need serious back up if we are to stay here long term. Random folks keep stumbling upon the sivian side and blasting, unsure if they are bounty hunters, or maniacs but no SOL attention yet.<BR>\
+	The other day we had reports of masked and hooded men hovering over lava, although that may be disregarded. We found mold and mushrooms in some of our rations, and there was no physical sign of them.<BR>\
+	Although Rift Watchers may be stalking this location. The ants are also adapting to us and our gear. We need something, a simple mecha will do."

@@ -1,4 +1,4 @@
-var/datum/planet/borealis2/planet_borealis2 = null
+GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 //Dev note: This entire file handles weather and planetary effects. File name subject to change pending planet name finalization.
 /datum/time/borealis2
 	seconds_in_day = 3 HOURS
@@ -19,7 +19,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 
 /datum/planet/borealis2/New()
 	..()
-	planet_borealis2 = src
+	GLOB.planet_borealis2 = src
 	weather_holder = new /datum/weather_holder/borealis2(src)
 
 /datum/planet/borealis2/update_sun()

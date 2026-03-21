@@ -120,7 +120,7 @@
 
 
 /obj/machinery/telecomms/Initialize(mapload)
-	telecomms_list += src
+	GLOB.telecomms_list += src
 	..()
 	default_apply_parts()
 	return INITIALIZE_HINT_LATELOAD
@@ -139,7 +139,7 @@
 			for(var/obj/machinery/telecomms/T in orange(20, src))
 				add_link(T)
 		else
-			for(var/obj/machinery/telecomms/T in telecomms_list)
+			for(var/obj/machinery/telecomms/T in GLOB.telecomms_list)
 				add_link(T)
 	// CHOMPAdd: TComms humming
 	soundloop = new(list(src), FALSE)
@@ -157,8 +157,8 @@
 	// CHOMPAdd End
 
 /obj/machinery/telecomms/Destroy()
-	telecomms_list -= src
-	for(var/obj/machinery/telecomms/comm in telecomms_list)
+	GLOB.telecomms_list -= src
+	for(var/obj/machinery/telecomms/comm in GLOB.telecomms_list)
 		comm.links -= src
 	links = list()
 	QDEL_NULL(soundloop) // CHOMPAdd: Tcomms noises

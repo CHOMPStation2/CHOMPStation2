@@ -1,9 +1,3 @@
-#define MAT_WISP			"strange wisp"
-#define MAT_FROSCALE			"frost scale"
-#define MAT_CRYSCALE			"crystal scale"
-#define MAT_DREAMSCALE			"furred scale"
-#define MAT_SHELLCHITIN			"shell chitin"
-
 /datum/material/wisp
 	name = MAT_WISP
 	icon_colour = "#F13C00"

@@ -202,15 +202,11 @@
 	closet_appearance = /datum/decl/closet_appearance/secure_closet/security
 
 	starts_with = list(
-		/obj/item/clothing/under/rank/security/aces,
-		/obj/item/clothing/suit/storage/vest/aces,
 		/obj/item/clothing/suit/storage/vest/officer,
 		/obj/item/clothing/head/helmet,
 		/obj/item/clothing/mask/gas/sechailer/swat/officer, //CHOMP ADD
 		/obj/item/cartridge/security,
 		/obj/item/radio/headset/headset_sec,
-		/obj/item/radio/headset/alt/headset_sec,
-		/obj/item/radio/headset/earbud/headset_sec,
 		/obj/item/storage/belt/security,
 		/obj/item/flash,
 		/obj/item/reagent_containers/spray/pepper,
@@ -220,14 +216,10 @@
 		/obj/item/taperoll/police,
 		/obj/item/hailer,
 		/obj/item/flashlight/flare,
-		/obj/item/clothing/accessory/storage/black_vest,
-		/obj/item/clothing/head/soft/sec/corp,
 		/obj/item/clothing/under/rank/security/corp,
 		/obj/item/ammo_magazine/m45/rubber, //VOREStation Removal, //CHOMP Edit it has been restored
 		/obj/item/gun/energy/taser,
 		/obj/item/cell/device/weapon,
-		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
-		/obj/item/clothing/shoes/boots/winter/security,
 		/obj/item/holowarrant,				//CHOMPStation addition
 		/obj/item/retail_scanner/security,	//CHOMPStation addition
 		/obj/item/clothing/glasses/hud/security,	//CHOMPStation addition
