@@ -178,3 +178,14 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
 // CHOMPEnable End
+
+/datum/techweb_node/paradox_rift //CHOMPEdit Start
+	id = TECHWEB_NODE_PARADOX_RIFT
+	display_name = "Paradox Rift"
+	description = "A device that creates a localized paradox, causing unpredictable effects."
+	prereq_ids = list(TECHWEB_NODE_ANOMALY_HARVESTING, TECHWEB_NODE_BLUESPACE_TRAVEL, TECHWEB_NODE_TELEPORTER)
+	design_ids = list(
+		"paradoxrift",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
+	announce_channels = list(CHANNEL_SCIENCE) //CHOMPEdit End

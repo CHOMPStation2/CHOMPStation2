@@ -170,4 +170,5 @@
 #define TECHWEB_NODE_MECH_SHIELDS "mech_shields" //CHOMPEDIT Add - Adds Mech Shields
 #define TECHWEB_NODE_TYRGOODS "tyrian tech" //CHOMPEDIT Add - Adds Craftable Tyr Loot
 #define TECHWEB_NODE_PRECUSORTOOLS "precursor tools" //CHOMPEDIT Add - Adds craftable precursor items
+#define TECHWEB_NODE_PARADOX_RIFT "paradox rift" //CHOMPEDIT Add - Adds Paradox Rift.
 //CHOMPEDIT End - Chomp Specific techwebs.
