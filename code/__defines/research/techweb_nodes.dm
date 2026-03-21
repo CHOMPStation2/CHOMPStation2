@@ -159,9 +159,11 @@
 #define TECHWEB_NODE_XENOBIOLOGY "xenobiology"
 #define TECHWEB_NODE_TELEPORTER "teleporter"
 #define TECHWEB_NODE_CONFETTI "confetti"
-<<<<<<< HEAD
+#define TECHWEB_NODE_RSF "rapid_service_fab"
+#define TECHWEB_NODE_MATERIALSHEETS "material_sheets"
 
 //CHOMPEDIT Start - Chomp Specific techwebs.
+#define TECHWEB_NODE_CHOMP_AMMO "chomp_ammo" //CHOMPEDIT ADD - Adds Chomp unique ammo for autolathe
 #define TECHWEB_NODE_PHASE_WEAPONS "phase_weapons" //CHOMPEDIT ADD - Adds Phase Weaponry
 #define TECHWEB_NODE_METAMORPHOSIS_RAY "metamorphosis_ray" //CHOMPEDIT Add - Adds Caseless Rifle
 #define TECHWEB_NODE_MOD_ANOMALY_SUIT "mod_anomaly_suit" //CHOMPEDIT Add - Adds Anomaly RIGs
@@ -169,7 +171,3 @@
 #define TECHWEB_NODE_TYRGOODS "tyrian tech" //CHOMPEDIT Add - Adds Craftable Tyr Loot
 #define TECHWEB_NODE_PRECUSORTOOLS "precursor tools" //CHOMPEDIT Add - Adds craftable precursor items
 //CHOMPEDIT End - Chomp Specific techwebs.
-=======
-#define TECHWEB_NODE_RSF "rapid_service_fab"
-#define TECHWEB_NODE_MATERIALSHEETS "material_sheets"
->>>>>>> 0c8488b0ae (Move autolathe design datums to techweb datums (#19202))
