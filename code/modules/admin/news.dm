@@ -12,22 +12,9 @@
 ADMIN_VERB(modify_server_news, R_SERVER|R_EVENT, "Modify Public News", "Modify the public news message.", ADMIN_CATEGORY_SERVER_GAME)
 	var/savefile/F = new(NEWSFILE)
 	if(F)
-<<<<<<< HEAD
-		//ChompEDIT start - handle reads correctly
-		var/title
-		F["title"] >> title //This is done twice on purpose. For some reason BYOND misses the first read, if performed before the world starts
-		F["title"] >> title
-		var/body
-		F["body"] >> body
-		body = html2paper_markup(body)
-		//ChompEDIT end
-
-		var/new_title = tgui_input_text(src,"Write a good title for the news update.  Note: HTML is NOT supported.","Write News", title, MAX_MESSAGE_LEN)
-=======
 		var/title = F["title"]
 		var/body = html2paper_markup(F["body"])
 		var/new_title = tgui_input_text(user, "Write a good title for the news update. Note: HTML is NOT supported.", "Write News", title, MAX_MESSAGE_LEN)
->>>>>>> 89fb9871e0 (next set of admin verbs (#19260))
 		if(!new_title)
 			return
 		var/new_body = tgui_input_text(user, "Write the body of the news update here. Note: HTML is NOT supported, however paper markup is supported.  \n\

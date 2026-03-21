@@ -23,64 +23,10 @@ GLOBAL_LIST_INIT(admin_verbs_admin, list(
 	/client/proc/trader_ship, // Trader ship admin verb,
 	/client/proc/aooc,
 	/client/proc/change_security_level,
-<<<<<<< HEAD
-	/client/proc/view_chemical_reaction_logs,
-	/client/proc/makepAI,
-	/datum/admins/proc/paralyze_mob,
-	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
-=======
->>>>>>> 89fb9871e0 (next set of admin verbs (#19260))
+	/datum/admins/proc/quick_authentic_nif, //CHOMPStation addn verbs (#19260))
 	/datum/admins/proc/set_uplink,
 	/client/proc/delbook,
 	/client/proc/start_vote,
-<<<<<<< HEAD
-	/client/proc/hide_motion_tracker_feedback,
-	))
-
-GLOBAL_LIST_INIT(admin_verbs_spawn, list(
-	/datum/admins/proc/spawn_fruit,
-	/datum/admins/proc/spawn_custom_item,
-	/datum/admins/proc/check_custom_items,
-	/datum/admins/proc/spawn_plant,
-	/datum/admins/proc/spawn_atom,		//allows us to spawn instances,
-	/datum/admins/proc/spawn_mail,
-	/client/proc/spawn_character_mob,
-	/client/proc/spawn_chemdisp_cartridge,
-	/client/proc/map_template_load,
-	/client/proc/map_template_upload,
-	/client/proc/map_template_load_on_new_z,
-	/client/proc/eventkit_open_mob_spawner,
-	/client/proc/generic_structure,
-	/client/proc/generic_item,
-	/client/proc/create_gm_message,
-	/client/proc/remove_gm_message,
-	/client/proc/AdminCreateVirus,
-	/client/proc/ReleaseVirus,
-	/client/proc/spawn_reagent
-	))
-
-GLOBAL_LIST_INIT(admin_verbs_server, list(
-	/datum/admins/proc/capture_map,
-	/client/proc/Set_Holiday,
-	/client/proc/ToRban,
-	/datum/admins/proc/startnow,
-	/datum/admins/proc/delay,
-	/datum/admins/proc/toggleaban,
-	/datum/admins/proc/togglepersistence,
-	/client/proc/toggle_log_hrefs,
-	/datum/admins/proc/toggleAI,
-	/client/proc/cmd_debug_del_all,
-	/datum/admins/proc/adrev,
-	/datum/admins/proc/adspawn,
-	/datum/admins/proc/adjump,
-	/client/proc/check_customitem_activity,
-	/client/proc/modify_server_news,
-	/client/proc/recipe_dump,
-	/client/proc/panicbunker,
-	/client/proc/paranoia_logging,
-	/client/proc/ip_reputation
-=======
->>>>>>> 89fb9871e0 (next set of admin verbs (#19260))
 	))
 
 GLOBAL_LIST_INIT(admin_verbs_debug, list(
@@ -100,12 +46,7 @@ GLOBAL_LIST_INIT(admin_verbs_debug, list(
 	/client/proc/hide_most_verbs,		//hides all our hideable adminverbs,
 	/datum/admins/proc/set_uplink,
 	/client/proc/stop_sounds,
-<<<<<<< HEAD
-	/client/proc/spawn_reagent,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
-	/client/proc/reload_configuration //CHOMPAdd
-=======
->>>>>>> 89fb9871e0 (next set of admin verbs (#19260))
 	))
 
 //verbs which can be hidden - needs work
@@ -121,16 +62,7 @@ GLOBAL_LIST_INIT(admin_verbs_mod, list(
 	/client/proc/hide_verbs,			//hides all our adminverbs,
 	/client/proc/hide_most_verbs,		//hides all our hideable adminverbs,
 	/client/proc/aooc,
-<<<<<<< HEAD
-	/client/proc/cmd_admin_subtle_message, 	//send an message to somebody as a 'voice in their head',
-	/datum/admins/proc/paralyze_mob,
-	/client/proc/cmd_admin_direct_narrate,
-	/datum/admins/proc/sendFax,
-	/datum/admins/proc/view_persistent_data,
-	/client/proc/start_vote,
-=======
 	/client/proc/start_vote
->>>>>>> 89fb9871e0 (next set of admin verbs (#19260))
 ))
 
 GLOBAL_LIST_INIT(admin_verbs_event_manager, list(
@@ -163,11 +95,5 @@ GLOBAL_LIST_INIT(admin_verbs_event_manager, list(
 	/client/proc/start_vote,
 	/client/proc/add_hidden_area,
 	/client/proc/remove_hidden_area,
-<<<<<<< HEAD
-	/client/proc/hide_motion_tracker_feedback,
-	/client/proc/modify_event_collector,
-	/client/proc/induce_malfunction,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
-=======
->>>>>>> 89fb9871e0 (next set of admin verbs (#19260))
 ))

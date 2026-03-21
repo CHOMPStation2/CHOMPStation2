@@ -158,24 +158,14 @@ ADMIN_VERB(testZAScolors, R_DEBUG, "Check ZAS connections", "Displays ZAS connec
 
 	user.testZAScolors_zones += location.zone
 	for(var/turf/T in location.zone.contents)
-<<<<<<< HEAD
-		images += image(green, T,"zasdebug", PLANE_ADMIN2) // CHOMPEDIT
-		testZAScolors_turfs += T
-=======
-		user.images += image(green, T,"zasdebug", TURF_LAYER)
+		user.images += image(green, T,"zasdebug", PLANE_ADMIN2) // CHOMPEDIT
 		user.testZAScolors_turfs += T
->>>>>>> 89fb9871e0 (next set of admin verbs (#19260))
 	for(var/datum/connection_edge/zone/edge in location.zone.edges)
 		var/datum/zone/Z = edge.get_connected_zone(location.zone)
 		user.testZAScolors_zones += Z
 		for(var/turf/T in Z.contents)
-<<<<<<< HEAD
-			images += image(blue, T,"zasdebug",PLANE_ADMIN2) // CHOMPEDIT
-			testZAScolors_turfs += T
-=======
-			user.images += image(blue, T,"zasdebug",TURF_LAYER)
+			user.images += image(blue, T,"zasdebug",PLANE_ADMIN2) // CHOMPEDIT
 			user.testZAScolors_turfs += T
->>>>>>> 89fb9871e0 (next set of admin verbs (#19260))
 		for(var/datum/connection_edge/zone/z_edge in Z.edges)
 			var/datum/zone/connected = z_edge.get_connected_zone(Z)
 			if(connected in user.testZAScolors_zones)
@@ -187,13 +177,8 @@ ADMIN_VERB(testZAScolors, R_DEBUG, "Check ZAS connections", "Displays ZAS connec
 			continue
 		if(T in user.testZAScolors_turfs)
 			continue
-<<<<<<< HEAD
-		images += image(red, T, "zasdebug", PLANE_ADMIN2) // CHOMPEDIT
-		testZAScolors_turfs += T
-=======
-		user.images += image(red, T, "zasdebug", TURF_LAYER)
+		user.images += image(red, T, "zasdebug", PLANE_ADMIN2) // CHOMPEDIT
 		user.testZAScolors_turfs += T
->>>>>>> 89fb9871e0 (next set of admin verbs (#19260))
 
 ADMIN_VERB_VISIBILITY(testZAScolors_remove, ADMIN_VERB_VISIBLITY_FLAG_LOCALHOST)
 ADMIN_VERB(testZAScolors_remove, R_DEBUG, "Remove ZAS connection colors", "Clears displayed ZAS connections (Only use on a test server).", ADMIN_CATEGORY_MAPPING_ZAS)

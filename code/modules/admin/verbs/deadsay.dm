@@ -7,14 +7,7 @@ ADMIN_VERB(dsay, R_HOLDER, "Dsay", "Speak to the dead.", ADMIN_CATEGORY_CHAT, ms
 		to_chat(user, span_warning("You have deadchat muted."))
 		return
 
-<<<<<<< HEAD
-	if (src.handle_spam_prevention(msg,MUTE_DEADCHAT))
-		return
-
-	var/stafftype = uppertext(holder.rank_names())
-=======
 	var/stafftype = uppertext(user.holder.rank_names())
->>>>>>> 89fb9871e0 (next set of admin verbs (#19260))
 
 	msg = sanitize(msg)
 	log_admin("DSAY: [key_name(user)] : [msg]")
