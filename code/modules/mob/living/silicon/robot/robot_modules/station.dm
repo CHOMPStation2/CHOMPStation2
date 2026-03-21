@@ -665,11 +665,8 @@
 	src.modules += new /obj/item/storage/bag/sheetsnatcher/borg(src)
 	src.modules += new /obj/item/gripper/miner(src)
 	src.modules += new /obj/item/mining_scanner/robot(src)
-<<<<<<< HEAD
-	src.modules += new /obj/item/card/id/cargo/miner/borg(src)
 	src.modules += new /obj/item/gun/energy/robotic/phasegun(src) //CHOMPedit: Phasegun for regular mining cyborg.
 	src.modules += new /obj/item/vac_attachment(src) //CHOMPAdd
-=======
 
 	var/obj/item/card/id/robot_id = robot.idcard
 	robot_id.name = "\improper Synthetic Miner ID"
@@ -677,7 +674,6 @@
 	robot_id.reset_icon()
 	robot_id.forceMove(src)
 	src.modules += robot_id
->>>>>>> 418bc73c80 (whitelist updates (#19288))
 	src.modules += new /obj/item/mail_scanner(src)
 	src.modules += new /obj/item/storage/bag/mail/borg(src)
 	src.modules += new /obj/item/destTagger(src)

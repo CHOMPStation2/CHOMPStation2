@@ -377,19 +377,4 @@ ADMIN_VERB(open_whitelist_editor, R_ADMIN|R_SERVER, "Open Whitelist Editor", "Op
 	return FALSE
 
 #undef WHITELISTFILE
-<<<<<<< HEAD
-
-//ChompEDIT - admin reload buttons
-/client/proc/reload_alienwhitelist()
-	set category = "Server.Config"
-	set name = "Reload Alien whitelist"
-
-	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
-		return
-
-	load_alienwhitelist()
-	log_and_message_admins("reloaded the alien whitelist")
-//ChompEDIT End
-=======
 #undef VALID_KINDS
->>>>>>> 418bc73c80 (whitelist updates (#19288))

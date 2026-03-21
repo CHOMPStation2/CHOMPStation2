@@ -1,8 +1,1 @@
-<<<<<<< HEAD
-some~user - Species
-banana - Vox
-apple - Diona
-NotAce - All
-=======
 species - some~user - Species
->>>>>>> 418bc73c80 (whitelist updates (#19288))

@@ -87,7 +87,6 @@
 	src.modules += new /obj/item/dogborg/sleeper/compactor/generic(src)
 	src.emag += new /obj/item/dogborg/pounce(src)
 
-<<<<<<< HEAD
 	//CHOMPEdit - "Giving the gravekeeper drone more modules to allow it to actually do it's job."
 	src.modules += new /obj/item/tool/wirecutters/cyborg(src) //Gotta clear those pesky landmines somehow. Also allows for deconstruction of things in the way!
 	src.modules += new /obj/item/multitool(src)
@@ -165,11 +164,10 @@
 	var/obj/item/stack/material/cyborg/plastic/PL = new (src)
 	PL.synths = list(plastic)
 	src.modules += PL //CHOMEdit End
-=======
+
 /obj/item/robot_module/robot/malf/gravekeeper/handle_special_unlocks(mob/living/silicon/robot/owner_robot)
 	if(!owner_robot.emag_items)
 		owner_robot.scramble_hardware(10)
 	if (owner_robot.churn_count == 5)
 		emag += new /obj/item/self_repair_system/advanced(src)
 		owner_robot.hud_used.update_robot_modules_display()
->>>>>>> 418bc73c80 (whitelist updates (#19288))
