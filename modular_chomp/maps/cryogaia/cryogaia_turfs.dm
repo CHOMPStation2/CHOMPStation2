@@ -3,13 +3,6 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/open)
 /turf/simulated/open/cryogaia
 	CRYOGAIA_SET_ATMOS
 
-/*	Handled by parent now
-/turf/simulated/open/cryogaia/Initialize(mapload)
-	. = ..()
-	if(is_outdoors())
-		SSplanets.addTurf(src)
-*/
-
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor)
 
 /turf/simulated/floor/cryogaia_indoors
@@ -74,36 +67,6 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/grass/sif)
 /turf/simulated/floor/tiled/old_tile/gray/cryogaia
 	CRYOGAIA_SET_ATMOS
 
-// Overriding these for the sake of submaps that use them on other planets.
-// This means that mining on tether base and space is oxygen-generating, but solars and mining should use the virgo3b subtype
-/turf/simulated/mineral
-	oxygen = MOLES_O2STANDARD
-	nitrogen = MOLES_N2STANDARD
-	temperature	= T20C
-/turf/simulated/floor/outdoors
-	oxygen = MOLES_O2STANDARD
-	nitrogen = MOLES_N2STANDARD
-	temperature	= T20C
-/turf/simulated/floor/water
-	oxygen = MOLES_O2STANDARD
-	nitrogen = MOLES_N2STANDARD
-	temperature	= T20C
-
-/turf/simulated/floor/indoorrocks //Not outdoor rocks to prevent weather fuckery
-	name = "rocks"
-	desc = "Hard as a rock."
-	icon = 'icons/turf/outdoors.dmi'
-	icon_state = "rock"
-	edge_blending_priority = 1
-
-/turf/simulated/mineral/vacuum
-	oxygen = 0
-	nitrogen = 0
-	temperature	= TCMB
-/turf/simulated/mineral/floor/vacuum
-	oxygen = 0
-	nitrogen = 0
-	temperature	= TCMB
 /turf/simulated/floor/shuttle/black
 	icon = 'icons/turf/shuttle_white.dmi'
 	icon_state = "floor_black"
@@ -200,72 +163,11 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 		UpdateMineral()
 	update_icon()
 
-//Unsimulated
-/turf/unsimulated/wall/planetary/cryogaia
-	name = "facility wall"
-	desc = "An eight-meter tall carbyne wall. For when the wildlife on your planet is mostly militant megacorps."
-	alpha = 0xFF
-	CRYOGAIA_SET_ATMOS
 
+//Unsimulated
 /turf/unsimulated/mineral/cryogaia
 	blocks_air = TRUE
 
-/turf/unsimulated/floor/steel
-	icon = 'icons/turf/flooring/tiles_vr.dmi'
-	icon_state = "steel"
-
-
-/turf/unsimulated/wall
-	blocks_air = 1
-
-/turf/unsimulated/wall/planetary
-	blocks_air = 0
-
-// Some turfs to make floors look better in centcom tram station.
-
-/turf/unsimulated/floor/techfloor_grid
-	name = "floor"
-	icon = 'icons/turf/flooring/techfloor.dmi'
-	icon_state = "techfloor_grid"
-
-/turf/unsimulated/floor/maglev
-	name = "maglev track"
-	desc = "Magnetic levitation tram tracks. Caution! Electrified!"
-	icon = 'icons/turf/flooring/maglevs.dmi'
-	icon_state = "maglevup"
-
-/turf/unsimulated/wall/transit
-	icon = 'icons/turf/transit_vr.dmi'
-
-/turf/unsimulated/floor/transit
-	icon = 'icons/turf/transit_vr.dmi'
-
-/obj/effect/floor_decal/transit/orange
-	icon = 'icons/turf/transit_vr.dmi'
-	icon_state = "transit_techfloororange_edges"
-
-/obj/effect/transit/light
-	icon = 'icons/turf/transit_128.dmi'
-	icon_state = "tube1-2"
-
-// Bluespace jump turf!
-/turf/space/bluespace
-	name = "bluespace"
-	icon = 'icons/turf/space_vr.dmi'
-	icon_state = "bluespace"
-/turf/space/bluespace/Initialize()
-	..()
-	icon = 'icons/turf/space_vr.dmi'
-	icon_state = "bluespace"
-
-// Desert jump turf!
-/turf/space/sandyscroll
-	name = "sand transit"
-	icon = 'icons/turf/transit_vr.dmi'
-	icon_state = "desert_ns"
-/turf/space/sandyscroll/New()
-	..()
-	icon_state = "desert_ns"
 
 //Sky stuff!
 // A simple turf to fake the appearance of flying.
@@ -285,6 +187,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 /turf/simulated/sky/borealis2/west
 	dir = WEST
 
+
 /turf/simulated/sky/borealis2/moving
 	icon_state = "sky_fast"
 /turf/simulated/sky/borealis2/moving/north
@@ -296,11 +199,11 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 /turf/simulated/sky/borealis2/moving/west
 	dir = WEST
 
+
 /turf/simulated/sky/snowscroll
 	name = "snow transit"
 	icon = 'modular_chomp/icons/turf/transit_yw.dmi'
 	icon_state = "snow_ns"
-
 
 /turf/simulated/sky/snowscroll/Initialize()
 	. = ..()
