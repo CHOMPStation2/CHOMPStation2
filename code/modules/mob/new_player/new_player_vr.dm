@@ -32,7 +32,7 @@
 		to_chat(src,span_warning("You are not allowed to spawn in as this species."))
 
 	//CHOMPEdit Begin - Check species job bans... (Only used for shadekin)
-	if(J.is_species_banned(client?.prefs?.species, client?.prefs?.organ_data["brain"]))
+	if(J.is_species_banned(client?.prefs?.read_preference(/datum/preference/choiced/species), client?.prefs?.read_preference(/datum/preference/organ_data)?[O_BRAIN]))
 		pass = FALSE
 		to_chat(src,span_warning("Your species is not permitted to take this role or job."))
 	//CHOMPEdit End
@@ -82,10 +82,10 @@
 	if(client?.prefs?.neu_traits)
 		for(var/T in client.prefs.neu_traits)
 			var/datum/trait/instance = GLOB.all_traits[T]
-			if(client.prefs.species in instance.banned_species)
+			if(client.prefs.read_preference(/datum/preference/choiced/species))
 				pass = FALSE
 				to_chat(src,span_warning("One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again."))
-			else if(LAZYLEN(instance.allowed_species) && !(client.prefs.species in instance.allowed_species)) //We use else if here, so as to prevent getting two errors for one trait.
+			else if(LAZYLEN(instance.allowed_species) && !(client.prefs.read_preference(/datum/preference/choiced/species) in instance.allowed_species)) //We use else if here, so as to prevent getting two errors for one trait.
 				pass = FALSE
 				to_chat(src,span_warning("One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again."))
 	//CHOMP Addition End

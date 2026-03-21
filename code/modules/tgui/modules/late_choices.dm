@@ -81,7 +81,7 @@
 				continue
 
 			//CHOMPEdit Begin - Check species job bans... (Only used for shadekin)
-			if(job.is_species_banned(user.client.prefs.species, user.client.prefs.organ_data["brain"]))
+			if(job.is_species_banned(user.client.prefs.read_preference(/datum/preference/choiced/species), user.client.prefs.read_preference(/datum/preference/organ_data)?[O_BRAIN]))
 				continue
 			//CHOMPEdit End
 
