@@ -17,9 +17,9 @@
 /datum/shuttle/autodock/ferry/residential/perform_shuttle_move()
 	..()
 	if (current_location == landmark_station)
-		command_announcement.Announce("The Residential Shuttle has docked at your facility.", announcer)
+		GLOB.command_announcement.Announce("The Residential Shuttle has docked at your facility.", announcer)
 	if (current_location == landmark_offsite)
-		command_announcement.Announce("The Residential Shuttle has docked at [using_map.dock_name].", announcer)
+		GLOB.command_announcement.Announce("The Residential Shuttle has docked at [using_map.dock_name].", announcer)
 
 /obj/effect/shuttle_landmark/premade/residential/residences
 	name = "NCS Serenity Residential"
