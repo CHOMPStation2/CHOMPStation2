@@ -82,7 +82,7 @@
 	if(client?.prefs?.neu_traits)
 		for(var/T in client.prefs.neu_traits)
 			var/datum/trait/instance = GLOB.all_traits[T]
-			if(client.prefs.read_preference(/datum/preference/choiced/species))
+			if(client.prefs.read_preference(/datum/preference/choiced/species) in instance.banned_species)
 				pass = FALSE
 				to_chat(src,span_warning("One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again."))
 			else if(LAZYLEN(instance.allowed_species) && !(client.prefs.read_preference(/datum/preference/choiced/species) in instance.allowed_species)) //We use else if here, so as to prevent getting two errors for one trait.
