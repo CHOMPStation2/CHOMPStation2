@@ -83,3 +83,4 @@
 	origin_tech = list(TECH_DATA = 8, TECH_ARCANE = 3)
 	req_components = list(
 							/obj/item/stack/cable_coil = 30)
+	hidden = TRUE // POI machine, not station made

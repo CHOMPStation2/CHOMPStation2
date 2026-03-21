@@ -216,6 +216,9 @@
 		// "zipties",
 		// "seclite",
 		// "electropack",
+		//CHOMPEnable Start
+		"bodycam_monitor",
+		//CHOMPEnable End
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_SECURITY)
