@@ -151,7 +151,7 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/cryogaia/outpost/tower/west)
 "av" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -361,7 +361,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
 "aY" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -1595,7 +1595,7 @@
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "dI" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "Upper_Level_SE_Exterior";
 	locked = 1
@@ -3251,7 +3251,7 @@
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
 "hI" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -3829,7 +3829,7 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/pathfinder_office)
 "iL" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -3923,7 +3923,7 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "iV" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
@@ -6165,7 +6165,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/east)
 "nF" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "Outpost_solar_Exterior"
 	},
@@ -7197,7 +7197,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "sj" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "Outpost_NE_Exterior"
 	},
@@ -7918,7 +7918,7 @@
 	master_tag = "Monastary_Upper_SE_Exit";
 	pixel_y = 24
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "Monastary_Upper_SE_Exit_Exterior";
 	locked = 1
@@ -8411,7 +8411,7 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
 "yo" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -11226,7 +11226,7 @@
 	master_tag = "Monastary_Upper_NW_Exit";
 	pixel_y = 24
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "Monastary_Upper_NW_Exit_Exterior";
 	locked = 1
@@ -12441,13 +12441,13 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "Su" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/cryogaia/outpost/checkpoint)
 "Sx" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -13542,7 +13542,7 @@
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "XP" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,

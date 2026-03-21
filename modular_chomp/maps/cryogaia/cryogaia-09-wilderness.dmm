@@ -171,7 +171,7 @@
 /turf/simulated/floor/plating,
 /area/borealis2/outdoors/exterior/traderpad/interior)
 "ni" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_access = newlist()
 	},
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
@@ -632,7 +632,7 @@
 /area/borealis2/outdoors/exterior/traderpad/interior)
 "YJ" = (
 /obj/effect/floor_decal/rust/color_rustedfull,
-/obj/machinery/door/airlock/glass_external/freezable,
+/obj/machinery/door/airlock/glass_external,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1/interior)
 "Zp" = (

@@ -778,7 +778,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
 "aoY" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -3349,7 +3349,7 @@
 "bpk" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "Engineering_exit_exterior";
 	locked = 1
@@ -5850,7 +5850,7 @@
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
 "cpq" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -7299,7 +7299,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -15113,7 +15113,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/rnd/lab)
 "gbj" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = "1379";
 	id_tag = "monastery_exit_exterior"
 	},
@@ -18857,7 +18857,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_airlock)
 "hzJ" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "eng_starboard_exterior";
 	locked = 1;
@@ -19379,7 +19379,7 @@
 /turf/simulated/floor/wood,
 /area/quartermaster)
 "hLz" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -20173,7 +20173,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "ibh" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -27770,7 +27770,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "llc" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "eng_starboard_exterior";
 	locked = 1;
@@ -28049,7 +28049,7 @@
 /area/medical/medbay_primary_storage)
 "lqI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "Security_exit_exterior";
 	locked = 1
@@ -28179,7 +28179,7 @@
 /obj/structure/fans/tiny{
 	name = "Thermal Regulator Vent"
 	},
-/obj/machinery/door/airlock/glass_external/freezable,
+/obj/machinery/door/airlock/glass_external,
 /turf/simulated/floor/plating/snow/plating,
 /area/cryogaia/outpost/bonfire)
 "luU" = (
@@ -28713,7 +28713,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_b)
 "lEZ" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -34429,7 +34429,7 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/security/armoury)
 "nIT" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -35299,7 +35299,7 @@
 /area/cryogaia/outpost/tower/west)
 "oaI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "Arrivals_exit_exterior";
 	locked = 1
@@ -35390,7 +35390,7 @@
 /turf/simulated/floor/wood,
 /area/chapel/monastery)
 "ocv" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -36292,7 +36292,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/rdoffice)
 "ovN" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "Mining_exit_exterior";
 	locked = 1;
@@ -38839,7 +38839,7 @@
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
 "ptZ" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "locker_exit_exterior";
 	locked = 1
@@ -43256,7 +43256,7 @@
 	pixel_y = -26;
 	req_one_access = newlist()
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "SecurityPost_Exit_Exterior";
 	locked = 1;
@@ -43323,7 +43323,7 @@
 	name = "Emergency Blast Shutters";
 	opacity = 0
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "Escape_exit_south_exterior";
 	locked = 1
@@ -46635,7 +46635,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/workshop)
 "sDE" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -55429,7 +55429,7 @@
 	name = "Emergency Blast Shutters";
 	opacity = 0
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "Escape_exit_north_exterior";
 	locked = 1
@@ -58257,7 +58257,7 @@
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
 "xyy" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -58687,7 +58687,7 @@
 "xIW" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	id_tag = "Engineering_exit_exterior";
 	locked = 1
