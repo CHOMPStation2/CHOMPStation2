@@ -1,50 +1,12 @@
-//PORTERD OVER FROM TETHER.
-//Note: Clear out all the things we won't ever be using from this file at some point.
-
-/obj/structure/window/reinforced/polarized/full
-	dir = SOUTHWEST
-	icon_state = "fwindow"
-	maxhealth = 80
-
 //Special map objects
 /obj/effect/landmark/map_data/borealis2
     height = 3 //Height marker. Provides the map with knowledge of how many z levels connecting below.
 
-
 /datum/turbolift
 	music = list('sound/music/elevator.ogg')  // Woo elevator music!
 
-/obj/machinery/atmospherics/unary/vent_pump/positive
-	use_power = 1
-	icon_state = "map_vent_out"
-	external_pressure_bound = ONE_ATMOSPHERE * 1.1
-
-
-
 /obj/effect/step_trigger/teleporter/planetary_fall/borealis2/find_planet()
 	planet = planet_borealis2
-
-
-// Invisible object that blocks z transfer to/from its turf and the turf above.
-/obj/effect/ceiling
-	invisibility = 101 // nope cant see this
-	anchored = 1
-	can_atmos_pass = ATMOS_PASS_PROC
-
-/obj/effect/ceiling/CanZASPass(turf/T, is_zone)
-	if(T == GetAbove(src))
-		return FALSE // Keep your air up there, buddy
-	return TRUE
-
-/obj/effect/ceiling/CanPass(atom/movable/mover, turf/target)
-	if(target == GetAbove(src))
-		return FALSE
-	return TRUE
-
-/obj/effect/ceiling/Uncross(atom/movable/mover, turf/target)
-	if(target == GetAbove(src))
-		return FALSE
-	return TRUE
 
 
 
