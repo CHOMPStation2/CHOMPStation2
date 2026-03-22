@@ -603,6 +603,7 @@
 /datum/config_entry/str_list/language_prefixes
 	default = list(",", "#", "-")
 
+<<<<<<< HEAD
 // 0:1 subtraction:division for computing effective radiation on a turf
 /// 0 / RAD_RESIST_CALC_DIV = Each turf absorbs some fraction of the working radiation level
 /// 1 / RAD_RESIST_CALC_SUB = Each turf absorbs a fixed amount of radiation
@@ -637,6 +638,8 @@
 	default = 0.35
 	integer = FALSE
 
+=======
+>>>>>>> cbc4151bfb (Radiation Refactor (#19270))
 /// If true, submaps loaded automatically can be rotated.
 /datum/config_entry/flag/random_submap_orientation
 

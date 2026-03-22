@@ -46,6 +46,9 @@
 	var/wiki_flag = 0 // Bitflags for secret/food/drink reagent sorting
 	var/supply_conversion_value = null
 	var/industrial_use = null // unique description for export off station
+	/// A list of traits to apply while the reagent is being metabolized.
+	var/list/metabolized_traits
+
 
 	var/coolant_modifier = -0.5 // this is multiplied by the volume of the reagent. Most things are not good coolant. EX: Water is 1, coolant is 2. -1 would be a bad reagent for cooling.
 
@@ -187,7 +190,12 @@
 			affect_ingest(M, alien, removed * ingest_abs_mult)
 		if(CHEM_TOUCH)
 			affect_touch(M, alien, removed)
+<<<<<<< HEAD
 	if(overdose && (volume > overdose * M?.species?.chemOD_threshold) && (active_metab.metabolism_class != CHEM_TOUCH || can_overdose_touch)) // CHOMPEdit
+=======
+	on_mob_metabolize(M, location)
+	if(overdose && (volume > overdose * M?.species.chemOD_threshold) && (active_metab.metabolism_class != CHEM_TOUCH || can_overdose_touch))
+>>>>>>> cbc4151bfb (Radiation Refactor (#19270))
 		overdose(M, alien, removed)
 	if(M.species?.allergens & allergen_type)	//uhoh, we can't handle this! //CHOMPEdit
 		M.add_chemical_effect(CE_ALLERGEN, allergen_factor * removed)
@@ -243,6 +251,7 @@
 /datum/reagent/proc/on_update(atom/A)
 	return
 
+<<<<<<< HEAD
 //YW edit start
 // Called when reagents are removed from a container, most likely after metabolizing in a mob
 /datum/reagent/proc/on_remove(var/atom/A)
@@ -256,3 +265,15 @@
 /datum/reagent/proc/on_transfer(var/volume)
 	return 1
 //YW edit end
+=======
+/datum/reagent/proc/on_mob_metabolize(mob/living/affected_mob, datum/reagents/metabolism/location)
+	SHOULD_CALL_PARENT(TRUE)
+	if(metabolized_traits)
+		affected_mob.add_traits(metabolized_traits, "metabolize_location:[location]reagent:[type]")
+
+/// Called when this reagent stops being metabolized (due to running out)
+/// Has the args 'affected_mob' and 'location' which allows us to remove any traits that is only being added by that reagent holder location. I.e stomach, bloodstream, dermal, etc.
+/datum/reagent/proc/on_mob_end_metabolize(mob/living/affected_mob, datum/reagents/location)
+	SHOULD_CALL_PARENT(TRUE)
+	REMOVE_TRAITS_IN(affected_mob, "metabolize_location:[location]reagent:[type]")
+>>>>>>> cbc4151bfb (Radiation Refactor (#19270))
