@@ -987,9 +987,7 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
 "ca" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/monitoring)
 "cb" = (
 /obj/structure/disposalpipe/segment{
@@ -2054,9 +2052,7 @@
 /turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "dY" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/reactor_smes)
 "dZ" = (
 /obj/machinery/door/firedoor/border_only,
@@ -6241,9 +6237,7 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_one)
 "lW" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/atmos_room)
 "lX" = (
 /obj/structure/cable/cyan{
@@ -11922,9 +11916,7 @@
 /area/surface/outpost/main/corridor/left_lower)
 "wY" = (
 /obj/structure/sign/electricshock,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/reactor_smes)
 "wZ" = (
 /obj/effect/floor_decal/borderfloor{
@@ -12999,9 +12991,7 @@
 /area/surface/outpost/security/maa)
 "yX" = (
 /obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/monitoring)
 "yY" = (
 /turf/simulated/floor/tiled,
@@ -14674,9 +14664,7 @@
 /area/surface/outpost/main/corridor/left_lower)
 "Cu" = (
 /obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/auxiliary_storage)
 "Cv" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -17294,9 +17282,7 @@
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "Ib" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/storage)
 "Ic" = (
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -18204,9 +18190,7 @@
 /area/surface/outpost/main/corridor)
 "JK" = (
 /obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/reactor_smes)
 "JL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -21753,9 +21737,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/main/corridor/right_upper)
 "QP" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/auxiliary_storage)
 "QQ" = (
 /obj/effect/floor_decal/borderfloor{
@@ -22740,9 +22722,7 @@
 /area/surface/outpost/main/airlock/right_three)
 "SO" = (
 /obj/structure/sign/electricshock,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/monitoring)
 "SP" = (
 /obj/machinery/door/firedoor/border_only,

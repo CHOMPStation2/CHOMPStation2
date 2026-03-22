@@ -5577,9 +5577,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard/simulated_caves)
 "gmA" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/maintenance/firstdeck/foreport/simulated_caves)
 "gnp" = (
 /obj/effect/floor_decal/rust,
@@ -7725,9 +7723,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/simulated_caves)
 "iKm" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/maintenance/firstdeck/centralport/simulated_caves)
 "iKR" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -11122,9 +11118,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport/simulated_caves)
 "oeN" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/atmos)
 "ofj" = (
 /obj/effect/floor_decal/corner/blue/diagonal{
@@ -18017,9 +18011,7 @@
 	dir = 4;
 	pixel_y = null
 	},
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/atmos)
 "xCj" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{

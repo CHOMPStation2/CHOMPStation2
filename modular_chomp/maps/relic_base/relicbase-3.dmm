@@ -15411,9 +15411,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway/engineer_hallway)
 "gFJ" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/engine_eva)
 "gFN" = (
 /obj/structure/disposalpipe/segment{
@@ -17239,9 +17237,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/cafeteria)
 "hus" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/ai_monitored/storage/eva)
 "huG" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -19529,9 +19525,7 @@
 /turf/simulated/floor/plating,
 /area/engineering/engine_eva)
 "isr" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/storage/primary)
 "isN" = (
 /turf/simulated/mineral/cave,
@@ -51971,9 +51965,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "wpz" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outside/plains/outpost/outdoors_area)
 "wqg" = (
 /obj/structure/window/reinforced{
@@ -56704,9 +56696,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/engine_eva)
 "yck" = (
 /obj/structure/cable/heavyduty{

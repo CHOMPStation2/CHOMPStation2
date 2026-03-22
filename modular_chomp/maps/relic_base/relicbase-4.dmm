@@ -4320,9 +4320,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_10/upstairs)
 "eck" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/tcommsat/chamber)
 "ecu" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -6633,9 +6631,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/storage)
 "ggm" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/quartermaster/storage)
 "ggn" = (
 /obj/machinery/door/airlock/command{
@@ -8482,9 +8478,7 @@
 /area/crew_quarters/heads/sc/sd)
 "hSc" = (
 /obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/engine_monitoring)
 "hSv" = (
 /obj/structure/railing{
@@ -12574,9 +12568,7 @@
 /obj/structure/sign/directions/stairs_up{
 	dir = 8
 	},
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/atmos/storage)
 "lxn" = (
 /turf/simulated/wall/r_wall,
@@ -15102,9 +15094,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "nLj" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/atmos/storage)
 "nLq" = (
 /obj/structure/railing{
@@ -16272,9 +16262,7 @@
 /area/quartermaster/storage)
 "oLX" = (
 /obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/engine_room)
 "oMe" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -19238,9 +19226,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/outpost/main/dorms/dorm_7/upstairs)
 "qRx" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/tcommsat/entrance)
 "qRI" = (
 /obj/structure/simple_door/wood,
@@ -24905,9 +24891,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/outpost/main/dorms/dorm_1/upstairs)
 "vOl" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/quartermaster/office)
 "vOy" = (
 /obj/machinery/door/airlock/hatch{
@@ -25468,9 +25452,7 @@
 	},
 /area/surface/outpost/wall)
 "wsD" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/tcommsat/computer)
 "wsL" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -26766,9 +26748,7 @@
 	},
 /area/surface/outside/plains/outpost)
 "xGn" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/quartermaster/warehouse)
 "xGs" = (
 /obj/machinery/shipsensors,
