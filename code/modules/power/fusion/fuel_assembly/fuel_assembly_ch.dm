@@ -74,7 +74,7 @@
 
 	H.visible_message(span_danger("\The [src] flashes as it scorches [H]'s hand!"))
 
-	if(hand)
+	if(H.hand)
 		H.apply_damage(7, BURN, "l_hand", used_weapon="Blitz Rod")
 	else
 		H.apply_damage(7, BURN, "r_hand", used_weapon="Blitz Rod")
