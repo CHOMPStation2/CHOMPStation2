@@ -986,9 +986,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
-"ca" = (
-/turf/simulated/wall/r_wall,
-/area/surface/outpost/engineering/monitoring)
 "cb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -6236,9 +6233,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_one)
-"lW" = (
-/turf/simulated/wall/r_wall,
-/area/surface/outpost/engineering/atmos_room)
 "lX" = (
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
@@ -12989,10 +12983,6 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/surface/outpost/security/maa)
-"yX" = (
-/obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall,
-/area/surface/outpost/engineering/monitoring)
 "yY" = (
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
@@ -18188,10 +18178,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
-"JK" = (
-/obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall,
-/area/surface/outpost/engineering/reactor_smes)
 "JL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -46176,18 +46162,18 @@ QP
 dY
 dY
 dY
-JK
+nT
 dY
 dY
 dY
 dY
 dY
 dY
-JK
+nT
 dY
 MT
 SO
-ca
+oD
 ha
 gu
 ha
@@ -46445,7 +46431,7 @@ lC
 Rq
 iE
 Py
-ca
+oD
 ha
 ha
 ha
@@ -46703,7 +46689,7 @@ lC
 Rv
 oP
 rf
-ca
+oD
 oD
 ZK
 ZK
@@ -46947,7 +46933,7 @@ lg
 Ud
 aI
 nf
-JK
+nT
 PV
 UD
 Cl
@@ -46957,11 +46943,11 @@ sV
 tL
 la
 TV
-JK
+nT
 Va
 kw
 jM
-ca
+oD
 TN
 ZK
 mY
@@ -47469,7 +47455,7 @@ oU
 NW
 oU
 iT
-JK
+nT
 pQ
 aX
 Xm
@@ -47477,7 +47463,7 @@ lC
 Vt
 gE
 Ae
-yX
+Lw
 Ce
 NY
 ZK
@@ -47726,16 +47712,16 @@ dY
 ev
 UC
 ev
-JK
+nT
 dY
 iz
 mf
 CM
 dY
-ca
+oD
 Lq
-ca
-ca
+oD
+oD
 rQ
 TF
 GO
@@ -48247,10 +48233,10 @@ wY
 dY
 qw
 dY
-JK
+nT
 fu
 qk
-yX
+Lw
 cg
 yD
 Bt
@@ -48506,9 +48492,9 @@ GI
 iH
 DW
 dY
-ca
-ca
-ca
+oD
+oD
+oD
 WI
 iU
 YV
@@ -49276,7 +49262,7 @@ Ib
 eV
 Qf
 vH
-lW
+KP
 DB
 yy
 yy
@@ -49534,7 +49520,7 @@ Ib
 Hf
 WB
 pm
-lW
+KP
 DB
 yy
 EB
@@ -49788,11 +49774,11 @@ Pw
 iG
 QY
 zj
-lW
-lW
+KP
+KP
 Kr
-lW
-lW
+KP
+KP
 DB
 yy
 EB

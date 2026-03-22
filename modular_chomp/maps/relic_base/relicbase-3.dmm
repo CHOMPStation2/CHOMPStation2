@@ -15410,9 +15410,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway/engineer_hallway)
-"gFJ" = (
-/turf/simulated/wall/r_wall,
-/area/engineering/engine_eva)
 "gFN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -51964,9 +51961,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
-"wpz" = (
-/turf/simulated/wall/r_wall,
-/area/surface/outside/plains/outpost/outdoors_area)
 "wqg" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -74537,8 +74531,8 @@ rLe
 sct
 rLe
 kGW
-wpz
-wpz
+lfc
+lfc
 kGW
 kGW
 kYl
@@ -74794,7 +74788,7 @@ rLe
 sct
 rLe
 hCq
-wpz
+lfc
 isr
 itb
 itb
@@ -75576,17 +75570,17 @@ lWy
 itv
 tgb
 ncJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
+pCB
+pCB
+pCB
+pCB
+pCB
+pCB
+pCB
+pCB
+pCB
+pCB
+pCB
 ixC
 yci
 vtd
@@ -77107,7 +77101,7 @@ rLe
 sct
 rLe
 kGW
-wpz
+lfc
 lfc
 shq
 idG
