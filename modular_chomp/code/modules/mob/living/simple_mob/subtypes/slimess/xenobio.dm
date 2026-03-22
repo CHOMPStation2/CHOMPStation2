@@ -437,7 +437,14 @@
 	playsound(holder.my_atom, 'sound/effects/phasein.ogg', 75, 1)
 	holder.my_atom.visible_message(span_danger("\The [holder.my_atom] begins to vibrate violently!"))
 	spawn(5 SECONDS)
-		SSradiation.flat_radiate(src, 30, 7, TRUE)
+		if(!QDELETED(holder.my_atom))
+			radiation_pulse(
+				src,
+				max_range = 7,
+				threshold = RAD_MEDIUM_INSULATION,
+				chance = 100,
+				strength = 30
+			)
 	..()
 
 

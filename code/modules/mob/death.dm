@@ -143,8 +143,5 @@
 	if(SSticker && SSticker.mode)
 		SSticker.mode.check_win()
 
-	if(reagents)
-		for(var/datum/reagent/R in reagents.reagent_list)
-			R.on_mob_death(src)
 
 	return 1

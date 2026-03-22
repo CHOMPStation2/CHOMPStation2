@@ -194,7 +194,13 @@
 	..()
 
 /mob/living/simple_mob/vore/spacecritter/radcrab/proc/irradiate()
-	SSradiation.radiate(src, rads)
+	radiation_pulse(
+		src,
+		max_range = 3,
+		threshold = RAD_MEDIUM_INSULATION,
+		chance = 100,
+		strength = rads
+	)
 
 /mob/living/simple_mob/vore/spacecritter/radcrab/supermattercrab
 	size_multiplier = 1.5

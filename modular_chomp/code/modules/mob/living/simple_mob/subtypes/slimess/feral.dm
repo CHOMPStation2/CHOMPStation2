@@ -249,7 +249,13 @@
 	..()
 
 /mob/living/simple_mob/slime/feral/green/proc/irradiate()
-	SSradiation.radiate(src, rads)
+	radiation_pulse(
+		src,
+		max_range = 3,
+		threshold = RAD_MEDIUM_INSULATION,
+		chance = URANIUM_IRRADIATION_CHANCE * 3,
+		strength = rads
+	)
 
 /mob/living/simple_mob/slime/feral/pink
 	desc = "This slime has regenerative properties."

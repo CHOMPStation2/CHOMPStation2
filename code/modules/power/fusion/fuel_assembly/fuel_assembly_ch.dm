@@ -18,7 +18,13 @@
 	I.color = "#FCE300"
 	overlays += list(I, image(icon, "fuel_assembly_bracket"),image(icon,"glow"))
 	rod_quantities[fuel_type] = initial_amount
-	SSradiation.flat_radiate(src,20,5,respect_maint = FALSE)
+	radiation_pulse(
+		source = src,
+		max_range = 5,
+		threshold = RAD_EXTREME_INSULATION,
+		chance = DEFAULT_RADIATION_CHANCE,
+		strength = 20
+	)
 	set_light(3, 3, "#FCE300")
 
 /obj/item/fuel_assembly/blitz/throw_impact(atom/hit_atom)
@@ -43,10 +49,17 @@
 /obj/item/fuel_assembly/blitz/unshielded/attack_hand(mob/user)
 	. = ..()
 
-	SSradiation.radiate(src, 5)
 	var/mob/living/M = user
-	if(!istype(M))
+	if(!isliving(M))
 		return
+
+	radiation_pulse(
+		source = src,
+		max_range = 2,
+		threshold = RAD_MEDIUM_INSULATION,
+		chance = DEFAULT_RADIATION_CHANCE,
+		strength = 5
+	)
 
 	var/burn_user = TRUE
 	if(istype(M, /mob/living/carbon/human))
