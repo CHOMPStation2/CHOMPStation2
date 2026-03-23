@@ -60,22 +60,21 @@
 		D.keywords.Add(D.name)
 
 		// Most ingredient names will be capitalized to draw the reader's eye.
-		var/text = R.appliance
-		switch(text) // These are binary values, so we'll use the defines to convert to a string
-			if(MICROWAVE)
-				text = "Microwave"
-			if(FRYER)
-				text = "Deep fryer"
-			if(OVEN)
-				text = "Oven"
-			if(GRILL)
-				text = "Grill"
-			if(CANDYMAKER)
-				text = "Candy maker"
-			if(CEREALMAKER)
-				text = "Cereal maker"
-			else
-				text = ""
+		// Appliance is a bitfield -- use AND checks so combined flags are handled correctly
+		var/list/appliance_names = list()
+		if(R.appliance & MICROWAVE)
+			appliance_names += "Microwave"
+		if(R.appliance & FRYER)
+			appliance_names += "Deep fryer"
+		if(R.appliance & OVEN)
+			appliance_names += "Oven"
+		if(R.appliance & GRILL)
+			appliance_names += "Grill"
+		if(R.appliance & CANDYMAKER)
+			appliance_names += "Candy maker"
+		if(R.appliance & CEREALMAKER)
+			appliance_names += "Cereal maker"
+		var/text = appliance_names.len ? jointext(appliance_names, ", ") : ""
 		D.data = span_bold("Heat Applicator") + ": [text ? text : "none"]<br>"
 		text = ""
 
@@ -91,10 +90,11 @@
 
 		if(LAZYLEN(R.items))
 			var/i = 0
-			for(var/atom/movable/source in R.items) // Atom typepath
+			for(var/source in R.items) // Typepath -- must be untyped var or BYOND filters out non-instances
 				if(i)
 					text += ", "
-				text += "[capitalize(initial(source.name))]"
+				var/atom/movable/typed_source = source // Typed local needed for initial() to resolve .name
+				text += "[capitalize(initial(typed_source.name))]"
 				i++
 		D.data += span_bold("Material Objects") + ": [text ? text : "none"]<br>"
 		text = ""
@@ -134,5 +134,5 @@
 	for(var/x = 1, x <= LAZYLEN(sorted_children), x++)
 		var/key = new_children_list[x]
 		sorted_children[x] = new_children_list[key]
-	children = sortList(sorted_children)
+	children = sorted_children
 	src.index_page()
