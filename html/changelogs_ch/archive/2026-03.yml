@@ -376,3 +376,6 @@
   - bugfix: Autolathe efficiency and speed upgrades corrected to virgo expected numbers
   - bugfix: Adds missing cable coils in autolathe.
   - rscadd: Fluorescent light bulbs and tubes are available in both types of lathes
+2026-03-24:
+  Diana:
+  - bugfix: SM now gives radiation off while idle/unpowered
