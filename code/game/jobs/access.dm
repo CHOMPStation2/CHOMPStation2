@@ -44,6 +44,7 @@
 
 	return TRUE
 
+<<<<<<< HEAD
 /proc/get_centcom_access(job)
 	switch(job)
 		if("VIP Guest")
@@ -187,6 +188,8 @@
 	var/list/AS = get_all_access_datums_by_id()
 	return AS["[id]"]
 
+=======
+>>>>>>> 2388aaba11 (subsystem access (#19337))
 /proc/get_all_jobs()
 	var/list/all_jobs = list()
 	var/list/all_datums = typesof(/datum/job)

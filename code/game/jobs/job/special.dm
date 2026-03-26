@@ -22,7 +22,7 @@
 	pto_type = PTO_CIVILIAN
 
 /datum/job/centcom_officer/get_access()
-	return get_all_accesses().Copy()
+	return SSaccess.get_all_accesses().Copy()
 
 //YW UNCOMMENTINGSTART: INSTATE LOYALTY IMPLANT
 /datum/job/centcom_officer/equip(var/mob/living/carbon/human/H)
@@ -97,8 +97,13 @@
 	pto_type = PTO_CIVILIAN
 
 /datum/job/emergency_responder/get_access()
+<<<<<<< HEAD
 	return get_all_accesses().Copy()
 /* CHOMPEDIT: Removing Clown/Mime job from being initialized at all (These are alt titles of Entertainer on our codebase)
+=======
+	return SSaccess.get_all_accesses().Copy()
+
+>>>>>>> 2388aaba11 (subsystem access (#19337))
 /datum/job/clown
 	title = JOB_CLOWN
 	flag = CLOWN

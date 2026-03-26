@@ -22,8 +22,8 @@
 	var/obj/item/card/id/C = ..()
 	C.name = "[H.real_name]'s military ID Card"
 	C.icon_state = "lifetime"
-	C.access = get_all_station_access()
-	C.access += get_all_centcom_access()
+	C.access = SSaccess.get_all_station_access()
+	C.access += SSaccess.get_all_centcom_access()
 	C.assignment = "USDF"
 	C.registered_name = H.real_name
 	return C
@@ -48,8 +48,8 @@
 	var/obj/item/card/id/C = ..()
 	C.name = "[H.real_name]'s military ID Card"
 	C.icon_state = "lifetime"
-	C.access = get_all_station_access()
-	C.access += get_all_centcom_access()
+	C.access = SSaccess.get_all_station_access()
+	C.access += SSaccess.get_all_centcom_access()
 	C.assignment = "USDF"
 	C.registered_name = H.real_name
 	return C
@@ -72,9 +72,15 @@
 	var/obj/item/card/id/C = ..()
 	C.name = "[H.real_name]'s SolGov ID Card" //YW EDIT: SolGov
 	C.icon_state = "lifetime"
+<<<<<<< HEAD
 	C.access = get_all_station_access()
 	C.access += get_all_centcom_access()
 	C.assignment = "SolGov Representative" //YW EDIT: SolGov
+=======
+	C.access = SSaccess.get_all_station_access()
+	C.access += SSaccess.get_all_centcom_access()
+	C.assignment = "SolCom Representative"
+>>>>>>> 2388aaba11 (subsystem access (#19337))
 	C.registered_name = H.real_name
 	return C
 
