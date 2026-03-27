@@ -580,11 +580,7 @@
 #include "code\controllers\subsystems\air_traffic.dm"
 #include "code\controllers\subsystems\airflow.dm"
 #include "code\controllers\subsystems\alarm.dm"
-<<<<<<< HEAD
-=======
 #include "code\controllers\subsystems\antag_job.dm"
-#include "code\controllers\subsystems\appreciation_messages.dm"
->>>>>>> a64992c509 (subsystem antag (#19338))
 #include "code\controllers\subsystems\asset_loading.dm"
 #include "code\controllers\subsystems\assets.dm"
 #include "code\controllers\subsystems\atoms.dm"
