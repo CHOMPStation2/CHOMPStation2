@@ -236,13 +236,8 @@
 	visible_message(span_danger("\The [src] lets out an shower of sparks as it starts to lose stability!"),\
 		span_warningplain("You hear a loud electrical crack!"))
 	playsound(src, 'sound/effects/lightningshock.ogg', 100, 1, extrarange = 5)
-<<<<<<< HEAD
-	tesla_zap(src, 5, power_gen * 0.05)
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(explosion), get_turf(src), 2, 3, 4, 8), 100) // Not a normal explosion.
-=======
 	tesla_zap(src, 5, power_gen * 0.05, current_jumps = 1)
 	addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(explosion), get_turf(src), 2, 3, 4, 8), 100) // Not a normal explosion.
->>>>>>> 453080616b (SM, Tesla, and general engineering adjustments [MDB IGNORE] [IDB IGNORE] (#19339))
 
 /obj/machinery/power/rtg/abductor/bullet_act(obj/item/projectile/Proj)
 	. = ..()
