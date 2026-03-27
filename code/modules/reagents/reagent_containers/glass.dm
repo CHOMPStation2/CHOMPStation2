@@ -26,40 +26,6 @@
 	var/container_can_be_placed_into = REAGENT_CONTAINER_CAN_BE_PLACED_INTO_DEFAULT
 	var/list/prefill = null	//Reagents to fill the container with on New(), formatted as "reagentID" = quantity
 
-<<<<<<< HEAD
-	var/list/can_be_placed_into = list(
-		/obj/machinery/chem_master/,
-		/obj/machinery/chemical_dispenser,
-		/obj/machinery/reagentgrinder,
-		/obj/structure/table,
-		/obj/structure/closet,
-		/obj/structure/sink,
-		/obj/item/storage,
-		/obj/machinery/atmospherics/unary/cryo_cell,
-		/obj/machinery/dna_scannernew,
-		/obj/item/grenade/chem_grenade,
-		/mob/living/bot/medbot,
-		/obj/item/storage/secure/safe,
-		/obj/machinery/iv_drip,
-		/obj/structure/medical_stand,
-		/obj/machinery/disposal,
-		/mob/living/simple_mob/animal/passive/cow,
-		/mob/living/simple_mob/animal/goat,
-		/obj/machinery/sleeper,
-		/obj/machinery/smartfridge/,
-		/obj/machinery/biogenerator,
-		/obj/structure/frame,
-		/obj/machinery/radiocarbon_spectrometer,
-		/obj/machinery/portable_atmospherics/powered/reagent_distillery,
-		/obj/machinery/feeder,
-		/obj/machinery/computer/pandemic,
-		/obj/machinery/chemical_synthesizer, //CHOMPedit,
-		/obj/machinery/food_replicator // CHOMPAdd
-		)
-//CHOMP Addition for feeder in the above list. I am paranoid about comments within lists so this is outside.
-
-=======
->>>>>>> b13f03bcda (Trolley tanker draining fix, and memory savings (#19341))
 	///Var for attack_self chain
 	var/special_handling = FALSE
 
