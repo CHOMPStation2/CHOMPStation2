@@ -12,15 +12,9 @@ SUBSYSTEM_DEF(transfer)
 
 /datum/controller/subsystem/transfer/Initialize()
 	timerbuffer = CONFIG_GET(number/vote_autotransfer_initial)
-<<<<<<< HEAD:code/controllers/autotransfer.dm
-	shift_hard_end = CONFIG_GET(number/vote_autotransfer_initial) + (CONFIG_GET(number/vote_autotransfer_interval) * 2) //CHOMPStation Edit //Change this "1" to how many extend votes you want there to be. //Note: Fuck you whoever just slapped a number here instead of using the FUCKING CONFIG LIKE ALL THE OTHER NUMBERS HERE
-	shift_last_vote = shift_hard_end - CONFIG_GET(number/vote_autotransfer_interval) //VOREStation Edit
-	START_PROCESSING(SSprocessing, src)
-=======
-	shift_hard_end = CONFIG_GET(number/vote_autotransfer_initial) + (CONFIG_GET(number/vote_autotransfer_interval) * 0) //Change this "1" to how many extend votes you want there to be.
+	shift_hard_end = CONFIG_GET(number/vote_autotransfer_initial) + (CONFIG_GET(number/vote_autotransfer_interval) * 2) //CHOMPStation Edit //Change this "1" to how many extend votes you want there to be.
 	shift_last_vote = shift_hard_end - CONFIG_GET(number/vote_autotransfer_interval)
 	return SS_INIT_SUCCESS
->>>>>>> a0c5678533 (transfer to subsystem (#19323)):code/controllers/subsystems/autotransfer.dm
 
 /datum/controller/subsystem/transfer/fire(resumed)
 	currenttick = currenttick + 1
