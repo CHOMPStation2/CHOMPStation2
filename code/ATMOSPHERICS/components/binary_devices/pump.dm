@@ -255,6 +255,7 @@ Thus, the two variables affect pump operation are set in New():
 			"You hear ratchet.")
 		deconstruct()
 
+<<<<<<< HEAD
 //CHOMPEdit Start - Adds TGStation keybinds to save our engineers some time.
 /obj/machinery/atmospherics/binary/pump/click_alt(mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
@@ -279,6 +280,32 @@ Thus, the two variables affect pump operation are set in New():
 	else
 		to_chat(user, span_warning("Access denied."))
 //CHOMPEdit End
+=======
+/obj/machinery/atmospherics/binary/pump/click_alt(mob/user)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(!allowed(user))
+		to_chat(user, span_warning("Access denied."))
+		return CLICK_ACTION_BLOCKING
+
+	to_chat(user, span_notice("You set the [name] to max output"))
+	target_pressure = max_pressure_setting
+	add_fingerprint(user)
+	return CLICK_ACTION_SUCCESS
+
+
+/obj/machinery/atmospherics/binary/pump/click_ctrl(mob/user)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(!allowed(user))
+		to_chat(user, span_warning("Access denied."))
+		return CLICK_ACTION_BLOCKING
+
+	update_use_power(!use_power)
+	update_icon()
+	add_fingerprint(user)
+	to_chat(user, span_notice("You toggle the [name] [use_power ? "on" : "off"]."))
+
+	return CLICK_ACTION_SUCCESS
+>>>>>>> 453080616b (SM, Tesla, and general engineering adjustments [MDB IGNORE] [IDB IGNORE] (#19339))
 
 /obj/machinery/atmospherics/binary/pump/high_power
 	icon = 'icons/atmos/volume_pump.dmi'
