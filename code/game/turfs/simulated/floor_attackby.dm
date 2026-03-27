@@ -3,7 +3,15 @@
 	if(!C || !user)
 		return 0
 
+<<<<<<< HEAD
 	if(isliving(user) && istype(C, /obj/item)) //CHOMPEDIT START - Making engraving require disarm intent (and simplifying the proc)
+=======
+	// Check parent signals
+	if(..())
+		return
+
+	if(isliving(user) && istype(C, /obj/item))
+>>>>>>> bf29ca396f (Shovel digging refactor (#19345))
 		var/mob/living/L = user
 		if(L.a_intent != I_HELP)
 			if(L.a_intent == I_GRAB)

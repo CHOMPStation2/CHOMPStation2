@@ -23,6 +23,7 @@ GLOBAL_LIST_EMPTY(turf_edge_cache)
 	can_build_into_floor = TRUE
 
 	// When a turf gets demoted or promoted, this list gets adjusted.  The top-most layer is the layer on the bottom of the list, due to how pop() works.
+<<<<<<< HEAD
 	//var/list/turf_layers = list(/turf/simulated/floor/outdoors/rocks) CHOMPEdit kill. See outdoors_ch.dm for replacement.
 	var/can_dig = FALSE
 	var/loot_count
@@ -79,11 +80,23 @@ GLOBAL_LIST_EMPTY(turf_edge_cache)
 		SSplanets.addTurf(src)
 	. = ..()
 */
+=======
+	var/list/turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+>>>>>>> bf29ca396f (Shovel digging refactor (#19345))
 
 /turf/simulated/floor/Destroy()
 	if(is_outdoors())
 		SSplanets.removeTurf(src)
 	return ..()
+
+/turf/simulated/floor/outdoors/get_dig_loot_type(mob/user, obj/item/W)
+	return pick( \
+		12;/obj/item/reagent_containers/food/snacks/worm, \
+		1;/obj/item/material/knife/machete/hatchet/stone  \
+	)
+
+/turf/simulated/floor/outdoors/shovel_can_cultivate()
+	return TRUE
 
 // Turfs can decide if they should be indoors or outdoors.
 // By default they choose based on their area's setting.
@@ -130,7 +143,7 @@ GLOBAL_LIST_EMPTY(turf_edge_cache)
 	icon_state = "mud_dark"
 	edge_blending_priority = 4 // CHOMPedit
 	initial_flooring = /datum/decl/flooring/mud
-	can_dig = TRUE
+	flags = TURF_CAN_DIG_SHOVEL
 
 /turf/simulated/floor/outdoors/rocks
 	name = "rocks"
@@ -138,6 +151,11 @@ GLOBAL_LIST_EMPTY(turf_edge_cache)
 	icon_state = "rock"
 	edge_blending_priority = 1
 	initial_flooring = /datum/decl/flooring/rock
+	dig_exhaustion_chance = TURF_DIG_LOOT_ENDLESS
+	flags = TURF_CAN_DIG_SHOVEL
+
+/turf/simulated/floor/outdoors/rocks/shovel_can_cultivate()
+	return FALSE // Nope, no growing stuff on rocks
 
 /turf/simulated/floor/outdoors/rocks/caves
 	outdoors = OUTDOORS_NO
@@ -216,6 +234,7 @@ CHOMP Removal End */
 	icon_state = "dirt0"
 	edge_blending_priority = 2
 	initial_flooring = /datum/decl/flooring/outdoors/newdirt
+	flags = TURF_CAN_DIG_SHOVEL
 
 /datum/decl/flooring/outdoors/newdirt
 	name = "dirt"
