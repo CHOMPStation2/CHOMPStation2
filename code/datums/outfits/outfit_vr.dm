@@ -72,15 +72,9 @@
 	var/obj/item/card/id/C = ..()
 	C.name = "[H.real_name]'s SolGov ID Card" //YW EDIT: SolGov
 	C.icon_state = "lifetime"
-<<<<<<< HEAD
-	C.access = get_all_station_access()
-	C.access += get_all_centcom_access()
-	C.assignment = "SolGov Representative" //YW EDIT: SolGov
-=======
 	C.access = SSaccess.get_all_station_access()
 	C.access += SSaccess.get_all_centcom_access()
-	C.assignment = "SolCom Representative"
->>>>>>> 2388aaba11 (subsystem access (#19337))
+	C.assignment = "SolGov Representative" //YW EDIT: SolGov
 	C.registered_name = H.real_name
 	return C
 

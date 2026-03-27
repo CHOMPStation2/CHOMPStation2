@@ -97,13 +97,8 @@
 	pto_type = PTO_CIVILIAN
 
 /datum/job/emergency_responder/get_access()
-<<<<<<< HEAD
-	return get_all_accesses().Copy()
-/* CHOMPEDIT: Removing Clown/Mime job from being initialized at all (These are alt titles of Entertainer on our codebase)
-=======
 	return SSaccess.get_all_accesses().Copy()
-
->>>>>>> 2388aaba11 (subsystem access (#19337))
+/* CHOMPEDIT: Removing Clown/Mime job from being initialized at all (These are alt titles of Entertainer on our codebase)
 /datum/job/clown
 	title = JOB_CLOWN
 	flag = CLOWN
