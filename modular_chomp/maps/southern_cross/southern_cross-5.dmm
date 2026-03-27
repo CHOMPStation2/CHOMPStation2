@@ -986,11 +986,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
-"ca" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/surface/outpost/engineering/monitoring)
 "cb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2054,9 +2049,7 @@
 /turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "dY" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/reactor_smes)
 "dZ" = (
 /obj/machinery/door/firedoor/border_only,
@@ -2357,7 +2350,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/engineering/reactor_smes)
@@ -6065,7 +6058,7 @@
 "lC" = (
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
@@ -6240,11 +6233,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_one)
-"lW" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/surface/outpost/engineering/atmos_room)
 "lX" = (
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
@@ -7772,11 +7760,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
-"oW" = (
-/turf/simulated/floor/outdoors/dirt/sif/planetuse{
-	rock_chance = 0
-	},
-/area/surface/outside/landing/plains)
 "oX" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/cable/heavyduty{
@@ -9877,7 +9860,7 @@
 /obj/machinery/door/blast/radproof{
 	dir = 4;
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/engineering/reactor_smes)
@@ -10884,7 +10867,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/floor/plating,
@@ -11922,9 +11905,7 @@
 /area/surface/outpost/main/corridor/left_lower)
 "wY" = (
 /obj/structure/sign/electricshock,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/reactor_smes)
 "wZ" = (
 /obj/effect/floor_decal/borderfloor{
@@ -12997,12 +12978,6 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/surface/outpost/security/maa)
-"yX" = (
-/obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/surface/outpost/engineering/monitoring)
 "yY" = (
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/right_two)
@@ -14674,9 +14649,7 @@
 /area/surface/outpost/main/corridor/left_lower)
 "Cu" = (
 /obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/auxiliary_storage)
 "Cv" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -16680,7 +16653,7 @@
 	id_tag = "engine_access_hatch";
 	locked = 1;
 	name = "Reactor Core";
-	rad_resistance = 150;
+	rad_insulation = 0;
 	req_access = list(11)
 	},
 /turf/simulated/floor/reinforced,
@@ -17294,9 +17267,7 @@
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "Ib" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/storage)
 "Ic" = (
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -18202,12 +18173,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
-"JK" = (
-/obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/surface/outpost/engineering/reactor_smes)
 "JL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -19010,7 +18975,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/radproof{
 	dir = 4;
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/monitoring)
@@ -19806,7 +19771,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	dir = 4;
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /obj/structure/cable/blue{
 	icon_state = "0-4"
@@ -21409,7 +21374,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
@@ -21753,9 +21718,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/main/corridor/right_upper)
 "QP" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/auxiliary_storage)
 "QQ" = (
 /obj/effect/floor_decal/borderfloor{
@@ -22740,9 +22703,7 @@
 /area/surface/outpost/main/airlock/right_three)
 "SO" = (
 /obj/structure/sign/electricshock,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/surface/outpost/engineering/monitoring)
 "SP" = (
 /obj/machinery/door/firedoor/border_only,
@@ -23586,7 +23547,7 @@
 	},
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/engineering/reactor_smes)
@@ -32904,11 +32865,11 @@ jB
 jB
 jB
 jB
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -33161,12 +33122,12 @@ jB
 jB
 jB
 jB
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -33419,12 +33380,12 @@ jB
 jB
 jB
 jB
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -33677,12 +33638,12 @@ jB
 jB
 jB
 jB
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -33935,12 +33896,12 @@ KJ
 KJ
 KJ
 KJ
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -34193,12 +34154,12 @@ KJ
 KJ
 KJ
 KJ
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -34451,12 +34412,12 @@ KJ
 KJ
 KJ
 KJ
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -34709,12 +34670,12 @@ KJ
 KJ
 KJ
 KJ
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -34967,12 +34928,12 @@ KJ
 KJ
 KJ
 KJ
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -35226,11 +35187,11 @@ KJ
 KJ
 KJ
 KJ
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -35483,12 +35444,12 @@ KJ
 KJ
 KJ
 KJ
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -35741,12 +35702,12 @@ KJ
 KJ
 KJ
 KJ
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -35999,12 +35960,12 @@ KJ
 KJ
 KJ
 KJ
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -36257,12 +36218,12 @@ KJ
 KJ
 KJ
 KJ
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -36515,12 +36476,12 @@ KJ
 KJ
 KJ
 KJ
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -36773,12 +36734,12 @@ KJ
 KJ
 KJ
 KJ
-oW
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -37032,11 +36993,11 @@ KJ
 KJ
 KJ
 jB
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -37290,11 +37251,11 @@ KJ
 KJ
 KJ
 jB
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -37548,11 +37509,11 @@ KJ
 KJ
 KJ
 jB
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -37806,11 +37767,11 @@ KJ
 KJ
 KJ
 jB
-oW
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -38065,10 +38026,10 @@ jB
 jB
 jB
 jB
-oW
-oW
-oW
-oW
+oz
+oz
+oz
+oz
 oz
 oz
 oz
@@ -38324,9 +38285,9 @@ jB
 jB
 jB
 jB
-oW
-oW
-oW
+oz
+oz
+oz
 oz
 oz
 oz
@@ -46196,18 +46157,18 @@ QP
 dY
 dY
 dY
-JK
+nT
 dY
 dY
 dY
 dY
 dY
 dY
-JK
+nT
 dY
 MT
 SO
-ca
+oD
 ha
 gu
 ha
@@ -46465,7 +46426,7 @@ lC
 Rq
 iE
 Py
-ca
+oD
 ha
 ha
 ha
@@ -46723,7 +46684,7 @@ lC
 Rv
 oP
 rf
-ca
+oD
 oD
 ZK
 ZK
@@ -46967,7 +46928,7 @@ lg
 Ud
 aI
 nf
-JK
+nT
 PV
 UD
 Cl
@@ -46977,11 +46938,11 @@ sV
 tL
 la
 TV
-JK
+nT
 Va
 kw
 jM
-ca
+oD
 TN
 ZK
 mY
@@ -47489,7 +47450,7 @@ oU
 NW
 oU
 iT
-JK
+nT
 pQ
 aX
 Xm
@@ -47497,7 +47458,7 @@ lC
 Vt
 gE
 Ae
-yX
+Lw
 Ce
 NY
 ZK
@@ -47746,16 +47707,16 @@ dY
 ev
 UC
 ev
-JK
+nT
 dY
 iz
 mf
 CM
 dY
-ca
+oD
 Lq
-ca
-ca
+oD
+oD
 rQ
 TF
 GO
@@ -48267,10 +48228,10 @@ wY
 dY
 qw
 dY
-JK
+nT
 fu
 qk
-yX
+Lw
 cg
 yD
 Bt
@@ -48526,9 +48487,9 @@ GI
 iH
 DW
 dY
-ca
-ca
-ca
+oD
+oD
+oD
 WI
 iU
 YV
@@ -49296,7 +49257,7 @@ Ib
 eV
 Qf
 vH
-lW
+KP
 DB
 yy
 yy
@@ -49554,7 +49515,7 @@ Ib
 Hf
 WB
 pm
-lW
+KP
 DB
 yy
 EB
@@ -49808,11 +49769,11 @@ Pw
 iG
 QY
 zj
-lW
-lW
+KP
+KP
 Kr
-lW
-lW
+KP
+KP
 DB
 yy
 EB

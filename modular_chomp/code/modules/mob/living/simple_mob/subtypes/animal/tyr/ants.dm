@@ -188,7 +188,13 @@
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/uranium/do_special_attack(atom/A)
 	visible_message(span_bolddanger(span_orange("The ant glows bright green!.")))
-	SSradiation.radiate(src, 15)
+	radiation_pulse(
+		src,
+		max_range = 3,
+		threshold = RAD_MEDIUM_INSULATION,
+		chance = 100,
+		strength = 15
+	)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/mhydro //secondary spawner
 	name = "mhydro ant"

@@ -2,7 +2,7 @@
 	name = "strange moss"
 	icon = 'modular_chomp/icons/turf/falseplanets.dmi'
 	icon_state = "moss"
-	can_dig = TRUE
+	flags = TURF_CAN_DIG_SHOVEL
 /*unsure how needed this variable will need to be changed
 	turf_layers = list(
 		/turf/simulated/floor/outdoors/rocks,

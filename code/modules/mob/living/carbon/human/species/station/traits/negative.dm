@@ -589,7 +589,7 @@
 	hidden = FALSE
 	custom_only = FALSE
 	added_component_path = /datum/component/omen/trait
-	excludes = list(/datum/trait/negative/unlucky/major)
+	excludes = list(/datum/trait/negative/unlucky/major, /datum/trait/neutral/slip_prone)
 
 
 /datum/trait/negative/unlucky/major
@@ -600,7 +600,7 @@
 	is_genetrait = TRUE
 	hidden = FALSE //VOREStation Note: Disabled //CHOMPEdit - Enable
 	added_component_path = /datum/component/omen/trait/major
-	excludes = list(/datum/trait/negative/unlucky)
+	excludes = list(/datum/trait/negative/unlucky, /datum/trait/neutral/slip_prone)
 	activation_message= span_cult(span_bold("What a terrible night to have a curse!"))
 	primitive_expression_messages=list("unluckily stubs their toe!")
 

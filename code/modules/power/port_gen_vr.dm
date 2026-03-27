@@ -144,7 +144,14 @@
 	..()
 	add_avail(power_gen)
 	if(panel_open && irradiate)
-		SSradiation.radiate(src, 60)
+		radiation_pulse(
+			src,
+			max_range = 3,
+			threshold = RAD_MEDIUM_INSULATION,
+			chance = DEFAULT_RADIATION_CHANCE,
+			minimum_exposure_time = URANIUM_RADIATION_MINIMUM_EXPOSURE_TIME,
+			strength = power_gen * 0.01 //1000 power = 10 rads. 10000 power = 100 rads. You can get creative with rad collectors if you want.
+		)
 
 /obj/machinery/power/rtg/RefreshParts()
 	var/part_level = 0
@@ -229,8 +236,8 @@
 	visible_message(span_danger("\The [src] lets out an shower of sparks as it starts to lose stability!"),\
 		span_warningplain("You hear a loud electrical crack!"))
 	playsound(src, 'sound/effects/lightningshock.ogg', 100, 1, extrarange = 5)
-	tesla_zap(src, 5, power_gen * 0.05)
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(explosion), get_turf(src), 2, 3, 4, 8), 100) // Not a normal explosion.
+	tesla_zap(src, 5, power_gen * 0.05, current_jumps = 1)
+	addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(explosion), get_turf(src), 2, 3, 4, 8), 100) // Not a normal explosion.
 
 /obj/machinery/power/rtg/abductor/bullet_act(obj/item/projectile/Proj)
 	. = ..()
@@ -290,7 +297,7 @@
 /obj/machinery/power/rtg/abductor/fire_act(exposed_temperature, exposed_volume)
 	asplod()
 
-/obj/machinery/power/rtg/abductor/tesla_act()
+/obj/machinery/power/rtg/abductor/tesla_act(power, explosive, current_jumps)
 	..() //extend the zap
 	asplod()
 
@@ -348,7 +355,7 @@
 /obj/machinery/power/rtg/kugelblitz/fire_act(exposed_temperature, exposed_volume)
 	asplod()
 
-/obj/machinery/power/rtg/kugelblitz/tesla_act()
+/obj/machinery/power/rtg/kugelblitz/tesla_act(power, explosive, current_jumps)
 	..() //extend the zap
 	asplod()
 
@@ -593,9 +600,15 @@
 	var/turf/T = get_turf(src)
 	qdel(src)
 	if(T)
+		radiation_pulse(
+			T,
+			max_range = 50,
+			threshold = RAD_HEAVY_INSULATION,
+			chance = DEFAULT_RADIATION_CHANCE * 3,
+			strength = power_gen * 0.01 ///1MW = 1000 rads. If you blow up a BLACK HOLE ENGINE, you deserve the radiation that comes with it.
+		)
 		empulse(T, 12, 14, 16, 18)
 		explosion(T, 7, 12, 18, 20)
-		SSradiation.radiate(T, 200)
 		new /obj/effect/bhole(T)
 
 /obj/machinery/power/rtg/antimatter_core/blob_act(obj/structure/blob/B)
@@ -607,7 +620,7 @@
 /obj/machinery/power/rtg/antimatter_core/fire_act(exposed_temperature, exposed_volume)
 	return
 
-/obj/machinery/power/rtg/antimatter_core/tesla_act()
+/obj/machinery/power/rtg/antimatter_core/tesla_act(power, explosive, current_jumps)
 	..() //extend the zap
 	asplod()
 

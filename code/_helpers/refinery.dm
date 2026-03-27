@@ -69,7 +69,13 @@
 /proc/puny_protons(regrets = 0, var/atom/our_atom, var/list/holdingitems)
 	our_atom.set_light(0)
 	if(regrets > 0) // If you thought grinding supermatter would end well. Values taken from ex_act() for the supermatter stacks.
-		SSradiation.radiate(get_turf(our_atom), 15 + regrets * 4)
+		radiation_pulse(
+			source = get_turf(our_atom),
+			max_range = 7,
+			threshold = RAD_HEAVY_INSULATION,
+			chance = 100, //Someone messed up BAD to have this happen. EVERYONE suffers.
+			strength = 15 + (regrets * 4),
+		)
 		explosion(get_turf(our_atom), round(regrets / 12) , round(regrets / 6), round(regrets / 3), round(regrets / 25))
 		qdel(our_atom)
 		return
@@ -79,7 +85,13 @@
 			S.loc = our_atom.loc
 			holdingitems -= S
 			regrets += S.get_amount()
-		SSradiation.radiate(get_turf(our_atom), 15 + regrets)
+		radiation_pulse(
+			source = get_turf(our_atom),
+			max_range = 7,
+			threshold = RAD_HEAVY_INSULATION,
+			chance = 100, //Someone messed up BAD to have this happen. EVERYONE suffers.
+			strength = 15 + (regrets * 4),
+		)
 		our_atom.visible_message(span_warning("\The [our_atom] glows brightly, bursting into flames and flashing into ash."),\
 		span_warning("You hear an unearthly shriek, burning heat washing over you."))
 		new /obj/effect/decal/cleanable/ash(our_atom.loc)

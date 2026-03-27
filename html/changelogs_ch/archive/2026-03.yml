@@ -335,3 +335,84 @@
   - qol: removed "As Unknown" from shadekin without any ID, or with a voice changer.
   Will:
   - rscadd: External airlocks on planets will freeze in extremely cold weather.
+2026-03-22:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: single item mat cost tooltip
+  Kashargul:
+  - bugfix: trait check
+  Nova:
+  - refactor: Refactored species, organ_data, and rlimb_data
+  Will:
+  - code_imp: removed old autolathe datums
+  Will, Kash:
+  - refactor: replaced autolathe datums with techweb datums
+  - code_imp: many new validity checks for techweb unit test added, multiple changes
+      made to fix them.
+  - code_imp: added unit test that checks for circuits missing from the imprinter
+  - balance: autolathe uses it's own isolated material storage
+  - balance: many circuits tossed into the engivend replaced with an autolathe and
+      imprinter circuit instead, as they are all printable now
+  - bugfix: techweb entries now respect machine hacked state regarding hack only designs
+  - rscadd: protolathe and circuit imprinter wire hacking
+  - rscadd: a literal mountain of lathe and circuit designs that were missing
+  - qol: circuit boards that cannot be printed on station will show a unique message
+      on examine.
+  - qol: techweb and lathe menus now use scaled icons for larger images instead of
+      huge buttons
+  - bugfix: injector maker no longer uses an AFRG board during construction
+2026-03-23:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: migrate more admin verbs
+  Diana:
+  - rscadd: Screwdriver (The Drink) stops radiation effects while it is in your system.
+  - rscadd: Uranium walls, doors, and coins now emit slight amounts of radiation.
+  - qol: Radiation protective items now have a tag upon examine that informs of their
+      radiation protective status.
+  - refactor: Massively improves radiation performance by moving to pulses instead
+      of 1000s of deleted radiation_sources a second.
+  - code_imp: Radiation reworked. Please report on Discord or Github if power generation
+      feels too low from radioactive (SM) sources.
+  Will:
+  - bugfix: Autolathe efficiency and speed upgrades corrected to virgo expected numbers
+  - bugfix: Adds missing cable coils in autolathe.
+  - rscadd: Fluorescent light bulbs and tubes are available in both types of lathes
+2026-03-24:
+  Diana:
+  - bugfix: SM now gives radiation off while idle/unpowered
+2026-03-25:
+  ARGUS:
+  - bugfix: Small change to Codex Chef Recipe generation so materials are properly
+      fetched
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: NtOS ByteCrawl, An IDLE Hacking Game
+  Will:
+  - balance: chem sprayer does not require protolathe hacking to print
+  - rscadd: Lightpainter is available in the lathes
+  - rscadd: techweb disks can be used to expand autolathe designs
+  - rscadd: Most ammoboxes to the autolathe
+  - code_imp: Circuitboard unit test
+  - bugfix: multiple cryopod types have correct default circuitboard
+  - bugfix: security alert console has the correct default circuitboard
+  - bugfix: refinery filter has the correct default circuitboard
+  - bugfix: pump relay has the correct default circuitboard
+2026-03-26:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: legacy notes
+  - bugfix: borg default access
+  Diana:
+  - rscadd: Adds Slip Prone - A new neutral trait that allows accidentally stumbling
+      into nearby people to either eat/be eaten by them prefs-dependant.
+  - rscadd: Clown borg has a lube spray (when emagged)
+  - code_imp: respawn_conumsable parent call added
+  Will:
+  - balance: AI controlled rig movement power draw reduced from 200 to 50 ( normally
+      20 for non-ai operators )
+  - bugfix: paicard typeB can be inserted into rigs that allow AI control
+  - balance: AI core counts as a lonely major comfort mob
+2026-03-27:
+  Diana:
+  - code_imp: Cleans up some code about trays.
+  - bugfix: Trays will now properly stun the target if you target the head.
+  - qol: Treat Organ surgery's detection logic now includes infected organs
+  Will:
+  - rscadd: Xenobotany machines can be researched and constructed in round

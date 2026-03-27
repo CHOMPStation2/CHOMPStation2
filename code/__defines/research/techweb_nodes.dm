@@ -161,6 +161,7 @@
 #define TECHWEB_NODE_CONFETTI "confetti"
 #define TECHWEB_NODE_RSF "rapid_service_fab"
 #define TECHWEB_NODE_MATERIALSHEETS "material_sheets"
+#define TECHWEB_NODE_SMARTFRIDGES "smartfridges"
 
 //CHOMPEDIT Start - Chomp Specific techwebs.
 #define TECHWEB_NODE_CHOMP_AMMO "chomp_ammo" //CHOMPEDIT ADD - Adds Chomp unique ammo for autolathe
