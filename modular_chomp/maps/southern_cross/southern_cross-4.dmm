@@ -9146,7 +9146,7 @@
 	desc = "Retains air, blocks radiation, allows passage.";
 	light_color = "#243550";
 	name = "hardlight radiation shield";
-	rad_resistance = 200
+	rad_insulation = 0
 	},
 /obj/machinery/door/window/brigdoor/northright{
 	name = "Particle Focus door";
@@ -15721,7 +15721,7 @@
 	desc = "Retains air, blocks radiation, allows passage.";
 	light_color = "#243550";
 	name = "hardlight radiation shield";
-	rad_resistance = 200
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)

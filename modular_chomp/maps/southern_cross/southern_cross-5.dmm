@@ -2350,7 +2350,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/engineering/reactor_smes)
@@ -6058,7 +6058,7 @@
 "lC" = (
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
@@ -9865,7 +9865,7 @@
 /obj/machinery/door/blast/radproof{
 	dir = 4;
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/engineering/reactor_smes)
@@ -10872,7 +10872,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/floor/plating,
@@ -16658,7 +16658,7 @@
 	id_tag = "engine_access_hatch";
 	locked = 1;
 	name = "Reactor Core";
-	rad_resistance = 150;
+	rad_insulation = 0;
 	req_access = list(11)
 	},
 /turf/simulated/floor/reinforced,
@@ -18980,7 +18980,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/radproof{
 	dir = 4;
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/monitoring)
@@ -19776,7 +19776,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	dir = 4;
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /obj/structure/cable/blue{
 	icon_state = "0-4"
@@ -21379,7 +21379,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
@@ -23552,7 +23552,7 @@
 	},
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/engineering/reactor_smes)

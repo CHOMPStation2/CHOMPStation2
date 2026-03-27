@@ -34,7 +34,7 @@
 "aaO" = (
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
@@ -1059,7 +1059,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 1
@@ -6361,7 +6361,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/engineering/engine_room)
@@ -7848,7 +7848,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -11092,7 +11092,7 @@
 	id_tag = "engine_access_hatch";
 	locked = 1;
 	name = "Reactor Core";
-	rad_resistance = 150;
+	rad_insulation = 0;
 	req_access = list(11)
 	},
 /turf/simulated/floor/reinforced,
@@ -13347,7 +13347,7 @@
 /obj/machinery/door/blast/radproof{
 	dir = 4;
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/engineering/engine_room)
@@ -21667,7 +21667,7 @@
 	opacity = 0
 	},
 /obj/machinery/door/blast/radproof{
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/plating/thor/planetuse,
 /area/engineering/engine_waste)
@@ -22497,7 +22497,7 @@
 	},
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/engineering/engine_room)
@@ -23979,7 +23979,7 @@
 "uWk" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/radproof{
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /turf/simulated/floor/plating,
@@ -26256,7 +26256,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Reactor Auxiliary Room";
-	rad_resistance = 150;
+	rad_insulation = 0;
 	req_one_access = list(11)
 	},
 /turf/simulated/floor/plating,
@@ -27078,7 +27078,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_monitoring)
