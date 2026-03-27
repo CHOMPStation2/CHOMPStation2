@@ -580,6 +580,11 @@
 #include "code\controllers\subsystems\air_traffic.dm"
 #include "code\controllers\subsystems\airflow.dm"
 #include "code\controllers\subsystems\alarm.dm"
+<<<<<<< HEAD
+=======
+#include "code\controllers\subsystems\antag_job.dm"
+#include "code\controllers\subsystems\appreciation_messages.dm"
+>>>>>>> a64992c509 (subsystem antag (#19338))
 #include "code\controllers\subsystems\asset_loading.dm"
 #include "code\controllers\subsystems\assets.dm"
 #include "code\controllers\subsystems\atoms.dm"
@@ -1066,7 +1071,6 @@
 #include "code\game\skincmd.dm"
 #include "code\game\sound.dm"
 #include "code\game\world.dm"
-#include "code\game\antagonist\_antagonist_setup.dm"
 #include "code\game\antagonist\antagonist.dm"
 #include "code\game\antagonist\antagonist_add.dm"
 #include "code\game\antagonist\antagonist_create.dm"
