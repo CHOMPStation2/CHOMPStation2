@@ -3,13 +3,8 @@
 	icon_state = "grass0"
 	edge_blending_priority = 4
 	initial_flooring = /datum/decl/flooring/grass/outdoors // VOREStation Edit
-<<<<<<< HEAD
-	can_dig = TRUE
-	/*turf_layers = list( CHOMP Removal Begin
-=======
 	flags = TURF_CAN_DIG_SHOVEL
-	turf_layers = list(
->>>>>>> bf29ca396f (Shovel digging refactor (#19345))
+	/*turf_layers = list( CHOMP Removal Begin
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
 		)CHOMP Removal End*/

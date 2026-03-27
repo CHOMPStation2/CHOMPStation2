@@ -4,7 +4,6 @@
 	desc = "Salty and gritty."
 	icon = 'modular_chomp/icons/turf/desert_tiles.dmi'
 	icon_edge = 'modular_chomp/icons/turf/outdoors_edge.dmi'
-	can_dig = FALSE
 
 /turf/simulated/floor/outdoors/desert_planet/sand
 	name = "sand"
