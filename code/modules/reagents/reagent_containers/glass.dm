@@ -23,8 +23,10 @@
 
 	var/label_text = ""
 
+	var/container_can_be_placed_into = REAGENT_CONTAINER_CAN_BE_PLACED_INTO_DEFAULT
 	var/list/prefill = null	//Reagents to fill the container with on New(), formatted as "reagentID" = quantity
 
+<<<<<<< HEAD
 	var/list/can_be_placed_into = list(
 		/obj/machinery/chem_master/,
 		/obj/machinery/chemical_dispenser,
@@ -56,6 +58,8 @@
 		)
 //CHOMP Addition for feeder in the above list. I am paranoid about comments within lists so this is outside.
 
+=======
+>>>>>>> b13f03bcda (Trolley tanker draining fix, and memory savings (#19341))
 	///Var for attack_self chain
 	var/special_handling = FALSE
 
@@ -142,7 +146,7 @@
 /obj/item/reagent_containers/glass/afterattack(var/obj/target, var/mob/user, var/proximity)
 	if(!proximity || !is_open_container()) //Is the container open & are they next to whatever they're clicking?
 		return 1 //If not, do nothing.
-	for(var/type in can_be_placed_into) //Is it something it can be placed into?
+	for(var/type in GLOB.reagent_containers_can_be_placed_into[container_can_be_placed_into]) //Is it something it can be placed into?
 		if(istype(target, type))
 			return 1
 	if(standard_dispenser_refill(user, target)) //Are they clicking a water tank/some dispenser?
@@ -425,12 +429,7 @@
 	max_transfer_amount = 120
 	volume = 2000
 	slowdown = 2
-
-	can_be_placed_into = list(
-		/obj/structure/table,
-		/obj/structure/closet,
-		/obj/structure/sink
-		)
+	container_can_be_placed_into = REAGENT_CONTAINER_CAN_BE_PLACED_INTO_WATERCOOLER
 
 /obj/item/reagent_containers/glass/pint_mug
 	desc = "A rustic pint mug designed for drinking ale."
