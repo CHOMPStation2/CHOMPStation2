@@ -145,8 +145,13 @@
 /datum/supply_pack/supply/stolen
 	name = "Stolen supply crate"
 	desc = "ERR: NO DATA!"
+<<<<<<< HEAD
 	contains = list(/obj/item/stolenpackage = 1)
 	cost = 1000 //YW edit
+=======
+	contains = list(/obj/item/stolenpackage = 2)
+	cost = 200
+>>>>>>> 533fb26dd8 (Increases price & amount of stolen packages in crate (#19352))
 	containertype = /obj/structure/closet/crate
 	containername = "Stolen crate"
 	contraband = 1
