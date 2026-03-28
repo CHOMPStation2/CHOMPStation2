@@ -73,7 +73,11 @@ ADMIN_VERB(admin_lightning_strike, R_FUN, "Lightning Strike", "Causes lightning 
 		coil.tesla_act(LIGHTNING_POWER, TRUE, current_jumps = 1)
 
 	else // Striking the turf directly.
+<<<<<<< HEAD
 		tesla_zap(T, zap_range = LIGHTNING_ZAP_RANGE, power = LIGHTNING_POWER, explosive = FALSE, stun_mobs = TRUE, current_jumps = 1)
+=======
+		tesla_zap(T, zap_range = LIGHTNING_ZAP_RANGE, power = LIGHTNING_POWER, explosive = FALSE, stun_mobs = TRUE, current_jumps = MAXIMUM_TESLA_JUMPS - 1) //This ensures it can only jump to the closest thing and that's it. No more jumps after that.
+>>>>>>> 8590089158 (Fixes tesla_zap proc (#19351))
 
 	// Some extra effects.
 	// Some apply to those within zap range, others if they were a bit farther away.
