@@ -71,6 +71,7 @@
 
 	AddComponent(/datum/component/personal_crafting)
 	AddComponent(/datum/component/hose_connector/inflation) // Comment out to disable all human mob inflation mechanics
+	AddComponent(/datum/component/omen/trait/major/fool)
 
 	// Chicken Stuff
 	var/animal = pick("cow","chicken_brown", "chicken_black", "chicken_white", "chick", "mouse_brown", "mouse_gray", "mouse_white", "lizard", "cat2", "goose", "penguin")
