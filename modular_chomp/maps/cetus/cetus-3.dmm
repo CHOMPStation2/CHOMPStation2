@@ -541,6 +541,19 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
+"abk" = (
+/obj/machinery/alarm{
+	pixel_y = 25
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/maintenance/cetus/shallow/starboard)
+"abl" = (
+/obj/machinery/alarm{
+	pixel_y = 25;
+	name = "N-alarm"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/bridge/Deck3_Corridor)
 "abn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -6436,12 +6449,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "dMT" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -12400,12 +12413,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/crew_quarters/cetus/Galleryf2)
-"hiC" = (
-/obj/machinery/alarm/alarms_hidden{
-	pixel_y = 19
-	},
-/turf/simulated/floor/carpet/graycarpet,
-/area/maintenance/cetus/shallow/starboard)
 "hiN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -17428,6 +17435,10 @@
 /obj/item/storage/toolbox/mechanical,
 /obj/structure/cable/green{
 	icon_state = "5-8"
+	},
+/obj/machinery/photocopier/faxmachine{
+	anchored = 0;
+	department = "Bridge"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
@@ -26994,9 +27005,6 @@
 	icon_state = "4-10"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/alarm/alarms_hidden{
-	pixel_y = 19
-	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "pFp" = (
@@ -31565,8 +31573,8 @@
 /turf/simulated/floor/plating/turfpack/airless,
 /area/solar/cetus/joint)
 "snX" = (
-/obj/machinery/alarm/alarms_hidden{
-	pixel_y = 19
+/obj/machinery/alarm{
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/cetus/shallow/flooded)
@@ -31843,8 +31851,8 @@
 	},
 /area/ai)
 "szq" = (
-/obj/machinery/alarm/alarms_hidden{
-	pixel_y = 19
+/obj/machinery/alarm{
+	pixel_y = 25
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
@@ -32628,9 +32636,9 @@
 /turf/simulated/shuttle/floor/purple,
 /area/shuttle/large_escape_pod1/centcom)
 "taM" = (
-/obj/machinery/alarm/alarms_hidden{
+/obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -20
+	pixel_x = -22
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/ap)
@@ -36944,7 +36952,7 @@
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/photocopier/faxmachine{
 	anchored = 0;
-	department = "Internal Affairs"
+	department = "Secretary's Office"
 	},
 /turf/simulated/floor/wood,
 /area/bridge/secretaryoffice)
@@ -37416,7 +37424,7 @@
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/photocopier/faxmachine{
 	anchored = 0;
-	department = "Internal Affairs"
+	department = "Conference Room"
 	},
 /obj/machinery/light{
 	dir = 4;
@@ -39791,6 +39799,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
 	},
 /turf/simulated/floor/wood,
 /area/bridge/secretaryoffice)
@@ -81048,7 +81060,7 @@ cky
 etf
 rRw
 uYA
-iRe
+abk
 lGM
 uYA
 iRe
@@ -81281,7 +81293,7 @@ rRw
 rRw
 rRw
 mrP
-dhV
+abl
 apg
 dzi
 dhV
@@ -81306,7 +81318,7 @@ etf
 oYg
 rRw
 uYA
-hiC
+iRe
 uYA
 uYA
 hCr
