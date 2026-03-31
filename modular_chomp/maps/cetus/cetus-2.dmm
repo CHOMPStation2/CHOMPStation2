@@ -898,6 +898,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 8
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "abB" = (
@@ -987,6 +991,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "abM" = (
@@ -1004,6 +1011,9 @@
 /obj/effect/floor_decal/spline/plain/three_quarters,
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/quartermaster/warehouse)
@@ -1029,6 +1039,12 @@
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "abP" = (
@@ -1044,12 +1060,24 @@
 /obj/effect/floor_decal/corner/brown/bordercorner2{
 	dir = 5
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "abQ" = (
 /obj/machinery/door/blast/regular{
 	id = "Cargo Storage";
 	name = "Storage Warehouse"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/warehouse)
@@ -1058,6 +1086,12 @@
 /obj/effect/floor_decal/industrial/danger,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -1083,6 +1117,11 @@
 	name = "security camera";
 	dir = 5
 	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "abU" = (
@@ -1095,6 +1134,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/warehouse)
 "abW" = (
@@ -1403,18 +1443,18 @@
 	id = "disposalsorter"
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "act" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
 /turf/simulated/open,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acu" = (
 /obj/structure/railing/grey{
 	dir = 8
 	},
 /turf/simulated/open,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -1432,11 +1472,11 @@
 	dir = 4
 	},
 /turf/simulated/open,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acx" = (
 /obj/effect/floor_decal/industrial/warning/cee,
 /turf/simulated/floor/plating,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acy" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -1466,6 +1506,10 @@
 	},
 /obj/random/donkpocketbox,
 /obj/random/donkpocketbox,
+/obj/machinery/computer/security/telescreen/entertainment{
+	layer = 4;
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Breakroom)
 "acB" = (
@@ -1489,22 +1533,7 @@
 	id = "disposalsorter"
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/warehouse)
-"acE" = (
-/obj/structure/railing/grey{
-	dir = 1
-	},
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/turf/simulated/open,
-/area/quartermaster/warehouse)
-"acF" = (
-/obj/structure/railing/grey{
-	dir = 1
-	},
-/turf/simulated/open,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acG" = (
 /turf/simulated/floor/plating,
 /area/asteroid/cetus/d2)
@@ -1513,7 +1542,7 @@
 	id = "disposalsorter"
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acI" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
@@ -1521,7 +1550,7 @@
 	dir = 1
 	},
 /turf/simulated/open,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acJ" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
@@ -1532,7 +1561,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acL" = (
 /obj/machinery/conveyor{
 	id = "disposalsorter";
@@ -1542,7 +1571,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acM" = (
 /obj/machinery/conveyor{
 	id = "disposalsorter";
@@ -1552,7 +1581,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acN" = (
 /obj/machinery/conveyor{
 	id = "disposalsorter";
@@ -1562,14 +1591,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acO" = (
 /obj/machinery/conveyor{
 	id = "disposalsorter";
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acP" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -1583,7 +1612,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "acQ" = (
 /obj/random/plushielarge,
 /turf/simulated/floor/plating,
@@ -1962,6 +1991,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twojrstar)
+"adC" = (
+/obj/structure/closet/crate,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/warehouse)
+"adD" = (
+/obj/structure/closet/crate,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -27
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/warehouse)
 "adE" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/window/reinforced/full,
@@ -1974,6 +2019,34 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/Xenobiology_Lab)
+"adF" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/warehouse)
+"adG" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/warehouse)
+"adH" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/techfloor,
+/area/quartermaster/warehouse)
 "adI" = (
 /turf/simulated/open,
 /area/rnd/cetus/jrhall)
@@ -1993,6 +2066,24 @@
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
+"adK" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
+"adL" = (
+/turf/simulated/wall/r_wall,
+/area/maintenance/cetus/twocargo)
+"adM" = (
+/obj/machinery/status_display/supply_display,
+/turf/simulated/wall,
+/area/quartermaster/Breakroom)
 "adR" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -3444,6 +3535,10 @@
 "aDp" = (
 /obj/structure/bed/chair/sofa/corp{
 	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
 	},
 /turf/simulated/floor/carpet/brown,
 /area/quartermaster/Breakroom)
@@ -6959,7 +7054,7 @@
 /area/rnd/Research_Lab)
 "bMR" = (
 /turf/simulated/open,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "bMU" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -7731,6 +7826,11 @@
 /obj/machinery/microwave{
 	pixel_y = 7;
 	pixel_x = -3
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/Breakroom)
@@ -12577,7 +12677,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "dFb" = (
 /obj/item/radio/intercom{
 	dir = 4;
@@ -20883,6 +20983,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -30919,6 +31025,11 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 1
 	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 22
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/disposal_sort)
 "jXQ" = (
@@ -31923,9 +32034,6 @@
 /area/medical/medsci)
 "kta" = (
 /obj/machinery/autolathe,
-/obj/machinery/status_display/supply_display{
-	pixel_x = -32
-	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "ktb" = (
@@ -32972,16 +33080,16 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -34933,6 +35041,13 @@
 	dir = 5
 	},
 /obj/random/pottedplant,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/machinery/newscaster{
+	pixel_y = 30
+	},
 /turf/simulated/floor/carpet/brown,
 /area/quartermaster/Breakroom)
 "lxo" = (
@@ -61395,7 +61510,7 @@
 	dir = 4
 	},
 /turf/simulated/open,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "unv" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/Locker_Room)
@@ -62712,7 +62827,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "uIC" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
@@ -68310,7 +68425,7 @@
 	dir = 1
 	},
 /turf/simulated/open,
-/area/quartermaster/warehouse)
+/area/maintenance/cetus/twocargo)
 "wGY" = (
 /obj/structure/cable/green{
 	icon_state = "2-5"
@@ -121357,10 +121472,10 @@ gcP
 aaz
 abI
 tRA
-aby
-abz
-aby
-abz
+vAf
+adL
+vAf
+adL
 aby
 abz
 aby
@@ -121615,7 +121730,7 @@ gcP
 vAf
 abI
 jwB
-abG
+bhV
 acK
 acH
 acD
@@ -121873,7 +121988,7 @@ gcP
 aaz
 abI
 oqx
-abG
+bhV
 acL
 act
 act
@@ -122131,10 +122246,10 @@ aaK
 hwh
 abI
 jwB
-abG
+bhV
 acM
 act
-acE
+acV
 acu
 bMR
 acd
@@ -122392,13 +122507,13 @@ oqx
 acR
 acN
 act
-acF
+acW
 bMR
 bMR
 bMR
 abW
-abL
-abD
+adF
+adC
 abz
 yeT
 yeT
@@ -122650,13 +122765,13 @@ acV
 acS
 dEY
 acI
-acF
+acW
 bMR
 bMR
 bMR
 abW
 abM
-abD
+adD
 abz
 yeT
 oJw
@@ -122912,8 +123027,8 @@ unt
 acw
 bMR
 ace
-abX
-abL
+adH
+adG
 abE
 abz
 yeT
@@ -124202,7 +124317,7 @@ sZR
 fWF
 qoS
 kNx
-vFV
+adK
 abR
 vmg
 rlV
@@ -125746,7 +125861,7 @@ dvf
 dvf
 dvf
 dvf
-dvf
+adM
 dvf
 xVM
 acj
