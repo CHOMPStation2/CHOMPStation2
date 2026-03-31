@@ -1181,9 +1181,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/warehouse)
 "ace" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -1199,6 +1196,11 @@
 	department = "Cargo Bay";
 	departmentType = 2;
 	pixel_y = 22
+	},
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 8;
+	name = "Cargo";
+	sortType = "Cargo"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -1813,6 +1815,7 @@
 	},
 /obj/structure/catwalk,
 /obj/random/mob/mouse,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twojrstar)
 "adn" = (
@@ -1855,6 +1858,124 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/sc/chief)
+"adq" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
+"adr" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
+"ads" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/carpet/brown,
+/area/quartermaster/Breakroom)
+"adt" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/carpet/brown,
+/area/quartermaster/Breakroom)
+"adu" = (
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/up{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/medical/medsci)
+"adv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating,
+/area/medical/medsci)
+"adw" = (
+/obj/structure/disposalpipe/segment,
+/obj/random/plushie,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/solars)
+"adx" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/solars)
+"ady" = (
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -23
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/solars)
+"adz" = (
+/obj/random/junk,
+/obj/structure/disposalpipe/segment,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/solars)
+"adA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/solars)
+"adB" = (
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/engineering/cetus/jointsubstation)
+"adC" = (
+/obj/random/trash_pile,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twojrstar)
+"adD" = (
+/obj/structure/disposalpipe/sortjunction/bodies{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twojrstar)
 "adE" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/window/reinforced/full,
@@ -4757,6 +4878,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twojrstar)
 "bcw" = (
@@ -5431,9 +5553,11 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/sortjunction/bodies{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Breakroom)
@@ -6305,6 +6429,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/random/trash,
 /obj/random/junk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "bDN" = (
@@ -9317,12 +9442,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/catwalk,
 /obj/random/junk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "cFt" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "cFw" = (
@@ -10438,6 +10565,10 @@
 	dir = 9
 	},
 /obj/structure/ladder,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "cWy" = (
@@ -11563,6 +11694,11 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
+/obj/structure/disposalpipe/tagger{
+	name = "Bar";
+	sort_tag = "Bar";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/quartermaster/Breakroom)
 "doD" = (
@@ -11977,6 +12113,9 @@
 /obj/structure/catwalk,
 /obj/machinery/alarm{
 	pixel_y = 23
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
@@ -12475,6 +12614,10 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
@@ -13903,6 +14046,10 @@
 	dir = 5
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "eiv" = (
@@ -20699,6 +20846,7 @@
 /obj/machinery/light/small/yellowed{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "gvZ" = (
@@ -20738,6 +20886,10 @@
 	},
 /obj/effect/floor_decal/corner/brown/bordercorner2{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -24949,6 +25101,7 @@
 "hVk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "hVl" = (
@@ -25530,6 +25683,10 @@
 	dir = 10
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "idS" = (
@@ -27187,7 +27344,13 @@
 /area/quartermaster/disposal_sort)
 "iJO" = (
 /obj/machinery/light/small/emergency,
-/obj/random/plushie,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/structure/disposaloutlet{
+	dir = 1
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "iKi" = (
@@ -31014,6 +31177,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "kdc" = (
@@ -31588,6 +31752,7 @@
 /obj/structure/disposalpipe/down{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/open,
 /area/engineering/cetus/jointsubstation)
 "koZ" = (
@@ -33510,6 +33675,9 @@
 	icon_state = "0-9"
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "laC" = (
@@ -34771,6 +34939,7 @@
 	name = "security camera";
 	dir = 5
 	},
+/obj/random/pottedplant,
 /turf/simulated/floor/carpet/brown,
 /area/quartermaster/Breakroom)
 "lxo" = (
@@ -38150,6 +38319,7 @@
 /obj/structure/cable/green{
 	icon_state = "16-0"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "mBb" = (
@@ -39784,6 +39954,9 @@
 	pixel_x = -5;
 	throw_speed = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/quartermaster/storage)
 "nhk" = (
@@ -40112,6 +40285,7 @@
 	},
 /obj/item/smes_coil,
 /obj/item/smes_coil,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "nlJ" = (
@@ -43878,6 +44052,7 @@
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Asteroid Substation Bypass"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "oEI" = (
@@ -46351,6 +46526,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "prE" = (
@@ -47189,6 +47365,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "pGt" = (
@@ -48066,6 +48243,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/catwalk,
 /obj/random/trash,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "pRs" = (
@@ -48983,6 +49161,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/catwalk,
 /obj/random/mob/mouse,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "qfD" = (
@@ -49470,6 +49649,9 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Breakroom)
@@ -53774,6 +53956,10 @@
 	dir = 5
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "rNQ" = (
@@ -54294,9 +54480,11 @@
 /area/hallway/secondary/entry/D3)
 "rVR" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Breakroom)
@@ -55046,6 +55234,10 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "siX" = (
@@ -55950,6 +56142,7 @@
 	dir = 8;
 	pixel_x = 22
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "sxv" = (
@@ -58757,6 +58950,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "tuQ" = (
@@ -60010,6 +60204,7 @@
 	icon_state = "1-6"
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "tSr" = (
@@ -70432,6 +70627,7 @@
 "xve" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "xvh" = (
@@ -70645,6 +70841,7 @@
 	dir = 8;
 	pixel_x = 26
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twojrstar)
 "xxJ" = (
@@ -70721,6 +70918,9 @@
 /area/security/briefing_room)
 "xzv" = (
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
 "xzw" = (
@@ -90884,13 +91084,13 @@ woF
 ahU
 hyj
 mFa
-xZJ
+adD
 adm
 bcg
 bcg
 xxF
-fKI
-tso
+adC
+adB
 koN
 mAW
 nlu
@@ -90932,10 +91132,10 @@ krs
 oAE
 oic
 siO
-avz
-aCy
-oic
-oic
+adz
+ady
+adx
+adw
 iJO
 fwD
 eiH
@@ -91159,7 +91359,7 @@ tso
 tso
 iMO
 qao
-uqU
+adA
 fwD
 oJw
 fwD
@@ -91675,7 +91875,7 @@ iMO
 iMO
 iMO
 qao
-uqU
+adA
 fwD
 fwD
 fwD
@@ -96377,8 +96577,8 @@ mRQ
 oTY
 aAD
 cQG
-qcc
-oeK
+adv
+adu
 nPa
 gcK
 aMR
@@ -124003,7 +124203,7 @@ fWF
 qoS
 kNx
 vFV
-suB
+adq
 vmg
 rlV
 kmJ
@@ -124260,8 +124460,8 @@ otz
 dvf
 xVM
 ace
-cXj
-suB
+qRV
+adr
 vmg
 rlV
 oJw
@@ -124512,8 +124712,8 @@ xYW
 muM
 dvf
 lxh
-tob
-tob
+adt
+ads
 tob
 acw
 xVM

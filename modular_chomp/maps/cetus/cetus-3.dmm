@@ -554,12 +554,41 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
+"abm" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/threecp)
 "abn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3bar)
+"abo" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/down{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/threecp)
+"abp" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cetus/Galleryf2)
+"abq" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cetus/Galleryf2)
 "abs" = (
 /obj/machinery/conveyor{
 	id = "maintdelivery";
@@ -1265,6 +1294,9 @@
 	},
 /obj/structure/lattice,
 /obj/machinery/light/small,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/Galleryf2)
 "awu" = (
@@ -9598,6 +9630,7 @@
 "fzM" = (
 /obj/structure/table/woodentable,
 /obj/fiftyspawner/cardboard,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
 "fAf" = (
@@ -10466,6 +10499,10 @@
 	},
 /obj/effect/floor_decal/corner/green/bordercorner2{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/Galleryf2)
@@ -13399,6 +13436,9 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/cetus/Galleryf2)
 "hQj" = (
@@ -14879,6 +14919,10 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
 "iLd" = (
@@ -15904,6 +15948,9 @@
 /obj/structure/cable/green{
 	icon_state = "2-9"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
 "jow" = (
@@ -16540,6 +16587,9 @@
 	req_one_access = list(25,28,37)
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/cetus/Galleryf2)
 "jLF" = (
@@ -17266,8 +17316,8 @@
 /obj/structure/transit_tube{
 	icon_state = "D-SW"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/disposalpipe/sortjunction/bodies/flipped{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
@@ -17848,6 +17898,10 @@
 /obj/structure/bed/chair/wood{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
 "kxA" = (
@@ -18390,6 +18444,7 @@
 /obj/structure/transit_tube{
 	icon_state = "S-NW"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
 "kOI" = (
@@ -18744,6 +18799,10 @@
 "kVs" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/wood,
@@ -21633,6 +21692,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
 "mxW" = (
@@ -26698,6 +26758,10 @@
 /area/security/nuke_storage)
 "pvF" = (
 /obj/structure/lattice,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/Galleryf2)
 "pvY" = (
@@ -27014,6 +27078,10 @@
 	},
 /obj/structure/sign/painting/public{
 	pixel_x = 31
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/Galleryf2)
@@ -29102,6 +29170,10 @@
 /obj/structure/table/woodentable,
 /obj/item/threadneedle,
 /obj/item/threadneedle,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
 "qQI" = (
@@ -30443,6 +30515,9 @@
 /obj/effect/floor_decal/corner/green/bordercorner2{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
 "rCB" = (
@@ -30568,6 +30643,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
 "rHE" = (
@@ -30580,6 +30656,10 @@
 /obj/machinery/light,
 /obj/structure/sign/painting/public{
 	pixel_y = -32
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
@@ -35734,6 +35814,10 @@
 	pixel_y = 11
 	},
 /obj/item/radio/subspace,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
 "uIE" = (
@@ -35827,6 +35911,9 @@
 "uLg" = (
 /obj/structure/lattice,
 /obj/machinery/light/small,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/Galleryf2)
 "uLs" = (
@@ -36903,6 +36990,9 @@
 /obj/structure/lattice,
 /obj/structure/sign/painting/public{
 	pixel_y = -32
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/Galleryf2)
@@ -38695,6 +38785,7 @@
 /obj/structure/cable/green{
 	icon_state = "6-9"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
 "wwk" = (
@@ -39322,6 +39413,10 @@
 	pixel_x = -22
 	},
 /obj/structure/transit_tube_pod,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
 "wMC" = (
@@ -40315,6 +40410,7 @@
 /obj/machinery/light/small/fairylights{
 	pixel_y = 10
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/Galleryf2)
 "xtp" = (
@@ -41299,6 +41395,10 @@
 	},
 /obj/structure/table/woodentable,
 /obj/item/tape_roll,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
 "xYU" = (
@@ -41553,6 +41653,9 @@
 "yge" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
@@ -61446,7 +61549,7 @@ cjF
 wsQ
 xcU
 kxn
-bdj
+abp
 rGM
 xsU
 gek
@@ -61703,7 +61806,7 @@ pEq
 haF
 hZB
 hZB
-hZB
+abq
 ldJ
 vED
 mmb
@@ -61961,7 +62064,7 @@ qTS
 cjF
 kKq
 oCe
-bdj
+dvB
 wfN
 iWC
 gQh
@@ -64802,7 +64905,7 @@ hrV
 jnk
 hrV
 ryI
-hrV
+abm
 uow
 pUM
 pjz
@@ -65060,7 +65163,7 @@ oPg
 mkH
 bTE
 jMe
-hrV
+abm
 uow
 uow
 oci
@@ -65318,7 +65421,7 @@ aMA
 mkH
 mTD
 jMe
-hrV
+abm
 uow
 uQQ
 xWw
@@ -65576,7 +65679,7 @@ aMA
 mkH
 hrV
 jMe
-hrV
+abo
 uow
 mhO
 vwJ

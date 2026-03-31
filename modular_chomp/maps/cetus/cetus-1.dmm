@@ -7685,11 +7685,13 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/cetus/meteor/carbonresearch)
 "dym" = (
-/obj/structure/disposalpipe/junction{
-	dir = 8
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
+	},
+/obj/structure/disposalpipe/sortjunction{
+	dir = 8;
+	sortType = "Bar";
+	name = "Bar"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
@@ -18680,13 +18682,11 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway2)
 "jpg" = (
-/obj/structure/disposalpipe/sortjunction{
-	dir = 8;
-	sortType = "Bar";
-	name = "Bar"
-	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/railing,
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
 "jpp" = (
