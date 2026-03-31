@@ -35,6 +35,7 @@
 	var/last_chew = 0
 
 /mob/living/carbon/human/Initialize(mapload, var/new_species = null)
+	AddComponent(/datum/component/omen/trait/major/fool)
 	if(!dna)
 		dna = new /datum/dna(null)
 		// Species name is handled by set_species()
