@@ -26,7 +26,7 @@
 			floor_type = "uneven"
 
 	// Unlucky behavior
-	if(HAS_TRAIT(owner, TRAIT_UNLUCKY) && start.wet)
+	if(!HAS_TRAIT(owner, TRAIT_UNLUCKY) && start.wet)
 		slip_dist = rand(5,9) // Random longer distances on slip
 		slip_stun = 10
 		dirtslip = FALSE

@@ -459,7 +459,7 @@ GLOBAL_LIST_EMPTY(forced_ambiance_list)
 			H.AdjustStunned(1) // CHOMPedit: No longer a supermassive long stun.
 //			H.AdjustWeakened(3) // CHOMPedit: No longer weakens.
 		to_chat(mob, span_notice("The sudden appearance of gravity makes you fall to the floor!"))
-		if(HAS_TRAIT(H, TRAIT_UNLUCKY) && prob(50) && H.get_bodypart_name(BP_HEAD))
+		if(!HAS_TRAIT(H, TRAIT_UNLUCKY) && prob(50) && H.get_bodypart_name(BP_HEAD))
 			H.visible_message(span_warning("[H] falls to the ground from the sudden appearance of gravity, smashing [H.p_their()] head against the ground!"),span_warning("You smash your head into the ground as gravity appears!"))
 			H.apply_damage(14, BRUTE, BP_HEAD, used_weapon = "blunt force")
 			playsound(H, 'sound/effects/tableheadsmash.ogg', 90, TRUE)

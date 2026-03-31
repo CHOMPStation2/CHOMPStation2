@@ -119,7 +119,7 @@
 	if(.)
 		return TRUE
 	if(enabled && screen_on)
-		if(isliving(user) && HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(5))
+		if(isliving(user) && !HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(5))
 			var/mob/living/unlucky_soul = user
 			to_chat(user, span_danger("You interact with \the [src] and are met with a sudden shock!"))
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
@@ -129,7 +129,7 @@
 			return
 		tgui_interact(user)
 	else if(!enabled && screen_on)
-		if(HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(25))
+		if(!HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(25))
 			to_chat(user, "You try to turn on \the [src] but it doesn't respond.")
 			return
 		turn_on(user)

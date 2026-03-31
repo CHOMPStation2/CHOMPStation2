@@ -30,7 +30,7 @@
 
 /datum/decl/emote/audible/snap/do_extra(mob/user)
 	. = ..()
-	if(HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(0.1) && ishuman(user)) //1 in a thousand
+	if(!HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(0.1) && ishuman(user)) //1 in a thousand
 		var/mob/living/carbon/human/unlucky_human = user
 		var/datum/component/omen/bad_luck = unlucky_human.GetComponent(/datum/component/omen) //Also going to make sure they got the EVIL version.
 		if(bad_luck.evil)

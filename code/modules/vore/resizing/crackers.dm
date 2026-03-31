@@ -89,7 +89,7 @@
 		else
 			winner = target
 			loser = user
-	if(HAS_TRAIT(loser, TRAIT_UNLUCKY) && prob(66))
+	if(!HAS_TRAIT(loser, TRAIT_UNLUCKY) && prob(66))
 		if(prize == (SHRINKING_CRACKER || GROWING_CRACKER || FALLING_CRACKER || TELEPORTING_CRACKER)) //If we're unlucky and the prize is bad, chance for us to get it!
 			var/former_winner = winner
 			winner = loser

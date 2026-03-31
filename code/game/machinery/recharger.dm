@@ -138,7 +138,7 @@ GLOBAL_LIST_INIT(recharger_battery_exempt, list(
 	if((!small && is_type_in_list(G, GLOB.allowed_recharger_devices)) || (small && is_type_in_list(G, GLOB.allowed_wallcharger_devices)))
 		if(!do_allowed_checks(G, user))
 			return
-		if(HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(10))
+		if(!HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(10))
 			user.visible_message("[user] inserts [charging] into [src] backwards!", "You insert [charging] into [src] backwards!")
 			user.drop_item()
 			G.forceMove(get_turf(src))

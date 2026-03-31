@@ -234,7 +234,7 @@
 		else
 			stuff.forceMove(drop_location())
 	//Now here's the kicker
-	if(HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(5)) //1 in 20 chance for your mail to be rigged with a glitter bomb
+	if(!HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(5)) //1 in 20 chance for your mail to be rigged with a glitter bomb
 		to_chat(user, span_bolddanger("You open the mail and - OH SHIT IS THAT A BOMB!"))
 		var/obj/item/grenade/confetti/confetti_nade = new /obj/item/grenade/confetti()
 		confetti_nade.name = "Pipebomb"
