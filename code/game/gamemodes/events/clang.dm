@@ -119,7 +119,7 @@
 
 /obj/effect/immovablerod/proc/hunt_unlucky()
 	for(var/mob/living/unlucky_bugger in orange(7,src))
-		if(!HAS_TRAIT(unlucky_bugger, TRAIT_UNLUCKY))
+		if(HAS_TRAIT(unlucky_bugger, TRAIT_UNLUCKY))
 			has_hunted_unlucky = TRUE
 			walk(src, 0)
 			//stone_grinding.ogg
