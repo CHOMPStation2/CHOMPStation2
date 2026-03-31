@@ -25,9 +25,6 @@
 /datum/component/omen/trait/major/fool
 	damage_mod = 0.15
 
-/mob/living/carbon/human/Initialize(mapload, var/new_species = null)
-	AddComponent(/datum/component/omen/trait/major/fool)
-
 /datum/component/omen/Initialize(incidents_left, luck_mod, damage_mod, evil, safe_disposals, vorish)
 	if(!isliving(parent))
 		return COMPONENT_INCOMPATIBLE
