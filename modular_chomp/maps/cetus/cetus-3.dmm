@@ -548,17 +548,18 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/starboard)
 "abl" = (
-/obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
-	},
-/turf/simulated/floor/carpet/graycarpet,
-/area/bridge/Deck3_Corridor)
-"abm" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/threecp)
+"abm" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/down{
+	dir = 8
 	},
 /turf/simulated/open,
 /area/maintenance/cetus/threecp)
@@ -569,18 +570,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3bar)
 "abo" = (
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/obj/structure/disposalpipe/down{
-	dir = 8
-	},
-/turf/simulated/open,
-/area/maintenance/cetus/threecp)
-"abp" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
-"abq" = (
+"abp" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -589,6 +582,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
+"abq" = (
+/obj/machinery/alarm{
+	pixel_y = 25;
+	name = "N-alarm"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/bridge/Deck3_Corridor)
 "abs" = (
 /obj/machinery/conveyor{
 	id = "maintdelivery";
@@ -61549,7 +61549,7 @@ cjF
 wsQ
 xcU
 kxn
-abp
+abo
 rGM
 xsU
 gek
@@ -61806,7 +61806,7 @@ pEq
 haF
 hZB
 hZB
-abq
+abp
 ldJ
 vED
 mmb
@@ -64905,7 +64905,7 @@ hrV
 jnk
 hrV
 ryI
-abm
+abl
 uow
 pUM
 pjz
@@ -65163,7 +65163,7 @@ oPg
 mkH
 bTE
 jMe
-abm
+abl
 uow
 uow
 oci
@@ -65421,7 +65421,7 @@ aMA
 mkH
 mTD
 jMe
-abm
+abl
 uow
 uQQ
 xWw
@@ -65679,7 +65679,7 @@ aMA
 mkH
 hrV
 jMe
-abo
+abm
 uow
 mhO
 vwJ
@@ -81396,7 +81396,7 @@ rRw
 rRw
 rRw
 mrP
-abl
+abq
 apg
 dzi
 dhV
