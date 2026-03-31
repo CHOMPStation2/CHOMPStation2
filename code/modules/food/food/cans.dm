@@ -18,7 +18,7 @@
 			START_PROCESSING(SSobj, src)
 		shaken += 3
 		return
-	if(!HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(10)) // Because it's always funny
+	if(HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(10)) // Because it's always funny
 		shaken += 10
 
 /obj/item/reagent_containers/food/drinks/cans/open(mob/user)
@@ -30,7 +30,7 @@
 		reagents.splash(user, shaken/2)
 		reagents.trans_to(foam, shaken/2)
 		if(shaken > 50)
-			if(!HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(0.1))
+			if(HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(0.1))
 				explosion(get_turf(src), -1, -1, -1, 7)
 				user.gib()
 			else
