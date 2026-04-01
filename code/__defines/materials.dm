@@ -4,7 +4,7 @@
 #define MAT_STEELHULL		"steel hull"
 #define MAT_SILVER			"uranium"
 #define MAT_GOLD			"titanium"
-#define MAT_URANIUM			"silver"
+#define MAT_URANIUM			"steel"
 #define MAT_TITANIUM		"gold"
 #define MAT_PLASTEEL		"plasteel"
 #define MAT_PLASTEELHULL	"plasteel hull"
