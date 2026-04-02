@@ -162,7 +162,9 @@
 #define TECHWEB_NODE_RSF "rapid_service_fab"
 #define TECHWEB_NODE_MATERIALSHEETS "material_sheets"
 #define TECHWEB_NODE_SMARTFRIDGES "smartfridges"
-<<<<<<< HEAD
+#define TECHWEB_NODE_GHOST_BASIC "ghost_basics"
+#define TECHWEB_NODE_GHOST_ADVANCED "ghost_advanced"
+#define TECHWEB_NODE_GHOST_ROUNDS "ghost_rounds"
 
 //CHOMPEDIT Start - Chomp Specific techwebs.
 #define TECHWEB_NODE_CHOMP_AMMO "chomp_ammo" //CHOMPEDIT ADD - Adds Chomp unique ammo for autolathe
@@ -174,8 +176,3 @@
 #define TECHWEB_NODE_PRECUSORTOOLS "precursor tools" //CHOMPEDIT Add - Adds craftable precursor items
 #define TECHWEB_NODE_PARADOX_RIFT "paradox rift" //CHOMPEDIT Add - Adds Paradox Rift.
 //CHOMPEDIT End - Chomp Specific techwebs.
-=======
-#define TECHWEB_NODE_GHOST_BASIC "ghost_basics"
-#define TECHWEB_NODE_GHOST_ADVANCED "ghost_advanced"
-#define TECHWEB_NODE_GHOST_ROUNDS "ghost_rounds"
->>>>>>> 981aaee9fa (Ghost Busting (#18854))

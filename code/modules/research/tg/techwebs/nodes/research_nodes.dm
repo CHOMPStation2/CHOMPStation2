@@ -177,7 +177,6 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
-<<<<<<< HEAD
 // CHOMPEnable End
 
 /*/datum/techweb_node/paradox_rift //CHOMPEdit Start
@@ -191,8 +190,6 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
 */ //CHOMPEdit End
-=======
-*/
 
 //Ghost catching stuff! Disabled on Virgo, but used downstream.
 /datum/techweb_node/ghost_basic
@@ -239,4 +236,3 @@
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_SECURITY)
 	//required_experiments = list(ADD_A_GOOD_EXPERIMENT_HERE)
 	hidden = TRUE //Hidden on Virgo
->>>>>>> 981aaee9fa (Ghost Busting (#18854))
