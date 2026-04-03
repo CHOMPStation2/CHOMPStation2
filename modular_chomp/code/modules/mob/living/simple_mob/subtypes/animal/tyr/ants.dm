@@ -196,7 +196,7 @@
 		strength = 15
 	)
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro //secondary spawner
+/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro //smol
 	name = "mhydro ant"
 	icon_state = "mhydro_ant"
 	icon_living = "mhydro_ant"
@@ -208,9 +208,14 @@
 		/obj/item/stack/material/mhydrogen = 4
 		)
 	size_multiplier = 0.5
-	movement_cooldown = -1
+	mob_size = MOB_MINISCULE
+	pass_flags = PASSTABLE
+	layer = MOB_LAYER
+	density = 0
+	melee_damage_lower = 6
+	melee_damage_upper = 6
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/painite
+/mob/living/simple_mob/animal/tyr/mineral_ants/painite //flames
 	name = "painite metal ant"
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 	icon_state = "painite_ant"
@@ -231,7 +236,7 @@
 		to_chat(L, span_danger("You've been burned by \the [src]!"))
 		L.ignite_mob()
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/bronze
+/mob/living/simple_mob/animal/tyr/mineral_ants/bronze //spawns a legion
 	name = "bronze metal ant"
 	icon_state = "bronze_ant"
 	icon_living = "bronze_ant"
@@ -307,7 +312,7 @@
 	new build_type(T)
 	return TRUE
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/silver
+/mob/living/simple_mob/animal/tyr/mineral_ants/silver //transparent
 	name = "silver ant"
 	icon_state = "silver_ant"
 	icon_living = "silver_ant"
@@ -319,29 +324,11 @@
 		/obj/item/stack/material/silver = 10
 		)
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/silver/bullet_act(obj/item/projectile/P)
-	if(prob(45))
-		visible_message(span_danger("The [P.name] gets reflected by [src]'s armor!"), \
-						span_userdanger("The [P.name] gets reflected by [src]'s armor!"))
-
-		// Find a turf near or on the original location to bounce to
-		if(P.starting)
-			var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
-			var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
-			var/turf/curloc = get_turf(src)
-
-			// redirect the projectile
-			P.redirect(new_x, new_y, curloc, src)
-			P.reflected = 1
-
-			return -1 // complete projectile permutation
-
-	return (..(P))
-
-/mob/living/simple_mob/animal/tyr/mineral_ants/gold
+/mob/living/simple_mob/animal/tyr/mineral_ants/gold //emp on death
 	name = "gold ant"
 	icon_state = "gold_ant"
 	icon_living = "gold_ant"
+	desc = "A large ant with a metallic golden rear end. Is crackling with lightning."
 	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_burn
 	butchery_loot = list(\
 		/obj/item/stack/material/gold = 18\
@@ -349,20 +336,24 @@
 	harvest_results = list(
 		/obj/item/stack/material/gold = 10
 		)
+	var/exploded = FALSE
+	var/explosion_delay_lower	= 5 SECOND	// Lower bound for explosion delay.
+	var/explosion_delay_upper	= 8 SECONDS	// Upper bound.
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/gold/apply_melee_effects(var/atom/A)
-	if(isliving(A))
-		var/mob/living/L = A
-		if(prob(33))
-			A.emp_act(4) //The weakest strength of EMP
-			playsound(src, 'sound/weapons/egloves.ogg', 75, 1)
-			L.Weaken(4)
-			L.Stun(4)
-			L.stuttering = max(L.stuttering, 4)
-			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
-			s.set_up(5, 1, L)
-			s.start()
-			visible_message(span_danger("The grub releases a powerful shock!"))
+/mob/living/simple_mob/animal/tyr/mineral_ants/gold/proc/explode()
+	if(src && !exploded)
+		visible_message(span_danger("\The [src]'s body detonates!"))
+		exploded = TRUE
+		empulse(src, 1, 2, 0, 0)
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/gold/death()
+	visible_message(span_critical("\The [src]'s body begins to rupture!"))
+	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
+	animate(src, color = "#000000", time = 0.1 SECONDS, loop = ceil(delay/2))
+	animate(color = "#FF0000", time = 0.1 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(explode)), delay, TIMER_DELETE_ME)
+	return ..()
+
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/queen //the nurses of the ants
 	name = "queen ant"

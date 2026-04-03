@@ -1,0 +1,25 @@
+2026-04-01:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: depdendency up
+  - admin: ports TG spawn verb UI
+2026-04-02:
+  Diana:
+  - balance: Backpacks no longer fit in space or voidsuit storage slots.
+  - bugfix: Water no longer explodes your lungs
+  FluffMedic:
+  - rscadd: Prismatic Fireflies readded to tyr.
+  - balance: gold ant no longer has lightning on it's melee. Delayed short ranged
+      EMP on death
+  - balance: silver ants no longer reflect lasers. Now slightly transparent
+  - balance: Mhydro ant's damage is halved. Now must be clicked on to be shot. Can
+      exist in other ant spaces
+  - balance: The gatekeeper is reduced to a single projectile
+  - maptweak: Hidden Tyr entrance is altered, alongside the tyr tunnels in general
+  Will:
+  - bugfix: Floorpainter missing autolathe tag
+  Will, Kash:
+  - rscadd: Doppler array explosive experiments
+  zeskorion:
+  - bugfix: more cetus fixes
+  - maptweak: cetus cargo expanded and reworked
+  - maptweak: implemented body sorting on cetus, disposals are now safer to use
