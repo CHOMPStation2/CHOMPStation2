@@ -10,11 +10,25 @@
 "ac" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/planet/tyr/precursorruins/hallway)
+"ad" = (
+/obj/structure/boulder,
+/obj/item/stack/material/steel,
+/turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
+/area/planet/tyr/ac_mainbase)
 "ae" = (
 /obj/structure/closet,
 /obj/item/gun/energy/kinetic_accelerator,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
+"af" = (
+/obj/item/material/shard{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/structure/boulder,
+/obj/item/stack/material/steel,
+/turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
+/area/planet/tyr/ac_mainbase)
 "ag" = (
 /turf/simulated/tyracid,
 /area/planet/tyr/precursorruins/holdcellA)
@@ -986,16 +1000,6 @@
 "gT" = (
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
 /area/planet/tyr/ac_mainbase)
-"gU" = (
-/obj/item/material/shard{
-	pixel_x = 5;
-	pixel_y = 3
-	},
-/obj/structure/boulder,
-/obj/item/stack/rods,
-/obj/item/stack/material/cyborg/steel,
-/turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
-/area/planet/tyr/ac_mainbase)
 "gV" = (
 /turf/simulated/shuttle/floor/alien,
 /area/planet/tyr/ancient_ruins/four)
@@ -1125,15 +1129,6 @@
 	},
 /obj/structure/boulder,
 /obj/item/stack/rods,
-/turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
-/area/planet/tyr/ac_mainbase)
-"hy" = (
-/obj/item/material/shard{
-	pixel_x = 5;
-	pixel_y = 3
-	},
-/obj/structure/boulder,
-/obj/item/stack/material/cyborg/steel,
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
 /area/planet/tyr/ac_mainbase)
 "hz" = (
@@ -1348,11 +1343,6 @@
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
-/area/planet/tyr/ac_mainbase)
-"jP" = (
-/obj/structure/boulder,
-/obj/item/stack/material/cyborg/steel,
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
 /area/planet/tyr/ac_mainbase)
 "jQ" = (
@@ -65397,9 +65387,9 @@ gK
 gK
 ll
 gN
-jP
 gP
 gP
+ad
 gP
 gN
 gN
@@ -65655,11 +65645,11 @@ gK
 gK
 aL
 gP
+ad
 gP
 gP
 gP
-jP
-gP
+ad
 gN
 gz
 gz
@@ -65912,7 +65902,7 @@ gK
 gK
 gK
 aL
-jP
+gP
 hw
 gP
 hw
@@ -66170,10 +66160,10 @@ gK
 gK
 gK
 aL
-gP
+ad
 hw
 lj
-gP
+ad
 gP
 hx
 gP
@@ -66430,11 +66420,11 @@ gK
 aL
 gT
 hw
-gP
+ad
 gP
 gP
 hw
-gP
+ad
 aL
 gI
 gI
@@ -66691,7 +66681,7 @@ gT
 gT
 gP
 gP
-hy
+hw
 gT
 bx
 gI
@@ -66946,8 +66936,8 @@ gK
 bx
 gT
 gT
-jP
-hw
+gP
+af
 gT
 gT
 gT
@@ -67202,7 +67192,7 @@ gK
 gK
 gK
 bx
-gP
+ad
 hw
 gP
 gP
@@ -67460,13 +67450,13 @@ gK
 gK
 gK
 aL
-jP
+gP
 hw
 gP
 gP
 gP
 gP
-gP
+ad
 aL
 gI
 gI
@@ -67720,11 +67710,11 @@ gK
 aL
 gP
 lk
-gP
+ad
 gP
 jQ
 gP
-gU
+hx
 aL
 aL
 aL
@@ -67977,10 +67967,10 @@ gK
 gK
 aL
 gP
+ad
+hw
+hw
 gP
-hw
-hw
-jP
 gP
 gP
 gz
@@ -68238,7 +68228,7 @@ gN
 gP
 gP
 gP
-gP
+ad
 gP
 gN
 gz
