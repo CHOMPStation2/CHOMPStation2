@@ -131,21 +131,6 @@
 	speed = 0.3
 	range = 2
 
-/obj/item/projectile/energy/neurotoxin/toxic/tyr_flora
-	damage = 20 //deals 10 damage with the armor I am balancing for
-	agony = 0
-	speed = 12
-	armor_penetration = 50
-	penetrating = 5
-
-/obj/item/projectile/energy/blob/tyrflora
-	damage = 20 //10 with intended armor
-	speed = 12
-	armor_penetration = 50
-	check_armour = "bio"
-	damage_type = BURN
-	my_chems = list(REAGENT_ID_NEUROTOXIC_PROTEIN)
-
 /obj/item/projectile/energy/agate_lighting
 	damage = 15
 	damage_type = ELECTROCUTE

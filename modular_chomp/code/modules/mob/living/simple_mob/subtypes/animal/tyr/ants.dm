@@ -248,11 +248,14 @@
 		)
 	meat_amount = 3
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/bronze/death()
-	visible_message(span_warning("\The [src]'s abdomen splits as it rolls over, spiderlings crawling from the wound.") )
-	for(var/i = 1 to 8)
-		new /obj/effect/spider/spiderling/antling (src.loc)
-	..()
+	special_attack_min_range = 1
+	special_attack_max_range = 7
+	special_attack_cooldown = 10 SECONDS
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/bronze/do_special_attack(atom/A)
+	for(var/mob/living/L in orange(src, 7))
+		if(IIsAlly(L))
+			L.add_modifier(/datum/modifier/technomancer/haste, 3, src)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/graphite //nothing special here
 	name = "graphite ant"
@@ -579,3 +582,6 @@ ANT STRUCTURES
 	/mob/living/simple_mob/animal/tyr/mineral_ants/silver,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/gold)
 	faction = FACTION_TYR_ANT
+
+/obj/effect/spider/spiderling/antling/created
+	faction = FACTION_TYR

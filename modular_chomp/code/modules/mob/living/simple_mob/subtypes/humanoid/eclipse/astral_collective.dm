@@ -225,8 +225,8 @@
 	attack_armor_pen = 20
 	melee_attack_delay = 1.5 SECONDS
 
-	health = 200
-	maxHealth = 200
+	health = 100
+	maxHealth = 100
 
 	special_attack_cooldown = 7 SECONDS
 	special_attack_min_range = 0
