@@ -111,16 +111,29 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_bonus
 
 	special_attack_min_range = 0
-	special_attack_max_range = 2
+	special_attack_max_range = 4
 	special_attack_cooldown = 10 SECONDS
 
 	color = "#FF7D51"
 	glow_range = 5
 	glow_intensity = 2
 	glow_toggle = TRUE
+	var/exploded = FALSE
+	var/explosion_delay_lower	= 2 SECOND	// Lower bound for explosion delay.
+	var/explosion_delay_upper	= 3 SECONDS	// Upper bound.
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/agate/proc/explode()
+	if(src && !exploded)
+		visible_message(span_danger("\The [src]'s body detonates!"))
+		exploded = TRUE
+		explosion(src.loc, 3, 2, 1, 1)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/agate/do_special_attack(atom/A)
-	explosion(src.loc, 2, 1, 1, 1)
+	visible_message(span_critical("\The [src]'s body begins to rupture!"))
+	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
+	animate(src, color = "#000000", time = 0.1 SECONDS, loop = ceil(delay/2))
+	animate(color = "#FF0000", time = 0.1 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(explode)), delay, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/quartz //irl quartz is apparently tough?
 	name = "quartz metal ant"
