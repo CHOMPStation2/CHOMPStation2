@@ -10,17 +10,41 @@
 "ac" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/planet/tyr/precursorruins/hallway)
+"ad" = (
+/obj/item/prop/tyrlore/disc_seven,
+/turf/simulated/tyracid/supernova,
+/area/planet/tyr/precursorruins/hallway)
 "ae" = (
 /obj/structure/closet,
 /obj/item/gun/energy/kinetic_accelerator,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
+"af" = (
+/obj/structure/railing/overhang/grey{
+	dir = 8
+	},
+/obj/structure/table/darkglass,
+/obj/item/prop/tyrlore/disc_eight,
+/turf/simulated/shuttle/floor/alienplating,
+/area/planet/tyr/precursorruins/hallway)
 "ag" = (
 /turf/simulated/tyracid,
 /area/planet/tyr/precursorruins/holdcellA)
 "ah" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/planet/tyr/precursorruins/seccore)
+"ai" = (
+/obj/structure/railing/overhang/grey{
+	dir = 8
+	},
+/obj/structure/table/darkglass,
+/obj/item/prop/tyrlore/disc_six,
+/turf/simulated/shuttle/floor/alienplating,
+/area/planet/tyr/precursorruins/hallway)
+"aj" = (
+/obj/item/prop/tyrlore/disc_five,
+/turf/simulated/shuttle/floor/alien,
+/area/planet/tyr/precursorruins/hallway)
 "ao" = (
 /obj/structure/inflatable/door,
 /turf/simulated/floor/outdoors/desert_planet/sand/tyr,
@@ -9270,11 +9294,11 @@ ac
 oZ
 pd
 pK
+ai
 po
 po
 po
-po
-po
+af
 pm
 pd
 oZ
@@ -37132,7 +37156,7 @@ oY
 ot
 ot
 ot
-ot
+aj
 ot
 ot
 ot
@@ -42836,7 +42860,7 @@ ix
 ix
 ix
 ix
-ix
+ad
 ix
 ix
 ix

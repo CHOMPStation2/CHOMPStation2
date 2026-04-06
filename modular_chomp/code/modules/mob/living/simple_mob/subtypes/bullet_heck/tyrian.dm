@@ -219,6 +219,8 @@
 	name = "farm expirment"
 	icon_state = "slime_boss"
 	icon_living = "slime_boss"
+	health = 1200
+	maxHealth = 1200
 	special_attack_cooldown = 3 SECONDS
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tyrbosses/expirments/slime/bullet_act(obj/item/projectile/P)

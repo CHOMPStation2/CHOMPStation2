@@ -7,7 +7,7 @@
 	icon_living = "medi"
 	icon_dead = "medi"
 	taser_kill = 0
-
+	catalogue_data = list(/datum/category_item/catalogue/fauna/astralcollective)
 	faction = FACTION_ECLIPSE
 	movement_cooldown = 0
 
@@ -111,6 +111,12 @@
 
 
 	var/expirmental
+
+/datum/category_item/catalogue/fauna/astralcollective
+	name = "Astral Collective"
+	desc = "A faction that lingers upon and beyond the frontier of space. Abnormal obsessive over precursor technology and \
+	things that seem abnormal."
+	value = CATALOGUER_REWARD_EASY
 
 /mob/living/simple_mob/humanoid/astral_collective/Initialize(mapload)
 	. = ..()

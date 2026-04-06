@@ -7,6 +7,10 @@
 		/obj/item/prop/tyrlore/disc_two = 1,
 		/obj/item/prop/tyrlore/disc_three = 1,
 		/obj/item/prop/tyrlore/disc_four = 1,
+		/obj/item/prop/tyrlore/disc_five = 1,
+		/obj/item/prop/tyrlore/disc_six = 1,
+		/obj/item/prop/tyrlore/disc_seven = 1,
+		/obj/item/prop/tyrlore/disc_eight = 1,
 	)
 
 /datum/experiment/scanning/points/giga_power_study

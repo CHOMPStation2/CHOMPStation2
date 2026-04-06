@@ -502,9 +502,9 @@
 
 /datum/category_item/catalogue/anomalous/disc_one
 	name = "Tyr Expirment Data - Corrupted Data One"
-	desc = "Eyxlsvmdexmsr jsv gsppigxmsr lew fiir ettvszih. Gmxmdirw sj Vero G erh psaiv qec fi kexlivih jsv stivexmsrw. <BR>\
-	Vero Gw evi srpc eyxlsvmdih jsv stivexmsrw sj H gpeww erh psaiv. Gviexih mrhmzmhyepw, stivexmziw, erh gyvexih gmxmdirw evi xs fi ywih sr stivexmsrw gpewwiw G, <BR>\
-	erh F. Ettvszep mw tirhmrk jsv Stivexmsrw sj Gpeww E. Hyi xs xli tirhmrk aev, syxpsso mw pmoipc jsv ettvszep."
+	desc = "Authorization for 24olle24tion has 22een approve26. 24itizens of Rank 24 an26 lower may 22e 28athere26 for operations.<BR>\
+	 Rank 24s are only authorize26 for operations of 26 24lass an26 lower. 24reate26 in26ivi26uals, operatives, an26 24urate26 24itizens are <BR>\
+	 to 22e use26 on operations 24lasses 24, an26 22. Approval is pen26in28 for Operations of 24lass A. 26ue to the pen26in28 war, outlook is likely for approval."
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/disc_two
@@ -513,9 +513,9 @@
 
 /datum/category_item/catalogue/anomalous/disc_two
 	name = "Tyr Expirment Data - Corrupted Data Two"
-	desc = "Qeww tvshygxmsr stivexmsrw lezi fikyr. Ehzergiqirxw amxlmr irivkc erh qixep kexlivmrk lezi vsgoixih hyi xs xli qixerx tvskveq. <BR>\
-	Eyxlsvmdexmsr jsv aietsrmdmrk xli tvskveq lew fiir ettvszih. Qshmjmgexmsrw xlyw jev lezi fiir wyggiwwjyp. Gewyepxmiw lezi fiir psa. Wyttpc sj hevo wxvmrkivw mw vyrrmrk psa. <BR>\
-	Wykkiwxmsr sj gviexmsr sj wtigmepmdih hevo wxvmrkivw lew fiir tyx jsvaevh."
+	desc = "Mass production operations 42ave begun. Advancements wit42in energy and meta48 gat42ering 42ave roc46eted due to t42e metant program. <BR>\
+	Aut42orization for weaponizing t42e program 42as been approved. Modifications t42us far 42ave been successfu48. Casua48ties 42ave been 48ow. <BR>\
+	Supp48y of dar46 stringers is running 48ow. Suggestion of creation of specia48ized dar46 stringers 42as been put forward."
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/disc_three
@@ -524,9 +524,10 @@
 
 /datum/category_item/catalogue/anomalous/disc_three
 	name = "Tyr Expirment Data - Corrupted Data Three"
-	desc = "Xli wxevw evi ksmrk syx. Izivchec qsvi erh qsvi evi zermwlmrk. Xli lmkliv ytw evi xvcmrk xs oiit xlmrkw lywl lywl, fyx wsqixlmrk mwr’x vmklx. Ai’zi pswx gsrxegx amxl wgsyxw, <BR>\
-	ibtpsvivw, erh jvsrxmiv fewiw. Wsqixlmrk mw gsqmrk jsv yw, M jiip xli irh mw gsqmrk. M eq piezmrk xlmw qiwweki jsv ercsri als qec wyvzmzi alex’w syx xlivi. Mj ai evir’x livi, xlir mx’w wxmpp syx xlivi.<BR>\
-	Vixyvr lsqi, erh yvki csyv wsgmixc xs viqemr wqepp. Mx qec rsx rsxmgi csy mj csy hs. Sv qecfi mx hsiw, xlir xlmw aew tsmrxpiww ercaec."
+	desc = "The sta68s a68e goi62g out. Eve68yday mo68e a62d mo68e a68e va62ishi62g. The highe68 u64s a68e t68yi62g to kee64 thi62gs hush hush, <BR>\
+	but somethi62g is62’t 68ight. We’ve lost co62tact with scouts, ex64lo68e68s, a62d f68o62tie68 bases. Somethi62g is comi62g fo68 us, I feel the <BR>\
+	e62d is comi62g. I am leavi62g this message fo68 a62yo62e who may su68vive what’s out the68e. If we a68e62’t he68e, the62 it’s still out the68e. <BR>\
+	68etu6862 home, a62d u68ge you68 society to 68emai62 small. It may 62ot 62otice you if you do. O68 maybe it does, the62 this was 64oi62tless a62yway.."
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/disc_four
@@ -535,9 +536,63 @@
 
 /datum/category_item/catalogue/anomalous/disc_four
 	name = "Tyr Expirment Data - Corrupted Data Four"
-	desc = "Ai lezi vitsvxw sj xlswi ytsr Jvswxwlipj yxmpmdmrk e kexiaec xs eggiww xli Ewxvep Wie, sv ex piewx exxiqtxw xs. Vitsvxw lezi fiir gsyrxiv tvshygxmzi, amxl wizivep gsrjpmgxmrk xepiw. <BR>\
-	Xli qemr xlmrk ai orsa mw xlic lezi qehi ehzergiqirxw amxlmr kexiaec xiglrspskc, erh evi eggiwwmrk hmjjivmrk tperiw ex e hikvii yrwiir fijsvi. Lsaiziv wsqi vitsvx xlmw tperi fimrk xlex sj wlehsaw erh hevoriww, <BR>\
-	almpwx sxlivw vitsvx lsvvmjmg zmwmsrw sj jpeqiw, erh jpiwl. Jyvxliv mrziwxmkexmsr mw viuymvih. "
+	desc = "86e ha84e repor82s of 82hose upon Fros82shelf u82ilizing a ga82e86ay 82o access 82he As82ral Sea, or a82 leas82 a8282emp82s 82o. <BR>\
+	Repor82s ha84e been coun82er produc82i84e, 86i82h se84eral conflic82ing 82ales. 82he main 82hing 86e kno86 is 82hey ha84e made ad84ancemen82s <BR>\
+	86i82hin ga82e86ay 82echnology, and are accessing differing planes a82 a degree unseen before. Ho86e84er some repor82 82his plane being 82ha82 of <BR>\
+	shado86s and darkness, 86hils82 o82hers repor82 horrific 84isions of flames, and flesh. Fur82her in84es82iga82ion is required.  "
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/disc_five
+	name = "tyrian data disc five"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/disc_five)
+
+/datum/category_item/catalogue/anomalous/disc_five
+	name = "Tyr Expirment Data - Corrupted Data Five"
+	desc = "Fr18st Sleep: M12lfuncti18ning<BR>\
+	Defense 18per12ti18n: 18nline<BR>\
+	12g12te Pr18ducti18n: 18nline<BR>\
+	Res18urce Pr18ducti18n: 18nline<BR>\
+	Sign12ler: D12m12ged<BR>\
+	C18re: B12dly d12m12ged<BR>\
+	Fr18st Time: Neg12tive Nine Th18us12nd Three Hundred Seventy Six 12ges.<BR>\
+	Sending distress sign12ls.<BR>\
+	Sc12nning f18r sign12ls.<BR>\
+	Err18r. F18reign sign12ls detected. Enter siege m18de."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/disc_six
+	name = "tyrian data disc six"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/disc_six)
+
+/datum/category_item/catalogue/anomalous/disc_six
+	name = "Tyr Expirment Data - Corrupted Data Six"
+	desc = "The 40etant pr18gra40 has been accelerated. With war 18n 18ur d1818rstep, we will need further res18urces. <BR>\
+	H18wever, 18ur harvesting 18f the star fl18aters t18 sustain ta40ed 40etants is lacking. Their repr18ducti18n cycles and <BR>\
+	40eth18ds are t1818 sl18w. Peaceful harvesting 18f 40etants is being tested, regenerative hides being helpful but is running <BR>\
+	int18 issues 18f keeping the 40etants fed en18ugh. Experi40ents are beginning with synthetic star fl18aters, results are currently 40ixed."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/disc_seven
+	name = "tyrian data disc seven"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/disc_seven)
+
+/datum/category_item/catalogue/anomalous/disc_seven
+	name = "Tyr Expirment Data - Corrupted Data Seven"
+	desc = "Th14 warfront 16s qu16t14 compl14x. S14v14ral attack16ng from th14 abyss, oth14rs 14m14rg16ng from th14 r16ft.<BR>\
+	 16s th14 oncom16ng armag14ddon b14caus14 of th16s? Ar14 our s16ns com16ng back to drag us to th14 d14pths? W16ll any of us<BR>\
+	  b14 spar14d, or ar14 w14 all bound tog14th14r? D14ar 14d14n, pl14as14 sp14ak to us 16n th14s14 try16ng t16m14s.."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/disc_eight
+	name = "tyrian data disc eight"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/disc_eight)
+
+/datum/category_item/catalogue/anomalous/disc_eight
+	name = "Tyr Expirment Data - Corrupted Data Eight"
+	desc = "Our wartime 22ea60t60 are nearly prepared. We have 60u22jected much of our collection to differing program60.<BR>\
+	 The one60 with the mo60t 60u2260tantial re60ult60 are the 60pacial, cry60talline and 60lime program. The fir60t allow60 u60<BR>\
+	  to 60end attack60 into the a60tral 60ea, the cry60talline a22le to deflect many ranged weapon60 and the 60lime program i60<BR>\
+	   60omewhat a22le to convert raw material into antling60.."
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/paper/tyr_notes/astral_a
