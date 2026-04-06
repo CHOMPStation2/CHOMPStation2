@@ -64,17 +64,17 @@
 
 	item_list = list()
 	item_list["Food Items"] = list(
-		BIOGEN_REAGENT("Milk", REAGENT_ID_MILK, 50, 20),
-		BIOGEN_REAGENT("Cream", REAGENT_ID_CREAM, 50, 30),
+		BIOGEN_REAGENT("Milk", REAGENT_ID_MILK, 50, 2), //2 for each 1u
+		BIOGEN_REAGENT("Cream", REAGENT_ID_CREAM, 50, 3), //3 for each 1u
 		BIOGEN_ITEM("Slab of meat", /obj/item/reagent_containers/food/snacks/meat, 5, 50),
 		BIOGEN_ITEM("Algae Sheets", /obj/item/stack/material/algae, 50, 100),
 	)
 	item_list["Cooking Ingredients"] = list(
-		BIOGEN_REAGENT("Universal Enzyme", REAGENT_ID_ENZYME, 50, 30),
+		BIOGEN_REAGENT("Universal Enzyme", REAGENT_ID_ENZYME, 50, 3),
 		BIOGEN_ITEM("Nutri-spread", /obj/item/reagent_containers/food/snacks/spreads, 5, 30),
 		//CHOMPAdd Start - adding common condiments to the list for chefs
-		BIOGEN_REAGENT("Salt", REAGENT_ID_SODIUMCHLORIDE, 50, 20),
-		BIOGEN_REAGENT("Soy Sauce", REAGENT_ID_SOYSAUCE, 50, 30),
+		BIOGEN_REAGENT("Salt", REAGENT_ID_SODIUMCHLORIDE, 50, 2),
+		BIOGEN_REAGENT("Soy Sauce", REAGENT_ID_SOYSAUCE, 50, 3),
 		//CHOMPAdd End
 	)
 	item_list["Gardening Nutrients"] = list(
@@ -180,15 +180,17 @@
 					return FALSE
 				if(amount <= 0 || amount > br.reagent_amt)
 					return FALSE
-				var/cost = round(br.cost / build_eff) * amount
-				if(cost > points)
+				var/cost = round(br.cost / build_eff)
+				if(cost < 1) //No going below 1 cost.
+					cost = 1
+				if(cost * amount > points)
 					to_chat(ui.user, span_danger("Insufficient biomass."))
 					return FALSE
-				var/amt_to_actually_dispense = round(min(beaker.reagents.get_free_space(), br.reagent_amt)) * amount
+				var/amt_to_actually_dispense = round(min(beaker.reagents.get_free_space(), amount))
 				if(amt_to_actually_dispense <= 0)
 					to_chat(ui.user, span_danger("The loaded beaker is full!"))
 					return FALSE
-				points -= (cost * (amt_to_actually_dispense / br.reagent_amt))
+				points -= cost * amt_to_actually_dispense
 				beaker.reagents.add_reagent(br.reagent_id, amt_to_actually_dispense)
 				playsound(src, 'sound/machines/reagent_dispense.ogg', 25, 1)
 				return FALSE
