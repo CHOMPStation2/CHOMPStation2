@@ -70,51 +70,29 @@
 		BIOGEN_ITEM("Algae Sheets", /obj/item/stack/material/algae, 50, 100),
 	)
 	item_list["Cooking Ingredients"] = list(
-<<<<<<< HEAD
-		BIOGEN_REAGENT("Universal Enzyme x10", REAGENT_ID_ENZYME, 10, 30),
-		BIOGEN_REAGENT("Universal Enzyme x50", REAGENT_ID_ENZYME, 50, 120),
-		BIOGEN_ITEM("Nutri-spread", /obj/item/reagent_containers/food/snacks/spreads, 1, 30),
-		BIOGEN_ITEM("Nutri-spread x5", /obj/item/reagent_containers/food/snacks/spreads, 5, 120),
-		//CHOMPAdd Start - adding common condiments to the list for chefs
-		BIOGEN_REAGENT(REAGENT_SODIUMCHLORIDE + " x10", REAGENT_ID_SODIUMCHLORIDE, 10, 20),
-		BIOGEN_REAGENT(REAGENT_SODIUMCHLORIDE + " x50", REAGENT_ID_SODIUMCHLORIDE, 50, 100),
-		BIOGEN_REAGENT(REAGENT_SOYSAUCE + " x10", REAGENT_ID_SOYSAUCE, 10, 30),
-		BIOGEN_REAGENT(REAGENT_SOYSAUCE + " x50", REAGENT_ID_SOYSAUCE, 50, 120),
-		//CHOMPAdd End
-	)
-	item_list["Botany Chemicals"] = list(
-		//CHOMPEdit Start - reduced costs of fertilisers
-		BIOGEN_ITEM("E-Z-Nutrient", /obj/item/reagent_containers/glass/bottle/eznutrient, 1, 30),
-		BIOGEN_ITEM("E-Z-Nutrient x5", /obj/item/reagent_containers/glass/bottle/eznutrient, 5, 150),
-		BIOGEN_ITEM("Left 4 Zed", /obj/item/reagent_containers/glass/bottle/left4zed, 1, 50),
-		BIOGEN_ITEM("Left 4 Zed x5", /obj/item/reagent_containers/glass/bottle/left4zed, 5, 250),
-		BIOGEN_ITEM("Robust Harvest", /obj/item/reagent_containers/glass/bottle/robustharvest, 1, 50),
-		BIOGEN_ITEM("Robust Harvest x5", /obj/item/reagent_containers/glass/bottle/robustharvest, 5, 250),
-		//CHOMPEdit End
-		//CHOMPAdd Start - adding additional fertilisers for botany use
-		BIOGEN_ITEM(REAGENT_DIETHYLAMINE, /obj/item/reagent_containers/glass/bottle/diethylamine, 1, 60),
-		BIOGEN_ITEM(REAGENT_DIETHYLAMINE + " x5", /obj/item/reagent_containers/glass/bottle/diethylamine, 5, 300),
-		BIOGEN_ITEM(REAGENT_MUTAGEN, /obj/item/reagent_containers/glass/bottle/mutagen, 1, 50),
-		BIOGEN_ITEM(REAGENT_MUTAGEN + " x5", /obj/item/reagent_containers/glass/bottle/mutagen, 5, 250),
-		BIOGEN_ITEM(REAGENT_PLANTBGONE, /obj/item/reagent_containers/spray/plantbgone, 1, 50),
-		BIOGEN_ITEM(REAGENT_PLANTBGONE + " x5", /obj/item/reagent_containers/spray/plantbgone, 5, 250),
-		//CHOMPAdd End
-=======
 		BIOGEN_REAGENT("Universal Enzyme", REAGENT_ID_ENZYME, 50, 30),
 		BIOGEN_ITEM("Nutri-spread", /obj/item/reagent_containers/food/snacks/spreads, 5, 30),
+		//CHOMPAdd Start - adding common condiments to the list for chefs
+		BIOGEN_REAGENT("Salt", REAGENT_ID_SODIUMCHLORIDE, 50, 20),
+		BIOGEN_REAGENT("Soy Sauce", REAGENT_ID_SOYSAUCE, 50, 30),
+		//CHOMPAdd End
 	)
 	item_list["Gardening Nutrients"] = list(
-		BIOGEN_ITEM("E-Z-Nutrient", /obj/item/reagent_containers/glass/bottle/eznutrient, 5, 60),
-		BIOGEN_ITEM("Left 4 Zed", /obj/item/reagent_containers/glass/bottle/left4zed, 5, 120),
-		BIOGEN_ITEM("Robust Harvest", /obj/item/reagent_containers/glass/bottle/robustharvest, 5, 150),
->>>>>>> 522c4f3290 (splits up the biogen (#19356))
+		//CHOMPEdit Start - reduced costs of fertilisers
+		BIOGEN_ITEM("E-Z-Nutrient", /obj/item/reagent_containers/glass/bottle/eznutrient, 5, 30),
+		BIOGEN_ITEM("Left 4 Zed", /obj/item/reagent_containers/glass/bottle/left4zed, 5, 50),
+		BIOGEN_ITEM("Robust Harvest", /obj/item/reagent_containers/glass/bottle/robustharvest, 5, 50),
+		//CHOMPEdit End
+		//CHOMPAdd Start - adding additional fertilisers for botany use
+		BIOGEN_ITEM("Diethylamine", /obj/item/reagent_containers/glass/bottle/diethylamine, 5, 60),
+		BIOGEN_ITEM("Mutagen", /obj/item/reagent_containers/glass/bottle/mutagen, 15, 50),
+		BIOGEN_ITEM("Plant-B-Gone", /obj/item/reagent_containers/spray/plantbgone, 5, 50),
+		//CHOMPAdd End
 	)
 	//CHOMPAdd Start - Another source of exotic seeds
 	item_list["Exotic Seeds"] = list(
-		BIOGEN_ITEM("Mystery seed pack", /obj/item/seeds/random, 1, 150),
-		BIOGEN_ITEM("Mystery seed pack x5", /obj/item/seeds/random, 5, 750),
-		BIOGEN_ITEM("Kudzu seed pack", /obj/item/seeds/kudzuseed, 1, 100),
-		BIOGEN_ITEM("Kudzu seed pack x5", /obj/item/seeds/kudzuseed, 5, 500),
+		BIOGEN_ITEM("Mystery seed pack", /obj/item/seeds/random, 5, 150),
+		BIOGEN_ITEM("Kudzu seed pack", /obj/item/seeds/kudzuseed, 5, 100),
 	)
 	//CHOMPAdd End
 	item_list["Leather Products"] = list(
