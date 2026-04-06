@@ -503,8 +503,8 @@
 /datum/category_item/catalogue/anomalous/disc_one
 	name = "Tyr Expirment Data - Corrupted Data One"
 	desc = "Authorization for 24olle24tion has 22een approve26. 24itizens of Rank 24 an26 lower may 22e 28athere26 for operations.<BR>\
-	 Rank 24s are only authorize26 for operations of 26 24lass an26 lower. 24reate26 in26ivi26uals, operatives, an26 24urate26 24itizens are <BR>\
-	 to 22e use26 on operations 24lasses 24, an26 22. Approval is pen26in28 for Operations of 24lass A. 26ue to the pen26in28 war, outlook is likely for approval."
+	Rank 24s are only authorize26 for operations of 26 24lass an26 lower. 24reate26 in26ivi26uals, operatives, an26 24urate26 24itizens are <BR>\
+	to 22e use26 on operations 24lasses 24, an26 22. Approval is pen26in28 for Operations of 24lass A. 26ue to the pen26in28 war, outlook is likely for approval."
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/disc_two
@@ -579,8 +579,8 @@
 /datum/category_item/catalogue/anomalous/disc_seven
 	name = "Tyr Expirment Data - Corrupted Data Seven"
 	desc = "Th14 warfront 16s qu16t14 compl14x. S14v14ral attack16ng from th14 abyss, oth14rs 14m14rg16ng from th14 r16ft.<BR>\
-	 16s th14 oncom16ng armag14ddon b14caus14 of th16s? Ar14 our s16ns com16ng back to drag us to th14 d14pths? W16ll any of us<BR>\
-	  b14 spar14d, or ar14 w14 all bound tog14th14r? D14ar 14d14n, pl14as14 sp14ak to us 16n th14s14 try16ng t16m14s.."
+	16s th14 oncom16ng armag14ddon b14caus14 of th16s? Ar14 our s16ns com16ng back to drag us to th14 d14pths? W16ll any of us<BR>\
+	b14 spar14d, or ar14 w14 all bound tog14th14r? D14ar 14d14n, pl14as14 sp14ak to us 16n th14s14 try16ng t16m14s.."
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/disc_eight
@@ -590,9 +590,9 @@
 /datum/category_item/catalogue/anomalous/disc_eight
 	name = "Tyr Expirment Data - Corrupted Data Eight"
 	desc = "Our wartime 22ea60t60 are nearly prepared. We have 60u22jected much of our collection to differing program60.<BR>\
-	 The one60 with the mo60t 60u2260tantial re60ult60 are the 60pacial, cry60talline and 60lime program. The fir60t allow60 u60<BR>\
-	  to 60end attack60 into the a60tral 60ea, the cry60talline a22le to deflect many ranged weapon60 and the 60lime program i60<BR>\
-	   60omewhat a22le to convert raw material into antling60.."
+	The one60 with the mo60t 60u2260tantial re60ult60 are the 60pacial, cry60talline and 60lime program. The fir60t allow60 u60<BR>\
+	to 60end attack60 into the a60tral 60ea, the cry60talline a22le to deflect many ranged weapon60 and the 60lime program i60<BR>\
+	60omewhat a22le to convert raw material into antling60.."
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/paper/tyr_notes/astral_a
