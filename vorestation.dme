@@ -1597,11 +1597,8 @@
 #include "code\game\objects\effects\confetti_vr.dm"
 #include "code\game\objects\effects\countdown.dm"
 #include "code\game\objects\effects\effect_system.dm"
-<<<<<<< HEAD
 #include "code\game\objects\effects\effect_system_ch.dm"
-=======
 #include "code\game\objects\effects\electrify_notice.dm"
->>>>>>> 8ca979b1e2 (zap (#19379))
 #include "code\game\objects\effects\explosion_particles.dm"
 #include "code\game\objects\effects\floorbreak.dm"
 #include "code\game\objects\effects\gibs.dm"
