@@ -189,13 +189,13 @@ GLOBAL_LIST_INIT(RMS_random_malfunction, list(/obj/item/fbp_backup_cell,
 	var/list/banned_sheet_materials = list(
 		/obj/item/stack/material/supermatter,
 		/obj/item/stack/material/glamour,
-		/obj/item/stack/material/morphium, //CHOMPedit begin
+		/obj/item/stack/material/morphium, //CHOMPAdd Start
 		/obj/item/stack/material/shellchitin,
 		/obj/item/stack/material/dreamscale,
 		/obj/item/stack/material/crystalscale,
 		/obj/item/stack/material/frostscale,
 		/obj/item/stack/material/wisp,
-		/obj/item/stack/material/weathered_agate //CHOMPedit end
+		/obj/item/stack/material/weathered_agate //CHOMPAdd End
 		// Include if you enable in the .dme /obj/item/stack/material/debug
 		)
 	possible_object_paths -= banned_sheet_materials
