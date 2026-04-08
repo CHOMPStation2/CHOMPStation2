@@ -565,17 +565,21 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	var/fallout_rad_low = RAD_LEVEL_HIGH
 	var/fallout_rad_high = RAD_LEVEL_VERY_HIGH
 
-/datum/weather/borealis2/fallout/process_effects()
-	..()
-	for(var/thing in GLOB.living_mob_list)
-		var/mob/living/L = thing
-		if(L.z in holder.our_planet.expected_z_levels)
-			irradiate_nearby_turf(L)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to irradiate them with fallout.
+/datum/weather/borealis2/fallout/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		irradiate_nearby_turf(L)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to irradiate them with fallout.
 
-			L.rad_act(rand(direct_rad_low, direct_rad_high))
+		radiation_pulse(
+			L,
+			max_range = 1,
+			threshold = RAD_MEDIUM_INSULATION,
+			chance = rand(direct_rad_low, direct_rad_high),
+			minimum_exposure_time = URANIUM_RADIATION_MINIMUM_EXPOSURE_TIME,
+			strength = rand(direct_rad_low, direct_rad_high)
+		)
 
 // This makes random tiles near people radioactive for awhile.
 // Tiles far away from people are left alone, for performance.
@@ -587,7 +591,14 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	if(!istype(T))
 		return
 	if(T.is_outdoors())
-		SSradiation.radiate(T, rand(fallout_rad_low, fallout_rad_high))
+		radiation_pulse(
+			T,
+			max_range = 5,
+			threshold = RAD_MEDIUM_INSULATION,
+			chance = rand(direct_rad_low, direct_rad_high),
+			minimum_exposure_time = URANIUM_RADIATION_MINIMUM_EXPOSURE_TIME,
+			strength = rand(fallout_rad_low, fallout_rad_high)
+		)
 
 /datum/weather/borealis2/fallout/temp
 	name = "short-term fallout"
