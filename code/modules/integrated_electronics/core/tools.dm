@@ -268,10 +268,11 @@
 		/obj/item/integrated_electronics/detailer, //CHOMP Edit,
 		)
 
-//CHOMPAdd, this whole proc. Emp'ing this one bag causes a recursion loop of over 700 emp_act's,
+//Emp'ing this one bag causes a recursion loop of over 700 emp_act's,
 //Which is enough to trigger byond's recursion level protection
-/obj/item/storage/bag/circuits/emp_act()
-	return	//No
+/obj/item/storage/bag/circuits/basic/Initialize(mapload)
+	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
+	. = ..()
 
 /obj/item/storage/bag/circuits/basic/Initialize(mapload)
 	new /obj/item/storage/bag/circuits/mini/arithmetic(src)

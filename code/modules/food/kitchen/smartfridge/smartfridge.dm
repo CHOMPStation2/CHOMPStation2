@@ -37,13 +37,9 @@
 	if(is_secure)
 		set_wires(new /datum/wires/smartfridge/secure(src))
 	else
-<<<<<<< HEAD
-		wires = new/datum/wires/smartfridge(src)
+		set_wires(new /datum/wires/smartfridge(src))
 
 	soundloop = new(list(src), FALSE) // CHOMPEdit: Fridge hum!
-=======
-		set_wires(new /datum/wires/smartfridge(src))
->>>>>>> 8e357dd556 (EMP & Wires refactor (#19401))
 	update_icon()
 	default_apply_parts()
 
