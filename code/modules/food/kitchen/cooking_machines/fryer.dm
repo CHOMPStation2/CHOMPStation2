@@ -260,12 +260,6 @@
 	fry_loop.stop()
 
 /obj/machinery/appliance/cooker/fryer/attackby(var/obj/item/I, var/mob/user)
-	if(default_deconstruction_screwdriver(user, I)) //CHOMPedit Start - Allows for deconstruction
-		return
-	if(default_deconstruction_crowbar(user, I))
-		return
-	if(default_part_replacement(user, I))
-		return //CHOMPedit End - Allows for deconstruction
 	if(istype(I, /obj/item/reagent_containers) && !istype(I, /obj/item/reagent_containers/food) && I.reagents)
 		if(istype(I, /obj/item/reagent_containers/glass)) //Scooping stuff out with a glass.
 			if(I.reagents.total_volume <= 0 && oil)
