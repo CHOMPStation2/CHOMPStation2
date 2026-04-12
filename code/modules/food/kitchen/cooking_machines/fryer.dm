@@ -260,21 +260,12 @@
 	fry_loop.stop()
 
 /obj/machinery/appliance/cooker/fryer/attackby(var/obj/item/I, var/mob/user)
-<<<<<<< HEAD
-	if(default_deconstruction_screwdriver(user, I)) //CHOMPedit - Allows for deconstruction
+	if(default_deconstruction_screwdriver(user, I)) //CHOMPedit Start - Allows for deconstruction
 		return
 	if(default_deconstruction_crowbar(user, I))
 		return
 	if(default_part_replacement(user, I))
-		return
-	if(istype(I, /obj/item/reagent_containers/glass) && I.reagents)
-		if (I.reagents.total_volume <= 0 && oil)
-			//Its empty, handle scooping some hot oil out of the fryer
-			oil.trans_to(I, I.reagents.maximum_volume)
-			user.visible_message(span_filter_notice("[user] scoops some oil out of \the [src]."), span_notice("You scoop some oil out of \the [src]."))
-			return 1
-		else
-=======
+		return //CHOMPedit End - Allows for deconstruction
 	if(istype(I, /obj/item/reagent_containers) && !istype(I, /obj/item/reagent_containers/food) && I.reagents)
 		if(istype(I, /obj/item/reagent_containers/glass)) //Scooping stuff out with a glass.
 			if(I.reagents.total_volume <= 0 && oil)
@@ -282,7 +273,6 @@
 				oil.trans_to(I, I.reagents.maximum_volume)
 				user.visible_message(span_filter_notice("[user] scoops some oil out of \the [src]."), span_notice("You scoop some oil out of \the [src]."))
 				return TRUE
->>>>>>> 26e9c25673 (Recipes and Fryer Fixes (#19250))
 	//It contains stuff, handle pouring any oil into the fryer
 	//Possibly in future allow pouring non-oil reagents in, in  order to sabotage it and poison food.
 	//That would really require coding some sort of filter or better replacement mechanism first
