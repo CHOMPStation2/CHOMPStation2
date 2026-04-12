@@ -50,6 +50,7 @@
 		if(grill_loop)
 			grill_loop.stop(src)
 
+<<<<<<< HEAD
 /obj/machinery/appliance/cooker/grill/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
 		return
@@ -58,3 +59,9 @@
 	if(default_part_replacement(user, O))
 		return
 	..()
+=======
+/obj/machinery/appliance/cooker/grill/finish_cooking(var/datum/cooking_item/CI)
+	..()
+	for(var/obj/item/I in CI.container)
+		SEND_SIGNAL(I, COMSIG_ITEM_BARBEQUE_GRILLED)
+>>>>>>> 439b534aee (Infection Component & Germs (#19265))
