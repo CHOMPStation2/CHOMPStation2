@@ -115,13 +115,8 @@
 
 	outfit_type = /datum/decl/hierarchy/outfit/job/cargo/mining
 	job_description = "A " + JOB_SHAFT_MINER + " mines and processes minerals to be delivered to departments that need them."
-<<<<<<< HEAD
 	alt_titles = list(/*CHOMPEdit Removal JOB_ALT_DEEP_SPACE_MINER = /datum/alt_title/deep_space_miner*/, JOB_ALT_DRILL_TECHNICIAN = /datum/alt_title/drill_tech, JOB_ALT_PROSPECTOR = /datum/alt_title/prospector,
-						JOB_ALT_EXCAVATOR = /datum/alt_title/excavator)
-=======
-	alt_titles = list(JOB_ALT_DEEP_SPACE_MINER = /datum/alt_title/deep_space_miner, JOB_ALT_DRILL_TECHNICIAN = /datum/alt_title/drill_tech, JOB_ALT_PROSPECTOR = /datum/alt_title/prospector,
 						JOB_ALT_EXCAVATOR = /datum/alt_title/excavator, JOB_ALT_MINING_CONTRACTOR = /datum/alt_title/mining_contractor)
->>>>>>> 74ed1a4183 (Cargo and Science Contractor Titles (#19396))
 
 /datum/job/mining/get_request_reasons()
 	return list("Assembling expedition team")
