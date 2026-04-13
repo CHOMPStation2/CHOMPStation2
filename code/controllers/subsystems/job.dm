@@ -26,19 +26,12 @@ SUBSYSTEM_DEF(job)
 	return occupation_with_excludes + GLOB.alt_titles_with_icons + list("Prisoner")
 
 /datum/controller/subsystem/job/Initialize()
-<<<<<<< HEAD
-	if(!length(department_datums))
-		setup_departments()
-	if(!length(occupations))
-		setup_occupations()
+	setup_departments()
+	setup_occupations()
 	//CHOMPadd begin
 	if(CONFIG_GET(number/job_camp_time_limit))
 		load_camp_lists()
 	//CHOMPadd end
-=======
-	setup_departments()
-	setup_occupations()
->>>>>>> 12c5adeeb3 (removes the last of the old job controller (#19344))
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/job/proc/setup_occupations(faction = FACTION_STATION)
@@ -166,28 +159,6 @@ SUBSYSTEM_DEF(job)
 	if(debug_messages)
 		log_world("JOB DEBUG: [message]")
 
-<<<<<<< HEAD
-//CHOMPadd start
-/datum/controller/subsystem/job/proc/load_camp_lists()
-	if(fexists(savepath))
-		restricted_keys = json_decode(file2text(savepath))
-		fdel(savepath)
-
-/datum/controller/subsystem/job/Shutdown(Addr, Natural)
-	. = ..()
-	if(fexists(savepath))
-		fdel(savepath)
-	var/json_to_file = json_encode(shift_keys)
-	if(!json_to_file)
-		log_world("Saving: [savepath] failed jsonencode")
-		return
-
-	//Write it out
-	rustg_file_write(json_to_file, savepath)
-	if(!fexists(savepath))
-		log_world("Saving: failed to save [savepath]")
-//CHOMPadd end
-=======
 /datum/controller/subsystem/job/proc/assign_role(mob/new_player/player, rank, latejoin = FALSE)
 	job_debug_message("Running AR, Player: [player], Rank: [rank], LJ: [latejoin]")
 	if(player && player.mind && rank)
@@ -585,8 +556,8 @@ SUBSYSTEM_DEF(job)
 			var/datum/gear/gear_thing = GLOB.gear_datums[thing]
 			if(gear_thing.slot == slot_wear_suit && human_mob.client?.prefs?.no_jacket)
 				continue
-			if(gear_thing.slot == slot_shoes && human_mob.client?.prefs?.shoe_hater)
-				continue
+//			if(gear_thing.slot == slot_shoes && human_mob.client?.prefs?.shoe_hater) //CHOMPEdit - Disable
+//				continue //CHOMPEdit - Disable
 			if(gear_thing.slot in custom_equip_slots)
 				spawn_in_storage += thing
 			else
@@ -1092,4 +1063,24 @@ SUBSYSTEM_DEF(job)
 		"Supreme Commander",
 		"Emergency Response Team",
 		"Emergency Response Team Leader")
->>>>>>> 12c5adeeb3 (removes the last of the old job controller (#19344))
+
+//CHOMPadd start
+/datum/controller/subsystem/job/proc/load_camp_lists()
+	if(fexists(savepath))
+		restricted_keys = json_decode(file2text(savepath))
+		fdel(savepath)
+
+/datum/controller/subsystem/job/Shutdown(Addr, Natural)
+	. = ..()
+	if(fexists(savepath))
+		fdel(savepath)
+	var/json_to_file = json_encode(shift_keys)
+	if(!json_to_file)
+		log_world("Saving: [savepath] failed jsonencode")
+		return
+
+	//Write it out
+	rustg_file_write(json_to_file, savepath)
+	if(!fexists(savepath))
+		log_world("Saving: failed to save [savepath]")
+//CHOMPadd end
