@@ -7,18 +7,7 @@
 	else
 		to_chat(src, span_warning("There is no active vote"))
 
-<<<<<<< HEAD
-/client/proc/start_vote()
-	set category = "Admin.Game" // CHOMPEdit
-	set name = "Start Vote"
-	set desc = "Start a vote on the server"
-
-	if(!is_admin(usr))
-		return
-
-=======
 ADMIN_VERB(start_vote, R_HOLDER, "Start Vote", "Start a vote on the server.", ADMIN_CATEGORY_GAME)
->>>>>>> 5c5ccc4c9f (moves the last admin verbs (#19346))
 	if(SSvote.active_vote)
 		to_chat(user, span_warning("A vote is already in progress"))
 		return
