@@ -611,7 +611,6 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	var/buildstacktype = /obj/item/stack/material/steel
 	var/buildstackamount = 5
 
-<<<<<<< HEAD
 //CHOMPAdd start - fans weren't updating atmos when destroyed or placed
 /obj/structure/fans/Destroy()
 	update_nearby_tiles()
@@ -621,11 +620,8 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	.=..()
 	update_nearby_tiles()
 //CHOMPAdd end
-/*
-/obj/structure/fans/proc/deconstruct()
-=======
+
 /obj/structure/fans/atom_deconstruct()
->>>>>>> d8c1932cb9 (Flammable Items, Abstractness, and hypnosis (#19267))
 	new buildstacktype(loc,buildstackamount)
 	qdel(src)
 
@@ -638,7 +634,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 			return TRUE
 
 	return TRUE
-*/
+
 /obj/structure/fans/tiny
 	name = "tiny fan"
 	desc = "A tiny fan, releasing a thin gust of air."
