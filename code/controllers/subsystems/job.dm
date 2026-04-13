@@ -555,8 +555,8 @@ SUBSYSTEM_DEF(job)
 					//else
 					if(gaar_thing.slot == slot_wear_suit && human_mob.client?.prefs?.no_jacket)
 						continue
-					if(gaar_thing.slot == slot_shoes && human_mob.client?.prefs?.shoe_hater)	//RS ADD
-						continue
+//					if(gaar_thing.slot == slot_shoes && human_mob.client?.prefs?.shoe_hater)	//RS ADD //CHOMPEdit - Disable
+//						continue //CHOMPEdit - Disable
 					if(human_mob.equip_to_slot_or_del(gaar_thing.spawn_item(human_mob, metadata), gaar_thing.slot))
 						to_chat(human_mob, span_notice("Equipping you with \the [thing]!"))
 						if(gaar_thing.slot != slot_tie)
