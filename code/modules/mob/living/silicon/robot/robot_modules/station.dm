@@ -102,6 +102,9 @@
 	return ..()
 
 /obj/item/robot_module/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(modules)
 		for(var/obj/O in modules)
 			O.emp_act(severity, recursive)
@@ -111,7 +114,6 @@
 	if(synths)
 		for(var/datum/matter_synth/S in synths)
 			S.emp_act(severity, recursive)
-	return
 
 /obj/item/robot_module/proc/respawn_consumable(var/mob/living/silicon/robot/R, var/rate)
 	SHOULD_CALL_PARENT(TRUE)
@@ -757,7 +759,6 @@
 	src.modules += new /obj/item/borg/sight/material(src)
 	src.modules += new /obj/item/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/tool/screwdriver/cyborg(src)
-	src.modules += new /obj/item/storage/bag/ore(src)
 	src.modules += new /obj/item/pickaxe/borgdrill(src)
 	src.modules += new /obj/item/storage/bag/sheetsnatcher/borg(src)
 	src.modules += new /obj/item/gripper/miner(src)
@@ -948,7 +949,7 @@
 	..()
 	src.modules += new /obj/item/borg/sight/material(src)
 	src.modules += new /obj/item/pickaxe/borgdrill(src)
-	src.modules += new /obj/item/storage/bag/ore(src)
+	src.modules += new /obj/item/ore_bag(src)
 	src.modules += new /obj/item/storage/bag/sheetsnatcher/borg(src)
 	src.modules += new /obj/item/gun/energy/robotic/phasegun(src)  //Chompedit, makes the mining borg able to defend itself.
 	src.emag += new /obj/item/pickaxe/diamonddrill(src)

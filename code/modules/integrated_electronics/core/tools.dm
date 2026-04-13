@@ -112,7 +112,7 @@
 	settings to specific circuits, or for debugging purposes. It can also pulse activation pins."
 	icon = 'icons/obj/integrated_electronics/electronic_tools.dmi'
 	icon_state = "debugger"
-	w_class = 2
+	w_class = ITEMSIZE_SMALL
 	var/data_to_write = null
 	var/accepting_refs = 0
 
@@ -253,7 +253,7 @@
 	desc = "This kit's essential for any circuitry projects."
 	icon = 'icons/obj/integrated_electronics/electronic_misc.dmi'
 	icon_state = "circuit_kit"
-	w_class = 3
+	w_class = ITEMSIZE_NORMAL
 	display_contents_with_number = 0
 	can_hold = list(
 		/obj/item/integrated_circuit,
@@ -268,10 +268,11 @@
 		/obj/item/integrated_electronics/detailer, //CHOMP Edit,
 		)
 
-//CHOMPAdd, this whole proc. Emp'ing this one bag causes a recursion loop of over 700 emp_act's,
+//Emp'ing this one bag causes a recursion loop of over 700 emp_act's,
 //Which is enough to trigger byond's recursion level protection
-/obj/item/storage/bag/circuits/emp_act()
-	return	//No
+/obj/item/storage/bag/circuits/basic/Initialize(mapload)
+	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
+	. = ..()
 
 /obj/item/storage/bag/circuits/basic/Initialize(mapload)
 	new /obj/item/storage/bag/circuits/mini/arithmetic(src)
@@ -326,7 +327,7 @@
 /obj/item/storage/bag/circuits/mini
 	name = "circuit box"
 	desc = "Used to partition categories of circuits, for a neater workspace."
-	w_class = 2
+	w_class = ITEMSIZE_SMALL
 	display_contents_with_number = 1
 	can_hold = list(/obj/item/integrated_circuit)
 	var/spawn_flags_to_use = IC_SPAWN_DEFAULT

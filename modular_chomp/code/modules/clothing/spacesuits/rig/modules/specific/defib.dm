@@ -13,8 +13,9 @@
 	desc = "Rig mounted defib. How are you seeing this? Stop that."
 	wielded = 1
 
-/obj/item/shockpaddles/standalone/rig/emp_act(severity)
-	return
+/obj/item/shockpaddles/standalone/rig/Initialize(mapload)
+	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
+	. = ..()
 
 /obj/item/shockpaddles/standalone/rig/checked_use(var/charge_amt)
 	return 1
