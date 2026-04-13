@@ -524,12 +524,8 @@ ADMIN_VERB(respawn_character, (R_ADMIN|R_REJUVINATE), "Spawn Character", "(Re)Sp
 			SSjob.equip_rank(new_character, charjob, 1)
 			if(new_character.mind)
 				new_character.mind.assigned_role = charjob
-<<<<<<< HEAD
-				new_character.mind.role_alt_title = GLOB.job_master.GetPlayerAltTitle(new_character, charjob)
-		equip_custom_items(new_character)	//CHOMPEdit readded to enable custom_item.txt
-=======
 				new_character.mind.role_alt_title = SSjob.get_player_alt_title(new_character, charjob)
->>>>>>> 12c5adeeb3 (removes the last of the old job controller (#19344))
+			equip_custom_items(new_character)	//CHOMPEdit readded to enable custom_item.txt
 
 	//If customised job title, modify here.
 	if(custom_job && custom_job_title)
