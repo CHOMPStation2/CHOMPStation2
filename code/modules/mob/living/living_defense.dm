@@ -157,7 +157,8 @@
 	  return 0 //only carbon liveforms have this proc
 
 /mob/living/emp_act(severity, recursive)
-	if(is_incorporeal()) // Can't emp shadekin in phase
+	. = ..()
+	if (. & EMP_PROTECT_SELF || is_incorporeal()) // Can't emp shadekin in phase
 		return
 
 	if(LAZYLEN(modifiers))
@@ -393,7 +394,7 @@
 	Sleeping(5)
 	stuttering += 20
 	make_jittery(150)
-	emp_act(1)
+	emp_act(EMP_HEAVY)
 	to_chat(src, span_critical("You've been struck by lightning!"))
 
 // Called when touching a lava tile.

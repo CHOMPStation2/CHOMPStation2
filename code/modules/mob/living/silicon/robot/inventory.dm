@@ -378,7 +378,13 @@
 		if(tracker.tracking)
 			tracker.tracking = FALSE
 			tracker.toggle_tracking()
-	/* //ChompEDIT START - remove bluespace pounce
+	if(istype(O, /obj/item/dogborg/sleeper)) //gross
+		var/obj/item/dogborg/sleeper/our_compactor = O
+		if(our_compactor.ore_storage)
+			if(O in get_all_held_items())
+				our_compactor.ore_bag.equipped(src)
+			else
+				our_compactor.ore_bag.dropped(src)
 	if(sight_mode & BORGANOMALOUS)
 		var/obj/item/dogborg/pounce/pounce = has_upgrade_module(/obj/item/dogborg/pounce)
 		if(pounce)
@@ -392,7 +398,6 @@
 			pounce.icon_state = initial(pounce.icon_state)
 			pounce.desc = initial(pounce.desc)
 			pounce.bluespace = initial(pounce.bluespace)
-	*/ //ChompEDIT END
 	if(O)
 		for(var/datum/action/A as anything in O.actions)
 			A.Grant(src)
