@@ -185,6 +185,10 @@ SUBSYSTEM_DEF(job)
 			player.mind.role_alt_title = get_player_alt_title(player, rank)
 			unassigned -= player
 			job.current_positions++
+			//CHOMPadd START
+			if(job.camp_protection && round_duration_in_ds < SStransfer.get_hard_end() - 30 MINUTES)
+				job.register_shift_key(player.client.ckey)
+			//CHOMPadd END
 			return TRUE
 	job_debug_message("AR has failed, Player: [player], Rank: [rank]")
 	return FALSE
@@ -569,9 +573,11 @@ SUBSYSTEM_DEF(job)
 				else
 					spawn_in_storage += thing
 
+		/* CHOMPRemove Start
 		//Give new players a welcome guide!
 		if(isnum(human_mob.client?.player_age) && human_mob.client.player_age < 10)
 			human_mob.equip_to_slot_or_del(new /obj/item/book/manual/virgo_pamphlet(human_mob), slot_r_hand)
+		*/// CHOMPRemove End
 	else
 		to_chat(human_mob, span_filter_notice("Your job is [rank] and the game just can't handle it! Please report this bug to an administrator."))
 
