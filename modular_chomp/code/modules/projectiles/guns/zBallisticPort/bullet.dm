@@ -1764,3 +1764,4 @@
 	multiple_sprites = 1
 	matter = list(MAT_STEEL = 5400)
 	ammo_type = /obj/item/ammo_casing/a762/ap
+
