@@ -172,7 +172,7 @@ GLOBAL_LIST_INIT(announcer_library, list(
 		ANNOUNCER_MSG_NIGHTSHIFT_START = null, //CHOMP Disable
 		ANNOUNCER_MSG_NIGHTSHIFT_END = null, //CHOMP Disable
 
-		ANNOUNCER_MSG_NEW_AI = 'sound/AI/newai.ogg',
+		ANNOUNCER_MSG_NEW_AI = null, //CHOMP Disable - Same as Virgo
 //		ANNOUNCER_MSG_NEW_COMMAND_REPORT = 'sound/AI/commandreport.ogg',
 //		ANNOUNCER_MSG_SECURITY_ADVISEMENT = null,
 
