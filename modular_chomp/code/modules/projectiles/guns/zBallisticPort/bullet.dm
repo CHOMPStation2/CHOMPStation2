@@ -1540,3 +1540,227 @@
 	sound_ejectchamber = 'sound/weapons/ballistics/rifle_ejectchamber.ogg'
 	sound_eject = 'sound/weapons/ballistics/rifle_eject.ogg'
 	sound_chamber = 'sound/weapons/ballistics/rifle_chamber.ogg'
+
+
+
+
+// ------------------------- GATTENING EARLY PORT STUFF, THIS IS (i pray to god) TEMPORARY ------------------------- //
+
+
+
+/// Vali ///
+
+
+
+/obj/item/gun/projectile/automatic/serdy/valik
+	name = "Ka7 Valik"
+	desc = "A high quality modernization of an antiquated Pan-Slavic rifle platform, the Ka7 Valik is utilized almost exclusively by members of the militarized doomsday cult, Black Hole. Chambered in 7.62mm"
+	caliber = "7.62mm"
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "valik"
+	wielded_item_state = "valik_w"
+	magazine_type = /obj/item/ammo_magazine/akm
+	allowed_magazines = list(/obj/item/ammo_magazine/akm)
+	icon_state = "valik"
+	projectile_type = /obj/item/projectile/bullet/rifle/a545/bh1
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT
+	w_class = ITEMSIZE_LARGE
+	one_handed_penalty = 30
+	fire_sound = "sound/weapons/serdy/ak74.ogg"
+
+
+/// Viper ///
+
+
+/obj/item/gun/projectile/automatic/serdy/viper
+	name = "Ka12 Viper"
+	desc = "A robust sub machinegun variant of the Ka7 Valik, the Ka12 Viper is utilized almost exclusively by members of the militarized doomsday cult, Black Hole. Chambered in 10mm"
+	caliber = "10mm"
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx32.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "viper"
+	wielded_item_state = "viper_w"
+	magazine_type = /obj/item/ammo_magazine/viper
+	allowed_magazines = list(/obj/item/ammo_magazine/viper)
+	icon_state = "viper"
+	projectile_type = /obj/item/projectile/bullet/pistol/bh2
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=1,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT
+	w_class = ITEMSIZE_NORMAL
+	is_long = FALSE
+	fire_sound = "sound/weapons/serdy/vityaz.ogg"
+
+
+/obj/item/ammo_magazine/viper
+	name = "Ka12 Viper magazine (10mm)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "10mm"
+	icon_state = "smg_light"
+	max_ammo = 25
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 2000)
+	ammo_type = /obj/item/ammo_casing/a10mm
+
+
+
+
+/// PMX ///
+
+
+
+/obj/item/gun/projectile/serdy_pistols/pmx
+	name = "PMX"
+	desc = "A high quality modernization of a traditional Pan-Slavic handgun, the PMX is utilized almost exclusively by members of the militarized doomsday cult, Black Hole. Chambered in 10mm."
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx32.dmi'
+	icon_state = "pmx"
+
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "pmx"
+
+	caliber = "10mm"
+	magazine_type = /obj/item/ammo_magazine/pmx
+	allowed_magazines = list(/obj/item/ammo_magazine/pmx)
+	projectile_type = /obj/item/projectile/bullet/pistol/bh1
+	fire_sound = "sound/weapons/serdy/9mmpistol.ogg"
+
+
+/obj/item/ammo_magazine/pmx
+	name = "PMX magazine (10mm)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "10mm"
+	icon_state = "pistol_light"
+	max_ammo = 8
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 1400)
+	ammo_type = /obj/item/ammo_casing/a10mm
+
+
+/// Lynks ///
+
+
+/obj/item/gun/projectile/automatic/serdy/lynx
+	name = "SVK-428 Lynx"
+	desc = "An accurate, deadly sniper rifle, utilized by Black Hole marksmen, based on a venerable Pan-Slavic design. Chambered in 7.76x55mm."
+	caliber = "7.76mm"
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	icon_state = "lynx"
+
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "lynx"
+	wielded_item_state = "lynx_w"
+	recoil = 1
+	magazine_type = /obj/item/ammo_magazine/lynx
+	allowed_magazines = list(/obj/item/ammo_magazine/lynx)
+	icon_state = "lynx"
+	projectile_type = /obj/item/projectile/bullet/rifle/a145/bh2
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT
+	w_class = ITEMSIZE_HUGE
+	actions_types = list(/datum/action/item_action/use_scope)
+	accuracy = 10
+	scoped_accuracy = 50
+	one_handed_penalty = 100
+	fire_sound = "sound/weapons/serdy/sks.ogg"
+
+/obj/item/gun/projectile/automatic/serdy/lynx/ui_action_click()
+	scope()
+
+/obj/item/gun/projectile/automatic/serdy/lynx/verb/scope()
+	set category = "Object"
+	set name = "Use Scope"
+	set popup_menu = 1
+
+	toggle_scope(2.0)
+
+
+/obj/item/ammo_magazine/lynx
+	name = "Lynx magazine (7.76x55mm)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "7.76mm"
+	icon_state = "rifle_medium"
+	max_ammo = 10
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 2400)
+	ammo_type = /obj/item/ammo_casing/a776
+
+
+/obj/item/ammo_casing/a776
+	desc = "A 7.76x55mm bullet casing."
+	caliber = "7.76mm"
+	icon_state = "rifle-casing"
+	projectile_type = /obj/item/projectile/bullet/rifle/a145/bh2
+	matter = list(MAT_STEEL = 200)
+
+
+
+///Zvir///
+
+
+
+/obj/item/gun/projectile/automatic/serdy/zvir
+	name = "KaSK-2 Zvir"
+	desc = "An utterly confusing weapon utilized by Black Hole machinegunners; a bullpupped version of an old Pan-Slav design. Despite it's rather silly appearance, it is quite controllable, and infact, still a machinegun. Chambered in 7.62mm"
+	caliber = "7.62mm"
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	icon_state = "zvir"
+
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "zvir"
+	wielded_item_state = "zvir_w"
+	burst_delay = 1.5
+	magazine_type = /obj/item/ammo_magazine/zvir
+	allowed_magazines = list(/obj/item/ammo_magazine/zvir)
+
+	projectile_type = /obj/item/projectile/bullet/rifle/a545/bh1
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts", burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="long bursts",	burst=15, move_delay=8, burst_accuracy = list(0,-15,-15,-30,-30,0,-15,-15,-30,-30,0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT
+	w_class = ITEMSIZE_LARGE
+	one_handed_penalty = 30
+	fire_sound = "sound/weapons/serdy/ak74.ogg"
+
+
+
+/obj/item/ammo_magazine/zvir
+	name = "Zvir magazine (7.62)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "7.62mm"
+	icon_state = "rifle_box"
+	max_ammo = 100
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 5400)
+	ammo_type = /obj/item/ammo_casing/a762/ap
