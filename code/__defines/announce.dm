@@ -71,7 +71,7 @@
 #define ANNOUNCER_MSG_WEATHER_ALERT "announcer_msg_weather_alert"
 
 // Sets the current voice for the station PA
-GLOBAL_VAR_INIT(current_announcer_voice, ANNOUNCER_VOICE_VIRGO)
+GLOBAL_VAR_INIT(current_announcer_voice, ANNOUNCER_VOICE_CHOMP) //CHOMPEdit - Use our announcer
 
 // Set sound paths to null to explicitly disable a message from falling back to SS13 default
 GLOBAL_LIST_INIT(announcer_library, list(
@@ -151,6 +151,74 @@ GLOBAL_LIST_INIT(announcer_library, list(
 
 		ANNOUNCER_MSG_NEW_AI = null, // disabled
 	),
+	//CHOMPEdit Start
+	ANNOUNCER_VOICE_CHOMP = list(
+		ANNOUNCER_MSG_ROUND_START = 'sound/AI/welcome.ogg',
+
+		ANNOUNCER_MSG_SHUTTLE_ENDROUND_DOCK = null,
+		ANNOUNCER_MSG_SHUTTLE_ENDROUND_CALLED = null,
+		ANNOUNCER_MSG_SHUTTLE_ENDROUND_RETURNING = null, //No endround sound.
+
+		ANNOUNCER_MSG_SHUTTLE_EMERG_DOCK = 'sound/AI/shuttledock.ogg',
+		ANNOUNCER_MSG_SHUTTLE_EMERG_CALLED = 'sound/AI/shuttlecalled.ogg',
+		ANNOUNCER_MSG_SHUTTLE_EMERG_RECALLED = 'sound/AI/shuttlerecalled.ogg',
+
+		ANNOUNCER_MSG_NIGHTSHIFT_START = null,
+		ANNOUNCER_MSG_NIGHTSHIFT_END = null,
+
+		ANNOUNCER_MSG_NEW_AI = 'sound/AI/newai.ogg',
+		ANNOUNCER_MSG_NEW_COMMAND_REPORT = 'sound/AI/commandreport.ogg',
+		ANNOUNCER_MSG_SECURITY_ADVISEMENT = null,
+
+		ANNOUNCER_MSG_UNIDENTIFIED_LIFESIGNS = 'sound/AI/aliens.ogg',
+		ANNOUNCER_MSG_BIOHAZARD_LOW = null,
+		ANNOUNCER_MSG_BIOHAZARD_FIVE = 'sound/AI/outbreak5.ogg',
+		ANNOUNCER_MSG_BIOHAZARD_SEVEN = 'sound/AI/outbreak7.ogg',
+		ANNOUNCER_MSG_RADIATION = 'sound/AI/radiation.ogg',
+		ANNOUNCER_MSG_SPACETIME_ANOMS = 'sound/AI/spanomalies.ogg',
+		ANNOUNCER_MSG_GRAV_ANOMS = 'sound/AI/granomalies.ogg',
+		ANNOUNCER_MSG_IONSTORM = 'sound/AI/ionstorm.ogg',
+		ANNOUNCER_MSG_METEORS = 'sound/AI/meteors.ogg',
+
+		ANNOUNCER_MSG_AURORA_START = null,
+		ANNOUNCER_MSG_AURORA_END = null,
+
+		ANNOUNCER_MSG_POWER_OFF = 'sound/AI/poweroff.ogg',
+		ANNOUNCER_MSG_POWER_ON = 'sound/AI/poweron.ogg',
+
+		ANNOUNCER_MSG_GRAVITY_OFF = null,
+		ANNOUNCER_MSG_GRAVITY_ON = null,
+
+		ANNOUNCER_MSG_WIRING_FAULT_START = null,
+		ANNOUNCER_MSG_WIRING_FAULT_END = null,
+
+		ANNOUNCER_MSG_STRIKETEAM_SUCCESS = null,
+		ANNOUNCER_MSG_STRIKETEAM_FAIL = null,
+
+		ANNOUNCER_MSG_DEBRISFIELD_START = null,
+		ANNOUNCER_MSG_DEBRISFIELD_END = null,
+
+		ANNOUNCER_MSG_ELECTRICAL_STORM = null,
+		ANNOUNCER_MSG_DISTRESS_SIGNAL = 'sound/AI/sos_ch.ogg',
+		ANNOUNCER_MSG_IANSTORM = null,
+		ANNOUNCER_MSG_SUPERMATTER_CASCADE = null,
+		ANNOUNCER_MSG_CLANG = null,
+		ANNOUNCER_MSG_BLUESPACE_ANOM = null,
+		ANNOUNCER_MSG_DIMENSIONAL_ANOM = null,
+		ANNOUNCER_MSG_BSA_FIRED = null,
+		ANNOUNCER_MSG_GASLEAK = null,
+		ANNOUNCER_MSG_VENDORVIRUS = null,
+		ANNOUNCER_MSG_COMMSBLACKOUT = 'sound/misc/interference.ogg',
+		ANNOUNCER_MSG_DRONEPOD = null,
+		ANNOUNCER_MSG_SHUTTLE_CRASHED = null,
+		ANNOUNCER_MSG_POWERSPIKE = null,
+		ANNOUNCER_MSG_WINDOWBREAK = null,
+		ANNOUNCER_MSG_GREYTIDEVIRUS = null,
+		ANNOUNCER_MSG_VERMIN_INFESTATION = null,
+		ANNOUNCER_MSG_WALLROT = null,
+		ANNOUNCER_MSG_SUPPLYORDER = null,
+		ANNOUNCER_MSG_WEATHER_ALERT = null,
+		), //CHOMPEdit End
 ))
 
 #define AIRLOCK_MSG_OUT "airlock_out"
