@@ -40,7 +40,11 @@
 			if (SSemergency_shuttle.evac)
 				GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.emergency_shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"))
 			else
+<<<<<<< HEAD
 				GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s")) //CHOMP reversion
+=======
+				GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"), "Transfer System", ANNOUNCER_MSG_SHUTTLE_ENDROUND_RETURNING)
+>>>>>>> 60202429a7 (Customizable Announcer (#19387))
 	..()
 
 /datum/shuttle/autodock/ferry/emergency/can_launch(var/user)

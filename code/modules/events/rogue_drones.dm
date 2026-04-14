@@ -36,8 +36,12 @@
 			msg = "A passing derelict ship's drone defense systems have just activated. If any are sighted in the area, use caution." //CHOMPStation Edit: Restored original message.
 		if(5)
 			msg = "We're detecting a swarm of small objects approaching your [using_map.facility_type].  Most likely a bunch of drones.  Please exercise caution if you see any."
+<<<<<<< HEAD
 	//CHOMPStation Edit End
 	GLOB.command_announcement.Announce(msg, "Rogue drone alert")
+=======
+	GLOB.command_announcement.Announce(msg, "Rogue drone alert", new_sound = ANNOUNCER_MSG_DRONEPOD)
+>>>>>>> 60202429a7 (Customizable Announcer (#19387))
 
 /datum/event/rogue_drone/end()
 	var/num_recovered = 0
