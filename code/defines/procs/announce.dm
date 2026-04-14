@@ -110,11 +110,6 @@ GLOBAL_DATUM_INIT(command_announcement, /datum/announcement/priority/command, ne
 	announce_newscaster_news(news)
 
 /datum/announcement/proc/PlaySound(var/message_sound, var/list/zlevels)
-<<<<<<< HEAD
-	if(!message_sound)
-		return
-
-=======
 	var/preamble_sound = announcer_message_preamble()
 	if(preamble_sound) // Downstreams might disable this
 		for(var/mob/M in GLOB.player_list)
@@ -130,16 +125,11 @@ GLOBAL_DATUM_INIT(command_announcement, /datum/announcement/priority/command, ne
 /datum/announcement/proc/internal_postfire_play_sound(var/message_sound, var/list/zlevels)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
->>>>>>> 60202429a7 (Customizable Announcer (#19387))
 	for(var/mob/M in GLOB.player_list)
 		if(zlevels && !(M.z in zlevels))
 			continue
 		if(!isnewplayer(M) && !isdeaf(M))
-<<<<<<< HEAD
-			M << message_sound
-=======
 			SEND_SOUND(M, message_sound)
->>>>>>> 60202429a7 (Customizable Announcer (#19387))
 
 /datum/announcement/proc/Sound(var/message_sound, var/list/zlevels)
 	PlaySound(message_sound, zlevels)
@@ -153,13 +143,8 @@ GLOBAL_DATUM_INIT(command_announcement, /datum/announcement/priority/command, ne
 	// Format currently matches that of newscaster feeds: Registered Name (Assigned Rank)
 	return I.assignment ? "[I.registered_name] ([I.assignment])" : I.registered_name
 
-<<<<<<< HEAD
-/proc/level_seven_announcement() // Chomp note - Do not use this.
-	GLOB.command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert", new_sound = 'sound/AI/outbreak7.ogg')
-=======
 /proc/level_seven_announcement()
 	GLOB.command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert", new_sound = ANNOUNCER_MSG_BIOHAZARD_SEVEN)
->>>>>>> 60202429a7 (Customizable Announcer (#19387))
 
 /proc/ion_storm_announcement()
 	GLOB.command_announcement.Announce("It has come to our attention that \the [station_name()] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert")

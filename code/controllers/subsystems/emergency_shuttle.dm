@@ -74,11 +74,7 @@ SUBSYSTEM_DEF(emergency_shuttle)
 		if(evac)
 			emergency_shuttle_docked.Announce(replacetext(replacetext(using_map.emergency_shuttle_docked_message, "%dock_name%", "[using_map.dock_name]"),  "%ETD%", "[estimated_time] minute\s"), new_sound = ANNOUNCER_MSG_SHUTTLE_EMERG_DOCK)
 		else
-<<<<<<< HEAD
-			GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_docked_message, "%dock_name%", "[using_map.dock_name]"),  "%ETD%", "[estimated_time] minute\s")/*, "Transfer System", 'sound/AI/tramarrived.ogg'*/) // CHOMPEdit
-=======
 			GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_docked_message, "%dock_name%", "[using_map.dock_name]"),  "%ETD%", "[estimated_time] minute\s"), "Transfer System", ANNOUNCER_MSG_SHUTTLE_ENDROUND_DOCK)
->>>>>>> 60202429a7 (Customizable Announcer (#19387))
 
 	//arm the escape pods
 	if(!evac)
@@ -139,11 +135,7 @@ SUBSYSTEM_DEF(emergency_shuttle)
 	shuttle.move_time = SHUTTLE_TRANSIT_DURATION
 	var/estimated_time = round(estimate_arrival_time()/60, 1)
 
-<<<<<<< HEAD
-	GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_called_message, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s")/*, "Transfer System", 'sound/AI/tramcalled.ogg'*/) // CHOMPEdit
-=======
 	GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_called_message, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"), "Transfer System", ANNOUNCER_MSG_SHUTTLE_ENDROUND_CALLED)
->>>>>>> 60202429a7 (Customizable Announcer (#19387))
 	SSatc.shift_ending()
 
 //recalls the shuttle

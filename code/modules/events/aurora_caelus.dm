@@ -10,11 +10,7 @@
 	During this time, starlight will be bright but gentle, shifting between quiet green and blue colors. \
 	Any staff who would like to view these lights for themselves may proceed to the area nearest to them with viewing ports to open space. \
 	You will have approximately two minutes before the ions begin to reach the hull. \
-<<<<<<< HEAD
-	We hope you enjoy the lights.", "Nanotrasen Meteorology Division") //VOREStation Edit //CHOMPedit: removes announcement .ogg
-=======
 	We hope you enjoy the lights.", "Nanotrasen Meteorology Division", new_sound = ANNOUNCER_MSG_AURORA_START)
->>>>>>> 60202429a7 (Customizable Announcer (#19387))
 
 /datum/event/aurora_caelus/start()
 	affecting_z -= using_map.sealed_levels // Space levels only please!
@@ -33,11 +29,7 @@
 	GLOB.command_announcement.Announce("The Aurora Caelus event is now ending. Starlight conditions have returned to normal, and the cloud has dissipated. \
 Please return to your workplace and continue work as normal. \
 Have a pleasant shift, [station_name()], and thank you for watching with us.",
-<<<<<<< HEAD
-"Nanotrasen Meteorology Division") //VOREStation Edit //CHOMPedit: removes announcement .ogg
-=======
 "Nanotrasen Meteorology Division", new_sound = ANNOUNCER_MSG_AURORA_END)
->>>>>>> 60202429a7 (Customizable Announcer (#19387))
 	..()
 
 /datum/event/aurora_caelus/overmap/announce()
