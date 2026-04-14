@@ -1,5 +1,9 @@
 ///-- file dedicated to the new blackhole faction's mobs!
 
+
+
+
+
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 ///oties! or, otie. singular. since... there's just one for now.///
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
@@ -90,7 +94,7 @@
 	addtimer(CALLBACK(src, PROC_REF(doLeap), L), leap_warmup, TIMER_DELETE_ME)
 	return TRUE
 
-/mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/doLeap(var/mob/living/L)
+/mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/doLeap(mob/living/L)
 	if(!L)
 		return FALSE
 	if(L.z != z)
@@ -104,7 +108,7 @@
 
 	addtimer(CALLBACK(src, PROC_REF(afterLeap), L), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/afterLeap(var/mob/living/L)
+/mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/afterLeap(mob/living/L)
 	if(status_flags & LEAPING)
 		status_flags &= ~LEAPING
 
@@ -233,8 +237,9 @@
 
 /mob/living/simple_mob/vore/blackhole/grotesque/death()
 	..()
-	visible_message("[src] lets out a horrible cry as it collapses into an inky black pile of gore!")
+	visible_message(span_warning("[src] lets out a horrible cry as it collapses into an inky black pile of gore!"))
 	playsound(src, 'sound/metroid/metroiddeath.ogg', 100, 1)
+
 
 /*
 
@@ -416,6 +421,7 @@
 	attack_sharp = TRUE
 	attack_edge = 1
 
+
 /mob/living/simple_mob/vore/blackhole/soldier/melee/flagbearer
 	name = "Black Hole soldier flagbearer"
 	desc = "A tajaran dressed in an ominous black and purple uniform, with advanced looking heavy armor. They appear to be wearing some kind of death mask, and wield a machete with a Black Hole banner."
@@ -460,6 +466,7 @@
 	reload_max = 25
 	reload_time = 2 SECONDS
 
+
 /mob/living/simple_mob/vore/blackhole/soldier/ranged/rifle
 	name = "Black Hole soldier rifleman"
 	desc = "A tajaran dressed in an ominous black and purple uniform, with advanced looking heavy armor. They appear to be wearing some kind of death mask, and wield an assault rifle."
@@ -471,6 +478,7 @@
 	base_attack_cooldown = 8
 	reload_max = 30
 	reload_time = 2 SECONDS
+
 
 /mob/living/simple_mob/vore/blackhole/soldier/ranged/shotgun
 	name = "Black Hole soldier boarder"
@@ -487,6 +495,7 @@
 	reload_max = 8
 	reload_time = 5 SECONDS
 
+
 /mob/living/simple_mob/vore/blackhole/soldier/ranged/plasma
 	name = "Black Hole soldier plasma gunner"
 	desc = "A tajaran dressed in an ominous black and purple uniform, with advanced looking heavy armor. They appear to be wearing some kind of death mask, and wield an advanced plasma carbine."
@@ -501,6 +510,7 @@
 	base_attack_cooldown = 4 DECISECONDS
 	reload_max = 8
 	reload_time = 5 SECONDS
+
 
 /mob/living/simple_mob/vore/blackhole/soldier/ranged/lmg
 	name = "Black Hole soldier machinegunner"
@@ -617,28 +627,28 @@
 				"rad" = 100
 				)
 
-/mob/living/simple_mob/vore/blackhole/trooper/melee/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(O.force)
-		if(prob(20))
-			visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
-			if(user)
-				ai_holder.react_to_attack(user)
-			return
-		else
-			..()
-	else
-		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
-		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
 
-/mob/living/simple_mob/vore/blackhole/trooper/melee/bullet_act(var/obj/item/projectile/Proj)
-	if(!Proj)	return
-	if(prob(35))
-		visible_message(span_bolddanger("[src] blocks [Proj] with its shield!"))
-		if(Proj.firer)
-			ai_holder.react_to_attack(Proj.firer)
+/mob/living/simple_mob/vore/blackhole/trooper/melee/attackby(obj/item/O, mob/user)
+	if(!O.force)
+		to_chat(user, span_notice("This weapon is ineffective, it does no damage."))
+		visible_message(span_notice("\The [user] gently taps [src] with \the [O]."))
 		return
-	else
-		..()
+	if(prob(20))
+		visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
+		if(user)
+			ai_holder.react_to_attack(user)
+		return
+	. = ..()
+
+
+/mob/living/simple_mob/vore/blackhole/trooper/melee/bullet_act(obj/item/projectile/proj)
+	if(!proj)	return
+	if(prob(35))
+		visible_message(span_bolddanger("[src] blocks [proj] with its shield!"))
+		if(proj.firer)
+			ai_holder.react_to_attack(proj.firer)
+		return
+	. = ..()
 
 
 /mob/living/simple_mob/vore/blackhole/trooper/ranged
@@ -676,6 +686,7 @@
 	reload_max = 16
 	reload_time = 5 SECONDS
 
+
 /mob/living/simple_mob/vore/blackhole/trooper/ranged/smg
 	name = "Black Hole trooper gunner"
 	desc = "An ominous looking feline individual, wearing a dark black and purple voidsuit. There is something very uncanny about them. They appear to have an SMG."
@@ -709,28 +720,28 @@
 	reload_max = 25
 	reload_time = 2 SECONDS
 
-/mob/living/simple_mob/vore/blackhole/trooper/ranged/smg_shield/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(O.force)
-		if(prob(10))
-			visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
-			if(user)
-				ai_holder.react_to_attack(user)
-			return
-		else
-			..()
-	else
-		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
-		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
 
-/mob/living/simple_mob/vore/blackhole/trooper/ranged/smg_shield/bullet_act(var/obj/item/projectile/Proj)
-	if(!Proj)	return
-	if(prob(35))
-		visible_message(span_bolddanger("[src] blocks [Proj] with its shield!"))
-		if(Proj.firer)
-			ai_holder.react_to_attack(Proj.firer)
+/mob/living/simple_mob/vore/blackhole/trooper/ranged/smg_shield/attackby(obj/item/O, mob/user)
+	if(!O.force)
+		to_chat(user, span_notice("This weapon is ineffective, it does no damage."))
+		visible_message(span_notice("\The [user] gently taps [src] with \the [O]."))
 		return
-	else
-		..()
+	if(prob(20))
+		visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
+		if(user)
+			ai_holder.react_to_attack(user)
+		return
+	. = ..()
+
+
+/mob/living/simple_mob/vore/blackhole/trooper/ranged/smg_shield/bullet_act(obj/item/projectile/proj)
+	if(!proj)	return
+	if(prob(35))
+		visible_message(span_bolddanger("[src] blocks [proj] with its shield!"))
+		if(proj.firer)
+			ai_holder.react_to_attack(proj.firer)
+		return
+	. = ..()
 
 
 /mob/living/simple_mob/vore/blackhole/trooper/ranged/rifle
@@ -746,6 +757,7 @@
 	base_attack_cooldown = 8
 	reload_max = 30
 	reload_time = 2 SECONDS
+
 
 /mob/living/simple_mob/vore/blackhole/trooper/ranged/sniper
 	name = "Black Hole trooper marksman"
@@ -764,6 +776,7 @@
 	reload_max = 10
 	reload_time = 5 SECONDS
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/sniper
+
 
 /mob/living/simple_mob/vore/blackhole/trooper/ranged/sniper/ranged_pre_animation(atom/A)
 	Beam(get_turf(A), icon_state = "sniper_beam", time = 2 SECONDS, maxdistance = 20)
@@ -927,28 +940,27 @@
 				"rad" = 100
 				)
 
-/mob/living/simple_mob/vore/blackhole/templar/melee/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(O.force)
-		if(prob(20))
-			visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
-			if(user)
-				ai_holder.react_to_attack(user)
-			return
-		else
-			..()
-	else
-		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
-		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
-
-/mob/living/simple_mob/vore/blackhole/templar/melee/bullet_act(var/obj/item/projectile/Proj)
-	if(!Proj)	return
-	if(prob(35))
-		visible_message(span_bolddanger("[src] blocks [Proj] with its shield!"))
-		if(Proj.firer)
-			ai_holder.react_to_attack(Proj.firer)
+/mob/living/simple_mob/vore/blackhole/templar/melee/attackby(obj/item/O, mob/user)
+	if(!O.force)
+		to_chat(user, span_notice("This weapon is ineffective, it does no damage."))
+		visible_message(span_notice("\The [user] gently taps [src] with \the [O]."))
 		return
-	else
-		..()
+	if(prob(20))
+		visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
+		if(user)
+			ai_holder.react_to_attack(user)
+		return
+	. = ..()
+
+
+/mob/living/simple_mob/vore/blackhole/templar/melee/bullet_act(obj/item/projectile/proj)
+	if(!proj)	return
+	if(prob(35))
+		visible_message(span_bolddanger("[src] blocks [proj] with its shield!"))
+		if(proj.firer)
+			ai_holder.react_to_attack(proj.firer)
+		return
+	. = ..()
 
 
 /mob/living/simple_mob/vore/blackhole/templar/melee/desword
@@ -981,30 +993,6 @@
 				)
 
 
-/mob/living/simple_mob/vore/blackhole/templar/melee/desword/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(O.force)
-		if(prob(30))
-			visible_message(span_danger("\The [src] blocks \the [O] with its sword!"))
-			if(user)
-				ai_holder.react_to_attack(user)
-			return
-		else
-			..()
-	else
-		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
-		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
-
-/mob/living/simple_mob/vore/blackhole/templar/melee/desword/bullet_act(var/obj/item/projectile/Proj)
-	if(!Proj)	return
-	if(prob(55))
-		visible_message(span_bolddanger("[src] blocks [Proj] with its sword!"))
-		if(Proj.firer)
-			ai_holder.react_to_attack(Proj.firer)
-		return
-	else
-		..()
-
-
 /mob/living/simple_mob/vore/blackhole/templar/melee/hammer
 	name = "Black Hole templar mauler"
 	desc = "An ominous looking feline individual, wearing a reinforced dark black and purple voidsuit. There is something very uncanny about them. They appear to have a giant shock maul."
@@ -1032,31 +1020,6 @@
 				"bio" = 65,
 				"rad" = 100
 				)
-
-
-
-/mob/living/simple_mob/vore/blackhole/templar/melee/hammer/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(O.force)
-		if(prob(0))
-			visible_message(span_danger("\The [src] blocks \the [O] with its hammer!"))
-			if(user)
-				ai_holder.react_to_attack(user)
-			return
-		else
-			..()
-	else
-		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
-		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
-
-/mob/living/simple_mob/vore/blackhole/templar/melee/hammer/bullet_act(var/obj/item/projectile/Proj)
-	if(!Proj)	return
-	if(prob(0))
-		visible_message(span_bolddanger("[src] blocks [Proj] with its hammer!"))
-		if(Proj.firer)
-			ai_holder.react_to_attack(Proj.firer)
-		return
-	else
-		..()
 
 
 
@@ -1130,28 +1093,27 @@
 				)
 
 
-/mob/living/simple_mob/vore/blackhole/templar/ranged/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(O.force)
-		if(prob(10))
-			visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
-			if(user)
-				ai_holder.react_to_attack(user)
-			return
-		else
-			..()
-	else
-		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
-		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
-
-/mob/living/simple_mob/vore/blackhole/templar/ranged/bullet_act(var/obj/item/projectile/Proj)
-	if(!Proj)	return
-	if(prob(35))
-		visible_message(span_bolddanger("[src] blocks [Proj] with its shield!"))
-		if(Proj.firer)
-			ai_holder.react_to_attack(Proj.firer)
+/mob/living/simple_mob/vore/blackhole/templar/ranged/smg_shield/attackby(obj/item/O, mob/user)
+	if(!O.force)
+		to_chat(user, span_notice("This weapon is ineffective, it does no damage."))
+		visible_message(span_notice("\The [user] gently taps [src] with \the [O]."))
 		return
-	else
-		..()
+	if(prob(20))
+		visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
+		if(user)
+			ai_holder.react_to_attack(user)
+		return
+	. = ..()
+
+
+/mob/living/simple_mob/vore/blackhole/templar/ranged/smg_shield/bullet_act(obj/item/projectile/proj)
+	if(!proj)	return
+	if(prob(35))
+		visible_message(span_bolddanger("[src] blocks [proj] with its shield!"))
+		if(proj.firer)
+			ai_holder.react_to_attack(proj.firer)
+		return
+	. = ..()
 
 
 
@@ -1466,28 +1428,27 @@
 	icon_living = "soldier-sshield"
 	icon_state = "soldier-sshield"
 
-/mob/living/simple_mob/vore/blackhole/taur/soldier/melee/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(O.force)
-		if(prob(25))
-			visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
-			if(user)
-				ai_holder.react_to_attack(user)
-			return
-		else
-			..()
-	else
-		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
-		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
-
-/mob/living/simple_mob/vore/blackhole/taur/soldier/melee/bullet_act(var/obj/item/projectile/Proj)
-	if(!Proj)	return
-	if(prob(35))
-		visible_message(span_bolddanger("[src] blocks [Proj] with its shield!"))
-		if(Proj.firer)
-			ai_holder.react_to_attack(Proj.firer)
+/mob/living/simple_mob/vore/blackhole/taur/soldier/melee/attackby(obj/item/O, mob/user)
+	if(!O.force)
+		to_chat(user, span_notice("This weapon is ineffective, it does no damage."))
+		visible_message(span_notice("\The [user] gently taps [src] with \the [O]."))
 		return
-	else
-		..()
+	if(prob(20))
+		visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
+		if(user)
+			ai_holder.react_to_attack(user)
+		return
+	. = ..()
+
+
+/mob/living/simple_mob/vore/blackhole/taur/soldier/melee/bullet_act(obj/item/projectile/proj)
+	if(!proj)	return
+	if(prob(35))
+		visible_message(span_bolddanger("[src] blocks [proj] with its shield!"))
+		if(proj.firer)
+			ai_holder.react_to_attack(proj.firer)
+		return
+	. = ..()
 
 
 /mob/living/simple_mob/vore/blackhole/taur/soldier/ranged
@@ -1640,9 +1601,11 @@
 	reload_max = 30
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
+
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 ///mechs!///
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
+
 
 /mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced/blackhole
 	name = "singularity gygax"
