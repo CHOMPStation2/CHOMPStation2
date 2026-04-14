@@ -2,6 +2,7 @@
 #define ANNOUNCER_VOICE_SS13 "announcer_ss13"
 #define ANNOUNCER_VOICE_SILENT "announcer_silent"
 #define ANNOUNCER_VOICE_VIRGO "announcer_virgo"
+#define ANNOUNCER_VOICE_CHOMP "announcer_chomp" //CHOMPEdit - Adds CHOMP Announcer
 
 // Announcements
 #define ANNOUNCER_MSG_ROUND_START "announcer_msg_round_start"
