@@ -3,7 +3,6 @@
 
 
 
-
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 ///oties! or, otie. singular. since... there's just one for now.///
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
@@ -133,6 +132,7 @@
 	icon_state = "conscript"
 	icon_rest = "conscript-stunned"
 	a_intent = I_HURT
+	has_langs = list(LANGUAGE_SLAVIC, LANGUAGE_SIIK)
 	see_in_dark = 8
 	maxHealth = 100
 	movement_cooldown = 0
@@ -931,9 +931,9 @@
 	attacktext = list("slashed")
 
 	armor = list(			// Values for normal getarmor() checks
-				"melee" = 70,
-				"bullet" = 70,
-				"laser" = 70,
+				"melee" = 50,
+				"bullet" = 50,
+				"laser" = 50,
 				"energy" = 55,
 				"bomb" = 65,
 				"bio" = 65,
@@ -946,7 +946,7 @@
 		visible_message(span_notice("\The [user] gently taps [src] with \the [O]."))
 		return
 	if(prob(20))
-		visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
+		visible_message(span_danger("\The [src] blocks \the [O]!"))
 		if(user)
 			ai_holder.react_to_attack(user)
 		return
@@ -956,7 +956,7 @@
 /mob/living/simple_mob/vore/blackhole/templar/melee/bullet_act(obj/item/projectile/proj)
 	if(!proj)	return
 	if(prob(35))
-		visible_message(span_bolddanger("[src] blocks [proj] with its shield!"))
+		visible_message(span_bolddanger("[src] blocks [proj]!"))
 		if(proj.firer)
 			ai_holder.react_to_attack(proj.firer)
 		return
@@ -982,16 +982,6 @@
 	attack_edge = 1
 	attacktext = list("slashed", "quigonned", "styled on", "darth mauled", "oppressed")
 
-	armor = list(			// Values for normal getarmor() checks
-				"melee" = 70,
-				"bullet" = 70,
-				"laser" = 70,
-				"energy" = 55,
-				"bomb" = 65,
-				"bio" = 65,
-				"rad" = 100
-				)
-
 
 /mob/living/simple_mob/vore/blackhole/templar/melee/hammer
 	name = "Black Hole templar mauler"
@@ -1001,25 +991,30 @@
 	icon_state = "templar-hammer"
 	icon_rest = "templar-stunned"
 	has_eye_glow = TRUE
-	attack_sound = 'sound/effects/lightningbolt.ogg'
+	attack_sound = 'sound/weapons/heavysmash.ogg'
 	loot_list = list(/obj/item/melee/shock_maul = 25)
 	melee_damage_lower = 30
-	melee_damage_upper = 75
+	melee_damage_upper = 45
 	base_attack_cooldown = 12
 	attack_armor_pen = 10
 	attack_sharp = FALSE
 	attack_edge = 0
 	attacktext = list("struck", "bonked", "hammered", "vibe checked", "sledged", "thrashed")
 
-	armor = list(			// Values for normal getarmor() checks
-				"melee" = 70,
-				"bullet" = 70,
-				"laser" = 70,
-				"energy" = 55,
-				"bomb" = 65,
-				"bio" = 65,
-				"rad" = 100
-				)
+
+/mob/living/simple_mob/vore/blackhole/templar/melee/hammer/apply_melee_effects(atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		L.electrocute_act(10, src, def_zone = BP_TORSO)
+		visible_message(span_danger("\The [src] sends \the [L] flying with a thunderous crackle of electricity!"))
+		playsound(src, 'sound/effects/lightningbolt.ogg', 50, 1)
+		playsound(src.loc, "sparks", 50, 1)
+		L.stun_effect_act(1 , 3, BP_TORSO, src)
+		L.take_organ_damage(10)
+		L.Paralyse(1)
+		var/throwdir = get_dir(src, L)
+		L.throw_at(get_edge_target_turf(L, throwdir), 50, 4, src)
+	. = ..()
 
 
 
@@ -1941,7 +1936,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	say_cannot = list("Unable.")
 	say_maybe_target = list("Come, embrace oblivion!", "Where did you go?!", "You cannot hide from the will of the singularity!")
 	say_got_target = list("Die, heathen!", "Target spotted!", "Purge the nonbelievers!", "Your death will not be swift!")
-	say_threaten = list("Enemy spotted!", "Resisting is futile!", "Target spotted!", "Contact!", "Enemy!", "Heathens!", "Nonbelievers!", "You cannot hide from the will of the singularity!")
+	say_threaten = list(",P Enemy spotted!", ",P Resisting is futile!", ",P Target spotted!", ",P Contact!", ",P Enemy!", ",P Heathens!", ",P Nonbelievers!", ",P You cannot hide from the will of the singularity!")
 	say_stand_down = list("Come back here!")
 	say_escalate = list("Die, heathen!", "Thy end is now!", "The Monolith commands your death!", "Come here!!", "Get some!!", "Die!", "This will hurt!", "Embrace oblivion!", "Suffering awaits!", "Destroy!")
 
@@ -1998,7 +1993,6 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	firing_lanes = TRUE
 	violent_breakthrough = TRUE
 	home_low_priority = TRUE
-	speak_chance = 2
 	call_distance = 14
 	cooperative = TRUE
 
@@ -2013,7 +2007,6 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	threaten_delay = 1 SECONDS
 	use_astar = TRUE
 	home_low_priority = TRUE
-	speak_chance = 2
 	call_distance = 14
 	cooperative = TRUE
 
@@ -2029,7 +2022,6 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	use_astar = TRUE
 	conserve_ammo = FALSE
 	home_low_priority = TRUE
-	speak_chance = 2
 	call_distance = 14
 	cooperative = TRUE
 
@@ -2044,8 +2036,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	threaten_delay = 0 SECONDS
 	use_astar = TRUE
 	home_low_priority = TRUE
-	speak_chance = 2
-	call_distance = 14
+	call_distance = 20
 	cooperative = TRUE
 
 
@@ -2155,7 +2146,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	impact_type = /obj/effect/projectile/impact/lightning
 
 	damage = 20
-	agony = 5
+	agony = 1
 	eyeblur = 1
 	fire_sound = 'sound/effects/lightningbolt.ogg'
 	hitsound = 'sound/effects/lightningshock.ogg'
