@@ -92,21 +92,21 @@
 /*
  * Alien Pistol
  */
-<<<<<<< HEAD
-=======
 /obj/item/gun/energy/alien
 	name = "alien pistol"
 	desc = "A weapon that works very similarly to a traditional energy weapon. How this came to be will likely be a mystery for the ages."
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_pistol)
+	icon = 'icons/obj/gun.dmi' // CHOMPStation Edit: Override back to base gun.dmi
 	icon_state = "alienpistol"
 	item_state = "alienpistol"
-	fire_delay = 10 // Handguns should be inferior to two-handed weapons. Even alien ones I suppose.
-	charge_cost = 480 // Five shots.
+	fire_delay = 9 //CHOMPedit changed cooldown from 10 to 9.
+	charge_cost = 380 // CHOMPedit changed from 480 to 380. Aka five shots to six shots.
 
-	projectile_type = /obj/item/projectile/beam/cyan
+	projectile_type = /obj/item/projectile/beam/precursor //CHOMPedit changed beam type
 	cell_type = /obj/item/cell/device/weapon/recharge/alien // Self charges.
 	modifystate = "alienpistol"
->>>>>>> 20a0443b8e (Clears unused research var (#19355))
+	battery_lock = 1 //CHOMPedit adds battery lock.
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /datum/category_item/catalogue/anomalous/precursor_a/alien_pistol
 	name = "Precursor Alpha Weapon - Appendageheld Laser"
@@ -135,23 +135,6 @@
 	and instead focused on other endeavors. Another explanation is that the vast age of the weapon \
 	may have caused it to degrade, yet still remain functional at a reduced capability." //CHOMPedit changed description to be accurate with new projectile
 	value = CATALOGUER_REWARD_MEDIUM
-
-/obj/item/gun/energy/alien
-	name = "alien pistol"
-	desc = "A weapon that works very similarly to a traditional energy weapon. How this came to be will likely be a mystery for the ages."
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_pistol)
-	icon = 'icons/obj/gun.dmi' // CHOMPStation Edit: Override back to base gun.dmi
-	icon_state = "alienpistol"
-	item_state = "alienpistol"
-	fire_delay = 9 //CHOMPedit changed cooldown from 10 to 9.
-	charge_cost = 380 // CHOMPedit changed from 480 to 380. Aka five shots to six shots.
-
-	projectile_type = /obj/item/projectile/beam/precursor //CHOMPedit changed beam type
-	cell_type = /obj/item/cell/device/weapon/recharge/alien // Self charges.
-	modifystate = "alienpistol"
-	battery_lock = 1 //CHOMPedit adds battery lock.
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
-
 
 /*
  * Antique Laser Gun
