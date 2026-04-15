@@ -12,8 +12,12 @@
 	item_state = "coilgun"
 	icon = 'icons/obj/railgun.dmi'
 //	one_handed_penalty = 15
+<<<<<<< HEAD
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 4, TECH_ILLEGAL = 2, TECH_MAGNET = 4)
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+=======
+	w_class = ITEMSIZE_LARGE
+>>>>>>> 20a0443b8e (Clears unused research var (#19355))
 
 	var/obj/item/cell/cell                              // Currently installed powercell.
 	var/obj/item/stock_parts/capacitor/capacitor        // Installed capacitor. Higher rating == faster charge between shots. Set to a path to spawn with one of that type.
@@ -253,7 +257,6 @@
 	icon_state = "fuelrodgun"
 	item_state = "coilgun"
 	icon = 'icons/obj/railgun.dmi'
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 4, TECH_PHORON = 4, TECH_ILLEGAL = 5, TECH_MAGNET = 4)
 	w_class = ITEMSIZE_LARGE
 
 	removable_components = TRUE

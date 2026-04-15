@@ -23,8 +23,12 @@
 	description_info = "Ctrl-Clicking on this object will attempt to activate its unique ability."
 	icon = 'icons/obj/props/telecube.dmi'
 	icon_state = "cube"
+<<<<<<< HEAD
 	w_class = ITEMSIZE_NO_CONTAINER //CHOMPEdit - Made impossible to store to help resolve a certain repeated issue that has been happening with these.
 	origin_tech = list(TECH_MATERIAL = 7, TECH_POWER = 6, TECH_BLUESPACE = 7, TECH_ARCANE = 2, TECH_PRECURSOR = 2)
+=======
+	w_class = ITEMSIZE_SMALL
+>>>>>>> 20a0443b8e (Clears unused research var (#19355))
 
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/telecube)
 

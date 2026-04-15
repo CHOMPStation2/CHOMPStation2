@@ -14,7 +14,10 @@
 	conductive = 0
 	explosion_resistance = 60
 	radiation_resistance = 10
+<<<<<<< HEAD
 	stack_origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 2) // CHOMPedit: No longer super powerful for research.
+=======
+>>>>>>> 20a0443b8e (Clears unused research var (#19355))
 	stack_type = /obj/item/stack/material/resin
 
 /datum/material/resin/can_open_material_door(var/mob/living/user)
