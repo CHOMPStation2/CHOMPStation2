@@ -8,7 +8,6 @@
 	fire_delay = 10 // Handguns should be inferior to two-handed weapons.
 
 	projectile_type = /obj/item/projectile/beam/stun
-	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
 	modifystate = "lasgunstun"
 
 	firemodes = list(
@@ -31,7 +30,6 @@
 	burst_delay = 0.5
 
 	projectile_type = /obj/item/projectile/beam/burstlaser
-	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2, TECH_ILLEGAL = 3)
 	modifystate = "mg42-e"
 
 //	requires_two_hands = 1
@@ -55,7 +53,6 @@
 	fire_delay = 8 // Handguns should be inferior to two-handed weapons.
 
 	projectile_type = /obj/item/projectile/beam/stun
-	origin_tech = list(TECH_COMBAT = 6, TECH_MAGNET = 5)
 	modifystate = "x01stun"
 
 	firemodes = list(

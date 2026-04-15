@@ -68,7 +68,6 @@
 	is64x32_override = TRUE
 	accept_cell_type = /obj/item/cell/vepr
 	cell_type = /obj/item/cell/vepr
-	origin_tech = list(TECH_POWER = 4, TECH_COMBAT = 6, TECH_MAGNET = 4, TECH_ILLEGAL = 4)
 
 /obj/item/cell/vepr
 	name = "VEPR cell"
@@ -81,7 +80,6 @@
 	charge_amount = 20
 	matter = list(MAT_METAL = 350, MAT_GLASS = 50)
 	preserve_item = 1
-	origin_tech = list(TECH_POWER = 6)
 
 /obj/item/gun/energy/tommylaser
 	name = "M-2421 'Tommy-Laser'"
@@ -93,7 +91,6 @@
 	charge_cost = 60 // 40 shots, lay down the firepower
 	projectile_type = /obj/item/projectile/beam/weaklaser
 	cell_type = /obj/item/cell/device/weapon
-	origin_tech = list(TECH_COMBAT = 5, TECH_MAGNET = 5, TECH_ILLEGAL = 3)
 
 	firemodes = list(
 		list(mode_name="single shot", burst = 1, fire_delay=4, move_delay=null, burst_accuracy = null, dispersion = null),
@@ -116,4 +113,3 @@
 	var/is64x32_override = TRUE
 	accept_cell_type = /obj/item/cell/vepr
 	cell_type = /obj/item/cell/vepr
-	origin_tech = list(TECH_POWER = 4, TECH_COMBAT = 6, TECH_MAGNET = 4, TECH_ILLEGAL = 4)

@@ -177,14 +177,9 @@
 /obj/item/circuitboard/teleporter_hub
 	name = T_BOARD("teleporter hub")
 	build_path = /obj/machinery/teleport/hub
-<<<<<<< HEAD
 	board_type = new /datum/frame/frame_types/machine //YWEdit makes buildable
 	matter = list(MAT_STEEL = 50, MAT_GLASS = 50, MAT_GOLD = 100)
-//	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 4)
 //CHOMPedit Balance
-=======
-	board_type = "teleporter_hub"
->>>>>>> 20a0443b8e (Clears unused research var (#19355))
 	req_components = list(
 							/obj/item/bluespace_crystal = 2,
 							/obj/item/stock_parts/capacitor = 2,
@@ -196,13 +191,8 @@
 /obj/item/circuitboard/teleporter_station
 	name = T_BOARD("teleporter station")
 	build_path = /obj/machinery/teleport/station
-<<<<<<< HEAD
 	board_type = new /datum/frame/frame_types/machine //YWEdit makes buildable
 	matter = list(MAT_STEEL = 50, MAT_GLASS = 50, MAT_GOLD = 100)
-//	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 3)
-=======
-	board_type = "teleporter_station"
->>>>>>> 20a0443b8e (Clears unused research var (#19355))
 	req_components = list(
 							/obj/item/stock_parts/console_screen = 1,
 							/obj/item/stock_parts/capacitor = 2,

@@ -156,10 +156,6 @@
 	explosion_resistance = 85
 	reflectivity = 0.2
 	radiation_resistance = 10
-<<<<<<< HEAD
-	stack_origin_tech = list(TECH_MATERIAL = 8, TECH_ILLEGAL = 1, TECH_PHORON = 4, TECH_BLUESPACE = 4, TECH_ARCANE = 1) //CHOMP Edit
-=======
->>>>>>> 20a0443b8e (Clears unused research var (#19355))
 	supply_conversion_value = 13
 	icon_base = "stone"
 	table_icon_base = "stone"

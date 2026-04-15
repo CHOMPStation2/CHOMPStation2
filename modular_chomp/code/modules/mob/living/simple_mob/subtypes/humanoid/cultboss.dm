@@ -201,7 +201,6 @@
 	name = "cult blade"
 	desc = "An arcane weapon wielded by the followers of Nar-Sie."
 	icon_state = "cultblade"
-	origin_tech = list(TECH_COMBAT = 1, TECH_ARCANE = 2)
 	w_class = ITEMSIZE_LARGE
 	force = 40
 	throwforce = 20

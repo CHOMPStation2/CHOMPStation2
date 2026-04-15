@@ -117,12 +117,7 @@
 
 /obj/item/mecha_parts/micro/part/weasel_right_leg
 	name="Weasel Right Leg"
-<<<<<<< HEAD
 	icon_state = "weasel-leg-right"
-	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
-=======
-	icon_state = "weasel-leg-right"*/
->>>>>>> 20a0443b8e (Clears unused research var (#19355))
 
 /obj/item/mecha_parts/micro/part/weasel_tri_leg
 	name="Weasel Legs"

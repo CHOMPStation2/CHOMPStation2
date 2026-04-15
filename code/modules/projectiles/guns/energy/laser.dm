@@ -148,7 +148,6 @@
 
 	projectile_type = /obj/item/projectile/beam/precursor //CHOMPedit changed beam type
 	cell_type = /obj/item/cell/device/weapon/recharge/alien // Self charges.
-	origin_tech = list(TECH_COMBAT = 8, TECH_MAGNET = 7)
 	modifystate = "alienpistol"
 	battery_lock = 1 //CHOMPedit adds battery lock.
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
@@ -288,10 +287,6 @@
 	icon_state = "lasercannon"
 	item_state = null
 	wielded_item_state = "mhdhowitzer-wielded" //Placeholder
-<<<<<<< HEAD
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 6, TECH_POWER = 6)  //ChompEdit improved.
-=======
->>>>>>> 20a0443b8e (Clears unused research var (#19355))
 	slot_flags = SLOT_BELT|SLOT_BACK
 	projectile_type = /obj/item/projectile/beam/heavylaser/cannon
 	battery_lock = 0  //ChompEdit  This thing is worthless with this.

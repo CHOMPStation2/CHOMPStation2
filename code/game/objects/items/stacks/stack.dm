@@ -11,12 +11,7 @@
 
 /obj/item/stack
 	gender = PLURAL
-<<<<<<< HEAD
-	origin_tech = list(TECH_MATERIAL = 1)
 	icon = 'icons/obj/stacks_ch.dmi' //CHOMPedit - materials update
-=======
-	icon = 'icons/obj/stacks.dmi'
->>>>>>> 20a0443b8e (Clears unused research var (#19355))
 	randpixel = 7
 	center_of_mass_x = 0
 	center_of_mass_y = 0

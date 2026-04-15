@@ -7,12 +7,7 @@
 	item_state = "ionrifle"
 	icon_expected_width = 64 // CHOMPEdit: Gun Sprites
 	wielded_item_state = "ionrifle-wielded"
-<<<<<<< HEAD
-	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 4)
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
-=======
-	w_class = ITEMSIZE_LARGE
->>>>>>> 20a0443b8e (Clears unused research var (#19355))
 	force = 10
 	slot_flags = SLOT_BACK
 	projectile_type = /obj/item/projectile/ion

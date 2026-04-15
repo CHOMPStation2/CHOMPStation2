@@ -16,9 +16,6 @@
 	projectile = /obj/item/projectile/beam/xray
 	fire_sound = 'sound/weapons/eluger.ogg'
 
-<<<<<<< HEAD
-	origin_tech = list(TECH_MATERIAL = 3, TECH_COMBAT = 3, TECH_PHORON = 3, TECH_POWER = 3)
-
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/gamma //CHOMPedit begin : adds Gamma Laser as proof of concept
 	equip_cooldown = 5
 	name = "\improper GA-X \"Render\" Experimental Gamma Laser"
@@ -28,10 +25,6 @@
 	projectile = /obj/item/projectile/beam/gamma
 	fire_sound = 'sound/weapons/emitter.ogg'
 
-	origin_tech = list(TECH_MATERIAL = 5, TECH_COMBAT = 5, TECH_PHORON = 4, TECH_POWER = 5, TECH_ILLEGAL = 3) //CHOMPedit end
-
-=======
->>>>>>> 20a0443b8e (Clears unused research var (#19355))
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/xray/rigged
 	equip_cooldown = 12
 	name = "jury-rigged xray rifle"

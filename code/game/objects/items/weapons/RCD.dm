@@ -319,9 +319,4 @@
 	name = "high-capacity matter cartridge"
 	desc = "Do not ingest."
 	matter = list(DEFAULT_WALL_MATERIAL = 45000,MAT_GLASS = 22500)
-<<<<<<< HEAD
-	origin_tech = list(TECH_MATERIAL = 4)
 	remaining = RCD_MAX_CAPACITY * 2	//CHOMPEdit
-=======
-	remaining = RCD_MAX_CAPACITY
->>>>>>> 20a0443b8e (Clears unused research var (#19355))

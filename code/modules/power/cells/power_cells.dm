@@ -10,12 +10,7 @@
 /obj/item/cell/crap
 	name = "\improper rechargable AA battery" // CHOMPEdit
 	desc = "An older, cheap power cell. It's probably been in use for quite some time now."
-<<<<<<< HEAD
 	desc = "You can't top the plasma top." //TOTALLY TRADEMARK INFRINGEMENT // CHOMPEdit
-	origin_tech = list(TECH_POWER = 0)
-=======
-	description_fluff = "You can't top the rust top." //TOTALLY TRADEMARK INFRINGEMENT
->>>>>>> 20a0443b8e (Clears unused research var (#19355))
 	icon_state = "crap"
 	charge = 500
 	maxcharge = 500
