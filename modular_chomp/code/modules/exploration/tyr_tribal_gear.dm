@@ -86,7 +86,6 @@
 	w_class = ITEMSIZE_SMALL
 
 	var/static/list/possible_states = list("crystal", "generator","core", "hilt")
-	var/static/list/possible_tech = list(TECH_MATERIAL, TECH_ENGINEERING, TECH_PHORON, TECH_POWER, TECH_BIO, TECH_COMBAT, TECH_MAGNET, TECH_DATA)
 
 /obj/item/prop/alien/prototype/Initialize(mapload)
 	. = ..()
