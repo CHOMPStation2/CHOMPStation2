@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-/obj/item/holder/dropped(mob/user)
-	// CHOMPEdit Start
-=======
 /obj/item/holder/dropped(mob/user, equipping, slot)
-	if(held_mob?.loc != src || isturf(loc))
-		var/held = held_mob
-		dump_mob()
-		held_mob = held
->>>>>>> 51b00a200c (Magboot and glove fix (#19415))
+	// CHOMPEdit Start
 	..()
 	spawn(1)
 		if(!throwing && isturf(loc))
