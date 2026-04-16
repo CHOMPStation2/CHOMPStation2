@@ -589,6 +589,16 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
+"abr" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threecp)
 "abs" = (
 /obj/machinery/conveyor{
 	id = "maintdelivery";
@@ -19212,6 +19222,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/spline/plain/three_quarters,
+/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/bridge)
 "liF" = (
@@ -33491,13 +33502,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
-"ttz" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/threecp)
 "ttH" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
@@ -38589,6 +38593,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/bridge)
 "wqw" = (
@@ -71359,7 +71364,7 @@ upy
 aal
 mjH
 yiP
-qff
+abr
 etf
 ooY
 ooY
@@ -71614,7 +71619,7 @@ nBA
 bMz
 bMz
 lkd
-ttz
+bMz
 bJf
 ilJ
 alA

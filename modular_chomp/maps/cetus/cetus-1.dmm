@@ -1369,6 +1369,27 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/shieldgen)
+"acz" = (
+/obj/item/stool/padded{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/meteor/cafeteriaf1)
+"acA" = (
+/obj/structure/table/hardwoodtable,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "bar";
+	layer = 3.1;
+	name = "Bar Shutters"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/cetus/meteor/bar)
 "acC" = (
 /obj/structure/sink{
 	dir = 4;
@@ -1597,6 +1618,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/disposal/wall{
+	pixel_y = 35
+	},
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
 "aiQ" = (
@@ -7182,6 +7207,10 @@
 /obj/machinery/door/window/southleft{
 	name = "Bar";
 	req_access = list(25)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
@@ -13813,10 +13842,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/engine)
 "gYu" = (
-/obj/machinery/computer/arcade/clawmachine,
 /obj/effect/floor_decal/spline/plain/cee{
 	dir = 4
 	},
+/obj/machinery/vending/loadout/costume,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/meteor/hallway2)
 "gYy" = (
@@ -21762,6 +21791,11 @@
 	},
 /obj/item/smes_coil,
 /obj/item/smes_coil,
+/obj/item/paper{
+	info = "The big blue box recently installed in here is a 'grid checker' which will shut off the power if a dangerous power spike from the engine erupts into the powernet.  Shutting everything down protects everything from electrical damage, however the outages can be disruptive to colony operations, so it is designed to restore power after a somewhat significant delay, up to ten minutes or so.  The grid checker can be manually hacked in order to end the outage sooner.  To do that, you must cut three specific wires which do not cause a red light to shine, then pulse a fourth wire.  Electrical protection is highly recommended when doing maintenance on the grid checker.";
+	name = "grid checker info";
+	pixel_y = 7
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
 "kLN" = (
@@ -21904,6 +21938,7 @@
 /obj/machinery/door/airlock/maintenance/rnd{
 	req_one_access = list(7,29)
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/rnd/cetus/meteor/toxtest)
 "kPB" = (
@@ -32502,6 +32537,10 @@
 /area/maintenance/cetus/ripperdock)
 "qpA" = (
 /obj/structure/table/bench/wooden,
+/obj/machinery/computer/guestpass{
+	pixel_y = -25;
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
 "qpT" = (
@@ -41533,6 +41572,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/cetus/meteor/toxins)
 "uRa" = (
@@ -41670,11 +41710,11 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/showers)
 "uUc" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/railing,
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
 "uUe" = (
@@ -46886,11 +46926,11 @@
 /turf/simulated/wall,
 /area/medical/Surgery_Room_1)
 "xxP" = (
-/obj/machinery/vending/loadout/costume,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/effect/floor_decal/corner/white/diagonal{
 	dir = 4
 	},
+/obj/machinery/vending/event/overwear,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/cetus/meteor/laundry)
 "xxR" = (
@@ -86466,8 +86506,8 @@ xCr
 hWC
 lwj
 tSA
-aZL
-wNG
+acA
+acz
 uUc
 aML
 cbV
