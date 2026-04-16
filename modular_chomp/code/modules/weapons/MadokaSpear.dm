@@ -47,7 +47,7 @@
 
 	return ..()
 
-/obj/item/oldtwohanded/dropped(mob/user as mob)
+/obj/item/oldtwohanded/dropped(mob/user, equipping, slot)
 	//handles unwielding a twohanded weapon when dropped as well as clearing up the offhand
 	..()
 	if(user)
@@ -63,7 +63,7 @@
 /obj/item/oldtwohanded/pickup(mob/user)
 	unwield()
 
-/obj/item/oldtwohanded/attack_self(mob/user as mob)
+/obj/item/oldtwohanded/attack_self(mob/user, modifiers)
 	..()
 
 	if(wielded) //Trying to unwield it

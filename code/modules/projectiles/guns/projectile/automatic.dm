@@ -429,7 +429,7 @@
 	if(is64x32)
 		update_transform()
 
-/obj/item/gun/projectile/automatic/mini_uzi/equipped()
+/obj/item/gun/projectile/automatic/mini_uzi/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
@@ -439,7 +439,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/automatic/mini_uzi/dropped(mob/living/user)
+/obj/item/gun/projectile/automatic/mini_uzi/dropped(mob/user, equipping, slot)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()

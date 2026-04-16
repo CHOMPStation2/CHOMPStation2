@@ -7,7 +7,7 @@
 	item_state = "cloak_blueshield"
 
 
-/obj/item/clothing/accessory/poncho/roles/cloak/blueshield/dropped(mob/user) //makes the blueshield suit not kek when used by a teshari
+/obj/item/clothing/accessory/poncho/roles/cloak/blueshield/dropped(mob/user, equipping, slot) //makes the blueshield suit not kek when used by a teshari
 	..()
 	icon_override = 'icons/mob/ties_yw.dmi' //Moved to archive
 

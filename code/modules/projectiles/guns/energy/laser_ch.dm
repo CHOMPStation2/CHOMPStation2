@@ -8,7 +8,7 @@
 	var/is64x32_override = FALSE
 	var/is_picked_up = FALSE
 
-/obj/item/gun/energy/laser/equipped()
+/obj/item/gun/energy/laser/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
@@ -18,7 +18,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/energy/laser/dropped(mob/living/user)
+/obj/item/gun/energy/laser/dropped(mob/user, equipping, slot)
 	. = ..()
 	if(!istype(loc,/mob/living))
 		is_picked_up = FALSE
