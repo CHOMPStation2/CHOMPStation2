@@ -178,3 +178,103 @@
 				if(3)
 					addtimer(CALLBACK(src, PROC_REF(cross_spin), A, rng_cycle, 3), 0.5 SECONDS, TIMER_DELETE_ME)
 					attackcycle = 0
+
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/skelly
+	name = "vengeful spirit"
+	icon_state = "angel"
+	icon_living = "angel"
+	desc = "A vengeful spirit."
+	health = 6666
+	maxHealth = 6666
+	specialattackprojectile = /obj/item/projectile/energy/eclipse_boss/energyjavelin
+	projectiletype = /obj/item/projectile/energy/eclipse_boss/energyjavelin
+	wreckage = /obj/item/prop/deconstructable/gigacell
+	pilot_type = /mob/living/simple_mob/humanoid/astral_collective/purity
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/skelly/do_special_attack(atom/A)
+	rng_cycle = rand(1,3)
+	switch(a_intent)
+		if(I_HURT) //phase1
+			switch(attackcycle)
+				if(1)
+					addtimer(CALLBACK(src, PROC_REF(gattlingfire), A, rng_cycle, 2, 7), 0.5 SECONDS, TIMER_DELETE_ME)
+					attackcycle = 0
+				if(2)
+					addtimer(CALLBACK(src, PROC_REF(gattlingfire), A, rng_cycle, 3, 7), 0.5 SECONDS, TIMER_DELETE_ME)
+					attackcycle = 0
+				if(3)
+					addtimer(CALLBACK(src, PROC_REF(gattlingfire), A, rng_cycle, 5, 7), 0.5 SECONDS, TIMER_DELETE_ME)
+					attackcycle = 0
+		if(I_GRAB) //phase2
+			switch(attackcycle)
+				if(1)
+					addtimer(CALLBACK(src, PROC_REF(cross_spin), A, 3, 7), 0.5 SECONDS, TIMER_DELETE_ME)
+					attackcycle = 0
+				if(2)
+					addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 3, 7), 0.5 SECONDS, TIMER_DELETE_ME)
+					attackcycle = 0
+				if(3)
+					addtimer(CALLBACK(src, PROC_REF(triple_lines), A, 1, 7), 0.5 SECONDS, TIMER_DELETE_ME)
+					attackcycle = 0
+		if(I_DISARM) //phase3
+			switch(attackcycle)
+				if(1)
+					addtimer(CALLBACK(src, PROC_REF(repeat_bombs), A, 1, 3, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+					attackcycle = 0
+				if(2)
+					addtimer(CALLBACK(src, PROC_REF(repeat_bombs), A, 1, 5, 5), 0.5 SECONDS, TIMER_DELETE_ME)
+					attackcycle = 0
+				if(3)
+					addtimer(CALLBACK(src, PROC_REF(repeat_bombs), A, 1, 7, 7), 0.5 SECONDS, TIMER_DELETE_ME)
+					attackcycle = 0
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/repeat_bombs(atom/A, var/next_cycle, var/amount, var/repeatdelay)
+	if(!A)
+		return
+	var/list/potential_targets = ai_holder.list_targets()
+	for(var/atom/entry in potential_targets)
+		if(istype(entry, /mob/living/simple_mob/mechanical/mecha/eclipse))
+			potential_targets -= entry
+	if(potential_targets.len)
+		var/iteration = clamp(potential_targets.len, 1, 3)
+		for(var/i = 0, i < iteration, i++)
+			if(!(potential_targets.len))
+				break
+			var/mob/target = pick(potential_targets)
+			potential_targets -= target
+			spawn_lines(target, next_cycle, amount)
+
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spawn_repeat(atom/target, var/next_cycle, var/amount, var/repeatdelay)
+	var/alignment = rand(1,2)	// 1 for vertical, 2 for horizontal
+	var/list/line_range = list()
+	var/turf/T = get_turf(target)
+	line_range += T
+	for(var/i = 1, i <= 3, i++)
+		switch(alignment)
+			if(1)
+				if(T.x-i > 0)
+					line_range += locate(T.x-i, T.y-i, T.z)
+				if(T.x+i <= world.maxx)
+					line_range += locate(T.x+i, T.y+i, T.z)
+				if(T.y-i > 0)
+					line_range += locate(T.x+i, T.y-i, T.z)
+				if(T.y+i <= world.maxy)
+					line_range += locate(T.x-i, T.y+i, T.z)
+			if(2)
+				if(T.x-i > 0)
+					line_range += locate(T.x-i, T.y, T.z)
+				if(T.x+i <= world.maxx)
+					line_range += locate(T.x+i, T.y, T.z)
+				if(T.y-i > 0)
+					line_range += locate(T.x, T.y-i, T.z)
+				if(T.y+i <= world.maxy)
+					line_range += locate(T.x, T.y+i, T.z)
+	for(var/turf/dropspot in line_range)
+		new artidrop(dropspot)
+	amount--
+	if(amount > 0)
+		addtimer(CALLBACK(src, PROC_REF(gattlingfire), target, next_cycle, amount, repeatdelay), repeatdelay, TIMER_DELETE_ME)
+	else
+		attackcycle = next_cycle

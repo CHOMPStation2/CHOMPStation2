@@ -29,6 +29,9 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/do_special_attack(atom/A)
 	bullet_heck(A, 3, 3)
 
+/mob/living/simple_mob/mechanical/mecha/eclipse/emp_act()
+	adjustFireLoss(30)
+
 /mob/living/simple_mob/mechanical/mecha/eclipse/hitby(atom/movable/source, datum/thrownthing/throwingdatum) //removal of E net cheese
 	if(source == /obj/item/projectile/beam/energy_net)
 		return
