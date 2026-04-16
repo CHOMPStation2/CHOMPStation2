@@ -8951,6 +8951,10 @@
 /area/bridge/sleep/Captain_Quarters)
 "fiI" = (
 /obj/structure/table/marble,
+/obj/machinery/bunsen_burner{
+	pixel_y = 24;
+	pixel_x = 5
+	},
 /obj/machinery/chemical_dispenser/bar_coffee/full{
 	dir = 4
 	},

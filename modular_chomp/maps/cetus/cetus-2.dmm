@@ -6806,6 +6806,10 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/bunsen_burner{
+	pixel_y = 24;
+	pixel_x = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "bIa" = (
@@ -40444,6 +40448,10 @@
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -23
+	},
+/obj/machinery/bunsen_burner{
+	pixel_y = 24;
+	pixel_x = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/Chemistry)

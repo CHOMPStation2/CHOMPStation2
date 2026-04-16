@@ -19864,6 +19864,10 @@
 	c_tag = "CIV - Bar";
 	dir = 8
 	},
+/obj/machinery/bunsen_burner{
+	pixel_y = 19;
+	pixel_x = -4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/cetus/meteor/bar)
 "jPG" = (
