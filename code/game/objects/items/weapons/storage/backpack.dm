@@ -35,7 +35,7 @@
 	..(user, slot)
 
 /*
-/obj/item/storage/backpack/dropped(mob/user)
+/obj/item/storage/backpack/dropped(mob/user, equipping, slot)
 	if (loc == user && src.use_sound)
 		if(isbelly(user.loc))
 			var/obj/belly/B = user.loc
@@ -568,7 +568,7 @@
 	var/taurtype = /datum/sprite_accessory/tail/taur/horse //Acceptable taur type to be wearing this
 	var/no_message = "You aren't the appropriate taur type to wear this!"
 
-/obj/item/storage/backpack/saddlebag/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/storage/backpack/saddlebag/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if(istype(H) && istype(H.tail_style, taurtype))
 			return 1
@@ -594,7 +594,7 @@
 	slowdown = 0.5 //And are slower, too...
 	var/no_message = "You aren't the appropriate taur type to wear this!"
 
-/obj/item/storage/backpack/saddlebag_common/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/storage/backpack/saddlebag_common/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if(!istype(H))//Error, non HUMAN.
 			log_runtime("[H] was not a valid human!")
