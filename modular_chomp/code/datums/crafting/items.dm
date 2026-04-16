@@ -265,7 +265,7 @@
 			H.custom_pain("You feel a sharp pain in your hands!",1)
 	..()
 
-/obj/item/clothing/gloves/toxinregen/dropped(mob/user)
+/obj/item/clothing/gloves/toxinregen/dropped(mob/user, equipping, slot)
 	var/mob/living/carbon/human/H = wearer?.resolve()
 	if(H)
 		if(H.can_feel_pain())
