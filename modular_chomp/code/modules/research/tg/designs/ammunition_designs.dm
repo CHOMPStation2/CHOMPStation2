@@ -286,3 +286,137 @@
 		RND_CATEGORY_HACKED,
 		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_RIFLE
 	)
+
+// VP70
+
+/datum/design_techweb/pistol_mag_vp70
+	SET_AMMO_DESIGN_NAMEDESC("pistol magazine (vp70-9mm)")
+	id = "pistol_mag_vp70"
+	materials = list(MAT_STEEL = 1080)
+	build_type = AUTOLATHE
+	build_path = /obj/item/ammo_magazine/m9mm/vp70
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_HACKED,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_PISTOL
+	)
+
+/datum/design_techweb/pistol_mag_vp70_ap
+	SET_AMMO_DESIGN_NAMEDESC("pistol magazine (vp70-9mm armor piercing)")
+	id = "pistol_mag_vp70_ap"
+	materials = list(MAT_STEEL = 1080, MAT_PLASTEEL = 600)
+	build_type = AUTOLATHE
+	build_path = /obj/item/ammo_magazine/m9mm/vp70/ap
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_HACKED,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_PISTOL
+	)
+
+/datum/design_techweb/pistol_mag_vp70_hp
+	SET_AMMO_DESIGN_NAMEDESC("pistol magazine (vp70-9mm hollow point)")
+	id = "pistol_mag_vp70_hp"
+	materials = list(MAT_STEEL = 1080, MAT_PLASTIC = 600)
+	build_type = AUTOLATHE
+	build_path = /obj/item/ammo_magazine/m9mm/vp70/hp
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_HACKED,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_PISTOL
+	)
+
+/datum/design_techweb/pistol_mag_vp70_rubber
+	SET_AMMO_DESIGN_NAMEDESC("pistol magazine (vp70-9mm rubber)")
+	id = "pistol_mag_vp70_rubber"
+	materials = list(MAT_STEEL = 900)
+	build_type = AUTOLATHE
+	build_path = /obj/item/ammo_magazine/m9mm/vp70/rubber
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_HACKED,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_PISTOL
+	)
+
+/datum/design_techweb/pistol_mag_vp70_flash
+	SET_AMMO_DESIGN_NAMEDESC("pistol magazine (vp70-9mm flash)")
+	id = "pistol_mag_vp70_flash"
+	materials = list(MAT_STEEL = 900)
+	build_type = AUTOLATHE
+	build_path = /obj/item/ammo_magazine/m9mm/vp70/flash
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_HACKED,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_PISTOL
+	)
+
+// 9mm ammo boxes
+
+/datum/design_techweb/ammobox_9mm
+	SET_AMMO_DESIGN_NAMEDESC("ammo box (9mm)")
+	id = "ammobox_9mm"
+	materials = list(MAT_STEEL = 1500)
+	build_type = AUTOLATHE
+	build_path = /obj/item/ammo_magazine/ammo_box/b9mm
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_HACKED,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_BOXES
+	)
+
+/datum/design_techweb/ammobox_9mm_practice
+	SET_AMMO_DESIGN_NAMEDESC("ammo box (9mm practice)")
+	id = "ammobox_9mm_practice"
+	materials = list(MAT_STEEL = 1100)
+	build_type = AUTOLATHE
+	build_path = /obj/item/ammo_magazine/ammo_box/b9mm/practice
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_BOXES
+	)
+
+/datum/design_techweb/ammobox_9mm_ap
+	SET_AMMO_DESIGN_NAMEDESC("ammo box (9mm armor piercing)")
+	id = "ammobox_9mm_ap"
+	materials = list(MAT_STEEL = 1200, MAT_PLASTEEL = 600)
+	build_type = AUTOLATHE
+	build_path = /obj/item/ammo_magazine/ammo_box/b9mm/practice
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_HACKED,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_BOXES
+	)
+
+/datum/design_techweb/ammobox_9mm_hp
+	SET_AMMO_DESIGN_NAMEDESC("ammo box (9mm hollow point)")
+	id = "ammobox_9mm_hp"
+	materials = list(MAT_STEEL = 1100)
+	build_type = AUTOLATHE
+	build_path = /obj/item/ammo_magazine/ammo_box/b9mm/hp
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_HACKED,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_BOXES
+	)
+
+/datum/design_techweb/ammobox_9mm_rubber
+	SET_AMMO_DESIGN_NAMEDESC("ammo box (9mm hollow point)")
+	id = "ammobox_9mm_rubber"
+	materials = list(MAT_STEEL = 1100)
+	build_type = AUTOLATHE
+	build_path = /obj/item/ammo_magazine/ammo_box/b9mm/rubber
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_BOXES
+	)
+
+/datum/design_techweb/ammobox_9mm_flash
+	SET_AMMO_DESIGN_NAMEDESC("ammo box (9mm flash)")
+	id = "ammobox_9mm_flash"
+	materials = list(MAT_STEEL = 1100)
+	build_type = AUTOLATHE
+	build_path = /obj/item/ammo_magazine/ammo_box/b9mm/flash
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_HACKED,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_BOXES
+	)

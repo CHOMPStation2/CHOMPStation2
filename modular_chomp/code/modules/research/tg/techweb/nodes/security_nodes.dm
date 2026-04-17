@@ -34,4 +34,17 @@
 		"rifle_mag_mp59mm_rubber",
 		"rifle_mag_mp59mm_ap",
 		"rifle_mag_mp59mm_hp",
+
+		"pistol_mag_vp70",
+		"pistol_mag_vp70_ap",
+		"pistol_mag_vp70_hp",
+		"pistol_mag_vp70_rubber",
+		"pistol_mag_vp70_flash",
+
+		"ammobox_9mm",
+		"ammobox_9mm_practice",
+		"ammobox_9mm_ap",
+		"ammobox_9mm_hp",
+		"ammobox_9mm_rubber",
+		"ammobox_9mm_flash",
 	)
