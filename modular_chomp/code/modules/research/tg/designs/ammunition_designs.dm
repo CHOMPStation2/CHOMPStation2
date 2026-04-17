@@ -379,7 +379,7 @@
 	id = "ammobox_9mm_ap"
 	materials = list(MAT_STEEL = 1200, MAT_PLASTEEL = 600)
 	build_type = AUTOLATHE
-	build_path = /obj/item/ammo_magazine/ammo_box/b9mm/practice
+	build_path = /obj/item/ammo_magazine/ammo_box/b9mm/ap
 	category = list(
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_HACKED,
