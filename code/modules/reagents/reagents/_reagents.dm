@@ -198,11 +198,7 @@
 	on_mob_metabolize(M, location)
 	if(overdose && (volume > overdose * M?.species.chemOD_threshold) && (active_metab.metabolism_class != CHEM_TOUCH || can_overdose_touch))
 		overdose(M, alien, removed)
-<<<<<<< HEAD
-	if(M.species?.allergens & allergen_type)	//uhoh, we can't handle this! //CHOMPEdit
-=======
 	if((M.species.allergens & allergen_type))	//uhoh, we can't handle this!
->>>>>>> 239b442bd0 (Medical Allergies (#19400))
 		M.add_chemical_effect(CE_ALLERGEN, allergen_factor * removed)
 	remove_self(removed)
 	return
