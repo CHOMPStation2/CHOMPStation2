@@ -685,11 +685,7 @@
 					if(isnull(gene_chem[i])) gene_chem[i] = 0
 
 					var/list/chems_rid = chems[rid]
-<<<<<<< HEAD
-					if(istype(chems_rid) && (chems_rid.len < i)) //YW Edit: allows plants whose reagents have not been defined uniformly to splice properly
-=======
 					if(istype(chems_rid) && (chems_rid.len < i))
->>>>>>> 1f2345b090 (Fixes a few runtimees (#19418))
 						continue
 
 					if(chems[rid][i])
