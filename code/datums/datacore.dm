@@ -483,7 +483,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 		hidden_general += G
 	else
 		general += G
-		GLOB.job_master.update_limit(JOB_ANOMALY, general.len) //CHOMPAdd
+		SSjob.update_limit(JOB_ANOMALY, general.len) //CHOMPAdd
 
 	return G
 

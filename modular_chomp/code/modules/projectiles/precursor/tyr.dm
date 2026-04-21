@@ -54,7 +54,6 @@
 	icon_state = "shotgun"
 	item_state = "shotgun"
 	wielded_item_state = "placeholder"
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
 
 	charge_cost = 160 //15 shots sort of
 	battery_lock = 1 //No changing

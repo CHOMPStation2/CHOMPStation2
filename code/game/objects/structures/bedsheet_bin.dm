@@ -20,6 +20,7 @@ LINEN BINS
 	pickup_sound = 'sound/items/pickup/clothing.ogg'
 	///var used for attack_self chain
 	var/special_handling = FALSE
+	resistance_flags = FLAMMABLE
 
 	/// Custom nouns to act as the subject of dreams  //CHOMPEdit - Dreaming
 	var/list/dream_messages = list("white") //CHOMPEdit - Dreaming

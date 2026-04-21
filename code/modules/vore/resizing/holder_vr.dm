@@ -1,4 +1,4 @@
-/obj/item/holder/dropped(mob/user)
+/obj/item/holder/dropped(mob/user, equipping, slot)
 	// CHOMPEdit Start
 	..()
 	spawn(1)

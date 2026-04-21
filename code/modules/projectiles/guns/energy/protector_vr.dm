@@ -20,7 +20,6 @@
 
 	modifystate = "stun"
 
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_MAGNET = 2)
 
 	dna_lock = TRUE // CHOMPEdit
 	charge_sections = 3 //For the icon

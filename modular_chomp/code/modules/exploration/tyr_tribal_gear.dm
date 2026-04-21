@@ -86,19 +86,10 @@
 	w_class = ITEMSIZE_SMALL
 
 	var/static/list/possible_states = list("crystal", "generator","core", "hilt")
-	var/static/list/possible_tech = list(TECH_MATERIAL, TECH_ENGINEERING, TECH_PHORON, TECH_POWER, TECH_BIO, TECH_COMBAT, TECH_MAGNET, TECH_DATA)
 
 /obj/item/prop/alien/prototype/Initialize(mapload)
 	. = ..()
 	icon_state = pick(possible_states)
-	var/list/techs = possible_tech.Copy()
-	origin_tech = list()
-	for(var/i = 1 to rand(1, 4))
-		var/new_tech = pick(techs)
-		techs -= new_tech
-		origin_tech[new_tech] = rand(3, 11)
-
-	origin_tech[TECH_PRECURSOR] = rand(0,3)
 
 /* Yoinked for refrence
 /obj/item/arrow/standard
