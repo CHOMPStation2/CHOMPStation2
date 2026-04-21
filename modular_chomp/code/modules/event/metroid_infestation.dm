@@ -55,4 +55,4 @@
 		area_names |= metroid_area.name
 	if(area_names.len && active_metroid_event == TRUE)
 		var/english_list = english_list(area_names)
-		GLOB.command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the following areas: [english_list]", "Lifesign Alert", new_sound = ANNOUNCER_MSG_UNIDENTIFIED_LIFESIGNS)
+		GLOB.command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the following areas: [english_list]", "Lifesign Alert") //No sound intentionally.
