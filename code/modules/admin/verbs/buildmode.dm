@@ -423,23 +423,16 @@ GLOBAL_LIST_EMPTY(active_buildmode_holders)
 					if(NORTHWEST)
 						var/obj/structure/window/reinforced/WIN = new/obj/structure/window/reinforced(get_turf(object))
 						WIN.set_dir(NORTHWEST)
-<<<<<<< HEAD
 /*CHOMP Remove start self-insert
-=======
 						WIN.flags |= ADMIN_SPAWNED
->>>>>>> 58470f5045 (Logs buildmode (#19363))
 			else if(istype(object,/turf) && pa.Find("ctrl") && pa.Find("alt") && pa.Find("middle"))
 				var/turf/T = object
 				var/obj/item/toy/plushie/teshari/easter_egg = new /obj/item/toy/plushie/teshari(T)
 				easter_egg.name = "coding teshari plushie"
 				easter_egg.desc = "A small purple teshari with a plush keyboard attached to it. Where did this come from?"
 				easter_egg.color = "#a418c7"
-<<<<<<< HEAD
-CHOMP Remove end */
-=======
 				easter_egg.flags |= ADMIN_SPAWNED
-
->>>>>>> 58470f5045 (Logs buildmode (#19363))
+CHOMP Remove end */
 
 		if(BUILDMODE_ADVANCED)
 			if(pa.Find("left") && !pa.Find("ctrl") && !pa.Find("alt"))
