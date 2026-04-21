@@ -68,7 +68,6 @@
 	name = T_BOARD("power compressor")
 	build_path = /obj/machinery/compressor
 	board_type = new /datum/frame/frame_types/machine
-	origin_tech = list(TECH_MATERIAL = 4, TECH_POWER = 2)
 	req_components = list(/obj/item/stack/cable_coil = 5, /obj/item/stock_parts/manipulator = 6)
 	hidden = TRUE // todo - Make properly constructable in round
 
@@ -76,7 +75,6 @@
 	name = T_BOARD("power turbine")
 	build_path = /obj/machinery/power/turbine
 	board_type = new /datum/frame/frame_types/machine
-	origin_tech = list(TECH_ENGINEERING = 2, TECH_POWER = 4)
 	req_components = list(/obj/item/stack/cable_coil = 5, /obj/item/stock_parts/capacitor = 6)
 	hidden = TRUE // todo - Make properly constructable in round
 
@@ -330,7 +328,7 @@
 			compressor = C
 	LAZYINITLIST(doors)
 	for(var/obj/machinery/door/blast/P in GLOB.machines)
-		if(P.id == id)
+		if(P.id == id) //This will never work because the ID on the blast doors is a number while the ID on the turbine (if set mid-round) is a string.
 			doors += P
 
 /obj/machinery/computer/turbine_computer/attackby(obj/item/W, mob/user)

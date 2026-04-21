@@ -144,74 +144,37 @@
 	icon_state = "bluenew"
 	requires_power = FALSE
 	outdoors = OUTDOORS_NO
-	name = "Ark Facility"
+	name = "Tyrian Ark Facility"
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_SECRET_NAME | AREA_FORBID_EVENTS | PHASE_SHIELDED
 
-/area/planet/tyr/precursorruins/checkpoint
-	name = "Ark Facility - Checkpoint"
+/area/planet/tyr/precursorruins/hallway
+	name = "Tyrian Ark Facility - Pathways"
 	icon_state = "purple"
 
 /area/planet/tyr/precursorruins/entryway
 	name = "Ark Facility - Entrance Hall"
 	icon_state = "dark"
 
-/area/planet/tyr/precursorruins/checkpoint
-	name = "Ark Facility - Checkpoint"
+/area/planet/tyr/precursorruins/seccore
+	name = "Tyrian Ark Facility - Security Core"
 
-/area/planet/tyr/precursorruins/stairwell
-	name = "Ark Facility - Stairwell"
-	icon_state = "purple"
+/area/planet/tyr/precursorruins/engicore
+	name = "Tyrian Ark Facility - Enginering Core"
 
-/area/planet/tyr/precursorruins/science_branch
-	name = "Ark Facility - Science Branch"
-	icon_state = "dark"
+/area/planet/tyr/precursorruins/truecore
+	name = "Tyrian Ark Facility - Center Core"
 
-/area/planet/tyr/precursorruins/misc
-	name = "Ark Facility - Misc"
+/area/planet/tyr/precursorruins/holdcellA
+	name = "Tyrian Ark Facility - Cell A"
 
-/area/planet/tyr/precursorruins/swarm_staircase
-	name = "Ark Facility - Stair Spiral"
-	icon_state = "purple"
+/area/planet/tyr/precursorruins/holdcellB
+	name = "Tyrian Ark Facility - Cell B"
 
-/area/planet/tyr/precursorruins/swarm_boss
-	name = "Ark Facility - Swarm Container"
-	icon_state = "dark"
+/area/planet/tyr/precursorruins/holdcellC
+	name = "Tyrian Ark Facility - Cell C"
 
-/area/planet/tyr/precursorruins/medical_boss
-	name = "Ark Facility - Underconstruction"
-
-/area/planet/tyr/precursorruins/weather_boss
-	name = "Ark Facility - Weather Report"
-	icon_state = "purple"
-
-/area/planet/tyr/precursorruins/sec_boss
-	name = "Ark Facility - Security Watchzone"
-	icon_state = "dark"
-
-/area/planet/tyr/precursorruins/engi_boss
-	name = "Ark Facility - Engine Control"
-
-/area/planet/tyr/precursorruins/science_a
-	name = "Ark Facility - Containment A"
-	icon_state = "purple"
-
-/area/planet/tyr/precursorruins/science_b
-	name = "Ark Facility - Containment B"
-	icon_state = "dark"
-
-/area/planet/tyr/precursorruins/science_c
-	name = "Ark Facility - Containment C"
-
-/area/planet/tyr/precursorruins/science_d
-	name = "Ark Facility - Containment D"
-	icon_state = "purple"
-
-/area/planet/tyr/precursorruins/science_e
-	name = "Ark Facility - Containment E"
-	icon_state = "dark"
-
-/area/planet/tyr/precursorruins/science_f
-	name = "Ark Facility - Containment F"
+/area/planet/tyr/precursorruins/holdcellD
+	name = "Tyrian Ark Facility - Cell D"
 
 /turf/unsimulated/wall/planetary/normal/tyr
 	oxygen		= TYR_MOL_O2
@@ -223,6 +186,11 @@
 	nitrogen	= TYR_MOL_N2
 	temperature	= TYR_AVG_TEMP
 	outdoors = OUTDOORS_AREA
+
+/turf/simulated/mineral/light/tyr/Initialize(mapload)
+	if(!ignore_mapgen && prob(65))
+		turf_resource_types |= TURF_HAS_ORE
+	. = ..()
 
 /turf/simulated/floor/water/tyr
 	color = "#505564"

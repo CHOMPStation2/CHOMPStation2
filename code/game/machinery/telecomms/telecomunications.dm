@@ -210,6 +210,9 @@
 		traffic -= netspeed
 
 /obj/machinery/telecomms/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(prob(100/severity))
 		if(!(stat & EMPED))
 			stat |= EMPED
@@ -217,7 +220,6 @@
 			var/duration = (300 * 10)/severity
 			spawn(rand(duration - 20, duration + 20)) // Takes a long time for the machines to reboot.
 				stat &= ~EMPED
-	..()
 
 /obj/machinery/telecomms/proc/checkheat()
 	if(QDELETED(src))

@@ -51,6 +51,7 @@
 
 	///Var for attack_self chainn
 	var/special_handling = FALSE
+	resistance_flags = FLAMMABLE
 
 /obj/item/mail/container_resist(mob/living/M)
 	if(istype(M, /mob/living/voice)) return
@@ -77,6 +78,10 @@
 		var/stamp_count = rand(1, stamp_max)
 		for(var/i = 1, i <= stamp_count, i++)
 			stamps += list("stamp_[rand(2, 8)]")
+
+/obj/item/mail/Destroy()
+	recipient_ref = null
+	. = ..()
 
 /obj/item/mail/blank
 	desc = "A blank envelope."
@@ -112,7 +117,7 @@
 	var/list/recipients = list()
 	var/mob/living/recipient_mob
 	for(var/mob/living/player in GLOB.player_list)
-		if(!player_is_antag(player.mind) && player.mind.show_in_directory)
+		if(!SSantag_job.player_is_antag(player.mind) && player.mind.show_in_directory)
 			recipients += player
 
 	recipient_mob = tgui_input_list(usr, "Choose recipient", "Recipients", recipients, recipients)
@@ -248,7 +253,7 @@
 	name = "[initial(name)] for [recipient.name] ([current_title])"
 	recipient_ref = WEAKREF(recipient)
 
-	var/datum/job/this_job = SSjob.name_occupations[recipient.assigned_role]
+	var/datum/job/this_job = SSjob.occupations_by_name[recipient.assigned_role]
 
 	var/list/goodies = generic_goodies
 	if(this_job)

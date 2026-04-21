@@ -390,6 +390,8 @@
 			is_leaving_belly = FALSE
 			return
 		is_leaving_belly = FALSE
+	if(isghosttrap(mob.loc))
+		return
 	var/turf/mobloc = get_turf(mob)
 
 	if(incorporeal_speed)

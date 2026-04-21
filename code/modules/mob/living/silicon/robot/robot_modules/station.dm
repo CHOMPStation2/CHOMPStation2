@@ -71,6 +71,8 @@
 		I.canremove = FALSE
 
 /obj/item/robot_module/proc/create_equipment(var/mob/living/silicon/robot/robot)
+	if(!istype(robot.idcard, idcard_type))
+		QDEL_NULL(robot.idcard)
 	robot.init_id(idcard_type)
 	return
 
@@ -86,8 +88,10 @@
 	robot.set_default_module_icon()
 
 	robot.scrubbing = FALSE
+
 	modules -= robot.idcard
-	QDEL_NULL(robot.idcard)
+	if(robot.idcard.loc != robot)
+		robot.idcard.forceMove(robot)
 	robot.module = null
 	qdel(src)
 
@@ -98,6 +102,9 @@
 	return ..()
 
 /obj/item/robot_module/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(modules)
 		for(var/obj/O in modules)
 			O.emp_act(severity, recursive)
@@ -107,10 +114,10 @@
 	if(synths)
 		for(var/datum/matter_synth/S in synths)
 			S.emp_act(severity, recursive)
-	return
 
 /obj/item/robot_module/proc/respawn_consumable(var/mob/living/silicon/robot/R, var/rate)
-	if(!synths || !synths.len)
+	SHOULD_CALL_PARENT(TRUE)
+	if(!LAZYLEN(synths))
 		return
 
 	for(var/datum/matter_synth/T in synths)
@@ -179,6 +186,85 @@
 			CHANNEL_COMMAND = 1,
 			CHANNEL_EXPLORATION = 1
 			)
+
+/obj/item/robot_module/proc/add_item_with_reagents(obj/item/stack/item_with_synth)
+	var/list/item_synths = list()
+	for(var/datum/matter_synth/matter_synth as anything in item_with_synth.synths)
+		var/found = FALSE
+		for(var/datum/matter_synth/synth as anything in synths)
+			if(matter_synth.type == synth.type)
+				item_synths += synth
+				break
+		if(!found)
+			var/datum/matter_synth/new_synth = new matter_synth.type(10000)
+			item_synths += new_synth
+			synths += new_synth
+	item_with_synth.synths = item_synths
+
+/obj/item/robot_module/proc/add_item(atom/movable/new_item, mob/living/silicon/robot/robot)
+	if(istype(new_item, /obj/item/card/id))
+		if(robot.idcard)
+			modules -= robot.idcard
+			QDEL_NULL(robot.idcard)
+		robot.idcard = new_item
+	modules += new_item
+	new_item.forceMove(src)
+	robot.hud_used?.update_robot_modules_display()
+
+	if(istype(new_item, /obj/item/robotic_multibelt/materials))
+		var/obj/item/robotic_multibelt/materials/mat_belt = new_item
+		for(var/obj/item/stack as anything in mat_belt.cyborg_integrated_tools)
+			add_item_with_reagents(stack)
+
+	if(istype(new_item, /obj/item/stack))
+		add_item_with_reagents(new_item)
+
+	if(istype(new_item, /obj/item/matter_decompiler) || istype(new_item, /obj/item/dogborg/sleeper/compactor/decompiler))
+		var/obj/item/matter_decompiler/item_with_matter = new_item
+		if(item_with_matter.metal)
+			var/found = FALSE
+			for(var/datum/matter_synth/synth as anything in synths)
+				if(item_with_matter.metal.type == synth.type)
+					item_with_matter.metal = synth
+					found = TRUE
+					break
+			if(!found)
+				var/datum/matter_synth/metal = new /datum/matter_synth/metal(40000)
+				item_with_matter.metal = metal
+				LAZYADD(synths, metal)
+		if(item_with_matter.glass)
+			var/found = FALSE
+			for(var/datum/matter_synth/synth as anything in synths)
+				if(item_with_matter.glass.type == synth.type)
+					item_with_matter.glass = synth
+					found = TRUE
+					break
+			if(!found)
+				var/datum/matter_synth/glass = new /datum/matter_synth/glass(40000)
+				item_with_matter.glass = glass
+				LAZYADD(synths, glass)
+		if(item_with_matter.wood)
+			var/found = FALSE
+			for(var/datum/matter_synth/synth as anything in synths)
+				if(item_with_matter.wood.type == synth.type)
+					item_with_matter.wood = synth
+					found = TRUE
+					break
+			if(!found)
+				var/datum/matter_synth/wood = new /datum/matter_synth/wood(40000)
+				item_with_matter.wood = wood
+				LAZYADD(synths, wood)
+		if(item_with_matter.plastic)
+			var/found = FALSE
+			for(var/datum/matter_synth/synth as anything in synths)
+				if(item_with_matter.plastic.type == synth.type)
+					item_with_matter.plastic = synth
+					found = TRUE
+					break
+			if(!found)
+				var/datum/matter_synth/plastic = new /datum/matter_synth/plastic(40000)
+				item_with_matter.plastic = plastic
+				LAZYADD(synths, plastic)
 
 // Cyborgs (non-drones), default loadout. This will be given to every module.
 /obj/item/robot_module/robot/create_equipment(var/mob/living/silicon/robot/robot)
@@ -443,6 +529,7 @@
 	src.modules += new /obj/item/dogborg/pounce(src) //Pounce
 
 /obj/item/robot_module/robot/security/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+	..()
 	var/obj/item/flash/F = locate() in src.modules
 	if(F.broken)
 		F.broken = 0
@@ -520,6 +607,7 @@
 	src.emag += new /obj/item/dogborg/pounce(src) //Pounce
 
 /obj/item/robot_module/robot/janitor/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+	..()
 	var/obj/item/lightreplacer/LR = locate() in src.modules
 	LR.Charge(R, amount)
 
@@ -593,6 +681,7 @@
 	src.emag += new /obj/item/dogborg/pounce(src) //Pounce
 
 /obj/item/robot_module/robot/clerical/butler/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+	..()
 	var/obj/item/reagent_containers/food/drinks/bottle/small/beer/PB = locate() in src.emag
 	if(PB)
 		PB.reagents.add_reagent(REAGENT_ID_BEER2, 2 * amount)
@@ -628,7 +717,17 @@
 
 	var/obj/item/dogborg/sleeper/compactor/honkborg/B = new /obj/item/dogborg/sleeper/compactor/honkborg(src)
 	src.modules += B
+	var/obj/item/reagent_containers/spray/LS = new /obj/item/reagent_containers/spray(src)
+	src.emag += LS
+	LS.reagents.add_reagent(REAGENT_ID_LUBE, 250)
+	LS.name = "Lube spray"
 	..()
+
+/obj/item/robot_module/robot/clerical/honkborg/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+	..()
+	var/obj/item/reagent_containers/spray/LS = locate() in src.emag
+	if(LS)
+		LS.reagents.add_reagent(REAGENT_ID_LUBE, 2 * amount)
 
 /obj/item/robot_module/robot/clerical/general
 	name = "clerical robot module"
@@ -660,7 +759,6 @@
 	src.modules += new /obj/item/borg/sight/material(src)
 	src.modules += new /obj/item/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/tool/screwdriver/cyborg(src)
-	src.modules += new /obj/item/storage/bag/ore(src)
 	src.modules += new /obj/item/pickaxe/borgdrill(src)
 	src.modules += new /obj/item/storage/bag/sheetsnatcher/borg(src)
 	src.modules += new /obj/item/gripper/miner(src)
@@ -851,7 +949,7 @@
 	..()
 	src.modules += new /obj/item/borg/sight/material(src)
 	src.modules += new /obj/item/pickaxe/borgdrill(src)
-	src.modules += new /obj/item/storage/bag/ore(src)
+	src.modules += new /obj/item/ore_bag(src)
 	src.modules += new /obj/item/storage/bag/sheetsnatcher/borg(src)
 	src.modules += new /obj/item/gun/energy/robotic/phasegun(src)  //Chompedit, makes the mining borg able to defend itself.
 	src.emag += new /obj/item/pickaxe/diamonddrill(src)

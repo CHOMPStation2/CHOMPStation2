@@ -6914,7 +6914,7 @@
 	},
 /area/survivalpod)
 "cbq" = (
-/obj/item/storage/bag/ore,
+/obj/item/ore_bag,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -24062,7 +24062,7 @@
 	},
 /area/survivalpod)
 "hdH" = (
-/obj/item/storage/bag/ore/holding,
+/obj/item/ore_bag/holding,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},

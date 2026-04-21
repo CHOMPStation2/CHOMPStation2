@@ -13,17 +13,6 @@
 //So if you miss, you're stuck with a middling melee weapon for a bit.
 //Whilst the shot gun has more shots, but you need to get up closih.
 //Chain gets AP whilst shotgun gets knockback
-/obj/item/projectile/energy/spikeenergy_ball
-	name = "energy ball"
-	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
-	icon_state = "spikeenergyball"
-	damage = 45 //after remebering throwing things into walls deals bonus damage. Will that wall thwacking out damage this 5 bonus...yes. But shotgun likly wins most DPS tests anyway
-	armor_penetration = 60 //damage and AP matching makes brain happy for some reason. No real logic here, just brain saying yes, this is right
-	range = 8
-	speed = 5
-	penetrating = 2
-	check_armour = "melee"
-	damage_type = BRUTE
 
 /obj/item/projectile/energy/tyr_rifle
 	name = "laser blast"
@@ -65,7 +54,6 @@
 	icon_state = "shotgun"
 	item_state = "shotgun"
 	wielded_item_state = "placeholder"
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
 
 	charge_cost = 160 //15 shots sort of
 	battery_lock = 1 //No changing
@@ -142,22 +130,6 @@
 	speed = 0.3
 	range = 2
 
-/obj/item/projectile/energy/neurotoxin/toxic/tyr_flora
-	damage = 20 //deals 10 damage with the armor I am balancing for
-	agony = 0
-	speed = 12
-	armor_penetration = 50
-	penetrating = 5
-
-/obj/item/projectile/arc/fragmentation/tyr_mortar
-	icon_state = "mortar"
-	fragment_amount = 10
-	spread_range = 3
-	fragment_types = list(
-		/obj/item/projectile/bullet/astral_blade/artillery, /obj/item/projectile/bullet/astral_blade/artillery, \
-		/obj/item/projectile/bullet/astral_blade/artillery, /obj/item/projectile/bullet/astral_blade/artillery/secondary
-		)
-
 /obj/item/projectile/energy/agate_lighting
 	damage = 15
 	damage_type = ELECTROCUTE
@@ -169,4 +141,4 @@
 
 /obj/item/projectile/energy/agate_lighting/fast
 	damage = 20
-	speed = 3
+	speed = 4

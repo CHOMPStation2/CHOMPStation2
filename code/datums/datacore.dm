@@ -333,7 +333,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 		foundrecord.fields["real_rank"] = real_title
 
 /datum/datacore/proc/manifest_inject(var/mob/living/carbon/human/H)
-	if(H.mind && !player_is_antag(H.mind, only_offstation_roles = 1))
+	if(H.mind && !SSantag_job.player_is_antag(H.mind, only_offstation_roles = 1))
 		var/assignment = GetAssignment(H)
 		var/hidden
 		var/datum/job/J = SSjob.get_job(H.mind.assigned_role)
@@ -483,7 +483,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 		hidden_general += G
 	else
 		general += G
-		GLOB.job_master.update_limit(JOB_ANOMALY, general.len) //CHOMPAdd
+		SSjob.update_limit(JOB_ANOMALY, general.len) //CHOMPAdd
 
 	return G
 

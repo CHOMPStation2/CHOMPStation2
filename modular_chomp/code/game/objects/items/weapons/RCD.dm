@@ -389,15 +389,15 @@ rborosilicate = 12
 	accesses += "<table style='width:100%'>"
 	accesses += "<tr>"
 	for(var/i = 1; i <= 7; i++)
-		accesses += "<td style='width:14%'>" + span_bold("[get_region_accesses_name(i)]:") + "</td>"
+		accesses += "<td style='width:14%'>" + span_bold("[SSaccess.get_region_accesses_name(i)]:") + "</td>"
 	accesses += "</tr><tr>"
 	for(var/i = 1; i <= 7; i++)
 		accesses += "<td style='width:14%' valign='top'>"
-		for(var/A in get_region_accesses(i))
+		for(var/A in SSaccess.get_region_accesses(i))
 			if(A in conf_access)
-				accesses += "<a href='byond://?src=[REF(src)];access=[A]'>" + span_red("[replacetext(get_access_desc(A), " ", "&nbsp")]") + "</a> "
+				accesses += "<a href='byond://?src=[REF(src)];access=[A]'>" + span_red("[replacetext(SSaccess.get_access_desc(A), " ", "&nbsp")]") + "</a> "
 			else
-				accesses += "<a href='byond://?src=[REF(src)];access=[A]'>[replacetext(get_access_desc(A), " ", "&nbsp")]</a> "
+				accesses += "<a href='byond://?src=[REF(src)];access=[A]'>[replacetext(SSaccess.get_access_desc(A), " ", "&nbsp")]</a> "
 			accesses += "<br>"
 		accesses += "</td>"
 	accesses += "</tr></table>"

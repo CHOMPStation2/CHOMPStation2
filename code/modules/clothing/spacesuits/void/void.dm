@@ -26,7 +26,7 @@
 	desc = "A high-tech dark red space suit. Used for AI satellite maintenance."
 	slowdown = 0.5
 	armor = list(melee = 30, bullet = 5, laser = 20,energy = 5, bomb = 35, bio = 100, rad = 20)
-	allowed = list(POCKET_GENERIC, POCKET_ALL_TANKS, POCKET_SUIT_REGULATORS,/obj/item/storage/backpack) //CHOMPedit: backpack
+	allowed = list(POCKET_GENERIC, POCKET_ALL_TANKS, POCKET_SUIT_REGULATORS)
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	min_pressure_protection = 0 * ONE_ATMOSPHERE
 	max_pressure_protection = 10 * ONE_ATMOSPHERE
@@ -103,7 +103,7 @@
 			to_chat(M, "Your suit's cooling unit deploys.")
 			cooler.canremove = FALSE
 
-/obj/item/clothing/suit/space/void/dropped(mob/user)
+/obj/item/clothing/suit/space/void/dropped(mob/user, equipping, slot)
 	..()
 
 	var/mob/living/carbon/human/H
@@ -281,7 +281,7 @@
 		if(tank)
 			to_chat(user, "\The [src] already has an airtank installed.")
 		else if(cooler)
-			to_chat(user, "\The [src]'s suit cooling unit is the modular suit storage.  Remove it first.")
+			to_chat(user, "\The [src]'s suit cooling unit is the modular suit storage. Remove it first.")
 		else
 			to_chat(user, "You insert \the [W] into \the [src]'s storage compartment.")
 			user.drop_item()

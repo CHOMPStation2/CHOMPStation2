@@ -5281,10 +5281,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/cave/explored/trader)
-"lv" = (
-/mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat,
-/turf/simulated/floor/tiled,
-/area/surface/cave/explored/trader)
 "lw" = (
 /obj/structure/table/standard,
 /obj/random/material,
@@ -5345,14 +5341,6 @@
 /obj/random/material,
 /turf/simulated/floor/tiled,
 /area/surface/cave/explored/trader)
-"lF" = (
-/obj/machinery/light{
-	dir = 8;
-	layer = 3
-	},
-/mob/living/simple_mob/humanoid/astral_collective/purity,
-/turf/simulated/floor/tiled,
-/area/surface/cave/explored/trader)
 "lG" = (
 /obj/structure/fans/hardlight/colorable/abductor{
 	color = "#b6d9f3"
@@ -5374,12 +5362,6 @@
 "lJ" = (
 /obj/machinery/reagent_refinery/hub,
 /turf/simulated/floor/tiled,
-/area/surface/cave/explored/trader)
-"lK" = (
-/mob/living/simple_mob/humanoid/astral_collective/purity,
-/turf/simulated/floor/water{
-	outdoors = 0
-	},
 /area/surface/cave/explored/trader)
 "lL" = (
 /obj/machinery/reagent_refinery/pump,
@@ -6285,7 +6267,7 @@ lp
 lp
 lp
 lp
-lF
+ll
 lp
 iF
 lp
@@ -6792,7 +6774,7 @@ aa
 iF
 lm
 lp
-lv
+lp
 kx
 iF
 lm
@@ -8864,7 +8846,7 @@ kD
 kD
 lH
 kD
-lK
+kD
 kD
 kD
 iF
@@ -9112,7 +9094,7 @@ aa
 (14,1,1) = {"
 aa
 iF
-lr
+lp
 lp
 lp
 lp

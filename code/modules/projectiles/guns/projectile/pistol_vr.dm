@@ -24,7 +24,6 @@
 	load_method = MAGAZINE
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4)
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/lamia/update_icon()
@@ -48,7 +47,6 @@
 	load_method = MAGAZINE
 	w_class = ITEMSIZE_SMALL
 	fire_sound = 'sound/weapons/gunshot_pathetic.ogg'
-	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 3)
 
 /obj/item/gun/projectile/giskard/update_icon()
 	..()

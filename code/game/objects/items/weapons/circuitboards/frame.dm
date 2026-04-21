@@ -74,6 +74,11 @@
 	build_path = /obj/machinery/button/windowtint
 	board_type = new /datum/frame/frame_types/button
 
+/obj/item/circuitboard/mass_driver_button
+	name = T_BOARD("mass driver button")
+	build_path = /obj/machinery/button/remote/driver
+	board_type = new /datum/frame/frame_types/button
+
 //Computer
 
 /obj/item/circuitboard/holopad
@@ -85,13 +90,11 @@
 	name = T_BOARD("body scanner console")
 	build_path = /obj/machinery/body_scanconsole
 	board_type = new /datum/frame/frame_types/medical_console
-	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 
 /obj/item/circuitboard/sleeper_console
 	name = T_BOARD("sleeper console")
 	build_path = /obj/machinery/sleep_console
 	board_type = new /datum/frame/frame_types/medical_console
-	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 
 //Machine
 
@@ -176,7 +179,6 @@
 	build_path = /obj/machinery/teleport/hub
 	board_type = new /datum/frame/frame_types/machine //YWEdit makes buildable
 	matter = list(MAT_STEEL = 50, MAT_GLASS = 50, MAT_GOLD = 100)
-//	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 4)
 //CHOMPedit Balance
 	req_components = list(
 							/obj/item/bluespace_crystal = 2,
@@ -191,7 +193,6 @@
 	build_path = /obj/machinery/teleport/station
 	board_type = new /datum/frame/frame_types/machine //YWEdit makes buildable
 	matter = list(MAT_STEEL = 50, MAT_GLASS = 50, MAT_GOLD = 100)
-//	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 3)
 	req_components = list(
 							/obj/item/stock_parts/console_screen = 1,
 							/obj/item/stock_parts/capacitor = 2,
@@ -201,7 +202,6 @@
 	name = T_BOARD("body scanner")
 	build_path = /obj/machinery/bodyscanner
 	board_type = new /datum/frame/frame_types/medical_pod
-	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 	req_components = list(
 							/obj/item/stock_parts/scanning_module = 1,
 							/obj/item/stack/material/glass/reinforced = 2)
@@ -210,7 +210,6 @@
 	name = T_BOARD("medical kiosk")
 	build_path = /obj/machinery/medical_kiosk
 	board_type = new /datum/frame/frame_types/machine
-	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 	req_components = list(
 							/obj/item/stock_parts/scanning_module = 3,
 							/obj/item/stack/material/glass/reinforced = 2)
@@ -219,7 +218,6 @@
 	name = T_BOARD("sleeper")
 	build_path = /obj/machinery/sleeper
 	board_type = new /datum/frame/frame_types/medical_pod
-	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 	req_components = list(
 							/obj/item/stock_parts/manipulator = 1,
 							/obj/item/stock_parts/scanning_module = 1,
@@ -231,7 +229,6 @@
 	name = T_BOARD("VR sleeper")
 	build_path = /obj/machinery/vr_sleeper
 	board_type = new /datum/frame/frame_types/medical_pod
-	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 	req_components = list(
 							/obj/item/stock_parts/scanning_module = 1,
 							/obj/item/stack/material/glass/reinforced = 2)
@@ -240,7 +237,6 @@
 	name = T_BOARD("dna analyzer")
 	build_path = /obj/machinery/dnaforensics
 	board_type = new /datum/frame/frame_types/dna_analyzer
-	origin_tech = list(TECH_MAGNET = 4, TECH_BIO = 2, TECH_DATA = 2)
 	req_components = list(
 							/obj/item/stock_parts/scanning_module = 2,
 							/obj/item/stock_parts/micro_laser = 1,
@@ -261,7 +257,6 @@
 	name = T_BOARD("atmospheric field generator")
 	build_path = /obj/machinery/atmospheric_field_generator
 	board_type = new /datum/frame/frame_types/arfgs
-	origin_tech = list(TECH_MAGNET = 4, TECH_POWER = 4, TECH_BIO = 3)
 	req_components = list(
 							/obj/item/stock_parts/micro_laser/high = 2,	//field emitters
 							/obj/item/stock_parts/scanning_module = 1,	//atmosphere sensor
@@ -273,7 +268,6 @@
 	name = T_BOARD("Ready-to-Use Medicine 3000")
 	build_path = /obj/machinery/injector_maker
 	board_type = new /datum/frame/frame_types/injector_maker
-	origin_tech = list(TECH_BIO = 3, TECH_ENGINEERING = 2, TECH_MATERIAL = 2)
 	req_components = list(
 							/obj/item/stock_parts/matter_bin = 2,
 							/obj/item/stock_parts/manipulator = 1,
@@ -390,3 +384,30 @@
 	req_components = list(
 							/obj/item/stock_parts/capacitor = 1,
 							/obj/item/stock_parts/motor = 1)
+
+/obj/item/circuitboard/botany_extractor
+	name = T_BOARD("lysis-isolation centrifuge")
+	build_path = /obj/machinery/botany/extractor
+	board_type = new /datum/frame/frame_types/machine
+	req_components = list(
+							/obj/item/stock_parts/motor = 2,
+							/obj/item/stock_parts/scanning_module = 2,
+							/obj/item/stock_parts/gear = 3)
+
+/obj/item/circuitboard/botany_editor
+	name = T_BOARD("bioballistic delivery system")
+	build_path = /obj/machinery/botany/editor
+	board_type = new /datum/frame/frame_types/machine
+	req_components = list(
+							/obj/item/stock_parts/capacitor = 2,
+							/obj/item/stock_parts/scanning_module = 2,
+							/obj/item/stock_parts/manipulator = 2)
+
+/obj/item/circuitboard/botany_seedextractor
+	name = T_BOARD("seed extractor")
+	build_path = /obj/machinery/seed_extractor
+	board_type = new /datum/frame/frame_types/machine
+	req_components = list(
+							/obj/item/stock_parts/motor = 1,
+							/obj/item/stock_parts/manipulator = 2,
+							/obj/item/stock_parts/console_screen = 1)

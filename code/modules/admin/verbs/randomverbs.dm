@@ -123,7 +123,7 @@ ADMIN_VERB(cmd_admin_local_narrate, R_FUN|R_EVENT, "Local Narrate", "Locally nar
 	feedback_add_details("admin_verb","LNR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
-ADMIN_VERB(cmd_admin_direct_narrate, R_FUN|R_EVENT, "Direct Narrate", "Directly narrate the target.", ADMIN_CATEGORY_FUN_NARRATE, mob/target_mob)
+ADMIN_VERB_AND_CONTEXT_MENU(cmd_admin_direct_narrate, R_FUN|R_EVENT, "Direct Narrate", "Directly narrate the target.", ADMIN_CATEGORY_FUN_NARRATE, mob/target_mob in GLOB.mob_list)
 	if(!target_mob)
 		target_mob = tgui_input_list(user, "Direct narrate to who?", "Active Players", get_mob_with_client_list())
 
@@ -222,7 +222,7 @@ ADMIN_VERB(cmd_admin_add_random_ai_law, R_ADMIN|R_FUN, "Add Random AI Law", "Add
 	if(!show_log)
 		return
 	if(show_log == "Yes")
-		GLOB.command_announcement.Announce("Ion storm detected near \the [station_name()]. Please check all AI-controlled equipment for errors.", "Anomaly Alert", new_sound = 'sound/AI/ionstorm.ogg')
+		GLOB.command_announcement.Announce("Ion storm detected near \the [station_name()]. Please check all AI-controlled equipment for errors.", "Anomaly Alert", new_sound = ANNOUNCER_MSG_IONSTORM)
 
 	IonStorm(0)
 	feedback_add_details("admin_verb","ION") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -390,7 +390,7 @@ ADMIN_VERB(respawn_character, (R_ADMIN|R_REJUVINATE), "Spawn Character", "(Re)Sp
 
 	//Well you're not reloading their job or they never had one.
 	if(!charjob)
-		var/pickjob = tgui_input_list(src, "Pick a job to assign them (or none).","Job Select", GLOB.joblist.Copy() + "-No Job-", "-No Job-")
+		var/pickjob = tgui_input_list(src, "Pick a job to assign them (or none).","Job Select", SSjob.occupations_by_name.Copy() + "-No Job-", "-No Job-")
 		if(!pickjob)
 			return
 		if(pickjob != "-No Job-")
@@ -499,7 +499,7 @@ ADMIN_VERB(respawn_character, (R_ADMIN|R_REJUVINATE), "Spawn Character", "(Re)Sp
 		new_character.key = player_key
 		//Were they any particular special role? If so, copy.
 		if(new_character.mind)
-			var/datum/antagonist/antag_data = get_antag_data(new_character.mind.special_role)
+			var/datum/antagonist/antag_data = SSantag_job.get_antag_data(new_character.mind.special_role)
 			if(antag_data)
 				antag_data.add_antagonist(new_character.mind)
 				antag_data.place_mob(new_character)
@@ -521,11 +521,11 @@ ADMIN_VERB(respawn_character, (R_ADMIN|R_REJUVINATE), "Spawn Character", "(Re)Sp
 	//If desired, apply equipment.
 	if(equipment)
 		if(charjob)
-			GLOB.job_master.EquipRank(new_character, charjob, 1)
+			SSjob.equip_rank(new_character, charjob, 1)
 			if(new_character.mind)
 				new_character.mind.assigned_role = charjob
-				new_character.mind.role_alt_title = GLOB.job_master.GetPlayerAltTitle(new_character, charjob)
-		equip_custom_items(new_character)	//CHOMPEdit readded to enable custom_item.txt
+				new_character.mind.role_alt_title = SSjob.get_player_alt_title(new_character, charjob)
+			equip_custom_items(new_character)	//CHOMPEdit readded to enable custom_item.txt
 
 	//If customised job title, modify here.
 	if(custom_job && custom_job_title)
@@ -605,7 +605,7 @@ ADMIN_VERB(cmd_admin_add_freeform_ai_law, R_FUN, "Add Custom AI law", "Adds a cu
 
 	var/show_log = tgui_alert(user, "Show ion message?", "Message", list("Yes", "No"))
 	if(show_log == "Yes")
-		GLOB.command_announcement.Announce("Ion storm detected near the [station_name()]. Please check all AI-controlled equipment for errors.", "Anomaly Alert", new_sound = 'sound/AI/ionstorm.ogg')
+		GLOB.command_announcement.Announce("Ion storm detected near the [station_name()]. Please check all AI-controlled equipment for errors.", "Anomaly Alert", new_sound = ANNOUNCER_MSG_IONSTORM)
 	feedback_add_details("admin_verb","IONC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 ADMIN_VERB_AND_CONTEXT_MENU(cmd_admin_rejuvenate, R_ADMIN|R_FUN|R_MOD, "Rejuvenate", "Fully restores the target mob.", ADMIN_CATEGORY_GAME, mob/living/target_mob in GLOB.mob_list)
@@ -640,10 +640,10 @@ ADMIN_VERB(cmd_admin_create_centcom_report, R_ADMIN|R_SERVER|R_FUN, "Create Comm
 	if(!confirm)
 		return
 	if(confirm == "Yes")
-		GLOB.command_announcement.Announce(input, customname, new_sound = 'sound/AI/commandreport.ogg', msg_sanitized = 1);
+		GLOB.command_announcement.Announce(input, customname, new_sound = ANNOUNCER_MSG_NEW_COMMAND_REPORT, msg_sanitized = 1);
 	else
 		to_chat(world, span_boldannounce("New [using_map.company_name] Update available at all communication consoles."))
-		SEND_SOUND(world, sound('sound/AI/commandreport.ogg'))
+		play_simple_announcement(world, ANNOUNCER_MSG_NEW_COMMAND_REPORT)
 
 	log_admin("[key_name(user)] has created a command report: [input]")
 	message_admins("[key_name_admin(user)] has created a command report")
@@ -653,8 +653,8 @@ ADMIN_VERB_AND_CONTEXT_MENU(cmd_admin_delete, R_FUN|R_ADMIN, "Delete", "Delete t
 	user.admin_delete(atom_target)
 
 ADMIN_VERB(cmd_admin_list_open_jobs, R_HOLDER, "List free slots", "Show available job slots.", ADMIN_CATEGORY_INVESTIGATE)
-	if(GLOB.job_master)
-		for(var/datum/job/job in GLOB.job_master.occupations)
+	if(SSjob)
+		for(var/datum/job/job in SSjob.occupations)
 			to_chat(user, "[job.title]: [job.total_positions]")
 	feedback_add_details("admin_verb","LFS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -678,7 +678,7 @@ ADMIN_VERB(toggle_view_range, R_HOLDER, "Change View Range", "Switches between 1
 	feedback_add_details("admin_verb","CVRA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 ADMIN_VERB(admin_call_shuttle, R_ADMIN|R_SERVER, "Call Shuttle", "Calls the emergency shuttel.", ADMIN_CATEGORY_EVENTS)
-	if ((!( SSticker ) || !GLOB.emergency_shuttle.location()))
+	if ((!( SSticker ) || !SSemergency_shuttle.location()))
 		return
 
 	var/confirm = tgui_alert(user, "You sure?", "Confirm", list("Yes", "No"))
@@ -688,15 +688,15 @@ ADMIN_VERB(admin_call_shuttle, R_ADMIN|R_SERVER, "Call Shuttle", "Calls the emer
 	if(SSticker.mode.auto_recall_shuttle)
 		choice = tgui_input_list(user, "The shuttle will just return if you call it. Call anyway?", "Shuttle Call", list("Confirm", "Cancel"))
 		if(choice == "Confirm")
-			GLOB.emergency_shuttle.auto_recall = 1	//enable auto-recall
+			SSemergency_shuttle.auto_recall = TRUE	//enable auto-recall
 		else
 			return
 
 	choice = tgui_input_list(user, "Is this an emergency evacuation or a crew transfer?", "Shuttle Call", list("Emergency", "Crew Transfer"))
 	if (choice == "Emergency")
-		GLOB.emergency_shuttle.call_evac()
+		SSemergency_shuttle.call_evac()
 	else
-		GLOB.emergency_shuttle.call_transfer()
+		SSemergency_shuttle.call_transfer()
 
 
 	feedback_add_details("admin_verb","CSHUT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -706,10 +706,10 @@ ADMIN_VERB(admin_call_shuttle, R_ADMIN|R_SERVER, "Call Shuttle", "Calls the emer
 ADMIN_VERB(admin_cancel_shuttle, R_ADMIN|R_FUN, "Cancel Shuttle", "Cancels the emergency shuttel.", ADMIN_CATEGORY_EVENTS)
 	if(tgui_alert(user, "You sure?", "Confirm", list("Yes", "No")) != "Yes") return
 
-	if(!SSticker || !GLOB.emergency_shuttle.can_recall())
+	if(!SSticker || !SSemergency_shuttle.can_recall())
 		return
 
-	GLOB.emergency_shuttle.recall()
+	SSemergency_shuttle.recall()
 	feedback_add_details("admin_verb","CCSHUT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	log_admin("[key_name(user)] admin-recalled the emergency shuttle.")
 	message_admins(span_blue("[key_name_admin(user)] admin-recalled the emergency shuttle."))
@@ -718,10 +718,10 @@ ADMIN_VERB(admin_deny_shuttle, R_ADMIN, "Toggle Deny Shuttle", "Prevents the shu
 	if (!SSticker)
 		return
 
-	GLOB.emergency_shuttle.deny_shuttle = !GLOB.emergency_shuttle.deny_shuttle
+	SSemergency_shuttle.deny_shuttle = !SSemergency_shuttle.deny_shuttle
 
-	log_admin("[key_name(user)] has [GLOB.emergency_shuttle.deny_shuttle ? "denied" : "allowed"] the shuttle to be called.")
-	message_admins("[key_name_admin(user)] has [GLOB.emergency_shuttle.deny_shuttle ? "denied" : "allowed"] the shuttle to be called.")
+	log_admin("[key_name(user)] has [SSemergency_shuttle.deny_shuttle ? "denied" : "allowed"] the shuttle to be called.")
+	message_admins("[key_name_admin(user)] has [SSemergency_shuttle.deny_shuttle ? "denied" : "allowed"] the shuttle to be called.")
 
 ADMIN_VERB(everyone_random, R_FUN, "Make Everyone Random", "Make everyone have a random appearance. You can only use this before rounds!", ADMIN_CATEGORY_FUN_DO_NOT)
 	if (SSticker && SSticker.mode)

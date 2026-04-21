@@ -228,6 +228,14 @@
 /obj/random/mob/mouse,
 /turf/simulated/floor/tiled/freezer,
 /area/maintenance/ab_Kitchen)
+"aaD" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/shield_capacitor,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/cetus/meteor/shieldgen)
 "aaE" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/maintenance_panel{
@@ -1107,7 +1115,7 @@
 	},
 /obj/machinery/door/airlock/glass_research{
 	name = "Anomaly Testing";
-	req_access = list(65)
+	req_access = list(7)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
@@ -1339,6 +1347,28 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/hallway)
+"acw" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/shield_gen/external,
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/cetus/meteor/shieldgen)
+"acx" = (
+/obj/structure/sign/department/shield{
+	pixel_y = 30
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/cetus/meteor/shieldgen)
+"acy" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/cetus/meteor/shieldgen)
 "acC" = (
 /obj/structure/sink{
 	dir = 4;
@@ -1788,8 +1818,6 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
-/obj/machinery/shield_gen/external,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -7213,12 +7241,6 @@
 /obj/structure/cable/orange{
 	icon_state = "0-6"
 	},
-/obj/structure/sign/department/shield{
-	pixel_y = 30
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/shieldgen)
 "dmb" = (
@@ -7663,11 +7685,13 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/cetus/meteor/carbonresearch)
 "dym" = (
-/obj/structure/disposalpipe/junction{
-	dir = 8
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
+	},
+/obj/structure/disposalpipe/sortjunction{
+	dir = 8;
+	sortType = "Bar";
+	name = "Bar"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
@@ -10766,7 +10790,6 @@
 	anchored = 1;
 	dir = 4;
 	icon_state = "emitter2";
-	id = "EngineEmitter";
 	state = 2
 	},
 /turf/simulated/floor/plating,
@@ -11644,10 +11667,6 @@
 "fGU" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 1
-	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 25
 	},
 /obj/machinery/light/fluorescent{
 	dir = 4
@@ -15839,6 +15858,11 @@
 /obj/effect/floor_decal/spline/fancy{
 	dir = 10
 	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = 27
+	},
 /turf/simulated/floor/plating,
 /area/security/cetus/meteor/brig)
 "hUm" = (
@@ -18658,13 +18682,11 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway2)
 "jpg" = (
-/obj/structure/disposalpipe/sortjunction{
-	dir = 8;
-	sortType = "Bar";
-	name = "Bar"
-	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/railing,
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
 "jpp" = (
@@ -19827,7 +19849,9 @@
 /area/crew_quarters/sleep/cetus/meteor/dorm2)
 "jPT" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/rnd,
+/obj/machinery/door/airlock/maintenance/rnd{
+	req_access = list(7)
+	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -23467,8 +23491,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
 "lHH" = (
-/obj/machinery/shield_capacitor,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
@@ -24616,10 +24638,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/techstorage)
-"mrH" = (
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/meteor/aftstar)
 "mrI" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -36052,8 +36070,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "siy" = (
-/obj/machinery/shield_capacitor,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/shieldgen)
 "siC" = (
@@ -96221,14 +96237,14 @@ hhG
 kBV
 ojJ
 kKC
-jNq
 uAV
+kzW
 uQv
 uQv
 uQv
 uQv
 uQv
-eOO
+vOz
 knr
 knr
 eOO
@@ -96479,14 +96495,14 @@ dgo
 lVf
 ogE
 aPd
-jNq
 uAV
-uQv
+kzW
+acw
 hWI
 rbs
 hWI
-uQv
-eOO
+aaD
+vOz
 eOO
 knr
 eOO
@@ -96737,14 +96753,14 @@ hhG
 hHR
 ojJ
 kKC
-jNq
 uAV
-uQv
+kzW
+acx
 dlt
 sFb
 oWU
-uQv
-slB
+aaD
+kzW
 eOO
 knr
 knr
@@ -96995,14 +97011,14 @@ ojJ
 lVf
 ogE
 aPd
-jNq
 uAV
-uQv
+kzW
+acy
 hWI
 uAz
 hWI
-uQv
-slB
+aaD
+kzW
 eOO
 eOO
 knr
@@ -97253,14 +97269,14 @@ ogE
 hHR
 ojJ
 kKC
-jNq
 uAV
+kzW
 uQv
 eNT
 kRK
 lHH
 uQv
-slB
+kzW
 slB
 eOO
 eOO
@@ -97542,11 +97558,11 @@ iUX
 hGJ
 hBX
 eXe
-lZX
 eXe
-lZX
 eXe
-lZX
+eXe
+eXe
+eXe
 eXe
 slB
 slB
@@ -97800,13 +97816,13 @@ fvl
 vPG
 hRu
 wKr
-slB
-slB
-slB
-slB
-slB
 iQm
 iQm
+iQm
+tiw
+tiw
+tiw
+tiw
 iQm
 slB
 slB
@@ -98058,11 +98074,11 @@ rXy
 lcp
 voG
 fbs
-slB
 iQm
 iQm
-aam
-iQm
+tiw
+tiw
+tiw
 tiw
 tiw
 fnG
@@ -98319,7 +98335,7 @@ wKr
 iQm
 iQm
 tiw
-mrH
+tiw
 tiw
 tiw
 iPN
@@ -98577,7 +98593,7 @@ fbs
 iQm
 tiw
 tiw
-aam
+tiw
 tiw
 tiw
 hzd
@@ -98836,8 +98852,8 @@ iQm
 tiw
 tiw
 iQm
-iQm
-iQm
+tiw
+tiw
 tiw
 sRw
 iQm
@@ -99091,18 +99107,18 @@ kdm
 oDL
 fbs
 iQm
-iQm
+tiw
 hzd
+tiw
+tiw
 tiw
 iQm
 iQm
 iQm
+slB
 iQm
-slB
-slB
-slB
-uAV
-uAV
+bSB
+bSB
 uAV
 suH
 suH
@@ -99349,13 +99365,13 @@ fDI
 sIp
 wKr
 iQm
-iQm
+tiw
+tiw
+tiw
 tiw
 tiw
 tiw
 iQm
-slB
-slB
 slB
 slB
 slB
@@ -99868,7 +99884,7 @@ tiw
 tiw
 fVH
 iQm
-tiw
+iQm
 tiw
 jkO
 iQm

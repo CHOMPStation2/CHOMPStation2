@@ -29,7 +29,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/burnt = 0
 	var/smoketime = 5
 	w_class = ITEMSIZE_TINY
-	origin_tech = list(TECH_MATERIAL = 1)
 	slot_flags = SLOT_EARS
 	attack_verb = list("burnt", "singed")
 	drop_sound = 'sound/items/drop/food.ogg'
@@ -48,12 +47,14 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		location.hotspot_expose(700, 5)
 		return
 
-/obj/item/flame/match/dropped(mob/user)
+/obj/item/flame/match/dropped(mob/user, equipping, slot)
+	if(equipping)
+		return ..()
 	//If dropped, put ourselves out
 	//not before lighting up the turf we land on, though.
 	if(lit)
 		spawn(0)
-			var/turf/location = src.loc
+			var/turf/location = loc
 			if(istype(location))
 				location.hotspot_expose(700, 5)
 			burn_out()
@@ -291,7 +292,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/nicotine_amt = 2
 	matchmes = span_notice("USER lights their NAME with their FLAME.")
 	lightermes = span_notice("USER manages to light their NAME with FLAME.")
-	zippomes = span_rose("With a flick of their wrist, USER lights their NAME with their FLAME.")
+	zippomes = span_notice(span_rose("With a flick of their wrist, USER lights their NAME with their FLAME."))
 	weldermes = span_notice("USER casually lights the NAME with FLAME.")
 	ignitermes = span_notice("USER fiddles with FLAME, and manages to light their NAME.")
 	special_handling = TRUE
@@ -357,7 +358,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	nicotine_amt = 4
 	matchmes = span_notice("USER lights their NAME with their FLAME.")
 	lightermes = span_notice("USER manages to offend their NAME by lighting it with FLAME.")
-	zippomes = span_rose("With a flick of their wrist, USER lights their NAME with their FLAME.")
+	zippomes = span_notice(span_rose("With a flick of their wrist, USER lights their NAME with their FLAME."))
 	weldermes = span_notice("USER insults NAME by lighting it with FLAME.")
 	ignitermes = span_notice("USER fiddles with FLAME, and manages to light their NAME with the power of science.")
 
@@ -428,7 +429,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	chem_volume = 50
 	matchmes = span_notice("USER lights their NAME with their FLAME.")
 	lightermes = span_notice("USER manages to light their NAME with FLAME.")
-	zippomes = span_rose("With much care, USER lights their NAME with their FLAME.")
+	zippomes = span_notice(span_rose("With much care, USER lights their NAME with their FLAME."))
 	weldermes = span_notice("USER recklessly lights NAME with FLAME.")
 	ignitermes = span_notice("USER fiddles with FLAME, and manages to light their NAME with the power of science.")
 	is_pipe = 1
@@ -679,7 +680,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			cig.attackby(src, user)
 		else
 			if(istype(src, /obj/item/flame/lighter/zippo))
-				cig.light(span_rose("[user] whips the [name] out and holds it for [M]."))
+				cig.light(span_notice(span_rose("[user] whips the [name] out and holds it for [M].")))
 			else
 				cig.light(span_notice("[user] holds the [name] out for [M], and lights the [cig.name]."))
 	else
@@ -721,7 +722,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		icon_state = "[base_state]on"
 		item_state = "[base_state]on"
 		playsound(src, activation_sound, 75, 1)
-		user.visible_message(span_rose("Without even breaking stride, [user] flips open and lights [src] in one smooth movement."))
+		user.visible_message(span_notice(span_rose("Without even breaking stride, [user] flips open and lights [src] in one smooth movement.")))
 
 		set_light(2, 0.5, "#FF9933")
 		START_PROCESSING(SSobj, src)
@@ -730,7 +731,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		icon_state = "[base_state]"
 		item_state = "[base_state]"
 		playsound(src, deactivation_sound, 75, 1)
-		user.visible_message(span_rose("You hear a quiet click, as [user] shuts off [src] without even looking at what they're doing."))
+		user.visible_message(span_notice(span_rose("You hear a quiet click, as [user] shuts off [src] without even looking at what they're doing.")))
 
 		set_light(0)
 		STOP_PROCESSING(SSobj, src)
@@ -846,7 +847,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		item_state = "[base_state]on"
 		playsound(src, activation_sound, 75, 1)
 		if(prob(50))
-			user.visible_message(span_rose("[user] safely activates the [src] with a push of a button!"))
+			user.visible_message(span_notice(span_rose("[user] safely activates the [src] with a push of a button!")))
 		else
 			if(prob(95))
 				user.visible_message(span_notice("After a few attempts, [user] manages to excite the supermatter within the [src]."))
@@ -872,7 +873,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		item_state = "[base_state]"
 		playsound(src, deactivation_sound, 75, 1)
 		if(istype(src, /obj/item/flame/lighter/supermatter) )
-			user.visible_message(span_rose("You hear a quiet click, as [user] shuts the [src] without even looking at what they're doing."))
+			user.visible_message(span_notice(span_rose("You hear a quiet click, as [user] shuts the [src] without even looking at what they're doing.")))
 		else
 			user.visible_message(span_notice("[user] quietly shuts the [src]."))
 
@@ -895,7 +896,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			cig.attackby(src, user)
 		else
 			if(istype(src, /obj/item/flame/lighter/supermatter))
-				cig.light(span_rose("[user] whips the [name] out and holds it for [M]."))
+				cig.light(span_notice(span_rose("[user] whips the [name] out and holds it for [M].")))
 			else
 				cig.light(span_notice("[user] holds the [name] out for [M], and lights the [cig.name]."))
 	else
@@ -920,7 +921,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		item_state = "[base_state]on"
 		playsound(src, activation_sound, 75, 1)
 		if(prob(50))
-			user.visible_message(span_rose("[user] safely activates the [src] with a push of a button!"))
+			user.visible_message(span_notice(span_rose("[user] safely activates the [src] with a push of a button!")))
 		else
 			if(prob(95))
 				user.visible_message(span_notice("After a few attempts, [user] manages to excite the supermatter within the [src]."))
@@ -946,7 +947,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		item_state = "[base_state]"
 		playsound(src, deactivation_sound, 75, 1)
 		if(istype(src, /obj/item/flame/lighter/supermatter/syndismzippo) )
-			user.visible_message(span_rose("You hear a quiet click, as [user] shuts the [src] without even looking at what they're doing."))
+			user.visible_message(span_notice(span_rose("You hear a quiet click, as [user] shuts the [src] without even looking at what they're doing.")))
 		else
 			user.visible_message(span_notice("[user] quietly shuts the [src]."))
 
@@ -969,7 +970,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			cig.attackby(src, user)
 		else
 			if(istype(src, /obj/item/flame/lighter/supermatter/syndismzippo))
-				cig.light(span_rose("[user] whips the [name] out and holds it for [M]."))
+				cig.light(span_notice(span_rose("[user] whips the [name] out and holds it for [M].")))
 			else
 				cig.light(span_notice("[user] holds the [name] out for [M], and lights the [cig.name]."))
 	else
@@ -996,8 +997,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		var/i = rand(1, 100)
 		switch(i)
 			if(1 to 22)
-				to_chat(user, span_rose("[user] safely reveals the supermatter shard within the [src]!"))
-				user.visible_message(span_rose("You safely revealed the supermatter shard within the [src]!"))
+				to_chat(user, span_notice(span_rose("[user] safely reveals the supermatter shard within the [src]!")))
+				user.visible_message(span_notice(span_rose("You safely revealed the supermatter shard within the [src]!")))
 				if (user.get_left_hand() == src)
 					user.apply_damage(1, IRRADIATE, BP_L_HAND)
 				else			// Even using this safely will irradiate you a tiny tiny bit.
@@ -1121,7 +1122,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		item_state = "[base_state]"
 		playsound(src, deactivation_sound, 75, 1)
 		if (istype(src, /obj/item/flame/lighter/supermatter/expsmzippo))
-			user.visible_message(span_rose("You hear a quiet click, as [user] closes the [src]."))
+			user.visible_message(span_notice(span_rose("You hear a quiet click, as [user] closes the [src].")))
 		else
 			user.visible_message(span_notice("[user] quietly shuts the [src]."))
 
@@ -1142,7 +1143,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			cig.attackby(src, user)
 		else
 			if (istype(src, /obj/item/flame/lighter/supermatter/expsmzippo))
-				cig.light(span_rose("[user] whips the [name] out and holds it for [M]."))
+				cig.light(span_notice(span_rose("[user] whips the [name] out and holds it for [M].")))
 			else
 				cig.light(span_notice("[user] holds the [name] out for [M], and lights the [cig.name]."))
 	else

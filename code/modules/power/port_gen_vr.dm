@@ -39,7 +39,6 @@
 	name = T_BOARD("radioisotope TEG")
 	build_path = /obj/machinery/power/rtg
 	board_type = new /datum/frame/frame_types/machine
-	origin_tech = list(TECH_DATA = 3, TECH_POWER = 3, TECH_PHORON = 3, TECH_ENGINEERING = 3)
 	req_components = list(
 		/obj/item/stack/cable_coil = 5,
 		/obj/item/stock_parts/capacitor = 1,
@@ -48,7 +47,6 @@
 /obj/item/circuitboard/machine/rtg/advanced
 	name = T_BOARD("advanced radioisotope TEG")
 	build_path = /obj/machinery/power/rtg/advanced
-	origin_tech = list(TECH_DATA = 5, TECH_POWER = 5, TECH_PHORON = 5, TECH_ENGINEERING = 5)
 	req_components = list(
 		/obj/item/stack/cable_coil = 5,
 		/obj/item/stock_parts/capacitor = 1,
@@ -60,7 +58,6 @@
 	name = T_BOARD("void generator")
 	build_path = /obj/machinery/power/rtg/abductor
 	board_type = new /datum/frame/frame_types/machine
-	origin_tech = list(TECH_DATA = 8, TECH_POWER = 8, TECH_PHORON = 8, TECH_ENGINEERING = 8)
 	req_components = list(
 		/obj/item/stack/cable_coil = 5,
 		/obj/item/stock_parts/capacitor/hyper = 1)
@@ -70,7 +67,6 @@
 	name = T_BOARD("void generator (hybrid)")
 	build_path = /obj/machinery/power/rtg/abductor/hybrid
 	board_type = new /datum/frame/frame_types/machine
-	origin_tech = list(TECH_DATA = 8, TECH_POWER = 8, TECH_PHORON = 8, TECH_ENGINEERING = 8)
 	req_components = list(
 		/obj/item/stack/cable_coil = 5,
 		/obj/item/stock_parts/capacitor/hyper = 1,
@@ -236,8 +232,8 @@
 	visible_message(span_danger("\The [src] lets out an shower of sparks as it starts to lose stability!"),\
 		span_warningplain("You hear a loud electrical crack!"))
 	playsound(src, 'sound/effects/lightningshock.ogg', 100, 1, extrarange = 5)
-	tesla_zap(src, 5, power_gen * 0.05)
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(explosion), get_turf(src), 2, 3, 4, 8), 100) // Not a normal explosion.
+	tesla_zap(src, 5, power_gen * 0.05, current_jumps = 1)
+	addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(explosion), get_turf(src), 2, 3, 4, 8), 100) // Not a normal explosion.
 
 /obj/machinery/power/rtg/abductor/bullet_act(obj/item/projectile/Proj)
 	. = ..()
@@ -297,10 +293,6 @@
 /obj/machinery/power/rtg/abductor/fire_act(exposed_temperature, exposed_volume)
 	asplod()
 
-/obj/machinery/power/rtg/abductor/tesla_act()
-	..() //extend the zap
-	asplod()
-
 // Comes with an installed cell
 /obj/machinery/power/rtg/abductor/built
 	icon_state = "core"
@@ -353,10 +345,6 @@
 	asplod()
 
 /obj/machinery/power/rtg/kugelblitz/fire_act(exposed_temperature, exposed_volume)
-	asplod()
-
-/obj/machinery/power/rtg/kugelblitz/tesla_act()
-	..() //extend the zap
 	asplod()
 
 /obj/machinery/power/rtg/kugelblitz/bullet_act(obj/item/projectile/Proj)
@@ -467,14 +455,10 @@
 	power_gen = cool_rotations
 	runner.nutrition -= nutrition_drain
 
-/obj/machinery/power/rtg/reg/emp_act(severity, recursive)
-	return
-
 /obj/item/circuitboard/machine/reg_d
 	name = T_BOARD("D-Type-REG")
 	build_path = /obj/machinery/power/rtg/reg
 	board_type = new /datum/frame/frame_types/machine
-	origin_tech = list(TECH_DATA = 2, TECH_POWER = 4, TECH_ENGINEERING = 4)
 	req_components = list(
 		/obj/item/stack/cable_coil = 5,
 		/obj/item/stock_parts/capacitor = 1)
@@ -483,7 +467,6 @@
 	name = T_BOARD("C-Type-REG")
 	build_path = /obj/machinery/power/rtg/reg/c
 	board_type = new /datum/frame/frame_types/machine
-	origin_tech = list(TECH_DATA = 2, TECH_POWER = 4, TECH_ENGINEERING = 4)
 	req_components = list(
 		/obj/item/stack/cable_coil = 5,
 		/obj/item/stock_parts/capacitor = 1)
@@ -619,10 +602,6 @@
 
 /obj/machinery/power/rtg/antimatter_core/fire_act(exposed_temperature, exposed_volume)
 	return
-
-/obj/machinery/power/rtg/antimatter_core/tesla_act()
-	..() //extend the zap
-	asplod()
 
 /obj/machinery/power/rtg/antimatter_core/bullet_act(obj/item/projectile/Proj)
 	. = ..()

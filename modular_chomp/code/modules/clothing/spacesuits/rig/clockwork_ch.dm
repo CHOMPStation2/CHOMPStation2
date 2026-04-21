@@ -62,7 +62,6 @@
 /obj/item/cell/clockwork //using the stats of a precursor void cell until someone's motivated to port and make the suit use clockcult global power
 	name = "hierophant ansible"
 	desc = "A curiously cold brass doodad. It seems as though it really doesn't appreciate being held. Due to it's size and the apparent electrical arc, it might be useful as a battery?"
-	origin_tech = list(TECH_POWER = 8, TECH_ENGINEERING = 6)
 	icon = 'modular_chomp/icons/obj/clockwork_objects.dmi'
 	icon_state = "hierophant_ansible"
 	maxcharge = 4800 //same stats as a void cell, but slower at recharging itself

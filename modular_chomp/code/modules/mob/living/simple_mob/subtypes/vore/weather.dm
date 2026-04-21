@@ -146,6 +146,10 @@
 	var/leech = 50
 	var/chain_number = 0
 
+/mob/living/simple_mob/vore/boss_jellyfish/death()
+	..()
+	qdel(src)
+
 /mob/living/simple_mob/vore/boss_jellyfish/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected

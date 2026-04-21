@@ -160,7 +160,7 @@
 
 	activation_message="You feel off balance..."
 	primitive_expression_messages=list("staggers")
-	excludes = list(/datum/trait/negative/lightweight_light)
+	excludes = list(/datum/trait/negative/lightweight_light, /datum/trait/positive/heavyweight)
 
 /datum/trait/negative/neural_hypersensitivity
 	name = "Neural Hypersensitivity"
@@ -589,7 +589,7 @@
 	hidden = FALSE
 	custom_only = FALSE
 	added_component_path = /datum/component/omen/trait
-	excludes = list(/datum/trait/negative/unlucky/major)
+	excludes = list(/datum/trait/negative/unlucky/major, /datum/trait/neutral/slip_prone)
 
 
 /datum/trait/negative/unlucky/major
@@ -600,7 +600,7 @@
 	is_genetrait = TRUE
 	hidden = FALSE //VOREStation Note: Disabled //CHOMPEdit - Enable
 	added_component_path = /datum/component/omen/trait/major
-	excludes = list(/datum/trait/negative/unlucky)
+	excludes = list(/datum/trait/negative/unlucky, /datum/trait/neutral/slip_prone)
 	activation_message= span_cult(span_bold("What a terrible night to have a curse!"))
 	primitive_expression_messages=list("unluckily stubs their toe!")
 
@@ -733,7 +733,7 @@
 	desc = "Your light weight and poor balance make you very susceptible to unhelpful bumping if you are unprepared)"
 	cost = -1
 	var_changes = list("lightweight_light" = 1)
-	excludes = list(/datum/trait/negative/lightweight)
+	excludes = list(/datum/trait/negative/lightweight, /datum/trait/positive/heavyweight)
 	custom_only = FALSE
 
 /datum/trait/negative/scrawny

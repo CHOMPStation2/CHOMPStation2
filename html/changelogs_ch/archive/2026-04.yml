@@ -1,0 +1,180 @@
+2026-04-01:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: depdendency up
+  - admin: ports TG spawn verb UI
+2026-04-02:
+  Diana:
+  - balance: Backpacks no longer fit in space or voidsuit storage slots.
+  - bugfix: Water no longer explodes your lungs
+  FluffMedic:
+  - rscadd: Prismatic Fireflies readded to tyr.
+  - balance: gold ant no longer has lightning on it's melee. Delayed short ranged
+      EMP on death
+  - balance: silver ants no longer reflect lasers. Now slightly transparent
+  - balance: Mhydro ant's damage is halved. Now must be clicked on to be shot. Can
+      exist in other ant spaces
+  - balance: The gatekeeper is reduced to a single projectile
+  - maptweak: Hidden Tyr entrance is altered, alongside the tyr tunnels in general
+  Will:
+  - bugfix: Floorpainter missing autolathe tag
+  Will, Kash:
+  - rscadd: Doppler array explosive experiments
+  zeskorion:
+  - bugfix: more cetus fixes
+  - maptweak: cetus cargo expanded and reworked
+  - maptweak: implemented body sorting on cetus, disposals are now safer to use
+2026-04-03:
+  Diana:
+  - rscadd: ghostbusting
+2026-04-04:
+  Will:
+  - bugfix: Fixed accidental looting debug flag being left enabled on trash piles
+2026-04-07:
+  CHOMPStation2StaffMirrorBot:
+  - qol: allows free amount selection between min and max
+  - bugfix: plane holder hard dels
+  - bugfix: cig lighter chat sorting
+  Guti:
+  - rscadd: Anomaly Core Rigging
+  - rscdel: Removed acid weather from being picked for the Weather Anomaly
+  - bugfix: Fixed signalers cooldown not working
+  - rscdel: Removed dimensional anomaly core pulses changing reinforced walls
+  Will:
+  - rscadd: Borgs will get a client side indicator when electrifying doors with alt-click
+2026-04-09:
+  Diana:
+  - bugfix: Radstorms give rads once more.
+  - bugfix: Proton packs no longer get perma-stuck to your back
+  - qol: Geiger counters give you more information.
+  - bugfix: Inactive geigers will no longer cause tremor sense to trigger.
+  FluffMedic:
+  - rscadd: All Tyr Precursor base bosses have been reworked, several resprited
+  - balance: Bronze ant no longer spawns antlings on death. Gives ants the haste buff
+      briefly
+  - balance: Tyr Katar's bomb gimmick removed and replaced with straight up igniting
+      the foe
+  - balance: Agate ants no longer instantly explode once in melee, giving a few seconds
+      to escape. Explosion slightly buffed
+  - maptweak: Tyr Precursor base altered, and slightly shrunk
+  - maptweak: AC base altered
+  - maptweak: The tyr caverns have been slightly altered in preparation for a full
+      rework
+  - bugfix: abnormal materials being obtainable from the rmes
+  Nova:
+  - bugfix: Fix an issue with random name generation.
+  Will:
+  - bugfix: Foam crossbow toy properly spawns from loadout entry
+  - bugfix: Getting the value of a cargo tanker with no reagents inside it no longer
+      runtimes.
+  - rscadd: Check Access List admin verb for mappers
+  - spellcheck: Lethal sidearm box description fixed.
+  - bugfix: oilslide tagged as a drink in bingle wiki
+  - bugfix: enraged arachnid slammer tagged as a drink in bingle wiki
+  - bugfix: blondie mix tagged as a food in bingle wiki
+  - code_imp: Small death alarm null safety tweak
+2026-04-12:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed weapon cell icons in examine when guns/etc. are unloaded
+  - bugfix: a bunch of runtimes
+  Diana:
+  - refactor: Ore bags refactored from /storage to just /item
+  - qol: Miner borg sleeper belly can now click turf to scoop up ore.
+  - code_imp: Miner borg sleeper belly now dynamically updates how much it can hold
+      based on the ore bag it contains.
+  - bugfix: Ore can now be scooped from any turf, not just mineral turf.
+  - bugfix: Ore bags will no longer pick up archeo debris
+  - bugfix: Miner borg sleeper belly now properly picks up ore.
+  - code_imp: Ore bag signal override removed.
+  - bugfix: Swoopies no longer runtime
+  - bugfix: Environmental message works now.
+  - bugfix: Antag NT opposed now considers broke instead of just underpaid/poor
+  - bugfix: EMPs will no longer doubletap things.
+  - bugfix: Biogenerator no longer can go negative when dispensing reagents
+  - bugfix: Biogenerator will never go below 1 point per 1unit of reagent
+  - bugfix: Biogenerator will dispense 1 unit of reagent per amount selected
+  - qol: Prices for gardening nutriments decreased
+  - rscadd: Biogenerator can now dispense Salt, Soy, Plant-B-Gone, Mutagen, and Diethylamine
+  - rscadd: Biogenerator can dispense Mystery Seeds and Kudzu (Botanists can already
+      use L4Z to get kudzu)
+  Guti:
+  - bugfix: Fixed mob offset
+  - rscadd: EMPs can pulse random wires now
+  - refactor: Refactored EMPs
+  - code_imp: Added var/datum/wires to /atom
+  - code_imp: Added EMP Protection Element
+  - code_imp: EMP defines instead of magic numbers
+  Nova:
+  - bugfix: fixed powernet circuit outputs
+  Will:
+  - rscadd: AI players can now hear local sounds and area ambiences through their
+      holograms
+  - rscadd: TTS device now shows a typing indicator while in use.
+  - rscadd: hoistkit added to techweb
+  - rscadd: borgs can now use unpacked hoist kits
+  - refactor: General improvements to hoist kits
+  - bugfix: Guns with nonstandard firemode selection properly set firemode properties
+      during init
+  - spellcheck: tape roll lathe entry
+2026-04-13:
+  Diana, Kash.:
+  - qol: The fryer now tells you how much oil is remaining in it.
+  - qol: The fryer now alerts you if the fryer is underfilled or overfilled on oil
+  - qol: Tankers can now be attached to the fryer to fill it.
+  - bugfix: Fryer works properly and adds oil to food
+  - bugfix: Fryer and trays no longer show 'phantom items' overlay.
+  - bugfix: You can now insert oil into the fryer with any reagent container.
+  - code_imp: Recipes are now a global list instead of a per-item list
+  FluffMedic:
+  - balance: removes material weapon dulling as a base things (can still be flicked
+      on)
+  Will:
+  - bugfix: Drawing blood with syringes and IV stands works properly again.
+  zeskorion:
+  - rscadd: shapeshifter trait
+2026-04-14:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: New Contractor Title for Cargo Technician - Logistics Contractor.
+  - rscadd: New Contractor Title for Shaft Miner - Mining Contractor.
+  - rscadd: New Contractor Title for Scientist - Research Contractor.
+  - code_imp: finishes migrating the admin verbs to the subsystem
+  - qol: chat highlights can be toggled
+  - refactor: axes the old job controller and old master controller
+  Diana:
+  - bugfix: Clicking an inventory slot with an item now acts as if you were clicking
+      the item in the slot.
+  - bugfix: Ctrl-clicking doors no longer tries to pull them.
+  - bugfix: Wishgranter properly gives laser eyes.
+  - bugfix: Wizard mutate spell properly gives laser eyes.
+  - rscadd: Objects can now take damage. The most prevalent source of this is FIRE!
+      Objects can now catch on fire and melt away!
+  - qol: Objects will make sounds when they take damage now.
+  - qol: Examining objects will inform you of their various properties. Examining
+      a fireproof, bombproof, or flammable item will inform you of such.
+  - code_imp: Items can now be labeled as ABSTRACT. This means the game will ignore
+      them in certain situations.
+  - code_imp: Instead of things having their own specialty /deconstruct proc, they
+      all now share a /atom_deconstruct proc
+2026-04-15:
+  Diana:
+  - code_imp: Removed origin_tech
+2026-04-16:
+  Will:
+  - rscadd: Station announcer voice now supports customization without extensive editing
+2026-04-17:
+  Diana:
+  - bugfix: Mag/rigboots will no longer eat boots.
+  - bugfix: Gloves will no longer delete whatever it's put over.
+  - bugfix: Changeling armblades properly pass their message, now.
+  - code_imp: Gets rid of some X as mob / X as obj
+2026-04-18:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed throwing items/mobs at yourself not triggering spont vore
+2026-04-19:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: lightweight and heavyweight can no longer be stacked
+  Diana:
+  - qol: Leash stun is only 10 seconds instead of 40.
+  - bugfix: Fixes a few runtimes
+  FluffMedic:
+  - bugfix: The Tyr AC base being lightless and the problematic anomaly upon it was
+      swapped

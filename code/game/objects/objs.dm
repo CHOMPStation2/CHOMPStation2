@@ -13,11 +13,19 @@
 	var/show_examine = TRUE	// Does this pop up on a mob when the mob is examined?
 
 	var/redgate_allowed = TRUE	//can we be taken through the redgate, in either direction?
-	var/rad_resistance = 0  // Allow overriding rad resistance
 	var/being_shocked = FALSE
 	var/micro_accepted_scale = 0.5
 	var/micro_target = FALSE
 	var/explosion_resistance
+
+	/// Cached custom fire overlay
+	var/custom_fire_overlay
+	/// Particles this obj uses when burning, if any
+	var/burning_particles
+
+	var/obj_flags = CAN_BE_HIT
+
+	uses_integrity = TRUE
 
 /obj/Destroy()
 	STOP_PROCESSING(SSobj, src)

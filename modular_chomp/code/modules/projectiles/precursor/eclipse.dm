@@ -6,8 +6,6 @@
 	item_state = "cryogun"
 	wielded_item_state = "cryogun-wielded"
 	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
-
 
 	charge_cost = 80 //How much energy is needed to fire.
 

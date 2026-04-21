@@ -8,7 +8,6 @@
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_SMALL
 	matter = list(MAT_STEEL = 200)
-	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2, TECH_ILLEGAL = 1)
 	possessed_voice = list()
 	var/self_bind = FALSE
 	flags = NOBLUDGEON
