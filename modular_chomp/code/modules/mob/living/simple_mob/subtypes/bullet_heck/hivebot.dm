@@ -8,7 +8,6 @@
 	size_multiplier = 2
 	maxHealth = 500
 	health = 500
-	wreckage = /obj/item/prop/tyrlore/gatekeeper
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases/no_movement
 	anchored = 1
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)

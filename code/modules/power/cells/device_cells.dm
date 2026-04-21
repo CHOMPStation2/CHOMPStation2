@@ -26,7 +26,6 @@
 	name = "\improper rechargable D battery"
 	desc = "An older, cheap power cell designed to power handheld devices. It's probably been in use for quite some time now."
 	description_fluff = "You can't top the rust top." //TOTALLY TRADEMARK INFRINGEMENT
-	origin_tech = list(TECH_POWER = 0)
 	icon_state = "device_crap"
 	charge = 240
 	maxcharge = 240
@@ -61,7 +60,10 @@
 	desc = "A small power cell designed to power handheld devices. Shielded from EMPs."
 	icon_state = "s_st"
 	matter = list(MAT_STEEL = 400, MAT_GLASS = 60)
-	emp_proof = TRUE
+
+/obj/item/cell/device/empproof/Initialize(mapload)
+	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
+	return ..()
 
 /obj/item/cell/device/empproof/empty
 	charge = 0
@@ -90,7 +92,10 @@
 	desc = "A small power cell designed to power handheld weaponry. Shielded from EMPs."
 	icon_state = "s_hi"
 	matter = list(MAT_STEEL = 400, MAT_GLASS = 60)
-	emp_proof = TRUE
+
+/obj/item/cell/device/weapon/empproof/Initialize(mapload)
+	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
+	return ..()
 
 /obj/item/cell/device/weapon/empproof/empty
 	charge = 0
@@ -106,7 +111,6 @@
 	self_recharge = TRUE
 	charge_amount = 60 //2.5% // CHOMPEdit
 	charge_delay = 75
-	origin_tech = list(TECH_POWER = 5, TECH_ARCANE = 1)
 
 /*
  * Captain's Self-charging Weapon
@@ -144,7 +148,6 @@
 	maxcharge = 5000
 	charge_amount = 130
 	charge_delay = 50
-	origin_tech = list(TECH_POWER = 7, TECH_ENGINEERING = 6, TECH_PHORON = 6, TECH_ARCANE = 2, TECH_PRECURSOR = 2)
 	var/swaps_to = /obj/item/cell/void
 	standard_overlays = FALSE
 
@@ -180,7 +183,6 @@
 	maxcharge = 3600
 	charge_delay = 50
 	swaps_to = null
-	origin_tech = list(TECH_POWER = 8, TECH_ENGINEERING = 6, TECH_PHORON = 6, TECH_ARCANE = 1, TECH_PRECURSOR = 1)
 
 /obj/item/cell/device/weapon/recharge/alien/omni/empty
 	charge = 0
@@ -195,7 +197,6 @@
 	charge = 10000
 	maxcharge = 10000
 	charge_amount = 20
-	origin_tech = list(TECH_POWER = 8)
 
 /obj/item/cell/device/giga/empty
 	charge = 0
@@ -207,7 +208,6 @@
 	charge = 3600
 	maxcharge = 3600
 	charge_amount = 20
-	origin_tech = list(TECH_POWER = 3)
 
 /obj/item/cell/device/super/empty
 	charge = 0

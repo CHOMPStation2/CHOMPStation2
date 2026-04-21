@@ -1,0 +1,4 @@
+author: "Aroliacue"
+delete-after: True
+changes:
+  - bugfix: "Actually makes Xenomorph Hybrids highly resistant to pain."
