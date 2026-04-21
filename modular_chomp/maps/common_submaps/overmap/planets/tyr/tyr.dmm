@@ -10,17 +10,63 @@
 "ac" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/planet/tyr/precursorruins/hallway)
+"ad" = (
+/obj/machinery/light/yellowed,
+/turf/simulated/floor/tiled/old_cargo/gray,
+/area/planet/tyr/ac_mainbase)
 "ae" = (
 /obj/structure/closet,
 /obj/item/gun/energy/kinetic_accelerator,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
+"af" = (
+/obj/machinery/light/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo/gray,
+/area/planet/tyr/ac_mainbase)
 "ag" = (
 /turf/simulated/tyracid,
 /area/planet/tyr/precursorruins/holdcellA)
 "ah" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/planet/tyr/precursorruins/seccore)
+"ai" = (
+/obj/machinery/light/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/holofloor/wood,
+/area/planet/tyr/ac_mainbase)
+"aj" = (
+/mob/living/simple_mob/humanoid/astral_collective/ranged/noodle,
+/obj/machinery/light/yellowed,
+/turf/simulated/floor/tiled/old_cargo/gray,
+/area/planet/tyr/ac_mainbase)
+"ak" = (
+/obj/machinery/light/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_cargo/gray,
+/area/planet/tyr/ac_mainbase)
+"al" = (
+/obj/machinery/light/yellowed{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_cargo/gray,
+/area/planet/tyr/ac_mainbase)
+"am" = (
+/obj/structure/table/steel,
+/obj/machinery/light/yellowed{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_cargo/blue,
+/area/planet/tyr/ac_mainbase)
+"an" = (
+/obj/machinery/light/yellowed{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_cargo/blue,
+/area/planet/tyr/ac_mainbase)
 "ao" = (
 /obj/structure/inflatable/door,
 /turf/simulated/floor/outdoors/desert_planet/sand/tyr,
@@ -78,12 +124,48 @@
 /obj/structure/flora/tyr/flowers,
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
 /area/planet/tyr/caverns)
+"az" = (
+/obj/machinery/light/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/planet/tyr/ac_mainbase)
+"aA" = (
+/obj/machinery/light/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo/beige,
+/area/planet/tyr/ac_mainbase)
 "aB" = (
 /turf/simulated/shuttle/floor/alien,
 /area/planet/tyr/ancient_ruins/one)
+"aC" = (
+/obj/machinery/light/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo/blue,
+/area/planet/tyr/ac_mainbase)
+"aD" = (
+/obj/machinery/light/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/planet/tyr/ac_mainbase)
+"aE" = (
+/obj/machinery/light/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/planet/tyr/ac_mainbase)
 "aF" = (
 /turf/simulated/wall/shull,
 /area/planet/tyr/ship_graveyard)
+"aG" = (
+/obj/machinery/light/yellowed{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/planet/tyr/ac_mainbase)
 "aH" = (
 /obj/structure/bed/chair/bar_stool,
 /turf/simulated/floor/tiled/old_cargo/green,
@@ -110,6 +192,16 @@
 "aL" = (
 /turf/simulated/wall/rshull,
 /area/planet/tyr/ac_mainbase)
+"aM" = (
+/obj/machinery/light/yellowed,
+/turf/simulated/floor/tiled/old_cargo/green,
+/area/planet/tyr/ac_mainbase)
+"aN" = (
+/obj/machinery/light/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo/green,
+/area/planet/tyr/ac_mainbase)
 "aO" = (
 /obj/structure/grille,
 /obj/structure/window/phoronreinforced,
@@ -118,6 +210,22 @@
 	},
 /turf/simulated/floor,
 /area/planet/tyr/ac_mainbase)
+"aP" = (
+/obj/machinery/light/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/planet/tyr/ac_mainbase)
+"aQ" = (
+/obj/machinery/light/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_cargo/green,
+/area/planet/tyr/ac_mainbase)
+"aR" = (
+/obj/machinery/light/yellowed,
+/turf/simulated/floor/tiled/old_cargo/yellow,
+/area/planet/tyr/ac_mainbase)
 "aS" = (
 /obj/effect/anomaly/hallucination{
 	immortal = 1;
@@ -125,6 +233,20 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/nine)
+"aT" = (
+/obj/machinery/light/yellowed,
+/turf/simulated/floor/tiled/old_cargo/purple,
+/area/planet/tyr/ac_mainbase)
+"aU" = (
+/obj/machinery/light/yellowed,
+/turf/simulated/floor/tiled/old_cargo/red,
+/area/planet/tyr/ac_mainbase)
+"aV" = (
+/obj/machinery/light/yellowed{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_cargo/purple,
+/area/planet/tyr/ac_mainbase)
 "aW" = (
 /obj/structure/flora/tyr/flowers,
 /obj/random/tyroutcrop,
@@ -147,10 +269,20 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/ten)
+"bb" = (
+/obj/machinery/light/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_cargo/purple,
+/area/planet/tyr/ac_mainbase)
 "bc" = (
 /mob/living/simple_mob/mechanical/hivebot/tyr/swarm,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eight)
+"bd" = (
+/obj/machinery/light/yellowed,
+/turf/simulated/floor/tiled/purple,
+/area/planet/tyr/ac_mainbase)
 "be" = (
 /obj/structure/closet,
 /obj/item/circuitboard/quantumpad,
@@ -213,6 +345,12 @@
 /obj/structure/table/steel,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eight)
+"bs" = (
+/obj/machinery/light/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo/purple,
+/area/planet/tyr/ac_mainbase)
 "bt" = (
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/three)
@@ -246,6 +384,16 @@
 /obj/item/stack/medical/splint,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eight)
+"bA" = (
+/obj/machinery/conveyor{
+	id = "tyr_refinery";
+	dir = 8
+	},
+/obj/machinery/light/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/purple,
+/area/planet/tyr/ac_mainbase)
 "bB" = (
 /obj/structure/sink/kitchen{
 	dir = 1
@@ -270,6 +418,13 @@
 /obj/item/surgical/scalpel/laser3,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eight)
+"bF" = (
+/obj/structure/prop/tyr_elevator{
+	descendx = 132;
+	descendy = 202
+	},
+/turf/simulated/shuttle/floor/alienplating,
+/area/planet/tyr/precursorruins/truecore)
 "bG" = (
 /obj/structure/table/rack,
 /obj/item/surgical/cautery,
@@ -1583,6 +1738,7 @@
 /area/planet/tyr/ac_mainbase)
 "lC" = (
 /mob/living/simple_mob/humanoid/astral_collective/ranged/lizard,
+/obj/machinery/light/yellowed,
 /turf/simulated/floor/tiled/old_cargo/gray,
 /area/planet/tyr/ac_mainbase)
 "lD" = (
@@ -2114,6 +2270,9 @@
 /area/planet/tyr/ac_mainbase)
 "nn" = (
 /obj/structure/table/glass,
+/obj/machinery/light/yellowed{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/old_cargo/gray,
 /area/planet/tyr/ac_mainbase)
 "no" = (
@@ -2147,12 +2306,18 @@
 /obj/item/circuitboard/industrial_reagent_mixer,
 /obj/item/circuitboard/industrial_reagent_mixer,
 /obj/structure/table/rack,
+/obj/machinery/light/yellowed{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/purple,
 /area/planet/tyr/ac_mainbase)
 "nt" = (
 /obj/item/circuitboard/industrial_reagent_pump,
 /obj/item/circuitboard/industrial_reagent_pump,
 /obj/structure/table/rack,
+/obj/machinery/light/yellowed{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/purple,
 /area/planet/tyr/ac_mainbase)
 "nu" = (
@@ -2160,7 +2325,7 @@
 /turf/simulated/floor/tiled/old_cargo/purple,
 /area/planet/tyr/ac_mainbase)
 "nv" = (
-/obj/effect/anomaly/dust{
+/obj/effect/anomaly/hallucination{
 	immortal = 1;
 	move_chance = 0
 	},
@@ -2208,12 +2373,18 @@
 /obj/item/circuitboard/industrial_reagent_furnace,
 /obj/item/circuitboard/industrial_reagent_furnace,
 /obj/structure/table/rack,
+/obj/machinery/light/yellowed{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/purple,
 /area/planet/tyr/ac_mainbase)
 "nD" = (
 /obj/item/circuitboard/industrial_reagent_vat,
 /obj/item/circuitboard/industrial_reagent_vat,
 /obj/structure/table/rack,
+/obj/machinery/light/yellowed{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/purple,
 /area/planet/tyr/ac_mainbase)
 "nE" = (
@@ -61475,7 +61646,7 @@ nK
 nK
 nK
 nJ
-if
+bd
 aL
 cM
 nC
@@ -61721,7 +61892,7 @@ gz
 gz
 gz
 aL
-kL
+bA
 nS
 nL
 nL
@@ -61748,7 +61919,7 @@ mf
 mf
 mf
 mf
-mf
+aQ
 mf
 mf
 mf
@@ -62011,7 +62182,7 @@ mL
 bV
 bV
 mL
-gK
+ad
 aL
 mf
 mO
@@ -62271,7 +62442,7 @@ mK
 mf
 mf
 aL
-lM
+aD
 eO
 eL
 mP
@@ -62285,7 +62456,7 @@ aL
 aL
 aL
 aL
-lH
+aA
 lX
 lV
 lS
@@ -62293,7 +62464,7 @@ lH
 aL
 aL
 aL
-gK
+af
 gK
 gK
 gK
@@ -62767,7 +62938,7 @@ np
 nc
 np
 nc
-np
+bb
 nc
 np
 nc
@@ -62818,14 +62989,14 @@ aL
 aL
 aL
 aL
+ai
 lu
-lu
 aL
 aL
 aL
 aL
 aL
-gK
+af
 gK
 gK
 gK
@@ -63030,7 +63201,7 @@ nc
 hY
 hY
 nu
-np
+aT
 aL
 gK
 gK
@@ -63038,7 +63209,7 @@ mL
 bV
 bV
 mL
-gK
+al
 mL
 mZ
 mZ
@@ -63059,11 +63230,11 @@ gK
 aL
 lG
 lH
-lG
+an
 lH
 lG
 lH
-lG
+an
 lH
 lG
 aL
@@ -63290,18 +63461,18 @@ np
 nc
 nc
 aL
+aN
 mf
 mf
 mf
 mf
-mf
-mf
+aM
 aL
+aN
 mf
 mf
 mf
-mf
-mf
+aM
 aL
 eT
 eT
@@ -63311,9 +63482,9 @@ aL
 aL
 aL
 aL
+af
 gK
-gK
-gK
+ad
 aL
 lI
 aL
@@ -63325,7 +63496,7 @@ aL
 aL
 lI
 aL
-gK
+af
 gK
 gK
 gK
@@ -63554,7 +63725,7 @@ mL
 bV
 bV
 mL
-gK
+ak
 mL
 bV
 bV
@@ -63794,7 +63965,7 @@ gK
 gK
 gK
 aL
-np
+bs
 nu
 nz
 kE
@@ -63844,20 +64015,20 @@ aL
 gK
 gK
 gK
-gK
+ad
 aL
 aL
 aL
 aL
 aL
+ai
 lu
-lu
 aL
 aL
 aL
 aL
 aL
-gK
+af
 gK
 gK
 gK
@@ -64047,7 +64218,7 @@ aL
 aL
 aL
 aL
-gK
+af
 gK
 gK
 gK
@@ -64578,9 +64749,9 @@ nc
 nz
 nz
 nu
-np
+aT
 aL
-gK
+af
 gK
 mL
 bV
@@ -64829,11 +65000,11 @@ aL
 nc
 np
 nc
-np
+aV
 nc
 np
 nc
-np
+aV
 nc
 np
 nc
@@ -64876,20 +65047,20 @@ aL
 gK
 gK
 gK
-gK
+ad
 aL
 aL
 aL
 aL
 aL
+ai
 lu
-lu
 aL
 aL
 aL
 aL
 aL
-gK
+af
 gK
 gK
 gK
@@ -65072,7 +65243,7 @@ kD
 gz
 gz
 aL
-np
+bs
 np
 of
 oa
@@ -65117,9 +65288,9 @@ lk
 aL
 aL
 aL
+af
 gK
-gK
-gK
+ad
 aL
 aL
 aL
@@ -65131,7 +65302,7 @@ aL
 aL
 aL
 aL
-gK
+af
 gK
 gK
 gK
@@ -65341,6 +65512,7 @@ gK
 gK
 gK
 gK
+ak
 gK
 gK
 gK
@@ -65352,6 +65524,20 @@ gK
 gK
 gK
 gK
+ak
+gK
+gK
+gK
+gK
+gK
+gK
+ak
+gK
+gK
+gK
+gK
+gK
+ak
 gK
 gK
 gK
@@ -65359,34 +65545,19 @@ gK
 gK
 gK
 gK
+ak
+gK
+gK
+gK
+gK
+ak
 gK
 gK
 gK
 gK
 gK
 gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
+ak
 gK
 gK
 gK
@@ -65908,23 +66079,23 @@ gK
 gK
 gK
 gK
-gK
+ad
 aL
 aL
 aL
 aL
 aL
+ai
 lu
-lu
 aL
 aL
 aL
 aL
 aL
+af
 gK
 gK
-gK
-gK
+ad
 aL
 gP
 hx
@@ -66111,6 +66282,30 @@ lk
 aL
 aL
 aL
+af
+gK
+gK
+gK
+gK
+gK
+gK
+al
+gK
+gK
+gK
+gK
+gK
+gK
+gK
+gK
+al
+gK
+gK
+gK
+gK
+gK
+gK
+al
 gK
 gK
 gK
@@ -66122,6 +66317,13 @@ gK
 gK
 gK
 gK
+al
+gK
+gK
+gK
+gK
+gK
+al
 gK
 gK
 gK
@@ -66129,38 +66331,7 @@ gK
 gK
 gK
 gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
-gK
+al
 gK
 gK
 gK
@@ -66421,7 +66592,7 @@ aL
 aL
 aL
 aL
-gK
+af
 gK
 gK
 gK
@@ -66634,7 +66805,7 @@ gK
 nM
 lH
 np
-np
+bb
 np
 lH
 np
@@ -66660,11 +66831,11 @@ gK
 gK
 aO
 lF
-lF
+aE
 mz
 aO
 lF
-lF
+aE
 mz
 aL
 mt
@@ -66675,7 +66846,7 @@ lM
 lG
 lL
 lO
-lM
+az
 lO
 lL
 aL
@@ -66900,7 +67071,7 @@ nE
 np
 gI
 nv
-gI
+aU
 aL
 nc
 gK
@@ -66909,7 +67080,7 @@ gK
 gK
 nc
 aL
-lF
+aP
 lF
 lF
 mB
@@ -66925,7 +67096,7 @@ lF
 lF
 lF
 aL
-lM
+aD
 lG
 mi
 lG
@@ -66940,20 +67111,20 @@ aL
 gK
 gK
 gK
-gK
+ad
 aL
 aL
 aL
 aL
 aL
+ai
 lu
-lu
 aL
 aL
 aL
 aL
 aL
-gK
+af
 gK
 gK
 gK
@@ -67165,7 +67336,7 @@ gK
 gK
 gK
 gK
-nc
+aR
 aL
 lF
 lF
@@ -67332,7 +67503,7 @@ ql
 ql
 ql
 ql
-qj
+bF
 ac
 ac
 ac
@@ -67406,7 +67577,7 @@ aL
 aL
 aL
 aL
-np
+bs
 lH
 np
 lH
@@ -67429,7 +67600,7 @@ db
 db
 db
 aL
-gK
+af
 gK
 gK
 aL
@@ -67444,7 +67615,7 @@ aL
 mi
 aL
 aL
-lG
+aC
 lN
 lG
 lN
@@ -67453,7 +67624,7 @@ lM
 lG
 lM
 aL
-gK
+af
 gK
 gK
 gK
@@ -67941,18 +68112,18 @@ nl
 mB
 ne
 aL
-lF
+aP
 lF
 lF
 mB
 gK
 gK
 gK
+al
 gK
 gK
 gK
-gK
-gK
+al
 mw
 gK
 gK
@@ -67972,20 +68143,20 @@ lk
 gK
 gK
 gK
-lD
+aj
 aL
 aL
 aL
 aL
 aL
+ai
 lu
-lu
 aL
 aL
 aL
 aL
 aL
-gK
+af
 gK
 gK
 gK
@@ -68180,7 +68351,7 @@ gz
 gz
 gz
 aL
-np
+bs
 lH
 np
 lH
@@ -68215,7 +68386,7 @@ mH
 mB
 mA
 aL
-lM
+aD
 lG
 lM
 lG
@@ -68706,7 +68877,7 @@ nE
 np
 gI
 nx
-gI
+aU
 aL
 ng
 ng
@@ -68743,7 +68914,7 @@ lM
 lG
 lM
 aL
-gK
+af
 gK
 gK
 gK
@@ -68956,7 +69127,7 @@ gz
 aL
 lH
 np
-np
+aV
 np
 lH
 np
@@ -68978,27 +69149,27 @@ lF
 lF
 aL
 mz
-lF
+aG
 lF
 aO
 lF
-lF
+aG
 mz
 aO
 lF
-lF
+aG
 mz
 aL
 mc
 mr
 mk
-lG
+an
 lM
 lG
 lM
 lG
 lM
-lO
+am
 lL
 aL
 gK

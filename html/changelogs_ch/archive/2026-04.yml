@@ -169,3 +169,12 @@
 2026-04-18:
   CHOMPStation2StaffMirrorBot:
   - bugfix: Fixed throwing items/mobs at yourself not triggering spont vore
+2026-04-19:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: lightweight and heavyweight can no longer be stacked
+  Diana:
+  - qol: Leash stun is only 10 seconds instead of 40.
+  - bugfix: Fixes a few runtimes
+  FluffMedic:
+  - bugfix: The Tyr AC base being lightless and the problematic anomaly upon it was
+      swapped
