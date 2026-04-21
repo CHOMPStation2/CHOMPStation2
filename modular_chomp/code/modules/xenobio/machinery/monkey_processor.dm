@@ -9,7 +9,6 @@
 /obj/item/circuitboard/processor/monkey
 	name = T_BOARD("monkey processor")
 	build_path = /obj/machinery/processor/monkey
-	origin_tech = list(TECH_DATA = 2, TECH_BIO = 2)
 
 /obj/machinery/processor/monkey/begin_processing()
 	if(processing)

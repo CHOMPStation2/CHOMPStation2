@@ -2,7 +2,6 @@
 	name = MAT_WISP
 	icon_colour = "#F13C00"
 	stack_type = /obj/item/stack/material/wisp
-	stack_origin_tech = list(TECH_MATERIAL = 3, TECH_BIO = 4)
 	icon_base = "solid"
 	icon_reinf = "reinf_mesh"
 	integrity = 30
@@ -30,7 +29,6 @@
 	name = MAT_FROSCALE
 	icon_colour = "#0000CC"
 	stack_type = /obj/item/stack/material/frostscale
-	stack_origin_tech = list(TECH_MATERIAL = 3, TECH_BIO = 4)
 	icon_base = "solid"
 	icon_reinf = "reinf_mesh"
 	integrity = 250
@@ -58,7 +56,6 @@
 	name = MAT_CRYSCALE
 	icon_colour = "#006633"
 	stack_type = /obj/item/stack/material/crystalscale
-	stack_origin_tech = list(TECH_MATERIAL = 3, TECH_BIO = 4)
 	icon_base = "solid"
 	icon_reinf = "reinf_mesh"
 	integrity = 250
@@ -85,7 +82,6 @@
 	name = MAT_DREAMSCALE
 	icon_colour = "#006633"
 	stack_type = /obj/item/stack/material/dreamscale
-	stack_origin_tech = list(TECH_MATERIAL = 3, TECH_BIO = 4)
 	icon_base = "solid"
 	icon_reinf = "reinf_mesh"
 	integrity = 200
@@ -110,7 +106,6 @@
 	name = MAT_SHELLCHITIN
 	icon_colour = "#006633"
 	stack_type = /obj/item/stack/material/dreamscale
-	stack_origin_tech = list(TECH_MATERIAL = 3, TECH_BIO = 4)
 	icon_base = "solid"
 	icon_reinf = "reinf_mesh"
 	integrity = 250
@@ -270,7 +265,7 @@
 			H.custom_pain("You feel a sharp pain in your hands!",1)
 	..()
 
-/obj/item/clothing/gloves/toxinregen/dropped(mob/user)
+/obj/item/clothing/gloves/toxinregen/dropped(mob/user, equipping, slot)
 	var/mob/living/carbon/human/H = wearer?.resolve()
 	if(H)
 		if(H.can_feel_pain())

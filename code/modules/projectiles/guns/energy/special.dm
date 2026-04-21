@@ -7,7 +7,6 @@
 	item_state = "ionrifle"
 	icon_expected_width = 64 // CHOMPEdit: Gun Sprites
 	wielded_item_state = "ionrifle-wielded"
-	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 4)
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	slot_flags = SLOT_BACK
@@ -35,7 +34,6 @@
 	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "decloner"
 	item_state = "decloner"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 4, TECH_POWER = 3)
 	projectile_type = /obj/item/projectile/energy/declone
 
 /obj/item/gun/energy/floragun
@@ -46,7 +44,6 @@
 	icon_state = "floramut100"
 	item_state = "floramut"
 	projectile_type = /obj/item/projectile/energy/floramut
-	origin_tech = list(TECH_MATERIAL = 2, TECH_BIO = 3, TECH_POWER = 3)
 	modifystate = "floramut"
 	cell_type = /obj/item/cell/device/weapon/recharge
 	battery_lock = 1
@@ -174,7 +171,6 @@
 	icon = 'icons/obj/gun.dmi'
 	icon_state = "toxgun"
 	w_class = ITEMSIZE_NORMAL
-	origin_tech = list(TECH_COMBAT = 5, TECH_PHORON = 4)
 	projectile_type = /obj/item/projectile/energy/phoron
 
 /* Staves */
@@ -189,7 +185,6 @@
 	w_class = ITEMSIZE_LARGE
 	charge_cost = 480
 	projectile_type = /obj/item/projectile/change
-	origin_tech = null
 	cell_type = /obj/item/cell/device/weapon/recharge
 	battery_lock = 1
 	charge_meter = 0
@@ -246,7 +241,6 @@
 	battery_lock = 1
 	accuracy = 75 // Suppressive weapons don't work too well if there's no risk of being hit.
 	burst_delay = 1 // Burst faster than average.
-	origin_tech = list(TECH_COMBAT = 6, TECH_MAGNET = 6, TECH_ILLEGAL = 6)
 
 	firemodes = list(
 		list(mode_name="single shot", burst = 1, burst_accuracy = list(75), dispersion = list(0), charge_cost = 24),

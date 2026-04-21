@@ -9,8 +9,6 @@
 	var/cooldownmin = 0
 	var/cooldownmax = 0
 
-	origin_tech = list(TECH_BIO = 5)
-
 /obj/item/organ/internal/malignant/Initialize(mapload, var/internal, var/force_location = null, var/forcetag = null)
 	organ_tag = "[initial(organ_tag)]_[rand(1,9999)]"
 	if(forcetag)
@@ -607,8 +605,6 @@
 	var/prepared = FALSE
 	var/chem_target = null
 	supply_conversion_value = 0
-
-	origin_tech = list(TECH_BIO = 3)
 
 /obj/item/organ/internal/malignant/engineered/lattice/Initialize(mapload, var/internal, var/force_location = null, var/forcetag = null)
 	growth_trigger = rand(150,200)

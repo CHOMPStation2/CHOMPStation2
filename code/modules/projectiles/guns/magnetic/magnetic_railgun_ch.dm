@@ -9,7 +9,7 @@
 	var/is64x32_override = FALSE
 	var/is_picked_up = FALSE
 
-/obj/item/gun/magnetic/railgun/equipped()
+/obj/item/gun/magnetic/railgun/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
@@ -19,7 +19,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/magnetic/railgun/dropped(mob/living/user)
+/obj/item/gun/magnetic/railgun/dropped(mob/user, equipping, slot)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()

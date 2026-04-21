@@ -23,7 +23,6 @@
 	name = T_BOARD("food replicator")
 	build_path = /obj/machinery/food_replicator
 	board_type = new /datum/frame/frame_types/machine
-	origin_tech = list(TECH_ENGINEERING = 2, TECH_BIO = 2)
 	req_components = list(
 		/obj/item/stock_parts/capacitor = 3,
 		/obj/item/stock_parts/matter_bin = 2,

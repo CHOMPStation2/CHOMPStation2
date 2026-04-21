@@ -25,17 +25,17 @@
 		transform = transform.Turn(-45)
 	transform = transform.Translate(-16,0)
 
-/obj/item/gun/projectile/automatic/serdy/equipped()
+/obj/item/gun/projectile/automatic/serdy/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/automatic/serdy/pickup()
+/obj/item/gun/projectile/automatic/serdy/pickup(mob/user)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/automatic/serdy/dropped()
+/obj/item/gun/projectile/automatic/serdy/dropped(mob/user, equipping, slot)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()
@@ -1380,17 +1380,17 @@
 	if(is64x32)
 		update_transform()
 
-/obj/item/gun/projectile/shotgun/pump/equipped()
+/obj/item/gun/projectile/shotgun/pump/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/pump/pickup()
+/obj/item/gun/projectile/shotgun/pump/pickup(mob/user)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/pump/dropped()
+/obj/item/gun/projectile/shotgun/pump/dropped(mob/user, equipping, slot)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()
@@ -1480,17 +1480,17 @@
 			transform = transform.Turn(-45)
 		transform = transform.Translate(-16,0)
 
-/obj/item/gun/projectile/shotgun/doublebarrel/equipped()
+/obj/item/gun/projectile/shotgun/doublebarrel/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/doublebarrel/pickup()
+/obj/item/gun/projectile/shotgun/doublebarrel/pickup(mob/user)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/doublebarrel/dropped()
+/obj/item/gun/projectile/shotgun/doublebarrel/dropped(mob/user, equipping, slot)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()

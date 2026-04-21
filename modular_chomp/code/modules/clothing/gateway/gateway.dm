@@ -75,7 +75,7 @@
 	siemens_coefficient = 0
 	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 0, bio = 0, rad = 0)
 
-/obj/item/clothing/gloves/stamina/equipped(mob/user)
+/obj/item/clothing/gloves/stamina/equipped(mob/user, slot)
 	..()
 	var/mob/living/carbon/human/H = wearer?.resolve()
 	if(H && H.gloves == src)
@@ -83,7 +83,7 @@
 			to_chat(H, span_danger("You feel strange as hunger vanishes!"))
 			H.custom_pain("Your hands feel strange!",1)
 
-/obj/item/clothing/gloves/stamina/dropped(mob/user)
+/obj/item/clothing/gloves/stamina/dropped(mob/user, equipping, slot)
 	var/mob/living/carbon/human/H = wearer?.resolve()
 	if(H)
 		if(H.can_feel_pain())
@@ -120,21 +120,21 @@
 	var/flavor_activate = null // Ditto, for but activating.
 	var/brainloss_cost = 0
 
-/obj/item/clothing/suit/armor/buffvest/proc/activate_ability(var/mob/living/wearer)
+/obj/item/clothing/suit/armor/buffvest/proc/activate_ability(mob/living/wearer)
 	cooldown = world.time + cooldown_duration
 	to_chat(wearer, flavor_activate)
 	to_chat(wearer, span_danger("The inside of your head hurts..."))
 	wearer.adjustBrainLoss(brainloss_cost)
 	wearer.add_modifier(/datum/modifier/aura/candy_blue, 30 SECONDS)
 
-/obj/item/clothing/suit/armor/buffvest/equipped(var/mob/living/carbon/human/H)
+/obj/item/clothing/suit/armor/buffvest/equipped(mob/living/carbon/human/H, slot)
 	..()
 	if(istype(H) && H.head == src && H.is_sentient())
 		START_PROCESSING(SSobj, src)
 		if(flavor_equip)
 			to_chat(H, span_info(flavor_equip))
 
-/obj/item/clothing/suit/armor/buffvest/dropped(var/mob/living/carbon/human/H)
+/obj/item/clothing/suit/armor/buffvest/dropped(mob/living/carbon/human/H, equipping, slot)
 	..()
 	STOP_PROCESSING(SSobj, src)
 	if(H.is_sentient())

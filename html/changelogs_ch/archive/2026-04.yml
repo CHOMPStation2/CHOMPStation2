@@ -115,3 +115,66 @@
   - bugfix: Guns with nonstandard firemode selection properly set firemode properties
       during init
   - spellcheck: tape roll lathe entry
+2026-04-13:
+  Diana, Kash.:
+  - qol: The fryer now tells you how much oil is remaining in it.
+  - qol: The fryer now alerts you if the fryer is underfilled or overfilled on oil
+  - qol: Tankers can now be attached to the fryer to fill it.
+  - bugfix: Fryer works properly and adds oil to food
+  - bugfix: Fryer and trays no longer show 'phantom items' overlay.
+  - bugfix: You can now insert oil into the fryer with any reagent container.
+  - code_imp: Recipes are now a global list instead of a per-item list
+  FluffMedic:
+  - balance: removes material weapon dulling as a base things (can still be flicked
+      on)
+  Will:
+  - bugfix: Drawing blood with syringes and IV stands works properly again.
+  zeskorion:
+  - rscadd: shapeshifter trait
+2026-04-14:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: New Contractor Title for Cargo Technician - Logistics Contractor.
+  - rscadd: New Contractor Title for Shaft Miner - Mining Contractor.
+  - rscadd: New Contractor Title for Scientist - Research Contractor.
+  - code_imp: finishes migrating the admin verbs to the subsystem
+  - qol: chat highlights can be toggled
+  - refactor: axes the old job controller and old master controller
+  Diana:
+  - bugfix: Clicking an inventory slot with an item now acts as if you were clicking
+      the item in the slot.
+  - bugfix: Ctrl-clicking doors no longer tries to pull them.
+  - bugfix: Wishgranter properly gives laser eyes.
+  - bugfix: Wizard mutate spell properly gives laser eyes.
+  - rscadd: Objects can now take damage. The most prevalent source of this is FIRE!
+      Objects can now catch on fire and melt away!
+  - qol: Objects will make sounds when they take damage now.
+  - qol: Examining objects will inform you of their various properties. Examining
+      a fireproof, bombproof, or flammable item will inform you of such.
+  - code_imp: Items can now be labeled as ABSTRACT. This means the game will ignore
+      them in certain situations.
+  - code_imp: Instead of things having their own specialty /deconstruct proc, they
+      all now share a /atom_deconstruct proc
+2026-04-15:
+  Diana:
+  - code_imp: Removed origin_tech
+2026-04-16:
+  Will:
+  - rscadd: Station announcer voice now supports customization without extensive editing
+2026-04-17:
+  Diana:
+  - bugfix: Mag/rigboots will no longer eat boots.
+  - bugfix: Gloves will no longer delete whatever it's put over.
+  - bugfix: Changeling armblades properly pass their message, now.
+  - code_imp: Gets rid of some X as mob / X as obj
+2026-04-18:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed throwing items/mobs at yourself not triggering spont vore
+2026-04-19:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: lightweight and heavyweight can no longer be stacked
+  Diana:
+  - qol: Leash stun is only 10 seconds instead of 40.
+  - bugfix: Fixes a few runtimes
+  FluffMedic:
+  - bugfix: The Tyr AC base being lightless and the problematic anomaly upon it was
+      swapped
