@@ -66,6 +66,12 @@
 	update_icons() //VOREstation edit - overlay runtime fix
 	default_language = GLOB.all_languages[LANGUAGE_GALCOM] //VOREstation edit - runtime fix
 
+/mob/living/bot/Destroy()
+	. = ..()
+	ignore_list.Cut()
+	patrol_path.Cut()
+	target_path.Cut()
+
 /mob/living/bot/Life()
 	..()
 	if(health <= 0)
