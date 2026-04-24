@@ -18,22 +18,13 @@
 
 	circuit = /obj/item/circuitboard/telecomms/exonet_node
 
-<<<<<<< HEAD
-	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
-	var/noisy = TRUE // CHOMPStation Add: Hummy noises, this starts on
-=======
 	var/datum/looping_sound/tcomms/soundloop
 	var/noisy = TRUE
 
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 // Proc: New()
 // Parameters: None
 // Description: Adds components to the machine for deconstruction.
 /obj/machinery/exonet_node/Initialize(mapload)
-<<<<<<< HEAD
-	// CHOMPAdd: Exonet Machinery humming
-=======
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
 		if(prob(40))
@@ -45,25 +36,15 @@
 		else
 			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
 			soundloop.mid_length = 30
-<<<<<<< HEAD
-	soundloop.start() // CHOMPStation Edit: This starts on
-	// CHOMPAdd End
-=======
 	soundloop.start()
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	. = ..()
 	default_apply_parts()
 	if(mapload)
 		desc = "This machine is one of many, many nodes inside [using_map.starsys_name]'s section of the Exonet, connecting the [using_map.station_short] to the rest of the system, at least \
 		electronically."
 
-<<<<<<< HEAD
-/obj/machinery/exonet_node/Destroy() // CHOMPAdd: Just in case.
-	QDEL_NULL(soundloop) // CHOMPAdd: Exonet noises
-=======
 /obj/machinery/exonet_node/Destroy()
 	QDEL_NULL(soundloop)
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	return ..()
 
 // Proc: update_icon()
@@ -88,32 +69,19 @@
 		if(stat & (BROKEN|NOPOWER|EMPED))
 			on = 0
 			update_idle_power_usage(0)
-<<<<<<< HEAD
-			soundloop.stop() // CHOMPStation Add: Hummy noises
-			noisy = FALSE // CHOMPStation Add: Hummy noises
-=======
 			soundloop.stop()
 			noisy = FALSE
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 		else
 			on = 1
 			update_idle_power_usage(2500)
 	else
 		on = 0
 		update_idle_power_usage(0)
-<<<<<<< HEAD
-		soundloop.stop() // CHOMPStation Add: Hummy noises
-		noisy = FALSE // CHOMPStation Add: Hummy noises
-	if(!noisy && on) // CHOMPStation Add: Hummy noises, safety in case it was already on
-		soundloop.start() // CHOMPStation Add: Hummy noises
-		noisy = TRUE // CHOMPStation Add: Hummy noises
-=======
 		soundloop.stop()
 		noisy = FALSE
 	if(!noisy && on)
 		soundloop.start()
 		noisy = TRUE
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	update_icon()
 
 // Proc: emp_act(severity, recursive)

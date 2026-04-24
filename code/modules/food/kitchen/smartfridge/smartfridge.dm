@@ -24,13 +24,8 @@
 	var/persistent = null // Path of persistence datum used to track contents
 	circuit = /obj/item/circuitboard/smartfridge //This one is meant to be uncraftable, however.
 
-<<<<<<< HEAD
-	var/datum/looping_sound/fridge/soundloop // CHOMPEdit: Fridges hum!
-	var/playing_sound = FALSE // CHOMPEdit: Fridges hum!
-=======
 	var/datum/looping_sound/fridge/soundloop
 	var/playing_sound = FALSE
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 
 /obj/machinery/smartfridge/secure
 	is_secure = 1
@@ -44,11 +39,7 @@
 	else
 		set_wires(new /datum/wires/smartfridge(src))
 
-<<<<<<< HEAD
-	soundloop = new(list(src), FALSE) // CHOMPEdit: Fridge hum!
-=======
 	soundloop = new(list(src), FALSE)
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	update_icon()
 	default_apply_parts()
 
@@ -59,11 +50,7 @@
 	wires = null
 	if(persistent)
 		SSpersistence.forget_value(src, persistent)
-<<<<<<< HEAD
-	QDEL_NULL(soundloop) // CHOMPEdit: Fridge hum!
-=======
 	QDEL_NULL(soundloop)
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	return ..()
 
 /obj/machinery/smartfridge/proc/accept_check(obj/item/O)
@@ -71,17 +58,10 @@
 
 /obj/machinery/smartfridge/process()
 	if(stat & (BROKEN|NOPOWER))
-<<<<<<< HEAD
-		soundloop.stop()  // CHOMPEdit: Fridges don't hum while they lack power.
-		playing_sound = FALSE  // CHOMPEdit: Fridges don't hum while they lack power.
-		return
-	if(!playing_sound && !stat) // CHOMPEdit: Fridges hum while they have power.
-=======
 		soundloop.stop()
 		playing_sound = FALSE
 		return
 	if(!playing_sound && !stat)
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 		soundloop.start()
 		playing_sound = TRUE
 	if(src.seconds_electrified > 0)
@@ -94,24 +74,12 @@
 	..()
 	if(old_stat != stat)
 		update_icon()
-<<<<<<< HEAD
-		// CHOMPEdit Start: Fridge hum
-=======
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 		if(stat & (NOPOWER | BROKEN))
 			soundloop.stop()
 			playing_sound = FALSE
 		else
 			soundloop.start()
 			playing_sound = TRUE
-<<<<<<< HEAD
-		// CHOMPEdit End
-=======
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
-
-/obj/machinery/smartfridge/update_icon()
-	cut_overlays()
-	if(panel_open)
 		add_overlay("[icon_base]-panel")
 
 	if(stat & (BROKEN))

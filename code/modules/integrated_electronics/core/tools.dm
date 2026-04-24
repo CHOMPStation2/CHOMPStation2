@@ -263,15 +263,9 @@
 		/obj/item/tool/crowbar,
 		/obj/item/tool/screwdriver,
 		/obj/item/multitool,
-<<<<<<< HEAD
-		/obj/item/integrated_electronics/wirer, //CHOMP Edit,
-		/obj/item/integrated_electronics/debugger, //CHOMP Edit,
-		/obj/item/integrated_electronics/detailer, //CHOMP Edit,
-=======
 		/obj/item/integrated_electronics/wirer,
 		/obj/item/integrated_electronics/debugger,
 		/obj/item/integrated_electronics/detailer,
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 		)
 
 //Emp'ing this one bag causes a recursion loop of over 700 emp_act's,
@@ -298,15 +292,9 @@
 	new /obj/item/multitool(src)
 	new /obj/item/tool/screwdriver(src)
 	new /obj/item/tool/crowbar(src)
-<<<<<<< HEAD
-	new /obj/item/integrated_electronics/wirer(src) //CHOMPEdit
-	new /obj/item/integrated_electronics/debugger(src) //CHOMPEdit
-	new /obj/item/integrated_electronics/detailer(src) //CHOMPEdit
-=======
 	new /obj/item/integrated_electronics/wirer(src)
 	new /obj/item/integrated_electronics/debugger(src)
 	new /obj/item/integrated_electronics/detailer(src)
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	make_exact_fit()
 	. = ..()
 
@@ -331,11 +319,7 @@
 	new /obj/item/electronic_assembly/drone(src)
 	new /obj/item/integrated_electronics/wirer(src)
 	new /obj/item/integrated_electronics/debugger(src)
-<<<<<<< HEAD
-	new /obj/item/integrated_electronics/detailer(src) //CHOMPEdit
-=======
 	new /obj/item/integrated_electronics/detailer(src)
->>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	new /obj/item/tool/crowbar(src)
 	make_exact_fit()
 	. = ..()
