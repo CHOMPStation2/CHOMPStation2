@@ -34,7 +34,7 @@ GLOBAL_LIST_EMPTY(event_viruses) // so that event viruses are kept around for ad
 		virus_msg = ANNOUNCER_MSG_BIOHAZARD_FIVE
 
 	if (severity == EVENT_LEVEL_MAJOR || prob(60))
-		command_announcement.Announce("Confirmed outbreak of level [level] biohazard aboard \the [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert", new_sound = virus_msg)
+		command_announcement.Announce("Confirmed outbreak of level [level] biohazard aboard \the [station_name()]. All personnel must contain the outbreak.", "Viral Outbreak", new_sound = virus_msg) // Chomp edit: Changed "Biohazard Alert" to "Viral Outbreak" and also changed level level 5 to level 7. Lower = More urgent.
 
 /datum/event/viral_infection/start()
 	if(!viruses.len) return
