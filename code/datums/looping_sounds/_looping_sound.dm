@@ -16,7 +16,11 @@
 	direct			(bool)					If true plays directly to provided atoms instead of from them
 	opacity_check	(bool)					If true, things behind walls/opaque things won't hear the sounds.
 	pref_check		(type)					If set to a /datum/client_preference type, will check if the hearer has that preference active before playing it to them.
+<<<<<<< HEAD
 	volume_chan		(type)					If set to a specific volume channel via the incoming argument, we tell the playsound proc to modulate volume based on that channel //CHOMPedit
+=======
+	volume_chan		(type)					If set to a specific volume channel via the incoming argument, we tell the playsound proc to modulate volume based on that channel
+>>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	exclusive		(bool)					If true, only one of this sound is allowed to play. Relies on if started is true or not. If true, it will not start another loop until it is false.
 */
 /datum/looping_sound
@@ -35,7 +39,11 @@
 	var/opacity_check
 	var/pref_check
 	var/exclusive
+<<<<<<< HEAD
 	var/falloff // CHOMPEdit: Add Falloff
+=======
+	var/falloff
+>>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	var/volume_chan
 
 	var/timerid
@@ -59,8 +67,13 @@
 	return ..()
 
 /datum/looping_sound/proc/start(atom/add_thing, skip_start_sound = FALSE)
+<<<<<<< HEAD
 	if(QDELETED(src)) //Chomp runtime
 		return //Chomp runtime
+=======
+	if(QDELETED(src))
+		return
+>>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	if(add_thing)
 		output_atoms |= add_thing
 	if(timerid)
@@ -86,7 +99,11 @@
 	started = FALSE
 
 /datum/looping_sound/proc/sound_loop(starttime)
+<<<<<<< HEAD
 	if(QDELETED(src) || (max_loops && world.time >= starttime + mid_length * max_loops)) //ChompEDIT - runtime
+=======
+	if(QDELETED(src) || (max_loops && world.time >= starttime + mid_length * max_loops))
+>>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 		stop()
 		return
 	if(!chance || prob(chance))
@@ -102,7 +119,11 @@
 	if(direct)
 		S.channel = SSsounds.random_available_channel()
 		S.volume = volume
+<<<<<<< HEAD
 	for(var/i in 1 to atoms_cache?.len) //Chomp - runtime
+=======
+	for(var/i in 1 to atoms_cache?.len)
+>>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 		var/atom/thing = atoms_cache[i]
 		if(direct)
 			if(ismob(thing))
@@ -111,7 +132,11 @@
 					continue
 			SEND_SOUND(thing, S)
 		else
+<<<<<<< HEAD
 			playsound(thing, S, volume, vary, extra_range, falloff = falloff, ignore_walls = !opacity_check, preference = pref_check, volume_channel = volume_chan) // CHOMPEdit - Weather volume channel CHOMPEdit again: falloff
+=======
+			playsound(thing, S, volume, vary, extra_range, falloff = falloff, ignore_walls = !opacity_check, preference = pref_check, volume_channel = volume_chan)
+>>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 
 /datum/looping_sound/proc/get_sound(starttime, _mid_sounds)
 	if(!_mid_sounds)

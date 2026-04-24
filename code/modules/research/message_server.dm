@@ -69,11 +69,18 @@
 			//Messages having theese tokens will be rejected by server. Case sensitive
 	var/spamfilter_limit = MESSAGE_SERVER_DEFAULT_SPAM_LIMIT	//Maximal amount of tokens
 
+<<<<<<< HEAD
 	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
 	var/noisy = FALSE  // CHOMPStation Add: Hummy noises
 
 /obj/machinery/message_server/Initialize(mapload)
 	// CHOMPAdd: PDA Messaging Server humming
+=======
+	var/datum/looping_sound/tcomms/soundloop
+	var/noisy = FALSE
+
+/obj/machinery/message_server/Initialize(mapload)
+>>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
 		if(prob(40))
@@ -85,7 +92,10 @@
 		else
 			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
 			soundloop.mid_length = 30
+<<<<<<< HEAD
 	// CHOMPAdd End
+=======
+>>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	. = ..()
 	GLOB.message_servers += src
 	decryptkey = GenerateKey()
@@ -93,7 +103,11 @@
 
 /obj/machinery/message_server/Destroy()
 	GLOB.message_servers -= src
+<<<<<<< HEAD
 	QDEL_NULL(soundloop) // CHOMPStation Add: Hummy noises
+=======
+	QDEL_NULL(soundloop)
+>>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	return ..()
 
 /obj/machinery/message_server/examine(mob/user, distance, infix, suffix)
@@ -113,12 +127,21 @@
 	//	decryptkey = generateKey()
 	if(active && (stat & (BROKEN|NOPOWER)))
 		active = 0
+<<<<<<< HEAD
 		soundloop.stop() // CHOMPStation Add: Hummy noises
 		noisy = FALSE // CHOMPStation Add: Hummy noises
 		return
 	if(!noisy && active) // CHOMPStation Add: Hummy noises
 		soundloop.start() // CHOMPStation Add: Hummy noises
 		noisy = TRUE // CHOMPStation Add: Hummy noises
+=======
+		soundloop.stop()
+		noisy = FALSE
+		return
+	if(!noisy && active)
+		soundloop.start()
+		noisy = TRUE
+>>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 	update_icon()
 	return
 
@@ -388,7 +411,11 @@ GLOBAL_DATUM(blackbox, /obj/machinery/blackbox_recorder)
 		query_insert.Execute()
 		qdel(query_insert)
 
+<<<<<<< HEAD
 // Sanitize inputs to avoid SQL injection attacks //CHOMPEdit NOTE: This is not secure. Basic filters like this are pretty easy to bypass. Use the format for arguments used in the above.
+=======
+// Sanitize inputs to avoid SQL injection attacks. This is not secure. Basic filters like this are pretty easy to bypass. Use the format for arguments used in the above.
+>>>>>>> a5739a5a99 (Upports fridge, tcomm, and shield_gen soundloops (#19405))
 /proc/sql_sanitize_text(var/text)
 	text = replacetext(text, "'", "''")
 	text = replacetext(text, ";", "")
