@@ -239,10 +239,6 @@
 	flush()
 	return CLICK_ACTION_SUCCESS
 
-<<<<<<< HEAD
-//obj/structure/toilet/prison/attack_hand(mob/living/user) //CHOMPEdit
-//	return
-=======
 /obj/structure/toilet/proc/flush()
 	refilling = TRUE
 	playsound(src, 'sound/vore/death7.ogg', 50, 1) //Got lazy about getting new sound files. Have a sick remix lmao.
@@ -269,7 +265,6 @@
 
 	begin_flush(bowl_contents[1], bowl_contents)
 	return
->>>>>>> f8fc337da3 (Toilet Overhaul (#19370))
 
 ///Timer proc that takes the object given and begins the flush process. Makes the object spin.
 /obj/structure/toilet/proc/begin_flush(atom/movable/flushed, list/pick_list)
