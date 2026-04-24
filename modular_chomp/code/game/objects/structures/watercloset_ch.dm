@@ -1,3 +1,14 @@
+/obj/structure/toilet/item/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/toilet/item/LateInitialize()
+	if(istype(loc, /mob/living)) return
+	var/obj/item/I
+	for(I in loc)
+		if(I.density || I.anchored || I == src) continue
+		I.forceMove(src)
+
 /obj/structure/biowaste_tank
 	name = "Bluespace Bio-Compostor Terminal"
 	icon = 'icons/obj/survival_pod_comp.dmi'
