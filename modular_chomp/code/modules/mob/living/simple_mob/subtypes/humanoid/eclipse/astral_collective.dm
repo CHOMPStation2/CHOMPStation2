@@ -1,7 +1,7 @@
 /mob/living/simple_mob/humanoid/astral_collective
 	name = "Astral Collective Unit"
 	tt_desc = "E Homo sapiens"
-	desc = "You shouldn't be seeing this."
+	desc = "An armored hostile."
 	icon = 'modular_chomp/icons/mob/eclipse.dmi'
 	icon_state = "medi"
 	icon_living = "medi"
@@ -22,13 +22,13 @@
 	harm_intent_damage = 0
 	melee_damage_lower = 25
 	melee_damage_upper = 25
-	melee_attack_delay = 0.75 SECONDS
+	melee_attack_delay = 1.25 SECONDS
 	evasion = 20
 	attack_sharp = 1
 	attack_edge = 1
 	attacktext = list("slashed", "stabbed")
 	projectile_dispersion = 0
-	armor = list(melee = 30, bullet = 30, laser = 30, energy = 60, bomb = 20, bio = 100, rad = 100)	// Simple mob immunuties plus minour armor
+	armor = list(melee = 20, bullet = 20, laser = 20, energy = 60, bomb = 20, bio = 100, rad = 100)	// Simple mob immunuties plus minour armor
 
 	can_be_drop_prey = FALSE
 	can_be_drop_pred = TRUE
@@ -45,6 +45,8 @@
 	max_n2 = 0
 	minbodytemp = 0
 	heat_damage_per_tick = 0
+
+	movement_cooldown = 3
 
 	projectilesound = 'sound/weapons/Gunshot_light.ogg'
 
@@ -67,6 +69,7 @@
 	vore_pounce_maxhealth = 100
 	vore_standing_too = TRUE
 	unacidable = TRUE
+	devourable = FALSE
 
 	movement_cooldown = 0
 
@@ -120,7 +123,7 @@
 
 /mob/living/simple_mob/humanoid/astral_collective/Initialize(mapload)
 	. = ..()
-	expirmental = rand(1,7)
+	expirmental = rand(1,4)
 	expirmentresult()
 
 /datum/modifier/astralcollect_swift
@@ -138,11 +141,8 @@
 	holder.adjustCloneLoss(-8)
 
 /datum/modifier/astralcollect_titan
-	max_health_percent = 2
-	slowdown = 2
-
-/datum/modifier/astralcollect_armour
-	incoming_damage_percent = 0.7
+	max_health_percent = 1.5
+	slowdown = 3
 
 /datum/modifier/astralcollect_mistake
 	mob_overlay_state = "poisoned"
@@ -152,39 +152,29 @@
 
 /datum/modifier/astralcollect_solar
 	mob_overlay_state = "red_electricity_constant"
-	incoming_brute_damage_percent = 2
-	incoming_fire_damage_percent = 0.3
+	incoming_fire_damage_percent = 0.7
 
 /datum/modifier/astralcollect_lunar
 	mob_overlay_state = "blue_electricity_constant"
-	incoming_brute_damage_percent = 0.3
-	incoming_fire_damage_percent = 2
+	incoming_brute_damage_percent = 0.7
+
+/datum/modifier/aura/astralcollect_church
+	mob_overlay_state = "redspace_aura"
+	incoming_brute_damage_percent = 0.6
+	incoming_fire_damage_percent = 0.6
 
 /mob/living/simple_mob/humanoid/astral_collective/proc/expirmentresult()
 	switch(expirmental)
 		if(1)
 			add_modifier(/datum/modifier/astralcollect_swift, null, src)
-			size_multiplier -= 0.3
+			size_multiplier -= 0.4
 		if(2)
 			add_modifier(/datum/modifier/astralcollect_regen, null, src)
 		if(3)
 			add_modifier(/datum/modifier/astralcollect_titan, null, src)
-			size_multiplier += 0.6
+			size_multiplier += 0.5
 		if(4)
-			add_modifier(/datum/modifier/astralcollect_armour, null, src)
-			size_multiplier += 0.3
-		if(5)
 			add_modifier(/datum/modifier/astralcollect_mistake, null, src)
-		if(6)
-			add_modifier(/datum/modifier/astralcollect_solar, null, src)
-		if(7)
-			add_modifier(/datum/modifier/astralcollect_lunar, null, src)
-		if(8)
-			ai_holder_type = /datum/ai_holder/hostile/ranged/robust
-		if(9)
-			ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
-		if(10)
-			projectile_dispersion = 10
 
 /datum/ai_holder/simple_mob/ranged/astral_collective
 	pointblank = TRUE
@@ -200,7 +190,6 @@
 	holder.IMove(get_step(holder, pick(GLOB.alldirs)))
 	holder.face_atom(A)
 
-
 /datum/ai_holder/simple_mob/ranged/astral_collective/post_ranged_attack(atom/A)
 	holder.IMove(get_step(holder, pick(GLOB.alldirs)))
 	holder.face_atom(A)
@@ -214,7 +203,6 @@
 /datum/ai_holder/simple_mob/melee/evasive/astral_collective/pre_special_attack(atom/A)
 	holder.IMove(get_step(holder, pick(GLOB.alldirs)))
 	holder.face_atom(A)
-
 
 /datum/ai_holder/simple_mob/melee/evasive/astral_collective/post_special_attack(atom/A)
 	holder.IMove(get_step(holder, pick(GLOB.alldirs)))
@@ -236,16 +224,16 @@
 
 	special_attack_cooldown = 7 SECONDS
 	special_attack_min_range = 0
-	special_attack_max_range = 4
+	special_attack_max_range = 2
 
 /mob/living/simple_mob/humanoid/astral_collective/purity/do_special_attack(atom/A)
 	playsound(src, 'sound/effects/ghost2.ogg', 20, 1)
-	for(var/mob/living/M in orange(src, 4))
+	for(var/mob/living/M in orange(src, 2))
 		if(M.get_ear_protection() == 0)
 			M.Confuse(10)
 
 
-//the ranged mobs
+//the basic ranged mobs
 /mob/living/simple_mob/humanoid/astral_collective/ranged
 	name = "Astral Collective Unit"
 	projectile_accuracy = 10
@@ -254,25 +242,31 @@
 	reload_max = 7
 	reload_time = 1.5 SECONDS
 	ranged_cooldown = 65
+	projectiletype = /obj/item/projectile/energy/astral_collective/basic
+
+/mob/living/simple_mob/humanoid/astral_collective/ranged/do_special_attack(atom/A)
+	switch(expirmental)
+		if(1)
+			burn_beam(A)
+		if(2)
+			heal_beam(A)
+		if(3)
+			brute_beam(A)
+		if(4)
+			adjustBruteLoss(-40)
+			adjustFireLoss(-40)
 
 //snake creature
 /mob/living/simple_mob/humanoid/astral_collective/ranged/noodle
 	desc = "A naga wrapped up in strange glowing armour."
 	icon_state = "noodle"
 	icon_living = "noodle"
-	projectiletype = /obj/item/projectile/energy/astral_collective/anti_mecha
-
-/mob/living/simple_mob/humanoid/astral_collective/ranged/noodle/do_special_attack(atom/A)
-	if((health / maxHealth) <= 0.3)
-		alpha = 180
-	teleport_self(A)
 
 //taur creature
 /mob/living/simple_mob/humanoid/astral_collective/ranged/taur
 	desc = "A quadrapel creature with expirmental gear."
 	icon_state = "taur"
 	icon_living = "taur"
-	projectiletype = /obj/item/projectile/energy/astral_collective/armour_breaker
 	health = 125
 	maxHealth = 125
 
@@ -280,28 +274,13 @@
 	reload_max = 15
 	reload_time = 3.5 SECONDS
 	ranged_cooldown = 85
-	movement_cooldown = 0
-
-/mob/living/simple_mob/humanoid/astral_collective/ranged/taur/do_special_attack(atom/A)
-	expirmental = rand(1,5)
-	switch(expirmental)
-		if(1)
-			teleport_attack(A)
-		if(2)
-			gravity_surge(A)
-		if(3)
-			air_strike(A)
-		if(4)
-			repair_self(A)
-		if(5)
-			teleport_self(A)
+	movement_cooldown = 1
 
 //teshari
 /mob/living/simple_mob/humanoid/astral_collective/ranged/tesh
 	desc = "A teshari contained within prototype equipment."
 	icon_state = "tesh"
 	icon_living = "tesh"
-	projectiletype = /obj/item/projectile/energy/astral_collective/particle
 	health = 50
 	maxHealth = 50
 
@@ -311,45 +290,28 @@
 	ranged_cooldown = 40
 	movement_cooldown = -1
 
-/mob/living/simple_mob/humanoid/astral_collective/ranged/tesh/do_special_attack(atom/A)
-	if((health / maxHealth) <= 0.3)
-		visible_message(span_boldwarning(span_orange("The teshari holds up a grenade.")))
-		addtimer(CALLBACK(src, PROC_REF(selfexplode_attack), A), 1.5 SECONDS, TIMER_DELETE_ME)
-	else
-		teleport_attack(A)
-
 //cannine
 /mob/living/simple_mob/humanoid/astral_collective/ranged/wolf
 	desc = "A humanoid armored cannine folk."
 	icon_state = "wolf"
 	icon_living = "wolf"
-	projectiletype = /obj/item/projectile/energy/astral_collective/green
 	special_attack_cooldown = 13 SECONDS
 	reload_max = 5
 	reload_time = 0.5 SECONDS
 	ranged_cooldown = 70
-
-/mob/living/simple_mob/humanoid/astral_collective/ranged/wolf/do_special_attack(atom/A)
-	gravity_surge(A)
 
 //lizard
 /mob/living/simple_mob/humanoid/astral_collective/ranged/lizard
 	desc = "A humanoid heavily armoured lizardfolk."
 	icon_state = "breacher"
 	icon_living = "breacher"
-	projectiletype = /obj/item/projectile/energy/astral_collective/searing
 	health = 150
 	maxHealth = 150
 
 	needs_reload = FALSE
 	special_attack_cooldown = 20 SECONDS
 	ranged_cooldown = 90
-	movement_cooldown = 3
-
-/mob/living/simple_mob/humanoid/astral_collective/ranged/lizard/do_special_attack(atom/A)
-	if((health / maxHealth) <= 0.3)
-		repair_self(A)
-	air_strike(A)
+	movement_cooldown = 5
 
 //zaddat
 /mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat
@@ -359,9 +321,6 @@
 	needs_reload = FALSE
 	special_attack_cooldown = 6 SECONDS
 	ranged_cooldown = 30
-
-/mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat/do_special_attack(atom/A)
-	projectiletype = pick(/obj/item/projectile/energy/astral_collective/anti_mecha, /obj/item/projectile/energy/astral_collective/armour_breaker, /obj/item/projectile/energy/astral_collective/searing, /obj/item/projectile/energy/astral_collective/green, /obj/item/projectile/energy/astral_collective/particle)
 
 /mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat/bullet_act(var/obj/item/projectile/Proj)
 	if(!Proj)
@@ -374,13 +333,38 @@
 	else
 		..()
 
+/mob/living/simple_mob/humanoid/astral_collective/proc/heal_beam(atom/target)
+	if(!target)
+		return FALSE
+	for(var/mob/living/L in orange(src, 5))
+		if(IIsAlly(L))
+			Beam(L, icon_state = "g_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
+			L.adjustBruteLoss(-30)
+			L.adjustFireLoss(-30)
+
+/mob/living/simple_mob/humanoid/astral_collective/proc/burn_beam(atom/target)
+	if(!target)
+		return FALSE
+	for(var/mob/living/L in orange(src, 5))
+		if(IIsAlly(L))
+			Beam(L, icon_state = "g_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
+			L.add_modifier(/datum/modifier/astralcollect_solar, null, src)
+
+/mob/living/simple_mob/humanoid/astral_collective/proc/brute_beam(atom/target)
+	if(!target)
+		return FALSE
+	for(var/mob/living/L in orange(src, 5))
+		if(IIsAlly(L))
+			Beam(L, icon_state = "g_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
+			L.add_modifier(/datum/modifier/astralcollect_lunar, null, src)
+
 /mob/living/simple_mob/humanoid/astral_collective/proc/teleport_attack(atom/target)
 	// Teleport attack.
 	if(!target)
 		to_chat(src, span_warning("There's nothing to teleport to."))
 		return FALSE
 
-	var/list/nearby_things = range(2, src)
+	var/list/nearby_things = range(5, src)
 	var/list/valid_turfs = list()
 
 	// All this work to just go to a non-dense tile.
@@ -402,75 +386,146 @@
 
 	do_teleport(target, target_turf, channel = TELEPORT_CHANNEL_QUANTUM)
 
-/mob/living/simple_mob/humanoid/astral_collective/proc/selfexplode_attack(atom/target)
+//specialized units
+//This names are wierd but corespond to the differing branches
+//Body is the security branches. Their goal is to effecitly kill you, or CC via area dsamage
+/mob/living/simple_mob/humanoid/astral_collective/body
+	name = "Astral Collective Enforcement"
+	projectiletype = /obj/item/projectile/energy/astral_collective/basic
+	health = 125
+	maxHealth = 125
+
+/mob/living/simple_mob/humanoid/astral_collective/body/dagger
+	projectiletype = /obj/item/projectile/energy/astral_collective/dagger
+	special_attack_cooldown = 15 SECONDS
+	icon_state = "blade_tosser"
+	icon_living = "blade_tosser"
+
+/mob/living/simple_mob/humanoid/astral_collective/body/dagger/attackby(var/obj/item/O as obj, var/mob/user as mob)
+	if(prob(50))
+		teleport_attack(src)
+	..()
+
+/mob/living/simple_mob/humanoid/astral_collective/body/dagger/bullet_act(var/obj/item/projectile/Proj)
+	if(prob(50))
+		teleport_attack(src)
+	..()
+
+/mob/living/simple_mob/humanoid/astral_collective/body/dagger/do_special_attack(atom/A)
+	for(var/mob/living/L in orange(src, 7))
+		if(L.stat != DEAD && !IIsAlly(L))
+			L.add_modifier(/datum/modifier/mmo_drop/eclipse_dagger, 3, src)
+
+/mob/living/simple_mob/humanoid/astral_collective/body/juggernaught
+	icon_state = "breaker"
+	icon_living = "breaker"
+	special_attack_min_range = 0
+	special_attack_max_range = 3
+	special_attack_cooldown = 18 SECONDS
+
+/mob/living/simple_mob/humanoid/astral_collective/body/juggernaught/do_special_attack(atom/A)
+	playsound(src, 'sound/effects/ghost2.ogg', 20, 1)
+	for(var/mob/living/M in orange(src, 3))
+		if(M.get_ear_protection() == 0)
+			M.Stun(0.5)
+
+//The mind is the science branch. Their goal is to limit or disable your options
+/mob/living/simple_mob/humanoid/astral_collective/mind
+	name = "Astral Collective Researcher"
+	health = 125
+	maxHealth = 125
+
+/mob/living/simple_mob/humanoid/astral_collective/mind/gravity
+	icon_state = "space"
+	icon_living = "space"
+	projectiletype = /obj/item/projectile/energy/astral_collective/basic
+	special_attack_cooldown = 10 SECONDS
+
+//Gravity shield. Hit it with melee, and a sudden gravity surge may tear your weapon to the ground
+/mob/living/simple_mob/humanoid/astral_collective/mind/gravity/attackby(var/obj/item/O as obj, var/mob/user as mob)
+	if(O.force)
+		if(prob(30))
+			visible_message(span_boldwarning(span_orange("[O] is pulled to the ground!.")))
+			user.drop_item()
+			return
+		else
+			..()
+	else
+		..()
+
+/mob/living/simple_mob/humanoid/astral_collective/mind/gravity/do_special_attack(atom/A)
+	for(var/mob/living/L in orange(src, 7)) //despite the attack range being 6 we do 7 so folks don't wander in then get confused why they are getting hit by it
+		Beam(L, icon_state = "chain", time = 1.5 SECONDS, maxdistance = 6)
+	addtimer(CALLBACK(src, PROC_REF(super_move), A), 2.5 SECONDS, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/humanoid/astral_collective/mind/gravity/proc/super_move(atom/target)
 	if(!target)
 		return FALSE
-	explosion(src.loc, 1, 1, 1, 1)
+	for(var/mob/living/L in orange(src, 6))
+		L.throw_at(get_edge_target_turf(L, L.dir), rand(2,6), 10)
 
-/mob/living/simple_mob/humanoid/astral_collective/proc/gravity_surge(atom/target)
-	if(!target)
-		return FALSE
-	playsound(src, 'sound/weapons/wave.ogg', 75, 1)
-	for(target in range(7, src))
-		target.singularity_pull(src, 3)
+/mob/living/simple_mob/humanoid/astral_collective/mind/fire
+	desc = "An armored vox wielding a flamethrower. The phoron tank seems explosive."
+	icon_state = "flamer"
+	icon_living = "flamer"
+	projectiletype = /obj/item/projectile/energy/astral_collective/fire
 
-/mob/living/simple_mob/humanoid/astral_collective/proc/air_strike(atom/target)
-	if(!target)
-		return FALSE
-	for(var/mob/living/L in orange(src, 14))
-		if(IIsAlly(L))
-			Beam(L, icon_state = "g_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
-			L.adjustBruteLoss(-30)
-			L.adjustFireLoss(-30)
+/mob/living/simple_mob/humanoid/astral_collective/mind/fire/death()
+	explosion(src.loc, 0, 2, 0, 0)
+	return ..()
 
-/mob/living/simple_mob/humanoid/astral_collective/proc/repair_self(atom/target)
-	if(!target)
-		return FALSE
-	adjustBruteLoss(-70)
-	adjustFireLoss(-70)
-	adjustToxLoss(-70)
-	adjustOxyLoss(-70)
-	adjustCloneLoss(-70)
+//The soul is the relogious branch. Their goal is to limit your offense
+/mob/living/simple_mob/humanoid/astral_collective/soul
+	name = "Astral Collective Soulspeaker" //I swear if anyone takes this name litterally
+	health = 150
+	maxHealth = 150
 
-/mob/living/simple_mob/humanoid/astral_collective/proc/teleport_self(atom/A)
-	// Teleport attack.
-	if(!A)
-		to_chat(src, span_warning("There's nothing to teleport to."))
-		return FALSE
+/mob/living/simple_mob/humanoid/astral_collective/soul/spear_bearer
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/astral_collective
+	melee_damage_lower = 27 //25ish with explo voidsuit
+	melee_damage_upper = 27
+	attack_armor_pen = 40
+	melee_attack_delay = 1.5 SECONDS
+	special_attack_cooldown = 10 SECONDS
+	icon_state = "clock_cat_shield"
+	icon_living = "clock_cat_shield"
+	var/barrier_health = 3
 
-	var/list/nearby_things = range(4, A)
-	var/list/valid_turfs = list()
+/mob/living/simple_mob/humanoid/astral_collective/soul/spear_bearer/do_special_attack(atom/A)
+	barrier_health ++
+	icon_state = "clock_cat_shield"
 
-	// All this work to just go to a non-dense tile.
-	for(var/turf/potential_turf in nearby_things)
-		var/valid_turf = TRUE
-		if(potential_turf.density)
+/mob/living/simple_mob/humanoid/astral_collective/soul/spear_bearer/bullet_act(var/obj/item/projectile/Proj)
+	if(!Proj)
+		return
+	if(barrier_health > 0)
+		barrier_health --
+		visible_message(span_boldwarning(span_orange("[Proj] is blocked by the shield.")))
+		if(Proj.firer)
+			ai_holder.react_to_attack(Proj.firer)
+		if(barrier_health == 0)
+			icon_state = "clock_cat"
+		return
+	else
+		..()
+
+/mob/living/simple_mob/humanoid/astral_collective/soul/shield_projector
+	projectiletype = /obj/item/projectile/energy/astral_collective/spear
+	special_attack_cooldown = 40 SECONDS
+	icon_state = "clock_sergal"
+	icon_living = "clock_sergal"
+
+/mob/living/simple_mob/humanoid/astral_collective/soul/shield_projector/do_special_attack(atom/A)
+	adjustBruteLoss(-200)
+	adjustFireLoss(-200)
+
+/mob/living/simple_mob/humanoid/astral_collective/soul/shield_projector/handle_special()
+	if(stat != DEAD)
+		protection_aura()
+	..()
+
+/mob/living/simple_mob/humanoid/astral_collective/soul/shield_projector/proc/protection_aura()
+	for(var/mob/living/L in view(src, 5))
+		if(L.stat == DEAD || !IIsAlly(L))
 			continue
-		for(var/atom/movable/AM in potential_turf)
-			if(AM.density)
-				valid_turf = FALSE
-		if(valid_turf)
-			valid_turfs.Add(potential_turf)
-
-	if(!(valid_turfs.len))
-		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
-		return FALSE
-
-	var/turf/target_turf = pick(valid_turfs)
-	var/turf/T = get_turf(src)
-
-	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/spark_spread
-	s1.set_up(5, 1, T)
-	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/spark_spread
-	s2.set_up(5, 1, target_turf)
-
-
-	T.visible_message(span_warning("\The [src] vanishes!"))
-	s1.start()
-
-	forceMove(target_turf)
-	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
-	to_chat(src, span_notice("You teleport to \the [target_turf]."))
-
-	target_turf.visible_message(span_warning("\The [src] appears!"))
-	s2.start()
+			L.add_modifier(/datum/modifier/aura/astralcollect_church, null, src)

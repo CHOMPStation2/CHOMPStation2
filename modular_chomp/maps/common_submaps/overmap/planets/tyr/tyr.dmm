@@ -492,6 +492,12 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/five)
+"bR" = (
+/obj/structure/safe/floor,
+/obj/item/storage/belt/holding,
+/obj/item/storage/pouch/holding,
+/turf/simulated/floor/tiled/old_cargo/beige,
+/area/planet/tyr/ac_mainbase)
 "bS" = (
 /obj/machinery/computer,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
@@ -538,6 +544,10 @@
 /obj/structure/frame,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/shuttles/eleven)
+"cc" = (
+/mob/living/simple_mob/humanoid/astral_collective/body/dagger,
+/turf/simulated/floor/tiled/old_cargo/blue,
+/area/planet/tyr/ac_mainbase)
 "cd" = (
 /obj/item/circuitboard/teleporter_station,
 /obj/structure/frame,
@@ -653,6 +663,14 @@
 /obj/item/radio,
 /turf/simulated/floor,
 /area/planet/tyr/shuttles/one)
+"cy" = (
+/mob/living/simple_mob/humanoid/astral_collective/body/juggernaught,
+/turf/simulated/floor/tiled/old_cargo/blue,
+/area/planet/tyr/ac_mainbase)
+"cz" = (
+/mob/living/simple_mob/humanoid/astral_collective/soul/spear_bearer,
+/turf/simulated/floor/tiled/old_cargo/blue,
+/area/planet/tyr/ac_mainbase)
 "cA" = (
 /obj/structure/table/steel,
 /obj/item/storage/box/monkeycubes/sparracubes,
@@ -732,6 +750,10 @@
 /obj/structure/table/rack,
 /turf/simulated/floor/tiled/purple,
 /area/planet/tyr/ac_mainbase)
+"cN" = (
+/mob/living/simple_mob/humanoid/astral_collective/soul/shield_projector,
+/turf/simulated/floor/tiled/old_cargo/yellow,
+/area/planet/tyr/ac_mainbase)
 "cO" = (
 /obj/machinery/cryopod/robot/door/gateway/quiet,
 /turf/simulated/floor,
@@ -742,6 +764,10 @@
 	},
 /turf/simulated/floor,
 /area/planet/tyr/shuttles/one)
+"cQ" = (
+/mob/living/simple_mob/humanoid/astral_collective/mind/gravity,
+/turf/simulated/floor/tiled/old_cargo/purple,
+/area/planet/tyr/ac_mainbase)
 "cR" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -783,6 +809,10 @@
 	},
 /turf/simulated/floor,
 /area/planet/tyr/shuttles/one)
+"cW" = (
+/mob/living/simple_mob/humanoid/astral_collective/mind/fire,
+/turf/simulated/floor/tiled/old_cargo/red,
+/area/planet/tyr/ac_mainbase)
 "cX" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -793,6 +823,11 @@
 	},
 /turf/simulated/floor,
 /area/planet/tyr/shuttles/one)
+"cY" = (
+/obj/structure/table/darkglass,
+/obj/item/shield/tyr_shield,
+/turf/simulated/shuttle/floor/alienplating,
+/area/planet/tyr/precursorruins/hallway)
 "cZ" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -823,6 +858,11 @@
 	},
 /turf/simulated/floor,
 /area/planet/tyr/shuttles/one)
+"dd" = (
+/obj/structure/table/darkglass,
+/obj/item/melee/energy/tyr_chainsaw,
+/turf/simulated/shuttle/floor/alienplating,
+/area/planet/tyr/precursorruins/hallway)
 "de" = (
 /turf/simulated/floor/wood,
 /area/planet/tyr/shuttles/four)
@@ -841,6 +881,15 @@
 "dh" = (
 /turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/planet/tyr/ship_graveyard)
+"di" = (
+/obj/structure/railing/overhang/grey{
+	dir = 8
+	},
+/obj/structure/table/darkglass,
+/obj/item/shield/tyr_shield,
+/obj/item/melee/energy/tyr_chainsaw,
+/turf/simulated/shuttle/floor/alienplating,
+/area/planet/tyr/precursorruins/hallway)
 "dj" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -983,6 +1032,7 @@
 /area/planet/tyr/precursorruins/hallway)
 "fe" = (
 /obj/structure/table/marble,
+/obj/item/paper/tyr_notes/astral_e,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/planet/tyr/ac_mainbase)
 "ff" = (
@@ -1463,8 +1513,8 @@
 /area/planet/tyr/precursorruins/hallway)
 "jA" = (
 /obj/structure/prop/tyr_elevator{
-	descendx = 162;
-	descendy = 249
+	descendx = 245;
+	descendy = 245
 	},
 /turf/simulated/shuttle/floor/black,
 /area/planet/tyr/precursorruins/hallway)
@@ -1826,15 +1876,10 @@
 /obj/item/melee/cultblade,
 /turf/simulated/floor/tiled/old_cargo/blue,
 /area/planet/tyr/ac_mainbase)
-"lU" = (
-/mob/living/simple_mob/humanoid/astral_collective/ranged/taur,
-/turf/simulated/floor/tiled/old_cargo/beige,
-/area/planet/tyr/ac_mainbase)
 "lV" = (
 /obj/structure/table/marble,
-/obj/structure/safe/floor,
-/obj/item/gun/energy/medigun,
-/obj/item/storage/belt/holding,
+/obj/item/shield/tyr_shield,
+/obj/item/melee/energy/tyr_chainsaw,
 /turf/simulated/floor/tiled/old_cargo/beige,
 /area/planet/tyr/ac_mainbase)
 "lW" = (
@@ -9467,7 +9512,7 @@ pd
 pM
 pF
 pq
-pq
+di
 pq
 po
 pm
@@ -61426,7 +61471,7 @@ gz
 gz
 aL
 lW
-lH
+bR
 lR
 aL
 gz
@@ -61942,7 +61987,7 @@ me
 aL
 lH
 lG
-lU
+lH
 lG
 lH
 aL
@@ -62200,7 +62245,7 @@ mf
 aL
 lQ
 lH
-lG
+cc
 lH
 lQ
 aL
@@ -62716,7 +62761,7 @@ lG
 lH
 lG
 lH
-lG
+cy
 lH
 lG
 lH
@@ -63454,7 +63499,7 @@ nc
 np
 np
 np
-nc
+cN
 np
 np
 np
@@ -65505,7 +65550,7 @@ gI
 gI
 og
 ob
-gI
+cW
 gI
 aL
 gK
@@ -65971,7 +66016,7 @@ oX
 ik
 ik
 ik
-oX
+dd
 ac
 ac
 ac
@@ -66218,14 +66263,14 @@ ac
 ac
 ac
 oX
+dd
 oX
-oX
 ac
 ac
 ac
 ac
 ac
-oX
+cY
 ik
 py
 ik
@@ -66234,7 +66279,7 @@ ac
 ac
 ac
 ac
-oX
+dd
 ik
 ik
 ik
@@ -67010,7 +67055,7 @@ ac
 ac
 ac
 oX
-oX
+cY
 oX
 ac
 ac
@@ -67251,7 +67296,7 @@ ac
 ac
 oX
 oX
-oX
+cY
 ac
 ac
 ac
@@ -68098,7 +68143,7 @@ np
 np
 np
 lH
-np
+cQ
 np
 np
 np
@@ -68293,7 +68338,7 @@ oX
 ik
 ik
 ik
-oX
+dd
 ac
 ac
 ac
@@ -68547,7 +68592,7 @@ ac
 ac
 ac
 ac
-oX
+cY
 ik
 pB
 ik
@@ -68647,7 +68692,7 @@ aL
 mc
 mp
 lN
-lG
+cz
 mb
 lG
 lM
