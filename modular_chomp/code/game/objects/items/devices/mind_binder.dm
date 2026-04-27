@@ -12,9 +12,9 @@
 	var/self_bind = FALSE
 	flags = NOBLUDGEON
 
-/obj/item/mindbinder/attack(mob/living/M, mob/living/user)
+/obj/item/mindbinder/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-	return
+	return ITEM_INTERACT_SUCCESS
 
 /obj/item/mindbinder/proc/toggle_self_bind()
 	if(possessed_voice.len == 1)
