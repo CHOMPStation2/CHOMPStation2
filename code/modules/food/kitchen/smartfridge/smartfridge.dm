@@ -24,8 +24,8 @@
 	var/persistent = null // Path of persistence datum used to track contents
 	circuit = /obj/item/circuitboard/smartfridge //This one is meant to be uncraftable, however.
 
-	var/datum/looping_sound/fridge/soundloop // CHOMPEdit: Fridges hum!
-	var/playing_sound = FALSE // CHOMPEdit: Fridges hum!
+	var/datum/looping_sound/fridge/soundloop
+	var/playing_sound = FALSE
 
 /obj/machinery/smartfridge/secure
 	is_secure = 1
@@ -39,7 +39,7 @@
 	else
 		set_wires(new /datum/wires/smartfridge(src))
 
-	soundloop = new(list(src), FALSE) // CHOMPEdit: Fridge hum!
+	soundloop = new(list(src), FALSE)
 	update_icon()
 	default_apply_parts()
 
@@ -50,7 +50,7 @@
 	wires = null
 	if(persistent)
 		SSpersistence.forget_value(src, persistent)
-	QDEL_NULL(soundloop) // CHOMPEdit: Fridge hum!
+	QDEL_NULL(soundloop)
 	return ..()
 
 /obj/machinery/smartfridge/proc/accept_check(obj/item/O)
@@ -58,10 +58,10 @@
 
 /obj/machinery/smartfridge/process()
 	if(stat & (BROKEN|NOPOWER))
-		soundloop.stop()  // CHOMPEdit: Fridges don't hum while they lack power.
-		playing_sound = FALSE  // CHOMPEdit: Fridges don't hum while they lack power.
+		soundloop.stop()
+		playing_sound = FALSE
 		return
-	if(!playing_sound && !stat) // CHOMPEdit: Fridges hum while they have power.
+	if(!playing_sound && !stat)
 		soundloop.start()
 		playing_sound = TRUE
 	if(src.seconds_electrified > 0)
@@ -74,18 +74,12 @@
 	..()
 	if(old_stat != stat)
 		update_icon()
-		// CHOMPEdit Start: Fridge hum
 		if(stat & (NOPOWER | BROKEN))
 			soundloop.stop()
 			playing_sound = FALSE
 		else
 			soundloop.start()
 			playing_sound = TRUE
-		// CHOMPEdit End
-
-/obj/machinery/smartfridge/update_icon()
-	cut_overlays()
-	if(panel_open)
 		add_overlay("[icon_base]-panel")
 
 	if(stat & (BROKEN))

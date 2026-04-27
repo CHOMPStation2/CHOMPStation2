@@ -12,8 +12,8 @@
 	var/toggle = 1	// If we /should/ be active or not,
 	var/list/internal_PDAs = list() // Assoc list of PDAs inside of this, with the department name being the index,
 
-	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
-	var/noisy = TRUE  // CHOMPStation Add: Hummy noises
+	var/datum/looping_sound/tcomms/soundloop
+	var/noisy = TRUE
 
 /obj/machinery/pda_multicaster/Initialize(mapload)
 	. = ..()
@@ -22,11 +22,10 @@
 		"engineering" = new /obj/item/pda/multicaster/engineering(src),
 		"medical" = new /obj/item/pda/multicaster/medical(src),
 		"research" = new /obj/item/pda/multicaster/research(src),
-		"exploration" = new /obj/item/pda/multicaster/exploration(src), //VOREStation Add,
+		"exploration" = new /obj/item/pda/multicaster/exploration(src),
 		"cargo" = new /obj/item/pda/multicaster/cargo(src),
 		"civilian" = new /obj/item/pda/multicaster/civilian(src))
 
-	// CHOMPAdd: PDA Multicaster Server humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
 		if(prob(40))
@@ -39,7 +38,6 @@
 			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
 			soundloop.mid_length = 30
 	soundloop.start() // Have to do this here bc it starts on
-	// CHOMPAdd End
 
 /obj/machinery/pda_multicaster/prebuilt/Initialize(mapload)
 	. = ..()
@@ -92,20 +90,20 @@
 			on = 0
 			update_PDAs(1) // 1 being to turn off.
 			update_idle_power_usage(0)
-			soundloop.stop() // CHOMPStation Add: Hummy noises
-			noisy = FALSE // CHOMPStation Add: Hummy noises
+			soundloop.stop()
+			noisy = FALSE
 		else
 			on = 1
 			update_PDAs(0)
 			update_idle_power_usage(750)
-			soundloop.start() // CHOMPStation Add: Hummy noises
-			noisy = TRUE // CHOMPStation Add: Hummy noises
+			soundloop.start()
+			noisy = TRUE
 	else
 		on = 0
 		update_PDAs(1)
 		update_idle_power_usage(0)
-		soundloop.stop() // CHOMPStation Add: Hummy noises
-		noisy = FALSE // CHOMPStation Add: Hummy noises
+		soundloop.stop()
+		noisy = FALSE
 	update_icon()
 
 /obj/machinery/pda_multicaster/process()

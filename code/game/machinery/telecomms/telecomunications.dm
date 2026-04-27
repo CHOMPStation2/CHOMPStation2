@@ -36,8 +36,8 @@
 	var/hide = 0				// Is it a hidden machine?
 	var/listening_level = 0	// 0 = auto set in New() - this is the z level that the machine is listening to.
 
-	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
-	var/noisy = TRUE // CHOMPStation Add: Hummy noises, this starts on
+	var/datum/looping_sound/tcomms/soundloop
+	var/noisy = TRUE
 
 /obj/machinery/telecomms/proc/relay_information(datum/signal/signal, filter, copysig, amount = 20)
 	// relay signal to all linked machinery that are of type [filter]. If signal has been sent [amount] times, stop sending
@@ -141,7 +141,6 @@
 		else
 			for(var/obj/machinery/telecomms/T in GLOB.telecomms_list)
 				add_link(T)
-	// CHOMPAdd: TComms humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
 		if(prob(40))
@@ -154,14 +153,13 @@
 			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
 			soundloop.mid_length = 30
 	soundloop.start()
-	// CHOMPAdd End
 
 /obj/machinery/telecomms/Destroy()
 	GLOB.telecomms_list -= src
 	for(var/obj/machinery/telecomms/comm in GLOB.telecomms_list)
 		comm.links -= src
 	links = list()
-	QDEL_NULL(soundloop) // CHOMPAdd: Tcomms noises
+	QDEL_NULL(soundloop)
 	. = ..()
 
 // Used in auto linking
@@ -184,17 +182,17 @@
 
 	if(toggled)
 		if(stat & (BROKEN|NOPOWER|EMPED) || integrity <= 0) // if powered, on. if not powered, off. if too damaged, off
-			on = 0
-			soundloop.stop() // CHOMPAdd: Tcomms noises
+			on = FALSE
+			soundloop.stop()
 			noisy = FALSE
 		else
-			on = 1
+			on = TRUE
 	else
-		on = 0
-		soundloop.stop() // CHOMPAdd: Tcomms noises
+		on = FALSE
+		soundloop.stop()
 		noisy = FALSE
-	if(!noisy) // CHOMPAdd: Tcomms noises
-		soundloop.start() // CHOMPAdd: Tcomms noises
+	if(!noisy)
+		soundloop.start()
 		noisy = TRUE
 
 /obj/machinery/telecomms/process()
@@ -216,7 +214,7 @@
 	if(prob(100/severity))
 		if(!(stat & EMPED))
 			stat |= EMPED
-			playsound(src, 'sound/machines/tcomms/tcomms_pulse.ogg', 70, 1, 30) // CHOMPAdd: Tcomms noises
+			playsound(src, 'sound/machines/tcomms/tcomms_pulse.ogg', 70, 1, 30)
 			var/duration = (300 * 10)/severity
 			spawn(rand(duration - 20, duration + 20)) // Takes a long time for the machines to reboot.
 				stat &= ~EMPED

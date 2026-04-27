@@ -8,14 +8,9 @@
 	severity = rand(2, 4)
 
 /datum/event/viral_outbreak/announce()
-<<<<<<< HEAD
-	command_alert("Confirmed outbreak of level 7 biohazard aboard [station_name()]. All personnel must contain the outbreak.", "Viral Outbreak")
-	world << sound('sound/AI/outbreak7.ogg')
-	// Chomp edit: Changed "Biohazard Alert" to "Viral Outbreak" and yes I know this file isn't used anymore but I'm going to be consistent in case it does get used.
-=======
-	command_alert("Confirmed outbreak of level 7 biohazard aboard [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert")
+	command_alert("Confirmed outbreak of level 7 biohazard aboard [station_name()]. All personnel must contain the outbreak.", "Viral Outbreak")	// Chomp edit: Changed "Biohazard Alert" to "Viral Outbreak" and yes I know this file isn't used anymore but I'm going to be consistent in case it does get used.
+
 	play_simple_announcement(world, ANNOUNCER_MSG_BIOHAZARD_SEVEN)
->>>>>>> 60202429a7 (Customizable Announcer (#19387))
 
 /datum/event/viral_outbreak/start()
 	var/list/candidates = list()	//list of candidate keys
