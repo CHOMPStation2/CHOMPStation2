@@ -126,20 +126,24 @@
 	if(canned && !user.incapacitated())
 		uncan(user)
 
+<<<<<<< HEAD
 /obj/item/reagent_containers/food/snacks/attack(mob/living/eater as mob, mob/living/user as mob, def_zone) // CHOMPEdit
+=======
+/obj/item/reagent_containers/food/snacks/attack(mob/living/eater, mob/living/user, target_zone, attack_modifier)
+>>>>>>> 4760085246 (Gripper fixes (#19436))
 	if(reagents && !reagents.total_volume)
 		balloon_alert(user, "none of \the [src] left!")
 		user.drop_from_inventory(src)
 		qdel(src)
-		return FALSE
+		return ITEM_INTERACT_FAILURE
 
 	if(package)
 		balloon_alert(user, "the package is in the way!")
-		return FALSE
+		return ITEM_INTERACT_FAILURE
 
 	if(canned)
 		balloon_alert(user, "the can is closed!")
-		return FALSE
+		return ITEM_INTERACT_FAILURE
 
 	if(istype(eater, /mob/living/carbon))
 		//TODO: replace with standard_feed_mob() call.
@@ -147,7 +151,7 @@
 		if(!eater.consume_liquid_belly)
 			if(liquid_belly_check())
 				to_chat(user, span_infoplain("[user == eater ? "You can't" : "\The [eater] can't"] consume that, it contains something produced from a belly!"))
-				return FALSE
+				return ITEM_INTERACT_FAILURE
 		var/swallow_whole = FALSE
 		var/obj/belly/belly_target				// These are surprise tools that will help us later
 
@@ -157,7 +161,7 @@
 				var/mob/living/carbon/human/human_eater = eater
 				if(!human_eater.check_has_mouth())
 					balloon_alert(user, "you don't have a mouth!")
-					return
+					return ITEM_INTERACT_FAILURE
 				var/obj/item/blocked = null
 				if(survivalfood)
 					blocked = human_eater.check_mouth_coverage_survival()
@@ -165,7 +169,7 @@
 					blocked = human_eater.check_mouth_coverage()
 				if(blocked)
 					balloon_alert(user, "\the [blocked] is in the way!")
-					return
+					return ITEM_INTERACT_FAILURE
 
 			user.setClickCooldown(user.get_attack_speed(src)) //puts a limit on how fast people can eat/drink things
 			// CHOMPEdit Start - Changing a lot of the to_chat ahead
@@ -189,7 +193,7 @@
 				to_chat(eater, span_danger("You glug down the bite of [src], you are reaching the very limits of what you can eat, but maybe a few more bites could be managed..."))
 			if (fullness > 6000) // There has to be a limit eventually.
 				to_chat(eater, span_danger("Nope. That's it. You literally cannot force any more of [src] to go down your throat. It's fair to say you're full."))
-				return FALSE
+				return ITEM_INTERACT_FAILURE
 
 		else if(user.a_intent == I_HURT)
 			return ..()
@@ -199,7 +203,7 @@
 				var/mob/living/carbon/human/human_eater = eater
 				if(!human_eater.check_has_mouth())
 					balloon_alert(user, "\the [human_eater] doesn't have a mouth!")
-					return
+					return ITEM_INTERACT_FAILURE
 				var/obj/item/blocked = null
 				var/unconcious = FALSE
 				blocked = human_eater.check_mouth_coverage()
@@ -217,20 +221,20 @@
 
 				if(unconcious)
 					to_chat(user, span_warning("You can't feed [human_eater] through \the [blocked] while they are unconcious!"))
-					return
+					return ITEM_INTERACT_FAILURE
 
 				if(blocked)
 					// to_chat(user, span_warning("\The [blocked] is in the way!"))
 					balloon_alert(user, "\the [blocked] is in the way!")
-					return
+					return ITEM_INTERACT_FAILURE
 
 				if(swallow_whole)
 					if(!(human_eater.feeding))
 						balloon_alert(user, "you can't feed [human_eater] a whole [src] as they refuse to be fed whole things!")
-						return
+						return ITEM_INTERACT_FAILURE
 					if(!belly_target)
 						balloon_alert(user, "you can't feed [human_eater] a whole [src] as they don't appear to have a belly to fit it!")
-						return
+						return ITEM_INTERACT_FAILURE
 
 				if(swallow_whole)
 					user.balloon_alert_visible("[user] attempts to make [human_eater] consume [src] whole into their [belly_target].")
@@ -242,10 +246,13 @@
 					feed_duration = 5 SECONDS
 
 				user.setClickCooldown(user.get_attack_speed(src))
-				if(!do_after(user, feed_duration, human_eater)) return
-				if(!reagents || (reagents && !reagents.total_volume)) return
+				if(!do_after(user, feed_duration, human_eater))
+					return ITEM_INTERACT_FAILURE
+				if(!reagents || (reagents && !reagents.total_volume))
+					return ITEM_INTERACT_FAILURE
 
-				if(swallow_whole && !belly_target) return			// Just in case we lost belly mid-feed
+				if(swallow_whole && !belly_target)
+					return ITEM_INTERACT_FAILURE			// Just in case we lost belly mid-feed
 
 				if(swallow_whole)
 					add_attack_logs(user, human_eater,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
@@ -258,12 +265,12 @@
 
 			else
 				balloon_alert(user, "this creature does not seem to have a mouth!")
-				return
+				return ITEM_INTERACT_FAILURE
 
 		if(swallow_whole)
 			user.drop_item()
 			forceMove(belly_target)
-			return TRUE
+			return ITEM_INTERACT_SUCCESS
 		else if(reagents)								//Handle ingestion of the reagent.
 			playsound(eater, eating_sound, rand(10,50), 1)
 			if(reagents.total_volume)
@@ -277,6 +284,7 @@
 					reagents.trans_to_mob(eater, reagents.total_volume, CHEM_INGEST)
 				bitecount++
 				On_Consume(eater, user)
+<<<<<<< HEAD
 			return TRUE
 	else if(isliving(eater) && user.stuffing_feeder) //CHOMPAdd Start
 		var/swallow_whole = user.stuffing_feeder
@@ -305,8 +313,11 @@
 			user.drop_item()
 			forceMove(belly_target)
 			return TRUE //CHOMPAdd End
+=======
+			return ITEM_INTERACT_SUCCESS
+>>>>>>> 4760085246 (Gripper fixes (#19436))
 
-	return FALSE
+	return ITEM_INTERACT_FAILURE
 
 /obj/item/reagent_containers/food/snacks/examine(mob/user)
 	. = ..()
