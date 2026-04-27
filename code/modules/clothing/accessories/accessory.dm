@@ -331,14 +331,9 @@
 							sound_strength = "cannot hear"
 							sound = "anything"
 
-<<<<<<< HEAD
 				user.visible_message("[user] places [src] against [M]'s [body_part] and listens attentively.", "You place [src] against [their] [body_part]. You [sound_strength] [sound]. [message_holder] [message_holder2]") //Chomp edit. ([message holder] & [message_holder2])
-				return
-
-=======
-				user.visible_message("[user] places [src] against [M]'s [body_part] and listens attentively.", "You place [src] against [their] [body_part]. You [sound_strength] [sound].")
 				return ITEM_INTERACT_SUCCESS
->>>>>>> 4760085246 (Gripper fixes (#19436))
+
 	return ..(M,user)
 
 //Medals

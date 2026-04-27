@@ -126,11 +126,7 @@
 	if(canned && !user.incapacitated())
 		uncan(user)
 
-<<<<<<< HEAD
-/obj/item/reagent_containers/food/snacks/attack(mob/living/eater as mob, mob/living/user as mob, def_zone) // CHOMPEdit
-=======
 /obj/item/reagent_containers/food/snacks/attack(mob/living/eater, mob/living/user, target_zone, attack_modifier)
->>>>>>> 4760085246 (Gripper fixes (#19436))
 	if(reagents && !reagents.total_volume)
 		balloon_alert(user, "none of \the [src] left!")
 		user.drop_from_inventory(src)
@@ -284,7 +280,6 @@
 					reagents.trans_to_mob(eater, reagents.total_volume, CHEM_INGEST)
 				bitecount++
 				On_Consume(eater, user)
-<<<<<<< HEAD
 			return TRUE
 	else if(isliving(eater) && user.stuffing_feeder) //CHOMPAdd Start
 		var/swallow_whole = user.stuffing_feeder
@@ -312,10 +307,7 @@
 			user.balloon_alert_visible("forces [src] into [eater]'s [belly_target].") // CHOMPEdit
 			user.drop_item()
 			forceMove(belly_target)
-			return TRUE //CHOMPAdd End
-=======
-			return ITEM_INTERACT_SUCCESS
->>>>>>> 4760085246 (Gripper fixes (#19436))
+			return ITEM_INTERACT_SUCCESS //CHOMPAdd End
 
 	return ITEM_INTERACT_FAILURE
 
