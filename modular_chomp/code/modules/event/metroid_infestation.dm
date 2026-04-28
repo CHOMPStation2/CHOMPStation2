@@ -14,12 +14,12 @@
 	spawncount = rand(2 * severity, 4 * severity)
 
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in GLOB.machines)
-		//CHOMPEdit: Added a couple areas to the exclusion. Also made this actually work.
+		//Added a couple areas to the exclusion. Also made this actually work.
 		var/area/in_area = get_area(temp_vent)
 		if(in_area.flag_check(AREA_FORBID_EVENTS))
 			continue
 		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels))
-			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change in order to spawn.
+			if(temp_vent.network.normal_members.len > 10) //Most our networks are 40. SM is 4 and toxins is 2. This needed to change in order to spawn.
 				vents += temp_vent
 
 /datum/event/metroid_infestation/announce()
@@ -55,4 +55,4 @@
 		area_names |= metroid_area.name
 	if(area_names.len && active_metroid_event == TRUE)
 		var/english_list = english_list(area_names)
-		GLOB.command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the following areas: [english_list]", "Lifesign Alert")
+		GLOB.command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the following areas: [english_list]", "Lifesign Alert") //No sound intentionally.

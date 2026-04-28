@@ -1,6 +1,6 @@
 /obj/item/gunbox/sec_officer
 	name = "lethal armament box"
-	desc = "A secure box containing a non-lethal sidearm."
+	desc = "A secure box containing a lethal sidearm."
 	variant_gunbox = TRUE
 
 /obj/item/gunbox/sec_officer/attack_self(mob/living/user)

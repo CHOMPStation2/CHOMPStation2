@@ -26,7 +26,6 @@
 	slot_flags = SLOT_BELT|SLOT_BACK // The inventory slots this weapon can occupy. Most weapons can go on the suit slot by default, so long as you're wearing a vest.
 
 	w_class = ITEMSIZE_LARGE // Takes up more space in inventories than a pistol.
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2) // The tech levels you get from deconstructing this item.
 
 	recoil = 0 // No screenshake on firing.
 	one_handed_penalty = 15 // Slight accuracy penalty when firing one-handed.
@@ -67,7 +66,6 @@
 	slot_flags = SLOT_BELT|SLOT_BACK
 
 	w_class = ITEMSIZE_LARGE
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
 
 	recoil = 0
 	one_handed_penalty = 30
@@ -107,7 +105,6 @@
 	w_class = ITEMSIZE_LARGE
 	force = 10
 	caliber = "7.62mm"
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m762/ext

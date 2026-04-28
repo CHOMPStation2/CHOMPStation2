@@ -32,12 +32,9 @@
 /datum/modifier/mmo_drop/blade_boss_short
 	puddleitem = /obj/item/grenade/shooter/auto_explode/blade_boss_short
 
-/datum/modifier/mmo_drop/tyr_flora
-	puddleitem = /obj/item/grenade/shooter/auto_explode/tyr_flora
-
 /obj/item/grenade/shooter/auto_explode
-	icon = 'icons/effects/effects.dmi'
-	icon_state = "drop_marker"
+	icon ='modular_chomp/icons/obj/guns/precursor/tyr.dmi'
+	icon_state = "explosion_marker"
 	mouse_opacity = 0 //no touching the attack
 	spread_range = 3
 	var/fuse_time = 3.5 SECONDS
@@ -45,18 +42,6 @@
 /obj/item/grenade/shooter/auto_explode/Initialize(mapload)
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(detonate)), fuse_time, TIMER_DELETE_ME)
-
-/obj/item/grenade/shooter/auto_explode/blade_boss_long
-	spread_range = 1
-	projectile_types = list(/obj/item/projectile/bullet/astral_blade)
-
-/obj/item/grenade/shooter/auto_explode/blade_boss_short
-	spread_range = 3
-	projectile_types = list(/obj/item/projectile/bullet/astral_blade/short)
-
-/obj/item/grenade/shooter/auto_explode/tyr_flora
-	spread_range = 1
-	projectile_types = list(/obj/item/projectile/energy/neurotoxin/toxic/tyr_flora)
 
 /obj/item/grenade/shooter/auto_explode/blood_boss
 	spread_range = 2
@@ -69,6 +54,14 @@
 	range = 4
 	speed = 4
 	damage = 10
+
+/obj/item/grenade/shooter/auto_explode/blade_boss_long
+	spread_range = 1
+	projectile_types = list(/obj/item/projectile/bullet/astral_blade)
+
+/obj/item/grenade/shooter/auto_explode/blade_boss_short
+	spread_range = 3
+	projectile_types = list(/obj/item/projectile/bullet/astral_blade/short)
 
 /obj/item/grenade/shooter/auto_explode/occult_fireball
 	spread_range = 2
@@ -83,3 +76,6 @@
 
 /datum/modifier/mmo_drop/eclipse_iceball
 	puddleitem = /obj/item/grenade/shooter/auto_explode/eclipse_iceball
+
+/datum/modifier/mmo_drop/metal_tomb
+	puddleitem = /obj/structure/foamedmetal

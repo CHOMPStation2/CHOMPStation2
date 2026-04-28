@@ -72,29 +72,21 @@
 	item_list["Cooking Ingredients"] = list(
 		BIOGEN_REAGENT("Universal Enzyme", REAGENT_ID_ENZYME, 50, 3),
 		BIOGEN_ITEM("Nutri-spread", /obj/item/reagent_containers/food/snacks/spreads, 5, 30),
-		//CHOMPAdd Start - adding common condiments to the list for chefs
 		BIOGEN_REAGENT("Salt", REAGENT_ID_SODIUMCHLORIDE, 50, 2),
 		BIOGEN_REAGENT("Soy Sauce", REAGENT_ID_SOYSAUCE, 50, 3),
-		//CHOMPAdd End
 	)
 	item_list["Gardening Nutrients"] = list(
-		//CHOMPEdit Start - reduced costs of fertilisers
 		BIOGEN_ITEM("E-Z-Nutrient", /obj/item/reagent_containers/glass/bottle/eznutrient, 5, 30),
 		BIOGEN_ITEM("Left 4 Zed", /obj/item/reagent_containers/glass/bottle/left4zed, 5, 50),
 		BIOGEN_ITEM("Robust Harvest", /obj/item/reagent_containers/glass/bottle/robustharvest, 5, 50),
-		//CHOMPEdit End
-		//CHOMPAdd Start - adding additional fertilisers for botany use
 		BIOGEN_ITEM("Diethylamine", /obj/item/reagent_containers/glass/bottle/diethylamine, 5, 60),
 		BIOGEN_ITEM("Mutagen", /obj/item/reagent_containers/glass/bottle/mutagen, 15, 50),
 		BIOGEN_ITEM("Plant-B-Gone", /obj/item/reagent_containers/spray/plantbgone, 5, 50),
-		//CHOMPAdd End
 	)
-	//CHOMPAdd Start - Another source of exotic seeds
 	item_list["Exotic Seeds"] = list(
 		BIOGEN_ITEM("Mystery seed pack", /obj/item/seeds/random, 5, 150),
 		BIOGEN_ITEM("Kudzu seed pack", /obj/item/seeds/kudzuseed, 5, 100),
 	)
-	//CHOMPAdd End
 	item_list["Leather Products"] = list(
 		BIOGEN_ITEM("Wallet", /obj/item/storage/wallet, 1, 100),
 		BIOGEN_ITEM("Botanical gloves", /obj/item/clothing/gloves/botanic_leather, 1, 250),

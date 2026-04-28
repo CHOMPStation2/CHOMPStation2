@@ -41,6 +41,7 @@
 	var/obj/machinery/shieldgen/SG = our_owner.resolve()
 	if(SG)
 		SG.deployed_shields -= src
+	our_owner = null
 	. = ..()
 
 /obj/machinery/shield/attackby(obj/item/W as obj, mob/user as mob)
@@ -81,6 +82,9 @@
 	return
 
 /obj/machinery/shield/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	switch(severity)
 		if(1)
 			qdel(src)
@@ -257,6 +261,9 @@
 	return
 
 /obj/machinery/shieldgen/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	switch(severity)
 		if(1)
 			src.health /= 2 //cut health in half

@@ -12,6 +12,7 @@
 	var/datum/material/material
 	var/set_temperature = T0C + 30	//K
 	var/heating_power = 80000
+	resistance_flags = FIRE_PROOF
 
 /obj/structure/bonfire/Initialize(mapload, material_name)
 	. = ..()
@@ -181,7 +182,7 @@
 		START_PROCESSING(SSobj, src)
 		visible_message(span_warning("\The [src] starts burning!"))
 
-/obj/structure/bonfire/proc/burn()
+/obj/structure/bonfire/proc/burn_bonfire()
 	var/turf/current_location = get_turf(src)
 	current_location.hotspot_expose(1000, 500)
 	for(var/A in current_location)
@@ -236,7 +237,7 @@
 			extinguish()
 			return
 	if(!grill)
-		burn()
+		burn_bonfire()
 
 	if(burning)
 		var/W = get_fuel_amount()
@@ -290,6 +291,7 @@
 	var/next_fuel_consumption = 0
 	var/set_temperature = T0C + 20	//K
 	var/heating_power = 40000
+	resistance_flags = FIRE_PROOF
 
 /obj/structure/fireplace/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/stack/material/wood) || istype(W, /obj/item/stack/material/log) )
@@ -376,7 +378,7 @@
 		START_PROCESSING(SSobj, src)
 		visible_message(span_warning("\The [src] starts burning!"))
 
-/obj/structure/fireplace/proc/burn()
+/obj/structure/fireplace/proc/burn_bonfire()
 	var/turf/current_location = get_turf(src)
 	current_location.hotspot_expose(1000, 500)
 	for(var/A in current_location)

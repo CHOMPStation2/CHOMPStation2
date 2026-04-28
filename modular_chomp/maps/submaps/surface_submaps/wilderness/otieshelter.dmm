@@ -11,6 +11,10 @@
 	},
 /turf/simulated/floor/carpet/turcarpet/turfpack/sif,
 /area/submap/OtieShelter)
+"ad" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/carpet/turcarpet/turfpack/sif,
+/area/submap/OtieShelter)
 "ag" = (
 /obj/machinery/light{
 	dir = 8
@@ -71,7 +75,7 @@
 /area/submap/OtieShelter)
 "gN" = (
 /obj/structure/undies_wardrobe,
-/turf/simulated/floor/carpet/turcarpet,
+/turf/simulated/floor/carpet/turcarpet/turfpack/sif,
 /area/submap/OtieShelter)
 "hh" = (
 /obj/structure/window/phoronreinforced{
@@ -315,7 +319,7 @@
 /area/submap/OtieShelter)
 "vV" = (
 /obj/structure/table/woodentable,
-/turf/simulated/floor/carpet/turcarpet,
+/turf/simulated/floor/carpet/turcarpet/turfpack/sif,
 /area/submap/OtieShelter)
 "wO" = (
 /obj/structure/dogbed,
@@ -384,7 +388,7 @@
 /area/submap/OtieShelter)
 "CM" = (
 /obj/structure/closet/wardrobe,
-/turf/simulated/floor/carpet/turcarpet,
+/turf/simulated/floor/carpet/turcarpet/turfpack/sif,
 /area/submap/OtieShelter)
 "EE" = (
 /obj/machinery/door/airlock/engineering,
@@ -467,12 +471,6 @@
 "Mz" = (
 /turf/simulated/wall/r_wall,
 /area/submap/OtieShelter)
-"MK" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/carpet/turcarpet,
-/area/submap/OtieShelter)
 "Nd" = (
 /obj/structure/table/marble,
 /obj/item/radio/phone,
@@ -481,7 +479,7 @@
 "Nh" = (
 /obj/item/bedsheet/browndouble,
 /obj/structure/bed/double/padded,
-/turf/simulated/floor/carpet/turcarpet,
+/turf/simulated/floor/carpet/turcarpet/turfpack/sif,
 /area/submap/OtieShelter)
 "Np" = (
 /obj/structure/window/phoronreinforced{
@@ -538,9 +536,6 @@
 "Qr" = (
 /turf/template_noop,
 /area/template_noop)
-"Ro" = (
-/turf/simulated/floor/carpet/turcarpet,
-/area/submap/OtieShelter)
 "RW" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -708,7 +703,7 @@ kF
 Of
 Mz
 Nh
-MK
+ac
 gN
 Mz
 Qr
@@ -730,8 +725,8 @@ lQ
 IF
 Mz
 vV
-Ro
-Ro
+ab
+ab
 Mz
 Qr
 Qr
@@ -752,8 +747,8 @@ mu
 Hk
 Mz
 CM
-Ro
-Ro
+ab
+ab
 Mz
 gr
 Qr
@@ -774,7 +769,7 @@ Px
 Px
 Mz
 Mz
-fw
+ad
 Mz
 mJ
 rb

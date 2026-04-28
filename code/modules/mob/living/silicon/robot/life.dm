@@ -195,12 +195,10 @@
 		see_in_dark = 8
 		see_invisible = SEE_INVISIBLE_LEVEL_TWO
 		fullbright = TRUE
-	/* //ChompEDIT START - remove this for now
 	else if (sight_mode & BORGANOMALOUS)
 		see_in_dark = 8
 		see_invisible = INVISIBILITY_SHADEKIN
 		fullbright = TRUE
-	*/ //ChompEDIT END
 	else if (!seedarkness)
 		sight &= ~SEE_MOBS
 		sight &= ~SEE_TURFS

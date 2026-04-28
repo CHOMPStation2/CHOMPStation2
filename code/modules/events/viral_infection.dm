@@ -22,18 +22,19 @@ GLOBAL_LIST_EMPTY(event_viruses) // so that event viruses are kept around for ad
 		viruses += D
 
 /datum/event/viral_infection/announce()
-	/*var/level
+	var/level
+	var/virus_msg
 	if (severity == EVENT_LEVEL_MUNDANE)
 		return
 	else if (severity == EVENT_LEVEL_MODERATE)
 		level = pick("one", "two", "three", "four")
+		virus_msg = ANNOUNCER_MSG_BIOHAZARD_LOW
 	else
-		level = "five"*/
-	// Chomp removal
+		level = "five"
+		virus_msg = ANNOUNCER_MSG_BIOHAZARD_FIVE
 
 	if (severity == EVENT_LEVEL_MAJOR || prob(60))
-		command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [station_name()]. All personnel must contain the outbreak.", "Viral Outbreak", new_sound = 'sound/AI/outbreak7.ogg')
-		// Chomp edit: Changed "Biohazard Alert" to "Viral Outbreak" and also changed level level 5 to level 7. Lower = More urgent.
+		command_announcement.Announce("Confirmed outbreak of level [level] biohazard aboard \the [station_name()]. All personnel must contain the outbreak.", "Viral Outbreak", new_sound = virus_msg) // Chomp edit: Changed "Biohazard Alert" to "Viral Outbreak" and also changed level level 5 to level 7. Lower = More urgent.
 
 /datum/event/viral_infection/start()
 	if(!viruses.len) return

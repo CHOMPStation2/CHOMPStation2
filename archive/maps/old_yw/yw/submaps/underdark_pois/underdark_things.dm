@@ -121,7 +121,7 @@
 /obj/random/multiple/underdark/ores/item_to_spawn()
 	return pick(
 				prob(9);list(
-							/obj/item/storage/bag/ore,
+							/obj/item/ore_bag,
 							/obj/item/shovel,
 							/obj/item/ore/glass,
 							/obj/item/ore/glass,
@@ -141,7 +141,7 @@
 							/obj/item/ore/hydrogen
 							),
 				prob(7);list(
-							/obj/item/storage/bag/ore,
+							/obj/item/ore_bag,
 							/obj/item/pickaxe,
 							/obj/item/ore/osmium,
 							/obj/item/ore/osmium,

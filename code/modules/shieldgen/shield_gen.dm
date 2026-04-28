@@ -25,7 +25,7 @@
 	use_power = USE_POWER_OFF	//doesn't use APC power
 	interact_offline = TRUE // don't check stat & NOPOWER|BROKEN for our UI. We check BROKEN ourselves.
 	var/id //for button usage
-	var/datum/looping_sound/shield_generator/shield_hum // CHOMPAdd
+	var/datum/looping_sound/shield_generator/shield_hum
 
 /obj/machinery/shield_gen/advanced
 	name = "advanced bubble shield generator"
@@ -42,13 +42,13 @@
 			if(get_dir(cap, src) == cap.dir)
 				capacitors |= cap
 				cap.owned_gen = src
-	shield_hum = new(list(src), FALSE) // CHOMPAdd
+	shield_hum = new(list(src), FALSE)
 	. = ..()
 	AddElement(/datum/element/climbable)
 
 /obj/machinery/shield_gen/Destroy()
 	QDEL_LIST_NULL(field)
-	QDEL_NULL(shield_hum) // CHOMPAdd
+	QDEL_NULL(shield_hum)
 	return ..()
 
 /obj/machinery/shield_gen/emag_act(var/remaining_charges, var/mob/user)
@@ -246,7 +246,7 @@
 			to_chat(M, "[icon2html(src, M.client)] You hear heavy droning start up.")
 		for(var/obj/effect/energy_field/E in field) // Update the icons here to ensure all the shields have been made already.
 			E.update_icon()
-		shield_hum.start() // CHOMPAdd
+		shield_hum.start()
 	else
 		for(var/obj/effect/energy_field/D in field)
 			field.Remove(D)
@@ -255,27 +255,24 @@
 
 		for(var/mob/M in view(5,src))
 			to_chat(M, "[icon2html(src, M.client)] You hear heavy droning fade out.")
-		shield_hum.stop() // CHOMPAdd
-// CHOMPAdd Start - Fills gaps when meteors happen
+		shield_hum.stop()
+
 /obj/machinery/shield_gen/proc/fill_diffused()
 	if(active)
 		var/list/covered_turfs = get_shielded_turfs()
 		var/turf/T = get_turf(src)
-		var/obj/effect/energy_field/E
 		if(T in covered_turfs)
 			covered_turfs.Remove(T)
 		for(var/turf/O in covered_turfs)
 			if(locate(/obj/effect/energy_field, O) || locate(/obj/machinery/pointdefense, orange(2, O)))
 				continue
-			E = new(O, src)
-			field.Add(E)
-// CHOMPAdd End
+			new /obj/effect/energy_field(O, src)
 
 /obj/machinery/shield_gen/update_icon()
 	if(stat & BROKEN)
 		icon_state = "broke"
 		set_light(0)
-		shield_hum.stop() // CHOMPAdd
+		shield_hum.stop()
 	else
 		if (src.active)
 			icon_state = "generator1"

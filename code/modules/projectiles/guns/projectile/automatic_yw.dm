@@ -13,7 +13,6 @@
 	slot_flags = 0
 	max_shells = 75
 	caliber = "mauser"
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 2)
 	ammo_type = "/obj/item/ammo_casing/a792x57m/lmg" // Is this really needed anymore?
 	fire_sound = 'sound/weapons/mg42.ogg'
 	load_method = MAGAZINE

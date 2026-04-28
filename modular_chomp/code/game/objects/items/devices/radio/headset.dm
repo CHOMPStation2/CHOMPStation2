@@ -24,7 +24,7 @@
 	var/teley = 16
 	var/telez = 0	//Set this in-round if you want a return point with fake health
 
-/obj/item/radio/headset/event/equipped(var/mob/living/carbon/human/H)
+/obj/item/radio/headset/event/equipped(mob/living/carbon/human/H, slot)
 	if(H && ((H.l_ear == src) || (H.r_ear == src)))
 		wearer = H
 		if(light_power)
@@ -46,7 +46,7 @@
 			H.species.slowdown = slowdown_to_set
 			H.species.item_slowdown_mod = 0
 
-/obj/item/radio/headset/event/dropped(var/mob/living/carbon/human/H)
+/obj/item/radio/headset/event/dropped(mob/living/carbon/human/H, equipping, slot)
 	..()
 	if(wearer)
 		wearer = null

@@ -253,6 +253,7 @@
 
 	glass_name = REAGENT_ID_OILSLIDE
 	glass_desc = "Tasty, if you're a synth, not so much for organics."
+	wiki_flag = WIKI_DRINK
 
 /datum/reagent/ethanol/sitonmyface
 	name = REAGENT_SITONMYFACE
@@ -520,6 +521,8 @@
 
 	glass_name = "enraged arachnid slammer"
 	glass_desc = "A pint of Enraged Arachnid Slammer. It bubbles and sparkles fiercly as if it was in a berserking state!"
+
+	wiki_flag = WIKI_DRINK
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -699,5 +702,7 @@
 	description = "A dry mix for making delicious blondies."
 	reagent_state = SOLID
 	color = "#f3b44e"
+
+	wiki_flag = WIKI_FOOD
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_FOOD

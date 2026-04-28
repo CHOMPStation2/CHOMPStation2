@@ -13,7 +13,6 @@
 	slot_flags = SLOT_BELT|SLOT_BACK
 	w_class = ITEMSIZE_LARGE //CHOMP Edit - huge was dumb for this.
 	force = 10
-	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
 	matter = list(MAT_STEEL = 2000)
 	projectile_type = /obj/item/projectile/beam/midlaser
 	one_handed_penalty = 30
@@ -68,7 +67,6 @@
 	over function - despite their flashy looks, most were completely unremarkable one way or another as weapons and used very standard firing mechanisms."
 	icon_state = "lrifle"
 	item_state = "lrifle"
-	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 3)
 
 /*
  * Retro Laser Rifle
@@ -94,6 +92,21 @@
 /*
  * Alien Pistol
  */
+/obj/item/gun/energy/alien
+	name = "alien pistol"
+	desc = "A weapon that works very similarly to a traditional energy weapon. How this came to be will likely be a mystery for the ages."
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_pistol)
+	icon = 'icons/obj/gun.dmi' // CHOMPStation Edit: Override back to base gun.dmi
+	icon_state = "alienpistol"
+	item_state = "alienpistol"
+	fire_delay = 9 //CHOMPedit changed cooldown from 10 to 9.
+	charge_cost = 380 // CHOMPedit changed from 480 to 380. Aka five shots to six shots.
+
+	projectile_type = /obj/item/projectile/beam/precursor //CHOMPedit changed beam type
+	cell_type = /obj/item/cell/device/weapon/recharge/alien // Self charges.
+	modifystate = "alienpistol"
+	battery_lock = 1 //CHOMPedit adds battery lock.
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /datum/category_item/catalogue/anomalous/precursor_a/alien_pistol
 	name = "Precursor Alpha Weapon - Appendageheld Laser"
@@ -123,24 +136,6 @@
 	may have caused it to degrade, yet still remain functional at a reduced capability." //CHOMPedit changed description to be accurate with new projectile
 	value = CATALOGUER_REWARD_MEDIUM
 
-/obj/item/gun/energy/alien
-	name = "alien pistol"
-	desc = "A weapon that works very similarly to a traditional energy weapon. How this came to be will likely be a mystery for the ages."
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_pistol)
-	icon = 'icons/obj/gun.dmi' // CHOMPStation Edit: Override back to base gun.dmi
-	icon_state = "alienpistol"
-	item_state = "alienpistol"
-	fire_delay = 9 //CHOMPedit changed cooldown from 10 to 9.
-	charge_cost = 380 // CHOMPedit changed from 480 to 380. Aka five shots to six shots.
-
-	projectile_type = /obj/item/projectile/beam/precursor //CHOMPedit changed beam type
-	cell_type = /obj/item/cell/device/weapon/recharge/alien // Self charges.
-	origin_tech = list(TECH_COMBAT = 8, TECH_MAGNET = 7)
-	modifystate = "alienpistol"
-	battery_lock = 1 //CHOMPedit adds battery lock.
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
-
-
 /*
  * Antique Laser Gun
  */
@@ -157,7 +152,6 @@
 	w_class = ITEMSIZE_NORMAL
 	unacidable = TRUE
 	projectile_type = /obj/item/projectile/beam
-	origin_tech = null
 	fire_delay = 10		//Old pistol
 	charge_cost = 480	//to compensate a bit for self-recharging
 	cell_type = /obj/item/cell/device/weapon/recharge/captain
@@ -276,7 +270,6 @@
 	icon_state = "lasercannon"
 	item_state = null
 	wielded_item_state = "mhdhowitzer-wielded" //Placeholder
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 6, TECH_POWER = 6)  //ChompEdit improved.
 	slot_flags = SLOT_BELT|SLOT_BACK
 	projectile_type = /obj/item/projectile/beam/heavylaser/cannon
 	battery_lock = 0  //ChompEdit  This thing is worthless with this.
@@ -307,7 +300,6 @@
 	icon = 'icons/obj/gun.dmi' // CHOMPStation Edit: Override back to base gun.dmi
 	icon_state = "xray"
 	item_state = "xray"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_MAGNET = 2)
 	projectile_type = /obj/item/projectile/beam/xray
 	charge_cost = 200
 	w_class = ITEMSIZE_LARGE //CHOMP Edit. - huge is too big, this thing hits for 25
@@ -326,7 +318,6 @@
 	item_state = "sniper"
 	item_state_slots = list(slot_r_hand_str = "lsniper", slot_l_hand_str = "lsniper")
 	wielded_item_state = "lsniper-wielded"
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 5, TECH_POWER = 4)
 	projectile_type = /obj/item/projectile/beam/sniper
 	slot_flags = SLOT_BACK
 	actions_types = list(/datum/action/item_action/use_scope)
@@ -360,7 +351,6 @@
 	item_state = "laser"
 	icon_state = "scatter"
 	desc = "A strange Almachi weapon, utilizing a refracting prism to turn a single laser blast into a diverging cluster."
-	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 1, TECH_MATERIAL = 4)
 
 	projectile_type = /obj/item/projectile/scatter/laser
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
@@ -380,7 +370,6 @@
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_NORMAL
 	force = 10
-	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2)
 	matter = list(MAT_STEEL = 2000)
 	fire_sound = 'sound/weapons/mandalorian.ogg'
 	projectile_type = /obj/item/projectile/beam/imperial
@@ -397,7 +386,6 @@
 	slot_flags = SLOT_BELT|SLOT_BACK
 	w_class = ITEMSIZE_LARGE
 	force = 15
-	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
 	matter = list(MAT_STEEL = 2000)
 	projectile_type = /obj/item/projectile/beam/mininglaser
 
@@ -420,7 +408,6 @@
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_NORMAL
 	force = 8
-	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 1) //Older rifle - less tech
 	matter = list(MAT_STEEL = 1500)
 	projectile_type = /obj/item/projectile/beam/midlaser
 
@@ -434,7 +421,6 @@
 	choice \"fight-stopper\" of barkeeps. One shot is all it takes... so they say."
 	icon_state = "mono"
 	item_state = "shotgun"
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 4, TECH_POWER = 3)
 	projectile_type = /obj/item/projectile/beam/sniper
 	slot_flags = SLOT_BACK
 	actions_types = list(/datum/action/item_action/aim_down_sights)

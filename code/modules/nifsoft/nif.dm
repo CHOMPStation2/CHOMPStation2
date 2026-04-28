@@ -104,6 +104,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 /obj/item/nif/proc/unregister_human()
 	UnregisterSignal(human, COMSIG_MOB_DEATH)
+	human.nif = null
 
 //Destructor cleans up references
 /obj/item/nif/Destroy()
@@ -188,6 +189,9 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 //EMP adds wear and disables all nifsoft
 /obj/item/nif/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	notify("Danger! Significant electromagnetic interference!",TRUE)
 	for(var/nifsoft in nifsofts)
 		if(nifsoft)
@@ -681,7 +685,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 ////////////////////////////////
 // Special Promethean """surgery"""
-/obj/item/nif/attack(mob/living/M, mob/living/user, var/target_zone)
+/obj/item/nif/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(!ishuman(M) || !ishuman(user) || (M == user))
 		return ..()
 
@@ -691,11 +695,11 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	if(istype(T.species,/datum/species/shapeshifter/promethean) && target_zone == BP_TORSO)
 		if(T.w_uniform || T.wear_suit)
 			to_chat(user,span_warning("Remove any clothing they have on, as it might interfere!"))
-			return
+			return ITEM_INTERACT_FAILURE
 		var/obj/item/organ/external/eo = T.get_organ(BP_TORSO)
 		if(!T)
 			to_chat(user,span_warning("They should probably regrow their torso first."))
-			return
+			return ITEM_INTERACT_FAILURE
 		U.visible_message(span_notice("[U] begins installing [src] into [T]'s chest by just stuffing it in."),
 		span_notice("You begin installing [src] into [T]'s chest by just stuffing it in."),
 		"There's a wet SQUISH noise.")
@@ -705,6 +709,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			eo.implants |= src
 			implant(T)
 			playsound(T,'sound/effects/slime_squish.ogg',50,1)
+			return ITEM_INTERACT_SUCCESS
 	else
 		return ..()
 
