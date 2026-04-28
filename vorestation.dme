@@ -5265,7 +5265,6 @@
 #include "modular_chomp\code\_global_vars\list\names.dm"
 #include "modular_chomp\code\_helpers\_lists.dm"
 #include "modular_chomp\code\_onclick\hud\alert.dm"
-#include "modular_chomp\code\ATMOSPHERICS\atmospherics.dm"
 #include "modular_chomp\code\ATMOSPHERICS\components\station_boiler.dm"
 #include "modular_chomp\code\ATMOSPHERICS\components\station_boiler_radiator.dm"
 #include "modular_chomp\code\ATMOSPHERICS\components\unary\vent_pump.dm"
