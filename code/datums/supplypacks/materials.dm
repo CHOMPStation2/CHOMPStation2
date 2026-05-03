@@ -255,7 +255,7 @@
 /datum/supply_pack/materials/verdantium50
 	name = "50 verdantium ingots"
 	contains = list(/obj/fiftyspawner/verdantium)
-	cost = 1000
+	cost = 1500 //CHOMPEdit 1000->1500
 	containertype = /obj/structure/closet/crate/grayson
 	containername = "Verdantium ingots crate"
 
