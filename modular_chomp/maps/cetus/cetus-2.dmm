@@ -2081,6 +2081,22 @@
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
+"adK" = (
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 5
+	},
+/obj/machinery/computer/guestpass{
+	pixel_y = -25;
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_four)
+"adL" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/crew_quarters/heads/sc/chief)
 "adR" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -5213,6 +5229,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/sc/chief)
 "bha" = (
@@ -6786,6 +6806,10 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/bunsen_burner{
+	pixel_y = 24;
+	pixel_x = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "bIa" = (
@@ -7773,6 +7797,7 @@
 	},
 /obj/effect/floor_decal/spline/plain/three_quarters,
 /obj/machinery/hologram/holopad,
+/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/crew_quarters/cetus/atrium/primary)
 "caA" = (
@@ -11422,6 +11447,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/Research_Lab)
@@ -15126,7 +15154,6 @@
 /turf/simulated/floor/bluegrid,
 /area/medical/Genetics_Lab)
 "eBb" = (
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -15136,6 +15163,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/sc/chief)
@@ -27732,6 +27763,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/rnd/Research_Lab)
 "iQg" = (
@@ -40417,6 +40449,10 @@
 	dir = 4;
 	pixel_x = -23
 	},
+/obj/machinery/bunsen_burner{
+	pixel_y = 24;
+	pixel_x = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/Chemistry)
 "nmk" = (
@@ -42744,6 +42780,10 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/machinery/computer/guestpass{
+	pixel_y = -25;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/servicecloset)
 "ofP" = (
@@ -42931,6 +42971,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/Chemistry)
 "ojh" = (
@@ -45691,11 +45732,6 @@
 /turf/simulated/wall,
 /area/medical/Genetics_Lab)
 "pcY" = (
-/obj/structure/disposalpipe/sortjunction{
-	dir = 1;
-	name = "CE Office";
-	sortType = "CE Office"
-	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
 /obj/effect/floor_decal/industrial/warning{
@@ -45706,6 +45742,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/sc/chief)
 "pdd" = (
@@ -51303,6 +51343,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Engineering_Workshop)
 "qPe" = (
@@ -51632,6 +51673,7 @@
 	},
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/spline/fancy/wood/three_quarters,
+/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/crew_quarters/cetus/cafeteriaf2)
 "qWa" = (
@@ -57385,6 +57427,7 @@
 /obj/effect/landmark{
 	name = "Observer-Start"
 	},
+/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/hallway/primary/seconddeck/dockhallway)
 "sTm" = (
@@ -58460,6 +58503,7 @@
 	icon_state = "6-9"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/rnd/Research_Lab)
 "tkE" = (
@@ -65106,14 +65150,11 @@
 /area/teleporter/arrivals)
 "vxY" = (
 /obj/structure/closet/secure_closet/engineering_welding,
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Engineering_Workshop)
 "vyk" = (
@@ -65282,6 +65323,8 @@
 	dir = 8
 	},
 /obj/structure/railing/overhang/hazard,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/heads/sc/chief)
 "vBW" = (
@@ -102627,7 +102670,7 @@ alH
 taE
 abg
 wgI
-jKZ
+adK
 bfy
 qZA
 bfy
@@ -127627,7 +127670,7 @@ iyN
 sOg
 bgW
 vBK
-kdt
+adL
 qOq
 vxY
 tdr
