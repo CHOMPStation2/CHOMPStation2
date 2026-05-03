@@ -332,6 +332,7 @@
 	)
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	load_method = MAGAZINE
+	manual_chamber = FALSE
 	muzzle_velocity = 910
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
