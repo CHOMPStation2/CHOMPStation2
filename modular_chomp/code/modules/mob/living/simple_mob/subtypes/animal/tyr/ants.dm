@@ -119,21 +119,25 @@
 	glow_intensity = 2
 	glow_toggle = TRUE
 	var/exploded = FALSE
-	var/explosion_delay_lower	= 2 SECOND	// Lower bound for explosion delay.
-	var/explosion_delay_upper	= 3 SECONDS	// Upper bound.
+	var/explosion_delay_lower	= 3 SECOND	// Lower bound for explosion delay.
+	var/explosion_delay_upper	= 4 SECONDS	// Upper bound.
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/agate/proc/explode()
 	if(src && !exploded)
 		visible_message(span_danger("\The [src]'s body detonates!"))
 		exploded = TRUE
-		explosion(src.loc, 3, 2, 1, 1)
+		explosion(src.loc, 0, 3, 0, 0)
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/agate/do_special_attack(atom/A)
+/mob/living/simple_mob/animal/tyr/mineral_ants/agate/death()
 	visible_message(span_critical("\The [src]'s body begins to rupture!"))
 	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
 	animate(src, color = "#000000", time = 0.1 SECONDS, loop = ceil(delay/2))
 	animate(color = "#FF0000", time = 0.1 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(explode)), delay, TIMER_DELETE_ME)
+	return ..()
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/agate/do_special_attack(atom/A)
+	adjustBruteLoss(30)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/quartz //irl quartz is apparently tough?
 	name = "quartz metal ant"
@@ -353,8 +357,8 @@
 		/obj/item/stack/material/gold = 10
 		)
 	var/exploded = FALSE
-	var/explosion_delay_lower	= 5 SECOND	// Lower bound for explosion delay.
-	var/explosion_delay_upper	= 8 SECONDS	// Upper bound.
+	var/explosion_delay_lower	= 4 SECOND	// Lower bound for explosion delay.
+	var/explosion_delay_upper	= 5 SECONDS	// Upper bound.
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/gold/proc/explode()
 	if(src && !exploded)

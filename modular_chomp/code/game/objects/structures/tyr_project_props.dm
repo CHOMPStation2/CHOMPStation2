@@ -626,3 +626,10 @@
 	info = "We need serious back up if we are to stay here long term. Random folks keep stumbling upon the sivian side and blasting, unsure if they are bounty hunters, or maniacs but no SOL attention yet.<BR>\
 	The other day we had reports of masked and hooded men hovering over lava, although that may be disregarded. We found mold and mushrooms in some of our rations, and there was no physical sign of them.<BR>\
 	Although Rift Watchers may be stalking this location. The ants are also adapting to us and our gear. We need something, a simple mecha will do."
+
+/obj/item/paper/tyr_notes/astral_e
+	name = "The Astral Houses"
+	info = "Our orginization is split into three houses like we once had, but our foundation is firmer then before. One house for the mind, one for the soul and one for the body.<BR>\
+	The house of the mind shall focus upon our research, furthering our way torwards the bright future.<BR>\
+	The house of the soul shall focus upon us, keeping out spirits high and focus narrow.<BR>\
+	Lastly, the house of the body shall provide the most fierce of protection."

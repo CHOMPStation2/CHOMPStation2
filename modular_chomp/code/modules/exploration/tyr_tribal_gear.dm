@@ -341,3 +341,63 @@
 				var/atom/target_zone = get_edge_target_turf(user,get_dir(user, target))
 				if(!target.anchored)
 					target.throw_at(target_zone, 5, 2, user, FALSE)
+
+/obj/item/melee/energy/tyr_chainsaw
+	name = "tyrian butcher blade"
+	slot_flags = SLOT_BELT | SLOT_BACK
+	desc = "What appears to be a weaponized chainsaw."
+	description_info = "Utilizes charge, recharges with time"
+	lcolor = null
+	colorable = FALSE
+
+	active_force = 60
+	active_armourpen = 20
+
+	attackspeed = 15
+	defend_chance = 0
+	projectile_parry_chance = 0
+
+	active_w_class = ITEMSIZE_HUGE
+	can_cleave = TRUE
+
+	hitcost = 320
+	use_cell = TRUE
+
+	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
+	icon_state = "chainsaw"
+	item_state = "chainsaw"
+
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/obj/guns/precursor/lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
+		)
+
+/obj/item/melee/energy/tyr_chainsaw/Initialize(mapload)
+	. = ..()
+	bcell = new/obj/item/cell/device/weapon/recharge/alien/tyr(src)
+
+/obj/item/shield/tyr_shield
+	name = "tyrian portable energy barrier"
+	desc = "A shield with a strange property of reducing the damage of projectiles instead of being effective at blocking them."
+	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
+	icon_state = "barrier"
+	item_state = "barrier"
+
+	slot_flags = SLOT_BACK
+
+	w_class = ITEMSIZE_LARGE
+	attack_verb = list("shoved", "bashed")
+	base_block_chance = 15
+
+/obj/item/shield/tyr_shield/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+	if(user.incapacitated())
+		return 0
+	var/bad_arc = reverse_direction(user.dir) //arc of directions from which we cannot block
+	if(check_shield_arc(user, bad_arc, damage_source, attacker))
+		if(prob(get_block_chance(user, damage, damage_source, attacker)))
+			user.visible_message(span_danger("\The [user] blocks [attack_text] with \the [src]!"))
+			return 1
+	else
+		var/obj/item/projectile/P = damage_source
+		P.damage = P.damage / 2
+		return 0
