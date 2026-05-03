@@ -142,6 +142,7 @@
 	conductive = 0
 	hardness = 5
 	integrity = 40
+	supply_conversion_value = 0.25
 	wiki_flag = WIKI_SPOILER
 
 /datum/material/cotton
@@ -155,6 +156,7 @@
 	conductive = 0
 	hardness = 5
 	integrity = 10
+	supply_conversion_value = 1
 	stack_type = /obj/item/stack/material/cotton
 
 /datum/material/fibers
@@ -171,4 +173,8 @@
 	pass_stack_colors = TRUE
 	hardness = 5
 	integrity = 5
+<<<<<<< HEAD
 	stack_type = /obj/item/stack/material/fiber //CHOMPEdit
+=======
+	supply_conversion_value = 1
+>>>>>>> 8bbb5a00a9 (Cargo Material Purchasing (#19435))
