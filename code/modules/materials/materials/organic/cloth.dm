@@ -173,8 +173,5 @@
 	pass_stack_colors = TRUE
 	hardness = 5
 	integrity = 5
-<<<<<<< HEAD
 	stack_type = /obj/item/stack/material/fiber //CHOMPEdit
-=======
 	supply_conversion_value = 1
->>>>>>> 8bbb5a00a9 (Cargo Material Purchasing (#19435))
