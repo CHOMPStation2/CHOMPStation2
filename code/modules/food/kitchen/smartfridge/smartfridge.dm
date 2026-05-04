@@ -80,6 +80,10 @@
 		else
 			soundloop.start()
 			playing_sound = TRUE
+
+/obj/machinery/smartfridge/update_icon()
+	cut_overlays()
+	if(panel_open)
 		add_overlay("[icon_base]-panel")
 
 	if(stat & (BROKEN))

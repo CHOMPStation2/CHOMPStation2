@@ -173,6 +173,50 @@
 	return
 // VOREStation Add End
 
+//CHOMPStation Add Start - Other job bitflags
+/datum/preference/numeric/human/job_other_high
+	savefile_key = "job_other_high"
+	savefile_identifier = PREFERENCE_CHARACTER
+	category = PREFERENCE_CATEGORY_NON_CONTEXTUAL
+	can_randomize = FALSE
+	minimum = 0
+	maximum = 65535
+
+/datum/preference/numeric/human/job_other_high/create_default_value()
+	return 0
+
+/datum/preference/numeric/human/job_other_high/apply_to_human(mob/living/carbon/human/target, value)
+	return
+
+/datum/preference/numeric/human/job_other_med
+	savefile_key = "job_other_med"
+	savefile_identifier = PREFERENCE_CHARACTER
+	category = PREFERENCE_CATEGORY_NON_CONTEXTUAL
+	can_randomize = FALSE
+	minimum = 0
+	maximum = 65535
+
+/datum/preference/numeric/human/job_other_med/create_default_value()
+	return 0
+
+/datum/preference/numeric/human/job_other_med/apply_to_human(mob/living/carbon/human/target, value)
+	return
+
+/datum/preference/numeric/human/job_other_low
+	savefile_key = "job_other_low"
+	savefile_identifier = PREFERENCE_CHARACTER
+	category = PREFERENCE_CATEGORY_NON_CONTEXTUAL
+	can_randomize = FALSE
+	minimum = 0
+	maximum = 65535
+
+/datum/preference/numeric/human/job_other_low/create_default_value()
+	return 0
+
+/datum/preference/numeric/human/job_other_low/apply_to_human(mob/living/carbon/human/target, value)
+	return
+//CHOMPStation Add End
+
 // Alternate option preference (0-2)
 
 /datum/preference/numeric/human/alternate_option
@@ -428,10 +472,12 @@
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_medsci_med, pref.read_preference(/datum/preference/numeric/human/job_medsci_med) | pref.read_preference(/datum/preference/numeric/human/job_medsci_high))
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_engsec_med, pref.read_preference(/datum/preference/numeric/human/job_engsec_med) | pref.read_preference(/datum/preference/numeric/human/job_engsec_high))
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_talon_med, pref.read_preference(/datum/preference/numeric/human/job_talon_med) | pref.read_preference(/datum/preference/numeric/human/job_talon_high)) //VOREStation Add
+	pref.write_preference_by_type(/datum/preference/numeric/human/job_other_med, pref.read_preference(/datum/preference/numeric/human/job_other_med) | pref.read_preference(/datum/preference/numeric/human/job_other_high)) //CHOMPStation Add
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_civilian_high, 0)
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_medsci_high, 0)
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_engsec_high, 0)
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_talon_high, 0) //VOREStation Add
+	pref.write_preference_by_type(/datum/preference/numeric/human/job_other_high, 0) //CHOMPStation Add
 
 // Level is equal to the desired new level of the job. So for a value of 4, we want to disable the job.
 /datum/category_item/player_setup_item/occupation/proc/SetJobDepartment(var/datum/job/job, var/level)
@@ -461,6 +507,12 @@
 			med_type = /datum/preference/numeric/human/job_talon_med
 			low_type = /datum/preference/numeric/human/job_talon_low
 		//VOREStation Add End
+		//CHOMPStation Add
+		if(OTHER)
+			high_type = /datum/preference/numeric/human/job_other_high
+			med_type = /datum/preference/numeric/human/job_other_med
+			low_type = /datum/preference/numeric/human/job_other_low
+		//CHOMPStation Add End
 		else
 			return 0
 
@@ -532,7 +584,7 @@
 					return read_preference(/datum/preference/numeric/human/job_engsec_med)
 				if(3)
 					return read_preference(/datum/preference/numeric/human/job_engsec_low)
-		//VOREStation Add
+		/*//VOREStation Add //CHOMPEdit - Disable Start
 		if(TALON)
 			switch(level)
 				if(1)
@@ -541,5 +593,15 @@
 					return read_preference(/datum/preference/numeric/human/job_talon_med)
 				if(3)
 					return read_preference(/datum/preference/numeric/human/job_talon_low)
-		//VOREStation Add End
+		*///VOREStation Add End //CHOMPEdit - Disable End
+		//CHOMPStation Add
+		if(OTHER)
+			switch(level)
+				if(1)
+					return read_preference(/datum/preference/numeric/human/job_other_high)
+				if(2)
+					return read_preference(/datum/preference/numeric/human/job_other_med)
+				if(3)
+					return read_preference(/datum/preference/numeric/human/job_other_low)
+		//CHOMPStation Add End
 	return 0
