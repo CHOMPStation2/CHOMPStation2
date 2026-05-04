@@ -333,7 +333,7 @@
 	z = Z_LEVEL_CRYOGAIA_MINE
 	name = "Subterranian depths"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_PERSIST
-	base_turf = /turf/simulated/floor/indoorrocks
+	base_turf = /turf/simulated/mineral/floor
 	holomap_legend_x = 220
 	holomap_legend_y = 160
 	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X + CRYOGAIA_MAP_SIZE*1
