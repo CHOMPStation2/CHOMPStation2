@@ -79,3 +79,10 @@
 
 /datum/modifier/mmo_drop/metal_tomb
 	puddleitem = /obj/structure/foamedmetal
+
+/obj/item/grenade/shooter/auto_explode/eclipse_dagger
+	spread_range = 4
+	projectile_types = list(/obj/item/projectile/energy/astral_collective/dagger)
+
+/datum/modifier/mmo_drop/eclipse_dagger
+	puddleitem = /obj/item/grenade/shooter/auto_explode/eclipse_dagger

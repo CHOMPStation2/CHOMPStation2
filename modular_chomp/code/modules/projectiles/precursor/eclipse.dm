@@ -144,33 +144,27 @@
 /obj/item/projectile/energy/astral_collective
 	name = "abnormal energy"
 	speed = 3
-	damage = 28 //roughly 25 with intended armour
-	damage_type = BURN //BRUTE, BURN, TOX, OXY, CLONE, HALLOSS, ELECTROCUTE, BIOACID, SEARING are the only things that should be in here
-	check_armour = "laser" //Defines what armor to use when it hits things.  Must be set to bullet, laser, energy,or bomb	//Cael - bio and rad are also valid
+	damage = 28
+	damage_type = BURN
+	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
+	icon_state = "laser"
+	check_armour = "laser"
 
-/obj/item/projectile/energy/astral_collective/anti_mecha
-	damage_type = BIOACID
-	icon_state = "declone"
-
-/obj/item/projectile/energy/astral_collective/armour_breaker
-	damage = 10
-	dephasing = TRUE
-	hits_phased = TRUE
-	icon_state = "fuel-deuterium"
-	penetrating = 10
-	armor_penetration = 100
-
-/obj/item/projectile/energy/astral_collective/searing
+/obj/item/projectile/energy/astral_collective/basic
 	damage_type = SEARING
-	icon_state = "bolter"
 
-/obj/item/projectile/energy/astral_collective/green
-	icon_state = "energy"
-	irradiate = 40
+/obj/item/projectile/energy/astral_collective/spear
+	icon_state = "spear"
+	damage = 20
+	armor_penetration = 30
 
-/obj/item/projectile/energy/astral_collective/particle
-	damage = 1
-	armor_penetration = 100
-	icon_state = "particle"
-	incendiary = 1
+/obj/item/projectile/energy/astral_collective/fire
+	icon_state = "fire"
+	damage = 10
+	incendiary = 2
 	flammability = 3
+
+/obj/item/projectile/energy/astral_collective/dagger
+	damage = 8
+	armor_penetration = 60
+	icon_state = "dagger"

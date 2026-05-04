@@ -266,3 +266,6 @@
 2026-04-28:
   Diana:
   - bugfix: Borgs can use material sheets in their grippers once again.
+2026-04-29:
+  Diana:
+  - bugfix: Fixes a critical bug that prevented use of items on self or others.

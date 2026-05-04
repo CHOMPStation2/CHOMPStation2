@@ -291,9 +291,9 @@
 	melee_damage_lower = 40
 	melee_damage_upper = 40
 	attack_armor_pen = 40
-	melee_attack_delay = 2.5 SECONDS
+	melee_attack_delay = 2.75 SECONDS
 	movement_cooldown = 4
-	special_attack_cooldown = 8 SECONDS
+	special_attack_cooldown = 10 SECONDS
 	var/parry_chance = 100
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/crystal_boss/load_default_bellies()
