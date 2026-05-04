@@ -4795,7 +4795,7 @@
 /area/outpost/mining_main/medbay)
 "ma" = (
 /obj/structure/boulder,
-/turf/simulated/floor/indoorrocks,
+/turf/simulated/mineral/floor,
 /area/mine/explored)
 "mb" = (
 /obj/machinery/button/remote/airlock{
@@ -15913,7 +15913,7 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/vacant/vacant_site/east)
 "NT" = (
-/turf/simulated/floor/indoorrocks,
+/turf/simulated/mineral/floor,
 /area/mine/explored)
 "NU" = (
 /obj/structure/window/reinforced{
