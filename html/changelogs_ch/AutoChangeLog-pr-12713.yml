@@ -1,7 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "Tyr chainsaw and Shield Added. Currently found in the precursor base, construction will be added once the tyr research rework comes along"
-  - rscadd: "AC has been altered to be more cohesive with their theming. New AC critters have been added, alongside a lore note"
-  - balance: "Agate Ants now always explode. Explosion size greatly reduced. Explosion delay is now 3-4 seconds"
-  - balance: "Gold ants explosion is now between 4-5 seconds (Previously was 5 to 8)"

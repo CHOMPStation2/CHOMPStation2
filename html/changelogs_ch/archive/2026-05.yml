@@ -17,3 +17,49 @@
   - rscadd: Added working video circuitry
   Will:
   - qol: Allergies are shown by the bodyscanner
+2026-05-04:
+  Diana:
+  - qol: AI can now use camera consoles in a more intuitive way.
+  - bugfix: Cyborgs can no longer build a camera network with multiple camera consoles
+      that follows them wherever they move.
+  - bugfix: Fixes a bug with accessories searching for nearby users.
+  - bugfix: Fixes a bug where partslathe had every part.
+  - bugfix: Fixes a bug where windows would delete the shield gen containment field
+  - bugfix: Attempting to drop non-item entities (unintended) into disposal will no
+      longer runtime.
+  - bugfix: Fixes a borg runtime
+  - bugfix: Horsemask now properly makes you neigh. Also adds an easter egg...This
+      mask isn't ever used, so...
+  - bugfix: Fixes some doafters
+  FluffMedic:
+  - bugfix: fixes a gateway secret potentially causing server issues
+  - rscadd: Tyr chainsaw and Shield Added. Currently found in the precursor base,
+      construction will be added once the tyr research rework comes along
+  - rscadd: AC has been altered to be more cohesive with their theming. New AC critters
+      have been added, alongside a lore note
+  - balance: Agate Ants now always explode. Explosion size greatly reduced. Explosion
+      delay is now 3-4 seconds
+  - balance: Gold ants explosion is now between 4-5 seconds (Previously was 5 to 8)
+  Guti:
+  - rscadd: Added voltaic combat heart
+  - balance: Harvested anomalies now generate a few more points
+  - balance: Reverts the point gain balance from research samples
+  - balance: Halved the max HP that an anomaly can lose when hit by containment particles
+  - bugfix: Fixed anomaly picker not giving three options
+  - bugfix: Fixed being able to re-roll through multiple anomaly types with the anomaly
+      picker
+  - bugfix: Fixed anomaly cores staying on hand when releasing it from there
+  - code_imp: Added "critical_condition" trait
+  - rscadd: Added a new research sample sprite
+  Nova:
+  - bugfix: fixed that copying a character could make them inherit stale data from
+      the new slot.
+  - refactor: character background prefs converted to TG
+  - refactor: player background now migrated to TG prefs
+  - refactor: converted job preferences to TG
+  Will:
+  - bugfix: M4A1 properly cycles rounds
+  - bugfix: crates and other climbable objects no longer harm mobs they cross while
+      moved
+  zeskorion:
+  - bugfix: more cetus fixes

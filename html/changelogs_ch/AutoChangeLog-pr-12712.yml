@@ -1,4 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - bugfix: "fixes a gateway secret potentially causing server issues"
