@@ -44,22 +44,22 @@
 	"Beach" 			= new/datum/holodeck_program(/area/houseboat/holodeck/beach),
 	"Desert" 			= new/datum/holodeck_program(/area/houseboat/holodeck/desert,
 													list(
-														'modular_chomp/sound/effects/weather/wind/wind_2_1.ogg',
-											 			'modular_chomp/sound/effects/weather/wind/wind_2_2.ogg',
-											 			'modular_chomp/sound/effects/weather/wind/wind_3_1.ogg',
-											 			'modular_chomp/sound/effects/weather/wind/wind_4_1.ogg',
-											 			'modular_chomp/sound/effects/weather/wind/wind_4_2.ogg',
-											 			'modular_chomp/sound/effects/weather/wind/wind_5_1.ogg'
+														'sound/effects/weather/wind/wind_2_1.ogg',
+											 			'sound/effects/weather/wind/wind_2_2.ogg',
+											 			'sound/effects/weather/wind/wind_3_1.ogg',
+											 			'sound/effects/weather/wind/wind_4_1.ogg',
+											 			'sound/effects/weather/wind/wind_4_2.ogg',
+											 			'sound/effects/weather/wind/wind_5_1.ogg'
 												 		)
 		 											),
 	"Snowfield" 		= new/datum/holodeck_program(/area/houseboat/holodeck/snow,
 													list(
-														'modular_chomp/sound/effects/weather/wind/wind_2_1.ogg',
-											 			'modular_chomp/sound/effects/weather/wind/wind_2_2.ogg',
-											 			'modular_chomp/sound/effects/weather/wind/wind_3_1.ogg',
-											 			'modular_chomp/sound/effects/weather/wind/wind_4_1.ogg',
-											 			'modular_chomp/sound/effects/weather/wind/wind_4_2.ogg',
-											 			'modular_chomp/sound/effects/weather/wind/wind_5_1.ogg'
+														'sound/effects/weather/wind/wind_2_1.ogg',
+											 			'sound/effects/weather/wind/wind_2_2.ogg',
+											 			'sound/effects/weather/wind/wind_3_1.ogg',
+											 			'sound/effects/weather/wind/wind_4_1.ogg',
+											 			'sound/effects/weather/wind/wind_4_2.ogg',
+											 			'sound/effects/weather/wind/wind_5_1.ogg'
 												 		)
 		 											),
 	"Space" 			= new/datum/holodeck_program(/area/houseboat/holodeck/space,
