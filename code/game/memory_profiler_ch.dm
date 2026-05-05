@@ -108,12 +108,12 @@
 	world.log << "Finished in [total_time/1000] seconds"
 
 
-/proc/prune_list(var/list/list_of_lists)
+/proc/prune_list(list/list_of_lists)
 	if(!list_of_lists.len) return
 	for(var/list/L in list_of_lists)
 		if(list_of_lists[L] == 1 && refcount(L) < 10) list_of_lists.Remove(list(L))
 
-/proc/mem_and_lists(var/datum/thing,var/list/list_of_lists,var/list/list_count,var/list/exclude_vars,var/list/mem_count,var/list/by_variable)
+/proc/mem_and_lists(datum/thing,list/list_of_lists,list/list_count,list/exclude_vars,list/mem_count,list/by_variable)
 	mem_count[thing.type] += 24
 	for(var/variable in thing.vars)
 		if(variable == "vars") continue
@@ -169,14 +169,14 @@
 	catch
 		return FALSE
 
-/proc/add_types(var/datum/thing, var/list/L)
+/proc/add_types(datum/thing, list/L)
 	var/type = thing::type
 	var/p_type = thing::parent_type
 	if(type in L) L[type]++
 	else L[type] = 1
 	if(p_type) add_types(p_type, L)
 
-/proc/add_types_val(var/datum/thing, var/list/L, var/val)
+/proc/add_types_val(datum/thing, list/L, val)
 	var/type = thing::type
 	var/p_type = thing::parent_type
 	L[type] += val

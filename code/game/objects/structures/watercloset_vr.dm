@@ -112,7 +112,7 @@
 		else
 			muffin_mode = FALSE
 
-/obj/structure/biowaste_tank/attack_hand(var/mob/user as mob)
+/obj/structure/biowaste_tank/attack_hand(mob/user as mob)
 	if(contents.len)
 		var/atom/movable/choice = tgui_input_list(usr, "It appears the machine has caught some items in the lost-and-found filter system. Would you like to eject something?", "Item Retrieval Console", contents)
 		if(choice)
@@ -133,7 +133,7 @@
 			else
 				choice.forceMove(get_turf(src))
 
-/obj/structure/biowaste_tank/emag_act(var/remaining_charges, var/mob/user, var/emag_source)
+/obj/structure/biowaste_tank/emag_act(remaining_charges, mob/user, emag_source)
 	if(muffinmonster && muffin_mode)
 		muffinmonster.name = "Muffin Monster"
 		muffinmonster.forceMove(get_turf(src))

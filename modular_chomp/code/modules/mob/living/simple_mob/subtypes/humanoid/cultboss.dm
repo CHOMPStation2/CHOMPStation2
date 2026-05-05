@@ -39,7 +39,7 @@
 			/obj/item/capture_crystal/wendigo = 25
 			)
 
-/mob/living/simple_mob/humanoid/cultist/magus/rift/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/humanoid/cultist/magus/rift/apply_melee_effects(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		var/leech = rand(1,100)

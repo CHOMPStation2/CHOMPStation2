@@ -1,5 +1,5 @@
 /// Grinds down various objects into their reagent components. Returns true if any reagents were gained from the attempt.
-/proc/grind_items_to_reagents(var/list/holdingitems,var/datum/reagents/R)
+/proc/grind_items_to_reagents(list/holdingitems,datum/reagents/R)
 	var/start_volume = R.total_volume
 
 	for(var/obj/item/O in holdingitems)
@@ -66,7 +66,7 @@
 	return (R.total_volume > start_volume)
 
 // CHOMPedit start: Repurposed coffee grinders and supermatter do not mix.
-/proc/puny_protons(regrets = 0, var/atom/our_atom, var/list/holdingitems)
+/proc/puny_protons(regrets = 0, atom/our_atom, list/holdingitems)
 	our_atom.set_light(0)
 	if(regrets > 0) // If you thought grinding supermatter would end well. Values taken from ex_act() for the supermatter stacks.
 		radiation_pulse(

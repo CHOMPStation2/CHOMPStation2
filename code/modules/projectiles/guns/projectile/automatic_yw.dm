@@ -60,13 +60,13 @@
 	item_state = "mg42"
 	update_held_icon()
 
-/obj/item/gun/projectile/automatic/mg42/load_ammo(var/obj/item/A, mob/user)
+/obj/item/gun/projectile/automatic/mg42/load_ammo(obj/item/A, mob/user)
 	if(!cover_open)
 		to_chat(user, span_warning("You need to open the cover to load [src]."))
 		return
 	..()
 
-/obj/item/gun/projectile/automatic/mg42/unload_ammo(mob/user, var/allow_dump=1)
+/obj/item/gun/projectile/automatic/mg42/unload_ammo(mob/user, allow_dump=1)
 	if(!cover_open)
 		to_chat(user, span_warning("You need to open the cover to unload [src]."))
 		return

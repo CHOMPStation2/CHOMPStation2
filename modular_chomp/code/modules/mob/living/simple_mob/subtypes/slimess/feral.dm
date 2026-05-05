@@ -29,7 +29,7 @@
 	melee_damage_upper = 5
 	heat_resist = 1
 
-/mob/living/simple_mob/slime/feral/orange/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/slime/feral/orange/apply_melee_effects(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		L.adjust_fire_stacks(5)
@@ -103,14 +103,14 @@
 	log_and_message_admins("[src] ignited due to exposure to fire.")
 	ignite()
 
-/mob/living/simple_mob/slime/feral/dark_purple/bullet_act(var/obj/item/projectile/P, var/def_zone)
+/mob/living/simple_mob/slime/feral/dark_purple/bullet_act(obj/item/projectile/P, def_zone)
 	if(P.damage_type && P.damage_type == BURN && P.damage) // Most bullets won't trigger the explosion, as a mercy towards Security.
 		log_and_message_admins("[src] ignited due to bring hit by a burning projectile[P.firer ? " by [key_name(P.firer)]" : ""].")
 		ignite()
 	else
 		..()
 
-/mob/living/simple_mob/slime/feral/dark_purple/attackby(var/obj/item/W, var/mob/user)
+/mob/living/simple_mob/slime/feral/dark_purple/attackby(obj/item/W, mob/user)
 	if(istype(W) && W.force && W.damtype == BURN)
 		log_and_message_admins("[src] ignited due to being hit with a burning weapon ([W]) by [key_name(user)].")
 		ignite()
@@ -124,7 +124,7 @@
 	coretype = /obj/item/slime_extract/silver
 	shiny = TRUE
 
-/mob/living/simple_mob/slime/feral/silver/bullet_act(var/obj/item/projectile/P, var/def_zone)
+/mob/living/simple_mob/slime/feral/silver/bullet_act(obj/item/projectile/P, def_zone)
 	if(istype(P,/obj/item/projectile/beam) || istype(P, /obj/item/projectile/energy))
 		visible_message(span_danger("\The [src] reflects \the [P]!"))
 

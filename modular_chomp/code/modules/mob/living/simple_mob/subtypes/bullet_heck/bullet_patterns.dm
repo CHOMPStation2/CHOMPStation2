@@ -1,4 +1,4 @@
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/singleproj/(atom/target, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/singleproj/(atom/target, next_cycle)
 	if(!target)
 		return
 	var/obj/item/projectile/P = new specialattackprojectile(get_turf(src))
@@ -6,112 +6,112 @@
 	attackcycle = next_cycle
 
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_heck(atom/target, var/horix, var/vertiy) //horix is the X vaule, vertix is the Y vaule
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_heck(atom/target, horix, vertiy) //horix is the X vaule, vertix is the Y vaule
 	var/obj/item/projectile/P = new specialattackprojectile(get_turf(src))
 	var/turf = locate(src.x+horix, src.y+vertiy, src.z)
 	target = turf
 	P.launch_projectile(target, BP_TORSO, src)
 
 //spinny dual blades
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spin(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spin(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 0, -7)
 	bullet_heck(target, 0, 7)
 	bullet_heck(target, -7, 0)
 	bullet_heck(target, 7, 0)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -1, -7)
 	bullet_heck(target, 1, 7)
 	bullet_heck(target, -7, 1)
 	bullet_heck(target, 7, -1)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinB(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinB(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -2, -7)
 	bullet_heck(target, 2, 7)
 	bullet_heck(target, -7, 2)
 	bullet_heck(target, 7, -2)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinC), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinC(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinC(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -3, -7)
 	bullet_heck(target, 3, 7)
 	bullet_heck(target, -7, 3)
 	bullet_heck(target, 7, -3)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinD), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinD(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinD(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -4, -7)
 	bullet_heck(target, 4, 7)
 	bullet_heck(target, -7, 4)
 	bullet_heck(target, 7, -4)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinE), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinE(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinE(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -5, -7)
 	bullet_heck(target, 5, 7)
 	bullet_heck(target, -7, 5)
 	bullet_heck(target, 7, -5)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinF), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinF(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinF(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -6, -7)
 	bullet_heck(target, 6, 7)
 	bullet_heck(target, -7, 6)
 	bullet_heck(target, 7, -6)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinG), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinG(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinG(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -7)
 	bullet_heck(target, 7, 7)
 	bullet_heck(target, -7, 7)
 	bullet_heck(target, 7, -7)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinH), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinH(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinH(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -6)
 	bullet_heck(target, 7, 6)
 	bullet_heck(target, -6, 7)
 	bullet_heck(target, 6, -7)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinI), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinI(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinI(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -5)
 	bullet_heck(target, 7, 5)
 	bullet_heck(target, -5, 7)
 	bullet_heck(target, 5, -7)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinJ), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinJ(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinJ(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -4)
 	bullet_heck(target, 7, 4)
 	bullet_heck(target, -4, 7)
 	bullet_heck(target, 4, -7)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinK), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinK(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinK(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -3)
 	bullet_heck(target, 7, 3)
 	bullet_heck(target, -3, 7)
 	bullet_heck(target, 3, -7)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinL), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinL(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinL(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -2)
 	bullet_heck(target, 7, 2)
 	bullet_heck(target, -2, 7)
 	bullet_heck(target, 2, -7)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinM), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinM(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinM(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -1)
 	bullet_heck(target, 7, 1)
 	bullet_heck(target, -1, 7)
 	bullet_heck(target, 1, -7)
 	addtimer(CALLBACK(src, PROC_REF(dual_spinN), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinN(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_spinN(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 0)
 	bullet_heck(target, 7, 0)
 	bullet_heck(target, 0, 7)
@@ -122,98 +122,98 @@
 		addtimer(CALLBACK(src, PROC_REF(rdual_spin), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
 //the four spin finish
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spin(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spin(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 1)
 	bullet_heck(target, 7, -1)
 	bullet_heck(target, 1, 7)
 	bullet_heck(target, -1, -7)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 2)
 	bullet_heck(target, 7, -2)
 	bullet_heck(target, 2, 7)
 	bullet_heck(target, -2, -7)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinB(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinB(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 3)
 	bullet_heck(target, 7, -3)
 	bullet_heck(target, 3, 7)
 	bullet_heck(target, -3, -7)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinC), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinC(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinC(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 4)
 	bullet_heck(target, 7, -4)
 	bullet_heck(target, 4, 7)
 	bullet_heck(target, -4, -7)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinD), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinD(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinD(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 5)
 	bullet_heck(target, 7, -5)
 	bullet_heck(target, 5, 7)
 	bullet_heck(target, -5, -7)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinE), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinE(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinE(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 6)
 	bullet_heck(target, 7, -6)
 	bullet_heck(target, 6, 7)
 	bullet_heck(target, -6, -7)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinF), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinF(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinF(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 7)
 	bullet_heck(target, 7, -7)
 	bullet_heck(target, 7, 7)
 	bullet_heck(target, -7, -7)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinG), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinG(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinG(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -6, 7)
 	bullet_heck(target, 6, -7)
 	bullet_heck(target, 7, 6)
 	bullet_heck(target, -7, -6)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinH), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinH(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinH(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -5, 7)
 	bullet_heck(target, 5, -7)
 	bullet_heck(target, 7, 5)
 	bullet_heck(target, -7, -5)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinI), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinI(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinI(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -4, 7)
 	bullet_heck(target, 4, -7)
 	bullet_heck(target, 7, 4)
 	bullet_heck(target, -7, -4)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinJ), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinJ(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinJ(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -3, 7)
 	bullet_heck(target, 3, -7)
 	bullet_heck(target, 7, 3)
 	bullet_heck(target, -7, -3)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinK), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinK(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinK(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -2, 7)
 	bullet_heck(target, 2, -7)
 	bullet_heck(target, 7, 2)
 	bullet_heck(target, -7, -2)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinL), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinL(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinL(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -1, 7)
 	bullet_heck(target, 1, -7)
 	bullet_heck(target, 7, 1)
 	bullet_heck(target, -7, -1)
 	addtimer(CALLBACK(src, PROC_REF(fdual_spinM), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinM(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fdual_spinM(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 0, 7)
 	bullet_heck(target, 0, -7)
 	bullet_heck(target, 7, 0)
@@ -221,98 +221,98 @@
 	attackcycle = next_cycle
 
 //the reverse
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinM(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinM(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 0, -7)
 	bullet_heck(target, 0, 7)
 	bullet_heck(target, 7, 0)
 	bullet_heck(target, -7, 0)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinL(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinL(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -1, -7)
 	bullet_heck(target, 1, 7)
 	bullet_heck(target, 7, -1)
 	bullet_heck(target, -7, 1)
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinM), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinK(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinK(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -2, -7)
 	bullet_heck(target, 2, 7)
 	bullet_heck(target, 7, -2)
 	bullet_heck(target, -7, 2)
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinL), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinJ(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinJ(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -3, -7)
 	bullet_heck(target, 3, 7)
 	bullet_heck(target, 7, -3)
 	bullet_heck(target, -7, 3)
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinK), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinI(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinI(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -4, -7)
 	bullet_heck(target, 4, 7)
 	bullet_heck(target, 7, -4)
 	bullet_heck(target, -7, 4)
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinJ), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinH(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinH(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -5, -7)
 	bullet_heck(target, 5, 7)
 	bullet_heck(target, 7, -5)
 	bullet_heck(target, -7, 5)
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinI), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinG(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinG(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -6, -7)
 	bullet_heck(target, 6, 7)
 	bullet_heck(target, 7, -6)
 	bullet_heck(target, -7, 6)
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinH), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinF(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinF(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -7)
 	bullet_heck(target, 7, 7)
 	bullet_heck(target, 7, -7)
 	bullet_heck(target, -7, 7)
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinG), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinE(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinE(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -6)
 	bullet_heck(target, 7, 6)
 	bullet_heck(target, 6, -7)
 	bullet_heck(target, -6, 7)
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinF), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinD(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinD(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -5)
 	bullet_heck(target, 7, 5)
 	bullet_heck(target, 5, -7)
 	bullet_heck(target, -5, 7)
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinE), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinC(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinC(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -4)
 	bullet_heck(target, 7, 4)
 	bullet_heck(target, 4, -7)
 	bullet_heck(target, -4, 7)
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinD), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinB(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinB(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -3)
 	bullet_heck(target, 7, 3)
 	bullet_heck(target, 3, -7)
 	bullet_heck(target, -3, 7)
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinC), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spinA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -2)
 	bullet_heck(target, 7, 2)
 	bullet_heck(target, 2, -7)
 	bullet_heck(target, -2, 7)
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spin(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rdual_spin(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -1)
 	bullet_heck(target, 7, 1)
 	bullet_heck(target, 1, -7)
@@ -320,77 +320,77 @@
 	addtimer(CALLBACK(src, PROC_REF(rdual_spinA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
 //two spinning blade
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spin(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spin(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 0, -7)
 	bullet_heck(target, 0, 7)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -1, -7)
 	bullet_heck(target, 1, 7)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinB(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinB(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -2, -7)
 	bullet_heck(target, 2, 7)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinC), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinC(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinC(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -3, -7)
 	bullet_heck(target, 3, 7)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinD), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinD(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinD(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -4, -7)
 	bullet_heck(target, 4, 7)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinE), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinE(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinE(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -5, -7)
 	bullet_heck(target, 5, 7)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinF), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinF(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinF(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -6, -7)
 	bullet_heck(target, 6, 7)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinG), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinG(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinG(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -7)
 	bullet_heck(target, 7, 7)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinH), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinH(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinH(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -6)
 	bullet_heck(target, 7, 6)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinI), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinI(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinI(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -5)
 	bullet_heck(target, 7, 5)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinJ), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinJ(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinJ(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -4)
 	bullet_heck(target, 7, 4)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinK), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinK(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinK(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -3)
 	bullet_heck(target, 7, 3)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinL), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinL(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinL(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -2)
 	bullet_heck(target, 7, 2)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinM), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinM(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinM(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -1)
 	bullet_heck(target, 7, 1)
 	addtimer(CALLBACK(src, PROC_REF(cross_spinN), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinN(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cross_spinN(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 0)
 	bullet_heck(target, 7, 0)
 	if(prob(50)) //coin flip to reverse
@@ -399,143 +399,143 @@
 		addtimer(CALLBACK(src, PROC_REF(rcross_spin), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
 //the dual spin finish
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spin(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spin(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 1)
 	bullet_heck(target, 7, -1)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 2)
 	bullet_heck(target, 7, -2)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinB(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinB(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 3)
 	bullet_heck(target, 7, -3)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinC), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinC(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinC(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 4)
 	bullet_heck(target, 7, -4)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinD), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinD(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinD(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 5)
 	bullet_heck(target, 7, -5)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinE), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinE(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinE(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 6)
 	bullet_heck(target, 7, -6)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinF), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinF(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinF(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 7)
 	bullet_heck(target, 7, -7)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinG), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinG(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinG(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -6, 7)
 	bullet_heck(target, 6, -7)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinH), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinH(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinH(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -5, 7)
 	bullet_heck(target, 5, -7)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinI), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinI(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinI(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -4, 7)
 	bullet_heck(target, 4, -7)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinJ), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinJ(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinJ(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -3, 7)
 	bullet_heck(target, 3, -7)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinK), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinK(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinK(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -2, 7)
 	bullet_heck(target, 2, -7)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinL), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinL(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinL(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -1, 7)
 	bullet_heck(target, 1, -7)
 	addtimer(CALLBACK(src, PROC_REF(fcross_spinM), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinM(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/fcross_spinM(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 0, 7)
 	bullet_heck(target, 0, -7)
 	attackcycle = next_cycle
 
 //the dual spin reverse
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinM(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinM(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 0, -7)
 	bullet_heck(target, 0, 7)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinL(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinL(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -1, -7)
 	bullet_heck(target, 1, 7)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinM), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinK(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinK(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -2, -7)
 	bullet_heck(target, 2, 7)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinL), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinJ(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinJ(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -3, -7)
 	bullet_heck(target, 3, 7)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinK), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinI(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinI(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -4, -7)
 	bullet_heck(target, 4, 7)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinJ), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinH(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinH(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -5, -7)
 	bullet_heck(target, 5, 7)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinI), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinG(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinG(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -6, -7)
 	bullet_heck(target, 6, 7)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinH), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinF(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinF(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -7)
 	bullet_heck(target, 7, 7)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinG), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinE(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinE(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -6)
 	bullet_heck(target, 7, 6)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinF), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinD(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinD(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -5)
 	bullet_heck(target, 7, 5)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinE), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinC(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinC(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -4)
 	bullet_heck(target, 7, 4)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinD), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinB(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinB(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -3)
 	bullet_heck(target, 7, 3)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinC), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spinA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -2)
 	bullet_heck(target, 7, 2)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spin(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rcross_spin(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -1)
 	bullet_heck(target, 7, 1)
 	addtimer(CALLBACK(src, PROC_REF(rcross_spinA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
@@ -610,7 +610,7 @@
 	bullet_heck(target, -4, -3)
 	bullet_heck(target, -4, -4)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/checker_board(atom/target, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/checker_board(atom/target, next_cycle)
 	bullet_heck(target, -1, 1)
 	bullet_heck(target, 1, 1)
 	bullet_heck(target, 1, -1)
@@ -638,32 +638,32 @@
 	attackcycle = next_cycle
 
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/chain_burst(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/chain_burst(atom/target, next_cycle, fire_delay)
 	burst_one(target)
 	addtimer(CALLBACK(src, PROC_REF(chain_burstA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/chain_burstA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/chain_burstA(atom/target, next_cycle, fire_delay)
 	burst_two(target)
 	addtimer(CALLBACK(src, PROC_REF(chain_burstB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/chain_burstB(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/chain_burstB(atom/target, next_cycle, fire_delay)
 	burst_three(target)
 	addtimer(CALLBACK(src, PROC_REF(chain_burstC), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/chain_burstC(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/chain_burstC(atom/target, next_cycle, fire_delay)
 	burst_four(target)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_burst(atom/target, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/dual_burst(atom/target, next_cycle)
 	burst_two(target)
 	burst_four(target)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/giant_burst(atom/target, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/giant_burst(atom/target, next_cycle)
 	burst_four(target)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/star_burst(atom/target, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/star_burst(atom/target, next_cycle)
 	bullet_heck(target, 0, 7)
 	bullet_heck(target, 0, -7)
 	bullet_heck(target, 7, 7)
@@ -675,7 +675,7 @@
 	attackcycle = next_cycle
 
 //random
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/random_firing(atom/target, var/amount, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/random_firing(atom/target, amount, next_cycle, fire_delay)
 	var/rngx = rand(-7,7)
 	var/rngy = rand(-7,7)
 	if(!target)
@@ -688,7 +688,7 @@
 		attackcycle = next_cycle
 
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/quad_random_firing(atom/target, var/amount, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/quad_random_firing(atom/target, amount, next_cycle, fire_delay)
 	var/rngx = rand(-7,7)
 	var/rngy = rand(-7,7)
 	var/rngxx = rand(-7,7)
@@ -706,7 +706,7 @@
 		attackcycle = next_cycle
 
 //perscion
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/hole_in_wall(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/hole_in_wall(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -7)
 	bullet_heck(target, -7, -6)
 	bullet_heck(target, -7, -5)
@@ -737,7 +737,7 @@
 	bullet_heck(target, -4, 7)
 	addtimer(CALLBACK(src, PROC_REF(hole_in_wallA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/hole_in_wallA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/hole_in_wallA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -4)
 	bullet_heck(target, -7, -3)
 	bullet_heck(target, -7, -2)
@@ -776,7 +776,7 @@
 	bullet_heck(target, 7, 4)
 	addtimer(CALLBACK(src, PROC_REF(hole_in_wallB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/hole_in_wallB(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/hole_in_wallB(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, -7)
 	bullet_heck(target, -7, -6)
 	bullet_heck(target, -7, -5)
@@ -807,7 +807,7 @@
 	bullet_heck(target, -4, 7)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bomb_lines(atom/A, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bomb_lines(atom/A, next_cycle)
 	if(!A)
 		return
 	var/list/potential_targets = ai_holder.list_targets()
@@ -824,7 +824,7 @@
 			spawn_lines(target, next_cycle)
 
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spawn_lines(atom/target, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spawn_lines(atom/target, next_cycle)
 	var/alignment = rand(1,2)	// 1 for vertical, 2 for horizontal
 	var/list/line_range = list()
 	var/turf/T = get_turf(target)
@@ -855,7 +855,7 @@
 
 
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bomb_chaos(atom/A, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bomb_chaos(atom/A, next_cycle)
 	if(!A)
 		return
 	var/list/potential_targets = ai_holder.list_targets()
@@ -872,7 +872,7 @@
 			chaos_lines(target, next_cycle)
 
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/chaos_lines(atom/target, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/chaos_lines(atom/target, next_cycle)
 	var/alignment = rand(1,2)
 	var/list/line_range = list()
 	var/turf/T = get_turf(target)
@@ -909,7 +909,7 @@
 		new artidrop(dropspot)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rising_star(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rising_star(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, 0)
 	bullet_heck(target, -7, 0)
 	bullet_heck(target, 0, 7)
@@ -920,7 +920,7 @@
 	bullet_heck(target, -7, -7)
 	addtimer(CALLBACK(src, PROC_REF(rising_starA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rising_starA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rising_starA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, -4)
 	bullet_heck(target, -7, 4)
 	bullet_heck(target, 4, 7)
@@ -931,7 +931,7 @@
 	bullet_heck(target, -4, -7)
 	addtimer(CALLBACK(src, PROC_REF(rising_starB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rising_starB(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rising_starB(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, -1)
 	bullet_heck(target, -7, 1)
 	bullet_heck(target, 1, 7)
@@ -942,7 +942,7 @@
 	bullet_heck(target, -7, -5)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/gattlingfire(atom/target, var/next_cycle, var/amount, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/gattlingfire(atom/target, next_cycle, amount, fire_delay)
 	if(!target)
 		return
 	var/obj/item/projectile/P = new specialattackprojectile(get_turf(src))
@@ -953,7 +953,7 @@
 	else
 		attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/death_wall(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/death_wall(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, 0)
 	bullet_heck(target, 7, 1)
 	bullet_heck(target, 7, 2)
@@ -971,7 +971,7 @@
 	bullet_heck(target, 7, -7)
 	addtimer(CALLBACK(src, PROC_REF(death_wallA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/death_wallA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/death_wallA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 0)
 	bullet_heck(target, -7, 1)
 	bullet_heck(target, -7, 2)
@@ -989,7 +989,7 @@
 	bullet_heck(target, -7, -7)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/death_wallR(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/death_wallR(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 0)
 	bullet_heck(target, -7, 1)
 	bullet_heck(target, -7, 2)
@@ -1007,7 +1007,7 @@
 	bullet_heck(target, -7, -7)
 	addtimer(CALLBACK(src, PROC_REF(death_wallRA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/death_wallRA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/death_wallRA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, 0)
 	bullet_heck(target, 7, 1)
 	bullet_heck(target, 7, 2)
@@ -1025,7 +1025,7 @@
 	bullet_heck(target, 7, -7)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cutoff(atom/target, var/next_cycle, var/fire_delay, var/amount)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cutoff(atom/target, next_cycle, fire_delay, amount)
 	if(!target)
 		return
 	bullet_heck(target, 7, 0)
@@ -1038,7 +1038,7 @@
 	else
 		attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cutoff_ulti(atom/target, var/next_cycle, var/fire_delay, var/amount)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cutoff_ulti(atom/target, next_cycle, fire_delay, amount)
 	if(!target)
 		return
 	bullet_heck(target, 7, 0)
@@ -1055,14 +1055,14 @@
 	else
 		attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossom(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossom(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, 7)
 	bullet_heck(target, -7, -7)
 	bullet_heck(target, -7, 7)
 	bullet_heck(target, 7, -7)
 	addtimer(CALLBACK(src, PROC_REF(bullet_blossomA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 6, 7)
 	bullet_heck(target, 7, 6)
 	bullet_heck(target, -6, -7)
@@ -1073,7 +1073,7 @@
 	bullet_heck(target, 7, -6)
 	addtimer(CALLBACK(src, PROC_REF(bullet_blossomB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomB(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomB(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 5, 7)
 	bullet_heck(target, 7, 5)
 	bullet_heck(target, -5, -7)
@@ -1084,7 +1084,7 @@
 	bullet_heck(target, 7, -5)
 	addtimer(CALLBACK(src, PROC_REF(bullet_blossomC), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomC(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomC(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 4, 7)
 	bullet_heck(target, 7, 4)
 	bullet_heck(target, -4, -7)
@@ -1095,7 +1095,7 @@
 	bullet_heck(target, 7, -4)
 	addtimer(CALLBACK(src, PROC_REF(bullet_blossomD), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomD(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomD(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 3, 7)
 	bullet_heck(target, 7, 3)
 	bullet_heck(target, -3, -7)
@@ -1106,7 +1106,7 @@
 	bullet_heck(target, 7, -3)
 	addtimer(CALLBACK(src, PROC_REF(bullet_blossomE), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomE(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomE(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 2, 7)
 	bullet_heck(target, 7, 2)
 	bullet_heck(target, -2, -7)
@@ -1117,7 +1117,7 @@
 	bullet_heck(target, 7, -2)
 	addtimer(CALLBACK(src, PROC_REF(bullet_blossomF), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomF(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomF(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 1, 7)
 	bullet_heck(target, 7, 1)
 	bullet_heck(target, -1, -7)
@@ -1128,7 +1128,7 @@
 	bullet_heck(target, 7, -1)
 	addtimer(CALLBACK(src, PROC_REF(bullet_blossomG), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomG(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomG(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 0, 7)
 	bullet_heck(target, -7, 0)
 	bullet_heck(target, 0, -7)
@@ -1136,7 +1136,7 @@
 	attackcycle = next_cycle
 
 //Three spinning lines with occassional projectiles thrown in the middle
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_lines(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_lines(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -7, 7)
 	bullet_heck(target, 7, 7)
 	bullet_heck(target, 0, -7)
@@ -1145,13 +1145,13 @@
 	bullet_heck(target, 0, 7)
 	addtimer(CALLBACK(src, PROC_REF(triple_linesA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -6, 7)
 	bullet_heck(target, 7, 6)
 	bullet_heck(target, -1, -7)
 	addtimer(CALLBACK(src, PROC_REF(triple_linesB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesB(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesB(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -5, 7)
 	bullet_heck(target, 7, 5)
 	bullet_heck(target, -2, -7)
@@ -1160,13 +1160,13 @@
 	bullet_heck(target, 2, 7)
 	addtimer(CALLBACK(src, PROC_REF(triple_linesC), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesC(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesC(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -4, 7)
 	bullet_heck(target, 7, 4)
 	bullet_heck(target, -3, -7)
 	addtimer(CALLBACK(src, PROC_REF(triple_linesD), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesD(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesD(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -3, 7)
 	bullet_heck(target, 7, 3)
 	bullet_heck(target, -4, -7)
@@ -1175,13 +1175,13 @@
 	bullet_heck(target, 4, 7)
 	addtimer(CALLBACK(src, PROC_REF(triple_linesE), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesE(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesE(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -2, 7)
 	bullet_heck(target, 7, 2)
 	bullet_heck(target, -5, -7)
 	addtimer(CALLBACK(src, PROC_REF(triple_linesF), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesF(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesF(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -1, 7)
 	bullet_heck(target, 7, 1)
 	bullet_heck(target, -6, -7)
@@ -1190,13 +1190,13 @@
 	bullet_heck(target, 6, 7)
 	addtimer(CALLBACK(src, PROC_REF(triple_linesG), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesG(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/triple_linesG(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, -0, 7)
 	bullet_heck(target, 7, 0)
 	bullet_heck(target, -7, -7)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laser(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laser(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, 7)
 	bullet_heck(target, 6, 7)
 	bullet_heck(target, 5, 7)
@@ -1215,7 +1215,7 @@
 	bullet_heck(target, 0, -7)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserA(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserA(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, 6)
 	bullet_heck(target, 6, 6)
 	bullet_heck(target, 5, 6)
@@ -1234,7 +1234,7 @@
 	bullet_heck(target, 0, -6)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserB(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserB(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, 5)
 	bullet_heck(target, 6, 5)
 	bullet_heck(target, 5, 5)
@@ -1253,7 +1253,7 @@
 	bullet_heck(target, 0, -5)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserC), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserC(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserC(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, 4)
 	bullet_heck(target, 6, 4)
 	bullet_heck(target, 5, 4)
@@ -1272,7 +1272,7 @@
 	bullet_heck(target, 0, -4)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserD), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserD(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserD(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, 3)
 	bullet_heck(target, 6, 3)
 	bullet_heck(target, 5, 3)
@@ -1291,7 +1291,7 @@
 	bullet_heck(target, 0, -3)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserE), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserE(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserE(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, 2)
 	bullet_heck(target, 6, 2)
 	bullet_heck(target, 5, 2)
@@ -1310,7 +1310,7 @@
 	bullet_heck(target, 0, -2)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserF), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserF(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserF(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, 1)
 	bullet_heck(target, 6, 1)
 	bullet_heck(target, 5, 1)
@@ -1329,7 +1329,7 @@
 	bullet_heck(target, 0, -1)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserG), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserG(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserG(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, 0)
 	bullet_heck(target, 6, 0)
 	bullet_heck(target, 5, 0)
@@ -1346,7 +1346,7 @@
 	bullet_heck(target, -1, 0)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserH), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserH(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserH(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, -1)
 	bullet_heck(target, 6, -1)
 	bullet_heck(target, 5, -1)
@@ -1365,7 +1365,7 @@
 	bullet_heck(target, 0, 1)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserI), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserI(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserI(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, -2)
 	bullet_heck(target, 6, -2)
 	bullet_heck(target, 5, -2)
@@ -1384,7 +1384,7 @@
 	bullet_heck(target, 0, 2)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserJ), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserJ(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserJ(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, -3)
 	bullet_heck(target, 6, -3)
 	bullet_heck(target, 5, -3)
@@ -1403,7 +1403,7 @@
 	bullet_heck(target, 0, 3)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserK), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserK(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserK(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, -4)
 	bullet_heck(target, 6, -4)
 	bullet_heck(target, 5, -4)
@@ -1422,7 +1422,7 @@
 	bullet_heck(target, 0, 4)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserL), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserL(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserL(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, -5)
 	bullet_heck(target, 6, -5)
 	bullet_heck(target, 5, -5)
@@ -1441,7 +1441,7 @@
 	bullet_heck(target, 0, 5)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserM), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserM(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserM(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, -6)
 	bullet_heck(target, 6, -6)
 	bullet_heck(target, 5, -6)
@@ -1460,7 +1460,7 @@
 	bullet_heck(target, 0, 6)
 	addtimer(CALLBACK(src, PROC_REF(vertical_double_laserN), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserN(atom/target, var/next_cycle, var/fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/vertical_double_laserN(atom/target, next_cycle, fire_delay)
 	bullet_heck(target, 7, -7)
 	bullet_heck(target, 6, -7)
 	bullet_heck(target, 5, -7)

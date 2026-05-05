@@ -132,7 +132,7 @@
 	result = null
 	required_reagents = list(REAGENT_ID_MONSTERTAMER = 5, REAGENT_ID_CLONEXADONE = 5)
 
-/datum/decl/chemical_reaction/instant/xenolazarus/on_reaction(var/datum/reagents/holder, var/created_volume) //literally all this does is mash the regenerate button
+/datum/decl/chemical_reaction/instant/xenolazarus/on_reaction(datum/reagents/holder, created_volume) //literally all this does is mash the regenerate button
 	if(ishuman(holder.my_atom))
 		var/mob/living/carbon/human/H = holder.my_atom
 		var/datum/component/xenochimera/comp = H.GetComponent(/datum/component/xenochimera)

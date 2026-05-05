@@ -24,7 +24,7 @@
 	var/sound_chamber = 'sound/weapons/ballistics/pistol_chamber.ogg'
 	special_handling = TRUE
 
-/obj/item/gun/projectile/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
+/obj/item/gun/projectile/handle_post_fire(mob/user, atom/target, pointblank=0, reflex=0)
 	if(fire_anim)
 		flick(fire_anim, src)
 
@@ -118,7 +118,7 @@
 				span_notice("You close \the [bolt_name][casing_chambered]."))
 		user.hud_used.update_ammo_hud(user, src)
 
-/obj/item/gun/projectile/proc/bolt_toggle(var/manual)
+/obj/item/gun/projectile/proc/bolt_toggle(manual)
 	if(!bolt_open)
 		if(auto_loading_type)
 			var/able_to_lock = (CHECK_BITFIELD(auto_loading_type,LOCK_OPEN_EMPTY) || (CHECK_BITFIELD(auto_loading_type,LOCK_MANUAL_LOCK) && manual))
@@ -203,7 +203,7 @@
 	else
 		return FALSE
 
-/obj/item/gun/projectile/load_ammo(var/obj/item/A, mob/user)
+/obj/item/gun/projectile/load_ammo(obj/item/A, mob/user)
 	if(istype(A, /obj/item/ammo_magazine))
 		var/obj/item/ammo_magazine/AM = A
 		if(!(load_method & AM.mag_type) || caliber != AM.caliber || allowed_magazines && !is_type_in_list(A, allowed_magazines))
@@ -322,7 +322,7 @@
 
 	update_icon()
 
-/obj/item/gun/projectile/special_check(var/mob/user)
+/obj/item/gun/projectile/special_check(mob/user)
 	if(..())
 		if(manual_chamber)
 			if(CHECK_BITFIELD(auto_loading_type,OPEN_BOLT) && !bolt_open)

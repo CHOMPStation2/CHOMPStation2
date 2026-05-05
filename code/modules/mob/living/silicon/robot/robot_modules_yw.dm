@@ -129,7 +129,7 @@
 	R.icon = 'icons/mob/widerobot_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 
-/obj/item/robot_module/medical/robot/surgeon/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/robot_module/medical/robot/surgeon/respawn_consumable(mob/living/silicon/robot/R, amount)
 	if(src.emag)
 		var/obj/item/reagent_containers/spray/PS = src.emag
 		PS.reagents.add_reagent(REAGENT_ID_PACID, 2 * amount)

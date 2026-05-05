@@ -25,7 +25,7 @@
 	energetic_impact = 1
 	hud_state = "rocket_thermobaric"
 
-/obj/item/projectile/bullet/magnetic/fuelrod/blitz/on_impact(var/atom/A)
+/obj/item/projectile/bullet/magnetic/fuelrod/blitz/on_impact(atom/A)
 	if(isturf(loc))
 		explosion(loc, 3, 4, 5, 10)
 	..(A)

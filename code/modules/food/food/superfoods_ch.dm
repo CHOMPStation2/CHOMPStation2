@@ -192,7 +192,7 @@
 			"its The Infinity Cake! This huge imposing cake made by immense efforts and resources stands tall in you, radiating a menacing aura of frosty goodness and diabetes for those not wary of it's infinite might!"
 		)
 
-/obj/structure/thecake/attackby(var/obj/item/W, var/mob/living/user)
+/obj/structure/thecake/attackby(obj/item/W, mob/living/user)
 	if(istype(W,/obj/item/material/knife))
 		if(edible == 1)
 			HasSliceMissing()
@@ -494,7 +494,7 @@
 			reagents.add_reagent(REAGENT_ID_KELOTANE, 2)
 			bitesize = 4
 
-/obj/structure/chaoscake/attackby(var/obj/item/W, var/mob/living/user)
+/obj/structure/chaoscake/attackby(obj/item/W, mob/living/user)
 	if(istype(W,/obj/item/material/knife))
 		if(edible == 1)
 			HasSliceMissing()
@@ -550,7 +550,7 @@
 							/obj/item/reagent_containers/food/snacks/sliceable/pizza/mushroompizza/bigslice,
 							/obj/item/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza/bigslice)
 
-/obj/structure/theonepizza/attackby(var/obj/item/W, var/mob/living/user)
+/obj/structure/theonepizza/attackby(obj/item/W, mob/living/user)
 	if(istype(W,/obj/item/material/knife))
 		user.visible_message(span_bold("\The [user]") + " starts to slowly cut through The One Pizza.", span_notice("You start to slowly cut through The One Pizza."))
 		if(do_after(user, slicetime, src))

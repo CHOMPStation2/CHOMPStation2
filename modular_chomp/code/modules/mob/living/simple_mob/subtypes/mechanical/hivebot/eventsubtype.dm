@@ -100,7 +100,7 @@
 	embed_chance = 0
 	range = 12
 
-/obj/item/projectile/knockback/on_hit(var/atom/movable/target, var/blocked = 0)
+/obj/item/projectile/knockback/on_hit(atom/movable/target, blocked = 0)
 	if(isliving(target))
 		var/mob/living/L = target
 		var/throwdir = get_dir(firer,L)
@@ -117,7 +117,7 @@
 	muzzle_type = null
 	combustion = FALSE
 
-/obj/item/projectile/metalball/on_hit(var/atom/target, var/blocked = 0)
+/obj/item/projectile/metalball/on_hit(atom/target, blocked = 0)
 	if(isturf(target.loc))
 		var/obj/structure/foamedmetal/W = locate() in get_turf(target)
 		if(!W)
@@ -455,4 +455,3 @@
 			else if(attackcycle == 2)
 
 */
-

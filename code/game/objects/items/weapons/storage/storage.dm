@@ -302,7 +302,7 @@
 	return
 
 //This proc draws out the inventory and places the items on it. It uses the standard position.
-/obj/item/storage/proc/slot_orient_objs(var/rows, var/cols, var/list/obj/item/display_contents)
+/obj/item/storage/proc/slot_orient_objs(rows, cols, list/obj/item/display_contents)
 	var/cx = 4
 	var/cy = 2+rows
 	src.boxes.screen_loc = "4:16,2:16 to [4+cols]:16,[2+rows]:16"
@@ -334,7 +334,7 @@
 	src.closer.screen_loc = "[4+cols+1]:16,2:16"
 	return
 
-/obj/item/storage/proc/space_orient_objs(var/list/obj/item/display_contents)
+/obj/item/storage/proc/space_orient_objs(list/obj/item/display_contents)
 	SHOULD_NOT_SLEEP(TRUE)
 
 	/// A prototype for drawing the leftmost border behind each item in storage
@@ -844,7 +844,7 @@
 	return TRUE
 
 //Useful for spilling the contents of containers all over the floor
-/obj/item/storage/proc/spill(var/dist = 2, var/turf/T = null)
+/obj/item/storage/proc/spill(dist = 2, turf/T = null)
 	if (!istype(T))//If its not on the floor this might cause issues
 		T = get_turf(src)
 

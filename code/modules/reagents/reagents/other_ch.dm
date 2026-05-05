@@ -20,7 +20,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/liquidspideregg/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/liquidspideregg/affect_blood(mob/living/carbon/M, alien, removed)
 	if(prob(1))
 		M.custom_pain("You can feel movement within your body!",45)
 	amount_grown += rand(min_growth,max_growth)
@@ -39,7 +39,7 @@
 				O.implants += spiderling
 
 //New reagent definitions/overrides. If some of these get added upstream and cause a conflict later they might need deleting.
-/datum/reagent/toxin/plantbgone/touch_mob(var/mob/living/L, amount) //Plantbgone override to damage plant mobs. Part of pitcher plants, touch_mob doesn't exist for plantbgone at the time of writing.
+/datum/reagent/toxin/plantbgone/touch_mob(mob/living/L, amount) //Plantbgone override to damage plant mobs. Part of pitcher plants, touch_mob doesn't exist for plantbgone at the time of writing.
 	if(istype(L) && L.faction)
 		if(L.faction == "plants") //This would be better with a variable but I'm not adding that because upstream conflicts. If you send this upstream please do this.
 			L.adjustToxLoss(15 * amount)
@@ -98,7 +98,7 @@
 	data = list("count"=1)
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RECDRUG
-/datum/reagent/phenethylamine/on_mob_life(var/mob/living/M as mob)
+/datum/reagent/phenethylamine/on_mob_life(mob/living/M as mob)
 	if(!M) M = holder.my_atom
 	if(data)
 		switch(data["count"])
@@ -114,7 +114,7 @@
 	//..()
 	return
 
-/datum/reagent/benzilate/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/benzilate/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	var/drug_strength = 12

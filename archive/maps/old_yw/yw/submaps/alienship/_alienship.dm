@@ -138,7 +138,7 @@
 
 		did_entry = TRUE
 
-/area/shuttle/excursion/away_alienship/proc/abduct(var/mob/living/mob)
+/area/shuttle/excursion/away_alienship/proc/abduct(mob/living/mob)
 	if(isliving(mob))
 		var/mob/living/L = mob
 

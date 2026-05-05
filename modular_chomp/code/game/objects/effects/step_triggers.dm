@@ -2,7 +2,7 @@
 	. = ..()
 	teleport_z = src.z //This is for use in gateways, so mappers can hard map the X and Y without worrying about going to brazil
 
-/obj/effect/step_trigger/teleporter/deathfall/Trigger(var/atom/movable/A)
+/obj/effect/step_trigger/teleporter/deathfall/Trigger(atom/movable/A)
 	var/turf/simulated/T = locate(teleport_x, teleport_y, teleport_z)
 	if(!istype(T))
 		log_mapping("[src] failed to find destination turf.")

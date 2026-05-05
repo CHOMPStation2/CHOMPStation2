@@ -9,7 +9,7 @@
 	var/cooldownmin = 0
 	var/cooldownmax = 0
 
-/obj/item/organ/internal/malignant/Initialize(mapload, var/internal, var/force_location = null, var/forcetag = null)
+/obj/item/organ/internal/malignant/Initialize(mapload, internal, force_location = null, forcetag = null)
 	organ_tag = "[initial(organ_tag)]_[rand(1,9999)]"
 	if(forcetag)
 		organ_tag = forcetag
@@ -39,7 +39,7 @@
 			parent_organ = force_location
 	return ..(mapload, internal)
 
-/mob/living/carbon/human/proc/random_malignant_organ( var/allowtumors = TRUE, var/allowparasites = TRUE, var/allowengineered = TRUE)
+/mob/living/carbon/human/proc/random_malignant_organ( allowtumors = TRUE, allowparasites = TRUE, allowengineered = TRUE)
 	// get a list of valid malignant organs and spawn one
 	var/list/paths = list()
 	if(allowtumors)
@@ -51,7 +51,7 @@
 		paths -= /obj/item/organ/internal/malignant/engineered/chemorgan // Don't use this one
 	return malignant_organ_spawn(pick(paths)) // place in body
 
-/mob/living/carbon/human/proc/malignant_organ_spawn(var/type_path)
+/mob/living/carbon/human/proc/malignant_organ_spawn(type_path)
 	if(!type_path)
 		return FALSE
 	if(stat == DEAD)
@@ -135,7 +135,7 @@
 	surgeryAllowedSites = list(BP_GROIN, BP_TORSO) // Lets keep these a little more restricted, due to size and complexity
 	supply_conversion_value = 100
 
-/obj/item/organ/internal/malignant/engineered/proc/update_degeneration(var/degradechance, var/intensity)
+/obj/item/organ/internal/malignant/engineered/proc/update_degeneration(degradechance, intensity)
 	if(degradechance == 0)
 		return FALSE
 	if(prob(degradechance))
@@ -145,7 +145,7 @@
 		return TRUE // do handle_sideeffects proc
 	return FALSE
 
-/obj/item/organ/internal/malignant/engineered/proc/handle_sideeffects(var/base_mult)
+/obj/item/organ/internal/malignant/engineered/proc/handle_sideeffects(base_mult)
 	if(damage < min_bruised_damage)
 		// skip any major effects if under bruise damage
 		return
@@ -606,7 +606,7 @@
 	var/chem_target = null
 	supply_conversion_value = 0
 
-/obj/item/organ/internal/malignant/engineered/lattice/Initialize(mapload, var/internal, var/force_location = null, var/forcetag = null)
+/obj/item/organ/internal/malignant/engineered/lattice/Initialize(mapload, internal, force_location = null, forcetag = null)
 	growth_trigger = rand(150,200)
 	return ..(mapload, internal, force_location, forcetag)
 
@@ -651,7 +651,7 @@
 			update_icon()
 		cooldown = rand(2,6)
 
-/obj/item/organ/internal/malignant/engineered/lattice/proc/get_mutation_result(var/reagent)
+/obj/item/organ/internal/malignant/engineered/lattice/proc/get_mutation_result(reagent)
 	var/newpath = null
 	switch(reagent)
 		if(REAGENT_ID_PHORON)
@@ -687,7 +687,7 @@
 
 	return newpath
 
-/obj/item/organ/internal/malignant/engineered/lattice/proc/make_mutoid(var/reagent)
+/obj/item/organ/internal/malignant/engineered/lattice/proc/make_mutoid(reagent)
 	if(!prepared)
 		return FALSE
 	if(chem_target)
