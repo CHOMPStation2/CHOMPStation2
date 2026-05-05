@@ -63,3 +63,6 @@
       moved
   zeskorion:
   - bugfix: more cetus fixes
+2026-05-05:
+  Cameron-The-Raven:
+  - bugfix: Drying racks no longer ERROR
