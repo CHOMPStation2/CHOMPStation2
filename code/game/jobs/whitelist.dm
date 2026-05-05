@@ -155,7 +155,7 @@ ADMIN_VERB(open_whitelist_editor, R_ADMIN|R_SERVER, "Open Whitelist Editor", "Op
 	GLOB.whitelist = world.file2list(WHITELISTFILE)
 	if(!GLOB.whitelist.len)	GLOB.whitelist = null
 
-/proc/check_whitelist(mob/M /*, var/rank*/)
+/proc/check_whitelist(mob/M /*, rank*/)
 	// CHOMPAdd Start
 	if(!CONFIG_GET(flag/usewhitelist)) //I guess this is an override for the blanket whitelist system.
 		return 1
@@ -227,7 +227,7 @@ ADMIN_VERB(open_whitelist_editor, R_ADMIN|R_SERVER, "Open Whitelist Editor", "Op
 	GLOB.robot_whitelist.Cut()
 	load_alienwhitelist()
 
-/proc/is_alien_whitelisted(client/C, var/datum/species/species)
+/proc/is_alien_whitelisted(client/C, datum/species/species)
 	//They are admin or the whitelist isn't in use
 	if(whitelist_overrides(C))
 		return TRUE
@@ -294,7 +294,7 @@ ADMIN_VERB(open_whitelist_editor, R_ADMIN|R_SERVER, "Open Whitelist Editor", "Op
 	GLOB.job_whitelist.Cut()
 	load_jobwhitelist()
 
-/proc/is_job_whitelisted(mob/M, var/rank)
+/proc/is_job_whitelisted(mob/M, rank)
 	// Check if the job actually requires a whitelist
 	var/datum/job/job = SSjob.get_job(rank)
 	if(!job.whitelist_only)
@@ -322,7 +322,7 @@ ADMIN_VERB(open_whitelist_editor, R_ADMIN|R_SERVER, "Open Whitelist Editor", "Op
 
 	return FALSE
 
-/proc/is_lang_whitelisted(mob/M, var/datum/language/language)
+/proc/is_lang_whitelisted(mob/M, datum/language/language)
 	//They are admin or the whitelist isn't in use
 	if(whitelist_overrides(M))
 		return TRUE
@@ -344,7 +344,7 @@ ADMIN_VERB(open_whitelist_editor, R_ADMIN|R_SERVER, "Open Whitelist Editor", "Op
 
 	return FALSE
 
-/proc/is_borg_whitelisted(mob/M, var/module)
+/proc/is_borg_whitelisted(mob/M, module)
 	//They are admin or the whitelist isn't in use
 	if(whitelist_overrides(M))
 		return 1

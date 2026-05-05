@@ -28,7 +28,7 @@
 	processing = FALSE
 	playsound(src, 'sound/machines/ding.ogg', 50, 1)
 
-/obj/machinery/processor/monkey/extract(var/atom/movable/AM)
+/obj/machinery/processor/monkey/extract(atom/movable/AM)
 	if(istype(AM, /mob/living/carbon/human))
 		var/mob/living/carbon/human/M = AM
 		playsound(src, 'sound/effects/splat.ogg', 50, 1)
@@ -37,7 +37,7 @@
 		monkeys_recycled++
 		sleep(1 SECOND)
 
-/obj/machinery/processor/monkey/can_insert(var/atom/movable/AM)
+/obj/machinery/processor/monkey/can_insert(atom/movable/AM)
 	if(istype(AM, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = AM
 		if(!istype(H.species, /datum/species/monkey))

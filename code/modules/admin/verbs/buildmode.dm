@@ -345,7 +345,7 @@ GLOBAL_LIST_EMPTY(active_buildmode_holders)
 				objholder = get_path_from_partial_text()
 	return 1
 
-/proc/build_click(var/mob/user, buildmode, params, var/obj/object)
+/proc/build_click(mob/user, buildmode, params, obj/object)
 	var/obj/effect/bmode/buildholder/holder = null
 	for(var/obj/effect/bmode/buildholder/H)
 		if(H.cl == user.client)
@@ -738,7 +738,7 @@ CHOMP Remove end */
 				if(holder.buildmode.objsay)
 					to_chat(usr, "[object.type]")
 
-/proc/build_drag(var/client/user, buildmode, var/atom/fromatom, var/atom/toatom, var/atom/fromloc, var/atom/toloc, var/fromcontrol, var/tocontrol, params)
+/proc/build_drag(client/user, buildmode, atom/fromatom, atom/toatom, atom/fromloc, atom/toloc, fromcontrol, tocontrol, params)
 	var/obj/effect/bmode/buildholder/holder = null
 	for(var/obj/effect/bmode/buildholder/H)
 		if(H.cl == user)
@@ -805,7 +805,7 @@ CHOMP Remove end */
 			log_admin("BUILDMODE/ITEM GENERATION: [key_name(usr)] selected [result] to be spawned.")
 	return result
 
-/obj/effect/bmode/buildmode/proc/make_rectangle(var/turf/A, var/turf/B, var/turf/wall_type, var/turf/floor_type, var/area_enabled, var/area_name)
+/obj/effect/bmode/buildmode/proc/make_rectangle(turf/A, turf/B, turf/wall_type, turf/floor_type, area_enabled, area_name)
 	if(!A || !B) // No coords
 		return
 	if(A.z != B.z) // Not same z-level
@@ -867,7 +867,7 @@ CHOMP Remove end */
 	if(area_enabled) //Let's try not to make a new area unless you got walls and a floor.
 		create_buildmode_area(area_name, origin) //Generates a new area.
 
-/proc/create_buildmode_area(var/area_name, var/turf/origin)
+/proc/create_buildmode_area(area_name, turf/origin)
 	var/turfs = detect_room_buildmode(origin)
 
 	var/area/newA
@@ -891,7 +891,7 @@ CHOMP Remove end */
 	oldA.power_check() //Simply makes the area turn the power off if you nicked an APC from it.
 	return TRUE
 
-/proc/detect_room_buildmode(var/turf/first, var/allowedAreas = AREA_SPACE)
+/proc/detect_room_buildmode(turf/first, allowedAreas = AREA_SPACE)
 	if(!istype(first))
 		return
 	var/list/turf/found = list()

@@ -9,7 +9,7 @@
 	emote_message_3p_target = "prbts at TARGET."
 	emote_sound = 'sound/voice/prbt2.ogg'
 
-/datum/decl/emote/audible/gasp/get_emote_sound(var/atom/user)
+/datum/decl/emote/audible/gasp/get_emote_sound(atom/user)
 	..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
@@ -105,7 +105,7 @@
 		'sound/voice/pain/scientist/sci_pain5.ogg',
 	)
 
-/datum/decl/emote/audible/scientist/get_emote_sound(var/atom/user)
+/datum/decl/emote/audible/scientist/get_emote_sound(atom/user)
 	. = ..()
 	.["vol"] *= 0.4 //these boys are pretty loud on their own lol
 

@@ -99,7 +99,7 @@
 	if(.)
 		SSnanoui.update_uis(src)
 
-/obj/item/starcaster_news/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1) //Also ripped from news_browser.dm. Fuck nanoUI
+/obj/item/starcaster_news/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 1) //Also ripped from news_browser.dm. Fuck nanoUI
 	var/obj/item/starcaster_news/PRG = src //If you're trying to understand this shit go to nano/templates/starcaster_ch.tmpl
 
 	var/list/data = list()

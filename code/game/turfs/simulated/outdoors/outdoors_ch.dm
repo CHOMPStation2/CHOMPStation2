@@ -1,7 +1,7 @@
 /turf/simulated/floor/outdoors
 	var/demote_to = /turf/simulated/floor/outdoors/rocks
 
-/turf/simulated/floor/outdoors/proc/promote(var/new_turf_type)
+/turf/simulated/floor/outdoors/proc/promote(new_turf_type)
 	var/mytype = src.type
 	var/list/coords = list(x, y, z)
 
@@ -62,7 +62,7 @@
 	for(var/d in crossed_dirs)
 		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))
 
-/turf/simulated/floor/outdoors/snow/sif/planetuse/attackby(var/obj/item/W, var/mob/user)
+/turf/simulated/floor/outdoors/snow/sif/planetuse/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/shovel))
 		to_chat(user, span_notice("You begin to remove \the [src] with your [W]."))
 		if(do_after(user, 4 SECONDS * W.toolspeed, src))

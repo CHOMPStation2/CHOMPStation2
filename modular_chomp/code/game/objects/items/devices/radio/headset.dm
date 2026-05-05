@@ -62,7 +62,7 @@
 			H.species.slowdown = slowdown_reset
 			H.species.item_slowdown_mod = item_slowdown_reset
 
-/obj/item/radio/headset/event/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/radio/headset/event/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(!telez)
 		return FALSE
 	tele_threshold -= damage

@@ -31,7 +31,7 @@
 		name = my_kin.comp.dark_energy >= cost ? "Activate" : "No Energy"
 	return src
 
-/obj/effect/shadekin_ability/Click(var/location, var/control, var/params)
+/obj/effect/shadekin_ability/Click(location, control, params)
 	if(my_kin.stat) return
 
 	var/list/clickprops = params2list(params)

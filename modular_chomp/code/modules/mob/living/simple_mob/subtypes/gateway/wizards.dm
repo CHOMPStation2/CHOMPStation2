@@ -85,7 +85,7 @@
 	melee_damage_lower = 8
 	melee_damage_upper = 8
 
-/mob/living/simple_mob/vr/glitch/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/vr/glitch/apply_melee_effects(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		L.add_modifier(/datum/modifier/digitizing, 60 SECONDS)
@@ -104,7 +104,7 @@
 	melee_damage_lower = 30
 	melee_damage_upper = 30
 
-/mob/living/simple_mob/vr/doomknight/apply_melee_effects(var/atom/A) //If you get hit by this slow thing, you have 5 minuites to live.
+/mob/living/simple_mob/vr/doomknight/apply_melee_effects(atom/A) //If you get hit by this slow thing, you have 5 minuites to live.
 	if(isliving(A))
 		var/mob/living/L = A
 		L.add_modifier(/datum/modifier/doomed, 300 SECONDS)

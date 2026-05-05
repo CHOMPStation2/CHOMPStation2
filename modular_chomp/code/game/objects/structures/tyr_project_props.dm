@@ -9,7 +9,7 @@
 	var/descendx
 	var/descendy
 
-/obj/structure/prop/tyr_elevator/attackby(var/obj/item/W as obj, var/mob/user as mob)
+/obj/structure/prop/tyr_elevator/attackby(obj/item/W as obj, mob/user as mob)
 	if (do_after(user, 30, target = src))
 		do_teleport(user, locate(descendx,descendy,src.z), channel = TELEPORT_CHANNEL_QUANTUM)
 
@@ -61,7 +61,7 @@
 			visible_message(span_warning("A red light on \the [src]'s control panel flashes briefly."))
 	..()
 
-/obj/machinery/door/blast/puzzle/tyrdoor/keypad/proc/check_input(var/input)
+/obj/machinery/door/blast/puzzle/tyrdoor/keypad/proc/check_input(input)
 	if(length(input) != codelen)
 		return 0
 
@@ -112,7 +112,7 @@
 
 	var/mob/living/carbon/occupant = null
 
-/obj/machinery/restoration_cell/attackby(var/obj/item/G as obj, var/mob/user as mob)
+/obj/machinery/restoration_cell/attackby(obj/item/G as obj, mob/user as mob)
 	if(istype(G, /obj/item/grab))
 		var/obj/item/grab/grab = G
 		if(!ismob(grab.affecting))

@@ -1,4 +1,4 @@
-/mob/living/Crossed(var/atom/movable/AM)
+/mob/living/Crossed(atom/movable/AM)
 	..()
 	var/mob/living/target = AM
 	if(istype(target) && src.lying && target.loc && target.buckled != src)

@@ -556,7 +556,7 @@
 	explosion(target, 0, 0, 2, 4)//No need to have a question.
 	return 1
 
-/obj/item/projectile/energy/homing_bolt/missile/throw_impact(atom/target, var/speed)
+/obj/item/projectile/energy/homing_bolt/missile/throw_impact(atom/target, speed)
 	explosion(target, 0, 0, 2, 4)//No need to have a question.
 	qdel(src)
 

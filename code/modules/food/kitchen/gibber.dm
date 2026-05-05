@@ -45,7 +45,7 @@
 	input_plate = null
 	return ..()
 
-/obj/machinery/gibber/autogibber/Bumped(var/atom/A)
+/obj/machinery/gibber/autogibber/Bumped(atom/A)
 	if(!input_plate) return
 
 	if(ismob(A))
@@ -91,12 +91,12 @@
 	. = ..()
 	. += "The safety guard is [emagged ? span_danger("disabled") : "enabled"]."
 
-/obj/machinery/gibber/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/gibber/emag_act(remaining_charges, mob/user)
 	emagged = !emagged
 	to_chat(user, span_danger("You [emagged ? "disable" : "enable"] the gibber safety guard."))
 	return 1
 
-/obj/machinery/gibber/attackby(var/obj/item/W, var/mob/user)
+/obj/machinery/gibber/attackby(obj/item/W, mob/user)
 	var/obj/item/grab/G = W
 
 	if(default_unfasten_wrench(user, W, 40))
@@ -112,7 +112,7 @@
 	move_into_gibber(user,G.affecting)
 	// Grab() process should clean up the grab item, no need to del it.
 
-/obj/machinery/gibber/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/machinery/gibber/attackby(obj/item/O as obj, mob/user as mob)
 	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
 		return
 	if(default_deconstruction_crowbar(user, O))
@@ -126,7 +126,7 @@
 		return
 	move_into_gibber(user,target)
 
-/obj/machinery/gibber/proc/move_into_gibber(var/mob/user,var/mob/living/victim)
+/obj/machinery/gibber/proc/move_into_gibber(mob/user,mob/living/victim)
 
 	if(src.occupant)
 		to_chat(user, span_danger("The gibber is full, empty it first!"))

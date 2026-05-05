@@ -138,7 +138,7 @@
 					"#0F0F0F",
 					)
 
-/obj/item/projectile/beam/sizelaser/chaos/on_hit(var/atom/target)
+/obj/item/projectile/beam/sizelaser/chaos/on_hit(atom/target)
 	light_color = pick(chaos_colors)
 	var/chaos = rand(25,200)
 	var/mob/living/M = target

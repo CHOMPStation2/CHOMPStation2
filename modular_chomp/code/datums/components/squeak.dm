@@ -84,7 +84,7 @@
 	qdel(GetComponent(/datum/component/connect_loc_behalf))
 */
 
-/datum/component/squeak/proc/play_squeak(var/volume_mod = 1)
+/datum/component/squeak/proc/play_squeak(volume_mod = 1)
 	SIGNAL_HANDLER
 
 	if(prob(squeak_chance))
@@ -93,7 +93,7 @@
 		else
 			playsound(parent, pick_weight(override_squeak_sounds), volume * volume_mod, TRUE, sound_extra_range)
 
-/datum/component/squeak/proc/step_squeak(obj/item/clothing/shoes/source, var/running)
+/datum/component/squeak/proc/step_squeak(obj/item/clothing/shoes/source, running)
 	SIGNAL_HANDLER
 
 	/*

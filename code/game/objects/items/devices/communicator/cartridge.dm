@@ -322,7 +322,7 @@
 // Updates status displays with a new message
 // Copied from /obj/item/cartridge/proc/post_status(),
 // code/game/objects/items/PDA/cart.dm, line 251
-/obj/item/commcard/proc/post_status(var/command, var/data1, var/data2)
+/obj/item/commcard/proc/post_status(command, data1, data2)
 	var/datum/radio_frequency/frequency = SSradio.return_frequency(1435)
 	if(!frequency)
 		return
@@ -350,7 +350,7 @@
 	frequency.post_signal(src, status_signal)
 
 // Receives updates by external devices to the status displays
-/obj/item/commcard/receive_signal(var/datum/signal/signal, var/receive_method, var/receive_param)
+/obj/item/commcard/receive_signal(datum/signal/signal, receive_method, receive_param)
 	internal_data["stat_display_special"] = signal.data["command"]
 	switch(signal.data["command"])
 		if("message")

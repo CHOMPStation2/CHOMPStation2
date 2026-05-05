@@ -355,7 +355,7 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 	else
 		icon_state = initial(icon_state)
 
-/obj/item/sleevemate/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/sleevemate/emag_act(remaining_charges, mob/user)
 	//CHOMPEdit Start
 	var/list/choices = list("Body Snatcher","Mind Binder")
 	var/choice = tgui_input_list(user, "How would you like to modify the [src]?", "", choices)

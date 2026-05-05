@@ -39,7 +39,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/sepia
 
-/datum/decl/chemical_reaction/instant/slime/secertslime/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/secertslime/on_reaction(datum/reagents/holder)
 	holder.my_atom.visible_message(span_warning("Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/redspace(get_turf(holder.my_atom))
 	..()
@@ -52,7 +52,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/sepia
 
-/datum/decl/chemical_reaction/instant/slime/sepia_new_slime/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/sepia_new_slime/on_reaction(datum/reagents/holder)
 	holder.my_atom.visible_message(span_warning("Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/sepia(get_turf(holder.my_atom))
 	..()
@@ -97,7 +97,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/redspace
 
-/datum/decl/chemical_reaction/instant/slime/soulstone/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/soulstone/on_reaction(datum/reagents/holder)
 	new /obj/item/soulstone(get_turf(holder.my_atom))
 	..()
 
@@ -108,7 +108,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/redspace
 
-/datum/decl/chemical_reaction/instant/slime/redspace_smoke/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/redspace_smoke/on_reaction(datum/reagents/holder)
 	var/location = get_turf(holder.my_atom)
 	var/datum/effect/effect/system/smoke_spread/chem/S = new /datum/effect/effect/system/smoke_spread/chem
 	S.attach(location)
@@ -166,7 +166,7 @@
 	required = /obj/item/slime_extract/dark
 
 
-/datum/decl/chemical_reaction/instant/slime/dark_liquidfire/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/dark_liquidfire/on_reaction(datum/reagents/holder)
 	for(var/mob/living/L in range(1, holder.my_atom))
 		L.add_modifier(/datum/modifier/feysight, 10 MINUTES, src)
 	..()
@@ -178,7 +178,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
-/datum/decl/chemical_reaction/instant/slime/dark_deathblood/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/dark_deathblood/on_reaction(datum/reagents/holder)
 	new /obj/item/stack/material/painite(get_turf(holder.my_atom))
 	..()
 
@@ -189,7 +189,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
-/datum/decl/chemical_reaction/instant/slime/dark_liquidfire/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/dark_liquidfire/on_reaction(datum/reagents/holder)
 	for(var/mob/living/L in range(49, holder.my_atom))
 		L.add_modifier(/datum/modifier/sprinting, 5 MINUTES, src)
 	..()
@@ -202,7 +202,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
-/datum/decl/chemical_reaction/instant/slime/dark_carpotoxin/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/dark_carpotoxin/on_reaction(datum/reagents/holder)
 	holder.my_atom.visible_message(span_warning("Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/oceanic(get_turf(holder.my_atom))
 	..()
@@ -214,7 +214,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
-/datum/decl/chemical_reaction/instant/slime/dark_deathblood/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/dark_deathblood/on_reaction(datum/reagents/holder)
 	new /obj/effect/spider/eggcluster/royal/space(get_turf(holder.my_atom))
 	..()
 
@@ -225,7 +225,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
-/datum/decl/chemical_reaction/instant/slime/dark_blood/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/dark_blood/on_reaction(datum/reagents/holder)
 	new /obj/item/stack/material/void_opal(get_turf(holder.my_atom))
 	..()
 
@@ -266,7 +266,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/plague
 
-/datum/decl/chemical_reaction/instant/slime/virusdish/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/virusdish/on_reaction(datum/reagents/holder)
 	// new /obj/item/virusdish(get_turf(holder.my_atom))
 	..()
 
@@ -334,7 +334,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/oceanic
 
-/datum/decl/chemical_reaction/instant/slime/carpfren/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/carpfren/on_reaction(datum/reagents/holder)
 	new /mob/living/simple_mob/animal/space/carp/station(get_turf(holder.my_atom))
 	..()
 
@@ -361,7 +361,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/oceanic
 
-/datum/decl/chemical_reaction/instant/slime/oceanboon/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/oceanboon/on_reaction(datum/reagents/holder)
 	for(var/mob/living/L in range(21, holder.my_atom))
 		L.add_modifier(/datum/modifier/healingtide, 10 MINUTES, src)
 	..()
@@ -373,7 +373,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/plague
 
-/datum/decl/chemical_reaction/instant/slime/warplague/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/warplague/on_reaction(datum/reagents/holder)
 	holder.my_atom.visible_message(span_warning("Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/nuclear(get_turf(holder.my_atom))
 	..()
@@ -432,7 +432,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/nuclear
 
-/datum/decl/chemical_reaction/instant/slime/nuclear_radpulse/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/nuclear_radpulse/on_reaction(datum/reagents/holder)
 	log_and_message_admins("Green extract reaction (radiation pulse) has been activated in [get_area(holder.my_atom)].  Last fingerprints: [holder.my_atom.forensic_data?.get_lastprint()]")
 	playsound(holder.my_atom, 'sound/effects/phasein.ogg', 75, 1)
 	holder.my_atom.visible_message(span_danger("\The [holder.my_atom] begins to vibrate violently!"))
@@ -455,7 +455,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/green
 
-/datum/decl/chemical_reaction/instant/slime/green_emitter/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/green_emitter/on_reaction(datum/reagents/holder)
 	log_and_message_admins("Green extract reaction (radiation emitter) has been activated in [get_area(holder.my_atom)].  Last fingerprints: [holder.my_atom.forensic_data?.get_lastprint()]")
 	new /obj/item/slime_irradiator(get_turf(holder.my_atom))
 	..()
@@ -477,7 +477,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/green
 
-/datum/decl/chemical_reaction/instant/slime/nuclear_uranium/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/nuclear_uranium/on_reaction(datum/reagents/holder)
 	new /obj/item/stack/material/uranium(get_turf(holder.my_atom), 10)
 	..()
 
@@ -508,7 +508,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/dream
 
-/datum/decl/chemical_reaction/instant/slime/dreamscale/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/dreamscale/on_reaction(datum/reagents/holder)
 	new /obj/item/stack/material/dreamscale(get_turf(holder.my_atom), 10)
 	..()
 
@@ -519,7 +519,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/dream
 
-/datum/decl/chemical_reaction/instant/slime/nightmareslime/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/nightmareslime/on_reaction(datum/reagents/holder)
 	holder.my_atom.visible_message(span_warning("Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/nightmare(get_turf(holder.my_atom))
 	..()
@@ -585,7 +585,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/nightmare
 
-/datum/decl/chemical_reaction/instant/slime/nightmarewater/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/nightmarewater/on_reaction(datum/reagents/holder)
 	for(var/mob/living/L in range(3, holder.my_atom))
 		L.add_modifier(/datum/modifier/faraday, 1 MINUTES, src)
 		L.add_modifier(/datum/modifier/blastshield, 1 MINUTES, src)
@@ -598,7 +598,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/nightmare
 
-/datum/decl/chemical_reaction/instant/slime/nightmarejelly/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/nightmarejelly/on_reaction(datum/reagents/holder)
 	for(var/mob/living/L in range(14, holder.my_atom))
 		L.add_modifier(/datum/modifier/poisoned/strong, 3 MINUTES, src)
 	..()
@@ -610,7 +610,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/nightmare
 
-/datum/decl/chemical_reaction/instant/slime/nightmareblood/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/nightmareblood/on_reaction(datum/reagents/holder)
 	new /obj/item/stack/material/valhollide(get_turf(holder.my_atom), 5)
 	..()
 
@@ -621,7 +621,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/nightmare
 
-/datum/decl/chemical_reaction/instant/slime/nightmarephoron/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/nightmarephoron/on_reaction(datum/reagents/holder)
 	for(var/mob/living/L in range(14, holder.my_atom))
 		L.add_modifier(/datum/modifier/berserk_exhaustion, 1 MINUTES, src)
 	..()
@@ -636,7 +636,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/redspace
 
-/datum/decl/chemical_reaction/instant/slime/redspace_sound/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/redspace_sound/on_reaction(datum/reagents/holder)
 	holder.my_atom.visible_message(span_warning("Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/sound(get_turf(holder.my_atom))
 	..()
@@ -692,7 +692,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/sound
 
-/datum/decl/chemical_reaction/instant/slime/soundblood/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/soundblood/on_reaction(datum/reagents/holder)
 	new /obj/item/stack/material/quartz(get_turf(holder.my_atom), 5)
 	..()
 
@@ -703,7 +703,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/sound
 
-/datum/decl/chemical_reaction/instant/slime/soundphoron/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/soundphoron/on_reaction(datum/reagents/holder)
 	for(var/mob/living/L in range(1, holder.my_atom))
 		L.add_modifier(/datum/modifier/aura/soothingsong, 10 MINUTES, src)
 	..()
@@ -715,7 +715,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/sound
 
-/datum/decl/chemical_reaction/instant/slime/soundwater/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/soundwater/on_reaction(datum/reagents/holder)
 	holder.my_atom.visible_message(span_warning("Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/sound(get_turf(holder.my_atom))
 	..()
@@ -727,6 +727,6 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/sound
 
-/datum/decl/chemical_reaction/instant/slime/soundjelly/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/slime/soundjelly/on_reaction(datum/reagents/holder)
 	new /obj/item/stack/material/glass/plastitanium(get_turf(holder.my_atom), 5)
 	..()

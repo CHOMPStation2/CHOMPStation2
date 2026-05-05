@@ -62,7 +62,7 @@
 	brainloss_cost = 0
 	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 0, bio = 0, rad = 0)
 
-/obj/item/clothing/head/psy_crown/candycrown/activate_ability(var/mob/living/wearer)
+/obj/item/clothing/head/psy_crown/candycrown/activate_ability(mob/living/wearer)
 	..()
 	wearer.add_modifier(/datum/modifier/aura/candy_orange, 30 SECONDS)
 

@@ -248,7 +248,7 @@
 	dept_time_required = 20 // CHOMPEdit
 
 //YW UNCOMMENTINGSTART: REINSTATE LOYALTY IMPLANT
-/datum/job/lawyer/equip(var/mob/living/carbon/human/H)
+/datum/job/lawyer/equip(mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty()

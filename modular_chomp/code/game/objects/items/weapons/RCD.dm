@@ -35,7 +35,7 @@ borosilicate = 9
 rborosilicate = 12
 */
 
-/obj/item/rcd/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/rcd/emag_act(remaining_charges, mob/user)
 	..()
 	if(!emagged)
 		emagged = 1
