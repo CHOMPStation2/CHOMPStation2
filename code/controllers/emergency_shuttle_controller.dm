@@ -73,7 +73,7 @@
 					pod.arming_controller.arm()
 
 //begins the launch countdown and sets the amount of time left until launch
-/datum/emergency_shuttle_controller/proc/set_launch_countdown(var/seconds)
+/datum/emergency_shuttle_controller/proc/set_launch_countdown(seconds)
 	wait_for_launch = 1
 	launch_time = world.time + seconds*10
 	START_PROCESSING(SSprocessing, src)

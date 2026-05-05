@@ -315,7 +315,7 @@
 	melee_damage_lower = 7
 	melee_damage_upper = 12
 
-/mob/living/simple_mob/vore/candy/greencabold/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/vore/candy/greencabold/apply_melee_effects(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		L.add_modifier(/datum/modifier/deep_wounds, 15 SECONDS)
@@ -436,7 +436,7 @@
 	special_attack_max_range = 15
 	special_attack_cooldown = 7 SECONDS
 
-/mob/living/simple_mob/vore/candy/ouroboros/bullet_act(var/obj/item/projectile/Proj)
+/mob/living/simple_mob/vore/candy/ouroboros/bullet_act(obj/item/projectile/Proj)
 	if(prob(50))
 		new /obj/random/mob/candycritter (src.loc)
 		..()
@@ -632,7 +632,7 @@
 	maxHealth = 10
 	health = 10
 
-/mob/living/simple_mob/vore/candy/peppermint/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/mob/living/simple_mob/vore/candy/peppermint/attackby(obj/item/O as obj, mob/user as mob)
 	if(O.force)
 		if(prob(80))
 			visible_message(span_danger("\The [src] deflects \the [O] with its shell!"))

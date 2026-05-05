@@ -178,7 +178,7 @@
 	z = 0
 	flags = MAP_LEVEL_SEALED
 
-/datum/map_z_level/cryogaia_lateload/New(var/datum/map/map, mapZ)
+/datum/map_z_level/cryogaia_lateload/New(datum/map/map, mapZ)
 	if(mapZ && !z)
 		z = mapZ
 	return ..(map)

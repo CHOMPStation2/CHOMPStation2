@@ -21,7 +21,7 @@
 	pickup_sound = 'sound/items/pickup/backpack.ogg'
 
 
-/obj/item/storage/backpack/equipped(var/mob/user, var/slot)
+/obj/item/storage/backpack/equipped(mob/user, slot)
 	if (slot == slot_back && src.use_sound)
 // Chomp edit
 		if(isbelly(user.loc))

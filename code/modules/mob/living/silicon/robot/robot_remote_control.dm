@@ -44,7 +44,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	transfer_shell()
 
 
-/mob/living/silicon/robot/proc/transfer_shell(var/mob/living/silicon/robot/target)
+/mob/living/silicon/robot/proc/transfer_shell(mob/living/silicon/robot/target)
 	var/mob/living/silicon/ai/AI = mainframe
 	//relay AI
 	if(!CONFIG_GET(flag/allow_ai_shells)) // CHOMPEdit

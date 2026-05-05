@@ -1,4 +1,4 @@
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/teleport_attack(atom/target, var/next_cycle, var/tele_miss)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/teleport_attack(atom/target, next_cycle, tele_miss)
 	// Teleport attack.
 	if(!target)
 		to_chat(src, span_warning("There's nothing to teleport to."))
@@ -77,7 +77,7 @@
 	.=..()
 	icon_state = "arti"
 
-/obj/effect/callstrike/end_fall(var/crushing = FALSE)
+/obj/effect/callstrike/end_fall(crushing = FALSE)
 	for(var/mob/living/L in loc)
 		var/target_zone = ran_zone()
 		var/blocked = L.run_armor_check(target_zone, "laser")
@@ -87,7 +87,7 @@
 	playsound(src, 'sound/effects/clang2.ogg', 50, 1)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/gravity_surge(atom/target, var/next_cycle, var/pull_radius, var/pull_strength)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/gravity_surge(atom/target, next_cycle, pull_radius, pull_strength)
 	if(!target)
 		return
 	for(target in range(pull_radius, src))

@@ -322,7 +322,7 @@
 	special_attack_cooldown = 6 SECONDS
 	ranged_cooldown = 30
 
-/mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat/bullet_act(var/obj/item/projectile/Proj)
+/mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
 	if(prob(60))
@@ -401,12 +401,12 @@
 	icon_state = "blade_tosser"
 	icon_living = "blade_tosser"
 
-/mob/living/simple_mob/humanoid/astral_collective/body/dagger/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/mob/living/simple_mob/humanoid/astral_collective/body/dagger/attackby(obj/item/O as obj, mob/user as mob)
 	if(prob(50))
 		teleport_attack(src)
 	..()
 
-/mob/living/simple_mob/humanoid/astral_collective/body/dagger/bullet_act(var/obj/item/projectile/Proj)
+/mob/living/simple_mob/humanoid/astral_collective/body/dagger/bullet_act(obj/item/projectile/Proj)
 	if(prob(50))
 		teleport_attack(src)
 	..()
@@ -442,7 +442,7 @@
 	special_attack_cooldown = 10 SECONDS
 
 //Gravity shield. Hit it with melee, and a sudden gravity surge may tear your weapon to the ground
-/mob/living/simple_mob/humanoid/astral_collective/mind/gravity/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/mob/living/simple_mob/humanoid/astral_collective/mind/gravity/attackby(obj/item/O as obj, mob/user as mob)
 	if(O.force)
 		if(prob(30))
 			visible_message(span_boldwarning(span_orange("[O] is pulled to the ground!.")))
@@ -495,7 +495,7 @@
 	barrier_health ++
 	icon_state = "clock_cat_shield"
 
-/mob/living/simple_mob/humanoid/astral_collective/soul/spear_bearer/bullet_act(var/obj/item/projectile/Proj)
+/mob/living/simple_mob/humanoid/astral_collective/soul/spear_bearer/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
 	if(barrier_health > 0)

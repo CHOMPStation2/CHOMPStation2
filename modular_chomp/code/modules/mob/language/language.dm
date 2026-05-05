@@ -1,7 +1,7 @@
 #define SCRAMBLE_CACHE_LEN 40
 //basically, how many words can it store that it remembers to use? Upped from 20 to 40, because 20 is very s m a l l
 
-/datum/language/proc/partial_scramble(var/input, var/capitalize = FALSE)
+/datum/language/proc/partial_scramble(input, capitalize = FALSE)
 	if(!syllables || !syllables.len)
 		return capitalize ? capitalize(input) : input
 
@@ -30,7 +30,7 @@
 
 	return input_start + input + input_ending
 
-/datum/language/proc/scramble(var/input, var/list/known_languages)
+/datum/language/proc/scramble(input, list/known_languages)
 	var/understand_chance = 0
 	for(var/datum/language/L in known_languages)
 		if(partial_understanding && partial_understanding[L.name])
@@ -61,7 +61,7 @@
 
 	return scrambled_text
 
-/datum/language/proc/scramble_word(var/input, var/capitalize = FALSE)
+/datum/language/proc/scramble_word(input, capitalize = FALSE)
 	if(!syllables || !syllables.len)
 		return capitalize ? capitalize(stars(input)) : stars(input)
 

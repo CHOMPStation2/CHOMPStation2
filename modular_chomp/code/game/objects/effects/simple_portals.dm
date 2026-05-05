@@ -42,7 +42,7 @@ GLOBAL_LIST_EMPTY(simple_portals)
 			playsound(get_turf(src),teleport_sound,60,1)
 			playsound(get_turf(destination),teleport_sound,60,1)
 
-/obj/effect/simple_portal/attack_ghost(var/mob/observer/dead/user)
+/obj/effect/simple_portal/attack_ghost(mob/observer/dead/user)
 	. = ..()
 	handle_teleport(user)
 
@@ -88,7 +88,7 @@ GLOBAL_LIST_EMPTY(simple_portals)
 						break
 	. = ..()
 
-/obj/effect/simple_portal/linked/proc/valid_destination(var/turf/dest,var/atom/movable/AM)
+/obj/effect/simple_portal/linked/proc/valid_destination(turf/dest,atom/movable/AM)
 	if(!dest)
 		return FALSE
 	if(dest.density)

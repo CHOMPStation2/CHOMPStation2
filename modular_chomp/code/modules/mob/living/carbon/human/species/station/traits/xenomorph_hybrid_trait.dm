@@ -41,7 +41,7 @@
 	var_changes = list("slowdown" = -0.5, "item_slowdown_mod" = 0.5, "total_health" = 125) // Much faster and carry-capable, but slightly less tanky.
 	has_preferences = list("pass_table" = list(TRAIT_PREF_TYPE_BOOLEAN, "On spawn", TRAIT_NO_VAREDIT_TARGET, TRUE))
 
-/datum/trait/neutral/xenomorph_hunter/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
+/datum/trait/neutral/xenomorph_hunter/apply(datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	if (trait_prefs?["pass_table"] || !trait_prefs)
 		H.pass_flags |= PASSTABLE

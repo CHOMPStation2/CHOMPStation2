@@ -249,7 +249,7 @@
 		powercheck(hitcost)
 	//CHOMPEdit end
 
-/obj/item/melee/shock_maul/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/shock_maul/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	. = ..()
 	if(user.a_intent == I_DISARM)
 		launch_force *= launch_force_disarm

@@ -1,4 +1,4 @@
-/proc/guest_jobbans(var/job)
+/proc/guest_jobbans(job)
 	return
 
 /proc/get_job_datums()
@@ -12,7 +12,7 @@
 
 	return occupations
 
-/proc/get_alternate_titles(var/job)
+/proc/get_alternate_titles(job)
 	var/list/jobs = get_job_datums()
 	var/list/titles = list()
 

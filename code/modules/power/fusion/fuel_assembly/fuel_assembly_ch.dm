@@ -40,7 +40,7 @@
 		explosion(src.loc, 1, 2, 4, 6)
 		qdel(src)
 
-/obj/item/fuel_assembly/blitz/unshielded/attackby(var/obj/item/I, mob/user as mob)
+/obj/item/fuel_assembly/blitz/unshielded/attackby(obj/item/I, mob/user as mob)
 	..()
 	var/obj/item/stack/material/lead/M = I
 	if(istype(M))

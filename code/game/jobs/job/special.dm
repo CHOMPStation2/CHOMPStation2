@@ -25,7 +25,7 @@
 	return SSaccess.get_all_accesses().Copy()
 
 //YW UNCOMMENTINGSTART: INSTATE LOYALTY IMPLANT
-/datum/job/centcom_officer/equip(var/mob/living/carbon/human/H)
+/datum/job/centcom_officer/equip(mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty()

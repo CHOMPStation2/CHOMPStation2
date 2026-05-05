@@ -122,7 +122,7 @@
 
 	return ammotext
 
-/obj/item/gun/magnetic/examine(var/mob/user)
+/obj/item/gun/magnetic/examine(mob/user)
 	. = ..()
 	if(get_dist(user, src) <= 2)
 		. += show_ammo()
@@ -140,7 +140,7 @@
 			else
 				. += span_notice("The capacitor charge indicator is [span_green("green")].")
 
-/obj/item/gun/magnetic/attackby(var/obj/item/thing, var/mob/user)
+/obj/item/gun/magnetic/attackby(obj/item/thing, mob/user)
 
 	if(removable_components)
 		if(istype(thing, /obj/item/cell))
@@ -200,7 +200,7 @@
 		return
 	. = ..()
 
-/obj/item/gun/magnetic/attack_hand(var/mob/user)
+/obj/item/gun/magnetic/attack_hand(mob/user)
 	if(user.get_inactive_hand() == src)
 		var/obj/item/removing
 
@@ -326,7 +326,7 @@
 	else
 		return
 
-/obj/item/gun/magnetic/fuelrod/proc/blitzed(var/turf/T, var/mob/living/carbon/M, var/max_range, var/banglet)					// Added a new proc called 'bang' that takes a location and a person to be banged.
+/obj/item/gun/magnetic/fuelrod/proc/blitzed(turf/T, mob/living/carbon/M, max_range, banglet)					// Added a new proc called 'bang' that takes a location and a person to be banged.
 	to_chat(M, span_danger("BANG"))						// Called during the loop that bangs people in lockers/containers and when banging
 	playsound(src, 'sound/effects/bang.ogg', 50, 1, 30)		// people in normal view.  Could theroetically be called during other explosions.
 

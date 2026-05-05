@@ -381,7 +381,7 @@
 		to_chat(user, span_notice("If you are reading this, something has gone horribly wrong!"))
 		return
 
-/obj/item/taskmanager/proc/deploy_voucher(var/turf/T)
+/obj/item/taskmanager/proc/deploy_voucher(turf/T)
 	switch(mode)
 		if (TM_MODE_BRIDGE)
 			new /obj/item/surplus_voucher/com(T)
