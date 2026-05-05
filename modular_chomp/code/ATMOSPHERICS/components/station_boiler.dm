@@ -84,7 +84,7 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 	return 1
 
 // Attept to load materials.  Returns 0 if item wasn't a stack of materials, otherwise 1 (even if failed to load)
-/obj/machinery/atmospherics/binary/stationboiler/proc/try_load_materials(var/mob/user, var/obj/item/stack/material/S)
+/obj/machinery/atmospherics/binary/stationboiler/proc/try_load_materials(var/mob/user, obj/item/stack/material/S)
 	if(!istype(S))
 		return 0
 	if(!(S.material.name in stored_material))
@@ -191,7 +191,7 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 	var/hours = FLOOR((org_ticks / 3600), 1)
 	return "[hours]:[minute]:[second]"
 
-/obj/machinery/atmospherics/binary/stationboiler/fall_apart(var/severity = 3, var/scatter = TRUE)
+/obj/machinery/atmospherics/binary/stationboiler/fall_apart(var/severity = 3, scatter = TRUE)
 	return //Invincible machine
 
 /obj/machinery/atmospherics/binary/stationboiler/proc/try_ignite()
@@ -200,7 +200,7 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 		update_icon()
 
 // 0 amount = 0 means ejecting a full stack; -1 means eject everything
-/obj/machinery/atmospherics/binary/stationboiler/proc/eject_materials(var/material_name, var/amount)
+/obj/machinery/atmospherics/binary/stationboiler/proc/eject_materials(var/material_name, amount)
 	var/recursive = amount == -1 ? 1 : 0
 	var/datum/material/matdata = get_material_by_name(material_name)
 	var/stack_type = matdata.stack_type

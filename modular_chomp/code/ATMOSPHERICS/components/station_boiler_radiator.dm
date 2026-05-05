@@ -33,5 +33,5 @@
 			neededEnergy = min(neededEnergy, thermal_energy_change)
 			environment.add_thermal_energy(neededEnergy)
 
-/obj/machinery/atmospherics/binary/stationboiler/fall_apart(var/severity = 3, var/scatter = TRUE)
+/obj/machinery/atmospherics/binary/stationboiler/fall_apart(var/severity = 3, scatter = TRUE)
 	return //Invincible machine

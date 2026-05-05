@@ -105,7 +105,7 @@
 			machinery.attack_generic(src, 20)
 	..()
 
-/mob/living/simple_mob/animal/passive/snowbull/proc/runOver(var/mob/living/M)
+/mob/living/simple_mob/animal/passive/snowbull/proc/runOver(mob/living/M)
 	if(istype(M))
 		visible_message("<span class='warning'>[src] rams [M] over!</span>")
 		playsound(src, 'sound/effects/splat.ogg', 50, 1)
@@ -175,7 +175,7 @@
 	give_target(new_target)
 	return new_target
 
-/datum/ai_holder/simple_mob/snowbull/proc/checkthreatened(var/possible_target, var/target_threatlevel = 0)
+/datum/ai_holder/simple_mob/snowbull/proc/checkthreatened(var/possible_target, target_threatlevel = 0)
 	if(check_attacker(possible_target))
 		return TRUE
 	if(untrusting == 1 && target_threatlevel > 130 && (possible_target in range(5)))

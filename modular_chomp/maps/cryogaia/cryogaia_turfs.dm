@@ -74,7 +74,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/grass/sif)
 CRYOGAIA_TURF_CREATE(/turf/simulated/mineral)
 CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 	//This proc is responsible for ore generation on surface turfs
-/turf/simulated/mineral/cryogaia/make_ore(var/rare_ore)
+/turf/simulated/mineral/cryogaia/make_ore(rare_ore)
 	if(mineral || ignore_mapgen)
 		return
 	var/mineral_name
@@ -107,7 +107,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 		UpdateMineral()
 	update_icon()
 
-/turf/simulated/mineral/cryogaia/rich/make_ore(var/rare_ore)
+/turf/simulated/mineral/cryogaia/rich/make_ore(rare_ore)
 	if(mineral || ignore_mapgen)
 		return
 	var/mineral_name
@@ -135,7 +135,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 	update_icon()
 
 //Underdark
-/turf/simulated/mineral/rich/make_ore(var/rare_ore)
+/turf/simulated/mineral/rich/make_ore(rare_ore)
 	if(mineral || ignore_mapgen)
 		return
 	var/mineral_name
