@@ -1,4 +1,4 @@
-/datum/category_item/underwear/socks/generate_image(var/list/metadata, var/layer = FLOAT_LAYER, var/digitigrade = FALSE) //CHOMPEdit
+/datum/category_item/underwear/socks/generate_image(list/metadata, layer = FLOAT_LAYER, digitigrade = FALSE) //CHOMPEdit
 	if(!icon_state)
 		return
 

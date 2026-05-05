@@ -40,7 +40,7 @@
 	var/copy = "/mob/living/simple_mob/vore/solarray"
 
 
-/mob/living/simple_mob/vore/spacecritter/attackby(var/obj/item/O, var/mob/user)
+/mob/living/simple_mob/vore/spacecritter/attackby(obj/item/O, mob/user)
 	if(istype(O, evolvekey))
 		user.drop_from_inventory(O)
 		qdel(O)

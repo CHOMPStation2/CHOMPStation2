@@ -451,7 +451,7 @@
 	var/static/list/blend_objects = list(/obj/machinery/door) //CHOMPEdit convert to static list
 	var/static/list/noblend_objects = list(/obj/machinery/door/window, /obj/machinery/door/firedoor) //CHOMPEdit convert to static list
 
-/turf/simulated/wall/eris/can_join_with_low_wall(var/obj/structure/low_wall/WF)
+/turf/simulated/wall/eris/can_join_with_low_wall(obj/structure/low_wall/WF)
 	return istype(WF, /obj/structure/low_wall/eris)
 
 /turf/simulated/wall/eris/special_wall_connections(list/dirs, list/inrange)
@@ -490,7 +490,7 @@
 
 	var/stripe_color // Adds a colored stripe to the walls
 
-/turf/simulated/wall/bay/can_join_with_low_wall(var/obj/structure/low_wall/WF)
+/turf/simulated/wall/bay/can_join_with_low_wall(obj/structure/low_wall/WF)
 	return istype(WF, /obj/structure/low_wall/bay)
 
 /turf/simulated/wall/bay/update_icon()
@@ -614,7 +614,7 @@
 
 	wall_connections = dirs
 
-/turf/simulated/wall/tgmc/can_join_with_low_wall(var/obj/structure/low_wall/WF)
+/turf/simulated/wall/tgmc/can_join_with_low_wall(obj/structure/low_wall/WF)
 	return istype(WF, /obj/structure/low_wall)
 
 /turf/simulated/wall/tgmc/rwall

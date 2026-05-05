@@ -331,7 +331,7 @@
 
 //Assembly by roboticist
 
-/obj/item/robot_parts/head/attackby(var/obj/item/assembly/S, mob/user as mob)
+/obj/item/robot_parts/head/attackby(obj/item/assembly/S, mob/user as mob)
 	if(!istype(S, /obj/item/assembly/infra))
 		..()
 		return

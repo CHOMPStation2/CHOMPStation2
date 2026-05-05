@@ -36,7 +36,7 @@ Only physical attributes are copied.
 
 
 	//copy stats from our engulfed target
-/mob/living/simple_mob/fleshtaker/proc/flesh_mimic(var/mob/living/simple_mob/target)
+/mob/living/simple_mob/fleshtaker/proc/flesh_mimic(mob/living/simple_mob/target)
 	flesh_mimic = TRUE
 	name = target.name
 	desc = target.desc
@@ -73,7 +73,7 @@ Only physical attributes are copied.
 	armor = base_values["armor"]
 	update_icon()
 
-/mob/living/simple_mob/fleshtaker/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/fleshtaker/apply_melee_effects(atom/A)
 	if(istype(A,/mob/living/simple_mob) && !flesh_mimic)
 		var/mob/living/simple_mob/M = A
 		if(!M.mind)

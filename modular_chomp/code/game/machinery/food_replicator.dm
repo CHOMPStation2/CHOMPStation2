@@ -145,7 +145,7 @@
 
 	return ..()
 
-/obj/machinery/food_replicator/proc/foodcheck(var/obj/item/reagent_containers/food)
+/obj/machinery/food_replicator/proc/foodcheck(obj/item/reagent_containers/food)
 	var/mob/living/mob = locate(/mob/living) in food
 	if(mob)
 		playsound(src, "sound/machines/buzz-two.ogg", 25, 0)

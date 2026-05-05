@@ -13,7 +13,7 @@
 	icon_state = "whip"
 	item_state = "chain"
 
-/obj/item/melee/jellyfishwhip/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/jellyfishwhip/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	if(user.a_intent == I_HURT) //Healy mode
 		. = ..()
 		target.adjustFireLoss(10)
@@ -58,7 +58,7 @@
 		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
 		)
 
-/obj/item/melee/energy/tyr_sabre/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/energy/tyr_sabre/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	if(user.a_intent == I_GRAB) //Anti-Heal mode
 		. = ..()
 		if(active)

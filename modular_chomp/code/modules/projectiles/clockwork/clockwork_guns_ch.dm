@@ -26,7 +26,7 @@
 	)
 	cell_type = /obj/item/cell/device/weapon/empproof
 
-/obj/item/gun/energy/clockwork/unload_ammo(var/mob/user)
+/obj/item/gun/energy/clockwork/unload_ammo(mob/user)
 	if(recharging)
 		return
 	recharging = 1

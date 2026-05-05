@@ -138,7 +138,7 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
 
-/obj/item/clothing/suit/armor/firecloak/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/suit/armor/firecloak/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(istype(damage_source, /obj/item/projectile))
 		return FALSE
 	if(attacker && attacker != user)
@@ -160,7 +160,7 @@
 	force_divisor = 0.50
 	color = "#F13C00"
 
-/obj/item/material/sword/rapier/solar/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/material/sword/rapier/solar/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	. = ..()
 	target.adjust_fire_stacks(10)
 	target.ignite_mob()
@@ -205,7 +205,7 @@
 	force_wielded = 25
 	applies_material_colour = 1
 
-/obj/item/material/twohanded/sledgehammer/gravity/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/material/twohanded/sledgehammer/gravity/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	. = ..()
 	var/atom/target_zone = get_edge_target_turf(user,get_dir(user, target))
 	if(!target.anchored)
@@ -233,7 +233,7 @@
 	slowdown = -0.5
 
 //uggg, why isnt this apart of the base material melee weapons
-/obj/item/material/twohanded/fireaxe/scythe/harvester/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/material/twohanded/fireaxe/scythe/harvester/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(.)
 		return .
 	if(default_parry_check(user, attacker, damage_source) && prob(defend_chance))

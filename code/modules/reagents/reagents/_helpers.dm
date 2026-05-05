@@ -1,4 +1,4 @@
-/atom/movable/proc/can_be_injected_by(var/atom/injector)
+/atom/movable/proc/can_be_injected_by(atom/injector)
 	if(!Adjacent(get_turf(injector)))
 		return FALSE
 	if(!reagents)
@@ -16,11 +16,11 @@
 		istype(src, /obj/item/storage/fancy/cigarettes) || \
 		istype(src, /obj/item/clothing/mask/chewable) // CHOMPEdit
 
-/obj/can_be_injected_by(var/atom/injector)
+/obj/can_be_injected_by(atom/injector)
 	if(!..())
 		return FALSE
 	// Then check if this is a type of container that can be injected
 	return is_injectable_container()
 
-/mob/living/can_be_injected_by(var/atom/injector)
+/mob/living/can_be_injected_by(atom/injector)
 	return ..() && (can_inject(null, 0, BP_TORSO) || can_inject(null, 0, BP_GROIN))

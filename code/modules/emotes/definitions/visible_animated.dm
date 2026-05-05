@@ -68,7 +68,7 @@
 		SOUTH
 	)
 
-/datum/decl/emote/visible/floorspin/proc/spin_dir(var/mob/user)
+/datum/decl/emote/visible/floorspin/proc/spin_dir(mob/user)
 	set waitfor = FALSE
 	for(var/i in spin_dirs)
 		user.set_dir(i)
@@ -76,7 +76,7 @@
 		if(QDELETED(user))
 			return
 
-/datum/decl/emote/visible/floorspin/proc/spin_anim(var/mob/user)
+/datum/decl/emote/visible/floorspin/proc/spin_anim(mob/user)
 	set waitfor = FALSE
 	sleep(1)
 	if(!QDELETED(user))

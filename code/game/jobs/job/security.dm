@@ -53,7 +53,7 @@
 	title = JOB_ALT_SECURITY_MANAGER
 
 //YW ADDITION START: LOYALTY IMPLANT FOR HOS
-/datum/job/hos/equip(var/mob/living/carbon/human/H)
+/datum/job/hos/equip(mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty()

@@ -64,7 +64,7 @@ GLOBAL_LIST_INIT(department_frequencies, list(AI_FREQ, BDCM_FREQ, COMM_FREQ, ENG
 
 GLOBAL_LIST_INIT(offmap_frequencies, list(TALON_FREQ, CSN_FREQ, OUT_FREQ)) var/list/OFFMAP_FREQS = list(TALON_FREQ, CSN_FREQ, OUT_FREQ) // CHOMPEdit: Added outsider
 
-/proc/frequency_span_class(var/frequency)
+/proc/frequency_span_class(frequency)
 	// Antags!
 	if (frequency in GLOB.antag_frequencies)
 		return "syndradio"

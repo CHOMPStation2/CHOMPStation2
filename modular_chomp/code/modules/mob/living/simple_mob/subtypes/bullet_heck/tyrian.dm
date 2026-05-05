@@ -228,7 +228,7 @@
 		new /obj/effect/spider/spiderling/antling/created(src.loc)
 	..()
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/tyrbosses/expirments/slime/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/mob/living/simple_mob/mechanical/mecha/eclipse/tyrbosses/expirments/slime/attackby(obj/item/O as obj, mob/user as mob)
 	for(var/i =1 to 4)
 		new /obj/effect/spider/spiderling/antling/created(src.loc)
 	..()

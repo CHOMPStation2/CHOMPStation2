@@ -45,7 +45,7 @@
 	ai_log("calculate_path() : Exiting.", AI_LOG_DEBUG)
 
 //A* now, try to a path to a target
-/datum/ai_holder/proc/get_path(var/turf/target,var/get_to = 1, var/max_distance = world.view*6)
+/datum/ai_holder/proc/get_path(turf/target,get_to = 1, max_distance = world.view*6)
 	ai_log("get_path() : Entering.",AI_LOG_DEBUG)
 	forget_path()
 	var/list/new_path = SSpathfinder.default_ai_pathfinding(src, target, get_to) //CHOMPEdit

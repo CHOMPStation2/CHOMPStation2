@@ -97,14 +97,14 @@
 	. = ..()
 	message_admins("Engine select console placed at [src.x] [src.y] [src.z]")
 
-/obj/machinery/computer/pickengine/attack_ai(var/mob/user as mob)
+/obj/machinery/computer/pickengine/attack_ai(mob/user as mob)
 	if(istype(user, /mob/living/silicon/robot))
 		return attack_hand(user)
 	else
 		user << span_warning("The network data sent by this machine is encrypted!")
 		return
 
-/obj/machinery/computer/pickengine/attack_hand(var/mob/user as mob)
+/obj/machinery/computer/pickengine/attack_hand(mob/user as mob)
 
 	if(!allowed(user))
 		user << span_warning("Access Denied.")
@@ -164,7 +164,7 @@
 	return
 
 //Take the engine tpe we're building, warn engineering, and pass it to the engine loader.
-/obj/machinery/computer/pickengine/proc/setEngineType(engine, var/mob/usr)
+/obj/machinery/computer/pickengine/proc/setEngineType(engine, mob/usr)
 	building = 1
 	if(usr)
 		usr << browse(null, "window=computer")

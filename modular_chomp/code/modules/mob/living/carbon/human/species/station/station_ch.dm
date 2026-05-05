@@ -174,7 +174,7 @@
 	var/weeds_plasma_rate = 3 	// Plasma regen. Much lower than actual xenos. Faster on weeds.
 	var/weeds_heal_rate = 0.5   // Health regen on weeds. No healing unless resting.
 
-/datum/species/xenomorph_hybrid/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/species/xenomorph_hybrid/handle_environment_special(mob/living/carbon/human/H)
 
 	var/turf/T = H.loc
 	if(!T) return
@@ -188,7 +188,7 @@
 			P.stored_plasma = min(max(P.stored_plasma,0),P.max_plasma)
 	..()
 
-/datum/species/xenomorph_hybrid/proc/regenerate(var/mob/living/carbon/human/H)
+/datum/species/xenomorph_hybrid/proc/regenerate(mob/living/carbon/human/H)
 	var/heal_rate = weeds_heal_rate
 	var/mend_prob = 10 // Much lower than regular xenos. Bumped from 5 to 10 as medical changes allowed all carbons to passively heal damage after a long delay.
 	if (!H.resting)

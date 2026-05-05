@@ -117,7 +117,7 @@
 		list(mode_name="2-round bursts", burst=2, fire_delay=null, move_delay=6,    burst_accuracy=list(60,35), dispersion=list(0.0, 0.6))
 		)
 
-/obj/item/gun/projectile/automatic/fal/update_icon(var/ignore_inhands)
+/obj/item/gun/projectile/automatic/fal/update_icon(ignore_inhands)
 	..()
 	if(ammo_magazine)
 		icon_state = initial(icon_state)

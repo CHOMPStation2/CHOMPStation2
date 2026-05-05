@@ -16,7 +16,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/claridyl/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/claridyl/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		M.add_chemical_effect(CE_STABLE, 30)
 		M.add_chemical_effect(CE_PAINKILLER, 40)
@@ -48,13 +48,13 @@
 	color = "#000000"
 	metabolism = REM * 5
 
-/datum/reagent/claridyl/bloodburn/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/claridyl/bloodburn/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.bloodstr)//No seriously dont inject this wtf is wrong with you.
 		for(var/datum/reagent/R in M.bloodstr.reagent_list)
 			if(istype(R, /datum/reagent/blood))
 				R.remove_self(removed * 15)
 
-/datum/reagent/claridyl/bloodburn/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/claridyl/bloodburn/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(M.ingested)
 		for(var/datum/reagent/R in M.ingested.reagent_list)
 			if(istype(R, /datum/reagent/ethanol))
@@ -72,7 +72,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/eden/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/eden/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME || alien == IS_DIONA)
 		return
 	if(M.getToxLoss())
@@ -87,7 +87,7 @@
 	taste_description = "hellfire"
 	color = "#FF0000"
 
-/datum/reagent/eden/snake/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/eden/snake/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustOxyLoss(1)
 	M.adjustFireLoss(1)
 	M.adjustBruteLoss(1)
@@ -121,7 +121,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/hannoa/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/hannoa/overdose(mob/living/carbon/M, alien, removed)
 	..()
 	if(ishuman(M))
 		var/wound_heal = 1.5 * removed
@@ -137,7 +137,7 @@
 			M.AdjustLosebreath(1)
 		H.custom_pain("It feels as if your veins are fusing shut!",60)
 
-/datum/reagent/hannoa/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) //Sleepy if not overdosing.
+/datum/reagent/hannoa/affect_blood(mob/living/carbon/M, alien, removed) //Sleepy if not overdosing.
 	..()
 	var/effective_dose = dose
 	if(effective_dose < 2)
@@ -167,7 +167,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/bullvalene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/bullvalene/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME || alien == IS_DIONA)
 		return
 	if(M.getBruteLoss() || M.getFireLoss() || M.getOxyLoss())
@@ -191,7 +191,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/serazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/serazine/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1
 	if(alien != IS_DIONA)
 		M.drowsyness = max(0, M.drowsyness - 3 * removed * chem_effective)
@@ -213,7 +213,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/alizene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/alizene/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.75

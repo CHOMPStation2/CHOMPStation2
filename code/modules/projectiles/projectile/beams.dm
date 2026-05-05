@@ -195,7 +195,7 @@
 	tracer_type = /obj/effect/projectile/tracer/laser_pulse
 	impact_type = /obj/effect/projectile/impact/laser_pulse
 
-/obj/item/projectile/beam/pulse/on_hit(var/atom/target, var/blocked = 0)
+/obj/item/projectile/beam/pulse/on_hit(atom/target, blocked = 0)
 	if(isturf(target))
 		target.ex_act(2)
 	..()
@@ -230,7 +230,7 @@
 
 	combustion = FALSE
 
-/obj/item/projectile/beam/lasertag/on_hit(var/atom/target, var/blocked = 0)
+/obj/item/projectile/beam/lasertag/on_hit(atom/target, blocked = 0)
 	return handle_lasertag_attack(target, firer, tag_damage, TRUE, allowed_suits = allowed_suits) //We can't shoot this in the first place without having the proper vest / vest_override, so we feed it vest_override = TRUE
 
 /obj/item/projectile/beam/lasertag/blue
@@ -463,7 +463,7 @@
 	damage = 0
 	nodamage = TRUE
 
-/obj/item/projectile/beam/sparkledog/on_hit(var/atom/target, var/blocked = 0)
+/obj/item/projectile/beam/sparkledog/on_hit(atom/target, blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
 		M.druggy = max(M.druggy, 20)
@@ -523,11 +523,11 @@
 	tracer_type = /obj/effect/projectile/tracer/xray
 	impact_type = /obj/effect/projectile/impact/xray
 
-/obj/item/projectile/beam/energy_net/on_hit(var/atom/netted)
+/obj/item/projectile/beam/energy_net/on_hit(atom/netted)
 	do_net(netted)
 	..()
 
-/obj/item/projectile/beam/energy_net/proc/do_net(var/mob/M)
+/obj/item/projectile/beam/energy_net/proc/do_net(mob/M)
 	var/obj/item/energy_net/net = new net_type(get_turf(M))
 	net.throw_impact(M, throwing)
 
@@ -566,7 +566,7 @@
 	tracer_type = /obj/effect/projectile/tracer/medigun
 	impact_type = /obj/effect/projectile/impact/medigun
 
-/obj/item/projectile/beam/medigun/on_hit(var/atom/target, var/blocked = 0)
+/obj/item/projectile/beam/medigun/on_hit(atom/target, blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
 		if(M.health < M.getMaxHealth())

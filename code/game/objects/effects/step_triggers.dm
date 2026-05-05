@@ -11,7 +11,7 @@ GLOBAL_LIST_EMPTY(mapped_autostrips_mob)
 	icon = 'icons/mob/screen1.dmi' //VS Edit
 	icon_state = "centermarker" //VS Edit
 
-/obj/effect/step_trigger/proc/Trigger(var/atom/movable/A)
+/obj/effect/step_trigger/proc/Trigger(atom/movable/A)
 	return 0
 
 /obj/effect/step_trigger/Crossed(atom/movable/H as mob|obj)
@@ -35,7 +35,7 @@ GLOBAL_LIST_EMPTY(mapped_autostrips_mob)
 	var/nostop = 0 // if 1: will only be stopped by teleporters
 	var/list/affecting = list()
 
-/obj/effect/step_trigger/thrower/Trigger(var/atom/A)
+/obj/effect/step_trigger/thrower/Trigger(atom/A)
 	if(!A || !istype(A, /atom/movable))
 		return
 	var/atom/movable/AM = A
@@ -158,7 +158,7 @@ GLOBAL_LIST_EMPTY(mapped_autostrips_mob)
 	var/teleport_y_offset = 0
 	var/teleport_z_offset = 0
 
-/obj/effect/step_trigger/teleporter/random/Trigger(var/atom/movable/A)
+/obj/effect/step_trigger/teleporter/random/Trigger(atom/movable/A)
 	if(teleport_x && teleport_y && teleport_z)
 		if(teleport_x_offset && teleport_y_offset && teleport_z_offset)
 			var/turf/T = locate(rand(teleport_x, teleport_x_offset), rand(teleport_y, teleport_y_offset), rand(teleport_z, teleport_z_offset))
@@ -178,7 +178,7 @@ GLOBAL_LIST_EMPTY(mapped_autostrips_mob)
 			the_landmark = mark
 			return
 
-/obj/effect/step_trigger/teleporter/landmark/Trigger(var/atom/movable/A)
+/obj/effect/step_trigger/teleporter/landmark/Trigger(atom/movable/A)
 	if(the_landmark)
 		A.forceMove(get_turf(the_landmark))
 
@@ -210,7 +210,7 @@ GLOBAL_LIST_EMPTY(tele_landmarks)
 /obj/effect/step_trigger/teleporter/planetary_fall/proc/find_planet()
 	return
 
-/obj/effect/step_trigger/teleporter/planetary_fall/Trigger(var/atom/movable/A)
+/obj/effect/step_trigger/teleporter/planetary_fall/Trigger(atom/movable/A)
 	var/turf/T = get_turf(A)
 	if(!T)
 		return
@@ -222,7 +222,7 @@ GLOBAL_LIST_EMPTY(tele_landmarks)
 	var/deathmessage = "You die a horrible, brutal and very sudden death."
 	var/deathalert = "has stepped on a death trigger."
 
-/obj/effect/step_trigger/death/Trigger(var/atom/movable/A)
+/obj/effect/step_trigger/death/Trigger(atom/movable/A)
 	if(isliving(A))
 		to_chat(A, span_danger("[deathmessage]"))
 		log_and_message_admins("[deathalert]", A)
@@ -246,7 +246,7 @@ GLOBAL_LIST_EMPTY(tele_landmarks)
 	var/warningmessage = "Warning!"
 	icon_state = "warnmarker"
 
-/obj/effect/step_trigger/warning/Trigger(var/atom/movable/A)
+/obj/effect/step_trigger/warning/Trigger(atom/movable/A)
 	if(isliving(A))
 		to_chat(A, span_warning("[warningmessage]"))
 

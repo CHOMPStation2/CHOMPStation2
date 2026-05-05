@@ -1,4 +1,4 @@
-/proc/send2irc(var/channel, var/msg)
+/proc/send2irc(channel, msg)
 	return  // VOREStation Edit - Can't exploit shell if we never call shell!
 	/* Unreachable with above VOREStation Edit
 	if (CONFIG_GET(flag/use_irc_bot)) // CHOMPEdit
@@ -25,12 +25,12 @@
 	return
 	*/
 
-/proc/send2mainirc(var/msg)
+/proc/send2mainirc(msg)
 	if(CONFIG_GET(string/main_irc))
 		send2irc(CONFIG_GET(string/main_irc), msg)
 	return
 
-/proc/send2adminirc(var/msg)
+/proc/send2adminirc(msg)
 	if(CONFIG_GET(string/admin_irc))
 		send2irc(CONFIG_GET(string/admin_irc), msg)
 	return

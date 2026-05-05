@@ -104,7 +104,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 			return i
 	return 0
 
-/obj/effect/overmap/visitable/dynamic/proc/is_empty(var/index, var/mob/observer)
+/obj/effect/overmap/visitable/dynamic/proc/is_empty(index, mob/observer)
 	if(!LAZYLEN(map_z))
 		log_and_message_admins("CANARY: [src] tried to check is_empty, but map_z is `[map_z || "null"]`")
 		return TRUE
@@ -140,7 +140,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	var/loaded = FALSE
 	var/my_index = 0 // Tracks which z-level we're using in the parent. Corresponds to index in parent's active_pois[]
 
-/obj/effect/overmap/visitable/dynamic/poi/Initialize(mapload, dyn_poi, var/template)
+/obj/effect/overmap/visitable/dynamic/poi/Initialize(mapload, dyn_poi, template)
 	if(!global.using_map.use_overmap || !template)
 		return INITIALIZE_HINT_QDEL
 	my_template = template
@@ -321,7 +321,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	base_area = /area/space
 	base_turf = /turf/space
 
-/obj/effect/shuttle_landmark/om_poi/Initialize(mapload, var/new_name, var/new_tag)
+/obj/effect/shuttle_landmark/om_poi/Initialize(mapload, new_name, new_tag)
 	name = new_name
 	landmark_tag = new_tag
 	. = ..()

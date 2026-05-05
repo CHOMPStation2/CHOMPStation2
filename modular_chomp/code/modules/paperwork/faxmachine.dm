@@ -10,7 +10,7 @@
 				return list(channel)
 	return 0
 
-/proc/role_request_discord_message(var/message)
+/proc/role_request_discord_message(message)
 	if(!message)
 		return
 	var/datum/tgs_chat_channel/channel = get_role_request_channel()
@@ -29,14 +29,14 @@
 				return list(channel)
 	return 0
 
-/proc/fax_discord_message(var/message)
+/proc/fax_discord_message(message)
 	if(!message)
 		return
 	var/datum/tgs_chat_channel/channel = get_fax_channel()
 	if(channel)
 		world.TgsChatBroadcast(message,channel)
 
-/proc/get_discord_role_id_from_department(var/department)
+/proc/get_discord_role_id_from_department(department)
 	switch(department)
 		if("Command")
 			if(CONFIG_GET(string/role_request_id_command)) // CHOMPEdit
@@ -77,7 +77,7 @@
 	return FALSE
 
 
-/obj/machinery/photocopier/faxmachine/message_chat_admins(var/mob/sender, var/faxname, var/obj/item/sent, var/faxid, font_colour="#006100")
+/obj/machinery/photocopier/faxmachine/message_chat_admins(mob/sender, faxname, obj/item/sent, faxid, font_colour="#006100")
 	var/faxmsg
 	if(faxid && fexists("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html"))
 		faxmsg = file2text("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html")
@@ -88,7 +88,7 @@
 		fax_discord_message("A fax; '[faxname]' was sent.\nSender: [sender.name]\nFax name: [sent.name]\nFax ID: **[faxid]**")
 
 
-/obj/machinery/photocopier/faxmachine/message_chat_rolerequest(var/font_colour="#006100", var/role_to_ping, var/reason, var/jobname)
+/obj/machinery/photocopier/faxmachine/message_chat_rolerequest(font_colour="#006100", role_to_ping, reason, jobname)
 	var/roleid = get_discord_role_id_from_department(role_to_ping)
 
 	if(roleid)
