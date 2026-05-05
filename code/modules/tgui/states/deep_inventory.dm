@@ -15,3 +15,14 @@ GLOBAL_DATUM_INIT(tgui_deep_inventory_state, /datum/tgui_state/deep_inventory_st
 	if(!user.contains(src_object))
 		return STATUS_CLOSE
 	return user.shared_tgui_interaction(src_object)
+<<<<<<< HEAD
+=======
+
+/atom/proc/contains(atom/location)
+	if(!location)
+		return 0
+	if(location == src)
+		return 1
+
+	return contains(location.loc)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))

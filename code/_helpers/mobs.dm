@@ -291,7 +291,11 @@ Proc for attack log creation, because really why not
 		LAZYREMOVE(user.do_afters, interaction_key)
 	SEND_SIGNAL(user, COMSIG_DO_AFTER_ENDED)
 
+<<<<<<< HEAD
 /atom/proc/living_mobs(range = world.view, count_held = FALSE) //CHOMPEdit Start
+=======
+/atom/proc/living_mobs(range = world.view)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	var/list/viewers = oviewers(src,range)
 	if(count_held)
 		viewers = viewers(src,range)

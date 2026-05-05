@@ -53,7 +53,11 @@
 	..()
 
 /mob/living/simple_mob/construct/juggernaut/bullet_act(obj/item/projectile/P)
+<<<<<<< HEAD
 	var/reflectchance = 100 - round(P.damage*2) // CHOMPEdit: We have lower damage values now
+=======
+	var/reflectchance = 80 - round(P.damage/3)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(prob(reflectchance))
 		var/damage_mod = rand(2,4)
 		var/projectile_dam_type = P.damage_type
@@ -129,7 +133,11 @@
 							)
 
 /mob/living/simple_mob/construct/juggernaut/behemoth/bullet_act(obj/item/projectile/P)
+<<<<<<< HEAD
 	var/reflectchance = 100 - round(P.damage*2) //CHOMPEdit: We have lower damage values now
+=======
+	var/reflectchance = 80 - round(P.damage/3)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(prob(reflectchance))
 		visible_message(span_danger("The [P.name] gets reflected by [src]'s shell!"), \
 						span_userdanger("The [P.name] gets reflected by [src]'s shell!"))

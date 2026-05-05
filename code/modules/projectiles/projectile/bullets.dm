@@ -18,9 +18,15 @@
 	muzzle_type = /obj/effect/projectile/muzzle/bullet
 
 /obj/item/projectile/bullet/on_hit(atom/target, blocked = 0)
+<<<<<<< HEAD
 	..(target, blocked)
 		//var/mob/living/L = target
 		//shake_camera(L, 3, 2) CHOMPEDIT - "Muh realism". The screenshake is obnoxious for gameplay. TODO: Replace with blood splatter indicator.
+=======
+	if (..(target, blocked))
+		var/mob/living/L = target
+		shake_camera(L, 3, 2)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 
 /obj/item/projectile/bullet/attack_mob(mob/living/target_mob, distance, miss_modifier)
 	if(penetrating > 0 && damage > 20 && prob(damage))

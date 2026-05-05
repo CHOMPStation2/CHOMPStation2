@@ -104,7 +104,11 @@
 
 
 /datum/game_mode/proc/forge_meme_objectives(datum/mind/meme, datum/mind/first_host)
+<<<<<<< HEAD
 	if (CONFIG_GET(flag/objectives_disabled)) // CHOMPEdit
+=======
+	if (config.objectives_disabled)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 		return
 
 	// meme always needs to attune X hosts

@@ -44,6 +44,7 @@
 	. = ..()
 	network = NETWORK_THUNDER
 
+<<<<<<< HEAD
 // CHOMPEdit Begin - Bodycam
 /obj/item/circuitboard/security/telescreen/bodycamera
 	name = T_BOARD("security bodycamera monitor")
@@ -56,6 +57,8 @@
 	network = NETWORK_BODYCAM
 // CHOMPEdit End
 
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /obj/item/circuitboard/security/construct(obj/machinery/computer/security/C)
 	if (..(C))
 		C.set_network(network.Copy())

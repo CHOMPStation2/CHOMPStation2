@@ -492,15 +492,22 @@
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
 /datum/reagent/acid/affect_blood(mob/living/carbon/M, alien, removed)
+<<<<<<< HEAD
 	if(alien == IS_GREY) //ywedit
 		return
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(issmall(M)) removed *= 2
 	M.take_organ_damage(0, removed * power * 2)
 
 /datum/reagent/acid/affect_touch(mob/living/carbon/M, alien, removed) // This is the most interesting
+<<<<<<< HEAD
 	if(alien == IS_GREY) //ywedit
 		return
 	if(ishuman(M) && !isbelly(M.loc)) //CHOMPEdit Start
+=======
+	if(ishuman(M))
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 		var/mob/living/carbon/human/H = M
 		if(H.head)
 			if(H.head.unacidable || is_type_in_list(H.head, GLOB.item_digestion_blacklist))
@@ -571,6 +578,7 @@
 		else
 			M.take_organ_damage(0, removed * power * 0.1) // Balance. The damage is instant, so it's weaker. 10 units -> 5 damage, double for pacid. 120 units beaker could deal 60, but a) it's burn, which is not as dangerous, b) it's a one-use weapon, c) missing with it will splash it over the ground and d) clothes give some protection, so not everything will hit
 
+<<<<<<< HEAD
 /datum/reagent/acid/touch_obj(obj/O, amount) //CHOMPEdit Start
 	if(istype(O, /obj/item) && O.loc)
 		if(isbelly(O.loc) || isbelly(O.loc.loc))
@@ -583,6 +591,9 @@
 			if(B.owner)
 				B.owner_adjust_nutrition((B.nutrition_percent / 100) * 5 * spent_amt)
 			return
+=======
+/datum/reagent/acid/touch_obj(obj/O)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	..()
 	if(O.unacidable || is_type_in_list(O, GLOB.item_digestion_blacklist)) //CHOMPEdit End
 		return

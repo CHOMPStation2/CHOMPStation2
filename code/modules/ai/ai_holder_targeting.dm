@@ -131,7 +131,13 @@
 	return closest_targets
 
 /datum/ai_holder/proc/can_attack(atom/movable/the_target, vision_required = TRUE)
+<<<<<<< HEAD
 	//CHOMP Removal (optimizing by making most intense check last)
+=======
+	ai_log("can_attack() : Entering.", AI_LOG_TRACE)
+	if(!can_see_target(the_target) && vision_required)
+		return FALSE
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(!belly_attack)
 		if(isbelly(holder.loc))
 			return FALSE

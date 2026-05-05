@@ -7,6 +7,20 @@
 	density = FALSE
 	anchored = TRUE
 
+<<<<<<< HEAD
+=======
+/obj/structure/dancepole/attack_hand(mob/user)
+	dance(user)
+	user.spin(32,2)
+	..()
+
+/obj/structure/dancepole/proc/dance(mob/user)
+	if(layer == BELOW_MOB_LAYER)
+		layer = ABOVE_MOB_LAYER
+	else
+		layer = BELOW_MOB_LAYER
+
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /obj/structure/dancepole/attackby(obj/item/O as obj, mob/user as mob)
 	if(O.has_tool_quality(TOOL_SCREWDRIVER))
 		anchored = !anchored

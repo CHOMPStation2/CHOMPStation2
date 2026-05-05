@@ -94,8 +94,11 @@
 		if(prob(5))
 			T.visible_message(span_warning("The foam sizzles as it lands on \the [T]!"))
 
+<<<<<<< HEAD
 	T.apply_fire_protection() // CHOMPEdit - Apply fire protection to the turf
 
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /datum/reagent/firefighting_foam/touch_obj(obj/O, reac_volume)
 	O.water_act(reac_volume / 5)
 

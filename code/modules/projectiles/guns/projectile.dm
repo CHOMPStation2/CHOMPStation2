@@ -200,10 +200,13 @@
 
 //attempts to unload src. If allow_dump is set to 0, the speedloader unloading method will be disabled
 /obj/item/gun/projectile/proc/unload_ammo(mob/user, allow_dump=1)
+<<<<<<< HEAD
 	if(manual_chamber && only_open_load && !bolt_open) //CHOMPEdit - Manual Chambering
 		to_chat(user,span_warning("You must open the bolt to load or unload this gun!")) //CHOMPEdit - Manual Chambering
 		return //CHOMPEdit - Manual Chambering
 
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(ammo_magazine)
 		user.put_in_hands(ammo_magazine)
 		user.visible_message("[user] removes [ammo_magazine] from [src].", span_notice("You remove [ammo_magazine] from [src]."))

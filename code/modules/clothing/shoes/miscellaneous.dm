@@ -101,7 +101,10 @@
 	//CHOMPRemove - removed built in squeak sounds
 	species_restricted = null
 
+<<<<<<< HEAD
 /*	CHOMPEdit - Replaced with squeak component
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /obj/item/clothing/shoes/clown_shoes/handle_movement(turf/walking, running)
 	if(running)
 		if(footstep >= 2)

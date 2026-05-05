@@ -98,7 +98,11 @@
 	required = /obj/item/slime_extract/grey
 
 /datum/decl/chemical_reaction/instant/slime/grey_monkey/on_reaction(datum/reagents/holder)
+<<<<<<< HEAD
 	for(var/i = 1 to 5) //CHOMPedit  Increased number of monkey cubes from 4 to 5
+=======
+	for(var/i = 1 to 4)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 		new /obj/item/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom))
 	..()
 

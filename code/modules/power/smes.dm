@@ -57,11 +57,14 @@ GLOBAL_LIST_EMPTY(smeses)
 	var/should_be_mapped = 0 // If this is set to 0 it will send out warning on New()
 	var/grid_check = FALSE // If true, suspends all I/O.
 
+<<<<<<< HEAD
 	// CHOMPAdd: More humming noises
 	var/datum/looping_sound/generator/soundloop
 	var/noisy = FALSE
 	// CHOMPAdd End
 
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /obj/machinery/power/smes/drain_power(drain_check, surge, amount = 0)
 
 	if(drain_check)

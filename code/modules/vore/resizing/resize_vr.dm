@@ -91,7 +91,11 @@
  * * aura_animation - CHANGE_ME. Default: TRUE
  * * allow_stripping - CHANGE_ME.  Default: FALSE
  */
+<<<<<<< HEAD
 /mob/living/proc/resize(new_size, animate = TRUE, uncapped = FALSE, ignore_prefs = FALSE, aura_animation = FALSE, allow_stripping = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
+=======
+/mob/living/proc/resize(new_size, animate = TRUE, uncapped = FALSE, ignore_prefs = FALSE, aura_animation = TRUE, allow_stripping = FALSE)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(!uncapped)
 		if((z in using_map.station_levels) && CONFIG_GET(flag/pixel_size_limit))
 			var/size_diff = ((runechat_y_offset() / size_multiplier) * new_size) // This returns 32 multiplied with the new size
@@ -148,7 +152,11 @@
 	else
 		update_transform() //Lame way
 
+<<<<<<< HEAD
 /mob/living/carbon/human/resize(new_size, animate = TRUE, uncapped = FALSE, ignore_prefs = FALSE, aura_animation = FALSE, allow_stripping = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
+=======
+/mob/living/carbon/human/resize(new_size, animate = TRUE, uncapped = FALSE, ignore_prefs = FALSE, aura_animation = TRUE, allow_stripping = FALSE)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(!resizable && !ignore_prefs)
 		return 1
 	var/previous_scale = size_multiplier

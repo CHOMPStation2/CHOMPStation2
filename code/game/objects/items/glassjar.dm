@@ -109,6 +109,7 @@
 			contains = JAR_NOTHING
 			update_icon()
 			return
+<<<<<<< HEAD
 	//CHOMPDDITION: your god can not help you
 	for(var/mob/M in src)
 		if(istype(M,/mob/living/voice)) //Don't knock voices out!
@@ -117,6 +118,9 @@
 		to_chat(M, span_warning("[user] shakes you out of \the [src]!"))
 		to_chat(user, span_notice("You shake [M] out of \the [src]!"))
 //CHOMPADD END
+=======
+
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /obj/item/glass_jar/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/spacecash))
 		if(contains == JAR_NOTHING)

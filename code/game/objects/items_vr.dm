@@ -32,7 +32,10 @@
 		to_chat(new_voice,span_notice("You have become [src]!"))
 	//CHOMPEdit End
 
+<<<<<<< HEAD
 // Chomp edit
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /obj/item/proc/muffled_by_belly(mob/user)
 	if(isbelly(user.loc))
 		var/obj/belly/B = user.loc

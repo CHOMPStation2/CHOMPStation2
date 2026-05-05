@@ -284,8 +284,11 @@
 	else if(volume >= 10)
 		T.wet_floor(1)
 
+<<<<<<< HEAD
 	T.apply_fire_protection() // CHOMPAdd - Apply fire protection so fires can actually be put out.
 
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /datum/reagent/water/touch_obj(obj/O, amount)
 	..()
 	if(istype(O, /obj/item/reagent_containers/food/snacks/monkeycube))
@@ -323,7 +326,11 @@
 						S.quench()
 						H.visible_message(span_notice("[H]\'s [S.name] is put out."))
 
+<<<<<<< HEAD
 //YWedit start, readds promethean damage that was removed by vorestation.
+=======
+/*  //VOREStation Edit Start. Stops slimes from dying from water. Fixes fuel affect_ingest, too.
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /datum/reagent/water/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)
 		M.adjustToxLoss(6 * removed)

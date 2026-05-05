@@ -441,8 +441,11 @@
 	return 0
 
 /mob/living/carbon/can_feel_pain(check_organ)
+<<<<<<< HEAD
 	if(!species) //CHOMPEdit
 		return 0
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(isSynthetic())
 		return 0
 	return !(species.flags & NO_PAIN)

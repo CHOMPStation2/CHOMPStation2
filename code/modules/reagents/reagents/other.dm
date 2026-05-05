@@ -592,8 +592,11 @@
 		for(var/mob/living/simple_mob/vore/aggressive/macrophage/virus in T)
 			virus.adjustToxLoss(rand(5, 10))
 
+<<<<<<< HEAD
 	T.apply_fire_protection() // CHOMPAdd - Apply fire protection
 
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /datum/reagent/space_cleaner/affect_touch(mob/living/carbon/M, alien, removed)
 	if(M.r_hand)
 		M.r_hand.wash(CLEAN_SCRUB)

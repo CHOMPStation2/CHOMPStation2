@@ -48,7 +48,11 @@
 	hud_state = "rocket_fire"
 
 /obj/item/projectile/bullet/gyro/on_hit(atom/target, blocked = 0)
+<<<<<<< HEAD
 	explosion(target, -1, 0, 2, 0, 0) //CHOMPEdit - Don't spam admins
+=======
+	explosion(target, -1, 0, 2)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	..()
 
 /obj/item/projectile/temp

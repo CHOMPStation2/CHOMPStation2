@@ -77,7 +77,11 @@
 
 
 //maybe this proc can even be used as an admin tool for teleporting players without ruining immulsions?
+<<<<<<< HEAD
 /proc/create_wormhole(turf/enter as turf, atom/exit, min_duration = 30 SECONDS, max_duration = 60 SECONDS) // CHOMPEdit
+=======
+/proc/create_wormhole(turf/enter as turf, turf/exit as turf, min_duration = 30 SECONDS, max_duration = 60 SECONDS)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	set waitfor = FALSE
 	var/obj/effect/portal/P = new /obj/effect/portal( enter )
 	P.target = exit

@@ -48,7 +48,10 @@
 /mob/living/simple_mob/faithless/Process_Spacemove(check_drift = 0)
 	return 1
 
+<<<<<<< HEAD
 /* CHOMPRemove Start, no hardstuns
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /mob/living/simple_mob/faithless/apply_melee_effects(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A

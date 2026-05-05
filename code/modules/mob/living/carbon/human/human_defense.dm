@@ -202,7 +202,11 @@ emp_act
 	return null
 
 /mob/living/carbon/human/proc/check_shields(damage = 0, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+<<<<<<< HEAD
 	for(var/obj/item/shield in list(l_hand, r_hand, wear_suit, l_ear, r_ear))	//CHOMPEdit - included ears for the headset/event item
+=======
+	for(var/obj/item/shield in list(l_hand, r_hand, wear_suit))
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 		if(!shield) continue
 		. = shield.handle_shield(src, damage, damage_source, attacker, def_zone, attack_text)
 		if(.) return

@@ -242,7 +242,10 @@
 	return 1 MINUTES - (world.time - card.last_job_switch) // CHOMPedit: 10 minute wait down to 1 minute.
 
 /obj/machinery/computer/timeclock/proc/checkFace(mob/user)
+<<<<<<< HEAD
 	var/turf/location = get_turf(src) // CHOMPedit: Needed for admin logs.
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(!card)
 		to_chat(user, span_notice("No ID is inserted."))
 		return FALSE

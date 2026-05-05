@@ -61,6 +61,7 @@
 	var/contains_body = FALSE
 	var/has_label = FALSE
 
+<<<<<<< HEAD
 //Yawn add
 /obj/item/bodybag/large
 	name = "mass grave body bag"
@@ -85,6 +86,8 @@
 	item_path = /obj/item/bodybag/large
 //End of Yawn add
 
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /obj/structure/closet/body_bag/attackby(obj/item/W as obj, mob/user as mob)
 	if (istype(W, /obj/item/pen))
 		var/t = tgui_input_text(user, "What would you like the label to be?", text("[]", src.name), null, MAX_NAME_LEN	)

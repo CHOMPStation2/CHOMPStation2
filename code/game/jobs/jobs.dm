@@ -1,5 +1,9 @@
 /proc/guest_jobbans(job)
+<<<<<<< HEAD
 	return
+=======
+	return ( (job in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY)) )
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 
 /proc/get_job_datums()
 	var/list/occupations = list()

@@ -101,11 +101,19 @@
 	..()
 
 //cargo trains are open topped, so there is a chance the projectile will hit the mob ridding the train instead
+<<<<<<< HEAD
 ///obj/vehicle/train/security/bullet_act(obj/item/projectile/Proj)
 //	if(buckled_mob && prob(70))
 //		buckled_mob.bullet_act(Proj)
 //		return
 //	..()
+=======
+/obj/vehicle/train/security/bullet_act(obj/item/projectile/Proj)
+	if(buckled_mob && prob(70))
+		buckled_mob.bullet_act(Proj)
+		return
+	..()
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 
 /obj/vehicle/train/security/update_icon()
 	if(open)

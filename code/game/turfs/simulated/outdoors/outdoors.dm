@@ -102,7 +102,10 @@ GLOBAL_LIST_EMPTY(turf_edge_cache)
 	outdoors = OUTDOORS_NO
 
 // This proc adds a 'layer' on top of the turf.
+<<<<<<< HEAD
 /* CHOMP Removal start
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /turf/simulated/floor/outdoors/proc/promote(new_turf_type)
 	var/list/new_turf_layer_list = turf_layers.Copy()
 	var/list/coords = list(x, y, z)

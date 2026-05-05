@@ -17,17 +17,29 @@ GLOBAL_DATUM_INIT(command_announcement, /datum/announcement/priority/command, ne
 	log = do_log
 	newscast = do_newscast
 
+<<<<<<< HEAD
 /datum/announcement/priority/New(do_log = 1, new_sound = 'sound/misc/notice2.ogg', do_newscast = 0)
+=======
+/datum/announcement/priority/New(do_log = 1, new_sound, do_newscast = 0)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	..(do_log, new_sound, do_newscast)
 	title = "Priority Announcement"
 	announcement_type = "Priority Announcement"
 
+<<<<<<< HEAD
 /datum/announcement/priority/command/New(do_log = 1, new_sound = 'sound/misc/notice2.ogg', do_newscast = 0)
+=======
+/datum/announcement/priority/command/New(do_log = 1, new_sound, do_newscast = 0)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	..(do_log, new_sound, do_newscast)
 	title = "[command_name()] Update"
 	announcement_type = "[command_name()] Update"
 
+<<<<<<< HEAD
 /datum/announcement/priority/security/New(do_log = 1, new_sound = 'sound/misc/notice2.ogg', do_newscast = 0)
+=======
+/datum/announcement/priority/security/New(do_log = 1, new_sound, do_newscast = 0)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	..(do_log, new_sound, do_newscast)
 	title = "Security Announcement"
 	announcement_type = "Security Announcement"

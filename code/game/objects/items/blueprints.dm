@@ -119,9 +119,12 @@
 	return A
 
 /obj/item/blueprints/proc/get_area_type(area/A = get_area())
+<<<<<<< HEAD
 	for(var/type in SPACE_OUTSIDE_TYPES) //YWEDIT Start.
 		if(istype(A, type))
 			return AREA_SPACE //YWEDIT End.
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	for(var/type in SPACE_AREA_TYPES)
 		if(istype(A, type))
 			return AREA_SPACE

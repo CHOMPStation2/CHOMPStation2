@@ -85,6 +85,7 @@
 	return
 
 /obj/item/mecha_parts/mecha_equipment/generator/proc/load_fuel(obj/item/stack/material/P)
+<<<<<<< HEAD
 	if(P.type == fuel_type && P.get_amount())
 		var/to_load = max(max_fuel - fuel_amount,0)
 		if(to_load >= 2000)
@@ -95,6 +96,16 @@
 				fuel_amount += sheets * 2000
 				P.use(sheets)
 				return sheets * 2000
+=======
+	if(P.type == fuel.type && P.get_amount())
+		var/to_load = max(max_fuel - fuel.get_amount()*fuel.perunit,0)
+		if(to_load)
+			var/units = min(max(round(to_load / P.perunit),1),P.get_amount())
+			if(units)
+				fuel.add(units)
+				P.use(units)
+				return units
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 		else
 			return 0
 	return

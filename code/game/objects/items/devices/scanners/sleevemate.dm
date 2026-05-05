@@ -356,11 +356,14 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 		icon_state = initial(icon_state)
 
 /obj/item/sleevemate/emag_act(remaining_charges, mob/user)
+<<<<<<< HEAD
 	//CHOMPEdit Start
 	var/list/choices = list("Body Snatcher","Mind Binder")
 	var/choice = tgui_input_list(user, "How would you like to modify the [src]?", "", choices)
 	if(!choice || !(choice in choices)) return
 	//CHOMPEdit End
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	to_chat(user,span_danger("You hack [src]!"))
 	var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()
 	spark_system.set_up(5, 0, src.loc)

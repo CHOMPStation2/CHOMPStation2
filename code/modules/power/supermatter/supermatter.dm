@@ -479,6 +479,7 @@
 	if(final_countdown)
 		add_overlay("causality_field")
 
+<<<<<<< HEAD
 /obj/machinery/power/supermatter/proc/countdown()
 	set waitfor = FALSE
 
@@ -521,6 +522,8 @@
 
 	explode() // Chompers Edit End
 
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /obj/machinery/power/supermatter/bullet_act(obj/item/projectile/Proj)
 	var/turf/L = loc
 	if(!istype(L))		// We don't run process() when we are in space

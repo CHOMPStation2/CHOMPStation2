@@ -44,7 +44,10 @@
 /datum/language
 	var/list/scramble_cache = list()
 
+<<<<<<< HEAD
 /* CHOMPEdit: moved to modular_chomp because it was edited so much.
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /datum/language/proc/scramble(input, list/known_languages)
 	var/understand_chance = 0
 	for(var/datum/language/L in known_languages)

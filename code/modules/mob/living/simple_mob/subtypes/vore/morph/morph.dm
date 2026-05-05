@@ -196,7 +196,11 @@
 /mob/living/simple_mob/vore/morph/will_show_tooltip()
 	return (!morphed)
 
+<<<<<<< HEAD
 /mob/living/simple_mob/vore/morph/resize(new_size, animate = TRUE, uncapped = FALSE, ignore_prefs = FALSE, aura_animation = FALSE, allow_stripping = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
+=======
+/mob/living/simple_mob/vore/morph/resize(new_size, animate = TRUE, uncapped = FALSE, ignore_prefs = FALSE, aura_animation = TRUE, allow_stripping = FALSE)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(morphed && !ismob(form))
 		return
 	return ..()

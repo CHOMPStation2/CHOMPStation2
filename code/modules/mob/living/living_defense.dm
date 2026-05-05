@@ -95,6 +95,7 @@
 				span_warning("[src] is covered in sharp bits and it hurt when you touched them!"), )
 
 /mob/living/bullet_act(obj/item/projectile/P, def_zone)
+<<<<<<< HEAD
 	//CHOMPedit begin, re-adds stealth removed feature
 	if(istype(get_active_hand(),/obj/item/assembly/signaler))
 		var/obj/item/assembly/signaler/signaler = get_active_hand()
@@ -103,6 +104,8 @@
 			src.visible_message("<font color='red'>[src] triggers their deadman's switch!</font>")
 			signaler.signal()
 	//CHOMPedit end
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 
 	if(ai_holder && P.firer)
 		ai_holder.react_to_attack(P.firer)

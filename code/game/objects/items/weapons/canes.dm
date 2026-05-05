@@ -42,7 +42,11 @@
 		concealed_blade = null
 		update_icon()
 
+<<<<<<< HEAD
 /obj/item/cane/concealed/attackby(obj/item/material/butterfly/W, mob/user)
+=======
+/obj/item/cane/concealed/attackby(obj/item/material/sword/katana/caneblade/W, mob/user)
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(!src.concealed_blade && istype(W))
 		user.visible_message(span_warning("[user] has sheathed \a [W] into [user.p_their()] [src]!"), "You sheathe \the [W] into \the [src].")
 		playsound(src, 'sound/weapons/holster/sheathin.ogg', 50, 1)

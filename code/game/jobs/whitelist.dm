@@ -156,10 +156,13 @@ ADMIN_VERB(open_whitelist_editor, R_ADMIN|R_SERVER, "Open Whitelist Editor", "Op
 	if(!GLOB.whitelist.len)	GLOB.whitelist = null
 
 /proc/check_whitelist(mob/M /*, rank*/)
+<<<<<<< HEAD
 	// CHOMPAdd Start
 	if(!CONFIG_GET(flag/usewhitelist)) //I guess this is an override for the blanket whitelist system.
 		return 1
 	// CHOMPAdd End
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(!GLOB.whitelist)
 		return 0
 	return ("[M.ckey]" in GLOB.whitelist)

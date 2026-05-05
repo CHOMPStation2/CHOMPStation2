@@ -80,7 +80,11 @@
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/vermicetol/affect_blood(mob/living/carbon/M, alien, removed)
+<<<<<<< HEAD
 	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+=======
+	var/chem_effective = 1
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)

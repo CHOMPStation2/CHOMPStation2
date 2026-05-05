@@ -348,11 +348,14 @@
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 	medallergen_type = MEDALLERGEN_TRICORD
 
+<<<<<<< HEAD
 /datum/reagent/tricordrazine/overdose(mob/living/carbon/M, alien) //YW EDIT START
 	..()
 	M.druggy = max(M.druggy, 5)
 	M.Confuse(5) //YW EDIT END
 
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /datum/reagent/tricordrazine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		var/chem_effective = 1 * M.species.chem_strength_heal

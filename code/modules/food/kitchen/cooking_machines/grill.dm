@@ -50,6 +50,7 @@
 		if(grill_loop)
 			grill_loop.stop(src)
 
+<<<<<<< HEAD
 /obj/machinery/appliance/cooker/grill/attackby(obj/item/O as obj, mob/user as mob)
 	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
 		return
@@ -59,6 +60,8 @@
 		return
 	..()
 
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /obj/machinery/appliance/cooker/grill/finish_cooking(datum/cooking_item/CI)
 	..()
 	for(var/obj/item/I in CI.container)

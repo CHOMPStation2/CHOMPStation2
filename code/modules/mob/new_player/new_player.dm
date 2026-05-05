@@ -384,7 +384,10 @@
 	late_choices_dialog.tgui_interact(src)
 
 /mob/new_player/proc/create_character(turf/T)
+<<<<<<< HEAD
 	SHOULD_NOT_SLEEP(TRUE)
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	spawning = 1
 	close_spawn_windows()
 

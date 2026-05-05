@@ -61,6 +61,7 @@
 		"Adrenal Valve Cluster" = list(/obj/item/organ/internal/heart/replicant/rage, 80)
 		)
 
+<<<<<<< HEAD
 	// CHOMPadd begin  - engineered organs
 	var/list/engineered_products = list(
 		"Phoroketic Gland"  = list(/obj/item/organ/internal/malignant/engineered/chemorgan/phoron, 90),
@@ -79,6 +80,8 @@
 		)
 	// CHOMPadd end
 
+=======
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 /obj/machinery/organ_printer/attackby(obj/item/O, mob/user)
 	if(default_deconstruction_screwdriver(user, O))
 		return

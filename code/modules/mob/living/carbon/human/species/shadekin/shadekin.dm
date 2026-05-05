@@ -104,7 +104,11 @@
 	component_requires_late_recalc = TRUE
 
 /datum/species/shadekin/handle_death(mob/living/carbon/human/H)
+<<<<<<< HEAD
 	var/special_handling = TRUE //varswitch for downstream //CHOMPEdit - Enable.
+=======
+	var/special_handling = FALSE //varswitch for downstream
+>>>>>>> 5926589c16 (removes var/ inside all procs (#19450))
 	H.clear_dark_maws() //clear dark maws on death or similar
 	var/datum/component/shadekin/SK = H.get_shadekin_component()
 	if(!special_handling || (SK && SK.no_retreat))
