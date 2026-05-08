@@ -44481,7 +44481,9 @@
 	dir = 9;
 	pixel_y = 8
 	},
-/obj/structure/sign/directions/pool,
+/obj/structure/sign/directions/pool{
+	dir = 1
+	},
 /obj/structure/sign/directions/bar{
 	dir = 4;
 	pixel_y = -8
