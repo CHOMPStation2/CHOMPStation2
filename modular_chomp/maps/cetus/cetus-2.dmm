@@ -28455,7 +28455,6 @@
 	id = "vacantcomissary";
 	name = "Comissary Shutters Control";
 	pixel_x = -26;
-	req_access = list(28);
 	pixel_y = 25
 	},
 /turf/simulated/floor/plating,
@@ -33355,7 +33354,8 @@
 /obj/effect/floor_decal/carpet,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/cash_register/civilian{
-	dir = 1
+	dir = 1;
+	req_access = list(37)
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/cetus/Libraryf1)
@@ -35250,7 +35250,9 @@
 "lBw" = (
 /obj/structure/table/marble,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/cash_register/civilian,
+/obj/machinery/cash_register/civilian{
+	req_access = null
+	},
 /obj/machinery/door/blast/shutters{
 	dir = 2;
 	id = "vacantcomissary";
@@ -50070,9 +50072,6 @@
 	name = "Service Closet";
 	req_one_access = list(25, 26, 27, 28, 37, 38, 72)
 	},
-/obj/effect/floor_decal/corner/green/bordercorner2{
-	dir = 6
-	},
 /obj/structure/cable/green{
 	icon_state = "4-10"
 	},
@@ -54593,7 +54592,9 @@
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 2
 	},
-/obj/machinery/cash_register/civilian,
+/obj/machinery/cash_register/civilian{
+	req_access = list(28)
+	},
 /obj/machinery/door/blast/shutters{
 	dir = 2;
 	id = "kitchen";
@@ -57573,7 +57574,8 @@
 /obj/machinery/cash_register/civilian{
 	dir = 4;
 	pixel_y = 6;
-	pixel_x = -3
+	pixel_x = -3;
+	req_access = list(28)
 	},
 /obj/item/deskbell{
 	pixel_y = 1;
@@ -68273,10 +68275,6 @@
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
@@ -68300,6 +68298,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/jrhall)
 "wEg" = (
