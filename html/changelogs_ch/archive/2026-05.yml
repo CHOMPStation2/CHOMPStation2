@@ -74,3 +74,6 @@
   - balance: Many material stacks have had their sell prices changed
   - bugfix: Attempting to sell non-material stacks on the supply shuttle no longer
       runtime
+2026-05-12:
+  zeskorion:
+  - bugfix: misc cetus fixes
