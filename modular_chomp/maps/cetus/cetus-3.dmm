@@ -8421,7 +8421,8 @@
 	pixel_x = -7
 	},
 /obj/machinery/cash_register/civilian{
-	dir = 8
+	dir = 8;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -17186,7 +17187,8 @@
 "kds" = (
 /obj/structure/table/marble,
 /obj/machinery/cash_register/civilian{
-	dir = 4
+	dir = 4;
+	req_access = null
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -17322,7 +17324,8 @@
 "khh" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cash_register/civilian{
-	dir = 8
+	dir = 8;
+	req_access = null
 	},
 /turf/simulated/floor/lino,
 /area/maintenance/cetus/arcade)
@@ -21351,7 +21354,10 @@
 /area/maintenance/cetus/shallow/derelict/dock)
 "mmb" = (
 /obj/structure/table/hardwoodtable,
-/obj/machinery/cash_register/civilian,
+/obj/machinery/cash_register/civilian{
+	req_one_access = list(25,28,37);
+	req_access = null
+	},
 /obj/machinery/door/blast/shutters{
 	dir = 2;
 	id = "coffeeshop";
@@ -41476,9 +41482,6 @@
 "ybW" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/machinery/cash_register/civilian{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
