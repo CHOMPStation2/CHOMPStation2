@@ -77,3 +77,16 @@
 2026-05-12:
   zeskorion:
   - bugfix: misc cetus fixes
+2026-05-14:
+  CHOMPStation2StaffMirrorBot:
+  - balance: RMS material cost changed.
+  - code_imp: dependency up
+  - code_imp: typescript 6
+  - qol: stools face the direction you're facing when you drop them
+  - qol: updates chat highlights
+  Diana:
+  - image: Adds a new 'chu' tail
+  - bugfix: Fixes borg gripper interactions with stacks of items.
+  - bugfix: Borg wires no longer become EMP'd.
+  Will:
+  - rscadd: Upports snowbulls from yawnwider
