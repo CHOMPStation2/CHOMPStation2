@@ -9,7 +9,6 @@
 /obj/item/circuitboard/processor/monkey
 	name = T_BOARD("monkey processor")
 	build_path = /obj/machinery/processor/monkey
-	origin_tech = list(TECH_DATA = 2, TECH_BIO = 2)
 
 /obj/machinery/processor/monkey/begin_processing()
 	if(processing)
@@ -29,7 +28,7 @@
 	processing = FALSE
 	playsound(src, 'sound/machines/ding.ogg', 50, 1)
 
-/obj/machinery/processor/monkey/extract(var/atom/movable/AM)
+/obj/machinery/processor/monkey/extract(atom/movable/AM)
 	if(istype(AM, /mob/living/carbon/human))
 		var/mob/living/carbon/human/M = AM
 		playsound(src, 'sound/effects/splat.ogg', 50, 1)
@@ -38,7 +37,7 @@
 		monkeys_recycled++
 		sleep(1 SECOND)
 
-/obj/machinery/processor/monkey/can_insert(var/atom/movable/AM)
+/obj/machinery/processor/monkey/can_insert(atom/movable/AM)
 	if(istype(AM, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = AM
 		if(!istype(H.species, /datum/species/monkey))

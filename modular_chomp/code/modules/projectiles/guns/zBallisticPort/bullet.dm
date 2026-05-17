@@ -25,17 +25,17 @@
 		transform = transform.Turn(-45)
 	transform = transform.Translate(-16,0)
 
-/obj/item/gun/projectile/automatic/serdy/equipped()
+/obj/item/gun/projectile/automatic/serdy/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/automatic/serdy/pickup()
+/obj/item/gun/projectile/automatic/serdy/pickup(mob/user)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/automatic/serdy/dropped()
+/obj/item/gun/projectile/automatic/serdy/dropped(mob/user, equipping, slot)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()
@@ -262,6 +262,7 @@
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
+	manual_chamber = FALSE
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	load_method = MAGAZINE
 	w_class = ITEMSIZE_HUGE
@@ -922,7 +923,7 @@
 		if(do_after(user, 5 SECONDS, src)) //Give them a chance to take it back.
 			. = ..() //RIP
 
-/obj/item/gun/projectile/automatic/serdy/kord/handle_post_fire(mob/living/user, atom/target, var/pointblank=0, var/reflex=0)
+/obj/item/gun/projectile/automatic/serdy/kord/handle_post_fire(mob/living/user, atom/target, pointblank=0, reflex=0)
 	. = ..()
 	var/unhappy_factor = 1.3333333*(user.size_multiplier - 0.5) //Unhappy factor based on size. Below 50% is a really bad day, and above 125% is fine, everything inbetween is varying.
 	if(unhappy_factor >= 1) //They're fine
@@ -1380,17 +1381,17 @@
 	if(is64x32)
 		update_transform()
 
-/obj/item/gun/projectile/shotgun/pump/equipped()
+/obj/item/gun/projectile/shotgun/pump/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/pump/pickup()
+/obj/item/gun/projectile/shotgun/pump/pickup(mob/user)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/pump/dropped()
+/obj/item/gun/projectile/shotgun/pump/dropped(mob/user, equipping, slot)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()
@@ -1424,7 +1425,7 @@
 	icon_expected_width = 64
 	var/is_picked_up = FALSE
 
-/obj/item/gun/projectile/shotgun/doublebarrel/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+/obj/item/gun/projectile/shotgun/doublebarrel/process_accuracy(obj/projectile, mob/living/user, atom/target, burst, held_twohanded)
 	. = ..()
 	var/obj/item/projectile/bullet/P = projectile
 	if(!istype(P))
@@ -1432,7 +1433,7 @@
 	if(sawn_off)
 		P.submunition_spread_max = 100 //More spread when sawn off
 
-/obj/item/gun/projectile/shotgun/doublebarrel/attackby(var/obj/item/A as obj, mob/user as mob)
+/obj/item/gun/projectile/shotgun/doublebarrel/attackby(obj/item/A as obj, mob/user as mob)
 	if(istype(A, /obj/item/surgical/circular_saw) || istype(A, /obj/item/melee/energy) || istype(A, /obj/item/pickaxe/plasmacutter))
 		if(sawn_off) //Don't do anything if we were already sawed off.
 			return
@@ -1480,17 +1481,17 @@
 			transform = transform.Turn(-45)
 		transform = transform.Translate(-16,0)
 
-/obj/item/gun/projectile/shotgun/doublebarrel/equipped()
+/obj/item/gun/projectile/shotgun/doublebarrel/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/doublebarrel/pickup()
+/obj/item/gun/projectile/shotgun/doublebarrel/pickup(mob/user)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/doublebarrel/dropped()
+/obj/item/gun/projectile/shotgun/doublebarrel/dropped(mob/user, equipping, slot)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()

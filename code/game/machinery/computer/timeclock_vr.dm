@@ -64,7 +64,7 @@
 		return
 	. = ..()
 
-/obj/machinery/computer/timeclock/attack_hand(var/mob/user as mob)
+/obj/machinery/computer/timeclock/attack_hand(mob/user as mob)
 	if(..())
 		return
 	tgui_interact(user)
@@ -149,7 +149,7 @@
 			update_icon()
 			return TRUE
 
-/obj/machinery/computer/timeclock/proc/getOpenOnDutyJobs(var/mob/user, var/department)
+/obj/machinery/computer/timeclock/proc/getOpenOnDutyJobs(mob/user, department)
 	var/list/available_jobs = list()
 	for(var/datum/job/job in SSjob.occupations)
 		if(isOpenOnDutyJob(user, department, job))
@@ -160,7 +160,7 @@
 						available_jobs[job.title] += alt_job
 	return available_jobs
 
-/obj/machinery/computer/timeclock/proc/isOpenOnDutyJob(var/mob/user, var/department, var/datum/job/job)
+/obj/machinery/computer/timeclock/proc/isOpenOnDutyJob(mob/user, department, datum/job/job)
 	return job \
 		&& job.is_position_available() \
 		&& !job.whitelist_only \
@@ -171,7 +171,7 @@
 		&& !job.disallow_jobhop \
 		&& job.timeoff_factor > 0
 
-/obj/machinery/computer/timeclock/proc/makeOnDuty(var/newrank, var/newassignment, var/mob/user)
+/obj/machinery/computer/timeclock/proc/makeOnDuty(newrank, newassignment, mob/user)
 	var/datum/job/oldjob = SSjob.get_job(card.rank)
 	var/datum/job/newjob = SSjob.get_job(newrank)
 	if(!oldjob || !isOpenOnDutyJob(user, oldjob.pto_type, newjob))
@@ -203,7 +203,7 @@
 		announce.autosay("[card.registered_name] has moved On-Duty as [card.assignment].", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
 	return
 
-/obj/machinery/computer/timeclock/proc/makeOffDuty(var/mob/user)
+/obj/machinery/computer/timeclock/proc/makeOffDuty(mob/user)
 	var/datum/job/foundjob = SSjob.get_job(card.rank)
 	if(!foundjob)
 		return
@@ -229,7 +229,7 @@
 		announce.autosay("[card.registered_name], [oldtitle], has moved Off-Duty.", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
 	return
 
-/obj/machinery/computer/timeclock/proc/checkCardCooldown(var/mob/user)
+/obj/machinery/computer/timeclock/proc/checkCardCooldown(mob/user)
 	if(!card)
 		return FALSE
 	var/time_left = getCooldown()
@@ -241,7 +241,7 @@
 /obj/machinery/computer/timeclock/proc/getCooldown()
 	return 1 MINUTES - (world.time - card.last_job_switch) // CHOMPedit: 10 minute wait down to 1 minute.
 
-/obj/machinery/computer/timeclock/proc/checkFace(var/mob/user)
+/obj/machinery/computer/timeclock/proc/checkFace(mob/user)
 	var/turf/location = get_turf(src) // CHOMPedit: Needed for admin logs.
 	if(!card)
 		to_chat(user, span_notice("No ID is inserted."))
@@ -289,7 +289,7 @@ CHOMPedit end. */
 	y_offset = 30
 	icon_override = 'icons/obj/machines/timeclock_vr.dmi'
 
-/datum/frame/frame_types/timeclock_terminal/get_icon_state(var/state)
+/datum/frame/frame_types/timeclock_terminal/get_icon_state(state)
 	return "timeclock_b[state]"
 
 //

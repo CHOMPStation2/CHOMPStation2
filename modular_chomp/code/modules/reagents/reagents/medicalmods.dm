@@ -83,7 +83,7 @@
 	on_expired_text = span_notice("Your body returns to normal.")
 	stacks = MODIFIER_STACK_EXTEND
 
-/datum/modifier/life_cloak/can_apply(var/mob/living/L, var/suppress_failure = FALSE)
+/datum/modifier/life_cloak/can_apply(mob/living/L, suppress_failure = FALSE)
 	if(L.has_modifier_of_type(/datum/modifier/life_cloak_exhaustion))
 		return FALSE
 	return ..()

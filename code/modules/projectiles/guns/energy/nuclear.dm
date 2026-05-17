@@ -13,7 +13,6 @@
 	fire_delay = 8
 
 	projectile_type = /obj/item/projectile/beam/stun/med
-	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
 	modifystate = "egunstun"
 
 	firemodes = list(
@@ -37,7 +36,6 @@
 	one_handed_penalty = 30
 
 	projectile_type = /obj/item/projectile/beam/stun
-	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 3)
 	modifystate = "riflestun"
 
 	firemodes = list(
@@ -60,7 +58,6 @@
 	fire_delay = 6
 
 	projectile_type = /obj/item/projectile/beam/stun/weak
-	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2, TECH_ILLEGAL = 3)
 	modifystate = "energystun"
 
 	firemodes = list(
@@ -89,7 +86,6 @@
 	charge_meter = 0 //ChompEDIT - tommylaser doesn't have charge sprites.
 
 	projectile_type = /obj/item/projectile/beam/burstlaser
-	origin_tech = list(TECH_COMBAT = 5, TECH_MAGNET = 3, TECH_ILLEGAL = 4)
 
 	firemodes = list(
 		list(mode_name="lethal", burst=1, projectile_type=/obj/item/projectile/beam/burstlaser, charge_cost = 200),
@@ -109,7 +105,6 @@
 	fire_sound = 'sound/weapons/taser.ogg'
 	w_class = ITEMSIZE_SMALL
 	projectile_type = /obj/item/projectile/beam/stun/med
-	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 3)
 	modifystate = "PDWstun"
 
 	firemodes = list(
@@ -130,7 +125,6 @@
 	battery_lock = 1 // In exchange for balance, you cannot remove the battery. Also there's no sprite for that and I fucking suck at sprites. -Ace
 
 	projectile_type = /obj/item/projectile/beam/stun/med
-	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2, TECH_ILLEGAL = 2)
 	modifystate = "ep08stun"
 
 	firemodes = list(
@@ -154,7 +148,6 @@
 	desc = "An energy gun with an experimental miniaturized reactor, based on a Lawson Arms platform."
 	icon_state = "nucgunstun"
 	projectile_type = /obj/item/projectile/beam/stun
-	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_POWER = 3)
 	slot_flags = SLOT_BELT
 	force = 8 //looks heavier than a pistol
 	w_class = ITEMSIZE_HUGE	//Looks bigger than a pistol, too. //CHOMP Edit: Looks like a cannon, lol.

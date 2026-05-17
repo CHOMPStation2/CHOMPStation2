@@ -86,19 +86,10 @@
 	w_class = ITEMSIZE_SMALL
 
 	var/static/list/possible_states = list("crystal", "generator","core", "hilt")
-	var/static/list/possible_tech = list(TECH_MATERIAL, TECH_ENGINEERING, TECH_PHORON, TECH_POWER, TECH_BIO, TECH_COMBAT, TECH_MAGNET, TECH_DATA)
 
 /obj/item/prop/alien/prototype/Initialize(mapload)
 	. = ..()
 	icon_state = pick(possible_states)
-	var/list/techs = possible_tech.Copy()
-	origin_tech = list()
-	for(var/i = 1 to rand(1, 4))
-		var/new_tech = pick(techs)
-		techs -= new_tech
-		origin_tech[new_tech] = rand(3, 11)
-
-	origin_tech[TECH_PRECURSOR] = rand(0,3)
 
 /* Yoinked for refrence
 /obj/item/arrow/standard
@@ -167,7 +158,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS //Head be vunerable but cloak covers the other bits.
 	var/block_chance = 20
 
-/obj/item/clothing/suit/armor/tyrtribalcloak/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/suit/armor/tyrtribalcloak/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(prob(block_chance))
 		user.visible_message(span_danger("\The [src] completely deflects [attack_text]!"))
 		return TRUE
@@ -288,7 +279,7 @@
 		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
 		)
 
-/obj/item/melee/energy/tyr_katar/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/energy/tyr_katar/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	if(active)
 		. = ..()
 		switch(user.a_intent)
@@ -337,7 +328,7 @@
 		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
 		)
 
-/obj/item/melee/energy/tyr_hammer/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/energy/tyr_hammer/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	if(active)
 		. = ..()
 		switch(user.a_intent)
@@ -350,3 +341,63 @@
 				var/atom/target_zone = get_edge_target_turf(user,get_dir(user, target))
 				if(!target.anchored)
 					target.throw_at(target_zone, 5, 2, user, FALSE)
+
+/obj/item/melee/energy/tyr_chainsaw
+	name = "tyrian butcher blade"
+	slot_flags = SLOT_BELT | SLOT_BACK
+	desc = "What appears to be a weaponized chainsaw."
+	description_info = "Utilizes charge, recharges with time"
+	lcolor = null
+	colorable = FALSE
+
+	active_force = 60
+	active_armourpen = 20
+
+	attackspeed = 15
+	defend_chance = 0
+	projectile_parry_chance = 0
+
+	active_w_class = ITEMSIZE_HUGE
+	can_cleave = TRUE
+
+	hitcost = 320
+	use_cell = TRUE
+
+	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
+	icon_state = "chainsaw"
+	item_state = "chainsaw"
+
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/obj/guns/precursor/lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
+		)
+
+/obj/item/melee/energy/tyr_chainsaw/Initialize(mapload)
+	. = ..()
+	bcell = new/obj/item/cell/device/weapon/recharge/alien/tyr(src)
+
+/obj/item/shield/tyr_shield
+	name = "tyrian portable energy barrier"
+	desc = "A shield with a strange property of reducing the damage of projectiles instead of being effective at blocking them."
+	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
+	icon_state = "barrier"
+	item_state = "barrier"
+
+	slot_flags = SLOT_BACK
+
+	w_class = ITEMSIZE_LARGE
+	attack_verb = list("shoved", "bashed")
+	base_block_chance = 15
+
+/obj/item/shield/tyr_shield/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+	if(user.incapacitated())
+		return 0
+	var/bad_arc = reverse_direction(user.dir) //arc of directions from which we cannot block
+	if(check_shield_arc(user, bad_arc, damage_source, attacker))
+		if(prob(get_block_chance(user, damage, damage_source, attacker)))
+			user.visible_message(span_danger("\The [user] blocks [attack_text] with \the [src]!"))
+			return 1
+	else
+		var/obj/item/projectile/P = damage_source
+		P.damage = P.damage / 2
+		return 0

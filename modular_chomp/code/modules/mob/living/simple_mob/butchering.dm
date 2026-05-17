@@ -12,7 +12,7 @@
 	meat_amount = 6
 	meat_type = /obj/item/reagent_containers/food/snacks/metroidmeat
 
-/mob/living/simple_mob/metroid/can_butcher(var/mob/user, var/obj/item/I)	// Override for special butchering checks.
+/mob/living/simple_mob/metroid/can_butcher(mob/user, obj/item/I)	// Override for special butchering checks.
 	. = ..()
 
 	if(. && (!is_sharp(I) || !has_edge(I)))

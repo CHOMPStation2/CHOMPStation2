@@ -2,7 +2,7 @@
 	name = "ion thruster"
 	var/obj/machinery/ion_engine/thruster
 
-/datum/ship_engine/ion/New(var/obj/machinery/_holder)
+/datum/ship_engine/ion/New(obj/machinery/_holder)
 	..()
 	thruster = _holder
 
@@ -19,7 +19,7 @@
 /datum/ship_engine/ion/burn()
 	return thruster.thrust_burn()
 
-/datum/ship_engine/ion/set_thrust_limit(var/new_limit)
+/datum/ship_engine/ion/set_thrust_limit(new_limit)
 	thruster.thrust_limit = new_limit
 
 /datum/ship_engine/ion/get_thrust_limit()
@@ -83,7 +83,6 @@
 	board_type = "machine"
 	icon_state = "mcontroller"
 	build_path = /obj/machinery/ion_engine
-	origin_tech = list(TECH_POWER = 1, TECH_ENGINEERING = 2)
 	req_components = list(
 							/obj/item/stack/cable_coil = 2,
 							/obj/item/stock_parts/matter_bin = 1,

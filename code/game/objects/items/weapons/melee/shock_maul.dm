@@ -36,7 +36,6 @@
 	w_class = ITEMSIZE_HUGE
 	drop_sound = 'sound/items/drop/metalweapon.ogg'
 	pickup_sound = 'sound/items/pickup/metalweapon.ogg'
-	origin_tech = list(TECH_COMBAT = 5)
 	attack_verb = list("beaten","slammed","smashed","mauled","hammered","bludgeoned")
 	var/lightcolor = "#D3FDFD"
 	var/status = 0		//whether the thing is on or not
@@ -146,7 +145,7 @@
 	else
 		set_light(0)
 
-/obj/item/melee/shock_maul/dropped(mob/user)
+/obj/item/melee/shock_maul/dropped(mob/user, equipping, slot)
 	..()
 	if(status)
 		status = 0
@@ -250,7 +249,7 @@
 		powercheck(hitcost)
 	//CHOMPEdit end
 
-/obj/item/melee/shock_maul/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/shock_maul/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	. = ..()
 	if(user.a_intent == I_DISARM)
 		launch_force *= launch_force_disarm

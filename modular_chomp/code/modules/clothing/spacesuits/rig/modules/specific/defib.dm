@@ -17,7 +17,7 @@
 	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
 	. = ..()
 
-/obj/item/shockpaddles/standalone/rig/checked_use(var/charge_amt)
+/obj/item/shockpaddles/standalone/rig/checked_use(charge_amt)
 	return 1
 
 /obj/item/shockpaddles/standalone/rig/attack_self(mob/user)

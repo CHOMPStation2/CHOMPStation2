@@ -2,7 +2,6 @@
 	name = "mounted ore scanner"
 	desc = "An exosuit-mounted ore scanner."
 	icon_state = "mecha_analyzer"
-	origin_tech = list(TECH_MATERIAL = 2, TECH_MAGNET = 2, TECH_POWER = 2)
 	equip_cooldown = 5
 	energy_drain = 30
 	range = MECH_MELEE|RANGED
@@ -21,7 +20,7 @@
 	QDEL_NULL(my_scanner)
 	return ..()
 
-/obj/item/mecha_parts/mecha_equipment/tool/orescanner/action(var/atom/target)
+/obj/item/mecha_parts/mecha_equipment/tool/orescanner/action(atom/target)
 	if(!action_checks(target) || get_dist(chassis, target) > 5)
 		return FALSE
 

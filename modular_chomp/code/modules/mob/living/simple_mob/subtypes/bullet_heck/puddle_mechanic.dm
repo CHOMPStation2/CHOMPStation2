@@ -1,4 +1,4 @@
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/summon_puddles(atom/A, var/next_cycle, var/puddle_item)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/summon_puddles(atom/A, next_cycle, puddle_item)
 	for(var/mob/living/L in orange(src, 14))
 		if(L.stat != DEAD && !IIsAlly(L))
 			L.add_modifier(puddle_item, 3, src)
@@ -79,3 +79,10 @@
 
 /datum/modifier/mmo_drop/metal_tomb
 	puddleitem = /obj/structure/foamedmetal
+
+/obj/item/grenade/shooter/auto_explode/eclipse_dagger
+	spread_range = 4
+	projectile_types = list(/obj/item/projectile/energy/astral_collective/dagger)
+
+/datum/modifier/mmo_drop/eclipse_dagger
+	puddleitem = /obj/item/grenade/shooter/auto_explode/eclipse_dagger

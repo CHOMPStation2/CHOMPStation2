@@ -56,13 +56,13 @@
 	icon_state = "seal-signet"
 	drop_sound = 'sound/items/drop/ring.ogg'
 
-/obj/item/clothing/gloves/ring/buzzer/toy/Touch(var/atom/A, var/proximity)
+/obj/item/clothing/gloves/ring/buzzer/toy/Touch(atom/A, proximity)
 	if(proximity && istype(usr, /mob/living/carbon/human))
 
 		return zap(usr, A, proximity)
 	return 0
 
-/obj/item/clothing/gloves/ring/buzzer/toy/zap(var/mob/living/carbon/human/user, var/atom/movable/target, var/proximity)
+/obj/item/clothing/gloves/ring/buzzer/toy/zap(mob/living/carbon/human/user, atom/movable/target, proximity)
 	. = FALSE
 	if(user.a_intent == I_HELP && battery.percent() >= 50)
 		if(isliving(target))

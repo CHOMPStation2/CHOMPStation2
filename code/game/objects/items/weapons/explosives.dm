@@ -7,7 +7,6 @@
 	item_state = "plasticx"
 	flags = NOBLUDGEON
 	w_class = ITEMSIZE_SMALL
-	origin_tech = list(TECH_ILLEGAL = 2)
 	var/timer = 10
 	var/atom/target = null
 	var/open_panel = 0
@@ -27,7 +26,7 @@
 	wires = null
 	return ..()
 
-/obj/item/plastique/attackby(var/obj/item/I, var/mob/user)
+/obj/item/plastique/attackby(obj/item/I, mob/user)
 	if(I.has_tool_quality(TOOL_SCREWDRIVER))
 		open_panel = !open_panel
 		to_chat(user, span_notice("You [open_panel ? "open" : "close"] the wire panel."))
@@ -72,7 +71,7 @@
 		spawn(timer*10)
 			explode(get_turf(target))
 
-/obj/item/plastique/proc/explode(var/location)
+/obj/item/plastique/proc/explode(location)
 	if(!target)
 		target = get_atom_on_turf(src)
 	if(!target)
@@ -92,8 +91,8 @@
 		target.cut_overlay(image_overlay)
 	qdel(src)
 
-/obj/item/plastique/attack(mob/M as mob, mob/user as mob, def_zone)
-	return
+/obj/item/plastique/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	return NONE
 
 /obj/item/plastique/seismic
 	name = "seismic charge"
@@ -104,7 +103,7 @@
 	blast_light = 4
 	blast_flash = 7
 
-/obj/item/plastique/seismic/attackby(var/obj/item/I, var/mob/user)
+/obj/item/plastique/seismic/attackby(obj/item/I, mob/user)
 	. = ..()
 	if(open_panel)
 		if(istype(I, /obj/item/stock_parts/micro_laser))

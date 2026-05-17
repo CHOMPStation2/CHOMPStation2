@@ -20,7 +20,6 @@
 
 	modifystate = "stun"
 
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_MAGNET = 2)
 
 	dna_lock = TRUE // CHOMPEdit
 	charge_sections = 3 //For the icon
@@ -63,7 +62,7 @@
 	else
 		set_light(0)
 
-/obj/item/gun/energy/gun/protector/emag_act(var/remaining_charges,var/mob/user)
+/obj/item/gun/energy/gun/protector/emag_act(remaining_charges,mob/user)
 	..()
 	if(!emagged)
 		emagged = TRUE
@@ -151,7 +150,7 @@
 	else
 		return ..()
 
-/obj/item/gun/energy/gun/protector/pilotgun/locked/emag_act(var/remaining_charges,var/mob/user)
+/obj/item/gun/energy/gun/protector/pilotgun/locked/emag_act(remaining_charges,mob/user)
 	return ..()
 
 /obj/item/gun/energy/gun/protector/pilotgun/locked/special_check(mob/user)

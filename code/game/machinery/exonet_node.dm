@@ -18,13 +18,13 @@
 
 	circuit = /obj/item/circuitboard/telecomms/exonet_node
 
-	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
-	var/noisy = TRUE // CHOMPStation Add: Hummy noises, this starts on
+	var/datum/looping_sound/tcomms/soundloop
+	var/noisy = TRUE
+
 // Proc: New()
 // Parameters: None
 // Description: Adds components to the machine for deconstruction.
 /obj/machinery/exonet_node/Initialize(mapload)
-	// CHOMPAdd: Exonet Machinery humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
 		if(prob(40))
@@ -36,16 +36,15 @@
 		else
 			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
 			soundloop.mid_length = 30
-	soundloop.start() // CHOMPStation Edit: This starts on
-	// CHOMPAdd End
+	soundloop.start()
 	. = ..()
 	default_apply_parts()
 	if(mapload)
 		desc = "This machine is one of many, many nodes inside [using_map.starsys_name]'s section of the Exonet, connecting the [using_map.station_short] to the rest of the system, at least \
 		electronically."
 
-/obj/machinery/exonet_node/Destroy() // CHOMPAdd: Just in case.
-	QDEL_NULL(soundloop) // CHOMPAdd: Exonet noises
+/obj/machinery/exonet_node/Destroy()
+	QDEL_NULL(soundloop)
 	return ..()
 
 // Proc: update_icon()
@@ -70,19 +69,19 @@
 		if(stat & (BROKEN|NOPOWER|EMPED))
 			on = 0
 			update_idle_power_usage(0)
-			soundloop.stop() // CHOMPStation Add: Hummy noises
-			noisy = FALSE // CHOMPStation Add: Hummy noises
+			soundloop.stop()
+			noisy = FALSE
 		else
 			on = 1
 			update_idle_power_usage(2500)
 	else
 		on = 0
 		update_idle_power_usage(0)
-		soundloop.stop() // CHOMPStation Add: Hummy noises
-		noisy = FALSE // CHOMPStation Add: Hummy noises
-	if(!noisy && on) // CHOMPStation Add: Hummy noises, safety in case it was already on
-		soundloop.start() // CHOMPStation Add: Hummy noises
-		noisy = TRUE // CHOMPStation Add: Hummy noises
+		soundloop.stop()
+		noisy = FALSE
+	if(!noisy && on)
+		soundloop.start()
+		noisy = TRUE
 	update_icon()
 
 // Proc: emp_act(severity, recursive)
@@ -204,7 +203,7 @@
 // 		content - The actual message.
 // Description: This writes to the logs list, so that people can see what people are doing on the Exonet ingame.  Note that this is not an admin logging function.
 // 		Communicators are already logged seperately.
-/obj/machinery/exonet_node/proc/write_log(var/origin_address, var/target_address, var/data_type, var/content)
+/obj/machinery/exonet_node/proc/write_log(origin_address, target_address, data_type, content)
 	//var/timestamp = time2text(station_time_in_ds, "hh:mm:ss")
 	var/timestamp = "[stationdate2text()] [stationtime2text()]"
 	var/msg = "[timestamp] | FROM [origin_address] TO [target_address] | TYPE: [data_type] | CONTENT: [content]"

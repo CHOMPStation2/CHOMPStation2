@@ -36,7 +36,7 @@
 
 	spore_type = /mob/living/simple_mob/blob/spore/infesting
 
-/datum/blob_type/living_agate/on_received_damage(var/obj/structure/blob/B, damage, damage_type, mob/living/attacker)
+/datum/blob_type/living_agate/on_received_damage(obj/structure/blob/B, damage, damage_type, mob/living/attacker)
 	if(damage > 0 && attacker && get_dist(B, attacker) <= 1)
 		B.visible_message(span_danger("The [name] retaliates, lashing out at \the [attacker]!"))
 		B.blob_attack_animation(attacker, B.overmind)

@@ -65,11 +65,15 @@
 
 	var/datum/religion/my_religion
 
-/datum/mind/New(var/key)
+/datum/mind/New(key)
 	src.key = key
 	purchase_log = list()
 	antag_holder = new
 	..()
+
+/datum/mind/Destroy(force)
+	. = ..()
+	original_character = null
 
 /datum/mind/proc/transfer_to(mob/living/new_character, force = FALSE)
 	if(!istype(new_character))

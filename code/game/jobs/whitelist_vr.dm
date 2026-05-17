@@ -12,7 +12,7 @@ GLOBAL_LIST_EMPTY(job_whitelist)
 	else
 		GLOB.job_whitelist = splittext(text, "\n")
 
-/proc/is_job_whitelisted(mob/M, var/rank)
+/proc/is_job_whitelisted(mob/M, rank)
 	if(!CONFIG_GET(flag/use_jobwhitelist)) // CHOMPedit
 		return 1 // CHOMPedit
 	var/datum/job/job = job_master.GetJob(rank)

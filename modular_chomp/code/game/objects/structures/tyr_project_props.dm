@@ -9,7 +9,7 @@
 	var/descendx
 	var/descendy
 
-/obj/structure/prop/tyr_elevator/attackby(var/obj/item/W as obj, var/mob/user as mob)
+/obj/structure/prop/tyr_elevator/attackby(obj/item/W as obj, mob/user as mob)
 	if (do_after(user, 30, target = src))
 		do_teleport(user, locate(descendx,descendy,src.z), channel = TELEPORT_CHANNEL_QUANTUM)
 
@@ -61,7 +61,7 @@
 			visible_message(span_warning("A red light on \the [src]'s control panel flashes briefly."))
 	..()
 
-/obj/machinery/door/blast/puzzle/tyrdoor/keypad/proc/check_input(var/input)
+/obj/machinery/door/blast/puzzle/tyrdoor/keypad/proc/check_input(input)
 	if(length(input) != codelen)
 		return 0
 
@@ -112,7 +112,7 @@
 
 	var/mob/living/carbon/occupant = null
 
-/obj/machinery/restoration_cell/attackby(var/obj/item/G as obj, var/mob/user as mob)
+/obj/machinery/restoration_cell/attackby(obj/item/G as obj, mob/user as mob)
 	if(istype(G, /obj/item/grab))
 		var/obj/item/grab/grab = G
 		if(!ismob(grab.affecting))
@@ -626,3 +626,10 @@
 	info = "We need serious back up if we are to stay here long term. Random folks keep stumbling upon the sivian side and blasting, unsure if they are bounty hunters, or maniacs but no SOL attention yet.<BR>\
 	The other day we had reports of masked and hooded men hovering over lava, although that may be disregarded. We found mold and mushrooms in some of our rations, and there was no physical sign of them.<BR>\
 	Although Rift Watchers may be stalking this location. The ants are also adapting to us and our gear. We need something, a simple mecha will do."
+
+/obj/item/paper/tyr_notes/astral_e
+	name = "The Astral Houses"
+	info = "Our orginization is split into three houses like we once had, but our foundation is firmer then before. One house for the mind, one for the soul and one for the body.<BR>\
+	The house of the mind shall focus upon our research, furthering our way torwards the bright future.<BR>\
+	The house of the soul shall focus upon us, keeping out spirits high and focus narrow.<BR>\
+	Lastly, the house of the body shall provide the most fierce of protection."

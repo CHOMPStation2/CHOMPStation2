@@ -20,7 +20,7 @@
 	. = ..()
 	icon_state = "sand[rand(0,2)]"
 
-/turf/simulated/floor/outdoors/desert_planet/sand/attackby(var/obj/item/W, var/mob/user)
+/turf/simulated/floor/outdoors/desert_planet/sand/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/shovel))
 		to_chat(user, span_notice("You begin to remove \the [src] with your [W]."))
 		if(do_after(user, 4 SECONDS * W.toolspeed, src))

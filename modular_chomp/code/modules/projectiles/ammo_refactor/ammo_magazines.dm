@@ -2,7 +2,6 @@
 /obj/item/ammo_magazine/pistol
 	name = "pistol magazine"
 	icon_state = "m91"
-	origin_tech = list(TECH_COMBAT = 2)
 	mag_type = MAGAZINE
 	matter = list(MAT_STEEL = 600)
 	caliber = "small"
@@ -42,7 +41,6 @@
 	name = "extended pistol magazine"
 	// cringe ammo ban lore begone
 	icon_state = "m93"
-	origin_tech = list(TECH_COMBAT = 2, TECH_ILLEGAL = 1)
 	mag_type = MAGAZINE
 	matter = list(MAT_STEEL = 1000)
 	caliber = "small"

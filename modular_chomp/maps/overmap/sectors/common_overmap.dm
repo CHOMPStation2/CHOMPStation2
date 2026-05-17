@@ -63,15 +63,15 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 			Z_LEVEL_SN_STATION_THREE,
 			GLOB.map_templates_loaded[Z_NAME_ALIAS_MISC])
 
-/obj/effect/overmap/visitable/sector/Soluna_Nexus/Crossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/Soluna_Nexus/Crossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/Soluna_Nexus/Uncrossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/Soluna_Nexus/Uncrossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/Soluna_Nexus/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/Soluna_Nexus/announce_atc(atom/movable/AM, going = FALSE)
 	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
 		if(world.time < mob_announce_cooldown)
 			return
@@ -147,15 +147,15 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 			Z_LEVEL_SC_STATION_THREE,
 			GLOB.map_templates_loaded[Z_NAME_ALIAS_MISC])
 
-/obj/effect/overmap/visitable/sector/Southern_Cross/Crossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/Southern_Cross/Crossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/Southern_Cross/Uncrossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/Southern_Cross/Uncrossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/Southern_Cross/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/Southern_Cross/announce_atc(atom/movable/AM, going = FALSE)
 	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
 		if(world.time < mob_announce_cooldown)
 			return
@@ -235,15 +235,15 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 			Z_LEVEL_CETUS_STATION_THREE,
 			GLOB.map_templates_loaded[Z_NAME_ALIAS_MISC])
 
-/obj/effect/overmap/visitable/sector/Cetus/Crossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/Cetus/Crossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/Cetus/Uncrossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/Cetus/Uncrossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/Cetus/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/Cetus/announce_atc(atom/movable/AM, going = FALSE)
 	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
 		if(world.time < mob_announce_cooldown)
 			return

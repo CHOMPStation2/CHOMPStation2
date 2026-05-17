@@ -26,16 +26,6 @@
 	custom_only = FALSE
 	banned_species = list(SPECIES_TAJARAN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN, SPECIES_XENOHYBRID, SPECIES_VULPKANIN, SPECIES_XENO, SPECIES_XENOCHIMERA, SPECIES_VASILISSAN, SPECIES_WEREBEAST) //These species already have strong darksight by default.
 
-/datum/trait/positive/shapeshifting
-	name = "Shapeshifter"
-	desc = "You're able to shift your appearance."
-	cost = 3 //this trait is functionally wholly cosmetic, but it is less flavor-restricted than cocoon, and takes less time, so it's a bit pricier
-	custom_only = FALSE
-
-/datum/trait/positive/shapeshifting/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..()
-	add_verb(H, /mob/living/carbon/human/proc/innate_shapeshifting)
-
 /datum/trait/positive/endurance_high
 	cost = 3
 	excludes = list(/datum/trait/positive/endurance_very_high, /datum/trait/positive/endurance_extremely_high) // CHOMPEdit: Increased Endurance.

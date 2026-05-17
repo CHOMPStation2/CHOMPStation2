@@ -7,7 +7,6 @@
 	item_state = "ionrifle"
 	icon_expected_width = 64 // CHOMPEdit: Gun Sprites
 	wielded_item_state = "ionrifle-wielded"
-	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 4)
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	slot_flags = SLOT_BACK
@@ -35,7 +34,6 @@
 	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "decloner"
 	item_state = "decloner"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 4, TECH_POWER = 3)
 	projectile_type = /obj/item/projectile/energy/declone
 
 /obj/item/gun/energy/floragun
@@ -46,7 +44,6 @@
 	icon_state = "floramut100"
 	item_state = "floramut"
 	projectile_type = /obj/item/projectile/energy/floramut
-	origin_tech = list(TECH_MATERIAL = 2, TECH_BIO = 3, TECH_POWER = 3)
 	modifystate = "floramut"
 	cell_type = /obj/item/cell/device/weapon/recharge
 	battery_lock = 1
@@ -66,7 +63,7 @@
 	. = ..()
 	emitter = new(src)
 
-/obj/item/gun/energy/floragun/examine(var/mob/user)
+/obj/item/gun/energy/floragun/examine(mob/user)
 	. = ..()
 	if(Adjacent(user))
 		. += "It has [emitter ? emitter : "no micro laser"] installed."
@@ -174,7 +171,6 @@
 	icon = 'icons/obj/gun.dmi'
 	icon_state = "toxgun"
 	w_class = ITEMSIZE_NORMAL
-	origin_tech = list(TECH_COMBAT = 5, TECH_PHORON = 4)
 	projectile_type = /obj/item/projectile/energy/phoron
 
 /* Staves */
@@ -189,12 +185,11 @@
 	w_class = ITEMSIZE_LARGE
 	charge_cost = 480
 	projectile_type = /obj/item/projectile/change
-	origin_tech = null
 	cell_type = /obj/item/cell/device/weapon/recharge
 	battery_lock = 1
 	charge_meter = 0
 
-/obj/item/gun/energy/staff/special_check(var/mob/user)
+/obj/item/gun/energy/staff/special_check(mob/user)
 	if((user.mind && !GLOB.wizards.is_antagonist(user.mind)))
 		to_chat(user, span_warning("You focus your mind on \the [src], but nothing happens!"))
 		return 0
@@ -246,7 +241,6 @@
 	battery_lock = 1
 	accuracy = 75 // Suppressive weapons don't work too well if there's no risk of being hit.
 	burst_delay = 1 // Burst faster than average.
-	origin_tech = list(TECH_COMBAT = 6, TECH_MAGNET = 6, TECH_ILLEGAL = 6)
 
 	firemodes = list(
 		list(mode_name="single shot", burst = 1, burst_accuracy = list(75), dispersion = list(0), charge_cost = 24),
@@ -275,7 +269,7 @@
 
 	var/power_cycle = FALSE
 
-/obj/item/gun/energy/maghowitzer/proc/pick_random_target(var/turf/T)
+/obj/item/gun/energy/maghowitzer/proc/pick_random_target(turf/T)
 	var/foundmob = FALSE
 	var/foundmobs = list()
 	for(var/mob/living/L in T.contents)
@@ -286,10 +280,10 @@
 		return return_target
 	return FALSE
 
-/obj/item/gun/energy/maghowitzer/attack(atom/A, mob/living/user, def_zone)
+/obj/item/gun/energy/maghowitzer/attack(mob/living/A, mob/living/user, target_zone, attack_modifier)
 	if(power_cycle)
 		to_chat(user, span_notice("\The [src] is already powering up!"))
-		return 0
+		return ITEM_INTERACT_FAILURE
 	var/turf/target_turf = get_turf(A)
 	var/beameffect = user.Beam(target_turf,icon_state="sat_beam",icon='icons/effects/beam.dmi',time=31, maxdistance=10,beam_type=/obj/effect/ebeam,beam_sleep_time=3)
 	if(beameffect)
@@ -298,19 +292,20 @@
 		power_cycle = TRUE
 		if(do_after(user, 3 SECONDS, target = src))
 			if(A.loc == target_turf)
-				..(A, user, def_zone)
+				..(A, user, target_zone, attack_modifier)
 			else
 				var/rand_target = pick_random_target(target_turf)
 				if(rand_target)
-					..(rand_target, user, def_zone)
+					..(rand_target, user, target_zone, attack_modifier)
 				else
-					..(target_turf, user, def_zone)
+					..(target_turf, user, target_zone, attack_modifier)
+			return ITEM_INTERACT_SUCCESS
 		else
 			if(beameffect)
 				qdel(beameffect)
 		power_cycle = FALSE
 	else
-		..(A, user, def_zone) //If it can't fire, just bash with no delay.
+		..(A, user, target_zone, attack_modifier) //If it can't fire, just bash with no delay.
 
 /obj/item/gun/energy/maghowitzer/afterattack(atom/A, mob/living/user, adjacent, params)
 	if(power_cycle)

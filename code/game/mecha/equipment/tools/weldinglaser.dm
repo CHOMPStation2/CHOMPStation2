@@ -2,7 +2,6 @@
 	name = "welding laser"
 	desc = "An exosuit-mounted welding laser."
 	icon_state = "mecha_laser-rig"
-	origin_tech = list(TECH_MATERIAL = 4, TECH_MAGNET = 3, TECH_POWER = 4, TECH_PHORON = 2)
 	equip_cooldown = 3
 	energy_drain = 15
 	range = MECH_MELEE
@@ -12,7 +11,7 @@
 
 	tooltype = /obj/item/weldingtool/electric/mounted/exosuit
 
-/obj/item/mecha_parts/mecha_equipment/tool/powertool/welding/action(var/atom/target)
+/obj/item/mecha_parts/mecha_equipment/tool/powertool/welding/action(atom/target)
 	..()
 
 	var/datum/beam/weld_beam = null

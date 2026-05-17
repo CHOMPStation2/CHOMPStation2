@@ -44,7 +44,7 @@ ADMIN_VERB_AND_CONTEXT_MENU(jumptomob, R_ADMIN|R_MOD|R_DEBUG|R_EVENT, "Jump to M
 	user.do_jumptomob(M)
 
 /// Performs the jumps, also called from admin Topic() for JMP links
-/client/proc/do_jumptomob(var/mob/M)
+/client/proc/do_jumptomob(mob/M)
 	if(!CONFIG_GET(flag/allow_admin_jump))
 		tgui_alert_async(usr, "Admin jumping disabled")
 		return
@@ -66,18 +66,14 @@ ADMIN_VERB_AND_CONTEXT_MENU(jumptomob, R_ADMIN|R_MOD|R_DEBUG|R_EVENT, "Jump to M
 	else
 		to_chat(A, span_filter_adminlog("This mob is not located in the game world."))
 
-ADMIN_VERB(jumptocoord, R_ADMIN|R_MOD|R_DEBUG|R_EVENT,"Jump to Coordinate", "Jump to the target coordinates.", ADMIN_CATEGORY_GAME)
+ADMIN_VERB(jumptocoord, R_ADMIN|R_MOD|R_DEBUG|R_EVENT,"Jump to Coordinate", "Jump to the target coordinates.", ADMIN_CATEGORY_GAME, tx as num|null, ty as num|null, tz as num|null)
 	if(!CONFIG_GET(flag/allow_admin_jump))
 		tgui_alert_async(user, "Admin jumping disabled")
 		return
-
-	var/tx
-	var/ty
-	var/tz
-
-	tx = tgui_input_number(user, "Select the target x coordinate", "X Loc", 1, world.maxx, 1)
-	ty = tgui_input_number(user, "Select the target y coordinate", "Y Loc", 1, world.maxy, 1)
-	tz = tgui_input_number(user, "Select the target z coordinate", "Z Loc", 1, world.maxz, 1)
+	if(!tx || !ty || !tz)
+		tx = tgui_input_number(user, "Select the target x coordinate", "X Loc", 1, world.maxx, 1)
+		ty = tgui_input_number(user, "Select the target y coordinate", "Y Loc", 1, world.maxy, 1)
+		tz = tgui_input_number(user, "Select the target z coordinate", "Z Loc", 1, world.maxz, 1)
 
 	var/mob/user_mob = user.mob
 	user_mob.on_mob_jump()
@@ -178,7 +174,7 @@ ADMIN_VERB(Getkey, R_ADMIN|R_MOD|R_DEBUG|R_EVENT, "Get Key",  "Key to teleport."
 	else
 		tgui_alert_async(usr, "Admin jumping disabled")
 
-/client/proc/cmd_admin_move_atom(var/atom/movable/AM, tx as num, ty as num, tz as num)
+/client/proc/cmd_admin_move_atom(atom/movable/AM, tx as num, ty as num, tz as num)
 	set category = "Admin.Game"
 	set name = "Move Atom to Coordinate"
 

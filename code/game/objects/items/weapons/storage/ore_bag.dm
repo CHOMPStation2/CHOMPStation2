@@ -102,7 +102,7 @@
 	update_icon()
 	return 1
 
-/obj/item/ore_bag/proc/gather_all(turf/T, mob/user, var/silent = 0)
+/obj/item/ore_bag/proc/gather_all(turf/T, mob/user, silent = 0)
 	var/success = 0
 	var/failure = 0
 	var/current_pickup = 0
@@ -147,7 +147,7 @@
 	user.AddComponent(/datum/component/recursive_move)
 	RegisterSignal(user, COMSIG_MOVABLE_ATTEMPTED_MOVE, /obj/item/ore_bag/proc/autoload)
 
-/obj/item/ore_bag/dropped(mob/user)
+/obj/item/ore_bag/dropped(mob/user, equipping, slot)
 	..()
 	UnregisterSignal(user, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 

@@ -4,7 +4,7 @@
 	endWhen			= 35
 
 /datum/event/clang/announce()
-	GLOB.command_announcement.Announce("Attention [station_name()]. Unknown ultra-dense high-velocity object entering stratosphere!", "General Alert")
+	GLOB.command_announcement.Announce("Attention [station_name()]. Unknown ultra-dense high-velocity object entering stratosphere!", "General Alert", ANNOUNCER_MSG_CLANG)
 	if(seclevel2num(get_security_level()) < SEC_LEVEL_BLUE)
 		set_security_level(SEC_LEVEL_BLUE) // OHNO
 
@@ -77,7 +77,7 @@
 	var/turf/despawn_loc = null
 	var/has_hunted_unlucky = FALSE
 
-/obj/effect/immovablerod/proc/TakeFlight(var/turf/end)
+/obj/effect/immovablerod/proc/TakeFlight(turf/end)
 	despawn_loc = end
 	walk_towards(src, despawn_loc, 1)
 	explosion(loc, 2, 3, 5) // start out with a bang

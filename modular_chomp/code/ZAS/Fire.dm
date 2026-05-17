@@ -27,10 +27,10 @@
 	zone.fire_tiles |= src
 	return FALSE
 
-/turf/proc/feed_lingering_fire(var/amnt)
+/turf/proc/feed_lingering_fire(amnt)
 	return
 
-/turf/simulated/feed_lingering_fire(var/amnt)
+/turf/simulated/feed_lingering_fire(amnt)
 	if(fire && istype(fire, /obj/fire/lingering))
 		var/obj/fire/lingering/F = fire
 		F.firelevel += amnt

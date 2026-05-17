@@ -19,8 +19,8 @@
 	var/dos_capacity = 500		// Amount of DoS "packets" in buffer required to crash the relay
 	var/dos_dissipate = 1		// Amount of DoS "packets" dissipated over time.
 
-	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
-	var/noisy = TRUE  // CHOMPStation Add: Hummy noises
+	var/datum/looping_sound/tcomms/soundloop
+	var/noisy = TRUE
 
 
 // TODO: Implement more logic here. For now it's only a placeholder.
@@ -37,12 +37,12 @@
 	if(operable())
 		icon_state = initial(icon_state)
 		if(!noisy)
-			soundloop.start() // CHOMPStation Add: Hummy noises
-			noisy = TRUE // CHOMPStation Add: Hummy noises
+			soundloop.start()
+			noisy = TRUE
 	else
 		icon_state = "[initial(icon_state)]_off"
-		soundloop.stop() // CHOMPStation Add: Hummy noises
-		noisy = FALSE // CHOMPStation Add: Hummy noises
+		soundloop.stop()
+		noisy = FALSE
 
 /obj/machinery/ntnet_relay/process()
 	if(operable())
@@ -79,7 +79,7 @@
 	data["dos_crashed"] = dos_failure
 	return data
 
-/obj/machinery/ntnet_relay/attack_hand(var/mob/living/user)
+/obj/machinery/ntnet_relay/attack_hand(mob/living/user)
 	tgui_interact(user)
 
 /obj/machinery/ntnet_relay/tgui_act(action, params)
@@ -114,7 +114,6 @@
 		GLOB.ntnet_global.relays.Add(src)
 		NTNet = GLOB.ntnet_global
 		GLOB.ntnet_global.add_log("New quantum relay activated. Current amount of linked relays: [NTNet.relays.len]")
-	// CHOMPAdd: PDA Multicaster Server humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
 		if(prob(40))
@@ -127,7 +126,6 @@
 			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
 			soundloop.mid_length = 30
 	soundloop.start() // Have to do this here bc it starts on
-	// CHOMPAdd End
 
 /obj/machinery/ntnet_relay/Destroy()
 	if(GLOB.ntnet_global)
@@ -140,7 +138,7 @@
 	QDEL_NULL(soundloop)
 	. = ..()
 
-/obj/machinery/ntnet_relay/attackby(var/obj/item/W as obj, var/mob/user as mob)
+/obj/machinery/ntnet_relay/attackby(obj/item/W as obj, mob/user as mob)
 	if(default_deconstruction_screwdriver(user, W))
 		return
 	if(default_deconstruction_crowbar(user, W))
