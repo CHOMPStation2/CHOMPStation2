@@ -347,7 +347,7 @@
 	for(var/mob/living/L in orange(src, 5))
 		if(IIsAlly(L))
 			Beam(L, icon_state = "g_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
-			L.add_modifier(/datum/modifier/astralcollect_solar, null, src)
+			L.add_modifier(/datum/modifier/astralcollect_solar, 7, src)
 
 /mob/living/simple_mob/humanoid/astral_collective/proc/brute_beam(atom/target)
 	if(!target)
@@ -355,7 +355,7 @@
 	for(var/mob/living/L in orange(src, 5))
 		if(IIsAlly(L))
 			Beam(L, icon_state = "g_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
-			L.add_modifier(/datum/modifier/astralcollect_lunar, null, src)
+			L.add_modifier(/datum/modifier/astralcollect_lunar, 7, src)
 
 /mob/living/simple_mob/humanoid/astral_collective/proc/teleport_attack(atom/target)
 	// Teleport attack.
