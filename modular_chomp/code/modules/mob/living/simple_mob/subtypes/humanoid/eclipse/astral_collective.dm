@@ -22,7 +22,7 @@
 	harm_intent_damage = 0
 	melee_damage_lower = 25
 	melee_damage_upper = 25
-	melee_attack_delay = 1.25 SECONDS
+	melee_attack_delay = 0.75 SECONDS
 	evasion = 20
 	attack_sharp = 1
 	attack_edge = 1
@@ -184,6 +184,8 @@
 	handle_corpse = TRUE
 	hostile = TRUE
 	mauling = TRUE
+	wander = FALSE
+	returns_home = TRUE
 	destructive = TRUE
 
 /datum/ai_holder/simple_mob/ranged/astral_collective/pre_ranged_attack(atom/A)
@@ -219,19 +221,16 @@
 	attack_armor_pen = 20
 	melee_attack_delay = 1.5 SECONDS
 
-	health = 100
-	maxHealth = 100
+	health = 60
+	maxHealth = 60
 
-	special_attack_cooldown = 7 SECONDS
+	special_attack_cooldown = 3 SECONDS
 	special_attack_min_range = 0
 	special_attack_max_range = 2
 
 /mob/living/simple_mob/humanoid/astral_collective/purity/do_special_attack(atom/A)
-	playsound(src, 'sound/effects/ghost2.ogg', 20, 1)
-	for(var/mob/living/M in orange(src, 2))
-		if(M.get_ear_protection() == 0)
-			M.Confuse(10)
-
+	L.adjustBruteLoss(-90)
+	L.adjustFireLoss(-90)
 
 //the basic ranged mobs
 /mob/living/simple_mob/humanoid/astral_collective/ranged
