@@ -229,8 +229,8 @@
 	special_attack_max_range = 2
 
 /mob/living/simple_mob/humanoid/astral_collective/purity/do_special_attack(atom/A)
-	L.adjustBruteLoss(-90)
-	L.adjustFireLoss(-90)
+	adjustBruteLoss(-90)
+	adjustFireLoss(-90)
 
 //the basic ranged mobs
 /mob/living/simple_mob/humanoid/astral_collective/ranged
