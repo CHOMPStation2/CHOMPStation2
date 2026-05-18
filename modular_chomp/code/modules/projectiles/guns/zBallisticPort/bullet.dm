@@ -922,7 +922,7 @@
 		if(do_after(user, 5 SECONDS, src)) //Give them a chance to take it back.
 			. = ..() //RIP
 
-/obj/item/gun/projectile/automatic/serdy/kord/handle_post_fire(mob/living/user, atom/target, var/pointblank=0, var/reflex=0)
+/obj/item/gun/projectile/automatic/serdy/kord/handle_post_fire(mob/living/user, atom/target, pointblank=0, reflex=0)
 	. = ..()
 	var/unhappy_factor = 1.3333333*(user.size_multiplier - 0.5) //Unhappy factor based on size. Below 50% is a really bad day, and above 125% is fine, everything inbetween is varying.
 	if(unhappy_factor >= 1) //They're fine
@@ -1424,7 +1424,7 @@
 	icon_expected_width = 64
 	var/is_picked_up = FALSE
 
-/obj/item/gun/projectile/shotgun/doublebarrel/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+/obj/item/gun/projectile/shotgun/doublebarrel/process_accuracy(obj/projectile, mob/living/user, atom/target, burst, held_twohanded)
 	. = ..()
 	var/obj/item/projectile/bullet/P = projectile
 	if(!istype(P))
@@ -1432,7 +1432,7 @@
 	if(sawn_off)
 		P.submunition_spread_max = 100 //More spread when sawn off
 
-/obj/item/gun/projectile/shotgun/doublebarrel/attackby(var/obj/item/A as obj, mob/user as mob)
+/obj/item/gun/projectile/shotgun/doublebarrel/attackby(obj/item/A as obj, mob/user as mob)
 	if(istype(A, /obj/item/surgical/circular_saw) || istype(A, /obj/item/melee/energy) || istype(A, /obj/item/pickaxe/plasmacutter))
 		if(sawn_off) //Don't do anything if we were already sawed off.
 			return
@@ -1764,4 +1764,3 @@
 	multiple_sprites = 1
 	matter = list(MAT_STEEL = 5400)
 	ammo_type = /obj/item/ammo_casing/a762/ap
-
