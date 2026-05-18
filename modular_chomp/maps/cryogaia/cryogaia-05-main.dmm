@@ -55726,7 +55726,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/hallway)
 "wyv" = (
-/obj/machinery/atmospherics/binary/stationboiler,
+/obj/structure/stationboiler,
 /turf/simulated/floor/plating,
 /area/civilian/atrium/central)
 "wyz" = (
