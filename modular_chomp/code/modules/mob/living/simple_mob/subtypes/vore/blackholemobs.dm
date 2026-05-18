@@ -1946,7 +1946,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon_scale_x = 1
 	icon_scale_y = 1
 	movement_shake_radius = 5
-
+	base_attack_cooldown = 2 DECISECONDS
 	maxHealth = 750
 	deflect_chance = 25
 	has_repair_droid = FALSE
@@ -2131,7 +2131,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 
 /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/blackhole
-	conserve_ammo = FALSE
+	conserve_ammo = TRUE
 	vision_range = 30
 	closest_desired_distance = 5
 
@@ -2227,6 +2227,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	name = "homing bolt"
 	icon_state = "atrocket"
 	damage = 15
+	range = 50
 	damage_type = BRUTE
 	check_armour = "bullet"
 	fire_sound = 'sound/weapons/rpg.ogg'
@@ -2244,7 +2245,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 /obj/item/projectile/arc/explosive_rocket/rocket/bh2/on_impact(turf/T)
 	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
-	explosion(T, 0, 2, 3, adminlog = FALSE)
+	explosion(T, 0, 1, 4, adminlog = FALSE)
 
 
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
