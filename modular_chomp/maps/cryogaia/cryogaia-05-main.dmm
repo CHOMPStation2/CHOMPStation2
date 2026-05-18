@@ -61,6 +61,10 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/cmo)
+"aai" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled,
+/area/storage/primary)
 "aaL" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/medical,
@@ -47552,6 +47556,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/emergency_storage/emergency)
 "tat" = (
@@ -74218,7 +74225,7 @@ nEp
 rra
 lGU
 ijM
-deL
+aai
 nEp
 rwq
 wCx
