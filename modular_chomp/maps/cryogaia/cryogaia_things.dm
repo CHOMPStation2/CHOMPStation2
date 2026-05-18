@@ -6,7 +6,7 @@
 	music = list('sound/music/elevator.ogg')  // Woo elevator music!
 
 /obj/effect/step_trigger/teleporter/planetary_fall/borealis2/find_planet()
-	planet = planet_borealis2
+	planet = GLOB.planet_borealis2
 
 
 

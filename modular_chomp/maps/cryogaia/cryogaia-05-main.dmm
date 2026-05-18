@@ -5467,6 +5467,9 @@
 	charge = 100;
 	maxcharge = 15000
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/security)
 "chB" = (
@@ -9059,6 +9062,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
 "dFP" = (
@@ -27470,6 +27474,9 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 4
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel,
 /area/security/security_cell_hallway)
 "lcR" = (
@@ -33530,6 +33537,9 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "nql" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/checkpoint)
 "nqv" = (
@@ -45153,6 +45163,9 @@
 	name = "security notice board";
 	pixel_y = 28
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel,
 /area/security/hallway)
 "rZJ" = (
@@ -49739,6 +49752,7 @@
 "tTH" = (
 /obj/effect/floor_decal/corner/blue,
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
 "tTP" = (
@@ -49954,6 +49968,9 @@
 "tYj" = (
 /obj/structure/window/reinforced{
 	health = 1e+006
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/security/checkpoint)
@@ -72693,7 +72710,7 @@ lim
 bNG
 kUr
 kUr
-kUr
+sOX
 gVw
 sOX
 kUr
