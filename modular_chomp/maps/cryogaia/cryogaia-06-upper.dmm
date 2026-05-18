@@ -29,6 +29,12 @@
 	},
 /turf/simulated/open,
 /area/civilian/atrium/upper)
+"af" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_entrance)
 "ag" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -183,6 +189,12 @@
 /obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
+"aA" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_meeting)
 "aB" = (
 /obj/machinery/computer/ship/helm,
 /obj/structure/panic_button{
@@ -269,6 +281,10 @@
 /obj/structure/railing,
 /turf/simulated/open,
 /area/chapel/monastery/upper)
+"aN" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/miningdock)
 "aO" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -570,6 +586,14 @@
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
+"bv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/security/watchtower)
 "bw" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/voidcraft{
@@ -733,6 +757,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/excursion)
+"bN" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/security/watchtower)
 "bO" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -783,6 +813,12 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/cryogaia/station/excursion_dock)
+"bV" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "bW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/simulated/wall/rshull,
@@ -1240,6 +1276,14 @@
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/excursion)
+"cX" = (
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "cY" = (
 /obj/machinery/airlock_sensor{
 	frequency = 1381;
@@ -1352,6 +1396,14 @@
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/west)
+"dh" = (
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "di" = (
 /obj/machinery/vending/cola{
 	dir = 8
@@ -1370,6 +1422,30 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
+"dl" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"dm" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbayupper)
 "dn" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -1446,6 +1522,15 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plating,
 /area/constructionsite/medical/upper)
+"dv" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/medical_upper)
 "dw" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
@@ -2815,6 +2900,7 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 10
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/hallway/primary/upper/south)
 "gP" = (
@@ -6052,6 +6138,9 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/rust,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/hallway/primary/upper/south)
 "nt" = (
@@ -7132,6 +7221,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
 "rJ" = (
@@ -7288,6 +7378,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 8
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "sJ" = (
@@ -7502,6 +7593,9 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 9
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/chapel/monastery/upper)
 "tI" = (
@@ -7529,6 +7623,9 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 5
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/chapel/monastery/upper)
@@ -8630,6 +8727,9 @@
 	dir = 8;
 	pixel_x = 28
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
 "zC" = (
@@ -9133,6 +9233,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/rust,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/civilian/atrium/upper)
 "BX" = (
@@ -9753,6 +9856,9 @@
 "EQ" = (
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/security_tower)
@@ -11474,6 +11580,9 @@
 /obj/item/geiger/wall{
 	dir = 4;
 	pixel_x = -30
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
@@ -20008,7 +20117,7 @@ Mt
 Lf
 Mt
 Mt
-Qp
+dv
 Qa
 tq
 oK
@@ -20703,7 +20812,7 @@ zI
 hF
 Bl
 nO
-Bl
+bv
 nB
 Hg
 vJ
@@ -20857,7 +20966,7 @@ aT
 zB
 ys
 MJ
-Xo
+bN
 XD
 Xo
 Ux
@@ -22117,7 +22226,7 @@ UV
 Xr
 AE
 tq
-dT
+dm
 ZW
 rP
 tq
@@ -24240,9 +24349,9 @@ AN
 AN
 AN
 ZP
-Yy
+dh
 rj
-Yy
+cX
 pE
 AN
 AN
@@ -26829,7 +26938,7 @@ TQ
 EC
 ae
 sa
-wW
+dl
 rC
 EC
 EC
@@ -26843,7 +26952,7 @@ ae
 EC
 vx
 Gt
-sa
+bV
 rC
 EC
 EC
@@ -29300,7 +29409,7 @@ kg
 fS
 kU
 vD
-vD
+aA
 vD
 vD
 vD
@@ -30574,7 +30683,7 @@ AN
 AN
 AN
 vT
-eo
+wl
 eo
 HQ
 eo
@@ -32220,7 +32329,7 @@ ma
 mo
 kv
 kv
-kv
+af
 nj
 oA
 yw
@@ -32532,13 +32641,13 @@ gT
 iu
 UT
 gt
-YW
+aN
 Ni
 YW
 YW
 YW
 Ni
-YW
+aN
 kj
 UT
 dj
@@ -34638,7 +34747,7 @@ nQ
 nQ
 UT
 UT
-YW
+HG
 YW
 YW
 YW
