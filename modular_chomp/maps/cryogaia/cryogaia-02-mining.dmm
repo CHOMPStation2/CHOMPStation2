@@ -835,9 +835,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/south_hall)
-"bH" = (
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/mine/unexplored)
 "bI" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4
@@ -47056,8 +47053,8 @@ bm
 bm
 tI
 tI
-bH
-rJ
+tI
+tI
 tI
 bm
 bm

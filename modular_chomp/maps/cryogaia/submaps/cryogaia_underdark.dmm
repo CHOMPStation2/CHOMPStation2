@@ -67,9 +67,6 @@
 /obj/effect/decal/remains/mouse,
 /turf/simulated/floor/outdoors/dirt,
 /area/mine/unexplored/underdark)
-"ar" = (
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/mine/explored/underdark)
 "as" = (
 /obj/effect/map_effect/portal/master/side_b{
 	dir = 4;
@@ -162,9 +159,6 @@
 /area/mine/explored/underdark)
 "oI" = (
 /turf/simulated/floor/tiled/steel_dirty,
-/area/mine/explored/underdark)
-"qL" = (
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/mine/explored/underdark)
 "uj" = (
 /obj/effect/map_effect/portal/line/side_b{
@@ -336,8 +330,8 @@ Pk
 Pk
 Pk
 ho
-ar
-qL
+ho
+ho
 ho
 Pk
 Pk
@@ -493,21 +487,21 @@ TZ
 TZ
 TZ
 TZ
-TZ
-TZ
-Bk
-Bk
+ho
+ho
+ho
+ho
 ho
 as
 uj
 ho
-Bk
-Bk
-Bk
-Bk
-Bk
-Bk
-TZ
+Pk
+Pk
+Pk
+Pk
+Pk
+Pk
+Pk
 TZ
 TZ
 TZ
@@ -658,16 +652,16 @@ wf
 wf
 wf
 aa
-az
-ao
+aa
+aa
 an
 ab
 aq
-ab
-ab
-ab
-ab
-ab
+aa
+aa
+aa
+aa
+aa
 aa
 wf
 wf
@@ -820,8 +814,8 @@ wf
 wf
 wf
 aa
-ab
-ab
+az
+ao
 an
 ab
 ad
