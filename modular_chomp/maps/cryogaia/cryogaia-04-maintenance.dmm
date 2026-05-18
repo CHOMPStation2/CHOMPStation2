@@ -351,6 +351,67 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
+"aaZ" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/dormitory)
+"aba" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/starboard)
+"abb" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/chapel)
+"abc" = (
+/obj/machinery/flasher{
+	id = "AI";
+	pixel_y = -24
+	},
+/obj/machinery/hologram/holopad,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/bluegrid,
+/area/ai)
+"abd" = (
+/obj/machinery/alarm/yw{
+	dir = 1;
+	pixel_y = -22
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/bluegrid,
+/area/ai)
+"abe" = (
+/obj/structure/cable{
+	icon_state = "6-8"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-9"
+	},
+/turf/simulated/floor/bluegrid,
+/area/ai)
+"abf" = (
+/obj/structure/cable/cyan{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - AI Subgrid";
+	name_tag = "AI Subgrid"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "6-8"
+	},
+/turf/simulated/floor/bluegrid,
+/area/ai)
 "abq" = (
 /turf/simulated/wall,
 /area/maintenance/maintroom5)
@@ -2278,6 +2339,9 @@
 /obj/machinery/camera/xray/command{
 	c_tag = "AI - Core"
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai)
 "bhK" = (
@@ -4136,6 +4200,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/tcommsat/entrance)
 "cmR" = (
@@ -4423,10 +4488,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virologyaccess)
-"cuW" = (
-/obj/machinery/stationboiler_radiator,
-/turf/simulated/floor/bluegrid,
-/area/ai)
 "cvd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -4961,11 +5022,11 @@
 /turf/simulated/wall,
 /area/crew_quarters/sleep/cryo)
 "cLV" = (
-/obj/machinery/alarm/yw{
-	dir = 1;
-	pixel_y = -22
+/obj/machinery/camera/network/command{
+	c_tag = null;
+	dir = 4
 	},
-/obj/structure/cable/cyan{
+/obj/structure/cable{
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/bluegrid,
@@ -6908,12 +6969,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
-"dTC" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/turf/simulated/wall/r_wall,
-/area/ai)
 "dTG" = (
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -10807,16 +10862,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
-"ggB" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/camera/network/command{
-	c_tag = null;
-	dir = 4
-	},
-/turf/simulated/floor/bluegrid,
-/area/ai)
 "ggK" = (
 /obj/effect/decal/shadow/floor,
 /obj/structure/railing{
@@ -13315,19 +13360,6 @@
 /obj/structure/dancepole,
 /turf/simulated/floor/wood/sif,
 /area/maintenance/blueserg)
-"hwf" = (
-/obj/structure/cable/cyan{
-	icon_state = "0-8"
-	},
-/obj/machinery/power/sensor{
-	name = "Powernet Sensor - AI Subgrid";
-	name_tag = "AI Subgrid"
-	},
-/obj/structure/cable/cyan{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/bluegrid,
-/area/ai)
 "hwg" = (
 /obj/machinery/firealarm{
 	layer = 3.3;
@@ -13912,6 +13944,9 @@
 "hLP" = (
 /obj/random/junk,
 /obj/random/junk,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/maintenance/maintroom3)
 "hMe" = (
@@ -15540,6 +15575,9 @@
 /obj/machinery/porta_turret/ai_defense,
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/cyan{
+	icon_state = "6-10"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai)
 "izJ" = (
@@ -25099,9 +25137,6 @@
 	dir = 1
 	},
 /obj/machinery/porta_turret/ai_defense,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/ai)
 "nyN" = (
@@ -25256,10 +25291,10 @@
 	icon_state = "motion0"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "4-8"
+	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "2-8"
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai)
@@ -31109,12 +31144,6 @@
 /obj/machinery/light/flamp,
 /turf/simulated/floor/grass,
 /area/civilian/atrium/lower)
-"qPf" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/wall/r_wall,
-/area/ai)
 "qPh" = (
 /obj/machinery/alarm/yw{
 	dir = 4;
@@ -32745,14 +32774,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
-"rOv" = (
-/obj/machinery/flasher{
-	id = "AI";
-	pixel_y = -24
-	},
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/bluegrid,
-/area/ai)
 "rOX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -33017,7 +33038,9 @@
 	dir = 1
 	},
 /obj/item/camera,
-/obj/item/tape,
+/obj/item/rectape/random,
+/obj/item/rectape/random,
+/obj/item/rectape/random,
 /turf/simulated/floor/carpet,
 /area/library)
 "rWB" = (
@@ -42804,7 +42827,7 @@
 /area/vacant/vacant_site/locker)
 "xma" = (
 /obj/structure/cable{
-	icon_state = "2-8"
+	icon_state = "2-9"
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai)
@@ -55908,9 +55931,9 @@ mwy
 mwy
 mwy
 mwy
-wBG
-wBG
-wBG
+mwy
+mwy
+mwy
 gOL
 gOL
 gOL
@@ -56068,11 +56091,11 @@ asH
 asH
 asH
 mwy
-wBG
-wBG
-wBG
-wBG
-wBG
+mwy
+mwy
+mwy
+mwy
+mwy
 gOL
 gOL
 gOL
@@ -56230,11 +56253,11 @@ asH
 asH
 asH
 mwy
+mwy
 wBG
 wBG
-snZ
-ggB
-dTC
+wBG
+wBG
 gOL
 gOL
 gOL
@@ -56394,10 +56417,10 @@ asH
 mwy
 wBG
 wBG
-jIu
-rOv
-qPf
-gOL
+wBG
+wBG
+wBG
+wBG
 gOL
 gOL
 gOL
@@ -56556,10 +56579,10 @@ asH
 mwy
 wBG
 wBG
-hwf
+snZ
 cLV
-qPf
-gOL
+wBG
+wBG
 gOL
 gOL
 gOL
@@ -56718,9 +56741,9 @@ asH
 mwy
 wBG
 wBG
+jIu
+abc
 wBG
-rKA
-qPf
 wBG
 wBG
 wBG
@@ -56878,11 +56901,11 @@ asH
 asH
 asH
 mwy
-hYh
 wBG
 wBG
-rKA
-qPf
+abf
+abd
+wBG
 lOo
 wBG
 wBG
@@ -57040,10 +57063,10 @@ asH
 asH
 asH
 mwy
-hYh
 wBG
 wBG
-rKA
+wBG
+abe
 nyy
 oUf
 jOo
@@ -57534,7 +57557,7 @@ oxt
 xMV
 oxt
 oxt
-cuW
+ezi
 bsS
 sGE
 riM
@@ -59077,7 +59100,7 @@ heL
 dWn
 aPa
 wxY
-wxY
+aaZ
 wxY
 aPa
 aPa
@@ -61099,7 +61122,7 @@ mwy
 mwy
 mwy
 nHo
-eEU
+abb
 lfy
 vku
 fZp
@@ -63532,7 +63555,7 @@ mwy
 mwy
 nHo
 oRS
-eEU
+abb
 nkk
 nHo
 lfy
@@ -64045,7 +64068,7 @@ hYh
 hYh
 eNq
 jQd
-whU
+aba
 ued
 eNq
 eNq

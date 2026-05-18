@@ -1316,6 +1316,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner_oldtile/purple,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "axt" = (
@@ -6806,6 +6809,9 @@
 "cEl" = (
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/detectives_office)
@@ -27058,6 +27064,9 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/security/forensics)
 "kRO" = (
@@ -35855,10 +35864,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/bridge_hallway)
-"oiH" = (
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor,
-/area/storage/tech)
 "oiS" = (
 /obj/machinery/computer/security{
 	dir = 4
@@ -38262,10 +38267,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/engine_smes)
 "phB" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal,
 /obj/machinery/camera/network/security{
@@ -54722,6 +54723,9 @@
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 4
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "wbX" = (
@@ -58566,6 +58570,9 @@
 "xBb" = (
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/security/detectives_office)
@@ -73411,7 +73418,7 @@ egg
 fZC
 cRO
 sPt
-oiH
+lxW
 pUW
 pUW
 ePq
