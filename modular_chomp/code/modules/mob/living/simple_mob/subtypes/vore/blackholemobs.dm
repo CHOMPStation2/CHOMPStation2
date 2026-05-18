@@ -1951,11 +1951,11 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	deflect_chance = 25
 	has_repair_droid = FALSE
 	armor = list(
-				"melee"		= 50,
-				"bullet"	= 50,
-				"laser"		= 50,
-				"energy"	= 30,
-				"bomb"		= 30,
+				"melee"		= 10,
+				"bullet"	= 10,
+				"laser"		= 10,
+				"energy"	= 10,
+				"bomb"		= 90,
 				"bio"		= 100,
 				"rad"		= 100
 				)
@@ -1963,7 +1963,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	special_attack_min_range = 3
 	special_attack_max_range = 25
 	special_attack_cooldown = 5 SECONDS
-	projectiletype = /obj/item/projectile/arc/explosive_rocket/rocket/bh1 // We're now a bullet hell game.
+	projectiletype = /obj/item/projectile/energy/homing_bolt/microrocket // We're now a bullet hell game.
 	projectilesound = 'sound/weapons/rpg.ogg'
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/blackhole
@@ -2208,12 +2208,20 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	check_armour = "bullet"
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
 	fire_sound = 'sound/weapons/rocketartillery1.ogg'
-	speed = 0
+	speed = 0.5
 
 /obj/item/projectile/arc/explosive_rocket/rocket/bh1/on_impact(turf/T)
 	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
-	explosion(T, 0, 1, 3, adminlog = FALSE)
+	explosion(T, 0, 0, 3, adminlog = FALSE)
 
+/obj/item/projectile/energy/homing_bolt/microrocket
+	name = "homing bolt"
+	icon_state = "atrocket"
+	damage = 15
+	damage_type = BRUTE
+	check_armour = "bullet"
+	fire_sound = 'sound/weapons/rpg.ogg'
+	speed = 0.5
 
 /obj/item/projectile/arc/explosive_rocket/rocket/bh2
 	name = "artillery rocket"
@@ -2223,11 +2231,11 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	check_armour = "bullet"
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
 	fire_sound = 'sound/weapons/rocketartillery1.ogg'
-	speed = 0
+	speed = 0.5
 
 /obj/item/projectile/arc/explosive_rocket/rocket/bh2/on_impact(turf/T)
 	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
-	explosion(T, 0, 3, 6, adminlog = FALSE)
+	explosion(T, 0, 2, 3, adminlog = FALSE)
 
 
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
@@ -2506,6 +2514,15 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
 	hitsound = 'sound/weapons/sear.ogg'
 	hud_state = "laser_overcharge"
+
+/obj/item/projectile/energy/plasma/vepr/blackhole/strong
+	name = "plasma bolt"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	icon_state = "energy_darkpulse"
+	fire_sound = 'sound/weapons/serdy/plasma2.ogg'
+	damage = 40
+	armor_penetration = 20
+	speed = 0.5
 
 
 /obj/item/projectile/ion/bh1
