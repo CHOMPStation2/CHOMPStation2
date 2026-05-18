@@ -73,6 +73,9 @@
 /obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian_lower)
+"aam" = (
+/turf/simulated/mineral/floor/cave,
+/area/mine/explored/lower_rock)
 "aan" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -61465,12 +61468,12 @@ mwy
 mwy
 mwy
 mwy
-kOT
-kOT
-kOT
+aam
+aam
+aam
 mwy
 mwy
-kOT
+aam
 mwy
 mwy
 mwy
@@ -61629,10 +61632,10 @@ mwy
 ubE
 ubE
 ubE
-kOT
-kOT
-kOT
-kOT
+aam
+aam
+aam
+aam
 htV
 htV
 htV
@@ -61791,10 +61794,10 @@ mHL
 mHL
 ubE
 ubE
-kOT
+aam
 ubE
 ubE
-kOT
+aam
 htV
 htV
 htV
@@ -61956,7 +61959,7 @@ mHL
 mHL
 mHL
 ubE
-kOT
+aam
 htV
 htV
 uMA
@@ -62118,7 +62121,7 @@ mHL
 mqU
 kEB
 ubE
-kOT
+aam
 htV
 htV
 mDl
@@ -62280,7 +62283,7 @@ mHL
 mqU
 jVR
 mHL
-kOT
+aam
 htV
 htV
 rZP
@@ -62442,7 +62445,7 @@ mHL
 nfx
 kEB
 mHL
-kOT
+aam
 htV
 htV
 gsZ
@@ -62604,7 +62607,7 @@ eOo
 nfx
 nfx
 xxt
-kOT
+aam
 htV
 htV
 uMA
