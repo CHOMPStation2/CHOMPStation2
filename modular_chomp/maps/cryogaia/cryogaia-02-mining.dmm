@@ -4775,7 +4775,7 @@
 	dir = 1;
 	target_pressure = 200
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/rnd/outpost/mixing)
 "lt" = (
 /turf/simulated/floor/wood,
@@ -6742,7 +6742,7 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/mine/explored)
 "ql" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/rnd/outpost/mixing)
 "qn" = (
 /obj/structure/cable{
@@ -7177,7 +7177,7 @@
 /area/rnd/xenobiology/secure)
 "rh" = (
 /obj/structure/lattice,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/rnd/outpost/mixing)
 "rj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -10715,7 +10715,7 @@
 /obj/machinery/atmospherics/pipe/simple/insulated{
 	dir = 6
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/rnd/outpost/mixing)
 "AA" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
@@ -12149,7 +12149,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/rnd/outpost/mixing)
 "Eb" = (
 /obj/machinery/door/firedoor/glass,
@@ -13133,7 +13133,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 9
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/rnd/outpost/mixing)
 "Gr" = (
 /obj/structure/grille,
@@ -13832,7 +13832,7 @@
 /obj/machinery/atmospherics/pipe/simple/insulated{
 	dir = 9
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/rnd/outpost/mixing)
 "Id" = (
 /obj/structure/grille,
@@ -15019,7 +15019,7 @@
 /obj/machinery/atmospherics/pipe/simple/insulated{
 	dir = 6
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/rnd/outpost/mixing)
 "KV" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
@@ -17765,7 +17765,7 @@
 /area/outpost/research/atmosia)
 "RJ" = (
 /obj/machinery/atmospherics/pipe/vent/high_volume,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/rnd/outpost/mixing)
 "RK" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -18614,9 +18614,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
-"TK" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/mine/unexplored)
 "TL" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -32602,7 +32599,7 @@ Zl
 Zl
 qo
 vT
-TK
+rJ
 mL
 Mx
 fN
@@ -32764,7 +32761,7 @@ VO
 VO
 Bp
 vT
-TK
+rJ
 mL
 Mx
 Wj
