@@ -211,18 +211,6 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
 	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
 
-/*
-/datum/weather/borealis2/snow/process_effects()
-	..()
-	for(var/turf/simulated/floor/outdoors/snow/S in SSplanets.new_outdoor_turfs) //This didn't make any sense before SSplanets, either
-		if(S.z in holder.our_planet.expected_z_levels)
-			for(var/dir_checked in cardinal)
-				var/turf/simulated/floor/T = get_step(S, dir_checked)
-				if(istype(T))
-					if(istype(T, /turf/simulated/floor/outdoors) && prob(33))
-						T.chill()
-*/
-
 /datum/weather/borealis2/blizzard
 	name = "blizzard"
 	icon_state = "snowfall_heavy"
@@ -247,22 +235,10 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
 	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
 
-/*
-/datum/weather/borealis2/blizzard/process_effects()
-	..()
-	for(var/turf/simulated/floor/outdoors/snow/S in SSplanets.new_outdoor_turfs) //This didn't make any sense before SSplanets, either
-		if(S.z in holder.our_planet.expected_z_levels)
-			for(var/dir_checked in cardinal)
-				var/turf/simulated/floor/T = get_step(S, dir_checked)
-				if(istype(T))
-					if(istype(T, /turf/simulated/floor/outdoors) && prob(50))
-						T.chill()
-*/
-
 /datum/weather/borealis2/blizzard/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
-		if(!T.outdoors || istype(L, /mob/living/simple_mob))
+		if(!T.is_outdoors() || istype(L, /mob/living/simple_mob))
 			return // They're indoors, so no need to burn them with ash. And let's not pelter the simple_mobs either.
 
 		L.inflict_heat_damage(rand(1, 1))
@@ -291,7 +267,7 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 /datum/weather/borealis2/rain/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
-		if(!T.outdoors)
+		if(!T.is_outdoors())
 			return // They're indoors, so no need to rain on them.
 
 		// If they have an open umbrella, it'll guard from rain
@@ -343,7 +319,7 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 /datum/weather/borealis2/storm/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
-		if(!T.outdoors)
+		if(!T.is_outdoors())
 			return // They're indoors, so no need to rain on them.
 
 		// Lazy wind code
@@ -421,7 +397,7 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 /datum/weather/borealis2/hail/planet_effect(mob/living/carbon/H)
 	if(H.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(H)
-		if(!T.outdoors)
+		if(!T.is_outdoors())
 			return // They're indoors, so no need to pelt them with ice.
 
 		// If they have an open umbrella, it'll guard from rain
@@ -511,7 +487,7 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 /datum/weather/borealis2/ash_storm/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
-		if(!T.outdoors)
+		if(!T.is_outdoors())
 			return // They're indoors, so no need to burn them with ash.
 
 		L.inflict_heat_damage(rand(1, 3))
