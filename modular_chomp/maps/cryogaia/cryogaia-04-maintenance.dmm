@@ -425,6 +425,9 @@
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
+"abl" = (
+/turf/simulated/mineral/floor/cave,
+/area/maintenance/medical_lower)
 "abq" = (
 /turf/simulated/wall,
 /area/maintenance/maintroom5)
@@ -11815,7 +11818,7 @@
 	dir = 1;
 	pixel_y = 32
 	},
-/turf/simulated/mineral/floor,
+/turf/simulated/mineral/floor/cave,
 /area/maintenance/medical_lower)
 "gHy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -23329,7 +23332,7 @@
 /area/chapel/main)
 "mAw" = (
 /mob/living/simple_mob/animal/passive/mouse/brown,
-/turf/simulated/mineral/floor,
+/turf/simulated/mineral/floor/cave,
 /area/maintenance/medical_lower)
 "mAy" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -40042,7 +40045,7 @@
 /area/maintenance/maintroom1)
 "vFK" = (
 /obj/item/pickaxe/two_pick,
-/turf/simulated/mineral/floor,
+/turf/simulated/mineral/floor/cave,
 /area/maintenance/medical_lower)
 "vFU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -53065,7 +53068,7 @@ mBq
 oUs
 hPz
 gkr
-jqX
+abl
 hPz
 hPz
 aLl
