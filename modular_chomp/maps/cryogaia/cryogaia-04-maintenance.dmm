@@ -73,22 +73,6 @@
 /obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian_lower)
-"aam" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/stationboiler_radiator{
-	dir = 8
-	},
-/turf/simulated/floor,
-/area/maintenance/atmos_control)
 "aan" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -434,6 +418,10 @@
 /obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/plating,
 /area/maintenance/dormitory)
+"abk" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor,
+/area/maintenance/atmos_control)
 "abq" = (
 /turf/simulated/wall,
 /area/maintenance/maintroom5)
@@ -51169,7 +51157,7 @@ ueP
 ewy
 eyv
 eyv
-rnt
+abk
 eyv
 ewy
 ewy
@@ -53599,7 +53587,7 @@ kzw
 kzw
 vAe
 eyv
-aam
+eQy
 eyv
 kzw
 kzw
