@@ -168,6 +168,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
+"aaw" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/evidence_storage)
 "aaL" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/medical,
@@ -35233,6 +35239,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/evidence_storage)
@@ -71291,7 +71300,7 @@ gKd
 dUi
 dbv
 moh
-mZl
+aaw
 mZl
 bBx
 aUu
