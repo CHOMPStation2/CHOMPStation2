@@ -1082,6 +1082,9 @@
 /obj/structure/cable/blue{
 	icon_state = "1-4"
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "cl" = (
@@ -11879,6 +11882,9 @@
 /obj/structure/cable/blue{
 	icon_state = "1-8"
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/south_hall)
 "Dn" = (
@@ -15197,6 +15203,9 @@
 "Lq" = (
 /obj/machinery/camera/network/substations{
 	dir = 8
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/mining)
