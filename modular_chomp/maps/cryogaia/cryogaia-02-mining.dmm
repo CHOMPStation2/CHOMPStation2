@@ -1,6 +1,9 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/machinery/light,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "ab" = (
@@ -704,6 +707,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/airlock)
 "bv" = (
@@ -751,6 +757,9 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel,
 /area/rnd/xenobiology/failsafe)
 "bA" = (
@@ -760,6 +769,9 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/mid)
@@ -784,6 +796,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/workshop)
@@ -883,6 +898,19 @@
 /obj/machinery/atmospherics/pipe/manifold/visible,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
+"bN" = (
+/obj/structure/cable/blue{
+	icon_state = "1-4"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/mining)
+"bO" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled,
+/area/maintenance/shelter2)
 "bP" = (
 /obj/structure/cable/blue{
 	icon_state = "1-2"
@@ -906,6 +934,12 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/rnd/outpost/hallway)
+"bR" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/west_hall)
 "bS" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -958,6 +992,12 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/vacant/vacant_site/east)
+"bY" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/outpost/research/atmosia)
 "bZ" = (
 /obj/structure/table/rack,
 /obj/item/storage/toolbox/emergency,
@@ -970,6 +1010,19 @@
 /obj/item/suit_cooling_unit,
 /turf/simulated/floor/plating,
 /area/rnd/outpost/hallway)
+"ca" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/visible/supply,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/cryogaia/outpost/elevator/scimining)
 "cb" = (
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/secure)
@@ -1004,12 +1057,36 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/mine/explored)
+"ch" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/outpost/research/anomaly_analysis)
+"ci" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
+"cj" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/shelter)
 "ck" = (
 /obj/structure/cable/blue{
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
+"cl" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/outpost/research/anomaly)
 "cm" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1076,6 +1153,12 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora/lab_atmos)
+"cu" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/rnd/hallway)
 "cv" = (
 /obj/structure/grille,
 /obj/structure/disposalpipe/segment{
@@ -1114,6 +1197,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/analysis)
+"cx" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/outpost/hallway)
 "cy" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -1230,6 +1322,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/outpost/launch)
+"cM" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/hallway)
 "cN" = (
 /obj/structure/table/glass,
 /obj/item/folder,
@@ -1255,6 +1353,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/north_hall)
+"cP" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/rnd/xenobiology/hallway)
 "cQ" = (
 /obj/machinery/floodlight,
 /obj/machinery/power/apc{
@@ -1263,8 +1367,20 @@
 	pixel_x = 28
 	},
 /obj/structure/cable/blue,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/north_hall)
+"cR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/xenoflora_storage)
 "cS" = (
 /turf/simulated/wall/r_wall,
 /area/outpost/mining_main/west_hall)
@@ -1303,6 +1419,15 @@
 /obj/machinery/computer/guestpass,
 /turf/simulated/wall,
 /area/outpost/mining_main/storage)
+"cZ" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/outpost/hallway)
 "da" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -1337,6 +1462,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/mining)
+"de" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/rnd/outpost/hallway)
 "df" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 9
@@ -1357,6 +1488,22 @@
 "dg" = (
 /turf/simulated/wall/r_wall,
 /area/rnd/outpost/hallway)
+"dh" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/xenoflora_storage)
+"di" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology)
+"dj" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/research)
 "dk" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/reinforced,
@@ -1402,6 +1549,24 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/hallway)
+"dp" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/test_area)
+"dq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/outpost/mining_north)
 "dr" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -1456,6 +1621,12 @@
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/outpost)
+"dv" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/test_area)
 "dw" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -1476,6 +1647,12 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/storage)
+"dy" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/rnd/outpost/launch)
 "dz" = (
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/mine/explored)
@@ -1540,6 +1717,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/workshop)
+"dH" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/vacant/vacant_site/east)
 "dI" = (
 /obj/machinery/status_display{
 	pixel_y = 30
@@ -1571,8 +1754,17 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
+"dL" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/rnd/outpost/launch)
 "dM" = (
 /obj/machinery/floodlight,
 /obj/machinery/newscaster{
@@ -1637,6 +1829,12 @@
 /obj/item/storage/firstaid/adv,
 /turf/simulated/floor/tiled,
 /area/gateway)
+"dT" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/hallway)
 "dU" = (
 /obj/machinery/door/blast/regular{
 	id = "xenobiovs";
@@ -1685,12 +1883,48 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/dark,
 /area/outpost/research/longtermstorage)
+"eb" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology/secure)
+"ec" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
+"ed" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
+"ee" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/secure)
 "ef" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/gateway)
+"eg" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology/secure)
 "eh" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/structure/inflatable,
@@ -2197,6 +2431,7 @@
 	dir = 4;
 	pixel_x = -25
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/outpost/research/eva)
 "ft" = (
@@ -2425,6 +2660,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/outpost/mining_main/airlock)
 "fT" = (
@@ -2464,6 +2702,9 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
@@ -2659,6 +2900,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/outpost/mining_main/north_hall)
@@ -3776,6 +4020,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "jj" = (
@@ -4811,6 +5058,9 @@
 /obj/structure/cable/blue{
 	icon_state = "1-8"
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/carpet,
 /area/outpost/mining_main/dorms2)
 "mc" = (
@@ -5038,6 +5288,9 @@
 	pixel_y = 22;
 	req_access = list(62)
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/gateway)
 "mG" = (
@@ -5114,6 +5367,9 @@
 "mN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/tempstorage)
@@ -5814,6 +6070,9 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/carpet,
 /area/outpost/mining_main/dorms1)
 "oG" = (
@@ -6228,10 +6487,16 @@
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/storage)
 "pI" = (
 /obj/machinery/light,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "pJ" = (
@@ -6365,6 +6630,9 @@
 /obj/item/geiger/wall{
 	dir = 8;
 	pixel_x = 30
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/hallway)
@@ -7576,6 +7844,9 @@
 	dir = 4;
 	pixel_x = -25
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/storage)
 "tl" = (
@@ -7857,6 +8128,9 @@
 	pixel_y = -22;
 	specialfunctions = 4
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/outpost/mining_main/west_hall)
 "ub" = (
@@ -7922,6 +8196,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/gateway)
 "un" = (
@@ -8481,6 +8756,9 @@
 /area/rnd/outpost/hallway)
 "vE" = (
 /obj/machinery/light,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/shelter3)
 "vF" = (
@@ -8699,6 +8977,7 @@
 /area/rnd/outpost/hallway)
 "wl" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/south_hall)
 "wm" = (
@@ -9343,6 +9622,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/outpost)
 "xV" = (
@@ -9484,6 +9764,9 @@
 /area/outpost/research/eva)
 "yn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "yo" = (
@@ -10145,6 +10428,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/mid)
 "zS" = (
@@ -10263,6 +10549,9 @@
 	},
 /obj/machinery/camera/network/mining{
 	c_tag = "Mining Outpost"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_north)
@@ -10662,6 +10951,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/mixing)
 "Bg" = (
@@ -10812,6 +11104,9 @@
 	},
 /obj/effect/floor_decal/corner/pink{
 	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/surgery)
@@ -11195,6 +11490,9 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/lockers)
 "Cp" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora/lab_atmos)
 "Cr" = (
@@ -11459,6 +11757,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/steel,
 /area/outpost/research/eva)
 "Da" = (
@@ -11489,6 +11788,7 @@
 	pixel_y = -32
 	},
 /obj/effect/floor_decal/corner/purple/full,
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/exp_prep)
 "Df" = (
@@ -11743,6 +12043,9 @@
 "DK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/hallway)
@@ -12555,9 +12858,15 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/outpost/research/anomaly)
 "FK" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/hallway)
 "FL" = (
@@ -12580,6 +12889,9 @@
 	pixel_x = -21
 	},
 /mob/living/carbon/human/monkey,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/mid)
 "FO" = (
@@ -12852,6 +13164,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/carpet,
 /area/outpost/mining_main/dorms)
 "Gy" = (
@@ -13077,6 +13392,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
@@ -13305,6 +13623,9 @@
 /obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/rnd/xenobiology/control)
@@ -14467,6 +14788,9 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/storage)
 "Kv" = (
@@ -15439,6 +15763,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lockers)
 "MI" = (
@@ -15608,6 +15933,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-8"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/hallway)
@@ -15866,6 +16194,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/heating)
 "NL" = (
@@ -15932,6 +16263,9 @@
 /obj/machinery/firealarm{
 	layer = 3.3;
 	pixel_y = 26
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/research/anomaly)
@@ -16232,6 +16566,9 @@
 /obj/effect/floor_decal/corner/pink,
 /obj/structure/cable/blue{
 	icon_state = "1-8"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/rnd/xenobiology/hallway)
@@ -16766,6 +17103,9 @@
 	pixel_x = 22;
 	pixel_y = 0;
 	req_access = list(62)
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/gateway)
@@ -17982,6 +18322,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/plating,
 /area/outpost/research/power)
 "Th" = (
@@ -18606,6 +18947,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/mid)
 "UC" = (
@@ -18624,6 +18968,9 @@
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 28
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/hallway)
@@ -18731,6 +19078,9 @@
 "UU" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/hallway)
@@ -19000,6 +19350,9 @@
 /obj/machinery/door/window/brigdoor/eastleft{
 	name = "Containment Pen";
 	req_access = list(55)
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
@@ -19603,6 +19956,7 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "Xe" = (
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/white,
 /area/outpost/mining_main/medbay)
 "Xf" = (
@@ -19741,6 +20095,9 @@
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
@@ -19885,6 +20242,9 @@
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/outpost/mining_main/break_room)
@@ -20341,6 +20701,9 @@
 /area/maintenance/shelter2)
 "YZ" = (
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
 	dir = 4
 	},
 /turf/simulated/floor/reinforced,
@@ -27488,9 +27851,9 @@ Nr
 Ki
 Ki
 Ki
-OO
+dv
 ES
-OO
+dp
 Ki
 wB
 Ki
@@ -32996,7 +33359,7 @@ Ys
 dr
 Uz
 Ix
-Uv
+dy
 Uv
 Uv
 Ix
@@ -33154,7 +33517,7 @@ Zl
 qo
 Ix
 kZ
-zO
+dL
 lG
 Ga
 Ix
@@ -34307,7 +34670,7 @@ yS
 wm
 qh
 qh
-qh
+cZ
 BD
 vD
 Ft
@@ -35117,11 +35480,11 @@ MT
 SA
 dg
 Cr
-Cr
+de
 Ng
 dg
 aY
-vD
+cx
 bF
 Vn
 Wq
@@ -35261,19 +35624,19 @@ KS
 SA
 MT
 As
-Wc
+di
 Wc
 dU
 Wc
-Wc
+di
 As
 MT
 Wc
-Wc
+di
 As
 MT
 Wc
-Wc
+di
 As
 MT
 SA
@@ -35310,7 +35673,7 @@ kG
 aW
 aW
 cS
-Ge
+bR
 Ge
 fy
 OP
@@ -35649,7 +36012,7 @@ IE
 jJ
 CF
 dC
-Ux
+bN
 CF
 KS
 aW
@@ -36265,7 +36628,7 @@ ix
 Wt
 aU
 KK
-TI
+ci
 TI
 lF
 LC
@@ -36714,7 +37077,7 @@ SA
 SA
 SA
 MT
-ta
+ec
 ta
 ta
 QH
@@ -36743,7 +37106,7 @@ GM
 lf
 yf
 XI
-lo
+cu
 FF
 Wt
 Wt
@@ -37063,9 +37426,9 @@ gK
 uj
 hS
 Mr
-zK
+cP
 Av
-dt
+cM
 XI
 lo
 Iy
@@ -37358,7 +37721,7 @@ ii
 Nb
 ii
 Nb
-Dn
+ed
 Nb
 Nb
 NF
@@ -37512,7 +37875,7 @@ KS
 KS
 SA
 Nb
-cb
+eg
 cb
 cb
 rn
@@ -37850,7 +38213,7 @@ ae
 sV
 Gj
 lm
-lm
+dT
 Lf
 gC
 Em
@@ -37877,11 +38240,11 @@ UP
 Et
 Rz
 XI
-lo
+cu
 jD
 yF
 Yk
-cq
+cj
 cq
 cq
 cq
@@ -38160,7 +38523,7 @@ KS
 KS
 SA
 Nb
-cb
+eg
 cb
 cb
 Ld
@@ -38216,7 +38579,7 @@ vo
 Iw
 Ek
 Fi
-Rq
+ca
 Rq
 Rq
 yb
@@ -38328,7 +38691,7 @@ cb
 tV
 sV
 aJ
-sV
+ee
 hd
 RL
 yn
@@ -38497,7 +38860,7 @@ VP
 an
 ad
 Id
-cb
+eb
 cb
 cb
 Nb
@@ -38507,7 +38870,7 @@ KS
 KS
 iS
 iS
-OL
+dj
 iS
 fh
 EW
@@ -38808,7 +39171,7 @@ KS
 KS
 SA
 Nb
-cb
+eg
 cb
 cb
 LA
@@ -39145,7 +39508,7 @@ aw
 aq
 WP
 Ax
-cb
+eb
 cb
 cb
 Nb
@@ -39461,7 +39824,7 @@ SA
 SA
 SA
 Nb
-cb
+eg
 cb
 SR
 LM
@@ -39960,7 +40323,7 @@ fr
 fr
 Su
 yJ
-Su
+dH
 Su
 NS
 yJ
@@ -40625,7 +40988,7 @@ nL
 vs
 nL
 on
-on
+dh
 nL
 nL
 iX
@@ -40951,7 +41314,7 @@ oN
 ms
 uC
 fq
-Kl
+cR
 GO
 lw
 Yx
@@ -42448,7 +42811,7 @@ kS
 cE
 Wv
 Wv
-Qr
+bO
 nm
 nm
 nm
@@ -43556,7 +43919,7 @@ SW
 je
 pS
 Ri
-BZ
+ch
 eL
 FM
 Hi
@@ -44014,7 +44377,7 @@ zt
 vJ
 hJ
 VX
-Wa
+dq
 Bj
 VX
 eX
@@ -44034,7 +44397,7 @@ Nc
 Xb
 VF
 VF
-oy
+cl
 lU
 Ny
 LR
@@ -44051,7 +44414,7 @@ cD
 Um
 Rd
 HG
-ow
+bY
 Cg
 Zl
 Zl

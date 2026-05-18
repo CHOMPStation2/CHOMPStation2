@@ -14,6 +14,40 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/chapel)
+"aad" = (
+/obj/machinery/portable_atmospherics/canister/empty/phoron,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/engineering/atmos)
+"aae" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/maintenance/aft)
+"aaf" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/aft)
+"aag" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/tcommsat/entrance)
+"aah" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/aft)
 "aai" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -25,6 +59,78 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"aaj" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/wood,
+/area/maintenance/dorm)
+"aak" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/dormitory)
+"aal" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/plating,
+/area/maintenance/substation/civilian_lower)
+"aam" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/atmos_control)
+"aan" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/dormitory)
+"aao" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled,
+/area/hallway/lower/aft)
+"aap" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/vacant/vacant_site)
+"aaq" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/maintenance/security_lower)
+"aar" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 5
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/starboard)
 "aas" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/beige{
@@ -32,6 +138,186 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
+"aat" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/kitchen/fish_farm)
+"aau" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/starboard)
+"aav" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/medical_lower)
+"aaw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/starboard)
+"aax" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/fitness)
+"aay" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor3)
+"aaz" = (
+/obj/structure/catwalk,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/fish)
+"aaA" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/plating,
+/area/maintenance/starboard)
+"aaB" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/lower)
+"aaC" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/wood,
+/area/vacant/vacant_site/private)
+"aaD" = (
+/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/lower)
+"aaE" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/maintenance/maintroom1)
+"aaF" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor,
+/area/crew_quarters/recreation_area)
+"aaG" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
+"aaH" = (
+/obj/structure/catwalk,
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/plating,
+/area/hallway/lower/fore)
+"aaI" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/chapel_morgue)
+"aaJ" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/medical/medbaylower)
+"aaK" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/maintenance/starboard)
+"aaL" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/pyschwarde)
+"aaM" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+"aaN" = (
+/obj/machinery/light,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+"aaO" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/plating,
+/area/maintenance/medical_lower)
+"aaP" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/medical/morgue)
+"aaQ" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/lowfloor3)
+"aaR" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor,
+/area/maintenance/lowfloor1)
+"aaS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
+"aaT" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/wood/sif,
+/area/maintenance/blueserg/misc)
+"aaU" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/wood/sif,
+/area/maintenance/blueserg/dorms)
+"aaV" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/wood/sif,
+/area/maintenance/blueserg/misc)
 "aaW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -47,6 +333,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/chapel/chapel_morgue)
+"aaX" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/wood/sif,
+/area/maintenance/blueserg)
 "abq" = (
 /turf/simulated/wall,
 /area/maintenance/maintroom5)
@@ -388,6 +680,9 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -25
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/recreation_area_restroom)
@@ -796,6 +1091,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_7)
@@ -2137,6 +2435,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "bmR" = (
@@ -2517,6 +2818,9 @@
 "bAa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "bAP" = (
@@ -3048,6 +3352,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_8)
@@ -3895,6 +4202,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_2)
 "cqv" = (
@@ -4243,6 +4553,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_9)
 "cAk" = (
@@ -4305,6 +4618,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/dark,
 /area/ai)
 "cCw" = (
@@ -4984,6 +5298,9 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/lowfloor1)
 "cVa" = (
@@ -5306,6 +5623,7 @@
 	name = "sauna space heater";
 	set_temperature = 367.15
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
 "deJ" = (
@@ -5712,6 +6030,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_1)
 "dsw" = (
@@ -6081,6 +6402,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_5)
@@ -7216,6 +7540,7 @@
 	dir = 8;
 	pixel_x = 30
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/recreation_area_restroom)
 "ekA" = (
@@ -7286,6 +7611,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/tcommsat/powercontrol)
@@ -7407,6 +7735,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_4)
@@ -8053,6 +8384,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/engi_wash)
@@ -9086,6 +9420,9 @@
 	pixel_y = -24;
 	specialfunctions = 4
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "foM" = (
@@ -9112,6 +9449,9 @@
 /area/civilian/atrium/lower)
 "foT" = (
 /obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/stationboiler_radiator{
 	dir = 8
 	},
 /turf/simulated/floor,
@@ -11425,6 +11765,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "gIh" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/atmos_control)
 "gIn" = (
@@ -12132,6 +12475,9 @@
 "hag" = (
 /obj/machinery/shower{
 	pixel_y = 25
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -18556,6 +18902,9 @@
 	dir = 8;
 	pixel_x = -32
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/pyschwarde)
 "kii" = (
@@ -18788,6 +19137,9 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "knx" = (
@@ -19254,6 +19606,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_3)
 "kzl" = (
@@ -19388,6 +19743,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "kCl" = (
@@ -19707,6 +20065,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_10)
@@ -20730,6 +21091,9 @@
 	},
 /obj/effect/floor_decal/corner/lime{
 	dir = 5
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
@@ -22740,9 +23104,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/chapel)
-"mwd" = (
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/crew_quarters/sleep/cryo)
 "mwi" = (
 /obj/machinery/door/airlock/maintenance/rnd,
 /obj/structure/cable{
@@ -23279,6 +23640,9 @@
 /obj/machinery/space_heater{
 	name = "sauna space heater";
 	set_temperature = 367.15
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
@@ -23968,6 +24332,9 @@
 /area/maintenance/maintroom8)
 "naU" = (
 /obj/item/seeds/tomatoseed,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/grass,
 /area/hydroponics)
 "nbd" = (
@@ -25083,6 +25450,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/carpet,
 /area/library)
 "nKr" = (
@@ -25333,6 +25703,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/emergency/eva)
 "nUX" = (
@@ -26180,6 +26553,9 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -27915,6 +28291,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/emergency/eva)
 "pmi" = (
@@ -28292,6 +28671,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/perma/bathroom)
@@ -29197,6 +29579,9 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai)
 "pVL" = (
@@ -29845,6 +30230,9 @@
 /obj/machinery/camera/network/medbay{
 	c_tag = "Medbay Secondary Auxiliary Storage";
 	dir = 1
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage3)
@@ -32031,6 +32419,9 @@
 	name = "light switch ";
 	pixel_y = 36
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/library_conference_room)
 "rFw" = (
@@ -32564,6 +32955,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -33400,6 +33794,9 @@
 /area/ai)
 "swf" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/crew_quarters/recreation_area)
 "swD" = (
@@ -33768,6 +34165,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-2"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/maintroom7)
@@ -34325,6 +34725,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
 "sVq" = (
@@ -37505,6 +37906,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "uCb" = (
@@ -38757,6 +39161,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_6)
 "vhB" = (
@@ -39216,6 +39623,9 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_9)
 "vwz" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/maintenance/maintroom1)
 "vwP" = (
@@ -40095,6 +40505,9 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -42709,6 +43122,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "xrQ" = (
@@ -42910,6 +43326,9 @@
 	dir = 6
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
 "xwq" = (
@@ -45487,7 +45906,7 @@ qFS
 qFS
 qWd
 tXh
-ddK
+aay
 fVG
 huZ
 kxV
@@ -46243,7 +46662,7 @@ cOk
 pns
 iMh
 kCl
-twX
+aaT
 dzN
 dzN
 qBi
@@ -46301,7 +46720,7 @@ dEN
 dEN
 aIS
 hmi
-ixT
+aav
 eCX
 kqc
 aQF
@@ -46403,7 +46822,7 @@ hYh
 qBi
 cOk
 pns
-iMh
+aaV
 qBi
 twX
 twX
@@ -46739,7 +47158,7 @@ kjo
 pAh
 rko
 inm
-ngG
+aaQ
 xOq
 bkU
 ddK
@@ -46765,7 +47184,7 @@ mND
 nGK
 nGK
 gte
-nGK
+aaG
 nGK
 rkA
 dEN
@@ -47220,7 +47639,7 @@ kPh
 kPh
 wcO
 qBi
-twX
+iNT
 iMh
 axC
 bkU
@@ -47916,7 +48335,7 @@ ewD
 dEN
 cgC
 qzn
-ixT
+aav
 wKJ
 ixT
 ixT
@@ -49478,7 +49897,7 @@ pbe
 pbe
 hYh
 sFq
-iHZ
+aaX
 iHZ
 sFq
 wgE
@@ -50158,7 +50577,7 @@ haL
 ifW
 pZd
 wXa
-udq
+aaJ
 fYZ
 gBn
 gBn
@@ -50455,7 +50874,7 @@ mwy
 prH
 wUI
 wUI
-wUI
+aaU
 wUI
 prH
 mwy
@@ -50640,7 +51059,7 @@ ttU
 ttU
 kZX
 wXa
-aTH
+aaP
 vMv
 qfN
 wXa
@@ -52783,7 +53202,7 @@ lVE
 hZI
 wpT
 wyK
-azQ
+aat
 rie
 bfy
 aSt
@@ -53130,7 +53549,7 @@ kzw
 kzw
 vAe
 eyv
-eQy
+aam
 eyv
 kzw
 kzw
@@ -53234,7 +53653,7 @@ aCC
 sGk
 rJT
 yfk
-wCN
+aaL
 bek
 nVq
 gEP
@@ -53437,7 +53856,7 @@ ibO
 cHk
 ebv
 iPD
-nDi
+aaq
 iHv
 jTC
 jZj
@@ -54363,7 +54782,7 @@ lHO
 lHO
 ttU
 eGn
-ixT
+aaO
 ixT
 aLl
 qbn
@@ -54393,7 +54812,7 @@ smp
 cLR
 wkC
 wkC
-wkC
+aaz
 xjr
 bjf
 upP
@@ -54738,7 +55157,7 @@ mIl
 mIl
 mIl
 mIl
-mIl
+aap
 qzE
 pHN
 pqI
@@ -54941,7 +55360,7 @@ mwy
 mwy
 cZU
 qQS
-qQS
+aad
 cZU
 mwy
 mwy
@@ -54998,7 +55417,7 @@ gRe
 hGp
 ukZ
 qEB
-gRe
+aaS
 gRe
 cPi
 axs
@@ -55037,7 +55456,7 @@ pOl
 pOl
 pOl
 tEo
-mwd
+bzg
 cJP
 qaJ
 bVK
@@ -55177,7 +55596,7 @@ pdF
 pdF
 pdF
 aLl
-ixT
+aaO
 ttU
 jSA
 siA
@@ -55323,7 +55742,7 @@ gOL
 kBN
 djk
 dYs
-dYs
+aaR
 gdh
 dYs
 pdF
@@ -55354,7 +55773,7 @@ rFV
 rSq
 kgO
 tiT
-klB
+aaE
 rFV
 fKQ
 fKQ
@@ -55751,7 +56170,7 @@ jtl
 mgo
 qJa
 jhO
-aqo
+aae
 pZL
 mgo
 mwy
@@ -56656,10 +57075,10 @@ eDV
 jOg
 eDV
 eDV
-myu
+aaD
 eDV
 izh
-eDV
+aaB
 ooq
 eDV
 eDV
@@ -57036,7 +57455,7 @@ vBg
 ugl
 fCK
 lxA
-lxA
+aag
 ieE
 vjW
 gcV
@@ -57452,7 +57871,7 @@ kLI
 gYr
 jKl
 jKl
-jKl
+aaH
 jKl
 jKl
 hVZ
@@ -57496,7 +57915,7 @@ mrX
 mrX
 dwK
 mrX
-mrX
+aao
 bcF
 mrX
 cGf
@@ -58094,7 +58513,7 @@ cWo
 nPG
 sMe
 qML
-nwk
+aaM
 vku
 rPu
 nvu
@@ -58158,7 +58577,7 @@ kas
 kas
 aPa
 kSK
-wxY
+aak
 aPa
 rsK
 aPa
@@ -58312,12 +58731,12 @@ ckQ
 mrX
 kVK
 mrX
-mrX
+aao
 mrX
 mrX
 gcx
 jxq
-wAF
+aal
 aPa
 chS
 aPa
@@ -58758,7 +59177,7 @@ lBM
 mKw
 irg
 cpt
-mcc
+rsx
 kdW
 bLT
 bLT
@@ -59066,7 +59485,7 @@ cWo
 nPG
 jjN
 liw
-bwu
+aaN
 vku
 rPu
 lrZ
@@ -59448,7 +59867,7 @@ tDJ
 idC
 idC
 idC
-idC
+aan
 xBE
 pmO
 aPa
@@ -59726,7 +60145,7 @@ xyQ
 aPD
 xyQ
 iLV
-iLV
+aaF
 aVq
 gxb
 tiJ
@@ -60267,7 +60686,7 @@ ubQ
 rgE
 xTV
 fNV
-fNV
+aaj
 eJn
 jqI
 jqI
@@ -60366,7 +60785,7 @@ jZH
 cBi
 rIz
 fjn
-arn
+aaI
 ufX
 mwy
 mwy
@@ -60919,7 +61338,7 @@ mWo
 mWo
 mWo
 mWo
-udc
+aah
 udc
 udc
 lQw
@@ -61041,7 +61460,7 @@ buW
 bjX
 buW
 lMT
-drE
+aax
 vso
 vso
 qnZ
@@ -61377,7 +61796,7 @@ aZa
 jeS
 jeS
 wcN
-jeS
+fwK
 veC
 hKf
 hKf
@@ -61521,7 +61940,7 @@ buW
 wmt
 wxf
 dQL
-wmt
+aaA
 wmt
 wxf
 eNq
@@ -61855,7 +62274,7 @@ vvX
 whU
 dQL
 wmt
-wmt
+aau
 wmt
 uPy
 aHO
@@ -62004,7 +62423,7 @@ hCC
 oFc
 xVT
 wTn
-lqh
+aaC
 ccK
 rvu
 wYZ
@@ -62992,7 +63411,7 @@ eNq
 hgy
 gXK
 tKL
-twW
+aar
 jVb
 tQZ
 hDZ
@@ -63149,7 +63568,7 @@ mwy
 eNq
 dQL
 whU
-kHJ
+aaw
 eNq
 eNq
 spG
@@ -64329,7 +64748,7 @@ xao
 xao
 xlE
 vSL
-udc
+aaf
 lOA
 mwy
 mwy
@@ -64900,7 +65319,7 @@ mwy
 eNq
 bYq
 whU
-whU
+aaK
 liE
 eNq
 fSn
