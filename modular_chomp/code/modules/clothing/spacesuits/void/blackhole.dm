@@ -33,3 +33,4 @@
 	siemens_coefficient = 0.6
 	breach_threshold = 16 //Extra Thicc
 	resilience = 0.05 //Military Armor
+

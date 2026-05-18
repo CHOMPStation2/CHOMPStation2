@@ -1969,6 +1969,11 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/blackhole
 	var/obj/effect/overlay/energy_ball/energy_ball = null
 
+/obj/structure/loot_pile/mecha/gygax/dark/adv/blackhole/doggy
+	icon = 'modular_chomp/icons/blackhole/blackhole128x92.dmi'
+	icon_state = "rocketdoggy-wreck"
+
+
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/Destroy()
 	if(energy_ball)
 		energy_ball.stop_orbit()
@@ -2053,28 +2058,32 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 #undef ELECTRIC_ZAP_POWER
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/proc/launch_rockets(atom/target)
-	set waitfor = FALSE
-
 	// Telegraph our next move.
 	Beam(target, icon_state = "sat_beam", time = 3.5 SECONDS, maxdistance = INFINITY)
 	visible_message(span_warning("\The [src] deploys a missile rack!"))
 	playsound(src, 'sound/effects/metalscrape1.ogg', 15, 1)
-	sleep(0.5 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(launch_rocket_fireloop), target, 3), 0.5 SECONDS, TIMER_DELETE_ME)
 
-	for(var/i = 1 to 3)
-		if(target) // Might get deleted in the meantime.
-			var/turf/T = get_turf(target)
-			if(T)
-				visible_message(span_warning("\The [src] fires a rocket into the air!"))
-				playsound(src, 'sound/weapons/rocketartillery1.ogg', 100, 5)
-				face_atom(T)
-				var/obj/item/projectile/arc/explosive_rocket/rocket/bh2/rocket = new(loc)
-				rocket.old_style_target(T, src)
-				rocket.fire()
-				sleep(1 SECOND)
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/proc/launch_rocket_fireloop(atom/target, remaining)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
 
-	visible_message(span_warning("\The [src] retracts the missile rack."))
-	playsound(src, 'sound/effects/metalscrape3.ogg', 15, 1)
+	// Might get deleted in the meantime.
+	var/turf/T = get_turf(target)
+	if(!target || !T || !remaining) // Finish shooting
+		visible_message(span_warning("\The [src] raises it's rocket battery!"))
+		playsound(src, 'sound/effects/metalscrape3.ogg', 15, 1)
+		return
+	// And I started blastin--
+	visible_message(span_warning("\The [src] fires a rocket into the air!"))
+	playsound(src, 'sound/weapons/rocketartillery1.ogg', 100, 5)
+	face_atom(T)
+	// pew pew pew
+	var/obj/item/projectile/arc/explosive_rocket/rocket/bh2/rocket = new(loc)
+	rocket.old_style_target(T, src)
+	rocket.fire()
+	// and do it again till we're out of remaining shots
+	addtimer(CALLBACK(src, PROC_REF(launch_rocket_fireloop), target, --remaining), 1 SECONDS, TIMER_DELETE_ME)
 
 // Arcing rocket projectile that produces a weak explosion when it lands.
 // Shouldn't punch holes in the floor, but will still hurt.
