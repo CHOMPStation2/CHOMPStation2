@@ -339,6 +339,18 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/maintenance/blueserg)
+"aaY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ai_upload)
 "abq" = (
 /turf/simulated/wall,
 /area/maintenance/maintroom5)
@@ -493,6 +505,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
 "aib" = (
@@ -38016,6 +38029,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload_foyer)
 "uGU" = (
@@ -62249,7 +62263,7 @@ rZP
 gpe
 pvl
 pvl
-pvl
+aaY
 uoM
 dmd
 hHN

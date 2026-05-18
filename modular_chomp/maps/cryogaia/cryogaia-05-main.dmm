@@ -141,6 +141,33 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/scanning)
+"aas" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/briefing_room)
+"aat" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/security)
+"aau" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/medbay)
+"aav" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/central)
 "aaL" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/medical,
@@ -5055,6 +5082,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/hop)
 "bYn" = (
@@ -5994,6 +6022,9 @@
 	dir = 4;
 	name = "Bar";
 	req_access = list(25)
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
@@ -14847,6 +14878,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 25
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "fUP" = (
@@ -15377,10 +15411,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/stationboiler_radiator{
-	dir = 1
-	},
-/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/bridge_hallway)
 "geq" = (
@@ -23105,6 +23135,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/stationboiler_radiator{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
@@ -45577,6 +45610,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "shk" = (
@@ -65708,7 +65744,7 @@ cJN
 qww
 aZy
 aZy
-aWW
+aau
 bqO
 xso
 aZy
@@ -67666,7 +67702,7 @@ kfa
 faF
 ntW
 puv
-rRx
+aas
 cGK
 gED
 cGK
@@ -67980,7 +68016,7 @@ cHh
 blK
 mrP
 kbE
-vYp
+aat
 bUK
 waB
 bnZ
@@ -70092,7 +70128,7 @@ gqK
 xEv
 xNN
 svV
-vYp
+aat
 jkL
 rHN
 aAM
@@ -73968,7 +74004,7 @@ rZJ
 wBj
 bSS
 fVu
-ddl
+aav
 rZJ
 mFC
 hoT
