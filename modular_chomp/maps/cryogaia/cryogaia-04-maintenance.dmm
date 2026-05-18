@@ -412,6 +412,11 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai)
+"abg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/plating,
+/area/maintenance/medical_lower)
 "abq" = (
 /turf/simulated/wall,
 /area/maintenance/maintroom5)
@@ -54188,7 +54193,7 @@ ixT
 mBq
 ixT
 mBq
-ixT
+aaO
 oHN
 ttU
 rGV
@@ -55159,7 +55164,7 @@ rLW
 gJR
 mBq
 mBq
-mBq
+abg
 mBq
 mBq
 bqP
@@ -56610,7 +56615,7 @@ rst
 mBB
 wpv
 tGi
-jKl
+aaH
 jKl
 hiL
 hpl
