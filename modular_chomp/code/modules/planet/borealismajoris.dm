@@ -11,6 +11,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	current_time = new /datum/time/borealis2()
 	//	expected_z_levels = list(1) // This is defined elsewhere.
 	planetary_wall_type = /turf/unsimulated/wall/planetary/borealis2
+	cryogenic_temp_shift = TRUE
 
 /datum/planet/borealis2/New()
 	..()
