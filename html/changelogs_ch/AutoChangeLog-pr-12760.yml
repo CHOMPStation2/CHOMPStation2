@@ -1,0 +1,6 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - balance: "AC Purity's sonic attack has been replaced with regeneration. Their health has been reduced by 40%"
+  - balance: "AC's melees are slightly faster"
+  - bugfix: "Alters the excavation lockers to get rid of the beacons"
