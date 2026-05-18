@@ -35658,9 +35658,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
 "tHb" = (
-/obj/machinery/stationboiler_radiator{
-	target_heat_temperature = 260
-	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen/lower)
 "tHc" = (
