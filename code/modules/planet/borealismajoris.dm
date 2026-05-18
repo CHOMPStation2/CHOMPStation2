@@ -263,7 +263,7 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
 		if(!T.outdoors || istype(L, /mob/living/simple_mob))
-			continue // They're indoors, so no need to burn them with ash. And let's not pelter the simple_mobs either.
+			return // They're indoors, so no need to burn them with ash. And let's not pelter the simple_mobs either.
 
 		L.inflict_heat_damage(rand(1, 1))
 
@@ -292,7 +292,7 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
 		if(!T.outdoors)
-			continue // They're indoors, so no need to rain on them.
+			return // They're indoors, so no need to rain on them.
 
 		// If they have an open umbrella, it'll guard from rain
 		if(istype(L.get_active_hand(), /obj/item/melee/umbrella))
@@ -300,13 +300,14 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 			if(U.open)
 				if(show_message)
 					to_chat(L, span_notice("Rain patters softly onto your umbrella"))
-				continue
-		else if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
+				return
+
+		if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
 			var/obj/item/melee/umbrella/U = L.get_inactive_hand()
 			if(U.open)
 				if(show_message)
 					to_chat(L, span_notice("Rain patters softly onto your umbrella"))
-				continue
+				return
 
 		L.water_act(1)
 		if(show_message)
@@ -343,7 +344,7 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
 		if(!T.outdoors)
-			continue // They're indoors, so no need to rain on them.
+			return // They're indoors, so no need to rain on them.
 
 		// Lazy wind code
 		if(prob(10))
@@ -368,14 +369,14 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 			if(U.open)
 				if(show_message)
 					to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
-				continue
-		else if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
+				return
+
+		if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
 			var/obj/item/melee/umbrella/U = L.get_inactive_hand()
 			if(U.open)
 				if(show_message)
 					to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
-				continue
-
+				return
 
 		L.water_act(2)
 		if(show_message)
@@ -421,7 +422,7 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	if(H.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(H)
 		if(!T.outdoors)
-			continue // They're indoors, so no need to pelt them with ice.
+			return // They're indoors, so no need to pelt them with ice.
 
 		// If they have an open umbrella, it'll guard from rain
 		// Message plays every time the umbrella gets stolen, just so they're especially aware of what's happening
@@ -430,19 +431,20 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 			if(U.open)
 				if(show_message)
 					to_chat(H, span_notice("Hail patters gently onto your umbrella."))
-				continue
-		else if(istype(H.get_inactive_hand(), /obj/item/melee/umbrella))
+				return
+
+		if(istype(H.get_inactive_hand(), /obj/item/melee/umbrella))
 			var/obj/item/melee/umbrella/U = H.get_inactive_hand()
 			if(U.open)
 				if(show_message)
 					to_chat(H, span_notice("Hail patters gently onto your umbrella."))
-				continue
+				return
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = H.run_armor_check(target_zone, "melee")
 
 		if(amount_blocked >= 100)
-			continue // No need to apply damage.
+			return // No need to apply damage.
 
 		H.apply_damage(rand(1, 3), BRUTE, target_zone, amount_blocked, used_weapon = "hail")
 		if(show_message)
@@ -510,7 +512,7 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
 		if(!T.outdoors)
-			continue // They're indoors, so no need to burn them with ash.
+			return // They're indoors, so no need to burn them with ash.
 
 		L.inflict_heat_damage(rand(1, 3))
 
