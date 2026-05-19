@@ -90,3 +90,26 @@
   - bugfix: Borg wires no longer become EMP'd.
   Will:
   - rscadd: Upports snowbulls from yawnwider
+2026-05-19:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: gps entries using a stable key
+  Cerami:
+  - bugfix: adjusts mob vore pref to only be for mobs as preds
+  - bugfix: Adds an emergency failsafe to the fulton if it doesn't see a valid tile
+      to transport to.
+  Diana:
+  - bugfix: Beakers can splash people again
+  FluffMedic:
+  - balance: AC Purity's sonic attack has been replaced with regeneration. Their health
+      has been reduced by 40%
+  - balance: AC's melees are slightly faster
+  - bugfix: Alters the excavation lockers to get rid of the beacons
+  Will:
+  - bugfix: shuttles and elevators are ignored by the cryoplanets subsystem
+  - rscadd: Upports yawnwider cryogenic planets
+  - rscadd: Upports yawnwider station boiler and radiators
+  - bugfix: Scrubbers no longer rarely divide by 0 when calculating scrubbing power
+      used on their first tick if the pipe network is in a certain state
+  - code_imp: gas mixture datum inits temp to TCMB instead of 0
+  - bugfix: wearing a mask no longer prevent stuttering, hyperzine, and wingding say
+      modifiers
