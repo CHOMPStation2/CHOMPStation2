@@ -5601,14 +5601,6 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/library_conference_room)
-"dcE" = (
-/obj/machinery/telecomms/relay/preset/telecomms,
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/tcommsat/chamber)
 "dcM" = (
 /obj/structure/closet,
 /obj/effect/floor_decal/corner_techfloor_grid/full{
@@ -10885,14 +10877,6 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/chapel)
-"ghk" = (
-/obj/machinery/telecomms/relay/preset/cryogaia/main,
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/tcommsat/chamber)
 "ght" = (
 /obj/machinery/stationboiler_radiator{
 	dir = 4
@@ -25278,7 +25262,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "nDG" = (
-/obj/machinery/telecomms/relay/preset/cryogaia/basement_2,
+/obj/machinery/telecomms/relay/preset/cryogaia/main,
 /turf/simulated/floor/bluegrid{
 	name = "Mainframe Base";
 	nitrogen = 100;
@@ -26820,15 +26804,6 @@
 /obj/random/cutout,
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
-"oyf" = (
-/obj/machinery/telecomms/relay/preset/cryogaia/basement_1,
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/tcommsat/chamber)
 "oyi" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'SERVER ROOM'.";
@@ -38835,14 +38810,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/cryogaia/outpost/tower/south)
-"uXP" = (
-/obj/machinery/telecomms/relay/preset/cryogaia/residential,
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/tcommsat/chamber)
 "uYj" = (
 /obj/structure/bookcase{
 	name = "bookcase (Religious)"
@@ -58638,7 +58605,7 @@ qXf
 jhw
 ugV
 jhw
-dcE
+jhw
 jhw
 jhw
 qFB
@@ -59121,11 +59088,11 @@ cbM
 baf
 ylk
 plH
-uXP
+jhw
 nDG
-oxg
+dSD
 pXA
-oyf
+oxg
 ofB
 bKO
 bXg
@@ -59610,7 +59577,7 @@ plH
 jhw
 jhw
 jhw
-ghk
+jhw
 jhw
 jhw
 aIY

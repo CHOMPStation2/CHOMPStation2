@@ -1,4 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/residential/powerroom)
+"ab" = (
+/turf/simulated/floor/reinforced,
+/area/residential/powerroom)
 "ac" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -13,12 +22,27 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/corridors)
+"ae" = (
+/obj/machinery/telecomms/relay/preset/cryogaia/residential,
+/turf/simulated/floor/reinforced,
+/area/residential/powerroom)
 "af" = (
 /obj/structure/window/basic{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/residential/room6)
+"ag" = (
+/obj/machinery/ntnet_relay,
+/turf/simulated/floor/reinforced,
+/area/residential/powerroom)
+"ah" = (
+/obj/machinery/exonet_node{
+	allow_external_PDAs = 0;
+	allow_external_newscasters = 0
+	},
+/turf/simulated/floor/reinforced,
+/area/residential/powerroom)
 "al" = (
 /obj/structure/table/marble,
 /obj/item/reagent_containers/food/condiment/enzyme,
@@ -2958,10 +2982,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 5
 	},
-/obj/machinery/exonet_node{
-	allow_external_PDAs = 0;
-	allow_external_newscasters = 0
-	},
 /turf/simulated/floor/plating,
 /area/residential/powerroom)
 "sk" = (
@@ -5090,11 +5110,6 @@
 /obj/structure/bed/chair/comfy/brown,
 /turf/simulated/floor/holofloor/wood,
 /area/residential/mansion)
-"Gr" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan,
-/obj/machinery/ntnet_relay,
-/turf/simulated/floor/plating,
-/area/residential/powerroom)
 "Gv" = (
 /obj/machinery/door/airlock,
 /obj/machinery/door/firedoor/glass,
@@ -22613,7 +22628,7 @@ aZ
 bS
 WZ
 ID
-Gr
+eI
 GZ
 RY
 WZ
@@ -23908,10 +23923,10 @@ aZ
 aZ
 aZ
 WZ
-WZ
-WZ
-WZ
-WZ
+aa
+aa
+aa
+aa
 WZ
 aZ
 YI
@@ -24069,12 +24084,12 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
+WZ
+ah
+ag
+ae
+ab
+WZ
 aZ
 YI
 LO
@@ -24231,12 +24246,12 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
 aZ
 YI
 LO
