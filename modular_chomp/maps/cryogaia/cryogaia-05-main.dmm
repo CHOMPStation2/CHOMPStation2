@@ -31712,9 +31712,6 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
-/obj/effect/floor_decal/corner/red{
-	dir = 9
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},

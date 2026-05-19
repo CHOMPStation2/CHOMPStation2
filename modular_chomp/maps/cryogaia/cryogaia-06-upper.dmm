@@ -27,6 +27,12 @@
 	message = "Entering the Upper Atrium, a air of sterile serenity pervades the hall, as it's high ceiling and ornate lighting therein invite introspection among the displays.";
 	name = "upper atrium message"
 	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/simulated/open,
 /area/civilian/atrium/upper)
 "af" = (
@@ -1756,6 +1762,19 @@
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
+"dQ" = (
+/obj/effect/step_trigger/message{
+	message = "Entering the Upper Atrium, a air of sterile serenity pervades the hall, as it's high ceiling and ornate lighting therein invite introspection among the displays.";
+	name = "upper atrium message"
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/civilian/atrium/upper)
 "dR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -26936,7 +26955,7 @@ sa
 sa
 TQ
 EC
-ae
+dQ
 sa
 dl
 rC
