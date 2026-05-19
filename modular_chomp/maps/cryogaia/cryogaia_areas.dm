@@ -51,12 +51,10 @@
 //Outdoors Area - Wilderness
 /area/borealis2/outdoors/exterior/traderpad
 	name = "\improper Cryogaia Commerce Pad"
-	icon = 'modular_chomp/icons/turf/areas_yw.dmi'
 	icon_state = "landingpad"
 
 /area/borealis2/outdoors/exterior/traderpad/interior
 	name = "\improper Cryogaia Commerce Pad"
-	icon = 'modular_chomp/icons/turf/areas_yw.dmi'
 	icon_state = "landingpad"
 	outdoors = OUTDOORS_NO
 
