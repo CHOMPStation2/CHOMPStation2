@@ -2,6 +2,12 @@
 
 
 // #### Relays ####
+// Telecomms doesn't know about connected z-levels, so we need relays even for the other surface levels.
+/obj/machinery/telecomms/relay/preset/cryogaia/mine
+	id = "Mining Relay"
+	listening_level = Z_LEVEL_CRYOGAIA_MINE
+	autolinkers = list("m_relay")
+
 /obj/machinery/telecomms/relay/preset/cryogaia/residential
 	id = "Residential Relay"
 	listening_level = Z_LEVEL_CRYOGAIA_RESIDENTIAL
@@ -9,7 +15,7 @@
 
 /obj/machinery/telecomms/relay/preset/cryogaia/main
 	id = "Main Complex Relay"
-	listening_level =Z_LEVEL_CRYOGAIA_MAIN
+	listening_level = Z_LEVEL_CRYOGAIA_MAIN
 	autolinkers = list("s_relay")
 
 
@@ -18,7 +24,7 @@
 	network = "tcommsat"
 	autolinkers = list("hub", "relay", "c_relay", "s_relay", "m_relay", "r_relay", "science", "medical",
 	"supply", "service", "common", "command", "engineering", "security", "unused", "hb_relay","Away Team", "unused" ,
-	"receiverA", "broadcasterA", "l_relay", "res_relay") //VOREStation Edit - Added "hb_relay"
+	"receiverA", "broadcasterA", "l_relay", "res_relay")
 
 
 /obj/machinery/telecomms/receiver/preset_right/cryogaia

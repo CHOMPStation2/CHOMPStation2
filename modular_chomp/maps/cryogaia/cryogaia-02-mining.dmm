@@ -835,6 +835,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/south_hall)
+"bH" = (
+/turf/simulated/wall/r_wall,
+/area/rnd/lockers)
 "bI" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4
@@ -1613,15 +1616,12 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/outpost)
 "dv" = (
@@ -2054,6 +2054,11 @@
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
+"er" = (
+/obj/machinery/telecomms/relay/preset/cryogaia/mine,
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/plating,
+/area/maintenance/substation/outpost)
 "es" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -2150,6 +2155,17 @@
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /turf/simulated/floor/tiled,
 /area/rnd/hallway)
+"eG" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/substation/outpost)
 "eH" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light{
@@ -19680,7 +19696,7 @@
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/refinery)
 "Wt" = (
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/maintenance/substation/outpost)
 "Wu" = (
 /obj/structure/grille,
@@ -36503,10 +36519,10 @@ yf
 qG
 WM
 EL
-UK
-UK
-UK
-UK
+bH
+bH
+bH
+bH
 UK
 KK
 Mz
@@ -37152,8 +37168,8 @@ XI
 cu
 FF
 Wt
-Wt
-Wt
+eG
+er
 Wt
 aU
 aU
