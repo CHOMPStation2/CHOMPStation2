@@ -1972,7 +1972,9 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 /obj/structure/loot_pile/mecha/gygax/dark/adv/blackhole/doggy
 	icon = 'modular_chomp/icons/blackhole/blackhole128x92.dmi'
 	icon_state = "rocketdoggy-wreck"
-
+	pixel_x = -48
+	old_x = -48
+	old_y = 0
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/Destroy()
 	if(energy_ball)
@@ -2525,6 +2527,8 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	hitsound = 'sound/weapons/sear.ogg'
 	hud_state = "laser_overcharge"
 
+/* //a bit TOO strong -- Serdy
+
 /obj/item/projectile/energy/plasma/vepr/blackhole/strong
 	name = "plasma bolt"
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
@@ -2533,7 +2537,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	damage = 40
 	armor_penetration = 20
 	speed = 0.5
-
+*/
 
 /obj/item/projectile/ion/bh1
 	name = "ion bolt"

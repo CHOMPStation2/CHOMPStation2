@@ -122,7 +122,7 @@
 	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
 	icon_state = "x16b"
 	fire_delay = 0.5
-	projectile_type = /obj/item/projectile/energy/plasma/vepr/blackhole/strong
+	projectile_type = /obj/item/projectile/energy/plasma/vepr/blackhole
 	force = 8
 	item_icons = list(
 		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',

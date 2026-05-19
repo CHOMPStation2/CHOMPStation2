@@ -5634,6 +5634,7 @@
 #include "modular_chomp\maps\common\common_things.dm"
 #include "modular_chomp\maps\common\common_turfs.dm"
 #include "modular_chomp\maps\common\common_wildlife_encounter.dm"
+#include "modular_chomp\maps\common_areas\event.dm"
 #include "modular_chomp\maps\common_areas\expoutpost.dm"
 #include "modular_chomp\maps\common_areas\offmap.dm"
 #include "modular_chomp\maps\common_areas\planetary.dm"
