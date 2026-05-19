@@ -67,6 +67,9 @@
 /obj/effect/decal/remains/mouse,
 /turf/simulated/floor/outdoors/dirt,
 /area/mine/unexplored/underdark)
+"ar" = (
+/turf/unsimulated/mineral,
+/area/mine/unexplored/underdark)
 "as" = (
 /obj/effect/map_effect/portal/master/side_b{
 	dir = 4;
@@ -484,9 +487,9 @@ TZ
 TZ
 TZ
 TZ
-TZ
-TZ
-TZ
+ho
+ho
+ho
 ho
 ho
 ho
@@ -502,7 +505,7 @@ Pk
 Pk
 Pk
 Pk
-TZ
+ho
 TZ
 TZ
 TZ
@@ -536,6 +539,168 @@ TZ
 Pk
 "}
 (3,1,1) = {"
+Pk
+TZ
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+ar
+ar
+ar
+ar
+ar
+an
+aq
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+wf
+TZ
+Pk
+"}
+(4,1,1) = {"
 Pk
 TZ
 wf
@@ -697,7 +862,7 @@ wf
 TZ
 Pk
 "}
-(4,1,1) = {"
+(5,1,1) = {"
 Pk
 TZ
 wf
@@ -859,7 +1024,7 @@ wf
 TZ
 Pk
 "}
-(5,1,1) = {"
+(6,1,1) = {"
 Pk
 TZ
 wf
@@ -1021,7 +1186,7 @@ wf
 TZ
 Pk
 "}
-(6,1,1) = {"
+(7,1,1) = {"
 Pk
 TZ
 wf
@@ -1183,7 +1348,7 @@ wf
 TZ
 Pk
 "}
-(7,1,1) = {"
+(8,1,1) = {"
 Pk
 TZ
 wf
@@ -1345,7 +1510,7 @@ wf
 TZ
 Pk
 "}
-(8,1,1) = {"
+(9,1,1) = {"
 Pk
 TZ
 wf
@@ -1507,7 +1672,7 @@ wf
 TZ
 Pk
 "}
-(9,1,1) = {"
+(10,1,1) = {"
 Pk
 TZ
 wf
@@ -1669,7 +1834,7 @@ wf
 TZ
 Pk
 "}
-(10,1,1) = {"
+(11,1,1) = {"
 Pk
 TZ
 wf
@@ -1831,7 +1996,7 @@ wf
 TZ
 Pk
 "}
-(11,1,1) = {"
+(12,1,1) = {"
 Pk
 TZ
 wf
@@ -1993,7 +2158,7 @@ wf
 TZ
 Pk
 "}
-(12,1,1) = {"
+(13,1,1) = {"
 Pk
 TZ
 wf
@@ -2155,7 +2320,7 @@ wf
 TZ
 Pk
 "}
-(13,1,1) = {"
+(14,1,1) = {"
 Pk
 TZ
 wf
@@ -2317,7 +2482,7 @@ wf
 TZ
 Pk
 "}
-(14,1,1) = {"
+(15,1,1) = {"
 Pk
 TZ
 wf
@@ -2479,7 +2644,7 @@ wf
 TZ
 Pk
 "}
-(15,1,1) = {"
+(16,1,1) = {"
 Pk
 TZ
 wf
@@ -2641,7 +2806,7 @@ wf
 TZ
 Pk
 "}
-(16,1,1) = {"
+(17,1,1) = {"
 Pk
 TZ
 wf
@@ -2803,168 +2968,6 @@ wf
 TZ
 Pk
 "}
-(17,1,1) = {"
-Pk
-TZ
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-VB
-VB
-VB
-VB
-VB
-VB
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-wf
-TZ
-Pk
-"}
 (18,1,1) = {"
 Pk
 TZ
@@ -3088,11 +3091,11 @@ wf
 wf
 VB
 VB
-Bk
 VB
 VB
 VB
 VB
+wf
 wf
 wf
 wf
@@ -3250,7 +3253,7 @@ wf
 wf
 VB
 VB
-VB
+Bk
 VB
 VB
 VB
