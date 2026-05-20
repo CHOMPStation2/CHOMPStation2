@@ -259,3 +259,5 @@
 #define REAGENT_ID_NEOLIQUIDFIRE "neoliquidfire"
 #define REAGENT_LIQUIDLIFE "Liquid Life"
 #define REAGENT_ID_LIQUIDLIFE "liquidlife"
+#define REAGENT_EVENT_AGENT "Living Plague"
+#define REAGENT_ID_EVENT_AGENT "living_plague"
