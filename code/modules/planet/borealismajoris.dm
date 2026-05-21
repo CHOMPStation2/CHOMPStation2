@@ -9,18 +9,8 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	amounts of both carbon dioxide and nitrogen. Originally being a lumber colony, recent findings show copious amounts of Phoron deep under the surface, \
 	the Phoron is very desirable by many corporations, including NanoTrasen."
 	current_time = new /datum/time/borealis2()
-<<<<<<< HEAD
-// YW - See the Defines for this, so that it can be edited there if needed.
-/*	expected_z_levels = list(
-						Z_LEVEL_CRYOGAIA_LOWER,
-						Z_LEVEL_CRYOGAIA_MAIN,
-						Z_LEVEL_CRYOGAIA_MINE,
-						)*/
-	planetary_wall_type = /turf/unsimulated/wall/planetary/borealis2
-=======
 	planetary_wall_type = /turf/unsimulated/wall/planetary/borealis2
 	cryogenic_temp_shift = TRUE
->>>>>>> 4ac3916406 (planet port (#19477))
 
 /datum/planet/borealis2/New()
 	..()
@@ -121,13 +111,9 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 		WEATHER_BLOOD_MOON	= new /datum/weather/borealis2/blood_moon(),
 		WEATHER_EMBERFALL	= new /datum/weather/borealis2/emberfall(),
 		WEATHER_ASH_STORM	= new /datum/weather/borealis2/ash_storm(),
-<<<<<<< HEAD
-		WEATHER_FALLOUT		= new /datum/weather/borealis2/fallout()
-=======
 		WEATHER_FALLOUT		= new /datum/weather/borealis2/fallout(),
 		WEATHER_FALLOUT_TEMP	= new /datum/weather/borealis2/fallout/temp(),
 		WEATHER_CONFETTI	= new /datum/weather/borealis2/confetti()
->>>>>>> 4ac3916406 (planet port (#19477))
 		)
 	roundstart_weather_chances = list(
 		WEATHER_CLEAR		= 30,
@@ -219,19 +205,6 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
 	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
 
-<<<<<<< HEAD
-/datum/weather/borealis2/snow/process_effects()
-	..()
-	for(var/turf/simulated/floor/outdoors/snow/S in SSplanets.new_outdoor_turfs) //This didn't make any sense before SSplanets, either
-		if(S.z in holder.our_planet.expected_z_levels)
-			for(var/dir_checked in cardinal)
-				var/turf/simulated/floor/T = get_step(S, dir_checked)
-				if(istype(T))
-					if(istype(T, /turf/simulated/floor/outdoors) && prob(33))
-						T.chill()
-
-=======
->>>>>>> 4ac3916406 (planet port (#19477))
 /datum/weather/borealis2/blizzard
 	name = "blizzard"
 	icon_state = "snowfall_heavy"
@@ -256,29 +229,11 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
 	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
 
-<<<<<<< HEAD
-/datum/weather/borealis2/blizzard/process_effects()
-	..()
-	for(var/turf/simulated/floor/outdoors/snow/S in SSplanets.new_outdoor_turfs) //This didn't make any sense before SSplanets, either
-		if(S.z in holder.our_planet.expected_z_levels)
-			for(var/dir_checked in cardinal)
-				var/turf/simulated/floor/T = get_step(S, dir_checked)
-				if(istype(T))
-					if(istype(T, /turf/simulated/floor/outdoors) && prob(50))
-						T.chill()
-
-/datum/weather/borealis2/blizzard/planet_effect(mob/living/L)
-	if(L.z in holder.our_planet.expected_z_levels)
-		var/turf/T = get_turf(L)
-		if(!T.outdoors || istype(L, /mob/living/simple_mob))
-			continue // They're indoors, so no need to burn them with ash. And let's not pelter the simple_mobs either.
-=======
 /datum/weather/borealis2/blizzard/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
 		if(!T.is_outdoors() || istype(L, /mob/living/simple_mob))
 			return // They're indoors, so no need to burn them with ash. And let's not pelter the simple_mobs either.
->>>>>>> 4ac3916406 (planet port (#19477))
 
 		L.inflict_heat_damage(rand(1, 1))
 
@@ -306,13 +261,8 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 /datum/weather/borealis2/rain/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
-<<<<<<< HEAD
-		if(!T.outdoors)
-			continue // They're indoors, so no need to rain on them.
-=======
 		if(!T.is_outdoors())
 			return // They're indoors, so no need to rain on them.
->>>>>>> 4ac3916406 (planet port (#19477))
 
 		// If they have an open umbrella, it'll guard from rain
 		if(istype(L.get_active_hand(), /obj/item/melee/umbrella))
@@ -320,23 +270,14 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 			if(U.open)
 				if(show_message)
 					to_chat(L, span_notice("Rain patters softly onto your umbrella"))
-<<<<<<< HEAD
-				continue
-		else if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
-=======
 				return
 
 		if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
->>>>>>> 4ac3916406 (planet port (#19477))
 			var/obj/item/melee/umbrella/U = L.get_inactive_hand()
 			if(U.open)
 				if(show_message)
 					to_chat(L, span_notice("Rain patters softly onto your umbrella"))
-<<<<<<< HEAD
-				continue
-=======
 				return
->>>>>>> 4ac3916406 (planet port (#19477))
 
 		L.water_act(1)
 		if(show_message)
@@ -370,48 +311,6 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
 
 /datum/weather/borealis2/storm/planet_effect(mob/living/L)
-<<<<<<< HEAD
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.outdoors)
-				continue // They're indoors, so no need to rain on them.
-
-			// Lazy wind code
-			if(prob(10))
-				if(istype(L.get_active_hand(), /obj/item/melee/umbrella))
-					var/obj/item/melee/umbrella/U = L.get_active_hand()
-					if(U.open)
-						to_chat(L, span_danger("You struggle to keep hold of your umbrella!"))
-						L.Stun(20)	// This is not nearly as long as it seems
-						playsound(L, 'sound/effects/rustle1.ogg', 100, 1)	// Closest sound I've got to "Umbrella in the wind"
-				else if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
-					var/obj/item/melee/umbrella/U = L.get_inactive_hand()
-					if(U.open)
-						to_chat(L, span_danger("A gust of wind yanks the umbrella from your hand!"))
-						playsound(L, 'sound/effects/rustle1.ogg', 100, 1)
-						L.drop_from_inventory(U)
-						U.toggle_umbrella()
-						U.throw_at(get_edge_target_turf(U, pick(alldirs)), 8, 1, L)
-
-			// If they have an open umbrella, it'll guard from rain
-			if(istype(L.get_active_hand(), /obj/item/melee/umbrella))
-				var/obj/item/melee/umbrella/U = L.get_active_hand()
-				if(U.open)
-					if(show_message)
-						to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
-					continue
-			else if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
-				var/obj/item/melee/umbrella/U = L.get_inactive_hand()
-				if(U.open)
-					if(show_message)
-						to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
-					continue
-
-
-			L.water_act(2)
-			if(show_message)
-				to_chat(L, effect_message)
-=======
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
 		if(!T.is_outdoors())
@@ -452,7 +351,6 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 		L.water_act(2)
 		if(show_message)
 			to_chat(L, effect_message)
->>>>>>> 4ac3916406 (planet port (#19477))
 
 /datum/weather/borealis2/storm/process_effects()
 	..()
@@ -493,13 +391,8 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 /datum/weather/borealis2/hail/planet_effect(mob/living/carbon/H)
 	if(H.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(H)
-<<<<<<< HEAD
-		if(!T.outdoors)
-			continue // They're indoors, so no need to pelt them with ice.
-=======
 		if(!T.is_outdoors())
 			return // They're indoors, so no need to pelt them with ice.
->>>>>>> 4ac3916406 (planet port (#19477))
 
 		// If they have an open umbrella, it'll guard from rain
 		// Message plays every time the umbrella gets stolen, just so they're especially aware of what's happening
@@ -508,33 +401,20 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 			if(U.open)
 				if(show_message)
 					to_chat(H, span_notice("Hail patters gently onto your umbrella."))
-<<<<<<< HEAD
-				continue
-		else if(istype(H.get_inactive_hand(), /obj/item/melee/umbrella))
-=======
 				return
 
 		if(istype(H.get_inactive_hand(), /obj/item/melee/umbrella))
->>>>>>> 4ac3916406 (planet port (#19477))
 			var/obj/item/melee/umbrella/U = H.get_inactive_hand()
 			if(U.open)
 				if(show_message)
 					to_chat(H, span_notice("Hail patters gently onto your umbrella."))
-<<<<<<< HEAD
-				continue
-=======
 				return
->>>>>>> 4ac3916406 (planet port (#19477))
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = H.run_armor_check(target_zone, "melee")
 
 		if(amount_blocked >= 100)
-<<<<<<< HEAD
-			continue // No need to apply damage.
-=======
 			return // No need to apply damage.
->>>>>>> 4ac3916406 (planet port (#19477))
 
 		H.apply_damage(rand(1, 3), BRUTE, target_zone, amount_blocked, used_weapon = "hail")
 		if(show_message)
@@ -601,13 +481,8 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 /datum/weather/borealis2/ash_storm/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
-<<<<<<< HEAD
-		if(!T.outdoors)
-			continue // They're indoors, so no need to burn them with ash.
-=======
 		if(!T.is_outdoors())
 			return // They're indoors, so no need to burn them with ash.
->>>>>>> 4ac3916406 (planet port (#19477))
 
 		L.inflict_heat_damage(rand(1, 3))
 
@@ -642,12 +517,6 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	if(L.z in holder.our_planet.expected_z_levels)
 		irradiate_nearby_turf(L)
 		var/turf/T = get_turf(L)
-<<<<<<< HEAD
-		if(!T.outdoors)
-			continue // They're indoors, so no need to irradiate them with fallout.
-
-		L.rad_act(rand(direct_rad_low, direct_rad_high))
-=======
 		if(!T.is_outdoors())
 			return // They're indoors, so no need to irradiate them with fallout.
 
@@ -660,7 +529,6 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 			strength = rand(direct_rad_low, direct_rad_high)
 		)
 
->>>>>>> 4ac3916406 (planet port (#19477))
 
 // This makes random tiles near people radioactive for awhile.
 // Tiles far away from people are left alone, for performance.
@@ -671,10 +539,6 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	var/turf/T = pick(turfs) // We get one try per tick.
 	if(!istype(T))
 		return
-<<<<<<< HEAD
-	if(T.outdoors)
-		SSradiation.radiate(T, rand(fallout_rad_low, fallout_rad_high))
-=======
 	if(T.is_outdoors())
 		radiation_pulse(
 			T,
@@ -711,4 +575,3 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 		"Suddenly, colorful confetti starts raining from the sky."
 	)
 	imminent_transition_message = "A rain is starting... A rain of confetti...?"
->>>>>>> 4ac3916406 (planet port (#19477))
