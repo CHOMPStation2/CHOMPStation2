@@ -65,19 +65,11 @@ SUBSYSTEM_DEF(supply)
 		return 1
 	if(istype(A,/obj/item/radio/beacon))
 		return 1
-<<<<<<< HEAD
-	if(istype(A,/obj/item/perfect_tele_beacon))	//VOREStation Addition: Translocator beacons
-		return 1										//VOREStation Addition: Translocator beacons
-	if(istype(A,/obj/machinery/power/quantumpad)) //	//VOREStation Add: Quantum pads
-		return 1					//VOREStation Add: Quantum pads
-	if(istype(A,/obj/structure/extraction_point )) // CHOMPStation Add: Fulton beacons
-=======
 	if(istype(A,/obj/item/perfect_tele_beacon))
 		return 1
 	if(istype(A,/obj/machinery/power/quantumpad))
 		return 1
 	if(istype(A,/obj/structure/extraction_point))
->>>>>>> 6ac39e264e (Adds Inflation (#19447))
 		return 1
 
 	for(var/atom/B in A.contents)

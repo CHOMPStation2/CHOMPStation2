@@ -24,10 +24,6 @@
 	icon_keyboard = "tech_key"
 	icon_screen = "supply"
 	light_color = "#b88b2e"
-<<<<<<< HEAD
-	//req_access = list(ACCESS_CARGO) //CHOMPRemove, removing hard access locks.
-=======
->>>>>>> 6ac39e264e (Adds Inflation (#19447))
 	circuit = /obj/item/circuitboard/supplycomp/control
 	authorization = SUP_SEND_SHUTTLE | SUP_ACCEPT_ORDERS
 
