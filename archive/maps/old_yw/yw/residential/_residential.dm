@@ -98,7 +98,7 @@ GLOBAL_LIST_EMPTY(latejoin_residential)
 	base_turf = /turf/simulated/floor/outdoors/snow/plating/cryogaia
 
 /area/residential
-	icon = 'icons/turf/areas_yw.dmi'
+	icon = 'icons/turf/areas.dmi'
 	flags = RAD_SHIELDED
 
 /area/residential/docking_lobby
