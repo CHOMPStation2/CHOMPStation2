@@ -9,12 +9,6 @@ GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 	amounts of both carbon dioxide and nitrogen. Originally being a lumber colony, recent findings show copious amounts of Phoron deep under the surface, \
 	the Phoron is very desirable by many corporations, including NanoTrasen."
 	current_time = new /datum/time/borealis2()
-// YW - See the Defines for this, so that it can be edited there if needed.
-/*	expected_z_levels = list(
-						Z_LEVEL_CRYOGAIA_LOWER,
-						Z_LEVEL_CRYOGAIA_MAIN,
-						Z_LEVEL_CRYOGAIA_MINE,
-						)*/
 	planetary_wall_type = /turf/unsimulated/wall/planetary/borealis2
 	cryogenic_temp_shift = TRUE
 
