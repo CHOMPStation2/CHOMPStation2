@@ -112,14 +112,11 @@
 /datum/decl/emote/audible/clap
 	key = "clap"
 	emote_message_3p = "claps."
-<<<<<<< HEAD
 	emote_sound = list('sound/misc/clap1.ogg', //ChompEDIT START
 						'sound/misc/clap2.ogg',
 						'sound/misc/clap3.ogg',
 						'sound/misc/clap4.ogg') //ChompEDIT END
-=======
 	able_mute = TRUE
->>>>>>> afc02440a9 (Mime care package (#19456))
 
 /datum/decl/emote/audible/chuckle
 	key = "chuckle"
