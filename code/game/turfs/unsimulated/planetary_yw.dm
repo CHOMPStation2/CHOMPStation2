@@ -3,7 +3,7 @@
 /turf/unsimulated/wall/planetary/borealis2
 	name = "Ice wall"
 	desc = "Frigid Ice that seems to be stronger then most manmade structures."
-	icon = 'icons/turf/snow_new.dmi'
+	icon = 'icons/turf/snow.dmi'
 	icon_state = "Icerock"
 	alpha = 0xFF
 	CRYOGAIA_SET_ATMOS
