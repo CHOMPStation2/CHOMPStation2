@@ -176,6 +176,7 @@
 		return ITEM_INTERACT_SUCCESS
 
 	user.visible_message(span_notice("\The [user] affectionately licks all over \the [target]'s face!"), span_notice("You affectionately lick all over \the [target]'s face!"))
+	water.use_charge(5) //CHOMPAdd
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
 		if(H.species.lightweight == 1)
@@ -257,7 +258,6 @@
 				qdel(target)
 			busy = 0 //CHOMPAdd prevents abuse
 			return
-<<<<<<< HEAD
 		//CHOMPAdd Start
 		user.visible_message(span_filter_notice("[user] begins to lick \the [target.name] clean..."), span_notice("You begin to lick \the [target.name] clean..."))
 		busy = 1
@@ -268,28 +268,6 @@
 			qdel(C)
 			target.wash(CLEAN_WASH)
 		busy = 0
-		//CHOMPADD End
-	else if(ishuman(target))
-		if(src.emagged)
-			var/mob/living/silicon/robot/R = user
-			var/mob/living/L = target
-			if(!R.use_direct_power(666, 100))
-				to_chat(user, span_warning("Warning, low power detected. Aborting action."))
-				return
-			L.Stun(1)
-			L.Weaken(1)
-			L.apply_effect(STUTTER, 1)
-			L.visible_message(span_danger("[user] has shocked [L] with its tongue!"), \
-								span_userdanger("[user] has shocked you with its tongue! You can feel the betrayal."))
-			playsound(src, 'sound/weapons/egloves.ogg', 50, 1, -1)
-		else
-			user.visible_message(span_notice("\The [user] affectionately licks all over \the [target]'s face!"), span_notice("You affectionately lick all over \the [target]'s face!"))
-			playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
-			water.use_charge(5) //CHOMPAdd
-			var/mob/living/carbon/human/H = target
-			if(H.species.lightweight == 1)
-				H.Weaken(3)
-	//CHOMPAdd Start
 	else
 		user.visible_message(span_filter_notice("[user] begins to lick \the [target.name] clean..."), span_notice("You begin to lick \the [target.name] clean..."))
 		busy = 1
@@ -304,8 +282,6 @@
 				T.dirt = 0
 	busy = 0
 	//CHOMPADD End
-=======
->>>>>>> 0c4b40aca9 (Fixes Borg Licking (#19467))
 	return
 
 /obj/item/pupscrubber
