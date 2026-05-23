@@ -158,3 +158,11 @@
       ignore RPD color) when deconstructed
   - bugfix: volume pumps no longer have broken map icons
   - bugfix: added missing volume pump on prefab
+2026-05-23:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixes a hard del caused by disposal bins not trying to unlink on destruction,
+      resulting in uncleared refs.
+  TheCaramelion:
+  - rscadd: Added Clown/Mime as actual jobs, instead of entertainer alternative titles.
+  Will:
+  - bugfix: Borg sleepers and various other borg items should function properly again
