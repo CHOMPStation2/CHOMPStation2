@@ -1925,7 +1925,8 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 ///rocket doggy///
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 
-
+var/shottype_index = 1
+var/list/lmgshot = list(/obj/item/projectile/energy/homing_bolt/microrocket,/obj/item/projectile/energy/homing_bolt/microrocket,/obj/item/projectile/energy/homing_bolt/microrocket,/obj/item/projectile/energy/homing_bolt/microrocket,/obj/item/projectile/arc/explosive_rocket/rocket/bh1,/obj/item/projectile/arc/explosive_rocket/rocket/bh1,/obj/item/projectile/arc/explosive_rocket/rocket/bh1,/obj/item/projectile/arc/explosive_rocket/rocket/bh1)
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound
 	name = "BhX. 08 mobile artillery platform"
@@ -1941,15 +1942,20 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	old_x = -48
 	old_y = 0
 	vis_height = 92
+	movement_cooldown = 10
 	icon = 'modular_chomp/icons/blackhole/blackhole128x92.dmi'
 	wreckage = /obj/structure/loot_pile/mecha/gygax/dark/adv
 	icon_scale_x = 1
 	icon_scale_y = 1
-	movement_shake_radius = 5
-	base_attack_cooldown = 2 DECISECONDS
+	movement_shake_radius = 15
+	base_attack_cooldown = 0.5 DECISECONDS
 	maxHealth = 750
 	deflect_chance = 25
 	has_repair_droid = FALSE
+	devourable = 0	//fuck off immediately
+	digestable = 0
+	allow_mind_transfer = FALSE //i know what you are
+	mob_size = MOB_LARGE //also no grab fu
 	armor = list(
 				"melee"		= 10,
 				"bullet"	= 10,
@@ -1960,11 +1966,23 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 				"rad"		= 100
 				)
 
-	special_attack_min_range = 3
-	special_attack_max_range = 25
+	special_attack_min_range = 0
+	special_attack_max_range = 30
 	special_attack_cooldown = 5 SECONDS
-	projectiletype = /obj/item/projectile/energy/homing_bolt/microrocket // We're now a bullet hell game.
-	projectilesound = 'sound/weapons/rpg.ogg'
+	projectiletype = /obj/item/projectile/energy/homing_bolt/microrocket
+	glow_range = 7
+	glow_intensity = 3
+	glow_color = "#ED9200"
+
+	needs_reload = 1
+	reload_max = 8
+	reload_time = 3 SECONDS
+	projectile_dispersion = 8
+	projectile_accuracy = -18
+	reload_sound = 'sound/weapons/serdy/rpg_reload.ogg'
+
+	var/flames
+	var/charge_warmup = 2 SECOND
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/blackhole
 	var/obj/effect/overlay/energy_ball/energy_ball = null
@@ -1976,6 +1994,12 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	old_x = -48
 	old_y = 0
 
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/shoot_target(atom/A)
+	projectiletype = lmgshot[shottype_index]
+	shottype_index++
+	if(shottype_index > lmgshot.len) shottype_index = 1
+	. = ..()
+
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/Destroy()
 	if(energy_ball)
 		energy_ball.stop_orbit()
@@ -1985,7 +2009,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/do_special_attack(atom/A)
 	. = TRUE // So we don't fire a bolt as well.
 	switch(a_intent)
-		if(I_DISARM) // Side gun
+		if(I_DISARM)
 			electric_defense(A)
 		if(I_HURT) // Rockets
 			launch_rockets(A)
@@ -1993,78 +2017,68 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 			launch_microsingularity(A)
 
 
+/obj/item/projectile/energy/homing_bolt/microrocket/launch_projectile(atom/target, target_zone, mob/user, params, angle_override, forced_spread = 2)
+	..()
+	if(target)
+		set_homing_target(target)
 
-#define ELECTRIC_ZAP_POWER 15000 //VOREStation Edit
+/obj/item/projectile/energy/homing_bolt/microrocket/fire(angle, atom/direct_target)
+	..()
+	set_pixel_speed(0.5)
 
-// Charges a tesla shot, while emitting a dangerous electric field. The exosuit is immune to electric damage while this is ongoing.
-// It also briefly blinds anyone looking directly at the mech without flash protection.
+
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/update_icon()
+	..()
+	build_icons()
+
+
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/proc/build_icons()
+	cut_overlays()
+	if(stat == DEAD)
+		plane = MOB_LAYER
+		return
+	else
+		plane = ABOVE_MOB_PLANE
+	var/image/I = image(icon)
+	if(flames)
+		I = image(icon, "rocketdoggy_flame")
+		I.appearance_flags |= PIXEL_SCALE
+		I.plane = PLANE_LIGHTING_ABOVE
+		add_overlay(I)
+
+
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/proc/electric_defense(atom/target)
-	set waitfor = FALSE
+	glow_toggle = 1
+	set_light(glow_range, glow_intensity, glow_color) //Setting it here so the light starts immediately
+	set_AI_busy(TRUE)
+	flames = 1
+	visible_message(span_warning("\The [src] ignites it's mouth flamethrower!"))
+	build_icons()
+	addtimer(CALLBACK(src, PROC_REF(firebreathend), target), 2 SECONDS, TIMER_DELETE_ME)
+	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
 
-	// Temporary immunity to shock to avoid killing themselves with their own attack.
-	var/old_shock_resist = shock_resist
-	shock_resist = 1
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/proc/firebreathend(atom/A)
+	// clear our cosmetics even if the target is deleted
+	glow_toggle = 0
+	flames = 0
+	build_icons()
+	set_light(0)
+	set_AI_busy(FALSE)
+	//make sure our target still exists and is on a turf
+	if(QDELETED(A) || !isturf(get_turf(A)))
+		return
+	var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
+	src.visible_message(span_danger("\The [src] spews fire at \the [A]!"))
+	playsound(src, "sound/weapons/serdy/heavyflamethrower.ogg", 50, 1)
+	P.launch_projectile(A, BP_TORSO, src)
 
-	// Make the energy ball. This is purely visual since the tesla ball is hyper-deadly.
-	energy_ball = new(loc)
-	energy_ball.adjust_scale(0.5)
-	energy_ball.orbit(src, 32, TRUE, 1 SECOND)
-
-	visible_message(span_warning("\The [src] creates \an [energy_ball] around itself!"))
-
-	playsound(src, 'sound/effects/lightning_chargeup.ogg', 100, 1, extrarange = 30)
-
-	// Shock nearby things that aren't ourselves.
-	for(var/i = 1 to 10)
-		energy_ball.adjust_scale(0.5 + (i/10))
-		energy_ball.set_light(i/2, i/2, "#0000FF")
-		for(var/thing in range(3, src))
-			// This is stupid because mechs are stupid and not mobs.
-			if(isliving(thing))
-				var/mob/living/L = thing
-
-				if(L == src)
-					continue
-				if(L.stat)
-					continue // Otherwise it can get pretty laggy if there's loads of corpses around.
-				L.inflict_shock_damage(i * 2)
-				if(L && L.has_AI()) // Some mobs delete themselves when dying.
-					L.ai_holder.react_to_attack(src)
-
-			else if(istype(thing, /obj/mecha))
-				var/obj/mecha/M = thing
-				M.take_damage(i * 2, "energy") // Mechs don't have a concept for siemens so energy armor check is the best alternative.
-
-		sleep(1 SECOND)
-
-	// Shoot a tesla bolt, and flashes people who are looking at the mecha without sufficent eye protection.
-	visible_message(span_warning("\The [energy_ball] explodes in a flash of light, sending a shock everywhere!"))
-	playsound(src, 'sound/effects/lightningbolt.ogg', 100, 1, extrarange = 30)
-	tesla_zap(src.loc, 5, ELECTRIC_ZAP_POWER, FALSE, current_jumps = 1)
-	for(var/mob/living/L in viewers(src))
-		if(L == src)
-			continue
-		var/dir_towards_us = get_dir(L, src)
-		if(L.dir && L.dir & dir_towards_us)
-			to_chat(L, span_danger("The flash of light blinds you briefly."))
-			L.flash_eyes(intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = TRUE)
-
-	// Get rid of our energy ball.
-	energy_ball.stop_orbit()
-	qdel(energy_ball)
-
-	sleep(1 SECOND)
-	// Resist resistance to old value.
-	shock_resist = old_shock_resist // Not using initial() in case the value gets modified by an admin or something.
-
-#undef ELECTRIC_ZAP_POWER
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/proc/launch_rockets(atom/target)
 	// Telegraph our next move.
 	Beam(target, icon_state = "sat_beam", time = 3.5 SECONDS, maxdistance = INFINITY)
-	visible_message(span_warning("\The [src] deploys a missile rack!"))
-	playsound(src, 'sound/effects/metalscrape1.ogg', 15, 1)
-	addtimer(CALLBACK(src, PROC_REF(launch_rocket_fireloop), target, 3), 0.5 SECONDS, TIMER_DELETE_ME)
+	visible_message(span_warning("\The [src] raises it's rocket battery!"))
+	playsound(src, 'sound/effects/metalscrape1.ogg', 150, 1, extrarange = 10)
+	addtimer(CALLBACK(src, PROC_REF(launch_rocket_fireloop), target, 5), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/proc/launch_rocket_fireloop(atom/target, remaining)
 	SHOULD_NOT_OVERRIDE(TRUE)
@@ -2073,29 +2087,22 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	// Might get deleted in the meantime.
 	var/turf/T = get_turf(target)
 	if(!target || !T || !remaining) // Finish shooting
-		visible_message(span_warning("\The [src] raises it's rocket battery!"))
-		playsound(src, 'sound/effects/metalscrape3.ogg', 15, 1)
+		visible_message(span_warning("\The [src] lowers it's rocket battery."))
+		playsound(src, 'sound/effects/metalscrape3.ogg', 100, 1, extrarange = 10)
 		return
 	// And I started blastin--
 	visible_message(span_warning("\The [src] fires a rocket into the air!"))
-	playsound(src, 'sound/weapons/rocketartillery1.ogg', 100, 5)
+	playsound(src, 'sound/weapons/rocketartillery1.ogg', 500, 5, extrarange = 50)
 	face_atom(T)
 	// pew pew pew
+
 	var/obj/item/projectile/arc/explosive_rocket/rocket/bh2/rocket = new(loc)
 	rocket.old_style_target(T, src)
 	rocket.fire()
+
 	// and do it again till we're out of remaining shots
-	addtimer(CALLBACK(src, PROC_REF(launch_rocket_fireloop), target, --remaining), 1 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(launch_rocket_fireloop), target, --remaining), 0.5 SECONDS, TIMER_DELETE_ME)
 
-// Arcing rocket projectile that produces a weak explosion when it lands.
-// Shouldn't punch holes in the floor, but will still hurt.
-/obj/item/projectile/arc/explosive_rocket
-	name = "rocket"
-	icon_state = "mortar"
-
-/obj/item/projectile/arc/explosive_rocket/on_impact(turf/T)
-	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
-	explosion(T, 0, 0, 2, adminlog = FALSE)
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/proc/launch_microsingularity(atom/target)
 	var/turf/T = get_turf(target)
@@ -2136,12 +2143,12 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	conserve_ammo = TRUE
 	vision_range = 30
 	closest_desired_distance = 5
-
-	electric_defense_radius = 3			// How big to assume electric defense's area is.
+	cooperative = FALSE
+	electric_defense_radius = 5			// How big to assume electric defense's area is.
 	microsingulo_radius = 3				// Same but for microsingulo pull.
 	rocket_explosive_radius = 4			// Explosion radius for the rockets.
 
-	electric_defense_threshold = 5		// How many non-targeted people are needed in close proximity before electric defense is viable.
+	electric_defense_threshold = 1		// How many non-targeted people are needed in close proximity before electric defense is viable.
 	microsingulo_threshold = 4			// Similar to above, but uses an area around the target.
 
 // Used to control the mob's positioning based on which special attack it has done.
@@ -2212,33 +2219,52 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 
 /obj/item/projectile/arc/explosive_rocket/rocket/bh1
-	name = "micro rocket"
+	name = "mini mortar shell"
 	icon_state = "grenade"
 	damage = 30
+	arc_height_multiplier = 0.2
 	damage_type = BRUTE
+	var/list/fragment_types = list(
+		/obj/item/projectile/bullet/pellet/fragment, /obj/item/projectile/bullet/pellet/fragment, \
+		/obj/item/projectile/bullet/pellet/fragment, /obj/item/projectile/bullet/pellet/fragment
+		)
+	var/fragment_amount = 8 // Same as a grenade.
+	var/spread_range = 7
 	check_armour = "bullet"
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
-	fire_sound = 'sound/weapons/rocketartillery1.ogg'
+	fire_sound = 'sound/weapons/rpg.ogg'
 	speed = 0.5
 
 /obj/item/projectile/arc/explosive_rocket/rocket/bh1/on_impact(turf/T)
 	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
-	explosion(T, 0, 0, 3, adminlog = FALSE)
+	explosion(T, 0, 0, 2, adminlog = FALSE)
+	fragmentate(T, fragment_amount, spread_range, fragment_types)
 
 /obj/item/projectile/energy/homing_bolt/microrocket
-	name = "homing bolt"
+	name = "displacer micro rocket"
 	icon_state = "atrocket"
 	damage = 15
-	range = 50
+	range = 100
 	damage_type = BRUTE
 	check_armour = "bullet"
-	fire_sound = 'sound/weapons/rpg.ogg'
-	speed = 0.5
+	fire_sound = 'sound/weapons/grenade_launcher.ogg'
+	speed = 1
+	hitsound_wall = 'sound/effects/contactor_off.ogg'
+
+/obj/item/projectile/energy/homing_bolt/microrocket/on_hit(atom/movable/target, blocked = 0)
+	if(istype(target))
+		var/throwdir = get_dir(firer,target)
+		target.throw_at(get_edge_target_turf(target, throwdir),1,1)
+		new /obj/effect/explosion(target)
+		explosion(target, 0, 0, 0, adminlog = FALSE)
+		return 1
 
 /obj/item/projectile/arc/explosive_rocket/rocket/bh2
 	name = "artillery rocket"
 	icon_state = "bigrocket"
 	damage = 30
+	range = 350
+	arc_height_multiplier = 0.2
 	damage_type = BRUTE
 	check_armour = "bullet"
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
