@@ -133,7 +133,7 @@
 
 /area/borealis2/outdoors/grounds/traderpad
 	name = "\improper Cryogaia Commerce Pad"
-	icon = 'icons/turf/areas_yw.dmi'
+	icon = 'icons/turf/areas.dmi'
 	icon_state = "landingpad"
 
 /area/borealis2/outdoors/grounds/entrance
@@ -597,6 +597,6 @@
 // SPECIAL AREAS
 /area/vrworld
 	name = "VR World"
-	icon = 'icons/turf/areas_yw.dmi'
+	icon = 'icons/turf/areas.dmi'
 	icon_state = "vr"
 	requires_power = 0

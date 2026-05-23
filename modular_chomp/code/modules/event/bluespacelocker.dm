@@ -31,7 +31,7 @@
 	kill()
 	return
 
-/datum/event/bluespace_locker/proc/pick_locker(var/list/areas, var/crates = FALSE, var/sealed = FALSE)
+/datum/event/bluespace_locker/proc/pick_locker(list/areas, crates = FALSE, sealed = FALSE)
 	var/area/picked_area = pick(areas)
 	var/list/obj/structure/closet/valid_lockers = list()
 

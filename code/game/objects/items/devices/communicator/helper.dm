@@ -218,7 +218,7 @@
 	return sensors
 
 // Information about the targeted powernet
-/obj/item/commcard/proc/get_powernet_target(var/target_sensor)
+/obj/item/commcard/proc/get_powernet_target(target_sensor)
 	if(!target_sensor)
 		return
 

@@ -106,7 +106,7 @@
 		return
 	return ..()
 
-/obj/machinery/turretid/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/turretid/emag_act(remaining_charges, mob/user)
 	if(!emagged)
 		to_chat(user, span_danger("You short out the turret controls' access analysis module."))
 		emagged = TRUE
@@ -225,6 +225,9 @@
 		set_light(1.5, 1,"#003300")
 
 /obj/machinery/turretid/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(enabled)
 		//if the turret is on, the EMP no matter how severe disables the turret for a while
 		//and scrambles its settings, with a slight chance of having an emag effect
@@ -242,5 +245,3 @@
 			if(!enabled)
 				enabled = TRUE
 				updateTurrets()
-
-	..()

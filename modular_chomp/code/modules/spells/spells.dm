@@ -57,7 +57,7 @@
 			return 1
 	return 0
 
-/obj/item/spell/unrestricted/pay_energy(var/amount)
+/obj/item/spell/unrestricted/pay_energy(amount)
 	if(owner)
 		return 1
 

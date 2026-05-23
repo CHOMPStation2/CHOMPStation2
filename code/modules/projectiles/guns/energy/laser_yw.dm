@@ -10,7 +10,6 @@
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
 	w_class = 2
 	projectile_type = /obj/item/projectile/energy/gauss
-	origin_tech = null
 	charge_cost = 250
 	self_recharge = 1
 	charge_meter = 1
@@ -28,7 +27,6 @@
 	slot_flags = SLOT_BELT|SLOT_BACK
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	projectile_type = /obj/item/projectile/energy/gaussrifle
-	origin_tech = null
 	charge_cost =400
 	self_recharge = 1
 	charge_meter = 1

@@ -111,16 +111,33 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_bonus
 
 	special_attack_min_range = 0
-	special_attack_max_range = 2
+	special_attack_max_range = 4
 	special_attack_cooldown = 10 SECONDS
 
 	color = "#FF7D51"
 	glow_range = 5
 	glow_intensity = 2
 	glow_toggle = TRUE
+	var/exploded = FALSE
+	var/explosion_delay_lower	= 3 SECOND	// Lower bound for explosion delay.
+	var/explosion_delay_upper	= 4 SECONDS	// Upper bound.
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/agate/proc/explode()
+	if(src && !exploded)
+		visible_message(span_danger("\The [src]'s body detonates!"))
+		exploded = TRUE
+		explosion(src.loc, 0, 3, 0, 0)
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/agate/death()
+	visible_message(span_critical("\The [src]'s body begins to rupture!"))
+	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
+	animate(src, color = "#000000", time = 0.1 SECONDS, loop = ceil(delay/2))
+	animate(color = "#FF0000", time = 0.1 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(explode)), delay, TIMER_DELETE_ME)
+	return ..()
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/agate/do_special_attack(atom/A)
-	explosion(src.loc, 2, 1, 1, 1)
+	adjustBruteLoss(30)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/quartz //irl quartz is apparently tough?
 	name = "quartz metal ant"
@@ -248,11 +265,14 @@
 		)
 	meat_amount = 3
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/bronze/death()
-	visible_message(span_warning("\The [src]'s abdomen splits as it rolls over, spiderlings crawling from the wound.") )
-	for(var/i = 1 to 8)
-		new /obj/effect/spider/spiderling/antling (src.loc)
-	..()
+	special_attack_min_range = 1
+	special_attack_max_range = 7
+	special_attack_cooldown = 10 SECONDS
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/bronze/do_special_attack(atom/A)
+	for(var/mob/living/L in orange(src, 7))
+		if(IIsAlly(L))
+			L.add_modifier(/datum/modifier/technomancer/haste, 3, src)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/graphite //nothing special here
 	name = "graphite ant"
@@ -337,8 +357,8 @@
 		/obj/item/stack/material/gold = 10
 		)
 	var/exploded = FALSE
-	var/explosion_delay_lower	= 5 SECOND	// Lower bound for explosion delay.
-	var/explosion_delay_upper	= 8 SECONDS	// Upper bound.
+	var/explosion_delay_lower	= 4 SECOND	// Lower bound for explosion delay.
+	var/explosion_delay_upper	= 5 SECONDS	// Upper bound.
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/gold/proc/explode()
 	if(src && !exploded)
@@ -446,7 +466,7 @@ ANT STRUCTURES
 	density = FALSE
 	var/health = 15 //1 thwack with sword, 2 with spear
 
-/obj/effect/ant_structure/attackby(var/obj/item/W, var/mob/user)
+/obj/effect/ant_structure/attackby(obj/item/W, mob/user)
 	user.setClickCooldown(user.get_attack_speed(W))
 
 	if(LAZYLEN(W.attack_verb))
@@ -467,7 +487,7 @@ ANT STRUCTURES
 	healthcheck()
 
 
-/obj/effect/ant_structure/bullet_act(var/obj/item/projectile/Proj)
+/obj/effect/ant_structure/bullet_act(obj/item/projectile/Proj)
 	..()
 	health -= Proj.get_structure_damage()
 	healthcheck()
@@ -579,3 +599,6 @@ ANT STRUCTURES
 	/mob/living/simple_mob/animal/tyr/mineral_ants/silver,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/gold)
 	faction = FACTION_TYR_ANT
+
+/obj/effect/spider/spiderling/antling/created
+	faction = FACTION_TYR

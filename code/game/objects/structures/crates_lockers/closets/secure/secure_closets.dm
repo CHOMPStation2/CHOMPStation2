@@ -20,6 +20,9 @@
 	return ..()
 
 /obj/structure/closet/secure_closet/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(!broken)
 		if(prob(50/severity))
 			locked = !locked
@@ -30,7 +33,6 @@
 			else
 				req_access = list()
 				req_access += pick(SSaccess.get_all_station_access())
-	..()
 
 /obj/structure/closet/secure_closet/proc/togglelock(mob/user as mob)
 	if(opened)
@@ -94,7 +96,7 @@
 	else
 		togglelock(user)
 
-/obj/structure/closet/secure_closet/emag_act(var/remaining_charges, var/mob/user, var/emag_source, var/visual_feedback = "", var/audible_feedback = "")
+/obj/structure/closet/secure_closet/emag_act(remaining_charges, mob/user, emag_source, visual_feedback = "", audible_feedback = "")
 	if(!broken)
 		broken = 1
 		locked = 0
@@ -162,7 +164,7 @@
 	var/self_del = 1
 	anchored = 0
 
-/obj/structure/closet/secure_closet/mind/Initialize(mapload, var/datum/mind/mind_target, var/del_self = 1)
+/obj/structure/closet/secure_closet/mind/Initialize(mapload, datum/mind/mind_target, del_self = 1)
 	. = ..()
 	self_del = del_self
 	if(mind_target)

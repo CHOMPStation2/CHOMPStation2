@@ -6,8 +6,6 @@
 	item_state = "cryogun"
 	wielded_item_state = "cryogun-wielded"
 	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
-
 
 	charge_cost = 80 //How much energy is needed to fire.
 
@@ -82,7 +80,7 @@
 	irradiate = 3
 	speed = 1 //a bit faster due to the source having a 3 second wind up
 
-/obj/item/projectile/energy/mechahack/on_hit(var/atom/target)
+/obj/item/projectile/energy/mechahack/on_hit(atom/target)
 	. = ..()
 	if(istype(target, /obj/mecha))
 		remote_eject(target)
@@ -101,7 +99,7 @@
 	speed = 2
 	var/power = 20				//How hard it will hit for with electrocute_act(), decreases with each bounce.
 
-/obj/item/projectile/energy/lightingspark/attack_mob(var/mob/living/target_mob, var/distance, var/miss_modifier=0)
+/obj/item/projectile/energy/lightingspark/attack_mob(mob/living/target_mob, distance, miss_modifier=0)
 	//First we shock the guy we just hit.
 	if(ishuman(target_mob))
 		var/mob/living/carbon/human/H = target_mob
@@ -146,33 +144,27 @@
 /obj/item/projectile/energy/astral_collective
 	name = "abnormal energy"
 	speed = 3
-	damage = 28 //roughly 25 with intended armour
-	damage_type = BURN //BRUTE, BURN, TOX, OXY, CLONE, HALLOSS, ELECTROCUTE, BIOACID, SEARING are the only things that should be in here
-	check_armour = "laser" //Defines what armor to use when it hits things.  Must be set to bullet, laser, energy,or bomb	//Cael - bio and rad are also valid
+	damage = 28
+	damage_type = BURN
+	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
+	icon_state = "laser"
+	check_armour = "laser"
 
-/obj/item/projectile/energy/astral_collective/anti_mecha
-	damage_type = BIOACID
-	icon_state = "declone"
-
-/obj/item/projectile/energy/astral_collective/armour_breaker
-	damage = 10
-	dephasing = TRUE
-	hits_phased = TRUE
-	icon_state = "fuel-deuterium"
-	penetrating = 10
-	armor_penetration = 100
-
-/obj/item/projectile/energy/astral_collective/searing
+/obj/item/projectile/energy/astral_collective/basic
 	damage_type = SEARING
-	icon_state = "bolter"
 
-/obj/item/projectile/energy/astral_collective/green
-	icon_state = "energy"
-	irradiate = 40
+/obj/item/projectile/energy/astral_collective/spear
+	icon_state = "spear"
+	damage = 20
+	armor_penetration = 30
 
-/obj/item/projectile/energy/astral_collective/particle
-	damage = 1
-	armor_penetration = 100
-	icon_state = "particle"
-	incendiary = 1
+/obj/item/projectile/energy/astral_collective/fire
+	icon_state = "fire"
+	damage = 10
+	incendiary = 2
 	flammability = 3
+
+/obj/item/projectile/energy/astral_collective/dagger
+	damage = 8
+	armor_penetration = 60
+	icon_state = "dagger"

@@ -23,7 +23,6 @@
 	name = T_BOARD("food replicator")
 	build_path = /obj/machinery/food_replicator
 	board_type = new /datum/frame/frame_types/machine
-	origin_tech = list(TECH_ENGINEERING = 2, TECH_BIO = 2)
 	req_components = list(
 		/obj/item/stock_parts/capacitor = 3,
 		/obj/item/stock_parts/matter_bin = 2,
@@ -146,7 +145,7 @@
 
 	return ..()
 
-/obj/machinery/food_replicator/proc/foodcheck(var/obj/item/reagent_containers/food)
+/obj/machinery/food_replicator/proc/foodcheck(obj/item/reagent_containers/food)
 	var/mob/living/mob = locate(/mob/living) in food
 	if(mob)
 		playsound(src, "sound/machines/buzz-two.ogg", 25, 0)

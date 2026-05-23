@@ -54,7 +54,6 @@
 	icon_state = "shotgun"
 	item_state = "shotgun"
 	wielded_item_state = "placeholder"
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
 
 	charge_cost = 160 //15 shots sort of
 	battery_lock = 1 //No changing
@@ -130,21 +129,6 @@
 	damage = 20
 	speed = 0.3
 	range = 2
-
-/obj/item/projectile/energy/neurotoxin/toxic/tyr_flora
-	damage = 20 //deals 10 damage with the armor I am balancing for
-	agony = 0
-	speed = 12
-	armor_penetration = 50
-	penetrating = 5
-
-/obj/item/projectile/energy/blob/tyrflora
-	damage = 20 //10 with intended armor
-	speed = 12
-	armor_penetration = 50
-	check_armour = "bio"
-	damage_type = BURN
-	my_chems = list(REAGENT_ID_NEUROTOXIC_PROTEIN)
 
 /obj/item/projectile/energy/agate_lighting
 	damage = 15

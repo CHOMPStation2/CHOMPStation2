@@ -15,9 +15,7 @@
 	item_state = "ppickaxe"
 	digspeed = 2
 	throwforce = 25.0
-	origin_tech = list(TECH_MATERIAL = 3)
 	desc = "This oddly lightweight pickaxe seems rather sturdy."
-
 
 /obj/item/kinetic_crusher
 	requires_wield = FALSE

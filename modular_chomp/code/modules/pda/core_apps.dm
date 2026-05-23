@@ -30,7 +30,7 @@
 		data["card"] = "[pda.id]"
 		data["assignment"] = pda.id.assignment
 		data["card_cooldown"] = getCooldown()
-		var/datum/job/job = GLOB.job_master.GetJob(pda.id.rank)
+		var/datum/job/job = SSjob.get_job(pda.id.rank)
 		if(job)
 			data["job_datum"] = list(
 				"title" = job.title,
@@ -61,9 +61,9 @@
 					makeOffDuty(ui.user)
 			return TRUE
 
-/datum/data/pda/app/timeclock/proc/getOpenOnDutyJobs(var/mob/user, var/department)
+/datum/data/pda/app/timeclock/proc/getOpenOnDutyJobs(mob/user, department)
 	var/list/available_jobs = list()
-	for(var/datum/job/job in GLOB.job_master.occupations)
+	for(var/datum/job/job in SSjob.occupations)
 		if(isOpenOnDutyJob(user, department, job))
 			available_jobs[job.title] = list(job.title)
 			if(job.alt_titles)
@@ -72,7 +72,7 @@
 						available_jobs[job.title] += alt_job
 	return available_jobs
 
-/datum/data/pda/app/timeclock/proc/isOpenOnDutyJob(var/mob/user, var/department, var/datum/job/job)
+/datum/data/pda/app/timeclock/proc/isOpenOnDutyJob(mob/user, department, datum/job/job)
 	return job \
 		   && job.is_position_available() \
 		   && !job.whitelist_only \
@@ -83,9 +83,9 @@
 		   && !job.disallow_jobhop \
 		   && job.timeoff_factor > 0
 
-/datum/data/pda/app/timeclock/proc/makeOnDuty(mob/user, var/newrank, var/newassignment)
-	var/datum/job/oldjob = GLOB.job_master.GetJob(pda.id.rank)
-	var/datum/job/newjob = GLOB.job_master.GetJob(newrank)
+/datum/data/pda/app/timeclock/proc/makeOnDuty(mob/user, newrank, newassignment)
+	var/datum/job/oldjob = SSjob.get_job(pda.id.rank)
+	var/datum/job/newjob = SSjob.get_job(newrank)
 	if(!oldjob || !isOpenOnDutyJob(user, oldjob.pto_type, newjob))
 		return
 	if(newassignment != newjob.title && !(newassignment in newjob.alt_titles))
@@ -112,7 +112,7 @@
 	return
 
 /datum/data/pda/app/timeclock/proc/makeOffDuty(mob/user)
-	var/datum/job/foundjob = GLOB.job_master.GetJob(pda.id.rank)
+	var/datum/job/foundjob = SSjob.get_job(pda.id.rank)
 	if(!foundjob)
 		return
 	//If we're not in an area that allows clockout and not in a belly, shouldn't be able to clock out.
@@ -121,7 +121,7 @@
 		return
 	var/new_dept = foundjob.pto_type || PTO_CIVILIAN
 	var/datum/job/ptojob = null
-	for(var/datum/job/job in GLOB.job_master.occupations)
+	for(var/datum/job/job in SSjob.occupations)
 		if(job.pto_type == new_dept && job.timeoff_factor < 0)
 			ptojob = job
 			break

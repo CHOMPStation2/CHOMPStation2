@@ -6,7 +6,7 @@
 	stage = 1
 	chance_maxm = 10
 
-/datum/disease2/effect/cat/activate(var/mob/living/carbon/mob,var/multiplier)
+/datum/disease2/effect/cat/activate(mob/living/carbon/mob,multiplier)
 	mob.say("[pick("Meow.","*meow","*mrow","*mgeow")]")
 
 /datum/disease2/effect/choreomania
@@ -61,7 +61,7 @@
 	stage = 2
 	chance_maxm = 5
 
-/datum/disease2/effect/jellylegs/activate(var/mob/living/carbon/mob,var/multiplier)
+/datum/disease2/effect/jellylegs/activate(mob/living/carbon/mob,multiplier)
 	to_chat(mob, span_notice("Your body seems to lose balance!"))
 	mob.slip("yourself.")
 
@@ -70,7 +70,7 @@
 	stage = 2
 	chance_maxm = 7
 
-/datum/disease2/effect/morgellon/activate(var/mob/living/carbon/mob,var/multiplier)
+/datum/disease2/effect/morgellon/activate(mob/living/carbon/mob,multiplier)
 	if(prob(65))
 		var/obj/item/organ/external/O = pick(mob.organs)
 		to_chat(mob, span_warning("Your [O.name] [pick(" itches slightly...", " stings!")]"))

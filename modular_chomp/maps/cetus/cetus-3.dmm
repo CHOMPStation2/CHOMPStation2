@@ -589,6 +589,16 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
+"abr" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threecp)
 "abs" = (
 /obj/machinery/conveyor{
 	id = "maintdelivery";
@@ -8411,7 +8421,8 @@
 	pixel_x = -7
 	},
 /obj/machinery/cash_register/civilian{
-	dir = 8
+	dir = 8;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -8941,6 +8952,10 @@
 /area/bridge/sleep/Captain_Quarters)
 "fiI" = (
 /obj/structure/table/marble,
+/obj/machinery/bunsen_burner{
+	pixel_y = 24;
+	pixel_x = 5
+	},
 /obj/machinery/chemical_dispenser/bar_coffee/full{
 	dir = 4
 	},
@@ -17172,7 +17187,8 @@
 "kds" = (
 /obj/structure/table/marble,
 /obj/machinery/cash_register/civilian{
-	dir = 4
+	dir = 4;
+	req_access = null
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -17308,7 +17324,8 @@
 "khh" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cash_register/civilian{
-	dir = 8
+	dir = 8;
+	req_access = null
 	},
 /turf/simulated/floor/lino,
 /area/maintenance/cetus/arcade)
@@ -19212,6 +19229,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/spline/plain/three_quarters,
+/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/bridge)
 "liF" = (
@@ -21336,7 +21354,10 @@
 /area/maintenance/cetus/shallow/derelict/dock)
 "mmb" = (
 /obj/structure/table/hardwoodtable,
-/obj/machinery/cash_register/civilian,
+/obj/machinery/cash_register/civilian{
+	req_one_access = list(25,28,37);
+	req_access = null
+	},
 /obj/machinery/door/blast/shutters{
 	dir = 2;
 	id = "coffeeshop";
@@ -33491,13 +33512,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
-"ttz" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/threecp)
 "ttH" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
@@ -38589,6 +38603,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/bridge)
 "wqw" = (
@@ -41467,9 +41482,6 @@
 "ybW" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/machinery/cash_register/civilian{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -71359,7 +71371,7 @@ upy
 aal
 mjH
 yiP
-qff
+abr
 etf
 ooY
 ooY
@@ -71614,7 +71626,7 @@ nBA
 bMz
 bMz
 lkd
-ttz
+bMz
 bJf
 ilJ
 alA

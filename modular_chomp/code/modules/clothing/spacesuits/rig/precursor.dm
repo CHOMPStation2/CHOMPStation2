@@ -45,31 +45,31 @@
 	desc = "A pair of grabby boots"
 	var/block_chance = 15
 
-/obj/item/rig/ch/precursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/rig/ch/precursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(prob(block_chance))
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		return TRUE
 	return FALSE
 
-/obj/item/clothing/suit/space/rig/ch/precursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/suit/space/rig/ch/precursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(prob(block_chance))
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		return TRUE
 	return FALSE
 
-/obj/item/clothing/head/helmet/space/rig/ch/precursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/head/helmet/space/rig/ch/precursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(prob(block_chance))
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		return TRUE
 	return FALSE
 
-/obj/item/clothing/gloves/gauntlets/rig/ch/precursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/gloves/gauntlets/rig/ch/precursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(prob(block_chance))
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		return TRUE
 	return FALSE
 
-/obj/item/clothing/shoes/magboots/rig/ch/precursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/shoes/magboots/rig/ch/precursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(prob(block_chance))
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		return TRUE

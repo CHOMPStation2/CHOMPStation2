@@ -4,13 +4,13 @@
 	icon_state = "brown"
 	permeability_coefficient = 0.05
 	item_flags = NOSLIP
-	origin_tech = list(TECH_ILLEGAL = 3)
 	var/list/clothing_choices = list()
 	siemens_coefficient = 0.8
 	species_restricted = null
 	step_volume_mod = 0.5
 	drop_sound = 'sound/items/drop/rubber.ogg'
 	pickup_sound = 'sound/items/pickup/rubber.ogg'
+	resistance_flags = FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/shoes/mime
 	name = "mime shoes"
@@ -28,6 +28,7 @@
 	species_restricted = null
 	drop_sound = 'sound/items/drop/rubber.ogg'
 	pickup_sound = 'sound/items/pickup/rubber.ogg'
+	resistance_flags = ACID_PROOF
 
 /obj/item/clothing/shoes/dress
 	name = "dress shoes"
@@ -101,7 +102,7 @@
 	species_restricted = null
 
 /*	CHOMPEdit - Replaced with squeak component
-/obj/item/clothing/shoes/clown_shoes/handle_movement(var/turf/walking, var/running)
+/obj/item/clothing/shoes/clown_shoes/handle_movement(turf/walking, running)
 	if(running)
 		if(footstep >= 2)
 			footstep = 0

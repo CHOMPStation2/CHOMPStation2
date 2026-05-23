@@ -21,12 +21,11 @@
 	var/scan_id = 1
 	var/is_secure = 0
 	var/wrenchable = 0
-	var/datum/wires/smartfridge/wires = null
 	var/persistent = null // Path of persistence datum used to track contents
 	circuit = /obj/item/circuitboard/smartfridge //This one is meant to be uncraftable, however.
 
-	var/datum/looping_sound/fridge/soundloop // CHOMPEdit: Fridges hum!
-	var/playing_sound = FALSE // CHOMPEdit: Fridges hum!
+	var/datum/looping_sound/fridge/soundloop
+	var/playing_sound = FALSE
 
 /obj/machinery/smartfridge/secure
 	is_secure = 1
@@ -36,11 +35,11 @@
 	if(persistent)
 		SSpersistence.track_value(src, persistent)
 	if(is_secure)
-		wires = new/datum/wires/smartfridge/secure(src)
+		set_wires(new /datum/wires/smartfridge/secure(src))
 	else
-		wires = new/datum/wires/smartfridge(src)
+		set_wires(new /datum/wires/smartfridge(src))
 
-	soundloop = new(list(src), FALSE) // CHOMPEdit: Fridge hum!
+	soundloop = new(list(src), FALSE)
 	update_icon()
 	default_apply_parts()
 
@@ -51,7 +50,7 @@
 	wires = null
 	if(persistent)
 		SSpersistence.forget_value(src, persistent)
-	QDEL_NULL(soundloop) // CHOMPEdit: Fridge hum!
+	QDEL_NULL(soundloop)
 	return ..()
 
 /obj/machinery/smartfridge/proc/accept_check(obj/item/O)
@@ -59,10 +58,10 @@
 
 /obj/machinery/smartfridge/process()
 	if(stat & (BROKEN|NOPOWER))
-		soundloop.stop()  // CHOMPEdit: Fridges don't hum while they lack power.
-		playing_sound = FALSE  // CHOMPEdit: Fridges don't hum while they lack power.
+		soundloop.stop()
+		playing_sound = FALSE
 		return
-	if(!playing_sound && !stat) // CHOMPEdit: Fridges hum while they have power.
+	if(!playing_sound && !stat)
 		soundloop.start()
 		playing_sound = TRUE
 	if(src.seconds_electrified > 0)
@@ -75,14 +74,12 @@
 	..()
 	if(old_stat != stat)
 		update_icon()
-		// CHOMPEdit Start: Fridge hum
 		if(stat & (NOPOWER | BROKEN))
 			soundloop.stop()
 			playing_sound = FALSE
 		else
 			soundloop.start()
 			playing_sound = TRUE
-		// CHOMPEdit End
 
 /obj/machinery/smartfridge/update_icon()
 	cut_overlays()
@@ -176,14 +173,14 @@
 		to_chat(user, span_notice("\The [src] smartly refuses [O]."))
 		return TRUE
 
-/obj/machinery/smartfridge/secure/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/smartfridge/secure/emag_act(remaining_charges, mob/user)
 	if(!emagged)
 		emagged = 1
 		locked = -1
 		to_chat(user, span_filter_notice("You short out the product lock on [src]."))
 		return TRUE
 
-/obj/machinery/smartfridge/proc/find_record(var/obj/item/O)
+/obj/machinery/smartfridge/proc/find_record(obj/item/O)
 	for(var/datum/stored_item/I as anything in item_records)
 		if((O.type == I.item_path) && (O.name == I.item_name))
 			return I
@@ -198,7 +195,7 @@
 	SStgui.update_uis(src)
 	update_icon()
 
-/obj/machinery/smartfridge/proc/vend(datum/stored_item/I, var/count)
+/obj/machinery/smartfridge/proc/vend(datum/stored_item/I, count)
 	var/amount = I.get_amount()
 	// Sanity check, there are probably ways to press the button when it shouldn't be possible.
 	if(amount <= 0)

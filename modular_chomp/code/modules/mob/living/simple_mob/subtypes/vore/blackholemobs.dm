@@ -90,7 +90,7 @@
 	addtimer(CALLBACK(src, PROC_REF(doLeap), L), leap_warmup, TIMER_DELETE_ME)
 	return TRUE
 
-/mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/doLeap(var/mob/living/L)
+/mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/doLeap(mob/living/L)
 	if(!L)
 		return FALSE
 	if(L.z != z)
@@ -104,7 +104,7 @@
 
 	addtimer(CALLBACK(src, PROC_REF(afterLeap), L), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/afterLeap(var/mob/living/L)
+/mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/afterLeap(mob/living/L)
 	if(status_flags & LEAPING)
 		status_flags &= ~LEAPING
 

@@ -7,7 +7,6 @@
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	caliber = "12g"
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 4, TECH_ILLEGAL = 2)
 	slot_flags = SLOT_BACK|SLOT_BELT|SLOT_HOLSTER
 	handle_casings = EJECT_CASINGS
 	load_method = MAGAZINE

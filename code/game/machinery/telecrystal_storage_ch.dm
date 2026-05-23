@@ -14,7 +14,7 @@
 /obj/machinery/smartfridge/tcrystal/accept_check(obj/item/O)
 	return istype(O,/obj/item/stack/telecrystal)
 
-/obj/machinery/smartfridge/tcrystal/proc/mod_amount(var/datum/stored_item/I,var/mod)
+/obj/machinery/smartfridge/tcrystal/proc/mod_amount(datum/stored_item/I,mod)
 	if(I.amount + mod <= 0)
 		item_records.Remove(I)
 		qdel(I)

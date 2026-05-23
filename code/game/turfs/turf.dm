@@ -123,6 +123,9 @@
 	if(Be)
 		Be.multiz_turf_new(src, UP)
 
+	if(uses_integrity)
+		atom_integrity = max_integrity
+
 /turf/Destroy()
 	if (!changing_turf)
 		stack_trace("Improper turf qdel. Do not qdel turfs directly.")
@@ -185,6 +188,10 @@
 		if(S.use_to_pickup && S.collection_mode)
 			S.gather_all(src, user)
 	return ..()
+
+/turf/attack_robot(mob/user)
+	if(!isAI(user))
+		attack_hand(user)
 
 // Hits a mob on the tile.
 /turf/proc/attack_tile(obj/item/W, mob/living/user)
@@ -309,7 +316,7 @@
 	for(var/obj/O in src)
 		O.hide(O.hides_under_flooring() && !is_plating())
 
-/turf/proc/AdjacentTurfs(var/check_blockage = TRUE)
+/turf/proc/AdjacentTurfs(check_blockage = TRUE)
 	. = list()
 	for(var/turf/T as anything in (trange(1,src) - src))
 		if(check_blockage)
@@ -319,7 +326,7 @@
 		else
 			. += T
 
-/turf/proc/CardinalTurfs(var/check_blockage = TRUE)
+/turf/proc/CardinalTurfs(check_blockage = TRUE)
 	. = list()
 	for(var/turf/T as anything in AdjacentTurfs(check_blockage))
 		if(T.x == src.x || T.y == src.y)
@@ -370,7 +377,7 @@
 /turf/proc/can_engrave()
 	return FALSE
 
-/turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool, click_parameters)
+/turf/proc/try_graffiti(mob/vandal, obj/item/tool, click_parameters)
 
 	if(!tool || !tool.sharp || !can_engrave()) //CHOMP Edit
 		return FALSE
@@ -477,16 +484,16 @@
 	return TRUE
 
 // We're about to be the A-side in a turf translation
-/turf/proc/pre_translate_A(var/turf/B)
+/turf/proc/pre_translate_A(turf/B)
 	return
 // We're about to be the B-side in a turf translation
-/turf/proc/pre_translate_B(var/turf/A)
+/turf/proc/pre_translate_B(turf/A)
 	return
 // We were the the A-side in a turf translation
-/turf/proc/post_translate_A(var/turf/B)
+/turf/proc/post_translate_A(turf/B)
 	return
 // We were the the B-side in a turf translation
-/turf/proc/post_translate_B(var/turf/A)
+/turf/proc/post_translate_B(turf/A)
 	return
 
 /turf/proc/add_vomit_floor(mob/living/M, toxvomit = NONE, purge = TRUE)

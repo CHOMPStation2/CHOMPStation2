@@ -146,6 +146,10 @@
 	var/leech = 50
 	var/chain_number = 0
 
+/mob/living/simple_mob/vore/boss_jellyfish/death()
+	..()
+	qdel(src)
+
 /mob/living/simple_mob/vore/boss_jellyfish/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
@@ -158,7 +162,7 @@
 	B.escapechance = 15
 
 
-/mob/living/simple_mob/vore/boss_jellyfish/apply_melee_effects(var/atom/A) //Not a real threat unless multiple hits. It acts a timer for special traits.
+/mob/living/simple_mob/vore/boss_jellyfish/apply_melee_effects(atom/A) //Not a real threat unless multiple hits. It acts a timer for special traits.
 	if(isliving(A))
 		var/mob/living/L = A
 		if(L.nutrition)

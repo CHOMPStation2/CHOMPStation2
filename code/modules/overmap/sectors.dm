@@ -120,7 +120,7 @@
 //To be used by GMs and calling through var edits for the overmap object
 //It causes the overmap object to "reinitialize" its real_appearance for known = FALSE objects
 //Includes an argument that allows GMs/Admins to set a previously known sector to unknown. Set to any value except 0/False/Null to activate
-/obj/effect/overmap/visitable/proc/gmtools_update_omobject_vars(var/setToHidden)
+/obj/effect/overmap/visitable/proc/gmtools_update_omobject_vars(setToHidden)
 	real_appearance = image(real_icon, src, real_icon_state)
 	real_appearance.override = TRUE
 	if(setToHidden && known) //
@@ -231,7 +231,7 @@
 	else
 		generic_waypoints -= landmark
 
-/obj/effect/overmap/visitable/proc/get_waypoints(var/shuttle_name)
+/obj/effect/overmap/visitable/proc/get_waypoints(shuttle_name)
 	. = list()
 	for(var/obj/effect/overmap/visitable/contained in src)
 		. += contained.get_waypoints(shuttle_name)
@@ -268,7 +268,7 @@
 	icon_state = "sector"
 	anchored = TRUE
 
-/obj/effect/overmap/visitable/sector/proc/announce_atc(var/atom/movable/AM, var/going = FALSE) //Base proc. Used for virgo3b at this time.
+/obj/effect/overmap/visitable/sector/proc/announce_atc(atom/movable/AM, going = FALSE) //Base proc. Used for virgo3b at this time.
 	return
 // Because of the way these are spawned, they will potentially have their invisibility adjusted by the turfs they are mapped on
 // prior to being moved to the overmap. This blocks that. Use set_invisibility to adjust invisibility as needed instead.
@@ -286,7 +286,7 @@
 	//CHOMPedit end
 
 	for(var/zlevel in levels_for_distress)
-		GLOB.priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos_ch.ogg', zlevel = zlevel) //CHOMPedit, changed sound
+		GLOB.priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = ANNOUNCER_MSG_DISTRESS_SIGNAL, zlevel = zlevel)
 
 	var/image/I = image(icon, icon_state = "distress")
 	I.plane = PLANE_LIGHTING_ABOVE
@@ -305,7 +305,7 @@
 	//CHOMPedit end
 
 	for(var/zlevel in levels_for_distress)
-		GLOB.priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos_ch.ogg', zlevel = zlevel) //CHOMPedit, changed sound
+		GLOB.priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = ANNOUNCER_MSG_DISTRESS_SIGNAL, zlevel = zlevel)
 
 /proc/build_overmap()
 	if(!using_map.use_overmap)

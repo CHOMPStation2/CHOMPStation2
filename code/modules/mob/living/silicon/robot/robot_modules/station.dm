@@ -70,14 +70,14 @@
 	for(var/obj/item/I in modules)
 		I.canremove = FALSE
 
-/obj/item/robot_module/proc/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/proc/create_equipment(mob/living/silicon/robot/robot)
 	if(!istype(robot.idcard, idcard_type))
 		QDEL_NULL(robot.idcard)
 	robot.init_id(idcard_type)
 	return
 
 // Reset the module and delete it
-/obj/item/robot_module/proc/reset_module(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/proc/reset_module(mob/living/silicon/robot/robot)
 	remove_camera_networks(robot)
 	remove_languages(robot)
 	remove_subsystems(robot)
@@ -102,6 +102,9 @@
 	return ..()
 
 /obj/item/robot_module/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(modules)
 		for(var/obj/O in modules)
 			O.emp_act(severity, recursive)
@@ -111,9 +114,8 @@
 	if(synths)
 		for(var/datum/matter_synth/S in synths)
 			S.emp_act(severity, recursive)
-	return
 
-/obj/item/robot_module/proc/respawn_consumable(var/mob/living/silicon/robot/R, var/rate)
+/obj/item/robot_module/proc/respawn_consumable(mob/living/silicon/robot/R, rate)
 	SHOULD_CALL_PARENT(TRUE)
 	if(!LAZYLEN(synths))
 		return
@@ -128,7 +130,7 @@
 		if(O)
 			modules += O
 
-/obj/item/robot_module/proc/add_languages(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/proc/add_languages(mob/living/silicon/robot/R)
 	// Stores the languages as they were before receiving the module, and whether they could be synthezized.
 	for(var/datum/language/language_datum in R.languages)
 		original_languages[language_datum] = (language_datum in R.speech_synthesizer_langs)
@@ -136,7 +138,7 @@
 	for(var/language in languages)
 		R.add_language(language, languages[language])
 
-/obj/item/robot_module/proc/remove_languages(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/proc/remove_languages(mob/living/silicon/robot/R)
 	// Clear all added languages, whether or not we originally had them.
 	for(var/language in languages)
 		R.remove_language(language)
@@ -146,33 +148,33 @@
 		R.add_language(original_language, original_languages[original_language])
 	original_languages.Cut()
 
-/obj/item/robot_module/proc/add_camera_networks(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/proc/add_camera_networks(mob/living/silicon/robot/R)
 	if(R.camera && (NETWORK_ROBOTS in R.camera.network))
 		for(var/network in networks)
 			if(!(network in R.camera.network))
 				R.camera.add_network(network)
 				added_networks |= network
 
-/obj/item/robot_module/proc/remove_camera_networks(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/proc/remove_camera_networks(mob/living/silicon/robot/R)
 	if(R.camera)
 		R.camera.remove_networks(added_networks)
 	added_networks.Cut()
 
-/obj/item/robot_module/proc/add_subsystems(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/proc/add_subsystems(mob/living/silicon/robot/R)
 	add_verb(R, subsystems)
 
-/obj/item/robot_module/proc/remove_subsystems(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/proc/remove_subsystems(mob/living/silicon/robot/R)
 	remove_verb(R, subsystems)
 
-/obj/item/robot_module/proc/apply_status_flags(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/proc/apply_status_flags(mob/living/silicon/robot/R)
 	if(!can_be_pushed)
 		R.status_flags &= ~CANPUSH
 
-/obj/item/robot_module/proc/remove_status_flags(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/proc/remove_status_flags(mob/living/silicon/robot/R)
 	if(!can_be_pushed)
 		R.status_flags |= CANPUSH
 
-/obj/item/robot_module/proc/handle_shell(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/proc/handle_shell(mob/living/silicon/robot/R)
 	if(R.braintype == BORG_BRAINTYPE_AI_SHELL)
 		channels = list(
 			CHANNEL_MEDICAL = 1,
@@ -265,7 +267,7 @@
 				LAZYADD(synths, plastic)
 
 // Cyborgs (non-drones), default loadout. This will be given to every module.
-/obj/item/robot_module/robot/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	//CHOMPEdit Start
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
@@ -296,7 +298,7 @@
 	name = "standard robot module"
 	pto_type = PTO_CIVILIAN
 
-/obj/item/robot_module/robot/standard/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/standard/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/healthanalyzer(src)
@@ -322,7 +324,7 @@
 	name = "surgeon robot module"
 
 
-/obj/item/robot_module/robot/medical/surgeon/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/medical/surgeon/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/healthanalyzer(src)
 	src.modules += new /obj/item/sleevemate(src)
@@ -362,7 +364,7 @@
 	src.modules += new /obj/item/dogborg/sleeper/trauma(src)
 	src.emag += new /obj/item/dogborg/pounce(src)
 
-/obj/item/robot_module/robot/medical/surgeon/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/robot_module/robot/medical/surgeon/respawn_consumable(mob/living/silicon/robot/R, amount)
 
 	var/obj/item/reagent_containers/syringe/S = locate() in src.modules
 	if(S.mode == 2)
@@ -380,7 +382,7 @@
 /obj/item/robot_module/robot/medical/crisis
 	name = "crisis robot module"
 
-/obj/item/robot_module/robot/medical/crisis/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/medical/crisis/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/healthanalyzer(src)
 	src.modules += new /obj/item/sleevemate(src)
@@ -430,7 +432,7 @@
 	src.modules += new /obj/item/dogborg/sleeper(src)
 	src.emag += new /obj/item/dogborg/pounce(src) //Pounce
 
-/obj/item/robot_module/robot/medical/crisis/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/robot_module/robot/medical/crisis/respawn_consumable(mob/living/silicon/robot/R, amount)
 
 	var/obj/item/reagent_containers/syringe/S = locate() in src.modules
 	if(S.mode == 2)
@@ -453,7 +455,7 @@
 	subsystems = list(/mob/living/silicon/proc/subsystem_power_monitor)
 	pto_type = PTO_ENGINEERING
 
-/obj/item/robot_module/robot/engineering/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/engineering/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/robotic_multibelt(src)
 	src.modules += new /obj/item/robotic_multibelt(src)
@@ -511,7 +513,7 @@
 /obj/item/robot_module/robot/security/general
 	name = "security robot module"
 
-/obj/item/robot_module/robot/security/general/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/security/general/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/handcuffs/cyborg(src)
 	src.modules += new /obj/item/melee/robotic/baton(src)
@@ -526,7 +528,7 @@
 	src.modules += new /obj/item/dogborg/sleeper/K9(src) //Eat criminals. Bring them to the brig.
 	src.modules += new /obj/item/dogborg/pounce(src) //Pounce
 
-/obj/item/robot_module/robot/security/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/robot_module/robot/security/respawn_consumable(mob/living/silicon/robot/R, amount)
 	..()
 	var/obj/item/flash/F = locate() in src.modules
 	if(F.broken)
@@ -549,7 +551,7 @@
 	channels = list(CHANNEL_SERVICE = 1)
 	pto_type = PTO_CIVILIAN
 
-/obj/item/robot_module/robot/janitor/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/janitor/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/soap/nanotrasen(src)
 	src.modules += new /obj/item/storage/bag/trash(src)
@@ -604,7 +606,7 @@
 
 	src.emag += new /obj/item/dogborg/pounce(src) //Pounce
 
-/obj/item/robot_module/robot/janitor/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/robot_module/robot/janitor/respawn_consumable(mob/living/silicon/robot/R, amount)
 	..()
 	var/obj/item/lightreplacer/LR = locate() in src.modules
 	LR.Charge(R, amount)
@@ -646,7 +648,7 @@
 /obj/item/robot_module/robot/clerical/butler
 	name = "service robot module"
 
-/obj/item/robot_module/robot/clerical/butler/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/clerical/butler/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/gripper/service(src)
 	src.modules += new /obj/item/robotic_multibelt/service(src)
@@ -678,7 +680,7 @@
 
 	src.emag += new /obj/item/dogborg/pounce(src) //Pounce
 
-/obj/item/robot_module/robot/clerical/butler/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/robot_module/robot/clerical/butler/respawn_consumable(mob/living/silicon/robot/R, amount)
 	..()
 	var/obj/item/reagent_containers/food/drinks/bottle/small/beer/PB = locate() in src.emag
 	if(PB)
@@ -691,7 +693,7 @@
 	pto_type = PTO_CIVILIAN
 	can_be_pushed = 0
 
-/obj/item/robot_module/robot/clerical/honkborg/create_equipment(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/robot/clerical/honkborg/create_equipment(mob/living/silicon/robot/R)
 	src.modules += new /obj/item/gripper/service(src)
 	src.modules += new /obj/item/reagent_containers/glass/bucket/cyborg(src)
 	src.modules += new /obj/item/robotic_multibelt/botanical(src)
@@ -721,7 +723,7 @@
 	LS.name = "Lube spray"
 	..()
 
-/obj/item/robot_module/robot/clerical/honkborg/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/robot_module/robot/clerical/honkborg/respawn_consumable(mob/living/silicon/robot/R, amount)
 	..()
 	var/obj/item/reagent_containers/spray/LS = locate() in src.emag
 	if(LS)
@@ -730,7 +732,7 @@
 /obj/item/robot_module/robot/clerical/general
 	name = "clerical robot module"
 
-/obj/item/robot_module/robot/clerical/general/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/clerical/general/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/pen/robopen(src)
 	src.modules += new /obj/item/form_printer(src)
@@ -752,12 +754,11 @@
 	pto_type = PTO_CARGO
 	idcard_type = /obj/item/card/id/synthetic/borg
 
-/obj/item/robot_module/robot/miner/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/miner/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/borg/sight/material(src)
 	src.modules += new /obj/item/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/tool/screwdriver/cyborg(src)
-	src.modules += new /obj/item/storage/bag/ore(src)
 	src.modules += new /obj/item/pickaxe/borgdrill(src)
 	src.modules += new /obj/item/storage/bag/sheetsnatcher/borg(src)
 	src.modules += new /obj/item/gripper/miner(src)
@@ -795,7 +796,7 @@
 	supported_upgrades = list(/obj/item/borg/upgrade/restricted/advrped, /obj/item/borg/upgrade/restricted/anomalygun)
 	pto_type = PTO_SCIENCE
 
-/obj/item/robot_module/robot/research/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/research/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/experi_scanner(src)
 	src.modules += new /obj/item/robotanalyzer(src)
@@ -837,7 +838,7 @@
 	src.modules += new /obj/item/robotic_multibelt/materials(src)
 	src.emag += new /obj/item/dogborg/pounce(src)
 
-/obj/item/robot_module/robot/research/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/robot_module/robot/research/respawn_consumable(mob/living/silicon/robot/R, amount)
 
 	var/obj/item/reagent_containers/syringe/S = locate() in src.modules
 	if(S.mode == 2)
@@ -853,7 +854,7 @@
 	hide_on_manifest = TRUE
 	supported_upgrades = list(/obj/item/borg/upgrade/restricted/bellycapupgrade)
 
-/obj/item/robot_module/robot/security/combat/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/security/combat/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/handcuffs/cyborg(src)
 	src.modules += new /obj/item/taperoll/police(src)
@@ -879,7 +880,7 @@
 	no_slip = 1
 	networks = list(NETWORK_ENGINEERING)
 
-/obj/item/robot_module/drone/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/drone/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/borg/sight/meson(src)
 	src.modules += new /obj/item/weldingtool/electric/mounted/cyborg(src)
@@ -929,11 +930,11 @@
 	channels = list(CHANNEL_ENGINEERING = 1)
 	languages = list()
 
-/obj/item/robot_module/drone/construction/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/drone/construction/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/rcd/electric/mounted/borg/lesser(src)
 
-/obj/item/robot_module/drone/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/robot_module/drone/respawn_consumable(mob/living/silicon/robot/R, amount)
 	var/obj/item/lightreplacer/LR = locate() in src.modules
 	LR.Charge(R, amount)
 	..()
@@ -944,11 +945,11 @@
 	channels = list(CHANNEL_SUPPLY = 1)
 	networks = list(NETWORK_MINE)
 
-/obj/item/robot_module/drone/mining/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/drone/mining/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/borg/sight/material(src)
 	src.modules += new /obj/item/pickaxe/borgdrill(src)
-	src.modules += new /obj/item/storage/bag/ore(src)
+	src.modules += new /obj/item/ore_bag(src)
 	src.modules += new /obj/item/storage/bag/sheetsnatcher/borg(src)
 	src.modules += new /obj/item/gun/energy/robotic/phasegun(src)  //Chompedit, makes the mining borg able to defend itself.
 	src.emag += new /obj/item/pickaxe/diamonddrill(src)

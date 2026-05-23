@@ -106,7 +106,7 @@
 			new spawn_type(T)
 
 /datum/event/highdangerinfestation/announce()
-	GLOB.command_announcement.Announce("Bioscans indicate that [dangerstring] have been entered [locstring]. Contain them before they start causing damage.", "Alien infestation")
+	GLOB.command_announcement.Announce("Bioscans indicate that [dangerstring] have entered [locstring]. Contain them before they start causing damage.", "Alien infestation")
 
 #undef LOC_RIOT
 #undef LOC_ATMOS

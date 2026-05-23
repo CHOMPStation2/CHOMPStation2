@@ -43,7 +43,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting/dodge
 	projectiletype = /obj/item/projectile/energy/agate_lighting/fast
 
-/mob/living/simple_mob/mechanical/hivebot/tyr/meteor/bullet_act(var/obj/item/projectile/Proj)
+/mob/living/simple_mob/mechanical/hivebot/tyr/meteor/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
 	projectiletype = Proj
@@ -74,4 +74,3 @@
 	icon_living = "janitor"
 	projectiletype = /obj/item/projectile/beam/midlaser/shortrange
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/pointblank
-
