@@ -1447,7 +1447,7 @@
 
 
 /mob/living/simple_mob/vore/blackhole/taur/soldier/ranged
-	name = "Black Hole soldier"
+	name = "Black Hole rifleman"
 	desc = "A tauric tajaran dressed in an ominous black and purple uniform, with advanced looking armor. They appear to be wearing some kind of death mask. They have an assault rifle."
 	icon_living = "soldier-rifle"
 	icon_state = "soldier-rifle"
@@ -1475,7 +1475,7 @@
 
 
 /mob/living/simple_mob/vore/blackhole/taur/soldier/ranged/lmg
-	name = "Black Hole soldier"
+	name = "Black Hole machinegunner"
 	desc = "A tauric tajaran dressed in an ominous black and purple uniform, with advanced looking armor. They appear to be wearing some kind of death mask. They have an LMG."
 	icon_living = "soldier-lmg"
 	icon_state = "soldier-lmg"
@@ -1505,7 +1505,7 @@
 
 
 /mob/living/simple_mob/vore/blackhole/taur/soldier/ranged/hmg
-	name = "Black Hole soldier"
+	name = "Black Hole heavy machinegunner"
 	desc = "A tauric tajaran dressed in an ominous black and purple uniform, with advanced looking armor. They appear to be wearing some kind of death mask. They have a heavy machinegun!"
 	icon_living = "soldier-hmg"
 	icon_state = "soldier-hmg"
@@ -1942,7 +1942,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	vis_height = 92
 	movement_cooldown = 10
 	icon = 'modular_chomp/icons/blackhole/blackhole128x92.dmi'
-	wreckage = /obj/structure/loot_pile/mecha/gygax/dark/adv
+	wreckage = /obj/structure/loot_pile/mecha/gygax/dark/adv/blackhole/doggy
 	icon_scale_x = 1
 	icon_scale_y = 1
 	movement_shake_radius = 15
@@ -2145,7 +2145,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	closest_desired_distance = 5
 	cooperative = FALSE
 	electric_defense_radius = 5			// How big to assume electric defense's area is.
-	microsingulo_radius = 3				// Same but for microsingulo pull.
+	microsingulo_radius = 9				// Same but for microsingulo pull.
 	rocket_explosive_radius = 4			// Explosion radius for the rockets.
 
 	electric_defense_threshold = 1		// How many non-targeted people are needed in close proximity before electric defense is viable.
