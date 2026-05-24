@@ -1925,8 +1925,6 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 ///rocket doggy///
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 
-var/shottype_index = 1
-var/list/lmgshot = list(/obj/item/projectile/energy/homing_bolt/microrocket,/obj/item/projectile/energy/homing_bolt/microrocket,/obj/item/projectile/energy/homing_bolt/microrocket,/obj/item/projectile/energy/homing_bolt/microrocket,/obj/item/projectile/arc/explosive_rocket/rocket/bh1,/obj/item/projectile/arc/explosive_rocket/rocket/bh1,/obj/item/projectile/arc/explosive_rocket/rocket/bh1,/obj/item/projectile/arc/explosive_rocket/rocket/bh1)
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound
 	name = "BhX. 08 mobile artillery platform"
@@ -1986,6 +1984,8 @@ var/list/lmgshot = list(/obj/item/projectile/energy/homing_bolt/microrocket,/obj
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/blackhole
 	var/obj/effect/overlay/energy_ball/energy_ball = null
+	var/shottype_index = 1
+	var/list/rocketdoggy = list(/obj/item/projectile/energy/homing_bolt/microrocket,/obj/item/projectile/energy/homing_bolt/microrocket,/obj/item/projectile/energy/homing_bolt/microrocket,/obj/item/projectile/energy/homing_bolt/microrocket,/obj/item/projectile/arc/explosive_rocket/rocket/bh1,/obj/item/projectile/arc/explosive_rocket/rocket/bh1,/obj/item/projectile/arc/explosive_rocket/rocket/bh1,/obj/item/projectile/arc/explosive_rocket/rocket/bh1)
 
 /obj/structure/loot_pile/mecha/gygax/dark/adv/blackhole/doggy
 	icon = 'modular_chomp/icons/blackhole/blackhole128x92.dmi'
@@ -1995,9 +1995,9 @@ var/list/lmgshot = list(/obj/item/projectile/energy/homing_bolt/microrocket,/obj
 	old_y = 0
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/shoot_target(atom/A)
-	projectiletype = lmgshot[shottype_index]
+	projectiletype = rocketdoggy[shottype_index]
 	shottype_index++
-	if(shottype_index > lmgshot.len) shottype_index = 1
+	if(shottype_index > rocketdoggy.len) shottype_index = 1
 	. = ..()
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound/Destroy()
@@ -2590,7 +2590,7 @@ var/list/lmgshot = list(/obj/item/projectile/energy/homing_bolt/microrocket,/obj
 	icon_state = "u_laser"
 	fire_sound = 'sound/weapons/serdy/plasma4.ogg'
 	damage = 40	//halved from normal
-	armor_penetration = 100
+	armor_penetration = 50
 	light_range = 3
 	light_power = 1
 	light_color = "#0066FF"
