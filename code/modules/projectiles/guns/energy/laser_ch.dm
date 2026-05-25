@@ -117,7 +117,6 @@
 /obj/item/gun/energy/plasma/x16b
 	name = "X16b plasma carbine"
 	desc = "An advanced plasma caster, used by elite Black Hole fanatics. Light, powerful, and concealable. Uses it's own proprietary batteries."
-	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
 	icon_expected_width = 64
 	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
 	icon_state = "x16b"
@@ -153,4 +152,39 @@
 	charge = 7200
 	charge_amount = 20
 	matter = list(MAT_DURASTEEL = 350, MAT_GLASS = 50, MAT_PHORON = 1000)
+	preserve_item = 1
+
+/obj/item/gun/energy/laser/las91f
+	name = "Las91f retro laser rifle"
+	desc = "The Las91f is a rare example of modern illegal hellfire laser tech, approved only for use by government forces, and even then, only in rare cases. Uses it's own proprietary batteries."
+	icon_expected_width = 64
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	icon_state = "las91f"
+	fire_delay = 1
+	projectile_type = /obj/item/projectile/beam/hellfire
+	force = 18
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "las91f"
+	wielded_item_state = "las91f_w"
+	firemodes = null
+	w_class = ITEMSIZE_LARGE
+	slot_flags = SLOT_BELT|SLOT_BACK
+	is64x32_override = TRUE
+	accept_cell_type = /obj/item/cell/las91f
+	cell_type = /obj/item/cell/las91f
+
+/obj/item/cell/las91f
+	name = "retro laser canister"
+	desc = "An old school retro laser battery. Heavy and cumbersome, these are used by the illegal 'hellfire' lasers of days past."
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	icon_state = "retrolas"
+	item_state = "egg6"
+	w_class = ITEMSIZE_NORMAL
+	maxcharge = 7200
+	charge = 7200
+	charge_amount = 20
+	matter = list(MAT_DURASTEEL = 350, MAT_GLASS = 50, MAT_URANIUM = 1000)
 	preserve_item = 1

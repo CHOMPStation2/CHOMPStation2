@@ -545,3 +545,111 @@
 	matter = list(MAT_STEEL = 800)
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a44
+
+
+
+
+// ------------------------- GATTENING EARLY PORT STUFF, THIS IS (i pray to god) TEMPORARY ------------------------- //
+
+
+
+
+/obj/item/ammo_magazine/lynx
+	name = "Lynx magazine (7.76x55mm)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "7.76mm"
+	icon_state = "rifle_medium"
+	max_ammo = 10
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 2400)
+	ammo_type = /obj/item/ammo_casing/a776
+
+/obj/item/ammo_magazine/zvir
+	name = "Zvir magazine (7.62)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "7.62mm"
+	icon_state = "rifle_box"
+	max_ammo = 100
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 5400)
+	ammo_type = /obj/item/ammo_casing/a762/ap
+
+/obj/item/ammo_magazine/barka
+	name = "Drobarka magazine (15x80mm)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "15mm"
+	icon_state = "rifle_magnum_box"
+	max_ammo = 50
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 5400)
+	ammo_type = /obj/item/ammo_casing/a15mm
+
+
+/obj/item/ammo_magazine/bm51
+	name = "BM51 magazine (6.5x50mm)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "6.5mm"
+	icon_state = "rifle_light_large"
+	max_ammo = 25
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 1400)
+	ammo_type = /obj/item/ammo_casing/a6550mm
+
+/obj/item/ammo_magazine/bm51/ap
+	name = "armor-piercing BM51 magazine (6.5x50mm)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "6.5mm"
+	icon_state = "rifle_light_large"
+	max_ammo = 25
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 1400)
+	ammo_type = /obj/item/ammo_casing/a6550mm/ap
+
+/obj/item/ammo_magazine/bm109
+	name = "BM109 magazine (8.6x65mm)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "8.6mm"
+	icon_state = "rifle_heavy_alt"
+	max_ammo = 11
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 2400)
+	ammo_type = /obj/item/ammo_casing/a86
+
+/obj/item/ammo_magazine/pmx
+	name = "PMX magazine (10mm)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "10mm"
+	icon_state = "pistol_light"
+	max_ammo = 8
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 1400)
+	ammo_type = /obj/item/ammo_casing/a10mm
+
+/obj/item/ammo_magazine/viper
+	name = "Ka12 Viper magazine (10mm)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "10mm"
+	icon_state = "smg_light"
+	max_ammo = 25
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 2000)
+	ammo_type = /obj/item/ammo_casing/a10mm
+
+/obj/item/ammo_magazine/sdiyaab
+	name = "Super Diyaab magazine (.44)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = ".44"
+	icon_state = "pistol_heavy"
+	max_ammo = 11
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 1400)
+	ammo_type = /obj/item/ammo_casing/a44

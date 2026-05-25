@@ -1605,18 +1605,9 @@
 	w_class = ITEMSIZE_NORMAL
 	is_long = FALSE
 	fire_sound = "sound/weapons/serdy/vityaz.ogg"
+	icon_expected_height = 32
+	icon_expected_width = 64
 
-
-/obj/item/ammo_magazine/viper
-	name = "Ka12 Viper magazine (10mm)"
-	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
-	caliber = "10mm"
-	icon_state = "smg_light"
-	max_ammo = 25
-	mag_type = MAGAZINE
-	multiple_sprites = 1
-	matter = list(MAT_STEEL = 2000)
-	ammo_type = /obj/item/ammo_casing/a10mm
 
 
 
@@ -1643,17 +1634,6 @@
 	projectile_type = /obj/item/projectile/bullet/pistol/bh1
 	fire_sound = "sound/weapons/serdy/9mmpistol.ogg"
 
-
-/obj/item/ammo_magazine/pmx
-	name = "PMX magazine (10mm)"
-	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
-	caliber = "10mm"
-	icon_state = "pistol_light"
-	max_ammo = 8
-	mag_type = MAGAZINE
-	multiple_sprites = 1
-	matter = list(MAT_STEEL = 1400)
-	ammo_type = /obj/item/ammo_casing/a10mm
 
 
 /// Lynks ///
@@ -1697,26 +1677,6 @@
 	toggle_scope(2.0)
 
 
-/obj/item/ammo_magazine/lynx
-	name = "Lynx magazine (7.76x55mm)"
-	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
-	caliber = "7.76mm"
-	icon_state = "rifle_medium"
-	max_ammo = 10
-	mag_type = MAGAZINE
-	multiple_sprites = 1
-	matter = list(MAT_STEEL = 2400)
-	ammo_type = /obj/item/ammo_casing/a776
-
-
-/obj/item/ammo_casing/a776
-	desc = "A 7.76x55mm bullet casing."
-	caliber = "7.76mm"
-	icon_state = "rifle-casing"
-	projectile_type = /obj/item/projectile/bullet/rifle/a145/bh2
-	matter = list(MAT_STEEL = 200)
-
-
 
 ///Zvir///
 
@@ -1754,17 +1714,6 @@
 
 
 
-/obj/item/ammo_magazine/zvir
-	name = "Zvir magazine (7.62)"
-	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
-	caliber = "7.62mm"
-	icon_state = "rifle_box"
-	max_ammo = 100
-	mag_type = MAGAZINE
-	multiple_sprites = 1
-	matter = list(MAT_STEEL = 5400)
-	ammo_type = /obj/item/ammo_casing/a762/ap
-
 
 
 ///Drobarka///
@@ -1797,27 +1746,14 @@
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 30
 	fire_sound = 'sound/weapons/serdy/strela.ogg'
 
-/obj/item/ammo_casing/a15mm
-	desc = "A 15x80mm bullet casing."
-	caliber = "15mm"
-	icon_state = "lcasing"
-	projectile_type = /obj/item/projectile/bullet/rifle/a545/bh3
-	matter = list(MAT_STEEL = 200)
 
-/obj/item/ammo_magazine/barka
-	name = "Drobarka magazine (15x80mm)"
-	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
-	caliber = "15mm"
-	icon_state = "rifle_magnum_box"
-	max_ammo = 50
-	mag_type = MAGAZINE
-	multiple_sprites = 1
-	matter = list(MAT_STEEL = 5400)
-	ammo_type = /obj/item/ammo_casing/a15mm
+
+///Voroh///
+
 
 
 /obj/item/gun/projectile/automatic/serdy/voroh
@@ -1848,13 +1784,123 @@
 	sound_chamber = 'sound/weapons/serdy/launcher_closed.ogg'
 	fire_sound = 'sound/weapons/serdy/recoilless.ogg'
 
-/obj/item/ammo_casing/a80mm
-	desc = "A high explosive 80mm recoilless rifle shell."
-	caliber = "80mm"
-	w_class = ITEMSIZE_NORMAL
-	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
-	icon_state = "voroh"
-	projectile_type = /obj/item/projectile/explosive_rocket/blackhole
-	matter = list(MAT_STEEL = 2200)
 
 
+/// BM51 ///
+
+
+
+/obj/item/gun/projectile/automatic/serdy/bm51
+	name = "BM51 service rifle"
+	desc = "A robust, versatile, and most importantly, very durable combat rifle used by endemic SDF forces. Chambered in 6.5x50mm."
+	caliber = "6.5mm"
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "bm51"
+	wielded_item_state = "bm51_w"
+	magazine_type = /obj/item/ammo_magazine/bm51
+	allowed_magazines = list(/obj/item/ammo_magazine/bm51)
+	icon_state = "bm51"
+	projectile_type = /obj/item/projectile/bullet/rifle/a556
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT
+	w_class = ITEMSIZE_HUGE
+	one_handed_penalty = 30
+	fire_sound = 'sound/weapons/serdy/sks.ogg'
+
+
+
+/// BM109 ///
+
+
+
+/obj/item/gun/projectile/automatic/serdy/bm109
+	name = "BM109 marksman rifle"
+	desc = "A legendary rifle, typically seen in the hands of SDF rangers. While considered suboptimal by most modern standards, it is deadly in the hands of a real marksman. Chambered in 8.6x65mm."
+	caliber = "8.6mm"
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	icon_state = "bm109"
+
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "bm109"
+	wielded_item_state = "bm109_w"
+	recoil = 1
+	magazine_type = /obj/item/ammo_magazine/bm109
+	allowed_magazines = list(/obj/item/ammo_magazine/bm109)
+	icon_state = "bm109"
+	projectile_type = /obj/item/projectile/bullet/rifle/a145/bh2
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT
+	w_class = ITEMSIZE_HUGE
+	actions_types = list(/datum/action/item_action/use_scope)
+	accuracy = 10
+	scoped_accuracy = 50
+	one_handed_penalty = 100
+	fire_sound = "sound/weapons/serdy/sks.ogg"
+
+/obj/item/gun/projectile/automatic/serdy/bm109/ui_action_click()
+	scope()
+
+/obj/item/gun/projectile/automatic/serdy/bm109/verb/scope()
+	set category = "Object"
+	set name = "Use Scope"
+	set popup_menu = 1
+
+	toggle_scope(2.0)
+
+
+
+/// SUPER DIYAAB ///
+
+
+
+/obj/item/gun/projectile/serdy_pistols/sdiyaab
+	name = "Super Diyaab"
+	desc = "An interesting full sized magnum service pistol, used by some SDF forces. Fairly robust despite it's odd shape. Chambered in .44."
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx32.dmi'
+	icon_state = "sdiyaab"
+
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "sdiyaab"
+
+	caliber = ".44"
+	magazine_type = /obj/item/ammo_magazine/sdiyaab
+	allowed_magazines = list(/obj/item/ammo_magazine/sdiyaab)
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
+	fire_sound = "sound/weapons/serdy/44mag.ogg"
+
+
+
+/// SAVIK ///
+
+
+
+/obj/item/gun/projectile/shotgun/pump/combat/savik
+	name = "Savik lever-action shotgun"
+	desc = "The shotgun of choice for SDF rangers, the ever reliable Savik. As fearsome as it's namesake. Uses 12g rounds."
+	icon_state = "savik"
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "savik"
+	wielded_item_state = "savik_w"
+	max_shells = 11
+	ammo_type = /obj/item/ammo_casing/a12g
+	load_method = SINGLE_CASING|SPEEDLOADER
+	pump_animation = "savik"
+	action_sound = 'sound/weapons/serdy/leverrack.ogg'

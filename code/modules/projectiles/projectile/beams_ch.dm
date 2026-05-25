@@ -93,3 +93,48 @@
 	light_color = "#FF6A00"
 	light_range = 3
 	light_power = 1
+
+
+
+
+// ------------------------- GATTENING EARLY PORT STUFF, THIS IS (i pray to god) TEMPORARY ------------------------- //
+
+
+
+
+
+/obj/item/projectile/beam/hellfire
+	damage = 35
+	mob_bonus_damage = 20
+	agony = 10
+	stutter = 5
+	armor_penetration = 15
+	fire_sound = 'sound/weapons/serdy/retrolaser.ogg'
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	icon_state = "hellfire"
+	light_color = "#FF6A00"
+	muzzle_type = /obj/effect/projectile/muzzle/hellfire
+	tracer_type = /obj/effect/projectile/tracer/hellfire
+	impact_type = /obj/effect/projectile/impact/hellfire
+	hud_state = "laser_heat"
+
+/obj/effect/projectile/muzzle/hellfire
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	icon_state = "muzzle_hellfire"
+	light_color = "#FF6A00"
+	light_range = 5
+	light_power = 2
+
+/obj/effect/projectile/tracer/hellfire
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	icon_state = "beam_hellfire"
+	light_color = "#FF6A00"
+	light_range = 3
+	light_power = 2
+
+/obj/effect/projectile/impact/hellfire
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	icon_state = "impact_hellfire"
+	light_color = "#FF6A00"
+	light_range = 4
+	light_power = 2
