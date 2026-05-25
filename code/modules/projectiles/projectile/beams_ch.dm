@@ -109,7 +109,7 @@
 	agony = 10
 	stutter = 5
 	armor_penetration = 15
-	fire_sound = 'sound/weapons/serdy/retrolaser.ogg'
+	fire_sound = 'sound/weapons/serdy/retrolaser2.ogg'
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
 	icon_state = "hellfire"
 	light_color = "#FF6A00"

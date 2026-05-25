@@ -163,6 +163,7 @@
 	fire_delay = 1
 	projectile_type = /obj/item/projectile/beam/hellfire
 	force = 18
+	charge_cost = 80
 	item_icons = list(
 		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
 		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
@@ -178,7 +179,7 @@
 
 /obj/item/cell/las91f
 	name = "retro laser canister"
-	desc = "An old school retro laser battery. Heavy and cumbersome, these are used by the illegal 'hellfire' lasers of days past."
+	desc = "An old school retro laser battery. Heavy and cumbersome, these are used by the illegal 'hellfire' lasers of days past. Or by select Government forces."
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
 	icon_state = "retrolas"
 	item_state = "egg6"

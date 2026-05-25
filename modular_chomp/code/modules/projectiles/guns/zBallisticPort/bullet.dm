@@ -1606,7 +1606,7 @@
 	is_long = FALSE
 	fire_sound = "sound/weapons/serdy/vityaz.ogg"
 	icon_expected_height = 32
-	icon_expected_width = 64
+	icon_expected_width = 32
 
 
 
@@ -1734,6 +1734,7 @@
 	item_state = "drobarka"
 	wielded_item_state = "drobarka_w"
 	burst_delay = 1.5
+	slowdown = 2 //BIG ASS GUN
 	magazine_type = /obj/item/ammo_magazine/barka
 	allowed_magazines = list(/obj/item/ammo_magazine/barka)
 
@@ -1963,4 +1964,3 @@
 	set popup_menu = 1
 
 	toggle_scope(2.0)
-
