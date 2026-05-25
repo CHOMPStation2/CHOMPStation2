@@ -12,7 +12,7 @@ GLOBAL_LIST_EMPTY(mining_overlay_cache)
 /turf/unsimulated/mineral/ice
 	name = "Ice wall"
 	desc = "Frigid Ice that seems to be stronger than most manmade structures."
-	icon = 'icons/turf/snow_new.dmi'
+	icon = 'icons/turf/snow.dmi'
 	icon_state = "Icerock"
 //YW add end
 
