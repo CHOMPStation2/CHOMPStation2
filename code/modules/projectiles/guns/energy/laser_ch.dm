@@ -183,8 +183,8 @@
 	icon_state = "retrolas"
 	item_state = "egg6"
 	w_class = ITEMSIZE_NORMAL
-	maxcharge = 7200
-	charge = 7200
+	maxcharge = 2000
+	charge = 2000
 	charge_amount = 20
 	matter = list(MAT_DURASTEEL = 350, MAT_GLASS = 50, MAT_URANIUM = 1000)
 	preserve_item = 1

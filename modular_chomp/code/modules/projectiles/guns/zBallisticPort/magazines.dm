@@ -653,3 +653,14 @@
 	multiple_sprites = 1
 	matter = list(MAT_STEEL = 1400)
 	ammo_type = /obj/item/ammo_casing/a44
+
+/obj/item/ammo_magazine/ammo_box/a86
+	name = "ammo box (8.6x65mm)"
+	desc = "A box of 8.6x65mm rounds."
+	icon_state = "rifle"
+	caliber = "8.6mm"
+	ammo_type = /obj/item/ammo_casing/a86
+	matter = list(MAT_STEEL = 6000)
+	max_ammo = 31
+	multiple_sprites = 1
+

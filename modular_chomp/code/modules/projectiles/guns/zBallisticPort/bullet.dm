@@ -1652,7 +1652,7 @@
 		)
 	item_state = "lynx"
 	wielded_item_state = "lynx_w"
-	recoil = 1
+	recoil = 0 //screenshake cringe and gay
 	magazine_type = /obj/item/ammo_magazine/lynx
 	allowed_magazines = list(/obj/item/ammo_magazine/lynx)
 	icon_state = "lynx"
@@ -1801,6 +1801,7 @@
 		)
 	item_state = "bm51"
 	wielded_item_state = "bm51_w"
+	burst_delay = 1.5
 	magazine_type = /obj/item/ammo_magazine/bm51
 	allowed_magazines = list(/obj/item/ammo_magazine/bm51)
 	icon_state = "bm51"
@@ -1834,7 +1835,7 @@
 		)
 	item_state = "bm109"
 	wielded_item_state = "bm109_w"
-	recoil = 1
+	recoil = 0 //screenshake cringe and gay
 	magazine_type = /obj/item/ammo_magazine/bm109
 	allowed_magazines = list(/obj/item/ammo_magazine/bm109)
 	icon_state = "bm109"
@@ -1865,7 +1866,7 @@
 
 
 /obj/item/gun/projectile/serdy_pistols/sdiyaab
-	name = "Super Diyaab"
+	name = "SM19 Super Diyaab"
 	desc = "An interesting full sized magnum service pistol, used by some SDF forces. Fairly robust despite it's odd shape. Chambered in .44."
 	icon = 'modular_chomp/icons/blackhole/pre-gatteningx32.dmi'
 	icon_state = "sdiyaab"
@@ -1889,7 +1890,7 @@
 
 
 /obj/item/gun/projectile/shotgun/pump/combat/savik
-	name = "Savik lever-action shotgun"
+	name = "BM17 Savik lever-action shotgun"
 	desc = "The shotgun of choice for SDF rangers, the ever reliable Savik. As fearsome as it's namesake. Uses 12g rounds."
 	icon_state = "savik"
 	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
@@ -1904,3 +1905,62 @@
 	load_method = SINGLE_CASING|SPEEDLOADER
 	pump_animation = "savik"
 	action_sound = 'sound/weapons/serdy/leverrack.ogg'
+
+
+
+/// KURURAK ///
+
+
+
+/obj/item/gun/projectile/automatic/serdy/kururak
+	name = "BM26 Kururak"
+	desc = "A durable bolt action rifle, produced on Sif for the SDF. Chambered in 8.6x65mm."
+	caliber = "8.6mm"
+	auto_loading_type = NO_AUTO_LOAD
+	load_method = SINGLE_CASING|SPEEDLOADER
+	only_open_load = TRUE
+	icon_state = "kururak"
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "kururak"
+	wielded_item_state = "kururak_w"
+	projectile_type = /obj/item/projectile/bullet/rifle/a145/bh2
+	max_shells = 10
+	ammo_type = /obj/item/ammo_casing/a86
+	w_class = ITEMSIZE_HUGE
+	one_handed_penalty = 70
+	bolt_name = "bolt"
+	sound_eject = 'sound/weapons/ballistics/boltactionopen.ogg'
+	sound_chamber = 'sound/weapons/ballistics/boltactionclose.ogg'
+	fire_sound = "sound/weapons/serdy/sks.ogg"
+
+/obj/item/gun/projectile/automatic/serdy/kururak/scoped
+	name = "BM27 Kururak sniper"
+	icon_state = "kururak_scoped"
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "kururak"
+	wielded_item_state = "kururak_w"
+	desc = "A durable bolt action rifle, produced on Sif for the SDF. This one has a scope, and better craftsmanship, for sniping. Chambered in 8.6x65mm."
+	actions_types = list(/datum/action/item_action/use_scope)
+	accuracy = -15
+	recoil = 0 //screenshake cringe and gay
+	scoped_accuracy = 50
+	one_handed_penalty = 70
+
+/obj/item/gun/projectile/automatic/serdy/kururak/scoped/ui_action_click()
+	scope()
+
+/obj/item/gun/projectile/automatic/serdy/kururak/scoped/verb/scope()
+	set category = "Object"
+	set name = "Use Scope"
+	set popup_menu = 1
+
+	toggle_scope(2.0)
+

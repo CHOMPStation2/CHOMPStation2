@@ -51,7 +51,9 @@
 
 /obj/item/ammo_casing/a86
 	desc = "An 8.6x65mm bullet casing."
-	caliber = "8.6x65mm"
+	caliber = "8.6mm"
 	icon_state = "rifle-casing"
 	projectile_type = /obj/item/projectile/bullet/rifle/a145/bh2
 	matter = list(MAT_STEEL = 200)
+
+
