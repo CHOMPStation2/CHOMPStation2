@@ -426,6 +426,8 @@
 	name = "Black Hole soldier flagbearer"
 	desc = "A tajaran dressed in an ominous black and purple uniform, with advanced looking heavy armor. They appear to be wearing some kind of death mask, and wield a machete with a Black Hole banner."
 	icon_dead = "soldier-dead"
+	loot_list = list(/obj/item/gun/energy/plasma/x16b = 15, /obj/item/cell/x16b = 15, /obj/item/cell/x16b = 15, /obj/item/cell/x16b = 25)
+
 	icon_living = "soldier-melee2"
 	icon_state = "soldier-melee2"
 	icon_rest = "soldier-stunned"
@@ -502,6 +504,7 @@
 	icon_living = "soldier-plasma"
 	icon_state = "soldier-plasma"
 	has_eye_glow = TRUE
+	loot_list = list(/obj/item/gun/energy/plasma/x16b = 15, /obj/item/cell/x16b = 15, /obj/item/cell/x16b = 15, /obj/item/cell/x16b = 25)
 
 	projectiletype = /obj/item/projectile/energy/plasma/vepr/blackhole
 	projectilesound = 'sound/weapons/serdy/vepr.ogg'
@@ -658,6 +661,7 @@
 	icon_living = "trooper-pistol"
 	icon_state = "trooper-pistol"
 	icon_rest = "trooper-stunned"
+	loot_list = list(/obj/item/gun/projectile/serdy_pistols/pmx = 15, /obj/item/ammo_magazine/pmx = 15, /obj/item/ammo_magazine/pmx = 15, /obj/item/ammo_magazine/pmx = 15)
 
 	projectiletype = /obj/item/projectile/bullet/pistol/bh1
 	projectilesound = 'sound/weapons/serdy/9mmpistol.ogg'
@@ -757,6 +761,22 @@
 	base_attack_cooldown = 8
 	reload_max = 30
 	reload_time = 2 SECONDS
+
+
+/mob/living/simple_mob/vore/blackhole/trooper/ranged/plasma
+	name = "Black Hole trooper purifyer"
+	desc = "An ominous looking feline individual, wearing a sleek, dark black and purple voidsuit. There is something very uncanny about them. They appear to have a plasma carbine."
+	icon_living = "trooper-plasma"
+	icon_state = "trooper-plasma"
+	loot_list = list(/obj/item/gun/energy/plasma/x16b = 15, /obj/item/cell/x16b = 15, /obj/item/cell/x16b = 15, /obj/item/cell/x16b = 25)
+
+	projectiletype = /obj/item/projectile/energy/plasma/vepr/blackhole
+	projectilesound = 'sound/weapons/serdy/vepr.ogg'
+	projectile_dispersion = 2
+	projectile_accuracy = -15
+	base_attack_cooldown = 3 DECISECONDS
+	reload_max = 8
+	reload_time = 5 SECONDS
 
 
 /mob/living/simple_mob/vore/blackhole/trooper/ranged/sniper
@@ -890,7 +910,8 @@
 	icon_living = "trooper-hmg"
 	icon_state = "trooper-hmg"
 	has_eye_glow = TRUE
-	projectiletype = /obj/item/projectile/bullet/rifle/a545/bh3
+	loot_list = list(/obj/item/gun/projectile/automatic/serdy/barka = 5, /obj/item/ammo_magazine/barka = 15, /obj/item/ammo_magazine/barka = 15, /obj/item/ammo_magazine/barka = 10)
+	projectiletype = /obj/item/projectile/bullet/rifle/a545/bh2
 	projectilesound = 'sound/weapons/serdy/strela.ogg'
 	projectile_dispersion = 7
 	projectile_accuracy = -25
@@ -1265,6 +1286,7 @@
 	desc = "An ominous looking feline individual, wearing a sleek, dark black and purple voidsuit. There is something very uncanny about them. They appear to have a plasma carbine."
 	icon_living = "acolyte-plasma"
 	icon_state = "acolyte-plasma"
+	loot_list = list(/obj/item/gun/energy/plasma/x16b = 15, /obj/item/cell/x16b = 15, /obj/item/cell/x16b = 15, /obj/item/cell/x16b = 25)
 
 	projectiletype = /obj/item/projectile/energy/plasma/vepr/blackhole
 	projectilesound = 'sound/weapons/serdy/vepr.ogg'
@@ -1313,8 +1335,9 @@
 	desc = "An ominous looking feline individual, wearing a dark black and purple voidsuit. There is something very uncanny about them. They appear to have a massive HMG slung low, and ready."
 	icon_living = "acolyte-hmg"
 	icon_state = "acolyte-hmg"
+	loot_list = list(/obj/item/gun/projectile/automatic/serdy/barka = 5, /obj/item/ammo_magazine/barka = 15, /obj/item/ammo_magazine/barka = 15, /obj/item/ammo_magazine/barka = 10)
 
-	projectiletype = /obj/item/projectile/bullet/rifle/a545/bh3
+	projectiletype = /obj/item/projectile/bullet/rifle/a545/bh2
 	projectilesound = 'sound/weapons/serdy/strela.ogg'
 	projectile_dispersion = 7
 	projectile_accuracy = -25
@@ -1329,6 +1352,7 @@
 	desc = "An ominous looking feline individual, wearing a sleek, dark black and purple voidsuit. There is something very uncanny about them. They appear to have a plasma carbine and a banner bearing the symbol of Black Hole."
 	icon_living = "acolyte-banner"
 	icon_state = "acolyte-banner"
+	loot_list = list(/obj/item/gun/energy/plasma/x16b = 15, /obj/item/cell/x16b = 15, /obj/item/cell/x16b = 15, /obj/item/cell/x16b = 25)
 
 	projectiletype = /obj/item/projectile/energy/plasma/vepr/blackhole
 	projectilesound = 'sound/weapons/serdy/vepr.ogg'
@@ -1481,7 +1505,7 @@
 	icon_state = "soldier-lmg"
 
 	loot_list = null
-	projectiletype = /obj/item/projectile/bullet/rifle/a545/bh3
+	projectiletype = /obj/item/projectile/bullet/rifle/a545/bh1
 	projectilesound = 'sound/weapons/serdy/strela.ogg'
 	projectile_dispersion = 7
 	projectile_accuracy = -25
@@ -1511,7 +1535,7 @@
 	icon_state = "soldier-hmg"
 
 	loot_list = null
-	projectiletype = /obj/item/projectile/bullet/rifle/a545/bh3
+	projectiletype = /obj/item/projectile/bullet/rifle/a545/bh2
 	projectilesound = 'sound/weapons/serdy/strela.ogg'
 	projectile_dispersion = 7
 	projectile_accuracy = -25
@@ -2234,6 +2258,9 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
 	fire_sound = 'sound/weapons/rpg.ogg'
 	speed = 0.5
+	light_range = 3
+	light_power = 1
+	light_color = "#FFB25B"
 
 /obj/item/projectile/arc/explosive_rocket/rocket/bh1/on_impact(turf/T)
 	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
@@ -2250,6 +2277,10 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	fire_sound = 'sound/weapons/grenade_launcher.ogg'
 	speed = 1
 	hitsound_wall = 'sound/effects/contactor_off.ogg'
+	light_range = 3
+	light_power = 1
+	light_color = "#FFB25B"
+
 
 /obj/item/projectile/energy/homing_bolt/microrocket/on_hit(atom/movable/target, blocked = 0)
 	if(istype(target))
@@ -2408,6 +2439,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/9mmpistol.ogg'
 	speed = 1
+	damage = 20
 
 /obj/item/projectile/bullet/pistol/bh2
 	name = "bullet"
@@ -2415,6 +2447,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/vityaz.ogg'
 	speed = 1
+	damage = 25
 
 /obj/item/projectile/bullet/pistol/bh3
 	name = "bullet"
@@ -2422,6 +2455,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/ak74.ogg'
 	speed = 1
+	damage = 25
 
 /obj/item/projectile/bullet/rifle/a545/bh1
 	name = "bullet"
@@ -2429,12 +2463,18 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/sks.ogg'
 	speed = 1
+	damage = 25
 
 /obj/item/projectile/bullet/rifle/a545/bh2
 	name = "bullet"
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/strela.ogg'
+	damage = 25
+	stun = 0
+	weaken = 0
+	penetrating = 1150
+	armor_penetration = 100
 	speed = 1
 
 /obj/item/projectile/bullet/rifle/a545/bh3
@@ -2442,11 +2482,11 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/strela.ogg'
-	damage = 20
+	damage = 35
 	stun = 0
 	weaken = 0
-	penetrating = 150
-	armor_penetration = 100
+	penetrating = 1150
+	armor_penetration = 50
 	speed = 1
 
 /obj/item/projectile/bullet/rifle/a145/bh1
@@ -2455,7 +2495,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	damage = 90
 	stun = 1
 	weaken = 1
-	penetrating = 1450
+	penetrating = 5450
 	armor_penetration = 90
 	hitscan = 1 //so the PTR isn't useless as a sniper weapon
 	hud_state = "sniper"
@@ -2466,10 +2506,10 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 /obj/item/projectile/bullet/rifle/a145/bh2
 	name = "bullet"
 	fire_sound = 'sound/weapons/serdy/sks.ogg'
-	damage = 30
+	damage = 40
 	stun = 0
 	weaken = 0
-	penetrating = 400
+	penetrating = 1400
 	armor_penetration = 50
 	hitscan = 1
 	hud_state = "sniper"
@@ -2483,11 +2523,13 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	damage = 50
 	stun = 1
 	weaken = 1
-	penetrating = 3400
+	penetrating = 13400
 	armor_penetration = 100
 	hitscan = 1
 	hud_state = "sniper"
-
+	light_range = 3
+	light_power = 1
+	light_color = "#FFB25B"
 	icon_state = "bullet_alt"
 	tracer_type = /obj/effect/projectile/tracer/cannon
 
@@ -2500,7 +2542,9 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	muzzle_type = /obj/effect/projectile/muzzle/lightning
 	tracer_type = /obj/effect/projectile/tracer/lightning
 	impact_type = /obj/effect/projectile/impact/lightning
-
+	light_range = 4
+	light_power = 2
+	light_color = "#9EFFFF"
 	damage = 10
 	agony = 1
 	eyeblur = 1
@@ -2513,8 +2557,11 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
 	icon_state = "grenade"
 	fire_sound = 'sound/weapons/serdy/recoilless.ogg'
-	damage = 40
-	speed = 1
+	damage = 90
+	speed = 0.5
+	light_range = 2
+	light_power = 1
+	light_color = "#FFB25B"
 	armor_penetration = 90
 
 /obj/item/projectile/explosive_rocket/blackhole/on_impact(turf/T)

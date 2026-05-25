@@ -1764,3 +1764,97 @@
 	multiple_sprites = 1
 	matter = list(MAT_STEEL = 5400)
 	ammo_type = /obj/item/ammo_casing/a762/ap
+
+
+
+///Drobarka///
+
+
+
+/obj/item/gun/projectile/automatic/serdy/barka
+	name = "KaSK-9 Drobarka"
+	desc = "An absolutely monsterous automatic weapon, more suitable for a mech than a person. Essentially an autocannon taken off of it's mount. It is bulky, unwieldy, but the sheer volume of death it can put down in a short amount of time is unmatched. Chambered in 15x80mm."
+	caliber = "15mm"
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	icon_state = "drobarka"
+
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "drobarka"
+	wielded_item_state = "drobarka_w"
+	burst_delay = 1.5
+	magazine_type = /obj/item/ammo_magazine/barka
+	allowed_magazines = list(/obj/item/ammo_magazine/barka)
+
+	projectile_type = /obj/item/projectile/bullet/rifle/a545/bh3
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts", burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="long bursts",	burst=15, move_delay=8, burst_accuracy = list(0,-15,-15,-30,-30,0,-15,-15,-30,-30,0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT
+	w_class = ITEMSIZE_LARGE
+	one_handed_penalty = 30
+	fire_sound = 'sound/weapons/serdy/strela.ogg'
+
+/obj/item/ammo_casing/a15mm
+	desc = "A 15x80mm bullet casing."
+	caliber = "15mm"
+	icon_state = "lcasing"
+	projectile_type = /obj/item/projectile/bullet/rifle/a545/bh3
+	matter = list(MAT_STEEL = 200)
+
+/obj/item/ammo_magazine/barka
+	name = "Drobarka magazine (15x80mm)"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	caliber = "15mm"
+	icon_state = "rifle_magnum_box"
+	max_ammo = 50
+	mag_type = MAGAZINE
+	multiple_sprites = 1
+	matter = list(MAT_STEEL = 5400)
+	ammo_type = /obj/item/ammo_casing/a15mm
+
+
+/obj/item/gun/projectile/automatic/serdy/voroh
+	name = "RR-80 recoilless rifle"
+	desc = "A deadly recoilless rifle, used by Black Hole soldiers. Chambered in 80mm recoilless shells."
+	caliber = "80mm"
+	auto_loading_type = NO_AUTO_LOAD
+	load_method = SINGLE_CASING|SPEEDLOADER
+	only_open_load = TRUE
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	icon_state = "voroh"
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "voroh"
+	wielded_item_state = "voroh_w"
+
+
+	projectile_type = /obj/item/projectile/explosive_rocket/blackhole
+	max_shells = 1
+
+	ammo_type = /obj/item/ammo_casing/a80mm
+	w_class = ITEMSIZE_HUGE
+	one_handed_penalty = 70
+	bolt_name = "bolt"
+	sound_eject = 'sound/weapons/serdy/launcher_open.ogg'
+	sound_chamber = 'sound/weapons/serdy/launcher_closed.ogg'
+	fire_sound = 'sound/weapons/serdy/recoilless.ogg'
+
+/obj/item/ammo_casing/a80mm
+	desc = "A high explosive 80mm recoilless rifle shell."
+	caliber = "80mm"
+	w_class = ITEMSIZE_NORMAL
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	icon_state = "voroh"
+	projectile_type = /obj/item/projectile/explosive_rocket/blackhole
+	matter = list(MAT_STEEL = 2200)
+
+
