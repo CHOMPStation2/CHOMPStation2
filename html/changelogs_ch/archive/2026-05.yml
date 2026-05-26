@@ -166,3 +166,16 @@
   - rscadd: Added Clown/Mime as actual jobs, instead of entertainer alternative titles.
   Will:
   - bugfix: Borg sleepers and various other borg items should function properly again
+2026-05-26:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: borgs can pick up stacks of paper with misc gripper
+  Diana:
+  - bugfix: You can tug leashes again.
+  SabreKnight:
+  - bugfix: TEG tgui crash when unlinked
+  Will:
+  - rscadd: Pipe connected gas meters can no be built on each pipe layer (fuel, aux,
+      scrubber, etc)
+  - qol: Pipe connected gas meters can be examined from further away
+  - bugfix: multiple universal pipe connections properly init during map loading
+  - bugfix: fixes various snow related turfs
