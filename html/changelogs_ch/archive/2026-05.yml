@@ -179,3 +179,15 @@
   - qol: Pipe connected gas meters can be examined from further away
   - bugfix: multiple universal pipe connections properly init during map loading
   - bugfix: fixes various snow related turfs
+2026-05-28:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: update tgui-core to 6.0.0
+  - bugfix: searchable dropdown display
+  Diana:
+  - rscadd: Small chance for pain emote when taking a painful attack.
+  - bugfix: Fixes a bug where pain would spam your chat with pain messages if they
+      were significantly strong.
+  - bugfix: Pain messages have proper times now, instead of having possibly 0 times
+      per message.
+  Will:
+  - refactor: Optimizes cryoplanet subsystem
