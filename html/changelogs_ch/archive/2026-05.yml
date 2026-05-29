@@ -191,3 +191,11 @@
       per message.
   Will:
   - refactor: Optimizes cryoplanet subsystem
+2026-05-29:
+  Will:
+  - bugfix: Reverts gas meter pipe attachment to how it was before, but keeps visual
+      offset
+  - refactor: Remote view code cleanup
+  - bugfix: Several remote view bugs where the screen would turn black or be left
+      behind
+  - code_imp: duplicated health hud code removed
