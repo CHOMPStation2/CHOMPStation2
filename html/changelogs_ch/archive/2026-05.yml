@@ -199,3 +199,6 @@
   - bugfix: Several remote view bugs where the screen would turn black or be left
       behind
   - code_imp: duplicated health hud code removed
+2026-05-30:
+  Will:
+  - bugfix: Fixes universal pipe init again
