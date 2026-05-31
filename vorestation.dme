@@ -5288,6 +5288,7 @@
 #include "modular_chomp\code\datums\crafting\items.dm"
 #include "modular_chomp\code\datums\crafting\recipes.dm"
 #include "modular_chomp\code\datums\crafting\tyr_tribal.dm"
+#include "modular_chomp\code\datums\diseases\event.dm"
 #include "modular_chomp\code\datums\diseases\tyr.dm"
 #include "modular_chomp\code\datums\diseases\symptom\agate_blob.dm"
 #include "modular_chomp\code\datums\elements\lootable\christmas_present.dm"
