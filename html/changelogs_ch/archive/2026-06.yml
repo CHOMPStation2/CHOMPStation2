@@ -1,0 +1,11 @@
+2026-06-01:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: bad list del
+  Cerami:
+  - bugfix: Fix morph's body takeover to work on bellies beyond the first
+  Will:
+  - bugfix: corrected spybug runtime when remote viewing
+  - code_imp: corrects base arguments of remote_view_config/handle_relay_movement()
+      proc
+  - bugfix: remote views with hud modifiers end correctly instead of waiting an extra
+      life tick
