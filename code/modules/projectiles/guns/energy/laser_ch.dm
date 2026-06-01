@@ -113,3 +113,79 @@
 	var/is64x32_override = TRUE
 	accept_cell_type = /obj/item/cell/vepr
 	cell_type = /obj/item/cell/vepr
+
+/obj/item/gun/energy/plasma/x16b
+	name = "X16b plasma carbine"
+	desc = "An advanced plasma caster, used by elite Black Hole fanatics. Light, powerful, and concealable. Uses it's own proprietary batteries."
+	icon_expected_width = 64
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	icon_state = "x16b"
+	fire_delay = 0.5
+	projectile_type = /obj/item/projectile/energy/plasma/vepr/blackhole
+	force = 8
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "x16b"
+	wielded_item_state = "x16b_w"
+	firemodes = list(
+		list(mode_name="single shot", burst = 1, fire_delay=1, move_delay=null, burst_accuracy = null, dispersion = null),
+		list(mode_name="three shot bursts", burst=3, fire_delay=5 , move_delay=1,    burst_accuracy=list(65,65,65), dispersion=list(1,1,1)),
+		list(mode_name="short bursts",	burst=5, fire_delay=5 ,move_delay=4, burst_accuracy = list(65,65,65,65,65), dispersion = list(4,4,4,4,4)),
+		)
+
+	w_class = ITEMSIZE_NORMAL
+	slot_flags = SLOT_BELT|SLOT_BACK
+	var/is64x32_override = TRUE
+	accept_cell_type = /obj/item/cell/x16b
+	cell_type = /obj/item/cell/x16b
+
+/obj/item/cell/x16b
+	name = "plasma canister"
+	desc = "An ominous silver plated cylinder. Quite weighty, and it makes an ominous sloshing sound when you shake it."
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	icon_state = "plasma"
+	item_state = "egg6"
+	w_class = ITEMSIZE_SMALL
+	maxcharge = 7200
+	charge = 7200
+	charge_amount = 20
+	matter = list(MAT_DURASTEEL = 350, MAT_GLASS = 50, MAT_PHORON = 1000)
+	preserve_item = 1
+
+/obj/item/gun/energy/laser/las91f
+	name = "Las91f retro laser rifle"
+	desc = "The Las91f is a rare example of modern illegal hellfire laser tech, approved only for use by government forces, and even then, only in rare cases. Uses it's own proprietary batteries."
+	icon_expected_width = 64
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	icon_state = "las91f"
+	fire_delay = 1
+	projectile_type = /obj/item/projectile/beam/hellfire
+	force = 18
+	charge_cost = 80
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "las91f"
+	wielded_item_state = "las91f_w"
+	firemodes = null
+	w_class = ITEMSIZE_LARGE
+	slot_flags = SLOT_BELT|SLOT_BACK
+	is64x32_override = TRUE
+	accept_cell_type = /obj/item/cell/las91f
+	cell_type = /obj/item/cell/las91f
+
+/obj/item/cell/las91f
+	name = "retro laser canister"
+	desc = "An old school retro laser battery. Heavy and cumbersome, these are used by the illegal 'hellfire' lasers of days past. Or by select Government forces."
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	icon_state = "retrolas"
+	item_state = "egg6"
+	w_class = ITEMSIZE_NORMAL
+	maxcharge = 2000
+	charge = 2000
+	charge_amount = 20
+	matter = list(MAT_DURASTEEL = 350, MAT_GLASS = 50, MAT_URANIUM = 1000)
+	preserve_item = 1
