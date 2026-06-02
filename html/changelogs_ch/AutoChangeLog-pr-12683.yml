@@ -1,6 +1,0 @@
-author: "SilencedMP5A5"
-delete-after: True
-changes:
-  - rscadd: "new Black Hole sprites"
-  - rscadd: "some earlyported Gattening stuff (sounds, sprites)"
-  - rscdel: "old, unused Black Hole sprites"

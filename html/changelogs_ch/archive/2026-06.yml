@@ -9,3 +9,8 @@
       proc
   - bugfix: remote views with hud modifiers end correctly instead of waiting an extra
       life tick
+2026-06-02:
+  SilencedMP5A5:
+  - rscadd: new Black Hole sprites
+  - rscadd: some earlyported Gattening stuff (sounds, sprites)
+  - rscdel: old, unused Black Hole sprites
