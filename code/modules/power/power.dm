@@ -310,20 +310,8 @@
 			return
 		else if(H.gloves)
 			var/obj/item/clothing/gloves/G = H.gloves
-<<<<<<< HEAD
-			if(G.siemens_coefficient == 0)	return 0		//to avoid spamming with insulated glvoes on
-/*CHOMP Edit: Phorochem removed.
-//Phorochemistry DM: Allows chemicalresistant shocking -Radiantflash
-		for(var/datum/reagent/phororeagent/R in M.reagents.reagent_list)
-			if(R.id == REAGENT_ID_FULGURACIN)
-				to_chat(M, span_notice("Your hairs stand up, but you resist the shock for the most part"))
-				return 0 //no shock for you
-*/
-=======
 			if(G.siemens_coefficient == 0)
 				return 0		//to avoid spamming with insulated glvoes on
-
->>>>>>> cd9730a0ff (Fix promie shock mechanic & enables additional footsteps (#19500))
 	//Checks again. If we are still here subject will be shocked, trigger standard 20 tick warning
 	//Since this one is longer it will override the original one.
 	if(PN)

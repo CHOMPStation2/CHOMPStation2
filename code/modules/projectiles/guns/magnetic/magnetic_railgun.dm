@@ -121,7 +121,6 @@
 	removable_components = TRUE //CHOMPstation Edit
 
 	fire_delay = 0.1
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 	slot_flags = SLOT_BELT
 
@@ -180,7 +179,6 @@
 	item_state = "revolver"
 
 	w_class = ITEMSIZE_NORMAL
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 	slowdown_held = 0.1
 

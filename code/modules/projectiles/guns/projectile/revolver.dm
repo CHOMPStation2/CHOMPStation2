@@ -170,7 +170,6 @@
 	icon_state = "deckard-empty"
 	caliber = ".38"
 	ammo_type = /obj/item/ammo_casing/a38
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/revolver/deckard/emp
 	ammo_type = /obj/item/ammo_casing/a38/emp

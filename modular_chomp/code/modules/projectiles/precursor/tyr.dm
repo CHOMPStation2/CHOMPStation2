@@ -72,7 +72,6 @@
 		list(mode_name="area", projectile_type=/obj/item/projectile/bullet/tyrshotburst, charge_cost = 312),
 		)
 
-	move_delay = 0
 	one_handed_penalty = 50
 
 /obj/item/cell/device/weapon/recharge/alien/tyr

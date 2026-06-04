@@ -176,7 +176,6 @@
 	magazine_type = /obj/item/ammo_magazine/m9mmt/rubber
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mmt)
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 	fire_sound = "sound/weapons/gunshot_pathetic.ogg" //CHOMPedit
 
 /obj/item/gun/projectile/automatic/wt550/update_icon()
@@ -298,15 +297,9 @@
 	var/cover_open = 0
 
 	firemodes = list(
-<<<<<<< HEAD
-		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3,burst_delay=1 ,fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)), //CHOMPedit, firerate buff
-		list(mode_name="short bursts",	burst=5,burst_delay=1 ,move_delay=3, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)) //CHOMPedit, firerate buff
-=======
 		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
 		list(mode_name="short bursts",	burst=5, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
->>>>>>> cd9730a0ff (Fix promie shock mechanic & enables additional footsteps (#19500))
 		)
 
 	special_weapon_handling = TRUE
@@ -412,7 +405,6 @@
 	caliber = ".45"
 	magazine_type = /obj/item/ammo_magazine/m45uzi
 	allowed_magazines = list(/obj/item/ammo_magazine/m45uzi)
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 	var/is64x32 = TRUE
 	var/is_picked_up = FALSE
 	fire_sound = "sound/weapons/gunshot_pathetic.ogg" //CHOMPedit

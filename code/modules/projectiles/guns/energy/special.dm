@@ -26,7 +26,6 @@
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
 	charge_cost = 480
 	projectile_type = /obj/item/projectile/ion/pistol
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/energy/decloner
 	name = "biological demolecularisor"
