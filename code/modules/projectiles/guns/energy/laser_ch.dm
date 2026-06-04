@@ -60,7 +60,7 @@
 	firemodes = list(
 		list(mode_name="normal", fire_delay=8, projectile_type=/obj/item/projectile/beam/midlaser, charge_cost = 240),
 		list(mode_name="suppressive", fire_delay=5, projectile_type=/obj/item/projectile/beam/weaklaser, charge_cost = 60),
-		list(mode_name="burst", burst=3, fire_delay=null, move_delay=4, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, charge_cost = 200),
+		list(mode_name="burst", burst=3, fire_delay=null, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, charge_cost = 200),
 		)
 	force = 8
 	w_class = ITEMSIZE_HUGE		//Probably gonna make it a rifle sooner or later //CHOMP Edit, and so I did.
@@ -93,9 +93,9 @@
 	cell_type = /obj/item/cell/device/weapon
 
 	firemodes = list(
-		list(mode_name="single shot", burst = 1, fire_delay=4, move_delay=null, burst_accuracy = null, dispersion = null),
-		list(mode_name="three shot bursts", burst=3, fire_delay=10 , move_delay=4,    burst_accuracy=list(65,65,65), dispersion=list(1,1,1)),
-		list(mode_name="short bursts",	burst=5, fire_delay=10 ,move_delay=6, burst_accuracy = list(65,65,65,65,65), dispersion = list(4,4,4,4,4)),
+		list(mode_name="single shot", burst = 1, fire_delay=4, burst_accuracy = null, dispersion = null),
+		list(mode_name="three shot bursts", burst=3, fire_delay=10,    burst_accuracy=list(65,65,65), dispersion=list(1,1,1)),
+		list(mode_name="short bursts",	burst=5, fire_delay=10, burst_accuracy = list(65,65,65,65,65), dispersion = list(4,4,4,4,4)),
 		)
 
 /obj/item/gun/energy/vepr/plasma
@@ -130,9 +130,9 @@
 	item_state = "x16b"
 	wielded_item_state = "x16b_w"
 	firemodes = list(
-		list(mode_name="single shot", burst = 1, fire_delay=1, move_delay=null, burst_accuracy = null, dispersion = null),
-		list(mode_name="three shot bursts", burst=3, fire_delay=5 , move_delay=1,    burst_accuracy=list(65,65,65), dispersion=list(1,1,1)),
-		list(mode_name="short bursts",	burst=5, fire_delay=5 ,move_delay=4, burst_accuracy = list(65,65,65,65,65), dispersion = list(4,4,4,4,4)),
+		list(mode_name="single shot", burst = 1, fire_delay=1, burst_accuracy = null, dispersion = null),
+		list(mode_name="three shot bursts", burst=3, fire_delay=5,    burst_accuracy=list(65,65,65), dispersion=list(1,1,1)),
+		list(mode_name="short bursts",	burst=5, fire_delay=5, burst_accuracy = list(65,65,65,65,65), dispersion = list(4,4,4,4,4)),
 		)
 
 	w_class = ITEMSIZE_NORMAL
