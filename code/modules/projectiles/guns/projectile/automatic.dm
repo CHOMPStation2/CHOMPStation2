@@ -13,8 +13,8 @@
 //Burst accuracy is the accuracy of each bullet fired in the burst. Dispersion is how much the bullets will 'spread' away from where you aimed.
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)))
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)))
 
 /*
  * Advanced SMG
@@ -34,8 +34,8 @@
 	fire_sound = "sound/weapons/gunshot_pathetic.ogg" //CHOMPedit
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 
 /obj/item/gun/projectile/automatic/advanced_smg/update_icon()
@@ -116,8 +116,8 @@
 	one_handed_penalty = 30
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=6,    burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
 		)
 
 /obj/item/gun/projectile/automatic/sts35/update_icon(ignore_inhands)
@@ -146,8 +146,8 @@
 	fire_sound = "sound/weapons/gunshot_pathetic.ogg" //CHOMPedit
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=6,    burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
 		)
 
 /obj/item/gun/projectile/automatic/pdw/update_icon(ignore_inhands)
@@ -218,9 +218,9 @@
 
 	burst_delay = 4
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1,    fire_delay=0.1,    move_delay=null, use_launcher=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="2-round bursts", burst=2,    fire_delay=null, move_delay=6,    use_launcher=null, burst_accuracy=list(0,-15), dispersion=list(0.0, 0.6)),
-		list(mode_name="fire grenades",  burst=null, fire_delay=null, move_delay=null, use_launcher=1,    burst_accuracy=null, dispersion=null)
+		list(mode_name="semiauto",       burst=1,    fire_delay=0.1, use_launcher=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="2-round bursts", burst=2,    fire_delay=null,    use_launcher=null, burst_accuracy=list(0,-15), dispersion=list(0.0, 0.6)),
+		list(mode_name="fire grenades",  burst=null, fire_delay=null, use_launcher=1,    burst_accuracy=null, dispersion=null)
 		)
 
 	var/use_launcher = 0
@@ -298,9 +298,15 @@
 	var/cover_open = 0
 
 	firemodes = list(
+<<<<<<< HEAD
 		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round bursts", burst=3,burst_delay=1 ,fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)), //CHOMPedit, firerate buff
 		list(mode_name="short bursts",	burst=5,burst_delay=1 ,move_delay=3, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)) //CHOMPedit, firerate buff
+=======
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",	burst=5, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+>>>>>>> cd9730a0ff (Fix promie shock mechanic & enables additional footsteps (#19500))
 		)
 
 	special_weapon_handling = TRUE
@@ -378,7 +384,7 @@
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0.1),
-		list(mode_name="3-round bursts", burst=3, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.0, 0.6, 0.6))
+		list(mode_name="3-round bursts", burst=3, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.0, 0.6, 0.6))
 		)
 
 /obj/item/gun/projectile/automatic/as24/update_icon()
@@ -413,7 +419,7 @@
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0.1),
-		list(mode_name="3-round bursts", burst=3, burst_delay=1, fire_delay=4, move_delay=4, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0))
+		list(mode_name="3-round bursts", burst=3, burst_delay=1, fire_delay=4, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0))
 		)
 
 /obj/item/gun/projectile/automatic/mini_uzi/update_icon()
@@ -468,7 +474,7 @@
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0.1),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0))
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0))
 		)
 
 /obj/item/gun/projectile/automatic/p90/update_icon()
@@ -494,7 +500,7 @@
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0.1),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0))
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0))
 		)
 
 /obj/item/gun/projectile/automatic/tommygun/update_icon()
@@ -528,8 +534,8 @@
 	one_handed_penalty = 45
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="2-round bursts", burst=2, fire_delay=null, move_delay=6,    burst_accuracy=list(0,-15), dispersion=list(0.0, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
+		list(mode_name="2-round bursts", burst=2, fire_delay=null,    burst_accuracy=list(0,-15), dispersion=list(0.0, 0.6))
 		)
 
 /obj/item/gun/projectile/automatic/bullpup/update_icon(ignore_inhands)
@@ -562,7 +568,7 @@
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0.1),
-		list(mode_name="3-round bursts", burst=3, burst_delay=1, fire_delay=4, move_delay=4, burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
+		list(mode_name="3-round bursts", burst=3, burst_delay=1, fire_delay=4, burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
 		)
 
 /obj/item/gun/projectile/automatic/combatsmg/update_icon()
