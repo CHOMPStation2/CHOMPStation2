@@ -18,7 +18,6 @@
 
 	reload_time = 10
 
-	move_delay = 0
 
 	firemodes = list(
 		list(mode_name="normal", fire_delay=5, projectile_type=/obj/item/projectile/energy/frostsphere, charge_cost = 80),

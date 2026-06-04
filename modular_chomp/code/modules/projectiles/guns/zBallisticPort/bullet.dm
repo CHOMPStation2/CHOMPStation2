@@ -56,8 +56,8 @@
 	icon_state = "asval"
 	projectile_type = /obj/item/projectile/bullet/rifle/a9x39
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT
@@ -80,8 +80,8 @@
 	icon_state = "krinkov"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT
@@ -103,8 +103,8 @@
 	icon_state = "akm"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT
@@ -127,8 +127,8 @@
 	icon_state = "scrapak"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT
@@ -151,8 +151,8 @@
 	icon_state = "ak74"
 	projectile_type = /obj/item/projectile/bullet/rifle/a545
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT
@@ -237,8 +237,8 @@
 	icon_state="m16"
 	projectile_type = /obj/item/projectile/bullet/rifle/a556
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
@@ -259,8 +259,8 @@
 	icon_state="m4"
 	projectile_type = /obj/item/projectile/bullet/rifle/a556
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	load_method = MAGAZINE
@@ -282,8 +282,8 @@
 	icon_state="patriot"
 	projectile_type = /obj/item/projectile/bullet/rifle/a556
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	load_method = MAGAZINE
@@ -321,8 +321,8 @@
 	icon_state="m41b"
 	projectile_type = /obj/item/projectile/bullet/rifle/a10x24
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	w_class = ITEMSIZE_HUGE
@@ -344,8 +344,8 @@
 	icon_state="m41a"
 	projectile_type = /obj/item/projectile/bullet/rifle/a10x24
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	w_class = ITEMSIZE_HUGE
@@ -361,8 +361,8 @@
 	icon_state="t12"
 	projectile_type = /obj/item/projectile/bullet/rifle/a10x24
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	w_class = ITEMSIZE_HUGE
@@ -480,8 +480,8 @@
 	icon_state = "type901"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	w_class = ITEMSIZE_HUGE
@@ -583,8 +583,8 @@
 	icon_state = "memegun"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
@@ -601,8 +601,8 @@
 	icon_state = "tkb"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
@@ -619,8 +619,8 @@
 	icon_state = "groza"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
@@ -636,8 +636,8 @@
 	icon_state = "plamyab"
 	projectile_type = /obj/item/projectile/bullet/rifle/a9x39
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="5-round bursts", burst=5, fire_delay=0.5, move_delay=3.5,    burst_accuracy=list(0,-10,-15,-20,-25), dispersion=list(0.0, 0.3, 0.6, 0.9, 1.1))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="5-round bursts", burst=5, fire_delay=0.5,     burst_accuracy=list(0,-10,-15,-20,-25), dispersion=list(0.0, 0.3, 0.6, 0.9, 1.1))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
@@ -650,8 +650,8 @@
 	icon_state = "plamya"
 	desc = "An old school assault rifle. A favorite on the rimworld for it's blisteringly high rate of fire. One of the best selling products of W-K Heavy Manufacturing. Virtually impossible to break. The gold standard, with a rosewood thumbhole stock, a full length barrel, and an improved heatshield. The most mass produced firearm in WKHM's lineup. This one bears the 'WKHM Adamant' arkship's production stamp. Chambered in 9x39mm."
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="5-round bursts", burst=5, fire_delay=0.5, move_delay=3.5,    burst_accuracy=list(0,-5,-10,-10,-15), dispersion=list(0.0, 0.2, 0.35, 0.5, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="5-round bursts", burst=5, fire_delay=0.5,     burst_accuracy=list(0,-5,-10,-10,-15), dispersion=list(0.0, 0.2, 0.35, 0.5, 0.6))
 	)
 
 /obj/item/gun/projectile/automatic/serdy/plamya/mk3
@@ -659,8 +659,8 @@
 	icon_state = "plamyac"
 	desc = "An old school assault rifle with a modern twist. A favorite on the rimworld for it's blisteringly high rate of fire. One of the best selling products of W-K Heavy Manufacturing. Virtually impossible to break. This is a newer variant, with a fully synthetic stock, and a shorter barrel. The serial number and production stamp has been sanded off. Chambered in 9x39mm."
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="5-round bursts", burst=5, fire_delay=0.5, move_delay=3.5,    burst_accuracy=list(0,-7.5,-10,-15,-20), dispersion=list(0.0, 0.2, 0.4, 0.6, 0.7))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="5-round bursts", burst=5, fire_delay=0.5,     burst_accuracy=list(0,-7.5,-10,-15,-20), dispersion=list(0.0, 0.2, 0.4, 0.6, 0.7))
 	)
 
 //shotguns
@@ -675,9 +675,9 @@
 	icon_state = "strela"
 	projectile_type = /obj/item/projectile/bullet/shotgun
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="2-round bursts", burst=2, fire_delay=null, move_delay=3,    burst_accuracy=list(0,-5), dispersion=list(0.0, 0.2)),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="2-round bursts", burst=2, fire_delay=null,     burst_accuracy=list(0,-5), dispersion=list(0.0, 0.2)),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
@@ -725,8 +725,8 @@
 	icon_state="ppsh"
 	projectile_type = /obj/item/projectile/bullet/a762x25
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	auto_loading_type = OPEN_BOLT
 	load_method = MAGAZINE
@@ -747,8 +747,8 @@
 	icon_state="mp5"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	is_long = FALSE
@@ -763,8 +763,8 @@
 	icon_state="pitchgun"
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	is_long = FALSE
@@ -779,14 +779,13 @@
 	icon_state = "vityaz"
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	is_long = FALSE
 	fire_sound = "sound/weapons/serdy/vityaz.ogg"
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/automatic/serdy/vityazb
 	name = "WKHM 'Vityaz-B'"
@@ -799,14 +798,13 @@
 	burst_delay = 1
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	is_long = FALSE
 	fire_sound = "sound/weapons/serdy/vityaz.ogg"
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 
 //LMGs
@@ -822,10 +820,10 @@
 	icon_state = "molniya"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts", burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
-		list(mode_name="long bursts",	burst=15, move_delay=8, burst_accuracy = list(0,-15,-15,-30,-30,0,-15,-15,-30,-30,0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts", burst=5,  burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="long bursts",	burst=15, burst_accuracy = list(0,-15,-15,-30,-30,0,-15,-15,-30,-30,0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2))
 	)
 	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
@@ -842,9 +840,9 @@
 	icon_state = "pkm"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",	burst=5,  burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
 	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
@@ -861,9 +859,9 @@
 	icon_state = "rpd"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",	burst=5,  burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
 	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
@@ -880,9 +878,9 @@
 	icon_state = "rpk47"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",	burst=5,  burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
 	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
@@ -904,9 +902,9 @@
 	icon_state = "kord"
 	projectile_type = /obj/item/projectile/bullet/rifle/a127x108
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",	burst=5,  burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
 	w_class = ITEMSIZE_HUGE
 	load_method = MAGAZINE
@@ -998,14 +996,12 @@
 	is_long = FALSE
 	silenced = 1
 	icon_state = "ssp4s"
-	move_delay = 0
 
 /obj/item/gun/projectile/serdy_pistols
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	load_method = MAGAZINE
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/serdy_pistols/ssp4
 	name = "WKHM SSP4"
@@ -1016,7 +1012,6 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/ssp4)
 	icon_state = "ssp4"
 	projectile_type = /obj/item/projectile/bullet/a10mm
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/serdy_pistols/makarov
 	name = "Makarov PM"
@@ -1035,8 +1030,8 @@
 	magazine_type = /obj/item/ammo_magazine/m9mm/vp70
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm)
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-20,-40), dispersion=list(0.0, 0.9, 1.8))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-20,-40), dispersion=list(0.0, 0.9, 1.8))
 	)
 	projectile_type = /obj/item/projectile/bullet/pistol
 	fire_sound = "sound/weapons/serdy/40pistol.ogg"
@@ -1077,7 +1072,6 @@
 	desc = "A 7 shot, gas-seal revolver designed to have increased muzzle velocity by not allowing excess gasses to escape out of the sides of the cylinder. One of the few revolvers that can be suppressed. Good luck finding a suppressor for one, though. Chambered in .357."
 	icon_state = "nagant"
 	max_shells = 7
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/revolver/saa
 	name = "Colt Single Action Army"
@@ -1087,7 +1081,6 @@
 	fire_delay = 0 //fastest gun in the west
 	ammo_type = /obj/item/ammo_casing/a45
 	max_shells = 6
-	move_delay = 0
 	fire_sound = "sound/weapons/serdy/44mag.ogg"
 
 /obj/item/gun/projectile/revolver/nagant/skinned
@@ -1260,78 +1253,65 @@
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/silenced
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/deagle
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/gyropistol
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/pistol
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/pirate
 	manual_chamber = FALSE
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/derringer
 	manual_chamber = FALSE
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/luger
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/p92x
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 //pistol_vr.dm
 /obj/item/gun/projectile/lamia
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 
 /obj/item/gun/projectile/giskard	//To be updated to .380
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 //pistol_yw.dm
 /obj/item/gun/projectile/automatic/glock
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/ppk
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/m2024
 	bolt_name="slide"
@@ -1346,7 +1326,6 @@
 //revolver.dm
 /obj/item/gun/projectile/revolver 	//To be updated to use .375
 	manual_chamber = FALSE
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 
 //semiauto.dm
@@ -1568,8 +1547,8 @@
 	icon_state = "valik"
 	projectile_type = /obj/item/projectile/bullet/rifle/a545/bh1
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT
@@ -1597,8 +1576,8 @@
 	icon_state = "viper"
 	projectile_type = /obj/item/projectile/bullet/pistol/bh2
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=1,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT
@@ -1701,10 +1680,10 @@
 
 	projectile_type = /obj/item/projectile/bullet/rifle/a545/bh1
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts", burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
-		list(mode_name="long bursts",	burst=15, move_delay=8, burst_accuracy = list(0,-15,-15,-30,-30,0,-15,-15,-30,-30,0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts", burst=5,  burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="long bursts",	burst=15, burst_accuracy = list(0,-15,-15,-30,-30,0,-15,-15,-30,-30,0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT
@@ -1740,10 +1719,10 @@
 
 	projectile_type = /obj/item/projectile/bullet/rifle/a545/bh3
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts", burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
-		list(mode_name="long bursts",	burst=15, move_delay=8, burst_accuracy = list(0,-15,-15,-30,-30,0,-15,-15,-30,-30,0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts", burst=5,  burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="long bursts",	burst=15, burst_accuracy = list(0,-15,-15,-30,-30,0,-15,-15,-30,-30,0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2,0.6, 1.0, 1.0, 1.0, 1.2))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT
@@ -1808,8 +1787,8 @@
 	icon_state = "bm51"
 	projectile_type = /obj/item/projectile/bullet/rifle/a556
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0,     burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,     burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT

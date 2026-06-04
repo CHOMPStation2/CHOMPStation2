@@ -106,7 +106,6 @@
 	cell_type = /obj/item/cell/device/weapon/recharge/alien // Self charges.
 	modifystate = "alienpistol"
 	battery_lock = 1 //CHOMPedit adds battery lock.
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /datum/category_item/catalogue/anomalous/precursor_a/alien_pistol
 	name = "Precursor Alpha Weapon - Appendageheld Laser"

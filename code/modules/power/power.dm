@@ -306,18 +306,12 @@
 		PN.trigger_warning(5)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		if(H.species.siemens_coefficient <= 0)
+		if(H.species.siemens_coefficient <= 0 && !(H.species.flags & SHOCK_ABSORB)) //If we're shock immune, don't try the shock. If we absorb shock, shock us!
 			return
-		if(H.gloves)
+		else if(H.gloves)
 			var/obj/item/clothing/gloves/G = H.gloves
-			if(G.siemens_coefficient == 0)	return 0		//to avoid spamming with insulated glvoes on
-/*CHOMP Edit: Phorochem removed.
-//Phorochemistry DM: Allows chemicalresistant shocking -Radiantflash
-		for(var/datum/reagent/phororeagent/R in M.reagents.reagent_list)
-			if(R.id == REAGENT_ID_FULGURACIN)
-				to_chat(M, span_notice("Your hairs stand up, but you resist the shock for the most part"))
-				return 0 //no shock for you
-*/
+			if(G.siemens_coefficient == 0)
+				return 0		//to avoid spamming with insulated glvoes on
 	//Checks again. If we are still here subject will be shocked, trigger standard 20 tick warning
 	//Since this one is longer it will override the original one.
 	if(PN)
