@@ -1612,6 +1612,7 @@
 	set desc = "Toggle Trash Eater restriction level."
 	adminbus_trash = !adminbus_trash
 	to_chat(src, span_vwarning("Trash Eater restriction level set to [adminbus_trash ? "everything not blacklisted" : "only whitelisted items"]."))
+	log_and_message_admins("toggled their trash eater restriction level to [adminbus_trash ? "loose" : "strict"]. [ADMIN_FLW(src)]", src) //CHOMPAdd
 
 /mob/living/proc/liquidbelly_visuals()
 	set name = "Toggle Liquidbelly Visuals"
