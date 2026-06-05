@@ -23,6 +23,7 @@
 	add_verb(src, /mob/living/proc/mute_entry)
 	add_verb(src, /mob/living/proc/liquidbelly_visuals)
 	add_verb(src, /mob/living/proc/fix_vore_effects)
+	add_verb(src, /mob/living/proc/restrict_trasheater) //CHOMPAdd
 
 	if(!no_vore)
 		add_verb(src, /mob/living/proc/vorebelly_printout)
