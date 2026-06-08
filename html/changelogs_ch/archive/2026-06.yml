@@ -42,3 +42,10 @@
   Zerum:
   - rscadd: New Anthro Skeleton undersuit in Xenowear tab for prometheans.
   - bugfix: Lunchboxes from loadout correctly spawn (CTI, Mojave, Diona)
+2026-06-08:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: updates tgui dependencies
+  Diana:
+  - qol: You can now move and shoot at the same time. No longer will you shoot and
+      get stuck in place.
+  - bugfix: Clamps recoil
