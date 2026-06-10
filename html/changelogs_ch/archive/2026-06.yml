@@ -49,3 +49,8 @@
   - qol: You can now move and shoot at the same time. No longer will you shoot and
       get stuck in place.
   - bugfix: Clamps recoil
+2026-06-10:
+  Azzy.Dreemurr & Kashargul:
+  - bugfix: Talon channel work again
+  Will, Guti:
+  - rscadd: Department goal subsystem
