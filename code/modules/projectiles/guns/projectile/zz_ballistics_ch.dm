@@ -285,7 +285,7 @@
 	set name = "Use Scope"
 	set popup_menu = 1
 
-	toggle_scope(2.0)
+	toggle_scope(usr, 2.0)
 
 // AR Variants
 
@@ -542,7 +542,7 @@
 	set name = "Use Scope"
 	set popup_menu = 1
 
-	toggle_scope(2.0)
+	toggle_scope(usr, 2.0)
 
 /obj/item/gun/projectile/automatic/serdy/type901
 	name = "Type 901 Assault rifle"
@@ -612,7 +612,7 @@
 	set name = "Use Scope"
 	set popup_menu = 1
 
-	toggle_scope(2.0)
+	toggle_scope(usr, 2.0)
 
 /obj/item/gun/projectile/automatic/serdy/hectate
 	name = "Hectate II"
@@ -650,7 +650,7 @@
 	set name = "Use Scope"
 	set popup_menu = 1
 
-	toggle_scope(2.0)
+	toggle_scope(usr, 2.0)
 
 /obj/item/gun/projectile/automatic/serdy/memegun
 	name = "Hardbass Special"
