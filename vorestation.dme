@@ -2115,11 +2115,8 @@
 #include "code\game\objects\structures\mop_bucket.dm"
 #include "code\game\objects\structures\morgue.dm"
 #include "code\game\objects\structures\morgue_vr.dm"
-<<<<<<< HEAD
 #include "code\game\objects\structures\new_signs.dm"
-=======
 #include "code\game\objects\structures\mystery_box.dm"
->>>>>>> 0682e2dee9 (Ports tg's mystery boxes (#19520))
 #include "code\game\objects\structures\pillows.dm"
 #include "code\game\objects\structures\plasticflaps.dm"
 #include "code\game\objects\structures\railing.dm"
