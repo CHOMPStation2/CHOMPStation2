@@ -66,3 +66,11 @@
   - balance: Lights will break when zapping unlucky people
   - bugfix: Fixed parrying electric arcs making the unlucky person scream anyways
   - image: Added raptor tesh accents
+2026-06-15:
+  Guti:
+  - rscadd: Added Mystery Boxes
+  Will:
+  - balance: Chemical refinery pipe machines no longer require a circuit board to
+      construct
+  - refactor: Cleans up remote view code on items with zooms
+  - bugfix: taurs using scopes or binoculars no longer attempt to relay move themselves
