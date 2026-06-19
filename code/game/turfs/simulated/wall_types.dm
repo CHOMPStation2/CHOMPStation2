@@ -129,19 +129,15 @@
 /turf/simulated/wall/durasteel/Initialize(mapload, materialtype, rmaterialtype, girdertype)
 	. = ..(mapload, MAT_DURASTEEL, MAT_DURASTEEL)
 
-<<<<<<< HEAD
 // CHOMPAdd Start
-/turf/simulated/wall/durasteel/blueserg/Initialize(mapload)
+/turf/simulated/wall/durasteel/blueserg/Initialize(mapload, materialtype, rmaterialtype, girdertype)
 	. = ..(mapload, MAT_DURASTEEL, MAT_DURASTEEL)
 
 /turf/simulated/wall/durasteel/blueserg/attackby(obj/item/I, mob/user)
 	return
 // CHOMPAdd ENd
 
-/turf/simulated/wall/wood/Initialize(mapload)
-=======
 /turf/simulated/wall/wood/Initialize(mapload, materialtype, rmaterialtype, girdertype)
->>>>>>> 33fee7fbb8 (Multi Bugfix (#19524))
 	. = ..(mapload,  MAT_WOOD)
 
 /turf/simulated/wall/hardwood/Initialize(mapload, materialtype, rmaterialtype, girdertype)
@@ -150,16 +146,12 @@
 /turf/simulated/wall/sifwood/Initialize(mapload, materialtype, rmaterialtype, girdertype)
 	. = ..(mapload,  MAT_SIFWOOD)
 
-<<<<<<< HEAD
 // CHOMPEdit Start
-/turf/simulated/wall/rsifwood/Initialize(mapload)
+/turf/simulated/wall/rsifwood/Initialize(mapload, materialtype, rmaterialtype, girdertype)
 	. = ..(mapload,  MAT_SIFWOOD, MAT_SIFWOOD, MAT_SIFWOOD)
 // CHOMPEdit End
 
-/turf/simulated/wall/birchwood/Initialize(mapload)
-=======
 /turf/simulated/wall/birchwood/Initialize(mapload, materialtype, rmaterialtype, girdertype)
->>>>>>> 33fee7fbb8 (Multi Bugfix (#19524))
 	. = ..(mapload,  MAT_BIRCHWOOD)
 
 /turf/simulated/wall/pinewood/Initialize(mapload, materialtype, rmaterialtype, girdertype)
