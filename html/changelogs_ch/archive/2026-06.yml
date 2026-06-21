@@ -94,3 +94,6 @@
       the damage is significant.
   Guti:
   - rscadd: Added "hat mystery box" to Cargo's supply packs
+2026-06-21:
+  Will:
+  - bugfix: Fix a runtime in brain mob's lifetick with reagents
