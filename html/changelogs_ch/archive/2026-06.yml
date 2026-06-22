@@ -97,3 +97,14 @@
 2026-06-21:
   Will:
   - bugfix: Fix a runtime in brain mob's lifetick with reagents
+2026-06-22:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added vending machine tilt crits
+  - rscadd: Added atom crushing proc, for things falling on others.
+  - refactor: Refactored vending machine tilting
+  - rscadd: Sound effect to LOOC messages
+  - rscadd: Preference for LOOC sound
+  Diana:
+  - bugfix: Borgs can use pens in their gripper.
+  Will:
+  - bugfix: You can no longer insert buckled players into multiple cryocells at once
