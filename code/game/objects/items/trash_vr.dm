@@ -31,7 +31,6 @@
 	//CHOMPEnd
 
 //CHOMPAdd
-//Nibble is for borgs poking at borg-o's.
 /obj/item/trash/rkibble/attack_ai(mob/user as mob)
 	. = ..()
 	if(isrobot(user))
