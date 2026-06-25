@@ -207,19 +207,13 @@
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
 		if(istype(tool, /obj/item/weldingtool))
 			var/obj/item/weldingtool/welder = tool
-<<<<<<< HEAD
 			if(affected.brute_dam == 0)
 				to_chat(user, span_notice("There is no damage to the internal structure here!"))
 				return SURGERY_FAILURE
 			else
 				if(!welder.isOn() || !welder.remove_fuel(1,user))
-					return 0
-		return affected && affected.open == BONE_RETRACTED  && (affected.disfigured || affected.brute_dam > 0) && target_zone != O_MOUTH // CHOMPEdit End.
-=======
-			if(!welder.isOn() || !welder.remove_fuel(1,user))
-				return FALSE
+					return FALSE //CHOMPEdit End
 		return affected && affected.open == BONE_RETRACTED && (affected.disfigured || affected.brute_dam > 0) && target_zone != O_MOUTH
->>>>>>> 1b1f852a6b (Fixes synth surgery (#19546))
 
 /datum/surgery_step/robotics/repair_brute/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
