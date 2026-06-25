@@ -60,7 +60,6 @@
 	icon_reinf = "reinf_mesh"
 	integrity = 250
 	weight = 10
-	radiation_resistance = 25 //less then lead because it's lighter then lead.
 	protectiveness = 30
 	conductive = 0
 	opacity = 0.25

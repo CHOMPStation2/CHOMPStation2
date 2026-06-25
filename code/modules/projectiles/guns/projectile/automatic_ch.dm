@@ -40,8 +40,8 @@
 	fire_sound = "sound/weapons/Gunshot1.ogg"
 
 	firemodes = list(
-		list(mode_name="semi-automatic", burst=1, fire_delay=0, move_delay=0),
-		list(mode_name="three-round burst", burst=3, fire_delay=null, burst_delay=1, move_delay=0, burst_accuracy=list(0,-15,-20), dispersion=list(0.0, 1.0, 1.5))
+		list(mode_name="semi-automatic", burst=1, fire_delay=0),
+		list(mode_name="three-round burst", burst=3, fire_delay=null, burst_delay=1, burst_accuracy=list(0,-15,-20), dispersion=list(0.0, 1.0, 1.5))
 		)
 
 /obj/item/gun/projectile/automatic/p90/update_icon() // Code for visually updating the item depending on current magazine capacity.
@@ -80,8 +80,8 @@
 	fire_sound = "sound/weapons/Gunshot1.ogg"
 
 	firemodes = list(
-		list(mode_name="semi-automatic", burst=1, fire_delay=0, move_delay=0),
-		list(mode_name="two-shot rapidfire", burst=2, fire_delay=null, burst_delay=1, move_delay=0, burst_accuracy=list(-5,-10), dispersion=list(0.5, 1.0)),
+		list(mode_name="semi-automatic", burst=1, fire_delay=0),
+		list(mode_name="two-shot rapidfire", burst=2, fire_delay=null, burst_delay=1, burst_accuracy=list(-5,-10), dispersion=list(0.5, 1.0)),
 		)
 
 /obj/item/gun/projectile/automatic/c20r/update_icon()
@@ -113,8 +113,8 @@
 	fire_sound = "sound/weapons/ballistics/a762.ogg"
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="2-round bursts", burst=2, fire_delay=null, move_delay=6,    burst_accuracy=list(60,35), dispersion=list(0.0, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0, burst_accuracy=null, dispersion=null),
+		list(mode_name="2-round bursts", burst=2, fire_delay=null,    burst_accuracy=list(60,35), dispersion=list(0.0, 0.6))
 		)
 
 /obj/item/gun/projectile/automatic/fal/update_icon(ignore_inhands)
