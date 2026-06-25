@@ -330,18 +330,9 @@
 /obj/item/attack_hand(mob/living/user)
 	if (!user) return
 	..()
-<<<<<<< HEAD
-	if(anchored) // Start CHOMPStation Edit
-		if(hascall(src, "attack_self"))
-			return src.attack_self(user)
-		else
-			to_chat(user, span_notice("This is anchored and you can't lift it."))
-		return // End CHOMPStation Edit
-=======
 	if(anchored)
 		attack_self(user)
 		return
->>>>>>> 9fe67ff586 (Overlap fix (#19550))
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name[BP_R_HAND]
@@ -376,13 +367,8 @@
 			var/obj/effect/temporary_effect/item_pickup_ghost/ghost = new(old_loc)
 			ghost.assumeform(src)
 			ghost.animate_towards(user)
-<<<<<<< HEAD
-	//VORESTATION EDIT START. This handles possessed items.
-	if(src.possessed_voice && src.possessed_voice.len > 1 && !(user.ckey in warned_of_possession)) // CHOMPEdit Is this item possessed?
-=======
 
 	if(possessed_voice && possessed_voice.len > 1 && !(user.ckey in warned_of_possession))
->>>>>>> 9fe67ff586 (Overlap fix (#19550))
 		warned_of_possession |= user.ckey
 		tgui_alert_async(user,{"
 		THIS ITEM IS POSSESSED BY A PLAYER CURRENTLY IN THE ROUND. This could be by anomalous means or otherwise.
