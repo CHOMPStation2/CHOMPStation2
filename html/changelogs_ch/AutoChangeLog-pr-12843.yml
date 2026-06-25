@@ -1,0 +1,4 @@
+author: "Diana"
+delete-after: True
+changes:
+  - qol: "Ointment and advanced burn packs properly disinfect wounds now instead of having a 2% chance to do so."
