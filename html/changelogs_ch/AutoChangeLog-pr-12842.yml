@@ -1,0 +1,8 @@
+author: "Diana"
+delete-after: True
+changes:
+  - bugfix: "You can now eat PDAs with the owner in your stomach."
+  - bugfix: "Adminbus no longer bypasses blacklist."
+  - bugfix: "Circuit box, CE belt, bluespace harpoon, and locus are now blacklisted for object vore."
+  - code_imp: "All /storage items are able to be eaten now. Whitelist still applies."
+  - code_imp: "Trasheat now recursively searches through items that things are holding."
