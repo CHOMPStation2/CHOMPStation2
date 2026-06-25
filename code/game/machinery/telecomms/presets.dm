@@ -55,8 +55,12 @@
 	id = "Receiver A"
 	network = "tcommsat"
 	autolinkers = list("receiverA") // link to relay
+<<<<<<< HEAD
 	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, BDCM_FREQ, ENT_FREQ) // CHOMPEdit
 
+=======
+	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, ENT_FREQ, ATC_FREQ, CULTURE_FREQ)
+>>>>>>> a717c051d0 (ATC and Culture Channels (#19527))
 
 	//Common and other radio frequencies for people to freely use
 /obj/machinery/telecomms/receiver/preset_right/Initialize(mapload)
