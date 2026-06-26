@@ -1,5 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - code_imp: "Implements COMSIG_ITEM_ATTACK and ATTACK_ZONE"
-  - bugfix: "Makes GBS curable. No longer tells you to use sulfur and adranol without curing it."

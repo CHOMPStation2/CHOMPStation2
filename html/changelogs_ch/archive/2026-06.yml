@@ -108,3 +108,29 @@
   - bugfix: Borgs can use pens in their gripper.
   Will:
   - bugfix: You can no longer insert buckled players into multiple cryocells at once
+2026-06-26:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: Implements COMSIG_ITEM_ATTACK and ATTACK_ZONE
+  - bugfix: Makes GBS curable. No longer tells you to use sulfur and adranol without
+      curing it.
+  - bugfix: Borg-o's are now borg consumable again
+  - bugfix: Mice (and other simple mobs) can eat food (and snacks!)
+  Diana:
+  - bugfix: You can no longer accidentally equip gloves into occupied pockets
+  - qol: Ointment and advanced burn packs properly disinfect wounds now instead of
+      having a 2% chance to do so.
+  - bugfix: Synth organs in non-encased limbs can now be removed properly.
+  - bugfix: Makes diseases no longer infinitely stack.
+  - bugfix: You can now eat PDAs with the owner in your stomach.
+  - bugfix: Adminbus no longer bypasses blacklist.
+  - bugfix: Circuit box, CE belt, bluespace harpoon, and locus are now blacklisted
+      for object vore.
+  - code_imp: All /storage items are able to be eaten now. Whitelist still applies.
+  - code_imp: Trasheat now recursively searches through items that things are holding.
+  - image: 'Adds two new sprite accessories: Secondary Eyes Far & Near for characters
+      with 4 eyes.'
+  - image: Adds a new 'eyed tail'. Based on the altevian tail and has 3 different
+      color markings!
+  - bugfix: Leather can be used to make leather gloves instead of white gloves.
+  Guti:
+  - rscadd: Getting fulton'd away now makes the person fultoned away scream
