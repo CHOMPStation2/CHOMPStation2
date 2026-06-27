@@ -1,0 +1,6 @@
+author: "Guti"
+delete-after: True
+changes:
+  - rscadd: "Added new department goals for various departments"
+  - bugfix: "Borgs can now check department goals in their PDA"
+  - code_imp: "Added global signals for cured diseases, anomalies harvested, mail delivered, arcade wins, and blood donated."
