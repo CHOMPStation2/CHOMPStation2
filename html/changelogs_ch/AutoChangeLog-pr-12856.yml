@@ -1,0 +1,4 @@
+author: "Cerami"
+delete-after: True
+changes:
+  - qol: "Adds info to mechatronics destruction task to specify which parts exactly are wanted."
