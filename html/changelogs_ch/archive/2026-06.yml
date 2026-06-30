@@ -140,3 +140,9 @@
   - bugfix: Borgs can now check department goals in their PDA
   - code_imp: Added global signals for cured diseases, anomalies harvested, mail delivered,
       arcade wins, and blood donated.
+2026-06-30:
+  Cerami:
+  - qol: Adds info to mechatronics destruction task to specify which parts exactly
+      are wanted.
+  Diana:
+  - bugfix: Trasheat recursive search now works properly.
