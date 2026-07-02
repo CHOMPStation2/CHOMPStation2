@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "Aghost admin logs record the associated key."
+  - rscadd: "Aghost admin log on aghost"
