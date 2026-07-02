@@ -1,3 +1,6 @@
+/datum/gear/accessory/webbing_selector
+	cost = 1 //The below added the highercost/special ones to the loadout for 1 point.
+
 /datum/gear/accessory/brown_vest
 	display_name = "webbing, brown"
 	path = /obj/item/clothing/accessory/storage/brown_vest
