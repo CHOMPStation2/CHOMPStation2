@@ -57,6 +57,7 @@ ADMIN_VERB(admin_ghost, R_HOLDER, "Aghost", "Ghost out of your body with the opt
 		to_chat(user, span_filter_system(span_warning("Error: Aghost: Can't admin-ghost whilst in the lobby. Join or Observe first.")))
 	else
 		//ghostize
+		log_and_message_admins("[user] has aghosted.") //CHOMPEdit - Keep messaging admins
 		var/mob/body = mob
 		var/mob/observer/dead/ghost
 		if(build_mode)
