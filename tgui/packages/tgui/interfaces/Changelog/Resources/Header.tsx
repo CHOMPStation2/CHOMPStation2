@@ -6,7 +6,7 @@ export const Header = (props: { dateDropdown: ReactNode | null }) => {
 
   return (
     <Section>
-      <h1>VOREStation Changelist</h1>
+      <h1>CHOMPStation Changelist</h1>
       <p>
         {'The GitHub repository can be found '}
         <a href="https://github.com/CHOMPStation2/CHOMPStation2">here</a>

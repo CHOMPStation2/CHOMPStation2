@@ -7,7 +7,7 @@ export const Footer = (props: { dateDropdown: ReactNode | null }) => {
   return (
     <Section>
       {dateDropdown}
-      <h3>VOREStation License</h3>
+      <h3>CHOMPStation License</h3>
       <p>
         {'All code after '}
         <a
