@@ -278,7 +278,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			to_chat(src, span_warning("The astral cord that ties your body and your spirit has been severed. You are likely to wander the realm beyond until your body is finally dead and thus reunited with you."))
 			return
 	if(admin_ghosted)
-		log_and_message_admins("[src] re-entered their body.") //CHOMPEdit - Keep messaging admins
+		log_and_message_admins("re-entered their body.", src) //CHOMPEdit - Keep messaging admins
 	mind.current.ajourn=0
 	mind.current.key = key
 	mind.current.teleop = null
