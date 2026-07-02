@@ -19,12 +19,9 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	CHANNEL_SECURITY_1		= SEC_I_FREQ,
 	CHANNEL_TALON			= TALON_FREQ, //VOREStation Add
 	CHANNEL_CASINO			= CSN_FREQ,
-<<<<<<< HEAD
-	CHANNEL_OUTSIDER		= OUT_FREQ // CHOMPAdd
-=======
+	CHANNEL_OUTSIDER		= OUT_FREQ, // CHOMPAdd
 	CHANNEL_ATC				= ATC_FREQ,
 	CHANNEL_CULTURE			= CULTURE_FREQ
->>>>>>> a717c051d0 (ATC and Culture Channels (#19527))
 ))
 
 // Hey, if anyone ever needs to update tgui/packages/tgui/constants.js with new radio channels
