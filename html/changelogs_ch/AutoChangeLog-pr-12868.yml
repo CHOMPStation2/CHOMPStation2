@@ -1,0 +1,6 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - refactor: "Trasheat code is a bit easier to follow on the backend, now."
+  - bugfix: "Throwing trash now properly respects the recursive search check."
+  - code_imp: "Optimizes healbelly code so that handle_belly_update isn't called upwards of 26 times a cycle, only called one time a cycle now."
