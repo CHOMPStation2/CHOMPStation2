@@ -3,3 +3,9 @@
   - bugfix: EMPs no longer do double damage to limbs.
   Diana & Admiral Dragon:
   - sound: Adds a new scream emote for xenochimera.
+2026-07-03:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Aghost admin logs record the associated key.
+  - rscadd: Aghost admin log on aghost
+  - code_imp: update rust-g to 6.2
+  - code_imp: update tgui dependencies
