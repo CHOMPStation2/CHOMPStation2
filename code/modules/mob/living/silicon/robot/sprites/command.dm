@@ -43,12 +43,8 @@
 	src.modules += new /obj/item/hand_labeler(src)
 	src.modules += new /obj/item/stamp(src)
 	src.modules += new /obj/item/stamp/denied(src)
-<<<<<<< HEAD
 	src.modules += new /obj/item/taskmanager(src) //Needs to be ported over. //CHOMPEDIT ENABLE
-=======
-	//src.modules += new /obj/item/taskmanager(src) //Needs to be ported over.
 	src.modules += new /obj/item/gun/energy/taser/mounted/cyborg(src)
->>>>>>> a8de454e03 (Command borg (#19562))
 	src.emag += new /obj/item/stamp/chameleon(src)
 	src.emag += new /obj/item/pen/chameleon(src)
 
