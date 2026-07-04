@@ -1,5 +1,0 @@
-author: "Zerum, Diana"
-delete-after: True
-changes:
-  - rscadd: "Verb under Abilities > Settings for borgs to select footstep sound"
-  - rscadd: "Selected step sounds now apply to borgs"

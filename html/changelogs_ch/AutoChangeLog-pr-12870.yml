@@ -1,5 +1,0 @@
-author: "Guti"
-delete-after: True
-changes:
-  - rscadd: "Command borgs now start with a fancier pen and a taser"
-  - qol: "Allows Command borgs to use their ID to change other IDs"

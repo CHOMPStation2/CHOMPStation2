@@ -9,3 +9,19 @@
   - rscadd: Aghost admin log on aghost
   - code_imp: update rust-g to 6.2
   - code_imp: update tgui dependencies
+2026-07-04:
+  CHOMPStation2StaffMirrorBot:
+  - refactor: Trasheat code is a bit easier to follow on the backend, now.
+  - bugfix: Throwing trash now properly respects the recursive search check.
+  - code_imp: Optimizes healbelly code so that handle_belly_update isn't called upwards
+      of 26 times a cycle, only called one time a cycle now.
+  Diana:
+  - qol: The survival watch GPS can now be renamed.
+  Guti:
+  - rscadd: Added spring traps.
+  - bugfix: Fixed waddling making you not spin when tossed.
+  - rscadd: Command borgs now start with a fancier pen and a taser
+  - qol: Allows Command borgs to use their ID to change other IDs
+  Zerum, Diana:
+  - rscadd: Verb under Abilities > Settings for borgs to select footstep sound
+  - rscadd: Selected step sounds now apply to borgs

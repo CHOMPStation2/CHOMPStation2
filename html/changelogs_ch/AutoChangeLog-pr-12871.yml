@@ -1,5 +1,0 @@
-author: "Guti"
-delete-after: True
-changes:
-  - rscadd: "Added spring traps."
-  - bugfix: "Fixed waddling making you not spin when tossed."
