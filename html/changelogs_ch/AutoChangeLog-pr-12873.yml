@@ -1,0 +1,6 @@
+author: "Diana"
+delete-after: True
+changes:
+  - bugfix: "The fridge toggle now properly works"
+  - bugfix: "Tcomms and shield gen will no longer runtime"
+  - bugfix: "Instrument and fridge hum are now under 'SOUNDS' instead of 'SOUND'"
