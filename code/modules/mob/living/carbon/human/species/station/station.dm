@@ -1700,6 +1700,10 @@
 		/mob/living/carbon/human/proc/shapeshifter_reassemble)		//Xenochimera get all the special verbs since they can't select traits.
 		// CHOMPEdit: Lick Wounds Verb, reform verb
 
+	default_emotes = list(
+		/datum/decl/emote/audible/xenochimera_scream,
+	)
+
 	virus_immune = 1 // They practically ARE one.
 	min_age = 18
 	max_age = 80

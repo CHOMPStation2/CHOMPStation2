@@ -95,6 +95,7 @@
 				if(3)
 					addtimer(CALLBACK(src, PROC_REF(random_firing), A, 10, 1, 7), 0.5 SECONDS, TIMER_DELETE_ME)
 					attackcycle = 0
+					parry_chance = 0
 					icon_state = "shield_mecha"
 		if(I_GRAB) //phase2
 			switch(attackcycle)
@@ -111,6 +112,7 @@
 				if(3)
 					addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 10, 1, 7), 0.5 SECONDS, TIMER_DELETE_ME)
 					attackcycle = 0
+					parry_chance = 0
 					icon_state = "shield_mecha"
 		if(I_DISARM) //phase3
 			switch(attackcycle)
