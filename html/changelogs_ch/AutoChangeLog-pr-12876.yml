@@ -1,5 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - qol: "Welding Goggles to Autolathes.  Welding Helmets are already accessible from Autolathes, Goggles have no reason not to be."
-  - qol: "Graviton Goggles to Cargo Protolathe, so the people bringing the materials in will be able to see more of what they are mining."

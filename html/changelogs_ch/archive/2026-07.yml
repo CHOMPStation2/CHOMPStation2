@@ -25,3 +25,16 @@
   Zerum, Diana:
   - rscadd: Verb under Abilities > Settings for borgs to select footstep sound
   - rscadd: Selected step sounds now apply to borgs
+2026-07-07:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: longer account names no longer move the account buttons outside of the
+      UI view of the accounts uplink terminal
+  - qol: Welding Goggles to Autolathes.  Welding Helmets are already accessible from
+      Autolathes, Goggles have no reason not to be.
+  - qol: Graviton Goggles to Cargo Protolathe, so the people bringing the materials
+      in will be able to see more of what they are mining.
+  Diana:
+  - bugfix: Glass wire will properly cut limbs open.
+  - bugfix: The fridge toggle now properly works
+  - bugfix: Tcomms and shield gen will no longer runtime
+  - bugfix: Instrument and fridge hum are now under 'SOUNDS' instead of 'SOUND'

@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "longer account names no longer move the account buttons outside of the UI view of the accounts uplink terminal"
