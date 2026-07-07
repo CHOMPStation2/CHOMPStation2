@@ -1,0 +1,6 @@
+author: "Will"
+delete-after: True
+changes:
+  - bugfix: "Ventcrawling no longer makes you invisible under certain conditions"
+  - bugfix: "Universal pipe adaptors no longer drop ventcrawlers out of vent crawling"
+  - rscadd: "Ventcrawlers can now change pipe layer while in a universal pipe adaptor by pressing in a perpendicular direction"
