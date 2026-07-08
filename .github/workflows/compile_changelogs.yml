@@ -42,27 +42,27 @@ jobs:
       - name: "Compile"
         #if: steps.value_holder.outputs.ACTIONS_ENABLED
         run: |
-          python tools/ss13_genchangelog.py html/changelogs_ch
+          python tools/ss13_genchangelog.py html/changelogs
 
       - name: Commit
         #if: steps.value_holder.outputs.ACTIONS_ENABLED
         run: |
-          git config --local user.name "chompstation-ci[bot]"
-          git config --local user.email "12787406+chompstation-ci[bot]@users.noreply.github.com"
+          git config --local user.name "vorestation-ci[bot]"
+          git config --local user.email "199609141+vorestation-ci[bot]@users.noreply.github.com"
           git pull origin master
-          git add html/changelogs_ch
+          git add html/changelogs
           git commit -m "Automatic changelog compile [ci skip]" -a || true
 
       - name: Generate App Token
         id: app-token-generation
         uses: actions/create-github-app-token@v3.2.0
-        if: env.APP_PRIVATE_KEY != '' && env.APP_ID != ''
+        if: env.APP_PRIVATE_KEY != '' && env.APP_CLIENT_ID != ''
         with:
-          app-id: ${{ secrets.APP_ID }}
+          client-id: ${{ secrets.APP_CLIENT_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
         env:
           APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
-          APP_ID: ${{ secrets.APP_ID }}
+          APP_CLIENT_ID: ${{ secrets.APP_CLIENT_ID }}
 
       - name: "Push"
         #if: steps.value_holder.outputs.ACTIONS_ENABLED
