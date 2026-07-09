@@ -81,15 +81,6 @@
 
 // New Stuff
 
-/datum/design_techweb/board/food_replicator
-	name = "Food Replicator"
-	id = "food_replicator"
-	build_path = /obj/item/circuitboard/food_replicator
-	category = list(
-		RND_CATEGORY_MACHINE
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
-
 /datum/design_techweb/mindbinder
 	name = "Mind Binder"
 	id = "mindbinder"
