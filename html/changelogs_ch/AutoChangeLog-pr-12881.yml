@@ -1,5 +1,0 @@
-author: "Guti"
-delete-after: True
-changes:
-  - bugfix: "Fixed spring traps being triggered by abstract objects"
-  - qol: "Spring trap kits will deploy based on the user's direction"

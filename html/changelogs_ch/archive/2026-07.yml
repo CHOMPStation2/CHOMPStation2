@@ -46,3 +46,14 @@
   - bugfix: Universal pipe adaptors no longer drop ventcrawlers out of vent crawling
   - rscadd: Ventcrawlers can now change pipe layer while in a universal pipe adaptor
       by pressing in a perpendicular direction
+2026-07-09:
+  Guti:
+  - bugfix: Fixed spring traps being triggered by abstract objects
+  - qol: Spring trap kits will deploy based on the user's direction
+  Kashargul:
+  - bugfix: github workflows
+  Will:
+  - refactor: removed global is_hot() proc only used by wall attacks
+  - qol: Borgs can open the gridchecker's UI
+  - rscadd: The AI can now hear area ambience sounds depending on their hologram or
+      core's location
