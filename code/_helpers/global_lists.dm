@@ -441,7 +441,6 @@ GLOBAL_LIST_INIT(reagent_containers_can_be_placed_into, list(
 		/obj/vehicle/train/trolley_tank,
 		/obj/machinery/feeder, //CHOMPedit,
 		/obj/machinery/chemical_synthesizer, //CHOMPedit,
-		/obj/machinery/food_replicator // CHOMPAdd
 	),
 	REAGENT_CONTAINER_CAN_BE_PLACED_INTO_WATERCOOLER = list(
 		/obj/structure/table,
