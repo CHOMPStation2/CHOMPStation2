@@ -738,49 +738,32 @@
 
 
 ///Micromechs...I know downstream is going to disable these from orbit, so feel free to take the line below to add your disable start:
-/* CHOMPEdit: Disable Start */
-// /datum/design_techweb/mechfab/gopher
-// 	desc = "A part used in the construction of the Gopher micro mech series"
-// 	category = list(
-// 		RND_CATEGORY_MECHFAB_GOPHER + RND_SUBCATEGORY_MECHFAB_CHASSIS
-// 	)
+/*
+// CHOMPEdit: Disable Start
+/datum/design_techweb/mechfab/gopher
+	desc = "A part used in the construction of the Gopher micro mech series"
+	category = list(
+		RND_CATEGORY_MECHFAB_GOPHER + RND_SUBCATEGORY_MECHFAB_CHASSIS
+	)
 
-// /datum/design_techweb/mechfab/gopher/gopher_main
-// 	name = "'Gopher' central control circuit"
-// 	id = "gopher_main"
-// 	build_path = /obj/item/circuitboard/mecha/gopher/main
-// 	materials = list(MAT_GLASS = 2000)
+/datum/design_techweb/mechfab/gopher/gopher_main
+	name = "'Gopher' central control circuit"
+	id = "gopher_main"
+	build_path = /obj/item/circuitboard/mecha/gopher/main
+	materials = list(MAT_GLASS = 2000)
 
-// /datum/design_techweb/mechfab/gopher/gopher_peri
-// 	name = "'Gopher' peripherals control circuit"
-// 	id = "gopher_peri"
-// 	build_path = /obj/item/circuitboard/mecha/gopher/peripherals
-// 	materials = DEFAULT_CIRCUIT_MATERIALS
+/datum/design_techweb/mechfab/gopher/gopher_peri
+	name = "'Gopher' peripherals control circuit"
+	id = "gopher_peri"
+	build_path = /obj/item/circuitboard/mecha/gopher/peripherals
+	materials = DEFAULT_CIRCUIT_MATERIALS
 
-// /datum/design_techweb/mechfab/gopher/chassis
-// 	name = "Gopher Chassis"
-// 	id = "gopher_chassis"
-// 	build_path = /obj/item/mecha_parts/micro/chassis/gopher
-// 	materials = DEFAULT_CIRCUIT_MATERIALS
+/datum/design_techweb/mechfab/gopher/chassis
+	name = "Gopher Chassis"
+	id = "gopher_chassis"
+	build_path = /obj/item/mecha_parts/micro/chassis/gopher
+	materials = DEFAULT_CIRCUIT_MATERIALS
 
-<<<<<<< HEAD
-// /datum/design_techweb/mechfab/gopher/torso
-// 	name = "Gopher Torso"
-// 	id = "gopher_torso"
-// 	build_path = /obj/item/mecha_parts/micro/part/gopher_torso
-// 	materials = list(MAT_STEEL = 15000, MAT_GLASS = 5250)
-
-// /datum/design_techweb/mechfab/gopher/left_arm
-// 	name = "Gopher Left Arm"
-// 	id = "gopher_left_arm"
-// 	build_path = /obj/item/mecha_parts/micro/part/gopher_left_arm
-// 	materials = list(MAT_STEEL = 8750)
-
-// /datum/design_techweb/mechfab/gopher/right_arm
-// 	name = "Gopher Right Arm"
-// 	id = "gopher_right_arm"
-// 	build_path = /obj/item/mecha_parts/micro/part/gopher_right_arm
-=======
 /datum/design_techweb/mechfab/gopher/chassis
 	name = "Gopher Chassis"
 	id = "gopher_chassis"
@@ -797,52 +780,6 @@
 	name = "Gopher Left Arm"
 	id = "gopher_left_arm"
 	build_path = /obj/item/mecha_parts/micro/part/gopher_left_arm
-	materials = list(MAT_STEEL = MATERIAL_COST(4.375))
->>>>>>> e9d2322565 (Makes material costs use sheets amount define (#19584))
-
-// 	materials = list(MAT_STEEL = 8750)
-
-<<<<<<< HEAD
-// /datum/design_techweb/mechfab/gopher/left_leg
-// 	name = "Gopher Left Leg"
-// 	id = "gopher_left_leg"
-// 	build_path = /obj/item/mecha_parts/micro/part/gopher_left_leg
-// 	materials = list(MAT_STEEL = 12500)
-
-// /datum/design_techweb/mechfab/gopher/right_leg
-// 	name = "Gopher Right Leg"
-// 	id = "gopher_right_leg"
-// 	build_path = /obj/item/mecha_parts/micro/part/gopher_right_leg
-// 	materials = list(MAT_STEEL = 12500)
-
-// /datum/design_techweb/micro
-// 	name = "Miniature Drill"
-// 	id = "micro_drill"
-// 	build_type = MECHFAB
-// 	build_path = /obj/item/mecha_parts/mecha_equipment/tool/drill/micro
-// 	materials = list(MAT_STEEL = 2500)
-// 	category = list(
-// 		RND_CATEGORY_MECHFAB_EQUIPMENT
-// 	)
-// 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
-
-// /datum/design_techweb/hydraulic_clampmicro
-// 	name = "Mounted ore box"
-// 	id = "ore_scoop"
-// 	build_type = MECHFAB
-// 	build_path = /obj/item/mecha_parts/mecha_equipment/tool/micro/orescoop
-// 	materials = list(MAT_STEEL = 2500)
-// 	category = list(
-// 		RND_CATEGORY_MECHFAB_EQUIPMENT
-// 	)
-// 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
-
-// /datum/design_techweb/mechfab/polecat
-// 	desc = "A part used in the construction of the Gopher micro mech series"
-// 	category = list(
-// 		RND_CATEGORY_MECHFAB_POLECAT + RND_SUBCATEGORY_MECHFAB_CHASSIS
-// 	)
-=======
 	materials = list(MAT_STEEL = MATERIAL_COST(4.375))
 
 /datum/design_techweb/mechfab/gopher/left_leg
@@ -878,78 +815,34 @@
 		RND_CATEGORY_MECHFAB_EQUIPMENT
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
->>>>>>> e9d2322565 (Makes material costs use sheets amount define (#19584))
 
-// /datum/design_techweb/mechfab/polecat/polecat_main
-// 	name = "'Polecat' central control circuit"
-// 	id = "polecat_main"
-// 	// req_tech = list(TECH_DATA = 4)
-// 	build_path = /obj/item/circuitboard/mecha/polecat/main
-// 	materials = DEFAULT_CIRCUIT_MATERIALS
+/datum/design_techweb/mechfab/polecat/polecat_main
+	name = "'Polecat' central control circuit"
+	id = "polecat_main"
+	// req_tech = list(TECH_DATA = 4)
+	build_path = /obj/item/circuitboard/mecha/polecat/main
+	materials = DEFAULT_CIRCUIT_MATERIALS
 
-// /datum/design_techweb/mechfab/polecat/polecat_peri
-// 	name = "'Polecat' peripherals control circuit"
-// 	id = "polecat_peri"
-// 	// req_tech = list(TECH_DATA = 4)
-// 	build_path = /obj/item/circuitboard/mecha/polecat/peripherals
-// 	materials = DEFAULT_CIRCUIT_MATERIALS
+/datum/design_techweb/mechfab/polecat/polecat_peri
+	name = "'Polecat' peripherals control circuit"
+	id = "polecat_peri"
+	// req_tech = list(TECH_DATA = 4)
+	build_path = /obj/item/circuitboard/mecha/polecat/peripherals
+	materials = DEFAULT_CIRCUIT_MATERIALS
 
-// /datum/design_techweb/mechfab/polecat/polecat_targ
-// 	name = "'Polecat' weapon control and targeting circuit"
-// 	id = "polecat_targ"
-// 	// req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
-// 	build_path = /obj/item/circuitboard/mecha/polecat/targeting
-// 	materials = DEFAULT_CIRCUIT_MATERIALS
+/datum/design_techweb/mechfab/polecat/polecat_targ
+	name = "'Polecat' weapon control and targeting circuit"
+	id = "polecat_targ"
+	// req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
+	build_path = /obj/item/circuitboard/mecha/polecat/targeting
+	materials = DEFAULT_CIRCUIT_MATERIALS
 
-// /datum/design_techweb/mechfab/polecat/chassis
-// 	name = "Polecat Chassis"
-// 	id = "polecat_chassis"
-// 	build_path = /obj/item/mecha_parts/micro/chassis/polecat
-// 	materials = list(MAT_STEEL = 7000)
+/datum/design_techweb/mechfab/polecat/chassis
+	name = "Polecat Chassis"
+	id = "polecat_chassis"
+	build_path = /obj/item/mecha_parts/micro/chassis/polecat
+	materials = list(MAT_STEEL = 7000)
 
-<<<<<<< HEAD
-// /datum/design_techweb/mechfab/polecat/torso
-// 	name = "Polecat Torso"
-// 	id = "polecat_torso"
-// 	build_path = /obj/item/mecha_parts/micro/part/polecat_torso
-// 	materials = list(MAT_STEEL = 15000, MAT_GLASS = 5250)
-
-// /datum/design_techweb/mechfab/polecat/left_arm
-// 	name = "Polecat Left Arm"
-// 	id = "polecat_left_arm"
-// 	build_path = /obj/item/mecha_parts/micro/part/polecat_left_arm
-// 	materials = list(MAT_STEEL = 8750)
-
-// /datum/design_techweb/mechfab/polecat/right_arm
-// 	name = "Polecat Right Arm"
-// 	id = "polecat_right_arm"
-// 	build_path = /obj/item/mecha_parts/micro/part/polecat_right_arm
-// 	materials = list(MAT_STEEL = 8750)
-
-// /datum/design_techweb/mechfab/polecat/left_leg
-// 	name = "Polecat Left Leg"
-// 	id = "polecat_left_leg"
-// 	build_path = /obj/item/mecha_parts/micro/part/polecat_left_leg
-// 	materials = list(MAT_STEEL = 12500)
-
-// /datum/design_techweb/mechfab/polecat/right_leg
-// 	name = "Polecat Right Leg"
-// 	id = "polecat_right_leg"
-// 	build_path = /obj/item/mecha_parts/micro/part/polecat_right_leg
-// 	materials = list(MAT_STEEL = 12500)
-
-// /datum/design_techweb/mechfab/polecat/armour
-// 	name = "Polecat Armour Plates"
-// 	id = "polecat_armour"
-// 	build_path = /obj/item/mecha_parts/micro/part/polecat_armour
-// 	materials = list(MAT_STEEL = 12500, MAT_PLASTIC = 7500)
-
-// /datum/design_techweb/mechfab/weasel
-// 	desc = "A part used in the construction of the Weasel micro mech series"
-// 	category = list(
-// 		RND_CATEGORY_MECHFAB_WEASEL + RND_SUBCATEGORY_MECHFAB_CHASSIS
-// 	)
-=======
 /datum/design_techweb/mechfab/polecat/chassis
 	name = "Polecat Chassis"
 	id = "polecat_chassis"
@@ -991,78 +884,34 @@
 	id = "polecat_armour"
 	build_path = /obj/item/mecha_parts/micro/part/polecat_armour
 	materials = list(MAT_STEEL = MATERIAL_COST(6.25), MAT_PLASTIC = MATERIAL_COST(3.75))
->>>>>>> e9d2322565 (Makes material costs use sheets amount define (#19584))
 
-// /datum/design_techweb/mechfab/weasel/weasel_main
-// 	name = "'Weasel' central control circuit"
-// 	id = "weasel_main"
-// 	// req_tech = list(TECH_DATA = 4)
-// 	build_path = /obj/item/circuitboard/mecha/weasel/main
-// 	materials = DEFAULT_CIRCUIT_MATERIALS
+/datum/design_techweb/mechfab/weasel/weasel_main
+	name = "'Weasel' central control circuit"
+	id = "weasel_main"
+	// req_tech = list(TECH_DATA = 4)
+	build_path = /obj/item/circuitboard/mecha/weasel/main
+	materials = DEFAULT_CIRCUIT_MATERIALS
 
-// /datum/design_techweb/mechfab/weasel/weasel_peri
-// 	name = "'Weasel' peripherals control circuit"
-// 	id = "weasel_peri"
-// 	// req_tech = list(TECH_DATA = 4)
-// 	build_path = /obj/item/circuitboard/mecha/weasel/peripherals
-// 	materials = DEFAULT_CIRCUIT_MATERIALS
+/datum/design_techweb/mechfab/weasel/weasel_peri
+	name = "'Weasel' peripherals control circuit"
+	id = "weasel_peri"
+	// req_tech = list(TECH_DATA = 4)
+	build_path = /obj/item/circuitboard/mecha/weasel/peripherals
+	materials = DEFAULT_CIRCUIT_MATERIALS
 
-// /datum/design_techweb/mechfab/weasel/weasel_targ
-// 	name = "'Weasel' weapon control and targeting circuit"
-// 	id = "weasel_targ"
-// 	// req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
-// 	build_path = /obj/item/circuitboard/mecha/weasel/targeting
-// 	materials = DEFAULT_CIRCUIT_MATERIALS
+/datum/design_techweb/mechfab/weasel/weasel_targ
+	name = "'Weasel' weapon control and targeting circuit"
+	id = "weasel_targ"
+	// req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
+	build_path = /obj/item/circuitboard/mecha/weasel/targeting
+	materials = DEFAULT_CIRCUIT_MATERIALS
 
-// /datum/design_techweb/mechfab/weasel/chassis
-// 	name = "Weasel Chassis"
-// 	id = "weasel_chassis"
-// 	build_path = /obj/item/mecha_parts/micro/chassis/weasel
-// 	materials = list(MAT_STEEL = 7000)
+/datum/design_techweb/mechfab/weasel/chassis
+	name = "Weasel Chassis"
+	id = "weasel_chassis"
+	build_path = /obj/item/mecha_parts/micro/chassis/weasel
+	materials = list(MAT_STEEL = 7000)
 
-<<<<<<< HEAD
-// /datum/design_techweb/mechfab/weasel/torso
-// 	name = "Weasel Torso"
-// 	id = "weasel_torso"
-// 	build_path = /obj/item/mecha_parts/micro/part/weasel_torso
-// 	materials = list(MAT_STEEL = 15000, MAT_GLASS = 5250)
-
-// /datum/design_techweb/mechfab/weasel/left_arm
-// 	name = "Weasel Left Arm"
-// 	id = "weasel_left_arm"
-// 	build_path = /obj/item/mecha_parts/micro/part/weasel_left_arm
-// 	materials = list(MAT_STEEL = 8750)
-
-// /datum/design_techweb/mechfab/weasel/right_arm
-// 	name = "Weasel Right Arm"
-// 	id = "weasel_right_arm"
-// 	build_path = /obj/item/mecha_parts/micro/part/weasel_right_arm
-// 	materials = list(MAT_STEEL = 8750)
-
-// /*/datum/design_techweb/mechfab/weasel/left_leg
-// 	name = "Weasel Left Leg"
-// 	id = "weasel_left_leg"
-// 	build_path = /obj/item/mecha_parts/micro/part/weasel_left_leg
-// 	materials = list(MAT_STEEL = 12500)
-
-// /datum/design_techweb/mechfab/weasel/right_leg
-// 	name = "Weasel Right Leg"
-// 	id = "weasel_right_leg"
-// 	build_path = /obj/item/mecha_parts/micro/part/weasel_right_leg
-// 	materials = list(MAT_STEEL = 12500)*/
-
-// /datum/design_techweb/mechfab/weasel/tri_leg
-// 	name = "Weasel Tri Leg"
-// 	id = "weasel_right_leg"
-// 	build_path = /obj/item/mecha_parts/micro/part/weasel_tri_leg
-// 	materials = list(MAT_STEEL = 27500)
-
-// /datum/design_techweb/mechfab/weasel/head
-// 	name = "Weasel Head"
-// 	id = "weasel_head"
-// 	build_path = /obj/item/mecha_parts/micro/part/weasel_head
-// 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 2500)
-=======
 /datum/design_techweb/mechfab/weasel/chassis
 	name = "Weasel Chassis"
 	id = "weasel_chassis"
@@ -1087,7 +936,7 @@
 	build_path = /obj/item/mecha_parts/micro/part/weasel_right_arm
 	materials = list(MAT_STEEL = MATERIAL_COST(4.375))
 
-/*/datum/design_techweb/mechfab/weasel/left_leg
+/datum/design_techweb/mechfab/weasel/left_leg
 	name = "Weasel Left Leg"
 	id = "weasel_left_leg"
 	build_path = /obj/item/mecha_parts/micro/part/weasel_left_leg
@@ -1097,7 +946,7 @@
 	name = "Weasel Right Leg"
 	id = "weasel_right_leg"
 	build_path = /obj/item/mecha_parts/micro/part/weasel_right_leg
-	materials = list(MAT_STEEL = MATERIAL_COST(6.25))*/
+	materials = list(MAT_STEEL = MATERIAL_COST(6.25))
 
 /datum/design_techweb/mechfab/weasel/tri_leg
 	name = "Weasel Tri Leg"
@@ -1110,7 +959,6 @@
 	id = "weasel_head"
 	build_path = /obj/item/mecha_parts/micro/part/weasel_head
 	materials = list(MAT_STEEL = MATERIAL_COST(3.5), MAT_GLASS = MATERIAL_COST(1.25))
->>>>>>> e9d2322565 (Makes material costs use sheets amount define (#19584))
 
 //End of micromechs.
-/* CHOMPEdit: Disable End */
+*/ //CHOMPEdit End

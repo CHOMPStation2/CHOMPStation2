@@ -401,16 +401,12 @@
 	icon_state = "lcasing"
 	caliber = "14.5mm"
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
-<<<<<<< HEAD
-	matter = list(MAT_STEEL = 4000, MAT_PLASTEEL = 500) //CHOMPedit Makes them a bit more expensive
-=======
-	matter = list(MAT_STEEL = MATERIAL_COST(0.625))
->>>>>>> e9d2322565 (Makes material costs use sheets amount define (#19584))
+	matter = list(MAT_STEEL = MATERIAL_COST(2), MAT_PLASTEEL = MATERIAL_COST(0.25)) //CHOMPedit Makes them a bit more expensive
 
 /obj/item/ammo_casing/a145/highvel
 	desc = "A 14.5mm sabot shell."
 	projectile_type = /obj/item/projectile/bullet/rifle/a145/highvel
-	matter = list(MAT_STEEL = 4000, MAT_PLASTEEL = 1000) //CHOMPedit Makes them a bit more expensive
+	matter = list(MAT_STEEL = MATERIAL_COST(2), MAT_PLASTEEL = MATERIAL_COST(0.5)) //CHOMPedit Makes them a bit more expensive
 
 /obj/item/ammo_casing/a145/spent/Initialize(mapload)
 	. = ..()

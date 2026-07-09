@@ -312,21 +312,11 @@
 	icon_state = "rcd"
 	item_state = "rcdammo"
 	w_class = ITEMSIZE_SMALL
-<<<<<<< HEAD
-	matter = list(DEFAULT_WALL_MATERIAL = 30000,MAT_GLASS = 15000)
-	var/remaining = RCD_MAX_CAPACITY / 0.75	//CHOMPEdit
-=======
 	matter = list(DEFAULT_WALL_MATERIAL = 30000,MAT_GLASS = MATERIAL_COST(7.5))
-	var/remaining = RCD_MAX_CAPACITY / 3
->>>>>>> e9d2322565 (Makes material costs use sheets amount define (#19584))
+	var/remaining = RCD_MAX_CAPACITY / 0.75	//CHOMPEdit
 
 /obj/item/rcd_ammo/large
 	name = "high-capacity matter cartridge"
 	desc = "Do not ingest."
-<<<<<<< HEAD
-	matter = list(DEFAULT_WALL_MATERIAL = 45000,MAT_GLASS = 22500)
-	remaining = RCD_MAX_CAPACITY * 2	//CHOMPEdit
-=======
 	matter = list(DEFAULT_WALL_MATERIAL = 45000,MAT_GLASS = MATERIAL_COST(11.25))
-	remaining = RCD_MAX_CAPACITY
->>>>>>> e9d2322565 (Makes material costs use sheets amount define (#19584))
+	remaining = RCD_MAX_CAPACITY * 2	//CHOMPEdit

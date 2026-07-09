@@ -64,12 +64,8 @@
 	icon_state = "moistnugget"
 	item_state = "moistnugget"
 	max_shells = 5
-<<<<<<< HEAD
-	matter = list(MAT_PLASTIC = 2500)
-	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
-=======
 	matter = list(MAT_PLASTIC = MATERIAL_COST(1.25))
->>>>>>> e9d2322565 (Makes material costs use sheets amount define (#19584))
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 /*
  * Pistol
@@ -85,14 +81,9 @@
 	projectile_type = /obj/item/projectile/bullet/foam_dart
 	caliber = "foam"
 	load_method = MAGAZINE
-<<<<<<< HEAD
-	matter = list(MAT_PLASTIC = 1000)
+	matter = list(MAT_PLASTIC = MATERIAL_COST(0.5))
 	recoil = 0 //it's a toy //CHOMP Edit
 	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
-=======
-	matter = list(MAT_PLASTIC = MATERIAL_COST(0.5))
-	recoil = null //it's a toy
->>>>>>> e9d2322565 (Makes material costs use sheets amount define (#19584))
 
 /obj/item/gun/projectile/pistol/toy/update_icon()
 	if(ammo_magazine)
