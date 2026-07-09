@@ -1,5 +1,5 @@
 /obj/item/clothing
-	matter = list(MAT_FIBERS = 50)
+	matter = list(MAT_FIBERS = MATERIAL_COST(0.025))
 
 /obj/item/clothing/shoes/MouseDrop_T(mob/living/target, mob/living/user)
 	if(!istype(user)) return ..() // If the user passed in isn't a living mob, exit
