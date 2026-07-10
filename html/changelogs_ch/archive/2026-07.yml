@@ -57,3 +57,12 @@
   - qol: Borgs can open the gridchecker's UI
   - rscadd: The AI can now hear area ambience sounds depending on their hologram or
       core's location
+2026-07-10:
+  Guti:
+  - code_imp: Changed all material costs to use sheets define.
+  Poojawa:
+  - rscadd: Added working Food Synthesizers, can print a variety of meals and even
+      (opt in) crew cookies
+  - qol: Sorted the material construction menus
+  - refactor: optimized the wood species recipe removals
+  - qol: Frame parts give a contextual hint to usage on examine.
