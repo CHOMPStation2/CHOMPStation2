@@ -2,7 +2,7 @@
 	name = "fluorescent light bulb"
 	id = "fluor_light_bulb"
 	build_type = AUTOLATHE | PROTOLATHE
-	materials = list(MAT_GLASS = 125)
+	materials = list(MAT_GLASS = MATERIAL_COST(0.0625))
 	build_path = /obj/item/light/bulb/fluorescent
 	category = list(
 		RND_CATEGORY_INITIAL,
@@ -14,7 +14,7 @@
 	name = "fluorescent light tube"
 	id = "fluor_light_tube"
 	build_type = AUTOLATHE | PROTOLATHE
-	materials = list(MAT_GLASS = 125)
+	materials = list(MAT_GLASS = MATERIAL_COST(0.0625))
 	build_path = /obj/item/light/tube/fluorescent
 	category = list(
 		RND_CATEGORY_INITIAL,

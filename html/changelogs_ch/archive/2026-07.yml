@@ -1,0 +1,68 @@
+2026-07-01:
+  Diana:
+  - bugfix: EMPs no longer do double damage to limbs.
+  Diana & Admiral Dragon:
+  - sound: Adds a new scream emote for xenochimera.
+2026-07-03:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Aghost admin logs record the associated key.
+  - rscadd: Aghost admin log on aghost
+  - code_imp: update rust-g to 6.2
+  - code_imp: update tgui dependencies
+2026-07-04:
+  CHOMPStation2StaffMirrorBot:
+  - refactor: Trasheat code is a bit easier to follow on the backend, now.
+  - bugfix: Throwing trash now properly respects the recursive search check.
+  - code_imp: Optimizes healbelly code so that handle_belly_update isn't called upwards
+      of 26 times a cycle, only called one time a cycle now.
+  Diana:
+  - qol: The survival watch GPS can now be renamed.
+  Guti:
+  - rscadd: Added spring traps.
+  - bugfix: Fixed waddling making you not spin when tossed.
+  - rscadd: Command borgs now start with a fancier pen and a taser
+  - qol: Allows Command borgs to use their ID to change other IDs
+  Zerum, Diana:
+  - rscadd: Verb under Abilities > Settings for borgs to select footstep sound
+  - rscadd: Selected step sounds now apply to borgs
+2026-07-07:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: longer account names no longer move the account buttons outside of the
+      UI view of the accounts uplink terminal
+  - qol: Welding Goggles to Autolathes.  Welding Helmets are already accessible from
+      Autolathes, Goggles have no reason not to be.
+  - qol: Graviton Goggles to Cargo Protolathe, so the people bringing the materials
+      in will be able to see more of what they are mining.
+  Diana:
+  - bugfix: Glass wire will properly cut limbs open.
+  - bugfix: The fridge toggle now properly works
+  - bugfix: Tcomms and shield gen will no longer runtime
+  - bugfix: Instrument and fridge hum are now under 'SOUNDS' instead of 'SOUND'
+2026-07-08:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Adds the Clerical Equipment Kit to the hacked protolathe.
+  Will:
+  - bugfix: Ventcrawling no longer makes you invisible under certain conditions
+  - bugfix: Universal pipe adaptors no longer drop ventcrawlers out of vent crawling
+  - rscadd: Ventcrawlers can now change pipe layer while in a universal pipe adaptor
+      by pressing in a perpendicular direction
+2026-07-09:
+  Guti:
+  - bugfix: Fixed spring traps being triggered by abstract objects
+  - qol: Spring trap kits will deploy based on the user's direction
+  Kashargul:
+  - bugfix: github workflows
+  Will:
+  - refactor: removed global is_hot() proc only used by wall attacks
+  - qol: Borgs can open the gridchecker's UI
+  - rscadd: The AI can now hear area ambience sounds depending on their hologram or
+      core's location
+2026-07-10:
+  Guti:
+  - code_imp: Changed all material costs to use sheets define.
+  Poojawa:
+  - rscadd: Added working Food Synthesizers, can print a variety of meals and even
+      (opt in) crew cookies
+  - qol: Sorted the material construction menus
+  - refactor: optimized the wood species recipe removals
+  - qol: Frame parts give a contextual hint to usage on examine.

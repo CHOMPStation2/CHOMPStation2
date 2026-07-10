@@ -491,27 +491,6 @@ GIVE_FREE_AI_SHELL
 ## This requires solar controller computers in the map to be set up to use it, with the auto_start variable.
 # AUTOSTART_SOLARS
 
-<<<<<<< HEAD
-## Rate of radiation decay (how much it's reduced by) per life tick
-RADIATION_DECAY_RATE 1
-
-## Lower limit on radiation for actually irradiating things on a turf
-RADIATION_LOWER_LIMIT 0.35
-
-## Multiplier for radiation resistances when tracing a ray from source to destination to compute radiation on a turf
-RADIATION_RESISTANCE_MULTIPLIER 2.1
-
-## Divisor for material weights when computing radiation resistance of a material object (walls)
-RADIATION_MATERIAL_RESISTANCE_DIVISOR 16
-
-## Mode of computing radiation resistance into effective radiation on a turf
-## 0:1 subtraction:division for computing effective radiation on a turf
-## 0 / RAD_RESIST_CALC_DIV = Each turf absorbs some fraction of the working radiation level
-## 1 / RAD_RESIST_CALC_SUB = Each turf absorbs a fixed amount of radiation
-RADIATION_RESISTANCE_CALC_MODE 0
-
-=======
->>>>>>> cbc4151bfb (Radiation Refactor (#19270))
 ## IP Reputation Checking
 # Enable/disable IP reputation checking (present/nonpresent)
 #IP_REPUTATION

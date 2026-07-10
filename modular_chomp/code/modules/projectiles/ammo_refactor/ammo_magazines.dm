@@ -3,7 +3,7 @@
 	name = "pistol magazine"
 	icon_state = "m91"
 	mag_type = MAGAZINE
-	matter = list(MAT_STEEL = 600)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.3))
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	max_ammo = 10
@@ -42,7 +42,7 @@
 	// cringe ammo ban lore begone
 	icon_state = "m93"
 	mag_type = MAGAZINE
-	matter = list(MAT_STEEL = 1000)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.5))
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	max_ammo = 17
@@ -80,7 +80,7 @@
 	max_ammo = 30
 	mag_type = MAGAZINE
 	caliber = "small"
-	matter = list(MAT_STEEL = 800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.4))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/simple/small
 
@@ -120,7 +120,7 @@
 	max_ammo = 50
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 1500)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.75))
 	ammo_type = /obj/item/ammo_casing/simple/small
 
 /obj/item/ammo_magazine/smg_drum/empty
@@ -154,7 +154,7 @@
 	max_ammo = 30
 	mag_type = MAGAZINE
 	caliber = "medium"
-	matter = list(MAT_STEEL = 1400)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.7))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/simple/medium
 
@@ -190,7 +190,7 @@
 	max_ammo = 20
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 1800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.9))
 	ammo_type = /obj/item/ammo_casing/simple/medium
 
 /obj/item/ammo_magazine/medium_small/empty
@@ -225,7 +225,7 @@
 	max_ammo = 50
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 2500)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.25))
 	ammo_type = /obj/item/ammo_casing/simple/medium
 
 /obj/item/ammo_magazine/medium_drum/empty
@@ -256,7 +256,7 @@
 	caliber = "medium"
 	mag_type = MAGAZINE | SPEEDLOADER //Act as both, because the garand will use you like a magazine bb
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 400)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.2))
 	ammo_type = /obj/item/ammo_casing/simple/medium
 
 /obj/item/ammo_magazine/clip/medium/empty
@@ -292,7 +292,7 @@
 	max_ammo = 100
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 8000)
+	matter = list(MAT_STEEL = MATERIAL_COST(4))
 	ammo_type = /obj/item/ammo_casing/simple/medium
 
 /obj/item/ammo_magazine/medium_box/empty
@@ -324,7 +324,7 @@
 	max_ammo = 7
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 2400)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.2))
 	ammo_type = /obj/item/ammo_casing/simple/large
 
 /obj/item/ammo_magazine/large/empty
@@ -352,7 +352,7 @@
 	max_ammo = 100
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 20000)
+	matter = list(MAT_STEEL = MATERIAL_COST(10))
 	ammo_type = /obj/item/ammo_casing/simple/large
 
 /obj/item/ammo_magazine/large_box/empty
@@ -378,7 +378,7 @@
 	icon_state = "pistol_s"
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	matter = list(MAT_STEEL = 1800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.9))
 	max_ammo = 50
 	multiple_sprites = 1
 
@@ -388,7 +388,7 @@
 	icon_state = "pistol_p"
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small/practice
-	matter = list(MAT_STEEL = 1440)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.72))
 	max_ammo = 50
 	multiple_sprites = 1
 
@@ -398,7 +398,7 @@
 	icon_state = "pistol_ap"
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small/ap
-	matter = list(MAT_STEEL = 1200, MAT_PLASTEEL = 600)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.6), MAT_PLASTEEL = MATERIAL_COST(0.3))
 	max_ammo = 50
 	multiple_sprites = 1
 
@@ -408,7 +408,7 @@
 	icon_state = "pistol_hp"
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small/hp
-	matter = list(MAT_STEEL = 1440, MAT_PLASTIC = 360)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.72), MAT_PLASTIC = MATERIAL_COST(0.18))
 	max_ammo = 50
 	multiple_sprites = 1
 
@@ -418,7 +418,7 @@
 	icon_state = "pistol_r"
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small/rubber
-	matter = list(MAT_STEEL = 1440)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.72))
 	max_ammo = 50
 	multiple_sprites = 1
 
@@ -428,7 +428,7 @@
 	icon_state = "pistol_hw"
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small/emp
-	matter = list(MAT_STEEL = 3120, MAT_URANIUM = 2400)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.56), MAT_URANIUM = MATERIAL_COST(1.2))
 	max_ammo = 50
 	multiple_sprites = 1
 
@@ -440,7 +440,7 @@
 	icon_state = "hrifle"
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
-	matter = list(MAT_STEEL = 5400)
+	matter = list(MAT_STEEL = MATERIAL_COST(2.7))
 	max_ammo = 30
 	multiple_sprites = 1
 
@@ -450,7 +450,7 @@
 	icon_state = "hrifle-ap"
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium/ap
-	matter = list(MAT_STEEL = 8100)
+	matter = list(MAT_STEEL = MATERIAL_COST(4.05))
 	max_ammo = 30
 	multiple_sprites = 1
 
@@ -460,7 +460,7 @@
 	icon_state = "hrifle-hp"
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium/hp
-	matter = list(MAT_STEEL = 5400)
+	matter = list(MAT_STEEL = MATERIAL_COST(2.7))
 	max_ammo = 30
 	multiple_sprites = 1
 
@@ -470,7 +470,7 @@
 	icon_state = "hrifle_p"
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium/practice
-	matter = list(MAT_STEEL = 2700)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.35))
 	max_ammo = 30
 	multiple_sprites = 1
 
@@ -480,7 +480,7 @@
 	icon_state = "hrifle-hunter"
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium/hunter
-	matter = list(MAT_STEEL = 5400)
+	matter = list(MAT_STEEL = MATERIAL_COST(2.7))
 	max_ammo = 30
 	multiple_sprites = 1
 /* Not fucking dealing with you right now >:(
@@ -490,7 +490,7 @@
 	icon_state = "hrifle-practice"
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium/blank
-	matter = list(MAT_STEEL = 2700)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.35))
 	max_ammo = 30
 	multiple_sprites = 1
 */
@@ -500,7 +500,7 @@
 	icon_state = "boxhrifle"
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
-	matter = list(MAT_STEEL = 18000)
+	matter = list(MAT_STEEL = MATERIAL_COST(9))
 	max_ammo = 100
 	multiple_sprites = 1
 
@@ -510,7 +510,7 @@
 	icon_state = "boxhrifle-ap"
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium/ap
-	matter = list(MAT_STEEL = 27000)
+	matter = list(MAT_STEEL = MATERIAL_COST(13.5))
 	max_ammo = 100
 	multiple_sprites = 1
 
@@ -520,7 +520,7 @@
 	icon_state = "boxhrifle-hp"
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium/hp
-	matter = list(MAT_STEEL = 18000)
+	matter = list(MAT_STEEL = MATERIAL_COST(9))
 	max_ammo = 100
 	multiple_sprites = 1
 
@@ -530,7 +530,7 @@
 	icon_state = "boxhrifle-practice"
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium/practice
-	matter = list(MAT_STEEL = 9000)
+	matter = list(MAT_STEEL = MATERIAL_COST(4.5))
 	max_ammo = 100
 	multiple_sprites = 1
 
@@ -540,7 +540,7 @@
 	icon_state = "boxhrifle-hunter"
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium/hunter
-	matter = list(MAT_STEEL = 18000)
+	matter = list(MAT_STEEL = MATERIAL_COST(9))
 	max_ammo = 100
 	multiple_sprites = 1
 
@@ -552,23 +552,23 @@
 	icon_state = "sniper"
 	caliber = "large"
 	ammo_type = /obj/item/ammo_casing/simple/large
-	matter = list(MAT_STEEL = 8750)
+	matter = list(MAT_STEEL = MATERIAL_COST(4.375))
 	max_ammo = 25
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/ammo_box/large/ap
 	name = "ammo box (large AP)"
-	matter = list(MAT_STEEL = 10000)
+	matter = list(MAT_STEEL = MATERIAL_COST(5))
 	ammo_type = /obj/item/ammo_casing/simple/large/ap
 
 /obj/item/ammo_magazine/ammo_box/large/hp
 	name = "ammo box (large HP)"
-	matter = list(MAT_STEEL = 10000)
+	matter = list(MAT_STEEL = MATERIAL_COST(5))
 	ammo_type = /obj/item/ammo_casing/simple/large/hp
 
 /obj/item/ammo_magazine/ammo_box/large/practice
 	name = "ammo box (large practice)"
-	matter = list(MAT_STEEL = 3000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.5))
 	ammo_type = /obj/item/ammo_casing/simple/large/practice
 
 
@@ -579,7 +579,7 @@
 	icon_state = "38"
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	matter = list(MAT_STEEL = 1260)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.63))
 	max_ammo = 6
 	multiple_sprites = 1
 
@@ -613,7 +613,7 @@
 	icon_state = "38"
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	matter = list(MAT_STEEL = 1260)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.63))
 	max_ammo = 8
 	multiple_sprites = 1
 

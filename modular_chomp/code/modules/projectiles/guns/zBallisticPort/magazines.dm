@@ -26,19 +26,19 @@
 	max_ammo = 20
 	mag_type = MAGAZINE
 	caliber = "9mm"
-	matter = list(MAT_STEEL = 1000)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.5))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a9mm
 
 /obj/item/ammo_magazine/asval/ap
 	name = "AS-Val magazine(9mm armor-piercing)"
-	matter = list(MAT_STEEL = 1200)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.6))
 	ammo_type = /obj/item/ammo_casing/a9mm/ap
 
 /obj/item/ammo_magazine/asval/rubber
 	name = "AS-Val magazine(9mm less-lethal)"
 	icon_state = "asvalrubber"
-	matter = list(MAT_STEEL = 1000)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.5))
 	ammo_type = /obj/item/ammo_casing/a9mm/rubber
 /obj/item/ammo_magazine/akm
 	name = "AKM magazine (7.62mm)"
@@ -47,18 +47,18 @@
 	max_ammo = 30
 	mag_type = MAGAZINE
 	caliber = "7.62mm"
-	matter = list(MAT_STEEL = 1600)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.8))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a762
 
 /obj/item/ammo_magazine/akm/ap
 	name = "AKM magazine (7.62mm armor-piercing)"
-	matter = list(MAT_STEEL = 2000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1))
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/akm/hp
 	name = "AKM magazine (7.62mm hollow-point)"
-	matter = list(MAT_STEEL = 2000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1))
 	ammo_type = /obj/item/ammo_casing/a762/hp
 
 /obj/item/ammo_magazine/akm/rubber
@@ -68,7 +68,7 @@
 	max_ammo = 30
 	mag_type = MAGAZINE
 	caliber = "7.62mm"
-	matter = list(MAT_STEEL = 1200)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.6))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a762/rubber
 
@@ -79,24 +79,24 @@
 	max_ammo = 30
 	mag_type = MAGAZINE
 	caliber = "5.45mm"
-	matter = list(MAT_STEEL = 1400)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.7))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a545
 
 /obj/item/ammo_magazine/ak74/ap
 	name = "AK74 magazine (5.45mm armor-piercing)"
-	matter = list(MAT_STEEL = 1800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.9))
 	ammo_type = /obj/item/ammo_casing/a545/ap
 
 /obj/item/ammo_magazine/ak74/hp
 	name = "AK74 magazine (5.45mm hollow-point)"
-	matter = list(MAT_STEEL = 1800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.9))
 	ammo_type = /obj/item/ammo_casing/a545/hp
 
 /obj/item/ammo_magazine/ak74/rubber
 	name = "AK74 magazine (5.45mm less-lethal)"
 	icon_state = "545bakerubber"
-	matter = list(MAT_STEEL = 1200)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.6))
 	ammo_type = /obj/item/ammo_casing/a545/rubber
 
 /obj/item/ammo_magazine/ak74/plum
@@ -105,7 +105,7 @@
 /obj/item/ammo_magazine/ak74/plum/rubber
 	name = "AK74 magazine (5.45mm less-lethal)"
 	icon_state = "545plumrubber"
-	matter = list(MAT_STEEL = 1200)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.6))
 	ammo_type = /obj/item/ammo_casing/a545/rubber
 
 /obj/item/ammo_magazine/m16
@@ -115,30 +115,30 @@
 	max_ammo = 30
 	mag_type = MAGAZINE
 	caliber = "5.56mm"
-	matter = list(MAT_STEEL = 1400)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.7))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a556
 
 /obj/item/ammo_magazine/m16/ap
 	name = "M16 magazine (5.56mm armor-piercing)"
-	matter = list(MAT_STEEL = 1700)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.85))
 	ammo_type = /obj/item/ammo_casing/a556/ap
 
 /obj/item/ammo_magazine/m16/rubber
 	name = "M16 magazine (5.56mm less-lethal)"
 	icon_state = "556rubbermag"
-	matter = list(MAT_STEEL = 1700)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.85))
 	ammo_type = /obj/item/ammo_casing/a556/rubber
 
 
 /obj/item/ammo_magazine/m16/hp
 	name = "M16 magazine (5.56mm hollow-point)"
-	matter = list(MAT_STEEL = 1700)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.85))
 	ammo_type = /obj/item/ammo_casing/a556/hp
 
 /obj/item/ammo_magazine/m16/patriot
 	name = "Patriot magazine (5.56mm)"
-	matter = list(MAT_STEEL = 5000)
+	matter = list(MAT_STEEL = MATERIAL_COST(2.5))
 	max_ammo = 100
 	icon_state = "patriotmag"
 
@@ -149,7 +149,7 @@
 	max_ammo = 40
 	mag_type = MAGAZINE
 	caliber = "10x24mm"
-	matter = list(MAT_STEEL = 10000)
+	matter = list(MAT_STEEL = MATERIAL_COST(5))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a10x24
 
@@ -158,7 +158,7 @@
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "m41rubbermag"
 	max_ammo = 40
-	matter = list(MAT_STEEL = 7000)
+	matter = list(MAT_STEEL = MATERIAL_COST(3.5))
 	ammo_type = /obj/item/ammo_casing/a10x24/rubber
 
 /obj/item/ammo_magazine/t12
@@ -168,7 +168,7 @@
 	max_ammo = 40
 	mag_type = MAGAZINE
 	caliber = "10x24mm"
-	matter = list(MAT_STEEL = 10000)
+	matter = list(MAT_STEEL = MATERIAL_COST(5))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a10x24
 
@@ -178,12 +178,12 @@
 	max_ammo = 10
 	caliber = "7.62mm"
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 400)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.2))
 	ammo_type = /obj/item/ammo_casing/a762
 
 /obj/item/ammo_magazine/clip/sks/ap
 	name = "Ammo clip(7.62mm armor-piercing)"
-	matter = list(MAT_STEEL = 700)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.35))
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/clip/mosin
@@ -192,12 +192,12 @@
 	max_ammo = 5
 	caliber = "7.62mm"
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 300)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.15))
 	ammo_type = /obj/item/ammo_casing/a762
 
 /obj/item/ammo_magazine/clip/mosin/ap
 	name = "Ammo clip(7.62mm armor-piercing)"
-	matter = list(MAT_STEEL = 600)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.3))
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/type901
@@ -208,12 +208,12 @@
 	max_ammo = 30
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 2400)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.2))
 	ammo_type = /obj/item/ammo_casing/a762
 
 /obj/item/ammo_magazine/type901/ap
 	name = "Type-901 magazine(7.62mm armor-piercing)"
-	matter = list(MAT_STEEL = 3000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.5))
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/ar10
@@ -224,12 +224,12 @@
 	max_ammo = 20
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 1800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.9))
 	ammo_type = /obj/item/ammo_casing/a762
 
 /obj/item/ammo_magazine/ar10/ap
 	name = "AR-10 magazine(7.62mm armor-piercing)"
-	matter = list(MAT_STEEL = 2400)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.2))
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/fal
@@ -240,12 +240,12 @@
 	max_ammo = 20
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 1800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.9))
 	ammo_type = /obj/item/ammo_casing/a762
 
 /obj/item/ammo_magazine/fal/ap
 	name = "FAL magazine(7.62mm armor-piercing)"
-	matter = list(MAT_STEEL = 2400)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.2))
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/awp
@@ -256,12 +256,12 @@
 	max_ammo = 5
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 2400)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.2))
 	ammo_type = /obj/item/ammo_casing/a338
 
 /obj/item/ammo_magazine/awp/ap
 	name = "AWP magazine(.338 Lapua armor-piercing)"
-	matter = list(MAT_STEEL = 3000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.5))
 	ammo_type = /obj/item/ammo_casing/a338/ap
 
 /obj/item/ammo_magazine/hectate
@@ -272,12 +272,12 @@
 	max_ammo = 7
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 4000)
+	matter = list(MAT_STEEL = MATERIAL_COST(2))
 	ammo_type = /obj/item/ammo_casing/a50bmg
 
 /obj/item/ammo_magazine/hectate/ap
 	name = "Hectate II magazine(.50 BMG armor-piercing)"
-	matter = list(MAT_STEEL = 5000)
+	matter = list(MAT_STEEL = MATERIAL_COST(2.5))
 	ammo_type = /obj/item/ammo_casing/a50bmg/ap
 
 /obj/item/ammo_magazine/ppsh
@@ -288,7 +288,7 @@
 	max_ammo = 71
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 1500)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.75))
 	ammo_type = /obj/item/ammo_casing/a45
 
 /obj/item/ammo_magazine/plamya
@@ -299,17 +299,17 @@
 	max_ammo = 50
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 2500)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.25))
 	ammo_type = /obj/item/ammo_casing/a9mm
 
 /obj/item/ammo_magazine/plamya/ap
 	name = "Plamya drum magazine(9mm armor-piercing)"
-	matter = list(MAT_STEEL = 3000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.5))
 	ammo_type = /obj/item/ammo_casing/a9mm/ap
 
 /obj/item/ammo_magazine/plamya/rubber
 	name = "Plamya drum magazine(9mm less-lethal)"
-	matter = list(MAT_STEEL = 2000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1))
 	ammo_type = /obj/item/ammo_casing/a9mm/rubber
 	icon_state = "plamyarubbermag"
 
@@ -321,7 +321,7 @@
 	max_ammo = 7
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.4))
 	ammo_type = /obj/item/ammo_casing/a12g/pellet
 
 /obj/item/ammo_magazine/strela/slug
@@ -336,12 +336,12 @@
 	max_ammo = 100
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 8000)
+	matter = list(MAT_STEEL = MATERIAL_COST(4))
 	ammo_type = /obj/item/ammo_casing/a762
 
 /obj/item/ammo_magazine/molniya/ap
 	name = "Molniya magazine box(7.62mm armor-piercing)"
-	matter = list(MAT_STEEL = 10000)
+	matter = list(MAT_STEEL = MATERIAL_COST(5))
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/kord
@@ -352,7 +352,7 @@
 	max_ammo = 100
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 20000)
+	matter = list(MAT_STEEL = MATERIAL_COST(10))
 	ammo_type = /obj/item/ammo_casing/a127x108
 
 /obj/item/ammo_magazine/pkm
@@ -363,12 +363,12 @@
 	max_ammo = 100
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 8000)
+	matter = list(MAT_STEEL = MATERIAL_COST(4))
 	ammo_type = /obj/item/ammo_casing/a762
 
 /obj/item/ammo_magazine/pkm/ap
 	name = "PKM magazine box(7.62mm armor-piercing)"
-	matter = list(MAT_STEEL = 10000)
+	matter = list(MAT_STEEL = MATERIAL_COST(5))
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/rpd
@@ -379,12 +379,12 @@
 	max_ammo = 100
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 8000)
+	matter = list(MAT_STEEL = MATERIAL_COST(4))
 	ammo_type = /obj/item/ammo_casing/a762
 
 /obj/item/ammo_magazine/rpd/ap
 	name = "PPD Drum magazine(7.62mm armor-piercing)"
-	matter = list(MAT_STEEL = 10000)
+	matter = list(MAT_STEEL = MATERIAL_COST(5))
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/akm/drum
@@ -395,12 +395,12 @@
 	max_ammo = 75
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 6000)
+	matter = list(MAT_STEEL = MATERIAL_COST(3))
 	ammo_type = /obj/item/ammo_casing/a762
 
 /obj/item/ammo_magazine/akm/drum/ap
 	name = "RPK magazine box(7.62mm armor-piercing)"
-	matter = list(MAT_STEEL = 7500)
+	matter = list(MAT_STEEL = MATERIAL_COST(3.75))
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/ssp4
@@ -411,14 +411,14 @@
 	max_ammo = 8
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 400)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.2))
 	ammo_type = /obj/item/ammo_casing/a10mm
 
 /obj/item/ammo_magazine/ssp4/rubber
 	name = "SSP4 magazine(10mm)"
 	ammo_type = /obj/item/ammo_casing/a10mm/rubber
 	icon_state = "10mmrubbermag"
-	matter = list(MAT_STEEL = 300)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.15))
 
 /obj/item/ammo_magazine/makarov
 	name = "Makarov magazine(9mm)"
@@ -428,7 +428,7 @@
 	max_ammo = 8
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 400)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.2))
 	ammo_type = /obj/item/ammo_casing/a9mm
 
 /obj/item/ammo_magazine/makarov/rubber
@@ -468,7 +468,7 @@
 	max_ammo = 10
 	mag_type = MAGAZINE
 	caliber = ".44"
-	matter = list(MAT_STEEL = 800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.4))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a44
 
@@ -488,7 +488,7 @@
 	max_ammo = 14
 	mag_type = MAGAZINE
 	caliber = ".45"
-	matter = list(MAT_STEEL = 800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.4))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a45
 
@@ -519,7 +519,7 @@
 	max_ammo = 30
 	mag_type = MAGAZINE
 	caliber = "9mm"
-	matter = list(MAT_STEEL = 800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.4))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a9mm
 
@@ -542,7 +542,7 @@
 	max_ammo = 30
 	mag_type = MAGAZINE
 	caliber = ".44"
-	matter = list(MAT_STEEL = 800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.4))
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a44
 
@@ -562,7 +562,7 @@
 	max_ammo = 10
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 2400)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.2))
 	ammo_type = /obj/item/ammo_casing/a776
 
 /obj/item/ammo_magazine/zvir
@@ -573,7 +573,7 @@
 	max_ammo = 100
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 5400)
+	matter = list(MAT_STEEL = MATERIAL_COST(2.7))
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/barka
@@ -584,7 +584,7 @@
 	max_ammo = 50
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 5400)
+	matter = list(MAT_STEEL = MATERIAL_COST(2.7))
 	ammo_type = /obj/item/ammo_casing/a15mm
 
 
@@ -596,7 +596,7 @@
 	max_ammo = 25
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 1400)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.7))
 	ammo_type = /obj/item/ammo_casing/a6550mm
 
 /obj/item/ammo_magazine/bm51/ap
@@ -607,7 +607,7 @@
 	max_ammo = 25
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 1400)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.7))
 	ammo_type = /obj/item/ammo_casing/a6550mm/ap
 
 /obj/item/ammo_magazine/bm109
@@ -618,7 +618,7 @@
 	max_ammo = 11
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 2400)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.2))
 	ammo_type = /obj/item/ammo_casing/a86
 
 /obj/item/ammo_magazine/pmx
@@ -629,7 +629,7 @@
 	max_ammo = 8
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 1400)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.7))
 	ammo_type = /obj/item/ammo_casing/a10mm
 
 /obj/item/ammo_magazine/viper
@@ -640,7 +640,7 @@
 	max_ammo = 25
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 2000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1))
 	ammo_type = /obj/item/ammo_casing/a10mm
 
 /obj/item/ammo_magazine/sdiyaab
@@ -651,7 +651,7 @@
 	max_ammo = 11
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(MAT_STEEL = 1400)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.7))
 	ammo_type = /obj/item/ammo_casing/a44
 
 /obj/item/ammo_magazine/ammo_box/a86
@@ -660,7 +660,6 @@
 	icon_state = "rifle"
 	caliber = "8.6mm"
 	ammo_type = /obj/item/ammo_casing/a86
-	matter = list(MAT_STEEL = 6000)
+	matter = list(MAT_STEEL = MATERIAL_COST(3))
 	max_ammo = 31
 	multiple_sprites = 1
-

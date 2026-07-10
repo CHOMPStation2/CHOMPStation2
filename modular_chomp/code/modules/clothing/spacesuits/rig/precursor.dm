@@ -5,7 +5,7 @@
 	icon = 'modular_chomp/icons/obj/rig_modules_ch.dmi'
 	icon_state = "precursor_rig"
 	armor = list(melee = 50, bullet = 50, laser = 70, energy = 70, bomb = 60, bio = 100, rad = 80)
-	matter = list(MAT_PLASTEEL = 1200, MAT_GOLD = 500, MAT_GRAPHITE = 800, MAT_OSMIUM = 300, MAT_PLASTIC = 600, MAT_VERDANTIUM = 750, MAT_MORPHIUM = 2000)
+	matter = list(MAT_PLASTEEL = MATERIAL_COST(0.6), MAT_GOLD = MATERIAL_COST(0.25), MAT_GRAPHITE = MATERIAL_COST(0.4), MAT_OSMIUM = MATERIAL_COST(0.15), MAT_PLASTIC = MATERIAL_COST(0.3), MAT_VERDANTIUM = MATERIAL_COST(0.375), MAT_MORPHIUM = MATERIAL_COST(1))
 	var/block_chance = 15
 	slowdown = 0
 

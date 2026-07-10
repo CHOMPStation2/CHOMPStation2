@@ -4,7 +4,7 @@
 	icon_state = "pistol_s"
 	caliber = "9mm"
 	ammo_type = /obj/item/ammo_casing/a9mm
-	matter = list(MAT_STEEL = 1500)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.75))
 	max_ammo = 24
 	multiple_sprites = 1
 
@@ -14,7 +14,7 @@
 	icon_state = "pistol_p"
 	caliber = "9mm"
 	ammo_type = /obj/item/ammo_casing/a9mm/practice
-	matter = list(MAT_STEEL = 1100)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.55))
 	max_ammo = 24
 	multiple_sprites = 1
 
@@ -24,7 +24,7 @@
 	icon_state = "pistol_ap"
 	caliber = "9mm"
 	ammo_type = /obj/item/ammo_casing/a9mm/ap
-	matter = list(MAT_STEEL = 1200, MAT_PLASTEEL = 600)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.6), MAT_PLASTEEL = MATERIAL_COST(0.3))
 	max_ammo = 24
 	multiple_sprites = 1
 
@@ -34,7 +34,7 @@
 	icon_state = "pistol_hp"
 	caliber = "9mm"
 	ammo_type = /obj/item/ammo_casing/a9mm/hp
-	matter = list(MAT_STEEL = 1100)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.55))
 	max_ammo = 24
 	multiple_sprites = 1
 
@@ -44,7 +44,7 @@
 	icon_state = "pistol_r"
 	caliber = "9mm"
 	ammo_type = /obj/item/ammo_casing/a9mm/rubber
-	matter = list(MAT_STEEL = 1100, MAT_PLASTIC = 360)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.55), MAT_PLASTIC = MATERIAL_COST(0.18))
 	max_ammo = 24
 	multiple_sprites = 1
 
@@ -54,6 +54,6 @@
 	icon_state = "pistol_r"
 	caliber = "9mm"
 	ammo_type = /obj/item/ammo_casing/a9mm/flash
-	matter = list(MAT_STEEL = 1100)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.55))
 	max_ammo = 24
 	multiple_sprites = 1

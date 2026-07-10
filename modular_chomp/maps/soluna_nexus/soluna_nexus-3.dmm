@@ -18241,7 +18241,7 @@
 /obj/item/clothing/suit/storage/hooded/foodcostume/hotdog{
 	pixel_x = -4
 	},
-/obj/item/clothing/head/hood_vr/hotdog_hood{
+/obj/item/clothing/head/hood/hotdog_hood{
 	pixel_x = -4
 	},
 /turf/simulated/floor/plating,

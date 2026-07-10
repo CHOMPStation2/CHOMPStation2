@@ -580,8 +580,7 @@
 	else if(iscapturecrystal(loc))
 		var/obj/item/capture_crystal/crystal = loc
 		crystal.unleash()
-		crystal.bound_mob = null
-		crystal.bound_mob = capture_crystal = 0
+		crystal.mob_was_deleted()
 		clear_fullscreen(ATOM_BELLY_FULLSCREEN)
 		log_and_message_admins("used the OOC escape button to get out of [crystal] owned by [crystal.owner]. [ADMIN_FLW(src)]", src)
 
@@ -836,51 +835,6 @@
 
 /mob/living/proc/get_digestion_efficiency_modifier()
 	return 1
-
-/mob/living/proc/eat_trash()
-	set name = "Eat Trash"
-	set category = "Abilities.Vore"
-	set desc = "Consume held garbage."
-
-	if(stat || is_paralyzed() || weakened || stunned || world.time < last_special)
-		to_chat(src, span_warning("You can't do that in your current state."))
-		return
-
-	if(!vore_selected)
-		to_chat(src,span_warning("You either don't have a belly selected, or don't have a belly!"))
-		return
-
-	var/obj/item/I = get_active_hand()
-	if(!I)
-		to_chat(src, span_notice("You are not holding anything."))
-		return
-
-	if(!I.check_item_devourability(src))
-		return
-
-	if(!I.on_trash_eaten(src)) // shows object's rejection message itself
-		return
-	drop_item()
-	vore_selected.nom_atom(I)
-	updateVRPanel()
-	log_admin("VORE: [src] used Eat Trash to swallow [I].")
-	I.after_trash_eaten(src)
-	visible_message(span_vwarning(src.vore_selected.belly_format_string(src.vore_selected.trash_eater_in, I, item=I)))
-	return
-
-/mob/living/proc/toggle_trash_catching() //Ported from chompstation
-	set name = "Toggle Trash Catching"
-	set category = "Abilities.Vore"
-	set desc = "Toggle Trash Eater throw vore abilities."
-	trash_catching = !trash_catching
-	to_chat(src, span_vwarning("Trash catching [trash_catching ? "enabled" : "disabled"]."))
-
-/mob/living/proc/eat_minerals() //Actual eating abstracted so the user isn't given a prompt due to an argument in this verb.
-	set name = "Eat Minerals"
-	set category = "Abilities.Vore"
-	set desc = "Consume held raw ore, gems and refined minerals. Snack time!"
-
-	handle_eat_minerals()
 
 /mob/living/proc/handle_eat_minerals(obj/item/snack, mob/living/user)
 	var/mob/living/feeder = user ? user : src //Whoever's doing the feeding - us or someone else.
