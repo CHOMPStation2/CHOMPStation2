@@ -7,6 +7,7 @@ import { Window } from 'tgui/layouts';
 import { analyzeModalBodyOverride } from './ChemMasterAnalyzeModalBodyOverride';
 import { ChemMasterBeaker } from './ChemMasterBeaker';
 import { ChemMasterBuffer } from './ChemMasterBuffer';
+import { ChemMasterCustomization } from './ChemMasterCustomization';
 import { ChemMasterProduction } from './ChemMasterProduction';
 import type { Data } from './types';
 
@@ -47,7 +48,7 @@ export const ChemMaster = (props) => {
           pillsprite={pillsprite}
           bottlesprite={bottlesprite}
         />
-        {/* Vorestation Remove
+        {/* CHOMPEnable Start */}
         <ChemMasterCustomization
           loaded_pill_bottle={loaded_pill_bottle}
           loaded_pill_bottle_name={loaded_pill_bottle_name || ''}
@@ -56,7 +57,7 @@ export const ChemMaster = (props) => {
             loaded_pill_bottle_storage_slots || 0
           }
         />
-        */}
+        {/* CHOMPEnable End */}
       </Window.Content>
     </Window>
   );
