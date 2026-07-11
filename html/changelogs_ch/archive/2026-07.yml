@@ -66,3 +66,16 @@
   - qol: Sorted the material construction menus
   - refactor: optimized the wood species recipe removals
   - qol: Frame parts give a contextual hint to usage on examine.
+2026-07-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Adds numerous items that were removed without changelog notes.
+  - bugfix: Capture crystals now handle self-capture edge case
+  - bugfix: OOC Escape from capture crystals no longer bricks crystal and breaks player
+  - bugfix: RND_CATEGORY_INITIAL, added to Welding Goggles design so they **actually
+      show up** in the Autolathe.  Hopefully.
+  Poojawa:
+  - qol: Chem dispensers now have alt-click to pull a beaker out of them without needing
+      the UI
+  - image: Chem Dispensers are no longer KurgerBing soda fountains!
+  Will:
+  - bugfix: Wet/slippery turf state no longer persists through turf change
