@@ -11,14 +11,9 @@
 	idle_power_usage = 20
 	var/obj/item/reagent_containers/beaker = null
 	var/obj/item/storage/pill_bottle/loaded_pill_bottle = null
-<<<<<<< HEAD
 	var/list/pill_bottle_wrappers = null //CHOMPEdit - Enable customizing pill bottle type
-	var/mode = 0
-	var/condi = 0
-=======
 	var/mode = FALSE				//beaker or disposal transfer
 	var/condi = FALSE				//condimaster ?
->>>>>>> 9f84a4e234 (Chem Master QOL and fixes (#19578))
 	var/useramount = 15 // Last used amount
 	var/pillamount = 10
 	var/list/bottle_styles
