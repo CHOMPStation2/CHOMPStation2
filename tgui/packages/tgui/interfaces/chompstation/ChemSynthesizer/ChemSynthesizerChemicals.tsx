@@ -74,7 +74,7 @@ export const ChemSynthesizerChemicals = (props) => {
         }
       >
         <BeakerContents
-          beakerLoaded={catalyst}
+          beakerLoaded={!!catalyst}
           beakerContents={catalyst_reagents}
         />
       </Section>
