@@ -1,5 +1,5 @@
 import { useBackend } from 'tgui/backend';
-import { BeakerContents } from 'tgui/interfaces/common/BeakerContents';
+import { BeakerContents } from 'tgui/interfaces/common/ChemicalContents';
 import { modalOpen } from 'tgui/interfaces/common/ComplexModal';
 import { Box, Button, Section, Stack } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
