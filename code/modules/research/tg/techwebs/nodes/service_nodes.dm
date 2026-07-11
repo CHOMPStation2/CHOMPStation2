@@ -279,13 +279,8 @@
 		"cerealmaker_board",
 		"candymachine_board",
 		"honey_extractor",
-<<<<<<< HEAD
-		"food_synthesizer", // CHOMPAdd
-		"compactfood_synthesizer", // CHOMPAdd
-=======
 		"food_synthesizer",
 		"compactfood_synthesizer",
->>>>>>> 8875e4b61e (enables foox synth in techwebs (#19594))
 		"borgos1",
 		"range",
 		// "souppot",
