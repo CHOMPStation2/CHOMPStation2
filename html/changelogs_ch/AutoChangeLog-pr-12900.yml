@@ -1,6 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "recursive stack search"
-  - bugfix: "juke toolchain skipping biome updates"
-  - code_imp: "update tgui dependencies"
