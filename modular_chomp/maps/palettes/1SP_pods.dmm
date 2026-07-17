@@ -1806,7 +1806,7 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/survivalpod)
 "adS" = (
-/obj/machinery/food_replicator,
+/obj/machinery/synthesizer,
 /obj/item/reagent_containers/glass/beaker/large{
 	pixel_y = 15;
 	pixel_x = 8

@@ -25,3 +25,102 @@
   Zerum, Diana:
   - rscadd: Verb under Abilities > Settings for borgs to select footstep sound
   - rscadd: Selected step sounds now apply to borgs
+2026-07-07:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: longer account names no longer move the account buttons outside of the
+      UI view of the accounts uplink terminal
+  - qol: Welding Goggles to Autolathes.  Welding Helmets are already accessible from
+      Autolathes, Goggles have no reason not to be.
+  - qol: Graviton Goggles to Cargo Protolathe, so the people bringing the materials
+      in will be able to see more of what they are mining.
+  Diana:
+  - bugfix: Glass wire will properly cut limbs open.
+  - bugfix: The fridge toggle now properly works
+  - bugfix: Tcomms and shield gen will no longer runtime
+  - bugfix: Instrument and fridge hum are now under 'SOUNDS' instead of 'SOUND'
+2026-07-08:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Adds the Clerical Equipment Kit to the hacked protolathe.
+  Will:
+  - bugfix: Ventcrawling no longer makes you invisible under certain conditions
+  - bugfix: Universal pipe adaptors no longer drop ventcrawlers out of vent crawling
+  - rscadd: Ventcrawlers can now change pipe layer while in a universal pipe adaptor
+      by pressing in a perpendicular direction
+2026-07-09:
+  Guti:
+  - bugfix: Fixed spring traps being triggered by abstract objects
+  - qol: Spring trap kits will deploy based on the user's direction
+  Kashargul:
+  - bugfix: github workflows
+  Will:
+  - refactor: removed global is_hot() proc only used by wall attacks
+  - qol: Borgs can open the gridchecker's UI
+  - rscadd: The AI can now hear area ambience sounds depending on their hologram or
+      core's location
+2026-07-10:
+  Guti:
+  - code_imp: Changed all material costs to use sheets define.
+  Poojawa:
+  - rscadd: Added working Food Synthesizers, can print a variety of meals and even
+      (opt in) crew cookies
+  - qol: Sorted the material construction menus
+  - refactor: optimized the wood species recipe removals
+  - qol: Frame parts give a contextual hint to usage on examine.
+2026-07-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Adds numerous items that were removed without changelog notes.
+  - bugfix: Capture crystals now handle self-capture edge case
+  - bugfix: OOC Escape from capture crystals no longer bricks crystal and breaks player
+  - bugfix: RND_CATEGORY_INITIAL, added to Welding Goggles design so they **actually
+      show up** in the Autolathe.  Hopefully.
+  Poojawa:
+  - qol: Chem dispensers now have alt-click to pull a beaker out of them without needing
+      the UI
+  - image: Chem Dispensers are no longer KurgerBing soda fountains!
+  Will:
+  - bugfix: Wet/slippery turf state no longer persists through turf change
+2026-07-12:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Belly display names now work
+  - bugfix: recursive stack search
+  - bugfix: juke toolchain skipping biome updates
+  - code_imp: update tgui dependencies
+  Diana:
+  - bugfix: Moves the 'misc' out from furniture and into its own proper category on
+      materials.
+  - qol: Moves table frame from misc to furniture category.
+  - qol: Moves reflector frame into misc category.
+  - rscdel: Grit removed. "Pain Tolerance, minor" covers everything grit was supposed
+      to do, now.
+  - rscadd: Adds "Pain Tolerance, Extreme" which is an inverse of Neural Hypersensitivity.
+      Provides 50% reduced pain.
+  - rscadd: Being in shock will now increase your heart rate.
+  - balance: Pain modifier now affects traumatic shock
+  - balance: Trauma no longer weakens you for 40 seconds repeatedly. Now only weakens
+      for 6-10 seconds when it rolls.
+  - balance: Blurry eyes happen when significantly damaged or getting deep in shock.
+  - balance: Being deep in trauma no longer perma-weakens you, but now has a significant
+      chance to keep you weakened.
+  - bugfix: Shock stage no longer piles up the probabilities when in shock, instead
+      only does the one appropriate for its stage. This reduces chatspam.
+  - bugfix: Your HR can no longer go so high it reads nothing.
+  - code_imp: trauma_mod rolled into pain_mod
+  Poojawa:
+  - qol: Chem Masters now permit a choice between beaker ejections, clearing or keeping
+      the buffer inside the machine. Buffer has been changed to 300 (one bluespace
+      beaker) as a result.
+  - bugfix: Chem Masters now check for for potential overfilling, resolving issues
+      where reagents would be deleted if the beaker was too full to accept the full
+      amount.
+  - bugfix: Prevents eggs and siffruit from being 'cracked into' the Chem Master or
+      Chem Dispensor, fixing a null runtime that completely breaks the machines
+  Will:
+  - bugfix: Ripleys no longer float over openspace
+  - rscadd: Update transcore dump behavior
+2026-07-13:
+  Poojawa:
+  - rscadd: Added Corona Analyzers to Tesla coil subtypes, able to assist R&D point
+      generation
+  - image: modified tesla coil sprites to be more visually obvious if anchored or
+      the panel is open
+  - refactor: cleaned up unneeded circuitry paths and grammar
