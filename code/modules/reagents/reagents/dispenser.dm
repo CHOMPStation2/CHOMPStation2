@@ -595,7 +595,6 @@
 		qdel(O)
 		remove_self(meltdose) // 10 units of acid will not melt EVERYTHING on the tile
 
-<<<<<<< HEAD
 /datum/reagent/acid/touch_mob(mob/living/L) //CHOMPAdd Start
 	if(!isliving(L))
 		return
@@ -613,7 +612,7 @@
 				B.owner_adjust_nutrition(volume * (B.nutrition_percent / 100) * power)
 	L.adjustFireLoss(volume * power * 0.2)
 	remove_self(volume) //CHOMPAdd End
-=======
+
 /// Eject from chemdispenser if melted inside of one. Handled here with typechecks instead of adding logic to every machine for acid's snowflake behavior
 /datum/reagent/acid/proc/eject_container_from_machines(obj/melting_object)
 	if(istype(melting_object.loc, /obj/machinery/chemical_dispenser))
@@ -628,7 +627,6 @@
 		mixer.beaker = null
 		mixer.update_icon()
 		return
->>>>>>> 2102398dd1 (Acid dispensed into buckets no longer runtimes the machine it is inside of (#19605))
 
 /datum/reagent/silicon
 	name = REAGENT_SILICON
