@@ -65,7 +65,6 @@
 	total_health = 150 // Larger health pool.
 	burn_mod = 2 // Fire does not mix well with their silicon carapace.
 	toxins_mod = 0.5 // Resistant to toxins.
-	trauma_mod = 0.3 // Highly resistant to pain.
 	pain_mod = 0.3 // Highly resistant to pain.
 	rad_removal_mod = 1.5 // Radiation leaves the body much faster.
 	chem_strength_heal = 0.1 // Acidic blood neutralizes most injected and ingested beneficial chemicals.

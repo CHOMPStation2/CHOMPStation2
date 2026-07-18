@@ -66,3 +66,93 @@
   - qol: Sorted the material construction menus
   - refactor: optimized the wood species recipe removals
   - qol: Frame parts give a contextual hint to usage on examine.
+2026-07-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Adds numerous items that were removed without changelog notes.
+  - bugfix: Capture crystals now handle self-capture edge case
+  - bugfix: OOC Escape from capture crystals no longer bricks crystal and breaks player
+  - bugfix: RND_CATEGORY_INITIAL, added to Welding Goggles design so they **actually
+      show up** in the Autolathe.  Hopefully.
+  Poojawa:
+  - qol: Chem dispensers now have alt-click to pull a beaker out of them without needing
+      the UI
+  - image: Chem Dispensers are no longer KurgerBing soda fountains!
+  Will:
+  - bugfix: Wet/slippery turf state no longer persists through turf change
+2026-07-12:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Belly display names now work
+  - bugfix: recursive stack search
+  - bugfix: juke toolchain skipping biome updates
+  - code_imp: update tgui dependencies
+  Diana:
+  - bugfix: Moves the 'misc' out from furniture and into its own proper category on
+      materials.
+  - qol: Moves table frame from misc to furniture category.
+  - qol: Moves reflector frame into misc category.
+  - rscdel: Grit removed. "Pain Tolerance, minor" covers everything grit was supposed
+      to do, now.
+  - rscadd: Adds "Pain Tolerance, Extreme" which is an inverse of Neural Hypersensitivity.
+      Provides 50% reduced pain.
+  - rscadd: Being in shock will now increase your heart rate.
+  - balance: Pain modifier now affects traumatic shock
+  - balance: Trauma no longer weakens you for 40 seconds repeatedly. Now only weakens
+      for 6-10 seconds when it rolls.
+  - balance: Blurry eyes happen when significantly damaged or getting deep in shock.
+  - balance: Being deep in trauma no longer perma-weakens you, but now has a significant
+      chance to keep you weakened.
+  - bugfix: Shock stage no longer piles up the probabilities when in shock, instead
+      only does the one appropriate for its stage. This reduces chatspam.
+  - bugfix: Your HR can no longer go so high it reads nothing.
+  - code_imp: trauma_mod rolled into pain_mod
+  Poojawa:
+  - qol: Chem Masters now permit a choice between beaker ejections, clearing or keeping
+      the buffer inside the machine. Buffer has been changed to 300 (one bluespace
+      beaker) as a result.
+  - bugfix: Chem Masters now check for for potential overfilling, resolving issues
+      where reagents would be deleted if the beaker was too full to accept the full
+      amount.
+  - bugfix: Prevents eggs and siffruit from being 'cracked into' the Chem Master or
+      Chem Dispensor, fixing a null runtime that completely breaks the machines
+  Will:
+  - bugfix: Ripleys no longer float over openspace
+  - rscadd: Update transcore dump behavior
+2026-07-13:
+  Poojawa:
+  - rscadd: Added Corona Analyzers to Tesla coil subtypes, able to assist R&D point
+      generation
+  - image: modified tesla coil sprites to be more visually obvious if anchored or
+      the panel is open
+  - refactor: cleaned up unneeded circuitry paths and grammar
+2026-07-17:
+  CHOMPStation2StaffMirrorBot:
+  - qol: removed immutable from player bellies
+  - bugfix: robot anomalygun install display
+  Will:
+  - bugfix: Vox cortical stack organ using the wrong iconstate
+  - bugfix: The dead can no longer enter or leave the body scanner themselves
+  - bugfix: acid dispensed into buckets in chemistry machines no longer break when
+      the bucket melts
+  - rscadd: Stasis cages can be exported on the cargo shuttle for research points,
+      based on the simple mob inside of it
+  - qol: cargo scanner shows the total value of a crate when scanned, instead of opening
+      the crate
+2026-07-18:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: food synth missing do after target
+  - bugfix: modular computer core trying to cut a lazy list insanely
+  - bugfix: robot signal removal on supply compactor removal
+  Diana:
+  - rscadd: Adds chameleon pens and thieves gloves to the uncommon trash loot pile.
+  - qol: Moves some stuff around in the trash pool. Some lesser/less exciting items
+      moved to the common pool, made some items less likely to show up, added some
+      more items like all the glowsticks.
+  Poojawa:
+  - qol: Multitool flagged items will display more information about the current cable's
+      powernet status
+  - bugfix: fixed cable power readouts from displaying negative Watts, 0ing out instead
+  - image: SMES units now have an open panel state when the maintenance hatch is open
+  - refactor: Utilized KILOWATTS, MEGAWATTS in power code on a lazy basis to improve
+      readability.
+  Will:
+  - refactor: unifies copypasted ranged_disarm procs
