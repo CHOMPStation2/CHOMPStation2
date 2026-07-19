@@ -1,0 +1,7 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Add ATC channel"
+  - rscadd: "Add Culture channel"
+  - rscadd: "intercoms set to ATC channel to the bridge"
+  - rscadd: "intercoms set to Culture channel to the bar"
