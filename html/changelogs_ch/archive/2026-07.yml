@@ -156,3 +156,11 @@
       readability.
   Will:
   - refactor: unifies copypasted ranged_disarm procs
+2026-07-20:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Add ATC channel
+  - rscadd: Add Culture channel
+  - rscadd: intercoms set to ATC channel to the bridge
+  - rscadd: intercoms set to Culture channel to the bar
+  Will:
+  - qol: Removed hand targeting requirement from fingerprinting
