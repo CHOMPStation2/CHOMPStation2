@@ -164,3 +164,7 @@
   - rscadd: intercoms set to Culture channel to the bar
   Will:
   - qol: Removed hand targeting requirement from fingerprinting
+2026-07-22:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: comments out some unused winset names
+  - bugfix: removes old/unused interface window/element
