@@ -4178,7 +4178,6 @@
 #include "code\modules\mob\new_player\tails\tails_exotic.dm"
 #include "code\modules\mob\new_player\tails\tails_long.dm"
 #include "code\modules\mob\new_player\tails\tails_reptile.dm"
-#include "code\modules\mob\new_player\tails\tails_snowflake.dm"
 #include "code\modules\mob\new_player\tails\tails_synth.dm"
 #include "code\modules\mob\new_player\tails\tails_teshari.dm"
 #include "code\modules\mob\new_player\taur\not_taur_legs.dm"
