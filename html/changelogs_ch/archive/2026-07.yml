@@ -168,3 +168,10 @@
   CHOMPStation2StaffMirrorBot:
   - code_imp: comments out some unused winset names
   - bugfix: removes old/unused interface window/element
+2026-07-24:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: byond to 1685
+  - code_imp: some tgui cleanup
+  - bugfix: tgui test runs leaking their doms into each other
+  Will, Reo:
+  - bugfix: synthetics no longer affected by brainsnax braindamage
