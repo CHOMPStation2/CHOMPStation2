@@ -200,3 +200,6 @@
   - image: Readds kaiju tail
   Will:
   - bugfix: Gripper can insert powercells into borgs again
+2026-07-31:
+  Diana:
+  - rscadd: Adds bluespace collar to character loadout
