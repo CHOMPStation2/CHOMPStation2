@@ -1,0 +1,5 @@
+2026-08-01:
+  Diana:
+  - bugfix: Crossbows can now pin targets to walls now.
+  - bugfix: Sharp objects shot out of a pneumatic cannon at enough force can pin targets
+      to walls now, too.
