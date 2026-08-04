@@ -6,3 +6,14 @@
 2026-08-03:
   Will:
   - code_imp: replaced usr from wire interaction behaviors
+2026-08-04:
+  CHOMPStation2StaffMirrorBot:
+  - sound: added two big cat audible emotes
+  - bugfix: missing space in guestpass visible messages
+  - bugfix: robot sleepers hard ref to the robot
+  - bugfix: null law issue if guard dog was rolled on vore laws without anyone nearby,
+      this could lead to rounds never ending
+  Guti:
+  - rscadd: Added anomaly effect for xenoarch
+  - bugfix: Fixed bioscrambler anomaly taking FBPs and DNAless people as valid targets
+  - code_imp: Added ANOMALY_ALL containing all current anomalies
