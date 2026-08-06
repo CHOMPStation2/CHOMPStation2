@@ -17,3 +17,8 @@
   - rscadd: Added anomaly effect for xenoarch
   - bugfix: Fixed bioscrambler anomaly taking FBPs and DNAless people as valid targets
   - code_imp: Added ANOMALY_ALL containing all current anomalies
+2026-08-06:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: update dependencies
+  - bugfix: identification terminal topic limit spam
+  - bugfix: fixed mob/living/simple_mob/vore/wolf's bellies proc
