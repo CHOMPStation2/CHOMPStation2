@@ -444,7 +444,6 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bv" = (
-/obj/structure/closet/crate/secure/lootsafe/numberlock,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/Blackshuttledown)
 "bw" = (
@@ -709,7 +708,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "cl" = (
-/obj/structure/table/woodentable,
+/obj/structure/closet/crate/secure/lootsafe/numberlock,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "cm" = (

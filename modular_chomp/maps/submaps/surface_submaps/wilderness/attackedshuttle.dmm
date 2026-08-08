@@ -97,6 +97,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/steel,
 /area/submap/attackedshuttle)
 "fN" = (
@@ -925,7 +926,7 @@ rw
 rw
 LV
 sL
-sL
+Bv
 LV
 nB
 rw
@@ -974,7 +975,7 @@ xN
 sL
 sL
 sL
-sL
+Bv
 KY
 WL
 bu
