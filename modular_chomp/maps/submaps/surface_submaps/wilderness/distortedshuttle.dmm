@@ -1,0 +1,861 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/obj/machinery/door/airlock/external,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"d" = (
+/obj/random/multiple/large_corp_crate,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"e" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1331;
+	id_tag = "merc_shuttle_outer";
+	name = "Ship External Access";
+	req_access = list(150)
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"g" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"h" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/template_noop,
+/area/submap/distortedshuttle)
+"j" = (
+/obj/structure/largecrate/animal/guardbeast,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"k" = (
+/obj/structure/bed,
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"l" = (
+/obj/effect/abstract/abberation/spawner/glass,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"m" = (
+/obj/structure/closet/crate/secure/lootsafe/numberlock,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"n" = (
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark0";
+	name = "Unknown Shuttle"
+	},
+/area/submap/distortedshuttle)
+"o" = (
+/obj/machinery/portable_atmospherics/canister/empty/oxygen,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"p" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"r" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/submap/distortedshuttle)
+"u" = (
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark0";
+	name = "Unknown Shuttle"
+	},
+/area/submap/distortedshuttle)
+"v" = (
+/obj/machinery/fusion_fuel_injector/mapped,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"w" = (
+/obj/machinery/computer,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"x" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"z" = (
+/obj/structure/closet/crate/plastic,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"A" = (
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"C" = (
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"D" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"E" = (
+/obj/machinery/atmospherics/pipe/tank/oxygen,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"G" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/submap/distortedshuttle)
+"H" = (
+/obj/effect/abstract/abberation/spawner/glass,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"J" = (
+/obj/structure/closet/crate/nukies,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"K" = (
+/obj/structure/bed,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"M" = (
+/obj/structure/bed,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"N" = (
+/obj/structure/closet/crate/mimic/airlock/cointoss,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"O" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/submap/distortedshuttle)
+"P" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"Q" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/template_noop,
+/area/template_noop)
+"R" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/distortedshuttle)
+"T" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/distortedshuttle)
+"U" = (
+/obj/random/multiple/corp_crate,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"V" = (
+/obj/random/multiple/random_size_crate/no_weapons,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"W" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/submap/distortedshuttle)
+"X" = (
+/obj/random/empty_or_lootable_crate,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"Y" = (
+/obj/structure/closet/crate/oculum,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"Z" = (
+/obj/effect/abstract/abberation/spawner/fire,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+n
+e
+e
+n
+n
+a
+a
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+n
+n
+T
+G
+n
+n
+b
+b
+n
+u
+Q
+a
+a
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+n
+n
+n
+n
+T
+G
+n
+U
+Y
+J
+U
+n
+A
+A
+n
+u
+Q
+a
+a
+a
+a
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+n
+n
+m
+n
+n
+A
+A
+A
+C
+A
+x
+A
+n
+A
+A
+n
+n
+a
+a
+a
+a
+a
+a
+"}
+(6,1,1) = {"
+a
+a
+a
+a
+a
+n
+n
+n
+K
+C
+K
+n
+A
+d
+x
+U
+l
+V
+A
+n
+C
+C
+n
+n
+n
+a
+a
+a
+a
+a
+"}
+(7,1,1) = {"
+a
+a
+n
+T
+G
+n
+D
+n
+K
+x
+M
+n
+A
+d
+A
+X
+A
+U
+A
+n
+C
+x
+N
+Z
+n
+n
+a
+a
+a
+a
+"}
+(8,1,1) = {"
+a
+n
+n
+w
+g
+g
+A
+n
+K
+Z
+M
+n
+x
+A
+C
+A
+x
+A
+A
+n
+A
+A
+n
+N
+n
+n
+n
+n
+a
+a
+"}
+(9,1,1) = {"
+a
+W
+w
+p
+A
+A
+C
+n
+n
+N
+n
+n
+n
+n
+N
+n
+N
+n
+n
+n
+A
+C
+n
+A
+A
+v
+n
+n
+n
+a
+"}
+(10,1,1) = {"
+a
+O
+g
+A
+l
+A
+x
+A
+A
+x
+C
+A
+C
+A
+A
+x
+C
+A
+A
+A
+x
+A
+n
+A
+C
+o
+n
+n
+u
+h
+"}
+(11,1,1) = {"
+a
+O
+g
+x
+C
+x
+A
+A
+x
+A
+l
+A
+x
+C
+A
+C
+A
+A
+C
+C
+H
+A
+n
+A
+A
+E
+n
+n
+u
+h
+"}
+(12,1,1) = {"
+a
+r
+w
+P
+A
+A
+C
+n
+n
+N
+n
+n
+n
+n
+N
+n
+N
+n
+n
+n
+A
+A
+n
+A
+A
+v
+n
+n
+n
+a
+"}
+(13,1,1) = {"
+a
+n
+n
+w
+g
+g
+A
+n
+K
+C
+K
+n
+x
+A
+A
+A
+x
+A
+C
+n
+C
+A
+n
+N
+n
+n
+n
+n
+a
+a
+"}
+(14,1,1) = {"
+a
+a
+n
+T
+G
+n
+D
+n
+k
+C
+k
+n
+A
+d
+l
+U
+A
+V
+A
+n
+A
+C
+N
+C
+n
+n
+a
+a
+a
+a
+"}
+(15,1,1) = {"
+a
+a
+a
+a
+a
+n
+n
+n
+K
+A
+k
+n
+A
+d
+x
+X
+C
+U
+A
+n
+A
+A
+n
+n
+n
+a
+a
+a
+a
+a
+"}
+(16,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+n
+n
+m
+n
+n
+A
+A
+A
+A
+A
+A
+A
+n
+x
+x
+n
+n
+a
+a
+a
+a
+a
+a
+"}
+(17,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+n
+n
+n
+n
+T
+G
+n
+U
+z
+j
+U
+n
+Z
+A
+n
+u
+Q
+a
+a
+a
+a
+a
+"}
+(18,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+n
+n
+R
+G
+n
+n
+b
+b
+n
+u
+Q
+a
+a
+a
+a
+a
+"}
+(19,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+n
+e
+e
+n
+n
+a
+a
+a
+a
+a
+a
+"}
+(20,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
