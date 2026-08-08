@@ -67,25 +67,106 @@
 	falling_type = /obj/effect/callstrike
 	crushing = FALSE
 
+/obj/effect/artillery_attack/spear
+	ammmotype = /obj/effect/callstrike/spear
+
 /obj/effect/callstrike
 	anchored = TRUE
 	density = FALSE
 	mouse_opacity = 0
 	icon ='modular_chomp/icons/obj/guns/precursor/tyr.dmi'
+	var/meteor_type = BURN
+	var/meteor_vaule = 40
+	var/meteor_defense = "laser"
+	var/meteor_icon = "arti"
 
 /obj/effect/callstrike/Initialize(mapload)
 	.=..()
-	icon_state = "arti"
+	icon_state = meteor_icon
 
 /obj/effect/callstrike/end_fall(crushing = FALSE)
 	for(var/mob/living/L in loc)
 		var/target_zone = ran_zone()
-		var/blocked = L.run_armor_check(target_zone, "laser")
+		var/blocked = L.run_armor_check(target_zone, meteor_defense)
 
-		if(!L.apply_damage(70, BURN, target_zone, blocked))
+		if(!L.apply_damage(meteor_vaule, meteor_type, target_zone, blocked))
 			break
 	playsound(src, 'sound/effects/clang2.ogg', 50, 1)
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME)
+	QDEL_IN(0.25, SECONDS)
+
+/obj/effect/callstrike/spear
+	meteor_type = BRUTE
+	meteor_vaule = 40
+	meteor_defense = "melee"
+	meteor_icon = "spear"
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/line_encase(atom/target, next_cycle)
+	var/turf/T = get_turf(target)
+	new artidrop(locate(T.x-3, T.y-1, T.z))
+	new artidrop(locate(T.x-3, T.y, T.z))
+	new artidrop(locate(T.x-3, T.y+1, T.z))
+	new artidrop(locate(T.x+3, T.y, T.z))
+	new artidrop(locate(T.x+3, T.y, T.z))
+	new artidrop(locate(T.x+3, T.y, T.z))
+	new artidrop(locate(T.x-1, T.y-3, T.z))
+	new artidrop(locate(T.x+1, T.y-3, T.z))
+	new artidrop(locate(T.x, T.y-3, T.z))
+	new artidrop(locate(T.x-1, T.y+3, T.z))
+	new artidrop(locate(T.x+1, T.y+3, T.z))
+	new artidrop(locate(T.x, T.y+3, T.z))
+	attackcycle = next_cycle
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/circle_sniper(atom/target, next_cycle, amount, fire_delay)
+	var/turf/T = get_turf(target)
+	new artidrop(locate(T.x-3, T.y-1, T.z))
+	new artidrop(locate(T.x-3, T.y, T.z))
+	new artidrop(locate(T.x-3, T.y+1, T.z))
+	new artidrop(locate(T.x+3, T.y, T.z))
+	new artidrop(locate(T.x+3, T.y, T.z))
+	new artidrop(locate(T.x+3, T.y, T.z))
+	new artidrop(locate(T.x-1, T.y-3, T.z))
+	new artidrop(locate(T.x+1, T.y-3, T.z))
+	new artidrop(locate(T.x, T.y-3, T.z))
+	new artidrop(locate(T.x-1, T.y+3, T.z))
+	new artidrop(locate(T.x+1, T.y+3, T.z))
+	new artidrop(locate(T.x, T.y+3, T.z))
+	new artidrop(locate(T.x, T.y, T.z))
+	if(amount > 0)
+		addtimer(CALLBACK(src, PROC_REF(circle_sniper), target, next_cycle, fire_delay, amount), fire_delay, TIMER_DELETE_ME)
+	else
+		attackcycle = next_cycle
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/block_sniper(atom/target, next_cycle, amount, fire_delay)
+	var/turf/T = get_turf(target)
+	new artidrop(locate(T.x-1, T.y, T.z))
+	new artidrop(locate(T.x, T.y, T.z))
+	new artidrop(locate(T.x+1, T.y, T.z))
+	new artidrop(locate(T.x+1, T.y+1, T.z))
+	new artidrop(locate(T.x-1, T.y+1, T.z))
+	new artidrop(locate(T.x, T.y+1, T.z))
+	new artidrop(locate(T.x+1, T.y-1, T.z))
+	new artidrop(locate(T.x-1, T.y-1, T.z))
+	new artidrop(locate(T.x, T.y-1, T.z))
+	if(amount > 0)
+		addtimer(CALLBACK(src, PROC_REF(block_sniper), target, next_cycle, fire_delay, amount), fire_delay, TIMER_DELETE_ME)
+	else
+		attackcycle = next_cycle
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/web_sniper(atom/target, next_cycle, amount, fire_delay)
+	var/turf/T = get_turf(target)
+	new artidrop(locate(T.x, T.y, T.z))
+	new artidrop(locate(T.x-2, T.y, T.z))
+	new artidrop(locate(T.x+2, T.y, T.z))
+	new artidrop(locate(T.x, T.y-2, T.z))
+	new artidrop(locate(T.x, T.y+2, T.z))
+	new artidrop(locate(T.x-1, T.y-1, T.z))
+	new artidrop(locate(T.x+1, T.y+1, T.z))
+	new artidrop(locate(T.x-1, T.y+1, T.z))
+	new artidrop(locate(T.x+1, T.y-1, T.z))
+	if(amount > 0)
+		addtimer(CALLBACK(src, PROC_REF(web_sniper), target, next_cycle, fire_delay, amount), fire_delay, TIMER_DELETE_ME)
+	else
+		attackcycle = next_cycle
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/gravity_surge(atom/target, next_cycle, pull_radius, pull_strength)
 	if(!target)

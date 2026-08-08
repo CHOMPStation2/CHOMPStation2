@@ -444,7 +444,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bv" = (
-/obj/structure/closet/crate/secure/lootsafe,
+/obj/structure/closet/crate/secure/lootsafe/numberlock,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/Blackshuttledown)
 "bw" = (
