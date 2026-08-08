@@ -228,8 +228,8 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/sphere
 	name = "astral collective sphere"
-	icon_state = "engi_spider"
-	icon_living = "engi_spider"
+	icon_state = "orb"
+	icon_living = "orb"
 	desc = "A floating metallic sphere."
 	health = 1500
 	maxHealth = 1500
