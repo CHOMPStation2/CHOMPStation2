@@ -87,7 +87,7 @@
 	)
 
 /obj/machinery/telecomms/receiver/preset_right/southerncross
-	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, ENT_FREQ, BDCM_FREQ, EXP_FREQ)
+	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, ENT_FREQ, BDCM_FREQ, EXP_FREQ, ATC_FREQ, CULTURE_FREQ)
 
 /obj/machinery/telecomms/bus/preset_two/southerncross
 	freq_listening = list(SUP_FREQ, SRV_FREQ, EXP_FREQ)
@@ -99,6 +99,8 @@
 /datum/map/southern_cross/default_internal_channels()
 	return list(
 		num2text(PUB_FREQ) = list(),
+		num2text(ATC_FREQ) = list(),
+		num2text(CULTURE_FREQ) = list(),
 		num2text(AI_FREQ)  = list(ACCESS_SYNTH),
 		num2text(ENT_FREQ) = list(),
 		num2text(ERT_FREQ) = list(ACCESS_CENT_SPECOPS),

@@ -2,6 +2,8 @@
 #define CHANNEL_COMMON "Common"
 #define CHANNEL_AI_PRIVATE "AI Private"
 #define CHANNEL_ENTERTAINMENT "Entertainment"
+#define CHANNEL_ATC "ATC"
+#define CHANNEL_CULTURE "Culture"
 
 // Departments
 #define CHANNEL_COMMAND "Command"
@@ -90,6 +92,8 @@ On the map:
 #define SYND_FREQ 1213
 #define RAID_FREQ 1277
 #define ENT_FREQ 1461 //entertainment frequency. This is not a diona exclusive frequency.
+#define ATC_FREQ 1477
+#define CULTURE_FREQ 1479
 
 #define BDCM_FREQ 1483 // CHOMPAdd
 #define OUT_FREQ 1367 // CHOMPAdd
