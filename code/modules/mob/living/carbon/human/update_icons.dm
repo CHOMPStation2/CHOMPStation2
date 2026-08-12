@@ -1321,7 +1321,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	if(vore_belly_image)
 		vore_belly_image.layer = BODY_LAYER+VORE_BELLY_LAYER
 		overlays_standing[VORE_BELLY_LAYER] = vore_belly_image
-		vore_belly_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
+		//CHOMPEdit Disabling this until someone comes up with a less destructive approach. //vore_belly_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
 		vore_belly_image.appearance_flags = appearance_flags
 
 	apply_layer(VORE_BELLY_LAYER)
@@ -1353,7 +1353,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	if(vore_tail_image)
 		vore_tail_image.layer = BODY_LAYER + VORE_TAIL_LAYER
 		// This one line of code. THIS ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
-		vore_tail_image.plane = PLANE_CH_STOMACH
+		//CHOMPEdit Disabling this until someone comes up with a less destructive approach. //vore_tail_image.plane = PLANE_CH_STOMACH
 		vore_tail_image.appearance_flags = appearance_flags
 		overlays_standing[VORE_TAIL_LAYER] = vore_tail_image
 	apply_layer(VORE_TAIL_LAYER)
@@ -1599,148 +1599,6 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 
 	return rendered
 
-<<<<<<< HEAD
-/mob/living/carbon/human/proc/get_tail_image()
-	//If you are FBP with tail style and didn't set a custom one
-	var/datum/robolimb/model = isSynthetic()
-	if(istype(model) && model.includes_tail && !tail_style && !tail_hidden)
-		var/icon/tail_s = new/icon("icon" = synthetic.icon, "icon_state" = "tail")
-		tail_s.Blend(rgb(src.r_skin, src.g_skin, src.b_skin), species.color_mult ? ICON_MULTIPLY : ICON_ADD)
-		return image(tail_s)
-
-	//If you have a custom tail selected
-	if(tail_style && !(wear_suit && wear_suit.flags_inv & HIDETAIL && !istaurtail(tail_style)) && !tail_hidden)
-		var/icon/tail_s = new/icon("icon" = (tail_style.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = (wagging && tail_style.ani_state ? tail_style.ani_state : tail_style.icon_state))
-		if(tail_style.can_loaf && !is_shifted)
-			pixel_y = (resting) ? -tail_style.loaf_offset*size_multiplier : default_pixel_y //move player down, then taur up, to fit the overlays correctly. Taur Loafing
-		if(tail_style.do_colouration)
-			tail_s.Blend(rgb(src.r_tail, src.g_tail, src.b_tail), tail_style.color_blend_mode)
-		if(tail_style.extra_overlay)
-			var/icon/overlay = new/icon("icon" = (tail_style.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay)
-			if(wagging && tail_style.ani_state)
-				overlay = new/icon("icon" = (tail_style.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay_w)
-				overlay.Blend(rgb(src.r_tail2, src.g_tail2, src.b_tail2), tail_style.color_blend_mode)
-				tail_s.Blend(overlay, ICON_OVERLAY)
-				qdel(overlay)
-			else
-				overlay.Blend(rgb(src.r_tail2, src.g_tail2, src.b_tail2), tail_style.color_blend_mode)
-				tail_s.Blend(overlay, ICON_OVERLAY)
-				qdel(overlay)
-
-		if(tail_style.extra_overlay2)
-			var/icon/overlay = new/icon("icon" = (tail_style.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay2)
-			if(wagging && tail_style.ani_state)
-				overlay = new/icon("icon" = (tail_style.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay2_w)
-				overlay.Blend(rgb(src.r_tail3, src.g_tail3, src.b_tail3), tail_style.color_blend_mode)
-				tail_s.Blend(overlay, ICON_OVERLAY)
-				qdel(overlay)
-			else
-				overlay.Blend(rgb(src.r_tail3, src.g_tail3, src.b_tail3), tail_style.color_blend_mode)
-				tail_s.Blend(overlay, ICON_OVERLAY)
-				qdel(overlay)
-
-		var/image/working = image(tail_s)
-		if(tail_style.em_block)
-			working.overlays += em_block_image_generic(working) // Leaving this as overlays +=
-
-		if(istaurtail(tail_style))
-			var/datum/sprite_accessory/tail/taur/taurtype = tail_style
-			working.pixel_x = tail_style.offset_x
-			working.pixel_y = tail_style.offset_y
-			if(taurtype.can_ride && !riding_datum)
-				riding_datum = new /datum/riding/taur(src)
-				add_verb(src, /mob/living/carbon/human/proc/taur_mount)
-				add_verb(src, /mob/living/proc/toggle_rider_reins)
-		else if(islongtail(tail_style))
-			working.pixel_x = tail_style.offset_x
-			working.pixel_y = tail_style.offset_y
-		working.alpha = src.a_tail
-		return working
-	return null
-
-// TODO - Move this to where it should go ~Leshana
-/mob/living/proc/stop_flying()
-	if(QDESTROYING(src))
-		return
-	flying = FALSE
-	return 1
-
-/mob/living/carbon/human/stop_flying()
-	if((. = ..()))
-		update_wing_showing()
-
-/mob/living/carbon/human/proc/update_vore_belly_sprite()
-	if(QDESTROYING(src))
-		return
-
-	remove_layer(VORE_BELLY_LAYER)
-
-	var/image/vore_belly_image = get_vore_belly_image()
-	if(vore_belly_image)
-		vore_belly_image.layer = BODY_LAYER+VORE_BELLY_LAYER
-		overlays_standing[VORE_BELLY_LAYER] = vore_belly_image
-		//CHOMPEdit Disabling this until someone comes up with a less destructive approach. //vore_belly_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
-		vore_belly_image.appearance_flags = appearance_flags
-
-	apply_layer(VORE_BELLY_LAYER)
-
-/mob/living/carbon/human/proc/get_vore_belly_image()
-	if(!(wear_suit && wear_suit.flags_inv & HIDETAIL))
-		var/vs_fullness = vore_fullness_ex["stomach"]
-		var/icon/vorebelly_s = new/icon(icon = 'modular_chomp/icons/mob/vore/Bellies.dmi', icon_state = "[species.vore_belly_default_variant]Belly[vs_fullness][struggle_anim_stomach ? "" : " idle"]") //CHOMPEdit
-		vorebelly_s.Blend(vore_sprite_color["stomach"], vore_sprite_multiply["stomach"] ? ICON_MULTIPLY : ICON_ADD)
-		var/image/working = image(vorebelly_s)
-		working.overlays += em_block_image_generic(working)
-		return working
-	return null
-
-/mob/living/carbon/human/proc/vore_belly_animation()
-	if(!struggle_anim_stomach)
-		struggle_anim_stomach = TRUE
-		update_vore_belly_sprite()
-		spawn(12)
-			struggle_anim_stomach = FALSE
-			update_vore_belly_sprite()
-
-/mob/living/carbon/human/proc/update_vore_tail_sprite()
-	if(QDESTROYING(src))
-		return
-
-	remove_layer(VORE_TAIL_LAYER)
-
-	var/image/vore_tail_image = get_vore_tail_image()
-	if(vore_tail_image)
-		vore_tail_image.layer = BODY_LAYER+VORE_TAIL_LAYER
-		overlays_standing[VORE_TAIL_LAYER] = vore_tail_image
-		//CHOMPEdit Disabling this until someone comes up with a less destructive approach. //vore_tail_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
-		vore_tail_image.appearance_flags = appearance_flags
-
-	apply_layer(VORE_TAIL_LAYER)
-
-/mob/living/carbon/human/proc/get_vore_tail_image()
-	if(tail_style && istaurtail(tail_style) && tail_style.vore_tail_sprite_variant)
-		var/vs_fullness = vore_fullness_ex["taur belly"]
-		var/loaf_alt = lying && tail_style.belly_variant_when_loaf
-		var/fullness_icons = min(tail_style.fullness_icons, vs_fullness)
-		var/icon/vorebelly_s = new/icon(icon = tail_style.bellies_icon_path, icon_state = "Taur[tail_style.vore_tail_sprite_variant]-Belly-[fullness_icons][loaf_alt ? " loaf" : (struggle_anim_taur ? "" : " idle")]")
-		vorebelly_s.Blend(vore_sprite_color["taur belly"], vore_sprite_multiply["taur belly"] ? ICON_MULTIPLY : ICON_ADD)
-		var/image/working = image(vorebelly_s)
-		working.pixel_x = -16
-		if(tail_style.em_block)
-			working.overlays += em_block_image_generic(working)
-		return working
-	return null
-
-/mob/living/carbon/human/proc/vore_tail_animation()
-	if(tail_style.struggle_anim && !struggle_anim_taur)
-		struggle_anim_taur = TRUE
-		update_vore_tail_sprite()
-		spawn(12)
-			struggle_anim_taur = FALSE
-			update_vore_tail_sprite()
-
-=======
->>>>>>> 3e28b73e01 ([READY] Taursuits and Tail socks [IDB IGNORE] (#19611))
 /mob/living/carbon/human/proc/GetAppearanceFromPrefs(flavourtext, oocnotes)
 	/* Jank code that effectively creates the client's mob from save, then copies its appearance to our current mob.
 	Intended to be used with shapeshifter species so we don't reset their organs in doing so.*/
