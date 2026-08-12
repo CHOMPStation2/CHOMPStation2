@@ -5,6 +5,7 @@
 #include "AbandonedLab.dmm"
 #include "AmbushBase.dmm"
 #include "AmbushBaseAlt.dmm"
+#include "attackedshuttle.dmm"
 #include "Blackshuttledown.dmm"
 #include "Blueshuttledown.dmm"
 //#include "Boombase.dmm"
@@ -24,6 +25,7 @@
 #include "DecoupledEngine.dmm"
 #include "demonpool.dmm"
 #include "derelictengine.dmm"
+#include "distortedshuttle.dmm"
 #include "DJOutpost1.dmm"
 #include "DJOutpost2.dmm"
 #include "dogbase.dmm"
@@ -68,6 +70,7 @@
 #include "spider1.dmm"
 #include "syndisniper.dmm"
 #include "syndisniperAlt.dmm"
+#include "thepitboss.dmm"
 #include "wolfden.dmm"
 #include "xenohive.dmm"
 #include "XenoWeaveMajor.dmm"
@@ -546,6 +549,24 @@
 	desc = "A building claimed and assimilated into the xenoweave."
 	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/XenoWeaveMinour.dmm"
 	cost = 30
+
+/datum/map_template/surface/wilderness_ch/deep/attackshedshuttle
+	name = "Attacked Shuttle"
+	desc = "A vessel that has been raided and claimed by the Astral Collective."
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/attackedshuttle.dmm"
+	cost = 15
+
+/datum/map_template/surface/wilderness_ch/deep/distortedshuttle
+	name = "Distorted Shuttle"
+	desc = "A shuttle that has fallen victim to anomalous effects."
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/distortedshuttle.dmm"
+	cost = 15
+
+/datum/map_template/surface/wilderness_ch/deep/thepitboss
+	name = "Astral Collective Mining"
+	desc = "An expirmental metheod of mining from the astral collective."
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/thepitboss.dmm"
+	cost = 15
 
 /*==Disabled==/
 
