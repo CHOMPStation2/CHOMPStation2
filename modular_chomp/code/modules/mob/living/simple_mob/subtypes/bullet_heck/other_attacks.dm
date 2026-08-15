@@ -68,7 +68,11 @@
 	crushing = FALSE
 
 /obj/effect/artillery_attack/spear
-	ammmotype = /obj/effect/callstrike/spear
+	ammmotype = /obj/effect/falling_effect/callstrike_spear
+
+/obj/effect/falling_effect/callstrike_spear
+	falling_type = /obj/effect/callstrike/spear
+	crushing = FALSE
 
 /obj/effect/callstrike
 	anchored = TRUE
@@ -91,13 +95,11 @@
 
 		if(!L.apply_damage(meteor_vaule, meteor_type, target_zone, blocked))
 			break
-	playsound(src, 'sound/effects/clang2.ogg', 50, 1)
 	QDEL_IN(0.25, SECONDS)
 
 /obj/effect/callstrike/spear
 	meteor_type = BRUTE
 	meteor_vaule = 40
-	meteor_defense = "melee"
 	meteor_icon = "spear"
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/line_encase(atom/target, next_cycle)

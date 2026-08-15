@@ -6,8 +6,16 @@
 /obj/machinery/door/airlock/external,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
+"c" = (
+/obj/effect/anomaly/hallucination{
+	move_chance = 0;
+	immortal = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
 "d" = (
 /obj/random/multiple/large_corp_crate,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "e" = (
@@ -19,25 +27,39 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
+"f" = (
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/item/material/barbedwire/glass/start_active,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
 "g" = (
 /obj/structure/table/steel,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "h" = (
 /obj/structure/shuttle/engine/propulsion,
 /turf/template_noop,
 /area/submap/distortedshuttle)
+"i" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1331;
+	id_tag = "merc_shuttle_outer";
+	name = "Ship External Access";
+	req_access = list(150)
+	},
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
 "j" = (
 /obj/structure/largecrate/animal/guardbeast,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "k" = (
 /obj/structure/bed,
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/simulated/floor/tiled/steel,
-/area/submap/distortedshuttle)
-"l" = (
-/obj/effect/abstract/abberation/spawner/glass,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "m" = (
@@ -59,6 +81,12 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood,
+/obj/item/material/barbedwire/glass/start_active,
+/turf/simulated/floor/tiled/steel,
+/area/submap/distortedshuttle)
+"q" = (
+/obj/machinery/door/airlock/external,
+/obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "r" = (
@@ -71,6 +99,10 @@
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
+/area/submap/distortedshuttle)
+"s" = (
+/obj/machinery/door/airlock/hatch,
+/turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "u" = (
 /obj/structure/shuttle/engine/heater,
@@ -85,14 +117,17 @@
 /area/submap/distortedshuttle)
 "w" = (
 /obj/machinery/computer,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "x" = (
 /obj/effect/decal/cleanable/blood,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "z" = (
 /obj/structure/closet/crate/plastic,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "A" = (
@@ -104,6 +139,7 @@
 /area/submap/distortedshuttle)
 "D" = (
 /obj/structure/closet/emcloset,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "E" = (
@@ -121,26 +157,25 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/submap/distortedshuttle)
-"H" = (
-/obj/effect/abstract/abberation/spawner/glass,
-/obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/tiled/steel,
-/area/submap/distortedshuttle)
 "J" = (
 /obj/structure/closet/crate/nukies,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "K" = (
 /obj/structure/bed,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "M" = (
 /obj/structure/bed,
 /obj/effect/decal/cleanable/blood,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "N" = (
-/obj/structure/closet/crate/mimic/airlock/cointoss,
+/obj/machinery/door/airlock/hatch,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "O" = (
@@ -155,6 +190,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "Q" = (
@@ -189,10 +225,12 @@
 /area/submap/distortedshuttle)
 "U" = (
 /obj/random/multiple/corp_crate,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "V" = (
 /obj/random/multiple/random_size_crate/no_weapons,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "W" = (
@@ -208,14 +246,16 @@
 /area/submap/distortedshuttle)
 "X" = (
 /obj/random/empty_or_lootable_crate,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "Y" = (
 /obj/structure/closet/crate/oculum,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 "Z" = (
-/obj/effect/abstract/abberation/spawner/fire,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/submap/distortedshuttle)
 
@@ -273,7 +313,7 @@ a
 a
 n
 e
-e
+i
 n
 n
 a
@@ -305,7 +345,7 @@ G
 n
 n
 b
-b
+q
 n
 u
 Q
@@ -336,8 +376,8 @@ Y
 J
 U
 n
-A
-A
+Z
+Z
 n
 u
 Q
@@ -360,16 +400,16 @@ n
 m
 n
 n
-A
-A
-A
-C
-A
+Z
+Z
+Z
+f
+Z
 x
-A
+Z
 n
-A
-A
+Z
+Z
 n
 n
 a
@@ -389,19 +429,19 @@ n
 n
 n
 K
-C
+f
 K
 n
-A
+Z
 d
 x
 U
-l
+Z
 V
-A
+Z
 n
-C
-C
+f
+f
 n
 n
 n
@@ -424,15 +464,15 @@ K
 x
 M
 n
-A
+Z
 d
-A
+Z
 X
-A
+Z
 U
-A
+Z
 n
-C
+f
 x
 N
 Z
@@ -450,22 +490,22 @@ n
 w
 g
 g
-A
+Z
 n
 K
 Z
 M
 n
 x
-A
-C
-A
+Z
+f
+Z
 x
-A
-A
+Z
+Z
 n
-A
-A
+Z
+Z
 n
 N
 n
@@ -480,9 +520,9 @@ a
 W
 w
 p
-A
-A
-C
+Z
+Z
+f
 n
 n
 N
@@ -490,14 +530,14 @@ n
 n
 n
 n
-N
+s
 n
-N
+s
 n
 n
 n
-A
-C
+Z
+f
 n
 A
 A
@@ -511,25 +551,25 @@ a
 a
 O
 g
-A
-l
-A
+Z
+Z
+Z
 x
-A
-A
+Z
+Z
 x
-C
-A
-C
-A
-A
+f
+Z
+f
+Z
+Z
 x
-C
-A
-A
-A
+f
+Z
+Z
+Z
 x
-A
+Z
 n
 A
 C
@@ -544,27 +584,27 @@ a
 O
 g
 x
-C
+f
 x
-A
-A
+Z
+Z
 x
-A
-l
-A
+Z
+Z
+Z
 x
-C
-A
-C
-A
-A
-C
-C
-H
-A
+f
+Z
+f
+Z
+Z
+f
+f
+x
+Z
 n
 A
-A
+c
 E
 n
 n
@@ -576,9 +616,9 @@ a
 r
 w
 P
-A
-A
-C
+Z
+Z
+f
 n
 n
 N
@@ -586,14 +626,14 @@ n
 n
 n
 n
-N
+s
 n
-N
+s
 n
 n
 n
-A
-A
+Z
+Z
 n
 A
 A
@@ -610,22 +650,22 @@ n
 w
 g
 g
-A
+Z
 n
 K
-C
+f
 K
 n
 x
-A
-A
-A
+Z
+Z
+Z
 x
-A
-C
+Z
+f
 n
-C
-A
+f
+Z
 n
 N
 n
@@ -645,21 +685,21 @@ n
 D
 n
 k
-C
+f
 k
 n
-A
+Z
 d
-l
+Z
 U
-A
+Z
 V
-A
+Z
 n
-A
-C
+Z
+f
 N
-C
+f
 n
 n
 a
@@ -677,19 +717,19 @@ n
 n
 n
 K
-A
+Z
 k
 n
-A
+Z
 d
 x
 X
-C
+f
 U
-A
+Z
 n
-A
-A
+Z
+Z
 n
 n
 n
@@ -712,13 +752,13 @@ n
 m
 n
 n
-A
-A
-A
-A
-A
-A
-A
+Z
+Z
+Z
+Z
+Z
+Z
+Z
 n
 x
 x
@@ -753,7 +793,7 @@ j
 U
 n
 Z
-A
+Z
 n
 u
 Q
@@ -784,8 +824,8 @@ R
 G
 n
 n
-b
-b
+q
+q
 n
 u
 Q
