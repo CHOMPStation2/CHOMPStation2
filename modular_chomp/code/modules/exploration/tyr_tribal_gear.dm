@@ -250,6 +250,48 @@
 		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
 		)
 
+
+/obj/item/melee/energy/tyr_sabre
+	name = "tyrian energy blade"
+	slot_flags = SLOT_BELT | SLOT_BACK //should make a proper sprite some time but spriting energy is hard
+	desc = "A forgien blade made via techniques of ages old. Gains a diffrent effect base off your stance."
+	description_info = "Attacking will alter this weapons properties. Attacking in a grab stance increases projectile defense. Disarm intent increases melee defense. Hurt increases damage. They have a cap, and reset upon using another intent."
+	active_force = 30
+	active_armourpen = 30
+	projectile_parry_chance = 20
+	defend_chance = 20
+	lcolor = null
+	colorable = FALSE
+
+	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
+	icon_state = "sabre"
+	item_state = "sabre"
+
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/obj/guns/precursor/lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
+		)
+
+/obj/item/melee/energy/tyr_sabre/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
+	if(active)
+		. = ..()
+		switch(user.a_intent)
+			if(I_GRAB)
+				defend_chance = 20
+				force = 30
+				if(projectile_parry_chance < 60)
+					projectile_parry_chance += 8
+			if(I_DISARM)
+				projectile_parry_chance = 20
+				force = 30
+				if(defend_chance < 60)
+					defend_chance += 8
+			if(I_HURT)
+				projectile_parry_chance = 20
+				defend_chance = 20
+				if(defend_chance < 60)
+					force += 6
+
 //E sword has 30 damage, 50 AP, and 65% projectile block
 //Axe is 60 damage, 65 AP, no guard
 //Normal attackspeed is 8
@@ -284,12 +326,13 @@
 		. = ..()
 		switch(user.a_intent)
 			if(I_GRAB)
-				target.adjust_fire_stacks(7)
-				target.ignite_mob()
+				target.add_modifier(/datum/modifier/phase_armor, 5 SECONDS)target.add_modifier(/datum/modifier/phase_armor, 5 SECONDS)
 			if(I_DISARM)
 				user.add_modifier(/datum/modifier/technomancer/haste, 2 SECONDS)
 			if(I_HURT)
-				target.add_modifier(/datum/modifier/phase_armor, 5 SECONDS)
+				if(active && prob(8))
+					target.adjustBruteLoss(-50)
+					playsound(src, "blade1", 50, 1)*/
 
 /datum/modifier/phase_armor
 	name = "Phased Armor"
@@ -333,8 +376,7 @@
 		. = ..()
 		switch(user.a_intent)
 			if(I_GRAB)
-				user.adjustFireLoss(-5)
-				user.adjustFireLoss(-5)
+				user.add_modifier(/datum/modifier/aura/slime_heal, 4, src)
 			if(I_DISARM)
 				target.Weaken(30)
 			if(I_HURT)
@@ -375,6 +417,11 @@
 /obj/item/melee/energy/tyr_chainsaw/Initialize(mapload)
 	. = ..()
 	bcell = new/obj/item/cell/device/weapon/recharge/alien/tyr(src)
+
+/obj/item/melee/energy/tyr_chainsaw/afterattack(atom/A as mob|obj|turf|area, mob/user as mob, proximity)
+	if(!proximity) return
+	..()
+	playsound(src, 'sound/weapons/chainsaw_attack.ogg',40,1)
 
 /obj/item/shield/tyr_shield
 	name = "tyrian portable energy barrier"

@@ -95,7 +95,7 @@
 
 		if(!L.apply_damage(meteor_vaule, meteor_type, target_zone, blocked))
 			break
-	QDEL_IN(0.25, SECONDS)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME) //QDEL_IN(0.25, SECONDS) Commenting this out since it doesnt want to work otherwise
 
 /obj/effect/callstrike/spear
 	meteor_type = BRUTE
@@ -133,6 +133,7 @@
 	new artidrop(locate(T.x+1, T.y+3, T.z))
 	new artidrop(locate(T.x, T.y+3, T.z))
 	new artidrop(locate(T.x, T.y, T.z))
+	amount--
 	if(amount > 0)
 		addtimer(CALLBACK(src, PROC_REF(circle_sniper), target, next_cycle, fire_delay, amount), fire_delay, TIMER_DELETE_ME)
 	else
@@ -149,6 +150,7 @@
 	new artidrop(locate(T.x+1, T.y-1, T.z))
 	new artidrop(locate(T.x-1, T.y-1, T.z))
 	new artidrop(locate(T.x, T.y-1, T.z))
+	amount--
 	if(amount > 0)
 		addtimer(CALLBACK(src, PROC_REF(block_sniper), target, next_cycle, fire_delay, amount), fire_delay, TIMER_DELETE_ME)
 	else
@@ -165,6 +167,7 @@
 	new artidrop(locate(T.x+1, T.y+1, T.z))
 	new artidrop(locate(T.x-1, T.y+1, T.z))
 	new artidrop(locate(T.x+1, T.y-1, T.z))
+	amount--
 	if(amount > 0)
 		addtimer(CALLBACK(src, PROC_REF(web_sniper), target, next_cycle, fire_delay, amount), fire_delay, TIMER_DELETE_ME)
 	else

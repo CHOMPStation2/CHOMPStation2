@@ -289,7 +289,7 @@
 				prob(1);/obj/structure/outcrop/uranium/tyr,
 				prob(3);/obj/structure/outcrop/diamond/tyr,
 				prob(1);/obj/structure/outcrop/platinum/tyr,
-				prob(5);/obj/structure/outcrop/weathered_gate,
+				prob(4);/obj/structure/outcrop/weathered_gate,
 				prob(3);/obj/structure/outcrop/hydrogen,
 				prob(1);/obj/structure/outcrop/lead/tyr)
 
@@ -633,3 +633,16 @@
 	The house of the mind shall focus upon our research, furthering our way torwards the bright future.<BR>\
 	The house of the soul shall focus upon us, keeping out spirits high and focus narrow.<BR>\
 	Lastly, the house of the body shall provide the most fierce of protection."
+
+/obj/item/paper/tyr_notes/astral_updateforeshadow
+	name = "Internal Rumblings"
+	info = "Tectonics readings are showing high amounts of underground activity. Drill teams have reported finding further alien specimens deeper within the planet. <BR>\
+	There are signs of this life traveling further up, tunnels and burrows spreading out. The life and heat stabilizing region caused by the tyrian ruins have given an apparent <BR>\
+	large area for this creatures to spread. The source of the breach has yet to be found. Debates are to be held if this breaches should be sealed if found, and if specimens should<BR>\
+	 be brought off site. They could prove to be rather invasive due to their bio-engineered designs, and no predators even amongst their created brethren."
+
+/obj/item/paper/tyr_notes/astral_evemtforeshadow
+	name = "Sekite Virus"
+	info = "The virus has been extrapolated, and we have dissected it. Our samples were slightly damaged due to a raid, however we recovered enough. <BR>\
+	The current trajectory is to manipulate and alter the virus for our liking. Free health, stronger bodies, a lengthy life, all soon to come.<BR>\
+	 Debates are being held if we should investigate Bluespace, or Rift integration."
