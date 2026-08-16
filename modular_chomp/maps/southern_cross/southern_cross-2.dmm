@@ -1883,21 +1883,6 @@
 	dir = 4
 	},
 /obj/structure/closet/crate/mail,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "ahk" = (
@@ -6022,6 +6007,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
 	},
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "aEU" = (
@@ -7790,6 +7778,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
 	},
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "aOo" = (
@@ -8812,6 +8803,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "aVp" = (
@@ -8822,6 +8816,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -8839,6 +8836,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "aVr" = (
@@ -8852,6 +8852,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -11504,6 +11507,7 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
+/obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "ddb" = (
@@ -17388,6 +17392,18 @@
 /obj/structure/sign/warning/server_room,
 /turf/simulated/wall/r_wall,
 /area/tcomm/computer)
+"hwB" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 9
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "hxU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -18806,6 +18822,7 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
+/obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "jhG" = (
@@ -20215,6 +20232,7 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
+/obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "kJV" = (
@@ -25917,6 +25935,7 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
+/obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "rff" = (
@@ -26768,6 +26787,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "sdV" = (
@@ -26873,6 +26895,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
+"siO" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 10
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "slp" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -30681,6 +30715,7 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
+/obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "wgm" = (
@@ -55501,13 +55536,13 @@ tqn
 azW
 aEN
 aEN
-awI
+siO
 tcO
 nTw
 nwe
 awI
 ati
-nTw
+hwB
 aEN
 aEN
 aEN
