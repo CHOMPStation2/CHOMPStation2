@@ -326,13 +326,13 @@
 		. = ..()
 		switch(user.a_intent)
 			if(I_GRAB)
-				target.add_modifier(/datum/modifier/phase_armor, 5 SECONDS)target.add_modifier(/datum/modifier/phase_armor, 5 SECONDS)
+				target.add_modifier(/datum/modifier/phase_armor, 5 SECONDS)
 			if(I_DISARM)
 				user.add_modifier(/datum/modifier/technomancer/haste, 2 SECONDS)
 			if(I_HURT)
 				if(active && prob(8))
 					target.adjustBruteLoss(-50)
-					playsound(src, "blade1", 50, 1)*/
+					playsound(src, "blade1", 50, 1)
 
 /datum/modifier/phase_armor
 	name = "Phased Armor"
