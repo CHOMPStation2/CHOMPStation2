@@ -300,7 +300,7 @@
 	name = "tyrian scout katar"
 	slot_flags = SLOT_BELT | SLOT_BACK
 	desc = "A forgien blade made via techniques formly lost. Gains a diffrent effect base off your stance."
-	description_info = "Attacking whilst on grab intent will light a fire, attacking whilst on disarm will increase your speed for a brief moment, and attacking whilst on harm will phase out your foe's armor."
+	description_info = "Attacking gains additional effects based off intent. Grab: Foe takes more damage. Disarm: Temporarly increases your speed. Hurt: Small chance for armour piercing critical hit."
 	lcolor = null
 	colorable = FALSE
 	attackspeed = 4
