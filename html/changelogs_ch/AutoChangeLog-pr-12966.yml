@@ -1,5 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - balance: "Distorted Shuttle doesn't use mimics anymore."
-  - bugfix: "Artillery Attack has its proper sprite and logic"

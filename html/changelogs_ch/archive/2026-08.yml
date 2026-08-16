@@ -67,3 +67,19 @@
       up icon generations
   - bugfix: Cleaned up tail and taur files to reduce the number of icons of species
       that used the same basic and fat icons with different overlays.
+2026-08-16:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a rare easter egg to the game
+  Diana:
+  - bugfix: PAI cards are devourable once more.
+  FluffMedic:
+  - balance: Distorted Shuttle doesn't use mimics anymore.
+  - bugfix: Artillery Attack has its proper sprite and logic
+  Will:
+  - rscadd: Mining processer, stacking machine, and mint can now be constructed
+  - rscadd: Mining machines can have their direction set by dragging them in a direction,
+      and alt-clicking to reset it.
+  - rscadd: Mining machines and consoles link to the nearest one when constructed,
+      and show unlinked status
+  - refactor: General cleanup and hardref fixes for mining machines
+  - bugfix: Destroyed or deconstructed stacking machines drop their sheet contents
