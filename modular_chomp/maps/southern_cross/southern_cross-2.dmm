@@ -596,6 +596,18 @@
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/large_escape_pod2/station)
+"abl" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 9
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "abm" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/large_escape_pod2/station)
@@ -617,6 +629,18 @@
 /obj/random/powercell,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
+"abp" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 10
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "abq" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
@@ -17392,18 +17416,6 @@
 /obj/structure/sign/warning/server_room,
 /turf/simulated/wall/r_wall,
 /area/tcomm/computer)
-"hwB" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 9
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 9
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/storage)
 "hxU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -26895,18 +26907,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
-"siO" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 10
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 10
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/storage)
 "slp" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -55536,13 +55536,13 @@ tqn
 azW
 aEN
 aEN
-siO
+abp
 tcO
 nTw
 nwe
 awI
 ati
-hwB
+abl
 aEN
 aEN
 aEN
