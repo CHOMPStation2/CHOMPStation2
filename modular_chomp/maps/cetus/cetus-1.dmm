@@ -1390,6 +1390,12 @@
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
+"acB" = (
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/star)
 "acC" = (
 /obj/structure/sink{
 	dir = 4;
@@ -1405,6 +1411,12 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm10)
+"acD" = (
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/jrfore)
 "acE" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap{
@@ -63176,7 +63188,7 @@ pCK
 awK
 cHD
 pCK
-awK
+acD
 awK
 pCK
 qHL
@@ -105058,7 +105070,7 @@ dba
 dba
 fXm
 fXm
-fXm
+acB
 fXm
 aaB
 abG

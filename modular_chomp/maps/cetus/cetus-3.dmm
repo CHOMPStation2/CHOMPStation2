@@ -623,6 +623,18 @@
 	},
 /turf/simulated/wall,
 /area/maintenance/cetus/shallow/derelict/kitchen)
+"abu" = (
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
+"abv" = (
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/shallow/fp)
 "acq" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -11307,6 +11319,9 @@
 "gCF" = (
 /obj/machinery/alarm{
 	pixel_y = 22
+	},
+/obj/effect/landmark{
+	name = "blobstart"
 	},
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/threeas)
@@ -68290,7 +68305,7 @@ uow
 beU
 dnY
 uaT
-vwJ
+abu
 beU
 vwJ
 vwJ
@@ -69036,7 +69051,7 @@ otT
 qxB
 nGW
 tSn
-eUl
+abv
 chR
 rzI
 mkH
