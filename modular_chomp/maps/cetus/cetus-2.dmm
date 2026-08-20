@@ -48160,6 +48160,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/vending/nifsoft_shop,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/secondaryf2)
 "pOw" = (
@@ -50881,7 +50882,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/Brig)
 "qGA" = (
-/obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
@@ -67126,15 +67126,6 @@
 /obj/item/pen{
 	pixel_x = 3;
 	pixel_y = 6
-	},
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/brown/bordercorner{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 4
 	},
 /obj/structure/extinguisher_cabinet{
 	dir = 4;

@@ -1700,8 +1700,6 @@
 /obj/structure/closet{
 	name = "Prisoner's Locker"
 	},
-/obj/random/tech_supply,
-/obj/random/tech_supply,
 /obj/item/clothing/head/soft/orange,
 /turf/simulated/floor/tiled,
 /area/security/cetus/meteor/brig)
@@ -29595,10 +29593,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/cetus/meteor/armory)
 "oSd" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
 /obj/structure/cable/green{
 	icon_state = "6-9"
 	},
@@ -33999,17 +33993,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway2)
-"raR" = (
-/obj/structure/table/steel,
-/obj/item/radio/intercom{
-	desc = "Talk... listen through this.";
-	name = "Station Intercom (Brig Radio)";
-	wires = 7;
-	dir = 4;
-	pixel_y = 2
-	},
-/turf/simulated/floor/tiled,
-/area/security/cetus/meteor/brig)
 "rba" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -86465,7 +86448,7 @@ orD
 mJU
 oOO
 xUy
-raR
+aaX
 iTy
 tEP
 iTy
