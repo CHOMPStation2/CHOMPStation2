@@ -1,0 +1,9 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - rscadd: "FM spawn points to the carrier"
+  - rscadd: "Some additional lore notes to the AC base"
+  - balance: "Tyr Sarbe functions differently. Tyr Katar gained the crit chance effect and lost the burn."
+  - bugfix: "Readded a removed bit from artillery attack and altered the code to function smoother"
+  - bugfix: "The AC Purity regen will now work as intended"
+  - code_imp: "Shuffled the Tyr sabre to be with the other tyr melee weapons"
