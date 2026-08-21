@@ -67,6 +67,18 @@
 	},
 /turf/simulated/floor/tiled/old_cargo/blue,
 /area/planet/tyr/ac_mainbase)
+"ao" = (
+/turf/simulated/wall/rshull,
+/area/planet/tyr/ship_graveyard)
+"ap" = (
+/obj/item/paper/tyr_notes/astral_updateforeshadow,
+/turf/simulated/floor/tiled/old_cargo/red,
+/area/planet/tyr/ac_mainbase)
+"aq" = (
+/obj/structure/table/steel,
+/obj/item/paper/tyr_notes/astral_evemtforeshadow,
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/planet/tyr/ac_mainbase)
 "ay" = (
 /obj/structure/flora/tyr/flowers,
 /obj/structure/flora/tyr/flowers,
@@ -61683,7 +61695,7 @@ gz
 gz
 gz
 gz
-gz
+do
 Nc
 Nc
 Nc
@@ -61941,7 +61953,7 @@ gz
 gz
 gz
 gz
-gz
+do
 gz
 Nc
 Nc
@@ -62199,7 +62211,7 @@ gz
 gz
 gz
 gz
-gz
+do
 gz
 gz
 Nc
@@ -62457,7 +62469,7 @@ gz
 gz
 gz
 gz
-gz
+do
 gz
 gz
 gz
@@ -62715,7 +62727,7 @@ gz
 gz
 gz
 gz
-gz
+do
 gz
 gz
 gz
@@ -62973,7 +62985,7 @@ gz
 gz
 gz
 gz
-gz
+do
 gz
 gz
 gz
@@ -65311,7 +65323,7 @@ dZ
 dZ
 dZ
 dZ
-dZ
+ao
 dZ
 dZ
 dZ
@@ -65569,7 +65581,7 @@ dZ
 dZ
 dZ
 dZ
-dZ
+ao
 dZ
 dZ
 dZ
@@ -65827,7 +65839,7 @@ dZ
 dZ
 dZ
 dZ
-dZ
+ao
 dZ
 dZ
 dZ
@@ -66081,11 +66093,11 @@ gz
 gz
 dZ
 dZ
+ao
 dZ
 dZ
 dZ
-dZ
-dZ
+ao
 dZ
 dZ
 dZ
@@ -66337,9 +66349,9 @@ aL
 gz
 gz
 dZ
-dZ
-dZ
-dZ
+ao
+ao
+ao
 dZ
 dZ
 dZ
@@ -67364,7 +67376,7 @@ gI
 gK
 gK
 gK
-gI
+ap
 bx
 kD
 dZ
@@ -67884,10 +67896,10 @@ aL
 aL
 kD
 dZ
-dZ
-dZ
-dZ
-dZ
+ao
+ao
+ao
+ao
 dZ
 dZ
 dZ
@@ -68149,7 +68161,7 @@ dZ
 dZ
 dZ
 dZ
-dZ
+ao
 dZ
 dZ
 dZ
@@ -68407,7 +68419,7 @@ dZ
 dZ
 dZ
 dZ
-dZ
+ao
 dZ
 dZ
 dZ
@@ -68665,7 +68677,7 @@ dZ
 dZ
 dZ
 dZ
-dZ
+ao
 dZ
 dZ
 dZ
@@ -68923,7 +68935,7 @@ dZ
 dZ
 dZ
 dZ
-dZ
+ao
 dZ
 dZ
 dZ
@@ -69125,7 +69137,7 @@ lF
 aG
 mz
 aL
-mc
+aq
 mr
 mk
 an

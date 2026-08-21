@@ -28,7 +28,7 @@
 	attack_edge = 1
 	attacktext = list("slashed", "stabbed")
 	projectile_dispersion = 0
-	armor = list(melee = 20, bullet = 20, laser = 20, energy = 60, bomb = 20, bio = 100, rad = 100)	// Simple mob immunuties plus minour armor
+	armor = list(melee = 20, bullet = 20, laser = 20, energy = 70, bomb = 20, bio = 100, rad = 100)	// Simple mob immunuties plus minour armor
 
 	can_be_drop_prey = FALSE
 	can_be_drop_pred = TRUE
@@ -221,12 +221,12 @@
 	attack_armor_pen = 20
 	melee_attack_delay = 1.5 SECONDS
 
-	health = 60
-	maxHealth = 60
+	health = 50
+	maxHealth = 50
 
 	special_attack_cooldown = 3 SECONDS
 	special_attack_min_range = 0
-	special_attack_max_range = 2
+	special_attack_max_range = 7
 
 /mob/living/simple_mob/humanoid/astral_collective/purity/do_special_attack(atom/A)
 	adjustBruteLoss(-90)
