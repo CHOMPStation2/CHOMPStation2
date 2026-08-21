@@ -32,6 +32,9 @@
 /obj/structure/toilet{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm7)
 "aah" = (
@@ -1390,6 +1393,12 @@
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
+"acB" = (
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/star)
 "acC" = (
 /obj/structure/sink{
 	dir = 4;
@@ -1403,8 +1412,18 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm10)
+"acD" = (
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/jrfore)
 "acE" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap{
@@ -1422,8 +1441,79 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm5)
+"acF" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cetus/meteor/barrestrooms)
+"acG" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cetus/meteor/barrestrooms)
+"acH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/cetus/meteor/barrestrooms)
+"acI" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/cetus/meteor/barrestrooms)
+"acJ" = (
+/obj/structure/table/standard,
+/obj/structure/sink/countertop{
+	pixel_y = 14
+	},
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/cetus/meteor/barrestrooms)
+"acK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/crew_quarters/cetus/meteor/restrooms)
 "acT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -1700,8 +1790,6 @@
 /obj/structure/closet{
 	name = "Prisoner's Locker"
 	},
-/obj/random/tech_supply,
-/obj/random/tech_supply,
 /obj/item/clothing/head/soft/orange,
 /turf/simulated/floor/tiled,
 /area/security/cetus/meteor/brig)
@@ -3410,6 +3498,7 @@
 /obj/machinery/door/airlock{
 	name = "Unit 2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/barrestrooms)
 "bfI" = (
@@ -5008,6 +5097,10 @@
 	brightness_range = 5;
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm6)
 "bXO" = (
@@ -5407,17 +5500,18 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "ckd" = (
-/obj/machinery/disposal/wall/cleaner{
-	name = "Resleeving lost & found bin";
-	pixel_y = 35
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/disposal/wall/cleaner{
+	name = "Resleeving lost & found bin";
+	pixel_y = 35
+	},
+/obj/structure/disposalpipe/trunk,
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -5573,7 +5667,11 @@
 	dir = 10
 	},
 /obj/structure/disposalpipe/trunk{
-	dir = 8
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm6)
@@ -5982,6 +6080,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm6)
@@ -7514,6 +7615,9 @@
 /obj/structure/toilet{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm6)
 "dsV" = (
@@ -7554,6 +7658,9 @@
 	brightness_power = 1;
 	brightness_range = 5;
 	dir = 8
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm8)
@@ -7844,6 +7951,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm8)
@@ -8979,6 +9090,9 @@
 /obj/structure/toilet{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm8)
 "enx" = (
@@ -9462,6 +9576,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm4)
@@ -10650,6 +10768,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm1)
 "fdT" = (
@@ -11211,6 +11332,9 @@
 	},
 /obj/item/bikehorn/rubberducky/pink,
 /obj/machinery/light/small,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/barrestrooms)
 "fua" = (
@@ -12370,17 +12494,18 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/gravgen)
 "gee" = (
-/obj/machinery/disposal/wall/cleaner{
-	name = "Resleeving lost & found bin";
-	pixel_y = 35
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/disposal/wall/cleaner{
+	name = "Resleeving lost & found bin";
+	pixel_y = 35
+	},
+/obj/structure/disposalpipe/trunk,
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -13255,6 +13380,9 @@
 /obj/structure/toilet{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm9)
 "gEz" = (
@@ -13454,18 +13582,19 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/foremed)
 "gLL" = (
-/obj/machinery/disposal/wall/cleaner{
-	name = "Resleeving lost & found bin";
-	pixel_y = 35
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/structure/disposalpipe/trunk{
-	dir = 8
+/obj/machinery/disposal/wall/cleaner{
+	name = "Resleeving lost & found bin";
+	pixel_y = 35
+	},
+/obj/structure/disposalpipe/trunk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm10)
@@ -13577,6 +13706,10 @@
 	brightness_range = 5;
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm7)
 "gQm" = (
@@ -13614,6 +13747,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm7)
@@ -14534,6 +14671,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm5)
@@ -16548,9 +16689,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/cetus/meteor/toxins)
 "ihh" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/meteor/barrestrooms)
@@ -17142,6 +17282,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm2)
@@ -17828,6 +17972,7 @@
 /obj/machinery/door/airlock{
 	name = "Unit 2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/restrooms)
 "iRx" = (
@@ -18544,6 +18689,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm6)
@@ -19543,6 +19692,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm9)
 "jIK" = (
@@ -20338,6 +20491,10 @@
 /obj/machinery/alarm{
 	pixel_y = -25;
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/restrooms)
@@ -21601,6 +21758,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm8)
 "kFL" = (
@@ -22142,6 +22303,9 @@
 	dir = 1
 	},
 /obj/machinery/light/small,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/barrestrooms)
 "kWu" = (
@@ -24831,6 +24995,9 @@
 /obj/structure/toilet{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm10)
 "mtM" = (
@@ -24906,9 +25073,6 @@
 /turf/simulated/floor/carpet/green,
 /area/crew_quarters/cetus/meteor/stairwellf1)
 "mwo" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -24917,6 +25081,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/restrooms)
@@ -25788,6 +25956,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm2)
@@ -27006,6 +27178,10 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm6)
 "nFR" = (
@@ -27458,6 +27634,10 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm7)
 "nQy" = (
@@ -27465,6 +27645,9 @@
 /area/rnd/cetus/meteor/toxins)
 "nQB" = (
 /obj/structure/toilet{
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -27507,6 +27690,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm10)
@@ -28202,18 +28389,22 @@
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/meteor/starsec)
 "oiH" = (
-/obj/machinery/disposal/wall/cleaner{
-	name = "Resleeving lost & found bin";
-	pixel_y = 35
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/obj/machinery/disposal/wall/cleaner{
+	name = "Resleeving lost & found bin";
+	pixel_y = 35
+	},
 /obj/structure/disposalpipe/trunk{
-	dir = 8
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm9)
@@ -28637,6 +28828,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm4)
 "otz" = (
@@ -28746,6 +28941,9 @@
 /area/crew_quarters/sleep/cetus/meteor/dorm5)
 "ouY" = (
 /obj/structure/toilet{
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -28935,6 +29133,9 @@
 	brightness_power = 1;
 	brightness_range = 5;
 	dir = 8
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm9)
@@ -29441,6 +29642,9 @@
 /obj/machinery/light/small/fluorescent{
 	dir = 4
 	},
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm5)
 "oNM" = (
@@ -29595,10 +29799,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/cetus/meteor/armory)
 "oSd" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
 /obj/structure/cable/green{
 	icon_state = "6-9"
 	},
@@ -29828,6 +30028,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm3)
@@ -30309,6 +30513,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm3)
@@ -30879,6 +31086,7 @@
 /obj/machinery/door/airlock{
 	name = "Unit 3"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/barrestrooms)
 "pJh" = (
@@ -31378,6 +31586,7 @@
 /obj/machinery/door/airlock{
 	name = "Unit 1"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/restrooms)
 "pSj" = (
@@ -32109,6 +32318,9 @@
 /obj/structure/toilet{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm5)
 "qgO" = (
@@ -32531,7 +32743,11 @@
 	dir = 10
 	},
 /obj/structure/disposalpipe/trunk{
-	dir = 8
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm8)
@@ -33876,19 +34092,21 @@
 	name = "Resleeving lost & found bin";
 	pixel_y = 35
 	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/trunk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm4)
 "qXD" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/disposalpipe/junction/yjunction,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/restrooms)
 "qXM" = (
@@ -33920,17 +34138,18 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/cetus/stylist)
 "qYM" = (
-/obj/machinery/disposal/wall/cleaner{
-	name = "Resleeving lost & found bin";
-	pixel_y = 35
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/disposal/wall/cleaner{
+	name = "Resleeving lost & found bin";
+	pixel_y = 35
+	},
+/obj/structure/disposalpipe/trunk,
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -33999,17 +34218,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway2)
-"raR" = (
-/obj/structure/table/steel,
-/obj/item/radio/intercom{
-	desc = "Talk... listen through this.";
-	name = "Station Intercom (Brig Radio)";
-	wires = 7;
-	dir = 4;
-	pixel_y = 2
-	},
-/turf/simulated/floor/tiled,
-/area/security/cetus/meteor/brig)
 "rba" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -34101,6 +34309,10 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/restrooms)
@@ -34502,6 +34714,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/restrooms)
 "rpn" = (
@@ -34655,6 +34868,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm3)
 "rrV" = (
@@ -34774,6 +34991,10 @@
 /obj/structure/curtain/open/shower,
 /obj/structure/window/basic{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm10)
@@ -36026,6 +36247,9 @@
 /area/crew_quarters/cetus/meteor/atrium)
 "sgW" = (
 /obj/structure/toilet{
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -37857,6 +38081,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/restrooms)
 "tdH" = (
@@ -38067,8 +38292,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/structure/disposalpipe/trunk{
-	dir = 8
+/obj/structure/disposalpipe/trunk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm7)
@@ -38711,6 +38937,9 @@
 /obj/structure/toilet{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm1)
 "tzk" = (
@@ -39130,17 +39359,18 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/foremed)
 "tKL" = (
-/obj/machinery/disposal/wall/cleaner{
-	name = "Resleeving lost & found bin";
-	pixel_y = 35
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/disposal/wall/cleaner{
+	name = "Resleeving lost & found bin";
+	pixel_y = 35
+	},
+/obj/structure/disposalpipe/trunk,
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -43942,6 +44172,10 @@
 	brightness_range = 5;
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm10)
 "waq" = (
@@ -44694,6 +44928,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm4)
@@ -46205,6 +46442,10 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/restrooms)
 "xaT" = (
@@ -46591,16 +46832,11 @@
 /turf/simulated/floor/tiled/old_cargo,
 /area/crew_quarters/sleep/cetus/meteor/dorm10)
 "xlu" = (
-/obj/structure/table/standard,
 /obj/structure/sink/countertop{
 	pixel_y = 14
 	},
 /obj/structure/mirror{
 	pixel_y = 32
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -46611,6 +46847,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/meteor/barrestrooms)
 "xlw" = (
@@ -48038,6 +48278,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm7)
 "xUy" = (
@@ -48170,6 +48414,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm1)
 "xXV" = (
@@ -48240,6 +48488,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm9)
 "yad" = (
@@ -48303,6 +48555,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm2)
 "yco" = (
@@ -48351,6 +48606,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm1)
@@ -63193,7 +63452,7 @@ pCK
 awK
 cHD
 pCK
-awK
+acD
 awK
 pCK
 qHL
@@ -83652,7 +83911,7 @@ vcI
 hNy
 tdg
 pSa
-clN
+acK
 mwo
 rex
 yhT
@@ -86465,7 +86724,7 @@ orD
 mJU
 oOO
 xUy
-raR
+aaX
 iTy
 tEP
 iTy
@@ -86533,8 +86792,8 @@ xHD
 oaZ
 dfp
 cpl
-gZo
-cGi
+acH
+peu
 bBI
 rAJ
 wdA
@@ -86790,9 +87049,9 @@ aML
 aML
 aML
 dfp
-cpl
-gZo
-cGi
+acJ
+acI
+acF
 bfo
 kWp
 bBI
@@ -87050,7 +87309,7 @@ qpA
 dfp
 xlu
 ihh
-cGi
+acG
 bBI
 rAJ
 wdA
@@ -87308,7 +87567,7 @@ aba
 dfp
 wDc
 kml
-peu
+acF
 pIW
 ftI
 bBI
@@ -105075,7 +105334,7 @@ dba
 dba
 fXm
 fXm
-fXm
+acB
 fXm
 aaB
 abG
