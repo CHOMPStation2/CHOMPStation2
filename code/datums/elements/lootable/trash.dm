@@ -93,7 +93,8 @@
 		/obj/item/storage/box/mousetraps,
 		/obj/item/toy/baseball,
 		/obj/item/storage/box/cups,
-		/obj/item/storage/wallet)
+		/obj/item/storage/wallet,
+		/obj/item/reagent_containers/pill/maintenance)
 
 	uncommon_loot = list(
 		/obj/item/pen/chameleon,
@@ -133,7 +134,8 @@
 		/obj/item/clothing/mask/gas/voice,
 		/obj/item/spacecash/random_value,
 		/obj/item/clothing/gloves/bluespace/deluxe,
-		/obj/item/storage/backpack/dufflebag/syndie)
+		/obj/item/storage/backpack/dufflebag/syndie,
+		/obj/item/storage/pill_bottle/maintenance)
 
 	rare_loot = list(
 		/obj/item/pizzavoucher,
