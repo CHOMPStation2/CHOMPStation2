@@ -1,5 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - balance: "Increase the paper shredder paper capacity."
-  - qol: "Added a lil' description for it too."
