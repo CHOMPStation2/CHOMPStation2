@@ -119,3 +119,6 @@
   - bugfix: disposals being flushable by phased shadekin
   - bugfix: wheelchairs being collapsible by phased shadekin
   - bugfix: IV stands cannot be interacted with by phased shadekin
+2026-08-24:
+  Diana:
+  - bugfix: Showers will now apply the reagent they're filled with properly.
