@@ -1394,11 +1394,19 @@
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
 "acB" = (
-/obj/effect/landmark{
-	name = "blobstart"
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
 	},
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/maintenance/cetus/meteor/star)
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cetus/meteor/barrestrooms)
 "acC" = (
 /obj/structure/sink{
 	dir = 4;
@@ -1419,11 +1427,14 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm10)
 "acD" = (
-/obj/effect/landmark{
-	name = "blobstart"
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
 	},
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/maintenance/cetus/meteor/jrfore)
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/cetus/meteor/barrestrooms)
 "acE" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap{
@@ -1448,43 +1459,20 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm5)
 "acF" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/cetus/meteor/barrestrooms)
-"acG" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/cetus/meteor/barrestrooms)
-"acH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/meteor/barrestrooms)
-"acI" = (
+"acG" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/meteor/barrestrooms)
-"acJ" = (
+"acH" = (
 /obj/structure/table/standard,
 /obj/structure/sink/countertop{
 	pixel_y = 14
@@ -1507,13 +1495,25 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/meteor/barrestrooms)
-"acK" = (
+"acI" = (
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/star)
+"acJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/restrooms)
+"acK" = (
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/jrfore)
 "acT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -63452,7 +63452,7 @@ pCK
 awK
 cHD
 pCK
-acD
+acK
 awK
 pCK
 qHL
@@ -83911,7 +83911,7 @@ vcI
 hNy
 tdg
 pSa
-acK
+acJ
 mwo
 rex
 yhT
@@ -86792,7 +86792,7 @@ xHD
 oaZ
 dfp
 cpl
-acH
+acF
 peu
 bBI
 rAJ
@@ -87049,9 +87049,9 @@ aML
 aML
 aML
 dfp
-acJ
-acI
-acF
+acH
+acG
+acB
 bfo
 kWp
 bBI
@@ -87309,7 +87309,7 @@ qpA
 dfp
 xlu
 ihh
-acG
+acD
 bBI
 rAJ
 wdA
@@ -87567,7 +87567,7 @@ aba
 dfp
 wDc
 kml
-acF
+acB
 pIW
 ftI
 bBI
@@ -105334,7 +105334,7 @@ dba
 dba
 fXm
 fXm
-acB
+acI
 fXm
 aaB
 abG
