@@ -122,3 +122,10 @@
 2026-08-24:
   Diana:
   - bugfix: Showers will now apply the reagent they're filled with properly.
+2026-08-27:
+  Verkister:
+  - balance: Enabled the middle ground object vore. (with normal sized items)
+  - balance: Fixed every nonwhitelisted object vore attempt being condescendingly
+      treated as a blacklisted one worth a rule-breaky slap on the wrist.
+  zeskorion:
+  - bugfix: cetus fixes

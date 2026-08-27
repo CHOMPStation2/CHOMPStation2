@@ -1,5 +1,0 @@
-author: "Verkister"
-delete-after: True
-changes:
-  - balance: "Enabled the middle ground object vore. (with normal sized items)"
-  - balance: "Fixed every nonwhitelisted object vore attempt being condescendingly treated as a blacklisted one worth a rule-breaky slap on the wrist."
