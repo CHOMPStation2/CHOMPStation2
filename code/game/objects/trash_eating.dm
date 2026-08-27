@@ -41,19 +41,20 @@
 	if(is_type_in_list(src, GLOB.edible_tech) && user.isSynthetic())
 		return TRUE
 
-	return FALSE
-	/*
+	//CHOMPEdit Start. Enabling the middle ground.
+	// return FALSE
+
 	//The below allows checks for certain crtieria to decline it, otherwise allow it. Comented out until
 	if(force > 30 || throwforce > 30) //Swords, etc.
 		to_chat(user, span_warning("The [src] is too powerful to eat."))
 		return FALSE
 
-	if(w_class >= ITEMSIZE_NORMAL)
+	if(w_class > ITEMSIZE_NORMAL)
 		to_chat(user, span_warning("The [src] is too large to eat."))
 		return FALSE
 
 	return TRUE
-	*/
+	//CHOMPEdit End
 
 ///Recursively searches through items for invalid items.
 ///Returns the blacklisted item.
