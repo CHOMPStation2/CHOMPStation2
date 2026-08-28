@@ -129,3 +129,7 @@
       treated as a blacklisted one worth a rule-breaky slap on the wrist.
   zeskorion:
   - bugfix: cetus fixes
+2026-08-28:
+  Will:
+  - qol: Limbs with massive wounds that cannot be be healed with bruise packs or ointment
+      will now show examine feedback that the treatment is insufficient.
