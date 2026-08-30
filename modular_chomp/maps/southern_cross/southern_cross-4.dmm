@@ -537,10 +537,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
 "aoC" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -780,7 +777,6 @@
 "aBs" = (
 /obj/machinery/door/airlock/hatch{
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "AI Core";
 	req_access = list(16)
@@ -832,7 +828,6 @@
 "aBW" = (
 /obj/machinery/door/airlock/hatch{
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "AI Core";
 	req_access = list(16)
@@ -893,8 +888,7 @@
 	master_tag = "d3_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = -25;
-	pixel_y = -26;
-	req_access = null
+	pixel_y = -26
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/forestarboard)
@@ -2462,10 +2456,7 @@
 /area/solar/forestarboardsolar)
 "cbJ" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
@@ -2622,8 +2613,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 26;
-	pixel_y = 0
+	pixel_x = 26
 	},
 /turf/simulated/open,
 /area/maintenance/thirddeck/forestarboard)
@@ -3093,10 +3083,7 @@
 /area/maintenance/thirddeck/dormsaft)
 "cEG" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/foreport)
@@ -3173,10 +3160,7 @@
 /area/maintenance/thirddeck/forestarboard)
 "cHh" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -3525,10 +3509,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload)
 "cXl" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/aftstarboardcentral)
@@ -3831,7 +3812,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "d3_port_dorms_airlock";
 	pixel_y = -26;
-	req_access = null;
 	tag_airpump = "d3_port_dorms_pump";
 	tag_chamber_sensor = "d3_port_dorms_sensor";
 	tag_exterior_door = "d3_port_dorms_outer";
@@ -4204,8 +4184,7 @@
 "dCo" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 26;
-	pixel_y = 0
+	pixel_x = 26
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -4462,10 +4441,7 @@
 /turf/simulated/floor/bluegrid,
 /area/ai/ai_server_room)
 "dKx" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -4537,8 +4513,6 @@
 /area/maintenance/thirddeck/dormsport)
 "dOb" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null;
 	name = "Dental Offices"
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -5789,10 +5763,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft)
 "eAx" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/foreport)
@@ -5973,10 +5944,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
@@ -7351,10 +7319,7 @@
 	},
 /area/crew_quarters/seconddeck/gym)
 "fGy" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
@@ -8228,7 +8193,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "d3_port_airlock";
 	pixel_y = -26;
-	req_access = null;
 	tag_airpump = "d3_port_pump";
 	tag_chamber_sensor = "d3_port_sensor";
 	tag_exterior_door = "d3_port_outer";
@@ -8492,8 +8456,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 4;
 	name = "Resleeving lost & found bin";
-	pixel_x = -35;
-	pixel_y = 0
+	pixel_x = -35
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/toilet)
@@ -9944,8 +9907,7 @@
 /area/crew_quarters/heads/sc/hos/quarters)
 "hZc" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/maintenance/thirddeck/hiddenkitchen)
@@ -10089,10 +10051,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
@@ -10607,10 +10566,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
 "iCX" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
@@ -10627,10 +10583,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
@@ -10644,8 +10597,7 @@
 	master_tag = "d3_port_dorms_airlock";
 	name = "interior access button";
 	pixel_x = -25;
-	pixel_y = 26;
-	req_access = null
+	pixel_y = 26
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -10694,8 +10646,7 @@
 	master_tag = "d3_starboard_dorms_airlock";
 	name = "exterior access button";
 	pixel_x = -25;
-	pixel_y = -26;
-	req_access = null
+	pixel_y = -26
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -11156,10 +11107,7 @@
 /turf/simulated/floor/carpet,
 /area/maintenance/thirddeck/aftstarboard)
 "jgM" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -11169,8 +11117,7 @@
 "jgY" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 26;
-	pixel_y = 0
+	pixel_x = 26
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -11532,8 +11479,6 @@
 /area/crew_quarters/heads/sc/sd)
 "jxY" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null;
 	id_tag = "maintroom"
 	},
 /obj/structure/barricade,
@@ -12094,10 +12039,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
 "jVD" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -12201,8 +12143,7 @@
 	master_tag = "d3_starboard_airlock";
 	name = "interior access button";
 	pixel_x = 25;
-	pixel_y = 26;
-	req_access = null
+	pixel_y = 26
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
@@ -12296,8 +12237,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 8;
 	name = "Resleeving lost & found bin";
-	pixel_x = 35;
-	pixel_y = 0
+	pixel_x = 35
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_1)
@@ -13282,10 +13222,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
 "lfv" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -13441,10 +13378,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/thirddeck/dormsaft)
 "lsL" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -13472,9 +13406,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/guncabinet/sidearm{
-	anchored = 1
-	},
+/obj/structure/closet/secure_closet/guncabinet/sidearm,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -13957,7 +13889,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "d3_starboard_airlock";
 	pixel_y = -26;
-	req_access = null;
 	tag_airpump = "d3_starboard_pump";
 	tag_chamber_sensor = "d3_starboard_sensor";
 	tag_exterior_door = "d3_starboard_outer";
@@ -14119,8 +14050,7 @@
 /obj/item/tank/jetpack/oxygen,
 /obj/item/clothing/mask/gas,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = null
+	dir = 8
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -15262,10 +15192,7 @@
 /area/crew_quarters/sleep/vistor_room_9)
 "mUo" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -15568,8 +15495,7 @@
 /obj/machinery/button/windowtint{
 	id = "bridge_center";
 	pixel_x = -11;
-	pixel_y = -24;
-	req_access = null
+	pixel_y = -24
 	},
 /obj/machinery/keycard_auth{
 	pixel_y = -24
@@ -15704,10 +15630,7 @@
 /area/crew_quarters/heads/sc/sd)
 "njv" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
@@ -16275,8 +16198,7 @@
 	master_tag = "d3_port_airlock";
 	name = "interior access button";
 	pixel_x = -25;
-	pixel_y = 26;
-	req_access = null
+	pixel_y = 26
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/foreport)
@@ -18125,8 +18047,7 @@
 /obj/structure/table/standard,
 /obj/item/handcuffs/cable/white,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/thirddeck/aftport)
@@ -18826,10 +18747,7 @@
 /turf/simulated/floor/tiled/white,
 /area/maintenance/thirddeck/hiddenkitchen)
 "pHp" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -18942,8 +18860,7 @@
 "pMc" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 26;
-	pixel_y = 0
+	pixel_x = 26
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
@@ -19203,10 +19120,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "qbV" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -19849,10 +19763,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft)
 "qzT" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsport)
@@ -19981,10 +19892,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "qFF" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -20020,8 +19928,7 @@
 /obj/random/trash,
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 26;
-	pixel_y = 0
+	pixel_x = 26
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -20277,10 +20184,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/thirddeck/vrroom)
 "qTm" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
@@ -20512,8 +20416,7 @@
 	},
 /obj/item/stack/material/plastic{
 	amount = 25;
-	pixel_x = -7;
-	pixel_y = 0
+	pixel_x = -7
 	},
 /obj/item/stack/material/steel{
 	amount = 25;
@@ -20538,8 +20441,7 @@
 	},
 /obj/item/stack/material/wood{
 	amount = 20;
-	pixel_x = -10;
-	pixel_y = 0
+	pixel_x = -10
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/thirddeck/hiddenkitchen)
@@ -21790,8 +21692,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 26;
-	pixel_y = 0
+	pixel_x = 26
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -21801,9 +21702,7 @@
 /area/maintenance/thirddeck/forestarboard)
 "shU" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "shV" = (
@@ -22013,16 +21912,12 @@
 /obj/random/maintenance/clean,
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 26;
-	pixel_y = 0
+	pixel_x = 26
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "soF" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -22112,10 +22007,7 @@
 /turf/simulated/open,
 /area/maintenance/thirddeck/foreport)
 "ssw" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -23183,10 +23075,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "tkE" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
@@ -23301,8 +23190,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 8;
 	name = "Resleeving lost & found bin";
-	pixel_x = 35;
-	pixel_y = 0
+	pixel_x = 35
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_12)
@@ -23315,10 +23203,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "tmZ" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -24549,10 +24434,7 @@
 /turf/simulated/open,
 /area/hallway/primary/thirddeck/aft)
 "uuD" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -24909,8 +24791,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 4;
 	name = "Resleeving lost & found bin";
-	pixel_x = -35;
-	pixel_y = 0
+	pixel_x = -35
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_3)
@@ -25194,10 +25075,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsport)
 "uUU" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -25461,8 +25339,7 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "veY" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/machinery/ai_status_display{
 	pixel_x = 32
@@ -26061,10 +25938,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "vyE" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -26537,10 +26411,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "vOT" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -26925,10 +26796,7 @@
 /turf/simulated/floor/wood,
 /area/maintenance/thirddeck/dormsatmos)
 "wcY" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -27140,10 +27008,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_4)
 "wja" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -27155,9 +27020,7 @@
 /area/crew_quarters/sleep/vistor_room_4)
 "wjn" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Firefighting equipment";
-	req_access = null;
-	req_one_access = null
+	name = "Firefighting equipment"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
@@ -27180,10 +27043,7 @@
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/sleep/vistor_room_4)
 "wlk" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -28066,9 +27926,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
 "wSt" = (
-/obj/structure/bed/chair/wood{
-	dir = 2
-	},
+/obj/structure/bed/chair/wood,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
 "wSC" = (
@@ -28666,7 +28524,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "d3_starboard_dorms_airlock";
 	pixel_y = -26;
-	req_access = null;
 	tag_airpump = "d3_starboard_dorms_pump";
 	tag_chamber_sensor = "d3_starboard_dorms_sensor";
 	tag_exterior_door = "d3_starboard_dorms_outer";
@@ -28808,8 +28665,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 8;
 	name = "Resleeving lost & found bin";
-	pixel_x = 35;
-	pixel_y = 0
+	pixel_x = 35
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_4)
@@ -28900,8 +28756,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 4;
 	name = "Resleeving lost & found bin";
-	pixel_x = -35;
-	pixel_y = 0
+	pixel_x = -35
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_7)
@@ -29000,8 +28855,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 8;
 	name = "Resleeving lost & found bin";
-	pixel_x = 35;
-	pixel_y = 0
+	pixel_x = 35
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_10)
@@ -29086,10 +28940,7 @@
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/sleep/vistor_room_11)
 "xGh" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -29185,8 +29036,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 4;
 	name = "Resleeving lost & found bin";
-	pixel_x = -35;
-	pixel_y = 0
+	pixel_x = -35
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_2)
@@ -29243,6 +29093,7 @@
 	dir = 8;
 	pixel_x = 22
 	},
+/obj/effect/decal/cleanable/fruit_smudge,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_4)
 "xLd" = (
@@ -29375,8 +29226,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 4;
 	name = "Resleeving lost & found bin";
-	pixel_x = -35;
-	pixel_y = 0
+	pixel_x = -35
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_11)
@@ -29452,8 +29302,7 @@
 	master_tag = "d3_starboard_dorms_airlock";
 	name = "interior access button";
 	pixel_x = 25;
-	pixel_y = 26;
-	req_access = null
+	pixel_y = 26
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -29627,8 +29476,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 4;
 	name = "Resleeving lost & found bin";
-	pixel_x = -35;
-	pixel_y = 0
+	pixel_x = -35
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_5)
@@ -29691,8 +29539,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 8;
 	name = "Resleeving lost & found bin";
-	pixel_x = 35;
-	pixel_y = 0
+	pixel_x = 35
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_8)
@@ -29729,8 +29576,7 @@
 	master_tag = "d3_port_airlock";
 	name = "exterior access button";
 	pixel_x = 25;
-	pixel_y = -26;
-	req_access = null
+	pixel_y = -26
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/foreport)
@@ -29883,8 +29729,7 @@
 	master_tag = "d3_port_dorms_airlock";
 	name = "exterior access button";
 	pixel_x = 25;
-	pixel_y = -26;
-	req_access = null
+	pixel_y = -26
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4

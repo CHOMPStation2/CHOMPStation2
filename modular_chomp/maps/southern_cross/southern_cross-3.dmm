@@ -854,10 +854,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/security_port)
 "abB" = (
@@ -4307,7 +4304,6 @@
 	id = "EngineEmitterPortWest";
 	name = "Engine Room Blast Doors";
 	pixel_x = 26;
-	req_access = null;
 	req_one_access = list(11,24)
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -5102,8 +5098,7 @@
 	frequency = 1379;
 	master_tag = "eva_port_airlock";
 	name = "interior access button";
-	pixel_y = 26;
-	req_access = null
+	pixel_y = 26
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -5381,7 +5376,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "eva_port_airlock";
 	pixel_y = -26;
-	req_access = null;
 	tag_airpump = "eva_port_pump";
 	tag_chamber_sensor = "eva_port_sensor";
 	tag_exterior_door = "eva_port_outer";
@@ -6058,10 +6052,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/security_port)
 "aqn" = (
@@ -6401,10 +6392,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
 "arr" = (
@@ -7148,10 +7136,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
 "atR" = (
@@ -7239,10 +7224,7 @@
 /area/maintenance/engineering)
 "aua" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
 "aud" = (
@@ -8294,8 +8276,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
+	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled,
@@ -9509,10 +9490,7 @@
 /area/engineering/hallway/engineer_hallway)
 "aCh" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
 "aCi" = (
@@ -10465,7 +10443,6 @@
 /area/security/security_hallway)
 "aFT" = (
 /obj/machinery/door/airlock/multi_tile/glass{
-	id_tag = null;
 	name = "EMT Bay";
 	req_access = list(5)
 	},
@@ -13189,7 +13166,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	id_tag = null;
 	name = "EMT Bay";
 	req_access = list(5)
 	},
@@ -14655,10 +14631,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
 "aTT" = (
@@ -17628,10 +17601,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
@@ -17968,10 +17938,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -18000,10 +17967,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -19306,7 +19270,6 @@
 	name = "Cell 2 Door";
 	pixel_x = -1;
 	pixel_y = 28;
-	req_access = null;
 	req_one_access = list(2,4)
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -19436,7 +19399,6 @@
 	name = "Cell 1 Door";
 	pixel_x = -1;
 	pixel_y = 28;
-	req_access = null;
 	req_one_access = list(2,4)
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -25863,10 +25825,7 @@
 /turf/simulated/wall,
 /area/maintenance/medbay)
 "bCu" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/holodeck_control)
@@ -26415,7 +26374,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "crg_aft_airlock";
 	pixel_x = -25;
-	req_access = null;
 	tag_airpump = "crg_aft_pump";
 	tag_chamber_sensor = "crg_aft_sensor";
 	tag_exterior_door = "crg_aft_outer";
@@ -27078,10 +27036,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
 "bGS" = (
@@ -27941,10 +27896,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -28468,10 +28420,8 @@
 /obj/machinery/atmospherics/omni/mixer{
 	active_power_usage = 7500;
 	tag_east = 2;
-	tag_east_con = null;
 	tag_north = 1;
 	tag_north_con = 0.21;
-	tag_south_con = null;
 	tag_west = 1;
 	tag_west_con = 0.79
 	},
@@ -28661,8 +28611,7 @@
 	master_tag = "aft_starboard_airlock";
 	name = "interior access button";
 	pixel_x = 25;
-	pixel_y = -26;
-	req_one_access = null
+	pixel_y = -26
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -29518,10 +29467,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
@@ -30464,7 +30410,6 @@
 /obj/machinery/door/airlock/medical{
 	id_tag = "surgery_observation";
 	name = "Observation Room";
-	req_access = null;
 	req_one_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -31382,8 +31327,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "bWR" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Cafeteria Starboard";
+/obj/machinery/synthesizer{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -32010,6 +31954,11 @@
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
+	},
+/obj/machinery/holosign/bar{
+	id = "baropen";
+	dir = 4;
+	pixel_x = 9
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
@@ -33611,8 +33560,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 4;
 	name = "Resleeving lost & found bin";
-	pixel_x = -35;
-	pixel_y = 0
+	pixel_x = -35
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -34446,10 +34394,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
@@ -35256,7 +35201,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "eva_starboard_airlock";
 	pixel_y = 26;
-	req_access = null;
 	tag_airpump = "eva_starboard_pump";
 	tag_chamber_sensor = "eva_starboard_sensor";
 	tag_exterior_door = "eva_starboard_outer";
@@ -35285,8 +35229,7 @@
 	master_tag = "eva_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = -26;
-	pixel_y = 25;
-	req_access = null
+	pixel_y = 25
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
@@ -35633,8 +35576,7 @@
 	frequency = 1379;
 	master_tag = "eva_port_airlock";
 	name = "exterior access button";
-	pixel_y = -26;
-	req_access = null
+	pixel_y = -26
 	},
 /turf/simulated/floor/airless,
 /area/maintenance/security_port)
@@ -36986,8 +36928,7 @@
 	master_tag = "eva_starboard_airlock";
 	name = "interior access button";
 	pixel_x = 26;
-	pixel_y = -25;
-	req_access = null
+	pixel_y = -25
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -37033,8 +36974,7 @@
 	master_tag = "fore_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = 26;
-	pixel_y = -25;
-	req_one_access = null
+	pixel_y = -25
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/shield_diffuser,
@@ -37631,10 +37571,7 @@
 "csK" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/maintenance/research)
@@ -37720,7 +37657,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "fore_starboard_airlock";
 	pixel_x = -25;
-	req_access = null;
 	tag_airpump = "fore_starboard_pump";
 	tag_chamber_sensor = "fore_starboard_sensor";
 	tag_exterior_door = "fore_starboard_outer";
@@ -37784,10 +37720,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
 "ctm" = (
@@ -38929,7 +38862,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
 	name = "Firefighting Equipment";
-	req_access = null;
 	req_one_access = list(12,47)
 	},
 /turf/simulated/floor/plating,
@@ -39425,10 +39357,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "cyi" = (
@@ -39507,8 +39436,7 @@
 	master_tag = "fore_starboard_airlock";
 	name = "interior access button";
 	pixel_x = -26;
-	pixel_y = 25;
-	req_one_access = null
+	pixel_y = 25
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -40268,10 +40196,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
 "cBi" = (
@@ -40602,10 +40527,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/storage/auxillary)
 "cCy" = (
@@ -41708,10 +41630,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -41810,10 +41729,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -42780,7 +42696,6 @@
 	id_tag = "eng_port_airlock";
 	pixel_x = -25;
 	req_access = list(13);
-	req_one_access = null;
 	tag_airpump = "eng_port_pump";
 	tag_chamber_sensor = "eng_port_sensor";
 	tag_exterior_door = "eng_port_outer";
@@ -43033,7 +42948,6 @@
 	id = "EngineWasteViewport1";
 	name = "Engine Waste Blast Doors";
 	pixel_y = 25;
-	req_access = null;
 	req_one_access = list(11,24)
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -43557,10 +43471,7 @@
 /area/maintenance/research_medical)
 "dyK" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/ai_monitored/storage/emergency/eva)
 "dyN" = (
@@ -44083,9 +43994,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two External Airlock";
 	req_access = list(13)
@@ -44738,9 +44647,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three External Airlock";
 	req_access = list(13)
@@ -45825,7 +45732,6 @@
 /obj/machinery/airlock_sensor{
 	dir = 4;
 	frequency = 1381;
-	id_tag = null;
 	pixel_x = -27
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -46194,7 +46100,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = null;
 	pixel_y = -27
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -46535,8 +46440,7 @@
 	master_tag = "aft_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = 25;
-	pixel_y = 26;
-	req_one_access = null
+	pixel_y = 26
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
@@ -46737,7 +46641,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	id_tag = null;
 	name = "Research Director Quarters";
 	req_access = list(30)
 	},
@@ -46863,8 +46766,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
+	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1381;
@@ -46874,7 +46776,6 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = null;
 	pixel_y = -27
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -47074,8 +46975,7 @@
 	frequency = 1379;
 	master_tag = "crg_aft_airlock";
 	name = "exterior access button";
-	pixel_y = 25;
-	req_one_access = null
+	pixel_y = 25
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -47230,8 +47130,7 @@
 /area/hydroponics)
 "fBW" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -47241,13 +47140,7 @@
 	id_tag = "escape_dock_snorth_airlock";
 	master_tag = "escape_dock";
 	pixel_y = 27;
-	req_one_access = list(13);
-	tag_airlock_mech_sensor = null;
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null;
-	tag_shuttle_mech_sensor = null
+	req_one_access = list(13)
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
@@ -47265,9 +47158,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three External Airlock";
 	req_access = list(13)
@@ -47357,10 +47248,7 @@
 /area/quartermaster/disposal_sort)
 "fFv" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
 "fFA" = (
@@ -47394,7 +47282,6 @@
 "fGl" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
 	locked = 1;
 	name = "Dock One Internal Airlock";
@@ -47415,9 +47302,7 @@
 /area/rnd/mixing)
 "fHf" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two Internal Airlock";
 	req_access = list(13)
@@ -47428,8 +47313,7 @@
 	dir = 4;
 	name = "interior access button";
 	pixel_x = 7;
-	pixel_y = -27;
-	req_one_access = null
+	pixel_y = -27
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/floor/tiled/dark,
@@ -49023,12 +48907,10 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/machinery/airlock_sensor{
 	dir = 8;
-	id_tag = null;
 	pixel_x = 27
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -49589,7 +49471,6 @@
 /area/hallway/primary/seconddeck/apcenter)
 "gPC" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
 	locked = 1;
 	name = "Dock One Internal Airlock";
@@ -49624,10 +49505,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/locker)
 "gQu" = (
@@ -49780,13 +49658,7 @@
 	id_tag = "arrivals_dock_north_airlock";
 	master_tag = "arrivals_dock";
 	pixel_y = 27;
-	req_one_access = list(13);
-	tag_airlock_mech_sensor = null;
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null;
-	tag_shuttle_mech_sensor = null
+	req_one_access = list(13)
 	},
 /obj/effect/floor_decal/industrial/loading{
 	dir = 8
@@ -49903,9 +49775,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two Internal Airlock";
 	req_access = list(13)
@@ -50887,13 +50757,7 @@
 	id_tag = "arrivals_dock_south_airlock";
 	master_tag = "arrivals_dock";
 	pixel_y = -27;
-	req_one_access = list(13);
-	tag_airlock_mech_sensor = null;
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null;
-	tag_shuttle_mech_sensor = null
+	req_one_access = list(13)
 	},
 /obj/effect/floor_decal/industrial/loading{
 	dir = 4
@@ -51115,9 +50979,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three External Airlock";
 	req_access = list(13)
@@ -51128,8 +50990,7 @@
 	dir = 8;
 	name = "exterior access button";
 	pixel_x = -7;
-	pixel_y = -27;
-	req_one_access = null
+	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D2)
@@ -51598,9 +51459,7 @@
 "hTF" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three Internal Airlock";
 	req_access = list(13)
@@ -51609,7 +51468,6 @@
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/machinery/access_button{
 	dir = 1;
-	master_tag = null;
 	name = "interior access button";
 	pixel_x = 27;
 	pixel_y = 7
@@ -51642,8 +51500,7 @@
 	dir = 8;
 	name = "exterior access button";
 	pixel_x = -7;
-	pixel_y = -27;
-	req_one_access = null
+	pixel_y = -27
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/button/ext_button,
@@ -52492,9 +52349,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	id_tag = null
-	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -52651,7 +52506,6 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = null;
 	pixel_y = -27
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -53188,9 +53042,7 @@
 "iNa" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three Internal Airlock";
 	req_access = list(13)
@@ -53331,7 +53183,6 @@
 /area/rnd/research)
 "iSG" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
 	locked = 1;
 	name = "Dock One Internal Airlock";
@@ -53340,7 +53191,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/access_button{
 	dir = 8;
-	master_tag = null;
 	name = "interior access button";
 	pixel_x = -7;
 	pixel_y = -27
@@ -53879,10 +53729,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/locker)
 "jfT" = (
@@ -54260,10 +54107,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor,
 /area/maintenance/apmaint)
 "jpz" = (
@@ -54446,9 +54290,7 @@
 /area/chapel/office)
 "jwC" = (
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two External Airlock";
 	req_access = list(13)
@@ -54460,8 +54302,7 @@
 	dir = 8;
 	name = "exterior access button";
 	pixel_x = -7;
-	pixel_y = 27;
-	req_one_access = null
+	pixel_y = 27
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
 /turf/simulated/floor/tiled/dark,
@@ -54524,14 +54365,12 @@
 /area/engineering/workshop)
 "jxe" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = null;
 	pixel_y = 27
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -55104,9 +54943,7 @@
 "jMn" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three Internal Airlock";
 	req_access = list(13)
@@ -55318,7 +55155,6 @@
 /area/medical/medbay2)
 "jTu" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
 	locked = 1;
 	name = "Dock One Internal Airlock";
@@ -55329,7 +55165,6 @@
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/machinery/access_button{
 	dir = 1;
-	master_tag = null;
 	name = "interior access button";
 	pixel_x = -27;
 	pixel_y = 7
@@ -55519,7 +55354,6 @@
 	dir = 8
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = null;
 	pixel_y = 27
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -55746,8 +55580,7 @@
 /area/assembly/robotics)
 "ker" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -55879,8 +55712,7 @@
 	pixel_y = -32
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = null
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -56607,9 +56439,7 @@
 /area/engineering/foyer)
 "kEy" = (
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two External Airlock";
 	req_access = list(13)
@@ -56623,8 +56453,7 @@
 	dir = 4;
 	name = "exterior access button";
 	pixel_x = 7;
-	pixel_y = 27;
-	req_one_access = null
+	pixel_y = 27
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D2/arrivals)
@@ -56645,13 +56474,7 @@
 	id_tag = "escape_dock_south_airlock";
 	master_tag = "escape_dock";
 	pixel_y = -27;
-	req_one_access = list(13);
-	tag_airlock_mech_sensor = null;
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null;
-	tag_shuttle_mech_sensor = null
+	req_one_access = list(13)
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
@@ -57610,7 +57433,6 @@
 	name = "Engine Room Blast Doors";
 	pixel_x = 32;
 	pixel_y = 25;
-	req_access = null;
 	req_one_access = list(11,24)
 	},
 /turf/simulated/floor,
@@ -57883,8 +57705,7 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = null
+	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 4;
@@ -58011,7 +57832,6 @@
 /area/engineering/break_room)
 "lxY" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
 	locked = 1;
 	name = "Dock One Internal Airlock";
@@ -58020,7 +57840,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/access_button{
 	dir = 8;
-	master_tag = null;
 	name = "interior access button";
 	pixel_x = -7;
 	pixel_y = 27
@@ -58339,7 +58158,6 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = null;
 	pixel_y = -27
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
@@ -59296,8 +59114,7 @@
 /area/medical/psych)
 "mkX" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -59311,10 +59128,8 @@
 "mlF" = (
 /obj/machinery/atmospherics/omni/mixer{
 	tag_east = 2;
-	tag_east_con = null;
 	tag_north = 1;
 	tag_north_con = 0.5;
-	tag_south_con = null;
 	tag_west = 1;
 	tag_west_con = 0.5;
 	use_power = 0
@@ -59451,7 +59266,9 @@
 /area/quartermaster/disposal_sort)
 "mor" = (
 /obj/machinery/holosign/bar{
-	id = "baropen"
+	id = "baropen";
+	dir = 4;
+	pixel_x = 9
 	},
 /turf/simulated/wall,
 /area/crew_quarters/cafeteria)
@@ -59696,8 +59513,7 @@
 	req_one_access = list(13)
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -59884,8 +59700,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
+	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/structure/cable{
@@ -60622,9 +60437,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three External Airlock";
 	req_access = list(13)
@@ -60635,8 +60448,7 @@
 	dir = 8;
 	name = "exterior access button";
 	pixel_x = -7;
-	pixel_y = 27;
-	req_one_access = null
+	pixel_y = 27
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
@@ -61049,7 +60861,6 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/closet/secure_closet{
-	anchored = 1;
 	desc = "It's an immobile card-locked storage unit. A note on the door reads: It's dangerous to go alone. This should help a little bit.";
 	name = "Press Locker";
 	req_one_access = list(21,37)
@@ -61445,13 +61256,7 @@
 	id_tag = "escape_dock_ssouth_airlock";
 	master_tag = "escape_dock";
 	pixel_y = -27;
-	req_one_access = list(13);
-	tag_airlock_mech_sensor = null;
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null;
-	tag_shuttle_mech_sensor = null
+	req_one_access = list(13)
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
@@ -61562,9 +61367,7 @@
 "nES" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three Internal Airlock";
 	req_access = list(13)
@@ -61575,8 +61378,7 @@
 	dir = 4;
 	name = "interior access button";
 	pixel_x = 7;
-	pixel_y = -27;
-	req_one_access = null
+	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
@@ -62206,9 +62008,7 @@
 "nYj" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two Internal Airlock";
 	req_access = list(13)
@@ -62622,9 +62422,7 @@
 /area/hallway/secondary/docking_hallway2)
 "oip" = (
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two External Airlock";
 	req_access = list(13)
@@ -62782,9 +62580,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two External Airlock";
 	req_access = list(13)
@@ -62796,8 +62592,7 @@
 	dir = 4;
 	name = "exterior access button";
 	pixel_x = 7;
-	pixel_y = -27;
-	req_one_access = null
+	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D2/arrivals)
@@ -62948,7 +62743,6 @@
 	frequency = 1379;
 	master_tag = "SC-ALCvirology";
 	name = "Virology Access Button";
-	pixel_y = 0;
 	req_access = list(39);
 	pixel_x = -26
 	},
@@ -63154,10 +62948,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
 "oxE" = (
@@ -63747,9 +63538,7 @@
 "oUG" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three Internal Airlock";
 	req_access = list(13)
@@ -63760,8 +63549,7 @@
 	dir = 4;
 	name = "interior access button";
 	pixel_x = 7;
-	pixel_y = 27;
-	req_one_access = null
+	pixel_y = 27
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
@@ -64302,9 +64090,7 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three External Airlock";
 	req_access = list(13)
@@ -64315,8 +64101,7 @@
 	dir = 4;
 	name = "exterior access button";
 	pixel_x = 7;
-	pixel_y = -27;
-	req_one_access = null
+	pixel_y = -27
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -64534,8 +64319,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled,
@@ -64745,9 +64529,7 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three External Airlock";
 	req_access = list(13)
@@ -64758,8 +64540,7 @@
 	dir = 4;
 	name = "exterior access button";
 	pixel_x = 7;
-	pixel_y = 27;
-	req_one_access = null
+	pixel_y = 27
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -65190,12 +64971,10 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 4;
-	id_tag = null;
 	pixel_x = -27
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -65367,9 +65146,7 @@
 "pNL" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three Internal Airlock";
 	req_access = list(13)
@@ -65559,9 +65336,7 @@
 /area/engineering/engine_room)
 "pRJ" = (
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two External Airlock";
 	req_access = list(13)
@@ -65574,8 +65349,7 @@
 	dir = 8;
 	name = "exterior access button";
 	pixel_x = -7;
-	pixel_y = -27;
-	req_one_access = null
+	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D2)
@@ -65899,7 +65673,6 @@
 /area/hallway/primary/seconddeck/port)
 "qbR" = (
 /obj/machinery/access_button{
-	master_tag = null;
 	name = "exterior access button";
 	pixel_x = 27;
 	pixel_y = -7
@@ -66913,9 +66686,7 @@
 "qIV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two Internal Airlock";
 	req_access = list(13)
@@ -66923,7 +66694,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/access_button{
 	dir = 1;
-	master_tag = null;
 	name = "interior access button";
 	pixel_x = 27;
 	pixel_y = 7
@@ -66951,7 +66721,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/access_button{
 	dir = 4;
-	master_tag = null;
 	name = "exterior access button";
 	pixel_x = 7;
 	pixel_y = -27
@@ -67317,12 +67086,10 @@
 /area/library)
 "ral" = (
 /obj/machinery/airlock_sensor{
-	id_tag = null;
 	pixel_y = 27
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -67541,10 +67308,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
 "riG" = (
@@ -67840,10 +67604,7 @@
 /area/library)
 "rtA" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "rtL" = (
@@ -68030,10 +67791,7 @@
 /area/hallway/primary/seconddeck/starboard)
 "rzu" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/robotics)
 "rzK" = (
@@ -68046,9 +67804,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two Internal Airlock";
 	req_access = list(13)
@@ -68134,10 +67890,7 @@
 /area/maintenance/locker)
 "rCT" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -68262,8 +68015,7 @@
 	dir = 8;
 	name = "exterior access button";
 	pixel_x = -7;
-	pixel_y = -27;
-	req_one_access = null
+	pixel_y = -27
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/door/ext_door,
@@ -68282,10 +68034,7 @@
 /area/hallway/secondary/entry/D2)
 "rFO" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -68529,7 +68278,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "aft_starboard_airlock";
 	pixel_x = 25;
-	req_access = null;
 	tag_airpump = "aft_starboard_pump";
 	tag_chamber_sensor = "aft_starboard_sensor";
 	tag_exterior_door = "aft_starboard_outer";
@@ -68952,10 +68700,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/chapel)
 "sbw" = (
@@ -68984,9 +68729,7 @@
 /area/quartermaster/warehouse)
 "sbX" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two Internal Airlock";
 	req_access = list(13)
@@ -68998,8 +68741,7 @@
 	dir = 4;
 	name = "interior access button";
 	pixel_x = 7;
-	pixel_y = 27;
-	req_one_access = null
+	pixel_y = 27
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D2)
@@ -69139,8 +68881,7 @@
 	},
 /obj/machinery/firealarm{
 	layer = 3.3;
-	pixel_y = 37;
-	dir = 2
+	pixel_y = 37
 	},
 /obj/machinery/button/remote/blast_door{
 	desc = "A remote control-switch for shutters.";
@@ -69248,10 +68989,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -69368,8 +69106,7 @@
 /area/medical/medbay2)
 "smo" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -69466,7 +69203,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/access_button{
 	dir = 4;
-	master_tag = null;
 	name = "exterior access button";
 	pixel_x = 7;
 	pixel_y = 27
@@ -69807,8 +69543,7 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = null
+	dir = 4
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled,
@@ -69836,9 +69571,7 @@
 "sCy" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	name = "Firefighting equipment";
-	req_access = null;
-	req_one_access = null
+	name = "Firefighting equipment"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/locker)
@@ -69975,9 +69708,7 @@
 /area/chapel/main)
 "sGc" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two Internal Airlock";
 	req_access = list(13)
@@ -71404,12 +71135,10 @@
 "tBR" = (
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = null;
 	pixel_y = -27
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -72432,9 +72161,7 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three External Airlock";
 	req_access = list(13)
@@ -72511,8 +72238,7 @@
 	master_tag = "crg_aft_airlock";
 	name = "interior access button";
 	pixel_x = -26;
-	pixel_y = -25;
-	req_one_access = null
+	pixel_y = -25
 	},
 /turf/simulated/floor,
 /area/maintenance/cargo)
@@ -72601,10 +72327,7 @@
 /area/maintenance/research_medical)
 "uqR" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -72710,10 +72433,7 @@
 /area/chapel/office)
 "uwj" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/research_medical)
 "uwy" = (
@@ -72779,7 +72499,6 @@
 /area/medical/medbay2)
 "uAt" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
 	locked = 1;
 	name = "Dock One Internal Airlock";
@@ -72792,8 +72511,7 @@
 	dir = 4;
 	name = "interior access button";
 	pixel_x = 7;
-	pixel_y = 27;
-	req_one_access = null
+	pixel_y = 27
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -73189,13 +72907,7 @@
 	id_tag = "escape_dock_north_airlock";
 	master_tag = "escape_dock";
 	pixel_y = 27;
-	req_one_access = list(13);
-	tag_airlock_mech_sensor = null;
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null;
-	tag_shuttle_mech_sensor = null
+	req_one_access = list(13)
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
@@ -73346,8 +73058,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/structure/cable{
@@ -73577,7 +73288,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = null;
 	pixel_y = -27
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -74770,10 +74480,7 @@
 /area/hallway/secondary/entry/D3)
 "vXg" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -74938,10 +74645,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
@@ -75472,8 +75176,7 @@
 "wsg" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 26;
-	pixel_y = 0
+	pixel_x = 26
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/research_medical)
@@ -75766,9 +75469,7 @@
 "wFF" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two Internal Airlock";
 	req_access = list(13)
@@ -75872,10 +75573,7 @@
 /area/medical/chemistry)
 "wLh" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/emergencyeva)
 "wLi" = (
@@ -75926,10 +75624,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/ai_monitored/storage/emergency/eva)
 "wNa" = (
@@ -76492,10 +76187,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -76530,12 +76222,9 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = null;
 	pixel_y = -27
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	id_tag = null
-	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/structure/cable{
@@ -76623,8 +76312,7 @@
 /obj/machinery/disposal/wall/cleaner{
 	dir = 8;
 	name = "Resleeving lost & found bin";
-	pixel_x = 35;
-	pixel_y = 0
+	pixel_x = 35
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -76779,10 +76467,7 @@
 /area/medical/virology)
 "xiE" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/research_medical)
 "xiX" = (
@@ -77245,16 +76930,13 @@
 "xAj" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Two External Airlock";
 	req_access = list(13)
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/access_button{
-	master_tag = null;
 	name = "exterior access button";
 	pixel_x = 27;
 	pixel_y = -7
@@ -77829,9 +77511,7 @@
 /area/hallway/secondary/entry/D1)
 "xRW" = (
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three External Airlock";
 	req_access = list(13)
@@ -77841,7 +77521,6 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/machinery/access_button{
-	master_tag = null;
 	name = "exterior access button";
 	pixel_x = -27;
 	pixel_y = -7
@@ -77888,9 +77567,7 @@
 /area/space)
 "xTR" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "Dock Three Internal Airlock";
 	req_access = list(13)

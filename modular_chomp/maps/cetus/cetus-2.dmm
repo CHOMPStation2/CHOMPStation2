@@ -6639,6 +6639,9 @@
 /area/engineering/cetus/atriumdeck2)
 "bEU" = (
 /obj/machinery/media/jukebox,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/cafeteriaf2)
 "bFj" = (
@@ -30005,8 +30008,8 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
-/obj/machinery/light{
-	dir = 8
+/obj/machinery/synthesizer{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/cafeteriaf2)

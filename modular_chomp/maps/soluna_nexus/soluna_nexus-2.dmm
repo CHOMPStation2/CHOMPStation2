@@ -2354,7 +2354,6 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/security{
-	dir = 2;
 	c_tag = "D2-Com-Aft Stairwell1";
 	network = list("Commons")
 	},
@@ -5173,7 +5172,6 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/security{
-	dir = 2;
 	c_tag = "D2-Dmc-Botanical Shop1";
 	network = list("Domicile")
 	},
@@ -5325,7 +5323,6 @@
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/machinery/camera/network/security{
-	dir = 2;
 	c_tag = "D2-Dmc-Botanical Garden2";
 	network = list("Domicile")
 	},
@@ -6714,7 +6711,6 @@
 	},
 /obj/effect/floor_decal/industrial/arrows/blue,
 /obj/machinery/door/airlock/angled_bay/standard/glass/common{
-	dir = 2;
 	name = "Chompers Dinner";
 	tintable = 1;
 	id_tint = "sc-WTkitchen"
@@ -7732,7 +7728,6 @@
 /area/engineering/Storage)
 "amI" = (
 /obj/item/stool/baystool/padded{
-	pixel_y = 0;
 	dir = 1
 	},
 /turf/simulated/floor/wood/alt,
@@ -7844,7 +7839,6 @@
 /area/hallway/Port_2_Deck_Corridor_2)
 "amV" = (
 /obj/item/stool/baystool/padded{
-	pixel_y = 0;
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
@@ -21010,7 +21004,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/item/gun/energy/particle{
-	pixel_y = 0;
 	pixel_x = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -41790,7 +41783,6 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/security{
-	dir = 2;
 	c_tag = "D2-Dmc-Chomp Kitchen1";
 	network = list("Domicile")
 	},
@@ -41820,7 +41812,6 @@
 "cBY" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/piratedouble{
-	pixel_y = 0;
 	layer = 3.91
 	},
 /turf/simulated/floor/carpet/purcarpet,
@@ -52468,6 +52459,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/Breakroom)
+"feP" = (
+/obj/machinery/synthesizer,
+/turf/simulated/floor/wood/alt,
+/area/crew_quarters/Chomp_Dinner_1)
 "feR" = (
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -59796,7 +59791,6 @@
 	},
 /obj/effect/floor_decal/industrial/arrows/blue,
 /obj/machinery/door/airlock/angled_bay/standard/glass/common{
-	dir = 2;
 	name = "Kitchen";
 	req_access = list(28);
 	tintable = 1;
@@ -65246,7 +65240,6 @@
 	},
 /obj/effect/floor_decal/industrial/arrows/blue,
 /obj/machinery/door/airlock/angled_bay/standard/glass/common{
-	dir = 2;
 	name = "Chompers Dinner";
 	tintable = 1;
 	id_tint = "sc-WTkitchen"
@@ -77373,7 +77366,6 @@
 "lOz" = (
 /obj/machinery/vending/coffee,
 /obj/machinery/camera/network/security{
-	dir = 2;
 	c_tag = "D2-Dmc-Chomp Dinner2";
 	network = list("Domicile")
 	},
@@ -79839,7 +79831,6 @@
 	dir = 1
 	},
 /obj/structure/sign/directions/science/exploration{
-	pixel_y = 0;
 	dir = 1;
 	layer = 3.5
 	},
@@ -87760,7 +87751,6 @@
 /area/rnd/Toxins_Mixing_Room)
 "oSt" = (
 /obj/item/stool/baystool/padded{
-	pixel_y = 0;
 	dir = 1
 	},
 /turf/simulated/floor/wood/sif,
@@ -87773,7 +87763,6 @@
 /obj/effect/floor_decal/industrial/arrows/blue,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/angled_bay/standard/glass/common{
-	dir = 2;
 	name = "Chompers Dinner";
 	tintable = 1;
 	id_tint = "sc-WTkitchen"
@@ -89677,8 +89666,7 @@
 /obj/structure/disposalpipe/sortjunction{
 	dir = 4;
 	name = "Mess Hall";
-	sortType = "Mess Hall";
-	pixel_y = 0
+	sortType = "Mess Hall"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -110129,7 +110117,6 @@
 	},
 /obj/effect/floor_decal/industrial/arrows/blue,
 /obj/machinery/door/airlock/angled_bay/standard/glass/common{
-	dir = 2;
 	name = "Chompers Dinner";
 	tintable = 1;
 	id_tint = "sc-WTkitchen"
@@ -116908,7 +116895,6 @@
 	},
 /obj/effect/floor_decal/industrial/arrows/blue,
 /obj/machinery/door/airlock/angled_bay/standard/color/common{
-	dir = 2;
 	name = "Bar";
 	req_access = list(25)
 	},
@@ -149572,7 +149558,7 @@ axY
 cbG
 fqD
 jAh
-aEb
+feP
 amq
 aEb
 aFu

@@ -1015,7 +1015,6 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/camera/network/security{
-	dir = 2;
 	c_tag = "D3-Dmc-Chomp Dinner2";
 	network = list("Domicile")
 	},
@@ -1245,9 +1244,7 @@
 	pixel_x = 7;
 	pixel_y = 6
 	},
-/obj/item/storage/pill_bottle/dice{
-	pixel_y = 0
-	},
+/obj/item/storage/pill_bottle/dice,
 /obj/structure/table/sifwoodentable,
 /turf/simulated/floor/wood/sif,
 /area/crew_quarters/Rec_Lounge)
@@ -1714,8 +1711,7 @@
 /area/hallway/Central_3_Deck_Hall)
 "adF" = (
 /obj/machinery/atmospherics/binary/pump/on{
-	target_pressure = 200;
-	dir = 2
+	target_pressure = 200
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck3_Center_Star)
@@ -2890,8 +2886,7 @@
 	},
 /obj/machinery/camera/network/security{
 	c_tag = "D3-Eng-2nd cooling_pipes1";
-	network = list("engineering","Engine");
-	dir = 2
+	network = list("engineering","Engine")
 	},
 /turf/space,
 /area/space)
@@ -2901,8 +2896,7 @@
 	},
 /obj/machinery/camera/network/security{
 	c_tag = "D3-Eng-2nd cooling_pipes2";
-	network = list("engineering","Engine");
-	dir = 2
+	network = list("engineering","Engine")
 	},
 /turf/space,
 /area/space)
@@ -3851,7 +3845,6 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/camera/network/security{
-	dir = 2;
 	c_tag = "D3-Dmc-Chomp Dinner4";
 	network = list("Domicile")
 	},
@@ -27593,7 +27586,6 @@
 "iHL" = (
 /obj/structure/table/woodentable,
 /obj/machinery/camera/network/security{
-	dir = 2;
 	c_tag = "D3-Com-Office Lounge1";
 	network = list("Commons")
 	},
@@ -43528,9 +43520,7 @@
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
 "nWV" = (
-/obj/structure/flora/tree/weepingcherry1{
-	pixel_y = 0
-	},
+/obj/structure/flora/tree/weepingcherry1,
 /turf/simulated/floor/grass,
 /area/crew_quarters/Public_Garden)
 "nXC" = (
@@ -48560,7 +48550,6 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/security{
-	dir = 2;
 	c_tag = "D3-Com-Rec Lounge1";
 	network = list("Commons")
 	},

@@ -35361,7 +35361,6 @@
 	pixel_x = -3
 	},
 /obj/machinery/button/remote/blast_door{
-	dir = 2;
 	id = "sc-GCpilotpot";
 	name = "Fueldepo Shutters Control";
 	req_access = list(10);
@@ -56452,9 +56451,7 @@
 /area/security/Exploration_Ship_Bay)
 "roQ" = (
 /obj/effect/floor_decal/industrial/outline/blue,
-/obj/machinery/atmospherics/valve/open{
-	dir = 2
-	},
+/obj/machinery/atmospherics/valve/open,
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Harbor)
 "rpf" = (
