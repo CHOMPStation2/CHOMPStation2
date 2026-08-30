@@ -1219,6 +1219,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/crew_quarters/Port_Restroom)
+"abS" = (
+/obj/machinery/synthesizer,
+/turf/simulated/floor/wood/alt,
+/area/crew_quarters/Chomp_Dinner_1)
 "abT" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 5
@@ -52459,10 +52463,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/Breakroom)
-"feP" = (
-/obj/machinery/synthesizer,
-/turf/simulated/floor/wood/alt,
-/area/crew_quarters/Chomp_Dinner_1)
 "feR" = (
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -149558,7 +149558,7 @@ axY
 cbG
 fqD
 jAh
-feP
+abS
 amq
 aEb
 aFu

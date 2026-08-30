@@ -22,6 +22,14 @@
 /obj/item/clothing/head/radiation,
 /turf/simulated/floor/plating,
 /area/engineering/hallway/engineer_hallway)
+"aad" = (
+/obj/machinery/holosign/bar{
+	id = "baropen";
+	dir = 4;
+	pixel_x = 9
+	},
+/turf/simulated/wall,
+/area/crew_quarters/cafeteria)
 "aah" = (
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
@@ -49187,14 +49195,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
-"vjU" = (
-/obj/machinery/holosign/bar{
-	id = "baropen";
-	dir = 4;
-	pixel_x = 9
-	},
-/turf/simulated/wall,
-/area/crew_quarters/cafeteria)
 "vkk" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -89980,7 +89980,7 @@ xCr
 tzn
 xCr
 ide
-vjU
+aad
 sHu
 vaB
 ide
