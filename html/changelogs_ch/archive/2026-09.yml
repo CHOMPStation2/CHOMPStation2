@@ -1,0 +1,6 @@
+2026-09-01:
+  Diana:
+  - bugfix: Horror armor will no longer be stuck on permanently pre-death but post-cure
+  - bugfix: Shadekin properly have their vision flags set when phasing back in
+  Will:
+  - bugfix: VR sleeper properly ends remote view when exited
