@@ -36410,6 +36410,12 @@
 "cnN" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
 /turf/simulated/floor/plating,
 /area/library)
 "cnP" = (
@@ -44143,6 +44149,12 @@
 /turf/simulated/floor/tiled,
 /area/medical/medbay2)
 "dTv" = (
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/library)
 "dTG" = (
@@ -69433,6 +69445,12 @@
 	},
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
+	},
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/library)
