@@ -69450,8 +69450,7 @@
 	icon_state = "open";
 	layer = 2;
 	name = "privacy curtain";
-	opacity = 0;
-	
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/library)
