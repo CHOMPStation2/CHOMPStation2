@@ -11624,7 +11624,6 @@
 /area/maintenance/engineering)
 "aKf" = (
 /obj/structure/closet/wardrobe/black,
-/obj/item/clothing/shoes/boots/combat,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
 /obj/machinery/alarm{
@@ -24230,7 +24229,6 @@
 /area/security/brig)
 "byg" = (
 /obj/structure/closet/crate,
-/obj/item/clothing/shoes/boots/combat,
 /obj/item/tank/air,
 /obj/item/tank/air,
 /obj/item/tank/air,
@@ -39027,6 +39025,10 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
+/obj/machinery/light{
+	dir = 1;
+	layer = 3
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "cwN" = (
@@ -39642,6 +39644,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
 	},
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "cyA" = (
@@ -39656,6 +39659,9 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
@@ -40248,6 +40254,9 @@
 "cBf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "cBg" = (
@@ -40868,6 +40877,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 10
 	},
+/obj/structure/stairs/spawner/south,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "cCZ" = (
@@ -40879,6 +40889,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -41449,6 +41462,9 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
@@ -44976,6 +44992,10 @@
 /obj/item/geiger/wall/west,
 /turf/simulated/floor,
 /area/maintenance/apmaint)
+"epJ" = (
+/obj/structure/sign/department/anomaly,
+/turf/simulated/wall,
+/area/rnd/research_restroom_sc)
 "eqB" = (
 /obj/structure/table/standard,
 /obj/item/clipboard,
@@ -55952,23 +55972,6 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
 	},
-/obj/item/assembly/signaler/anomaly/flux,
-/obj/item/anomaly_releaser/science,
-/obj/item/anomaly_releaser/science{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/anomaly_releaser/science{
-	pixel_x = 8;
-	pixel_y = 6
-	},
-/obj/item/anomaly_scanner{
-	pixel_y = -9;
-	pixel_x = 6
-	},
-/obj/item/anomaly_scanner{
-	pixel_y = -6
-	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
 "kis" = (
@@ -58614,6 +58617,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "lRJ" = (
@@ -58972,13 +58978,6 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
-	},
-/obj/machinery/power/emitter{
-	anchored = 1;
-	dir = 4;
-	icon_state = "emitter2";
-	id = "EngineEmitter";
-	state = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
@@ -60444,6 +60443,10 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "mUw" = (
@@ -61998,15 +62001,18 @@
 /area/rnd/research_foyer)
 "nSw" = (
 /obj/machinery/hologram/holopad,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/item/radio/beacon,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "nSC" = (
@@ -62363,7 +62369,6 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
-/obj/machinery/anomaly_harvester,
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
 "nZY" = (
@@ -63551,6 +63556,11 @@
 	name = "Robotics";
 	sortType = "Robotics"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "oPy" = (
@@ -64714,6 +64724,11 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/rnd/research_foyer)
 "pvD" = (
@@ -66652,6 +66667,11 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/seconddeck/starboard)
 "qya" = (
@@ -66705,7 +66725,16 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "qyX" = (
-/obj/structure/loot_pile/maint/technical,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "16-0"
+	},
+/obj/machinery/atmospherics/pipe/zpipe/up/scrubbers,
+/obj/machinery/atmospherics/pipe/zpipe/up/supply,
+/obj/structure/catwalk,
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/maintenance/robotics)
 "qzu" = (
@@ -67990,6 +68019,15 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
 "ryn" = (
@@ -68026,6 +68064,15 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
 "rzu" = (
@@ -68034,6 +68081,16 @@
 	req_access = null;
 	req_one_access = null
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/robotics)
 "rzK" = (
@@ -68082,8 +68139,17 @@
 /turf/simulated/floor/plating,
 /area/maintenance/robotics)
 "rBr" = (
-/obj/structure/catwalk,
 /obj/random/junk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/robotics)
 "rBv" = (
@@ -75752,6 +75818,21 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
+"wDR" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/seconddeck/starboard)
 "wFh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -120232,7 +120313,7 @@ nTb
 oQz
 psR
 qyg
-ruN
+wDR
 aWf
 sWJ
 aZU
@@ -120748,7 +120829,7 @@ nUh
 oSr
 ifd
 qyX
-rzK
+rBr
 aWi
 avT
 aZW
@@ -121522,7 +121603,7 @@ nVx
 oVk
 ifd
 qAa
-rBr
+rzK
 aWi
 sZg
 aZW
@@ -124343,7 +124424,7 @@ cwM
 cyz
 cBe
 cCY
-cBa
+epJ
 cBa
 cBa
 cBa
