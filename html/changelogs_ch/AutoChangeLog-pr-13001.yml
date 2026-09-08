@@ -1,0 +1,4 @@
+author: "lbnesquik"
+delete-after: True
+changes:
+  - maptweak: "Change the stools to actually face their related tables and counters"

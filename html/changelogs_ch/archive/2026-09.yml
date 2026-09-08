@@ -12,3 +12,12 @@
   - bugfix: APCs properly check if you are in range when alt-clicked to toggle lock.
   - bugfix: Flashlight light beams can no longer be thrown by shuttle throw triggers,
       or pulled by singularities
+2026-09-04:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: tgui dependency update
+2026-09-06:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixes attaching certain objects to disposal trunks when other disposal
+      pipes are on the same tile.
+  Guti:
+  - bugfix: Fixed showers throwing a runtime when cleaning anything but carbon mobs
