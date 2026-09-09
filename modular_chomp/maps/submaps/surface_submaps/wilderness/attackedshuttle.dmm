@@ -1,0 +1,1348 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aA" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/attackedshuttle)
+"aJ" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"aT" = (
+/turf/simulated/floor/tiled/hydro,
+/area/submap/attackedshuttle)
+"aV" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"bd" = (
+/obj/machinery/light,
+/obj/structure/table/rack,
+/obj/item/clothing/head/helmet/space,
+/obj/item/clothing/head/helmet/space,
+/obj/item/clothing/head/helmet/space,
+/obj/item/clothing/head/helmet/space,
+/obj/item/clothing/suit/space,
+/obj/item/clothing/suit/space,
+/obj/item/clothing/suit/space,
+/obj/item/clothing/suit/space,
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"br" = (
+/obj/machinery/body_scanconsole,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"bu" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"bV" = (
+/obj/structure/table/steel,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"cn" = (
+/obj/structure/table/standard,
+/obj/item/clothing/gloves/sterile,
+/obj/item/clothing/gloves/sterile,
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"cp" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"cs" = (
+/obj/structure/bed,
+/obj/item/bedsheet,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"dV" = (
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark5";
+	name = "Unknown Shuttle"
+	},
+/area/submap/attackedshuttle)
+"eb" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"ed" = (
+/obj/structure/bed,
+/obj/item/bedsheet,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"eH" = (
+/obj/machinery/door/airlock/glass,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"fN" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"gj" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"gl" = (
+/obj/structure/bed,
+/obj/item/bedsheet,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"gr" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"hF" = (
+/obj/machinery/gibber,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"hM" = (
+/obj/effect/floor_decal/borderfloor,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"iB" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"iD" = (
+/obj/structure/closet/crate,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/attackedshuttle)
+"iL" = (
+/obj/machinery/door/airlock/glass,
+/obj/effect/floor_decal/borderfloor,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"jt" = (
+/obj/machinery/door/airlock/external,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"jG" = (
+/obj/structure/table/steel,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/submap/attackedshuttle)
+"jY" = (
+/obj/machinery/fusion_fuel_compressor,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/attackedshuttle)
+"kd" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"kW" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/rack,
+/obj/item/clothing/head/helmet/space,
+/obj/item/clothing/head/helmet/space,
+/obj/item/clothing/head/helmet/space,
+/obj/item/clothing/head/helmet/space,
+/obj/item/clothing/suit/space,
+/obj/item/clothing/suit/space,
+/obj/item/clothing/suit/space,
+/obj/item/clothing/suit/space,
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"lk" = (
+/obj/structure/dispenser/oxygen,
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"lm" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"nB" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"nJ" = (
+/obj/structure/table/standard,
+/obj/item/tank/anesthetic,
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"nY" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/spray/sterilizine,
+/obj/item/reagent_containers/spray/sterilizine,
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"oh" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"pn" = (
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"pF" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/steel_grid,
+/area/submap/attackedshuttle)
+"pT" = (
+/obj/machinery/door/airlock/security{
+	locked = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"qg" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/attackedshuttle)
+"qo" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"rm" = (
+/obj/machinery/computer,
+/obj/effect/floor_decal/borderfloor/full,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"rp" = (
+/obj/structure/table/steel,
+/obj/item/material/knife,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"rw" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"rI" = (
+/turf/simulated/floor/tiled/yellow,
+/area/submap/attackedshuttle)
+"sp" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"sG" = (
+/obj/item/stool,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"sL" = (
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"tv" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark0";
+	name = "Unknown Shuttle"
+	},
+/area/submap/attackedshuttle)
+"tZ" = (
+/obj/machinery/door/airlock/glass,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"uc" = (
+/obj/structure/table/steel,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"uj" = (
+/turf/template_noop,
+/area/template_noop)
+"uH" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"vn" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1331;
+	id_tag = "merc_shuttle_outer";
+	name = "Ship External Access";
+	req_access = list(150)
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"wg" = (
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark6";
+	name = "Unknown Shuttle"
+	},
+/area/submap/attackedshuttle)
+"xo" = (
+/obj/machinery/door/airlock/glass,
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"xz" = (
+/obj/structure/table/steel,
+/obj/effect/floor_decal/borderfloor/full,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"xN" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"yM" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"zs" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"Ac" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"Aq" = (
+/obj/machinery/organ_printer/flesh,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"Aw" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"Bu" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"Bv" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"Cr" = (
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"Dh" = (
+/obj/structure/table/steel,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/submap/attackedshuttle)
+"Dn" = (
+/obj/machinery/portable_atmospherics/canister/empty/oxygen,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/attackedshuttle)
+"DU" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"DV" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"Ei" = (
+/obj/machinery/atmospherics/pipe/tank/oxygen,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/submap/attackedshuttle)
+"EP" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"Fi" = (
+/mob/living/simple_mob/mechanical/mecha/eclipse/sphere,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"Fu" = (
+/obj/machinery/computer/communications,
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"Hg" = (
+/obj/structure/table/steel,
+/obj/item/paper_bin,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"Ks" = (
+/obj/structure/closet/crate/secure/loot,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"KD" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/submap/attackedshuttle)
+"KG" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"KP" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"KY" = (
+/obj/structure/table/steel,
+/obj/item/paper{
+	info = "We need to take a short stop. The engine's are in need of minor repairs due to turbulence, should be a week's time. We've got reserve food supplies but pleanty of locale fauna to subsist on too if need be. PCRC is keeping most of there assets near New Reykjavik and locale authorities are more mindful then most to travel in this kind of weather. Our outfit should be at the rendezvous point in less then ten days assuming the upper ecehelon hasn't dropped ties with us yet.";
+	name = "Operation Progress/M-53"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"LU" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"LV" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"MC" = (
+/obj/structure/bed,
+/obj/item/bedsheet,
+/obj/item/toy/plushie/spider,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"MG" = (
+/obj/machinery/fusion_fuel_injector/mapped{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/submap/attackedshuttle)
+"Nx" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/attackedshuttle)
+"NT" = (
+/obj/structure/table/standard,
+/obj/item/storage/box/masks,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"PH" = (
+/obj/structure/bed/chair/office/dark,
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"QF" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "BSD APC";
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/submap/attackedshuttle)
+"Rx" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"RL" = (
+/obj/machinery/light,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"RX" = (
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark9";
+	name = "Unknown Shuttle"
+	},
+/area/submap/attackedshuttle)
+"Sc" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/submap/attackedshuttle)
+"Tb" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/attackedshuttle)
+"Tn" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"TB" = (
+/obj/machinery/bodyscanner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"TM" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"TS" = (
+/obj/machinery/computer/area_atmos,
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"UJ" = (
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark10";
+	name = "Unknown Shuttle"
+	},
+/area/submap/attackedshuttle)
+"Vh" = (
+/obj/machinery/optable,
+/turf/simulated/floor/tiled/white,
+/area/submap/attackedshuttle)
+"Vr" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4;
+	icon_state = "propulsion_l"
+	},
+/turf/template_noop,
+/area/template_noop)
+"VR" = (
+/obj/structure/closet/toolcloset,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/attackedshuttle)
+"Wf" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"Wv" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"WL" = (
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark0";
+	name = "Unknown Shuttle"
+	},
+/area/submap/attackedshuttle)
+"WT" = (
+/obj/structure/dispenser/oxygen,
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/attackedshuttle)
+"YW" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/attackedshuttle)
+"Za" = (
+/obj/structure/table/steel,
+/turf/template_noop,
+/area/template_noop)
+
+(1,1,1) = {"
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+"}
+(2,1,1) = {"
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+wg
+WL
+YW
+Tb
+Tb
+Nx
+WL
+dV
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+"}
+(3,1,1) = {"
+uj
+uj
+uj
+uj
+uj
+uj
+wg
+WL
+Fu
+uc
+bV
+bV
+uc
+TS
+WL
+dV
+uj
+uj
+uj
+uj
+uj
+uj
+"}
+(4,1,1) = {"
+uj
+wg
+WL
+WL
+dV
+wg
+WL
+Aw
+Wf
+Bv
+sL
+sL
+sL
+aJ
+iB
+WL
+dV
+wg
+WL
+WL
+dV
+uj
+"}
+(5,1,1) = {"
+uj
+WL
+WL
+WL
+WL
+WL
+rm
+fN
+rw
+rw
+eb
+TM
+Tn
+rw
+PH
+xz
+WL
+WL
+WL
+WL
+WL
+uj
+"}
+(6,1,1) = {"
+uj
+WL
+WL
+WL
+WL
+WL
+WL
+WL
+WL
+WL
+eH
+iL
+WL
+WL
+WL
+WL
+WL
+WL
+WL
+WL
+WL
+uj
+"}
+(7,1,1) = {"
+uj
+WL
+WL
+WL
+sL
+sL
+sL
+pT
+DU
+zs
+Wf
+aJ
+zs
+Ac
+pT
+sL
+sL
+sL
+WL
+WL
+WL
+uj
+"}
+(8,1,1) = {"
+uj
+UJ
+WL
+WL
+pF
+jG
+pF
+WL
+aV
+sL
+sL
+sL
+Bv
+hM
+WL
+pF
+jG
+pF
+WL
+WL
+RX
+uj
+"}
+(9,1,1) = {"
+uj
+uj
+WL
+WL
+WL
+WL
+WL
+WL
+aV
+Bv
+sL
+sL
+sL
+hM
+WL
+WL
+WL
+WL
+WL
+WL
+uj
+uj
+"}
+(10,1,1) = {"
+uj
+uj
+WL
+kW
+gr
+gr
+gr
+gr
+Wf
+sL
+sL
+sL
+sL
+aJ
+gr
+gr
+qo
+gr
+bd
+WL
+uj
+uj
+"}
+(11,1,1) = {"
+uj
+uj
+WL
+lk
+rw
+eb
+TM
+rw
+rw
+LV
+sL
+Bv
+LV
+nB
+rw
+uH
+TM
+rw
+WT
+WL
+Za
+uj
+"}
+(12,1,1) = {"
+uj
+uj
+WL
+WL
+WL
+aV
+hM
+WL
+WL
+WL
+sL
+sL
+WL
+WL
+WL
+aV
+hM
+WL
+WL
+WL
+uj
+uj
+"}
+(13,1,1) = {"
+uj
+uj
+uj
+vn
+jt
+aV
+lm
+WL
+xN
+sL
+sL
+sL
+Bv
+KY
+WL
+bu
+hM
+jt
+vn
+uj
+uj
+uj
+"}
+(14,1,1) = {"
+uj
+uj
+uj
+vn
+jt
+cp
+KP
+WL
+rp
+Bv
+sL
+sL
+sL
+Hg
+WL
+sp
+LU
+jt
+vn
+uj
+uj
+uj
+"}
+(15,1,1) = {"
+uj
+uj
+WL
+WL
+WL
+WL
+WL
+WL
+sL
+sG
+sL
+sL
+sG
+sL
+WL
+WL
+WL
+WL
+WL
+WL
+uj
+uj
+"}
+(16,1,1) = {"
+uj
+uj
+WL
+kd
+DV
+DV
+Bu
+WL
+gj
+sG
+Fi
+sL
+sG
+RL
+WL
+ed
+ed
+cs
+ed
+WL
+Za
+uj
+"}
+(17,1,1) = {"
+uj
+uj
+WL
+hF
+Vh
+KG
+nJ
+WL
+sL
+sG
+sL
+sL
+sG
+sL
+WL
+sL
+sL
+sL
+yM
+WL
+uj
+uj
+"}
+(18,1,1) = {"
+uj
+uj
+WL
+oh
+Rx
+KG
+Cr
+xo
+sL
+sL
+Bv
+sL
+sL
+sL
+tZ
+Bv
+ed
+ed
+gl
+WL
+uj
+uj
+"}
+(19,1,1) = {"
+uj
+uj
+WL
+TB
+Cr
+Cr
+pn
+WL
+Ks
+sL
+sL
+sL
+sL
+Ks
+WL
+sL
+sL
+sL
+yM
+WL
+uj
+uj
+"}
+(20,1,1) = {"
+uj
+uj
+WL
+br
+Cr
+Cr
+cn
+WL
+WL
+WL
+Wv
+Wv
+WL
+WL
+WL
+sL
+ed
+ed
+MC
+WL
+dV
+uj
+"}
+(21,1,1) = {"
+uj
+wg
+WL
+WL
+Cr
+Rx
+nY
+WL
+aA
+rI
+sL
+sL
+QF
+VR
+WL
+qg
+WL
+WL
+WL
+WL
+WL
+uj
+"}
+(22,1,1) = {"
+uj
+WL
+WL
+WL
+Aq
+EP
+NT
+WL
+aA
+sL
+sL
+Bv
+sL
+Dn
+WL
+aT
+KD
+Sc
+WL
+WL
+WL
+uj
+"}
+(23,1,1) = {"
+uj
+WL
+WL
+WL
+WL
+WL
+WL
+WL
+Dh
+sL
+sL
+sL
+sL
+Ei
+WL
+WL
+WL
+WL
+WL
+WL
+WL
+uj
+"}
+(24,1,1) = {"
+uj
+WL
+WL
+WL
+WL
+RX
+uj
+UJ
+WL
+jY
+MG
+MG
+iD
+WL
+RX
+uj
+UJ
+WL
+WL
+WL
+WL
+uj
+"}
+(25,1,1) = {"
+uj
+WL
+WL
+WL
+RX
+uj
+uj
+uj
+UJ
+tv
+tv
+tv
+tv
+RX
+uj
+uj
+uj
+UJ
+tv
+tv
+RX
+uj
+"}
+(26,1,1) = {"
+uj
+UJ
+tv
+tv
+uj
+uj
+uj
+uj
+uj
+Vr
+Vr
+Vr
+Vr
+uj
+uj
+uj
+uj
+uj
+Vr
+Vr
+uj
+uj
+"}
+(27,1,1) = {"
+uj
+uj
+Vr
+Vr
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+"}
+(28,1,1) = {"
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+uj
+"}

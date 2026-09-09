@@ -2521,6 +2521,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway/atmos_hallway)
+"aez" = (
+/obj/item/stool/padded{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
 "aeC" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -20764,9 +20770,11 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/item/stool/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/stool/padded{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "bnq" = (
@@ -28885,13 +28893,15 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
 "bOd" = (
-/obj/item/stool/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/stool/padded{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "bOe" = (
@@ -29769,11 +29779,13 @@
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
 "bRA" = (
-/obj/item/stool/padded,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+	},
+/obj/item/stool/padded{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
@@ -29822,13 +29834,15 @@
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
 "bRL" = (
-/obj/item/stool/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/stool/padded{
+	dir = 8
+	},
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
 "bRN" = (
@@ -29859,8 +29873,10 @@
 /turf/simulated/floor/plating,
 /area/security/detectives_office)
 "bRU" = (
-/obj/item/stool/padded,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/item/stool/padded{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "bRX" = (
@@ -42736,7 +42752,6 @@
 /turf/simulated/wall/r_wall,
 /area/rnd/mixing)
 "cYh" = (
-/obj/item/stool/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -42745,6 +42760,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/item/stool/padded{
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
@@ -55430,7 +55448,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "jVL" = (
-/obj/item/stool/padded,
+/obj/item/stool/padded{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "jXa" = (
@@ -61349,8 +61369,10 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/crew_quarters/seconddeck/artgallery)
 "nws" = (
-/obj/item/stool/padded,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/item/stool/padded{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "nxC" = (
@@ -66519,7 +66541,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "qvr" = (
-/obj/item/stool/padded,
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Patient Ward Port";
 	dir = 1
@@ -66529,6 +66550,9 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 8
+	},
+/obj/item/stool/padded{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
@@ -67689,8 +67713,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "rqM" = (
-/obj/item/stool/padded,
 /obj/effect/floor_decal/carpet,
+/obj/item/stool/padded{
+	dir = 1
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/coffee_shop)
 "rra" = (
@@ -109941,7 +109967,7 @@ btt
 iEe
 bPj
 xdp
-jVL
+aez
 crq
 jHm
 ceN
@@ -110457,7 +110483,7 @@ bLH
 bwK
 bPj
 xdp
-jVL
+aez
 crq
 bUB
 ceP

@@ -14,6 +14,10 @@
 	ambience = AMBIENCE_HIGHSEC
 	requires_power = FALSE
 
+/area/submap/attackedshuttle
+	name = "POI Wilderness - Boarded Shuttle"
+	ambience = AMBIENCE_FOREBODING
+
 /area/submap/Blackshuttledown
 	name = "POI Wilderness - Black-Operative Shuttle"
 	requires_power = FALSE
@@ -70,6 +74,10 @@
 /area/submap/DoomP
 	name = "POI Wilderness - Fortified Base"
 	ambience = AMBIENCE_HIGHSEC
+
+/area/submap/distortedshuttle
+	name = "POI Wilderness - Shattered Shuttle"
+	ambience = AMBIENCE_FOREBODING
 
 /area/submap/drgnplateu
 	name = "POI Wilderness - Dragon Plateu"
@@ -226,6 +234,10 @@
 /area/submap/SyndiSniper
 	name = "POI Wilderness - Syndi Sniper"
 	ambience = AMBIENCE_SIF
+
+/area/submap/thepitboss
+	name = "POI Wilderness - AC Mining Pit"
+	ambience = AMBIENCE_FOREBODING
 
 /area/submap/WolfDen
 	name = "POI Wilderness - Wolf Den"

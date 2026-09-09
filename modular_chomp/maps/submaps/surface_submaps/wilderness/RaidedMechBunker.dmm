@@ -1,8 +1,12 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/boulder,
+/turf/simulated/floor/tiled/turfpack/sif,
+/area/submap/MechHangar)
 "ac" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/loot_pile/mecha/durand,
-/turf/simulated/floor/tiled/red,
+/turf/simulated/floor/tiled/turfpack/sif,
 /area/submap/MechHangar)
 "af" = (
 /turf/template_noop,
@@ -13,14 +17,14 @@
 	icon_state = "bordercolor"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/turfpack/sif,
 /area/submap/MechHangar)
 "di" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8;
 	icon_state = "bordercolor"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/turfpack/sif,
 /area/submap/MechHangar)
 "fB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -33,7 +37,7 @@
 /obj/structure/table/bench/padded,
 /obj/structure/loot_pile/surface/bones,
 /obj/effect/floor_decal/corner/red/border,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/turfpack/sif,
 /area/submap/MechHangar)
 "ha" = (
 /turf/simulated/wall/r_wall,
@@ -48,23 +52,19 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/loot_pile/mecha/phazon,
-/turf/simulated/floor/tiled/red,
-/area/submap/MechHangar)
-"mP" = (
-/obj/structure/boulder,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/turfpack/sif,
 /area/submap/MechHangar)
 "nC" = (
 /obj/structure/filingcabinet,
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/turfpack/sif,
 /area/submap/MechHangar)
 "ob" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/loot_pile/mecha/odysseus,
-/turf/simulated/floor/tiled/red,
+/turf/simulated/floor/tiled/turfpack/sif,
 /area/submap/MechHangar)
 "qr" = (
 /obj/effect/decal/cleanable/dirt,
@@ -95,7 +95,7 @@
 "tt" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/random/mob/merc/armored,
-/turf/simulated/floor/tiled/red,
+/turf/simulated/floor/tiled/turfpack/sif,
 /area/submap/MechHangar)
 "tF" = (
 /turf/simulated/mineral/ignore_mapgen,
@@ -127,12 +127,12 @@
 	icon_state = "bordercolor"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/turfpack/sif,
 /area/submap/MechHangar)
 "yB" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/decal/mecha_wreckage/janus,
-/turf/simulated/floor/tiled/red,
+/turf/simulated/floor/tiled/turfpack/sif,
 /area/submap/MechHangar)
 "yG" = (
 /obj/structure/boulder,
@@ -156,7 +156,7 @@
 "AW" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/loot_pile/mecha/marauder/mauler,
-/turf/simulated/floor/tiled/red,
+/turf/simulated/floor/tiled/turfpack/sif,
 /area/submap/MechHangar)
 "BZ" = (
 /obj/structure/boulder,
@@ -167,14 +167,14 @@
 /area/submap/MechHangar)
 "CO" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/turfpack/sif,
 /area/submap/MechHangar)
 "Fd" = (
 /obj/structure/filingcabinet,
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/turfpack/sif,
 /area/submap/MechHangar)
 "FS" = (
 /obj/structure/table/standard,
@@ -184,17 +184,17 @@
 	dir = 4;
 	icon_state = "bordercolor"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/turfpack/sif,
 /area/submap/MechHangar)
 "Hz" = (
 /obj/effect/floor_decal/corner/black/diagonal,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/turfpack/sif,
 /area/submap/MechHangar)
 "Ix" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 6
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/turfpack/sif,
 /area/submap/MechHangar)
 "Ju" = (
 /turf/simulated/floor/outdoors/rocks{
@@ -206,7 +206,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 9
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/turfpack/sif,
 /area/submap/MechHangar)
 "Kh" = (
 /obj/random/outcrop,
@@ -223,7 +223,7 @@
 "Le" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/turfpack/sif,
 /area/submap/MechHangar)
 "LE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -235,7 +235,7 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/effect/decal/remains,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/turfpack/sif,
 /area/submap/MechHangar)
 "RH" = (
 /obj/structure/door_assembly,
@@ -246,7 +246,7 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/turfpack/sif,
 /area/submap/MechHangar)
 "So" = (
 /obj/random/outcrop,
@@ -264,7 +264,7 @@
 "WZ" = (
 /obj/structure/table/standard,
 /obj/item/telecube/randomized,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/dark/turfpack/sif,
 /area/submap/MechHangar)
 "XS" = (
 /obj/effect/decal/cleanable/dirt,
@@ -275,7 +275,7 @@
 "Ze" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/loot_pile/mecha/ripley/random_sprite,
-/turf/simulated/floor/tiled/red,
+/turf/simulated/floor/tiled/turfpack/sif,
 /area/submap/MechHangar)
 
 (1,1,1) = {"
@@ -505,7 +505,7 @@ tF
 ha
 Hz
 Le
-vP
+aa
 Le
 ha
 sD
@@ -547,7 +547,7 @@ uy
 uy
 tF
 ha
-mP
+aa
 Le
 Le
 Hz
@@ -636,7 +636,7 @@ tF
 tF
 ha
 Hz
-vP
+aa
 Hz
 Le
 Le

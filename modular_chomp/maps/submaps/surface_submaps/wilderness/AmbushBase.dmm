@@ -480,7 +480,7 @@
 /area/submap/DugOutMercs)
 "yc" = (
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/structure/closet/crate/secure/lootsafe,
+/obj/structure/closet/crate/secure/lootsafe/numberlock,
 /turf/simulated/floor/tiled/turfpack/sif,
 /area/submap/DugOutMercs)
 "yr" = (

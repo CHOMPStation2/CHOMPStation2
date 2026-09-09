@@ -180,3 +180,100 @@
 				if(3)
 					addtimer(CALLBACK(src, PROC_REF(cross_spin), A, rng_cycle, 3), 0.5 SECONDS, TIMER_DELETE_ME)
 					attackcycle = 0
+
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/walker
+	name = "astral collective walker"
+	icon_state = "engi_spider"
+	icon_living = "engi_spider"
+	desc = "A robotic spider like creation.."
+	health = 1500
+	maxHealth = 1500
+	artidrop = /obj/effect/artillery_attack/spear
+	projectiletype = /obj/item/projectile/arc/blue_energy
+	wreckage = /obj/item/prop/deconstructable/gigacell
+	pilot_type = /mob/living/simple_mob/humanoid/astral_collective/purity
+
+	loot_list = list(/obj/effect/anomaly/flux = 100,
+		/obj/item/stock_parts/scanning_module/omni = 80,
+		/obj/item/stock_parts/micro_laser/omni = 80,
+		/obj/item/stock_parts/capacitor/omni = 80,
+		/obj/item/stock_parts/manipulator/omni = 80,
+		/obj/item/stock_parts/matter_bin/omni = 80,
+		/obj/item/stock_parts/scanning_module/hyper = 80,
+		/obj/item/stock_parts/micro_laser/hyper = 80,
+		/obj/item/stock_parts/capacitor/hyper = 80,
+		/obj/item/stock_parts/manipulator/hyper = 80,
+		/obj/item/stock_parts/matter_bin/hyper = 80,
+		/obj/random/tool/power = 50,
+		/obj/random/tool/alien = 15,
+		/obj/random/bluespace = 100,
+		/obj/random/anomaly_core = 50
+		)
+
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/walker/do_special_attack(atom/A)
+	rng_cycle = rand(1,5)
+	switch(attackcycle)
+		if(1)
+			addtimer(CALLBACK(src, PROC_REF(circle_sniper), A, 2, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(2)
+			addtimer(CALLBACK(src, PROC_REF(block_sniper), A, 3, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(3)
+			addtimer(CALLBACK(src, PROC_REF(web_sniper), A, 1, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/sphere
+	name = "astral collective sphere"
+	icon_state = "orb"
+	icon_living = "orb"
+	desc = "A floating metallic sphere."
+	health = 1500
+	maxHealth = 1500
+	artidrop = /obj/effect/artillery_attack/spear
+	specialattackprojectile = /obj/item/projectile/energy/eclipse_boss/energyjavelin
+	projectiletype = /obj/item/projectile/arc/blue_energy
+	wreckage = /obj/item/prop/deconstructable/gigacell
+	pilot_type = /mob/living/simple_mob/humanoid/astral_collective/purity
+
+	loot_list = list(/obj/effect/anomaly/flux = 100,
+		/obj/item/stock_parts/scanning_module/omni = 80,
+		/obj/item/stock_parts/micro_laser/omni = 80,
+		/obj/item/stock_parts/capacitor/omni = 80,
+		/obj/item/stock_parts/manipulator/omni = 80,
+		/obj/item/stock_parts/matter_bin/omni = 80,
+		/obj/item/stock_parts/scanning_module/hyper = 80,
+		/obj/item/stock_parts/micro_laser/hyper = 80,
+		/obj/item/stock_parts/capacitor/hyper = 80,
+		/obj/item/stock_parts/manipulator/hyper = 80,
+		/obj/item/stock_parts/matter_bin/hyper = 80,
+		/obj/random/tool/power = 50,
+		/obj/random/tool/alien = 15,
+		/obj/random/bluespace = 100,
+		/obj/random/anomaly_core = 50,
+		)
+
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/sphere/do_special_attack(atom/A)
+	switch(attackcycle)
+		if(1)
+			addtimer(CALLBACK(src, PROC_REF(circle_sniper), A, 2, 1, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(2)
+			addtimer(CALLBACK(src, PROC_REF(bullet_blossom), A, 3, 7), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(3)
+			addtimer(CALLBACK(src, PROC_REF(block_sniper), A, 4, 1, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(4)
+			addtimer(CALLBACK(src, PROC_REF(gattlingfire), A, 5, 4, 7), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(5)
+			addtimer(CALLBACK(src, PROC_REF(web_sniper), A, 6, 1, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(6)
+			addtimer(CALLBACK(src, PROC_REF(cross_spin), A, 1, 5), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
