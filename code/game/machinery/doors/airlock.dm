@@ -1242,6 +1242,8 @@ About the new airlock wires panel:
 
 /obj/machinery/door/airlock/examine(mob/user)
 	. = ..()
+	if(welded)
+		. += span_danger(text("it is welded shut."))
 	if(frozen)
 		. += span_danger("it's frozen shut!")
 
