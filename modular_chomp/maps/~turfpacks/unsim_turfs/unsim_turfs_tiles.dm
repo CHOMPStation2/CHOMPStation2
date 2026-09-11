@@ -340,7 +340,9 @@
 	icon_state = "gravsnow"
 
 /turf/unsimulated/floor/plating
-	//nothing
+	name = "plating"
+	icon = 'icons/turf/floors.dmi'
+	icon_state = "plating"
 
 /turf/unsimulated/floor/plating/snow/plating
 	name = "frozen plating"

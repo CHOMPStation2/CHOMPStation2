@@ -1,7 +1,7 @@
 /obj/structure/closet/secure_closet/blueshield
 	name = "blueshield's closet"
 	req_access = list(access_blueshield_exclusive)
-	closet_appearance = /decl/closet_appearance/secure_closet/blueshield
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/blueshield
 	storage_capacity = 2.5 * MOB_MEDIUM
 
 	starts_with = list(
