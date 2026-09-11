@@ -47,7 +47,7 @@ GLOBAL_VAR_INIT(next_station_date_change, 1 DAY)
 		GLOB.next_station_date_change += 1 DAY
 		update_time = TRUE
 	if(!GLOB.station_date || update_time)
-		GLOB.station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+544)) + "-" + time2text(REALTIMEOFDAY, "MM-DD") //CHOMP EDIT
+		GLOB.station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+STATION_YEAR_OFFSET)) + "-" + time2text(REALTIMEOFDAY, "MM-DD") //CHOMP EDIT
 	return GLOB.station_date
 
 /// Returns UTC timestamp with the specifified format and optionally deciseconds
