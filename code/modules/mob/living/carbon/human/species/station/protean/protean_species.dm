@@ -441,7 +441,7 @@ CHOMP Removal end*/
 	owner = 1
 	if(new_name)
 		name += " ([new_name])"
-		validstring += "[time2text(world.timeofday, "Month") +" "+ num2text(text2num(time2text(world.timeofday, "YYYY"))+544)]" // CHOMPEdit
+		validstring += "[time2text(world.timeofday, "Month") +" "+ num2text(text2num(time2text(world.timeofday, "YYYY"))+STATION_YEAR_OFFSET)]" // CHOMPEdit
 		registring += "[new_name]"
 
 /obj/item/clothing/accessory/permit/nanotech/examine(mob/user)

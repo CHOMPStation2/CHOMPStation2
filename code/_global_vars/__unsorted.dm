@@ -28,7 +28,7 @@ GLOBAL_LIST_INIT(hit_appends, list("-OOF", "-ACK", "-UGH", "-HRNK", "-HURGH", "-
 // var/const/star_name		= "Vir"
 // var/const/starsys_name	= "Vir"
 GLOBAL_VAR_INIT(servernews_hash, "") //ChompADD - news hash gen
-GLOBAL_VAR_INIT(game_year, (text2num(time2text(world.realtime, "YYYY")) + 544)) // CHOMPEdit
+GLOBAL_VAR_INIT(game_year, (text2num(time2text(world.realtime, "YYYY")) + STATION_YEAR_OFFSET))
 GLOBAL_VAR_INIT(round_progressing, TRUE)
 
 GLOBAL_VAR_INIT(master_mode, "extended") // "extended"
