@@ -42,3 +42,31 @@
   - bugfix: Being thrown over water will no longer get you wet
   - rscadd: Being thrown over landmines no longer triggers the mine if you don't land
       on it.
+2026-09-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fix jerichoes not having an empty box sprite
+  - bugfix: fixed a few googles not providing eye protection.
+  - bugfix: fix the translator piece still working when you are asleep
+  - bugfix: Fix the fancy drinks showcase not displaying their proper icon
+  - bugfix: fixed ventcrawl using an incorrect error message for welded vents.
+  - balance: Add some missing AI languages to the AI
+  - bugfix: Fixed warrants only being authorized by the head of security
+  - qol: toggling hud vis will also update it for all contained prey
+  - bugfix: fixed the makarov and luger lacking sprites.
+  - qol: makes nerdle a bit more accessible for color blind people
+  Guti:
+  - rscadd: Added Telecomms Engineer role, as well as a handful of alternative titles.
+  Will:
+  - qol: Removes prehistorically ancient abiotic check from bodyscanner and related
+      medical machines.
+  - bugfix: incorrect year calculation being used in ATM accounts
+  - qol: Point defense turrets support mapper placed upgrades
+  - bugfix: escaped slimes event now checks if a vent is welded before spawning a
+      slime
+  - bugfix: borgs are no longer kicked off of the rotary generators as soon as they
+      get on
+  - bugfix: multiple loc atoms no longer teleport upward when moved by shuttle
+  - balance: Zaddat light burn intensity curve tweaked for more clear difference between
+      low light and full light
+  - bugfix: Fingerprints no longer change if a character respawns or is ahealed
+  - qol: airlocks show if they are welded when examined
