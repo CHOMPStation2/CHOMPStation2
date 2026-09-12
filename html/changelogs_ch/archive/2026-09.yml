@@ -70,3 +70,19 @@
       low light and full light
   - bugfix: Fingerprints no longer change if a character respawns or is ahealed
   - qol: airlocks show if they are welded when examined
+2026-09-12:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: added a self-resetting spring trap. The normal one nolonger self-resets
+      as a side effect.
+  - rscadd: Made springtraps craftable via gui hand-crafting menu
+  - rscdel: Removed spring traps from the protolathe. They're improvised now.
+  - qol: Added a mini-grace period to disarming spring traps without them going off.
+      This should help with misclicks.
+  FluffMedic:
+  - balance: The Astral Collective Walker And Orb have been made slightly less tanky,
+      although one leans towards bullet/melee defense whilst the other leans the other
+      direction.
+  - balance: Loot for the above two has been slightly buffed
+  - balance: A tiny increase between sections of the bullet rain
+  Will:
+  - rscdel: Removes non-functional xenochimera version of hardfeet trait
