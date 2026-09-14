@@ -86,3 +86,8 @@
   - balance: A tiny increase between sections of the bullet rain
   Will:
   - rscdel: Removes non-functional xenochimera version of hardfeet trait
+2026-09-14:
+  Will:
+  - qol: Species list in character editor is more clear about which species is whitelisted
+      only at a glance
+  - bugfix: Xenomorph hybrid species has a preview icon
