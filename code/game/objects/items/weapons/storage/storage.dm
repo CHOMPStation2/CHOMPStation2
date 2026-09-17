@@ -16,7 +16,7 @@
 	show_messages = 1
 	matter = list(MAT_FIBERS = 50) //CHOMPAdd
 
-	/// List of objects which this item can store (if set, it can't store anything else)
+	/// List of objects which this item can store (if set, it can't store anything else). Becomes linked to a global list after init. See: update_storage_filters()
 	var/list/can_hold
 	/// List of objects which this item can't store (in effect only if can_hold isn't set)
 	var/list/cant_hold
@@ -109,6 +109,8 @@
 		update_icon()
 
 	calibrate_size()
+
+	can_hold = update_storage_filters(src, can_hold)
 
 /obj/item/storage/Destroy()
 	close_all()
