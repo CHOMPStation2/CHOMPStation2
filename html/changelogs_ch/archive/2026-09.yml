@@ -117,3 +117,20 @@
   - bugfix: radiation sources that qdel before processing their radiation pulse would
       lock up radiation subsystem
   - code_imp: Radiation debug object
+2026-09-18:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Made it possible to wrench smartfridges.
+  - maptweak: Tweaked map to removed further objects in solid walls for unit test
+      stuff
+  Poojawa:
+  - bugfix: fixed infinite food supplies via construction abuse of the Food Synthesizer
+  - code_imp: Hardened some edge case issues involved with the reagent cartridge.
+      Byond needs its references!
+  - bugfix: fixes numerous broken digitigrade suit, shoe, and undersuit sprites
+  - image: Digitigrade sprites are 1 to 1 parity with what's in mob.dmi of their respective
+      zones.
+  Will:
+  - refactor: Moves storage items can_hold var to global shared lists for memory savings
+  - code_imp: Fixes SDMM should_not_sleep issue on compile
+  lbnesquik:
+  - maptweak: Improved library privacy with extra curtains on SC.
