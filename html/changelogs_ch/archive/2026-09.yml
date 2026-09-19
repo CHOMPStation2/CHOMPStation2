@@ -134,3 +134,12 @@
   - code_imp: Fixes SDMM should_not_sleep issue on compile
   lbnesquik:
   - maptweak: Improved library privacy with extra curtains on SC.
+2026-09-19:
+  Will:
+  - balance: Tripled Supermatter radiation output to match old bayrads values
+  - balance: Raised singulo rad chance, and restored old bayrad strength calculations
+  - balance: Singularity radiation upped by 2.5x to match bayrad strength values
+  - balance: Quintupled radiation collector scaling to match bayrad radiation to wattage
+      values
+  - bugfix: Radiation collectors respect walls and radiation falloff
+  - bugfix: Doors no longer block radiation while open
