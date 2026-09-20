@@ -143,3 +143,10 @@
       values
   - bugfix: Radiation collectors respect walls and radiation falloff
   - bugfix: Doors no longer block radiation while open
+2026-09-20:
+  Guti:
+  - rscadd: Sneezing with unlucky might make your glasses go flying
+  Poojawa:
+  - maptweak: Food Synths have been added to Groundbase, Stellar Delight, and Tether!
+  Will:
+  - bugfix: Wrenchable smartfridges no longer block all item inputs
