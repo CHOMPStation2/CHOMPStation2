@@ -1891,11 +1891,6 @@
 	name = "Cargo Lockdown";
 	opacity = 0
 	},
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
 /obj/structure/cable/green{
 	icon_state = "1-10"
 	},
@@ -60025,24 +60020,6 @@
 /area/chapel/main)
 "tKF" = (
 /obj/structure/closet/crate/mail,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
 /obj/random/junk,
 /obj/machinery/conveyor{
 	id = "QMDelivery";
@@ -61793,21 +61770,6 @@
 /area/engineering/cetus/jointsubstation)
 "upg" = (
 /obj/structure/closet/crate/mail,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
 /obj/machinery/conveyor{
 	id = "QMDelivery"
 	},
@@ -67282,16 +67244,6 @@
 	dir = 4;
 	pixel_x = -28
 	},
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
 /turf/simulated/floor/tiled,
 /area/quartermaster/disposal_sort)
 "wjY" = (
