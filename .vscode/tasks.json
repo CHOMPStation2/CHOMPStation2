@@ -103,6 +103,26 @@
 		{
 			"type": "process",
 			"command": "tools/build/build.sh",
+			"args": ["-DLOWMEMORYMODE", "-DCITESTING", "-DUSE_MAP_CETUS"],
+			"windows": {
+				"command": ".\\tools\\build\\build.bat",
+				"args": ["-DLOWMEMORYMODE", "-DCITESTING", "-DUSE_MAP_CETUS"]
+			},
+			"options": {
+				"env": {
+					"DM_EXE": "${config:dreammaker.byondPath}"
+				}
+			},
+			"problemMatcher": ["$dreammaker", "$tsc", "$eslint-stylish"],
+			"group": {
+				"kind": "build"
+			},
+			"dependsOn": "dm: reparse",
+			"label": "Build All (Force CETUS)"
+		},
+		{
+			"type": "process",
+			"command": "tools/build/build.sh",
 			"args": ["-DLOWMEMORYMODE", "-DCITESTING", "-DUSE_MAP_MINITEST"],
 			"windows": {
 				"command": ".\\tools\\build\\build.bat",
