@@ -2025,6 +2025,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Supermatter Lab"
 	icon_state = "toxlab"
 
+/area/rnd/anomaly
+	name = "\improper Anomaly Testing Lab"
+	icon_state = "research"
+
 /area/rnd/xenobiology
 	name = "\improper Xenobiology Lab"
 	icon_state = "xeno_lab"
