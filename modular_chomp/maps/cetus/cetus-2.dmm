@@ -2172,6 +2172,17 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/security/security_restroom)
+"adU" = (
+/obj/machinery/conveyor{
+	id = "disposalsorter";
+	dir = 8
+	},
+/obj/machinery/button/garbosystem{
+	pixel_x = -21;
+	pixel_y = -19
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twocargo)
 "adY" = (
 /obj/structure/undies_wardrobe{
 	anchored = 1
@@ -123209,7 +123220,7 @@ sBO
 abK
 acL
 add
-acW
+adU
 acA
 unt
 acC
