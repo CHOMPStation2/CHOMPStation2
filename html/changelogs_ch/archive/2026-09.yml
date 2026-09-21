@@ -150,3 +150,7 @@
   - maptweak: Food Synths have been added to Groundbase, Stellar Delight, and Tether!
   Will:
   - bugfix: Wrenchable smartfridges no longer block all item inputs
+2026-09-21:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed cyborgs not being able to finish the reattach arm surgery with their
+      medical gripper
