@@ -2119,7 +2119,7 @@
 	dir = 4
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
-	id = qm_window_tint
+	id = "qm_window_tint"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/QM_Office)
@@ -34788,7 +34788,7 @@
 "lpS" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced/polarized{
-	id = qm_window_tint
+	id = "qm_window_tint"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/QM_Office)
