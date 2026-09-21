@@ -1247,6 +1247,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/warehouse)
 "aci" = (
@@ -2111,10 +2114,12 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/Reception)
 "adP" = (
-/obj/effect/wingrille_spawn/reinforced/polarized,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = qm_window_tint
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/QM_Office)
@@ -13843,9 +13848,9 @@
 /obj/structure/dummystairs,
 /obj/machinery/button/windowtint{
 	id = "hottubtint";
-	pixel_x = 23;
-	pixel_y = -23;
-	req_access = list(58)
+	pixel_y = -25;
+	req_access = list(58);
+	pixel_x = 22
 	},
 /obj/machinery/button/remote/airlock{
 	id = "hottub";
@@ -34782,7 +34787,9 @@
 /area/hallway/secondary/entry/D3)
 "lpS" = (
 /obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn/reinforced/polarized,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = qm_window_tint
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/QM_Office)
 "lqa" = (
@@ -53315,11 +53322,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
-"rvl" = (
-/obj/effect/wingrille_spawn/reinforced/polarized,
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/quartermaster/QM_Office)
 "rvp" = (
 /turf/simulated/wall/r_wall,
 /area/rnd/Xenobiology_Lab)
@@ -61652,6 +61654,11 @@
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
+	},
+/obj/machinery/button/windowtint{
+	id = "qm_window_tint";
+	pixel_x = -10;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/QM_Office)
@@ -71960,8 +71967,8 @@
 	},
 /obj/machinery/button/windowtint{
 	id = "hottubtint";
-	pixel_x = 23;
-	pixel_y = 23;
+	pixel_x = 22;
+	pixel_y = 24;
 	req_access = list(58)
 	},
 /obj/machinery/button/remote/airlock{
@@ -128071,7 +128078,7 @@ xaa
 apT
 apT
 adP
-rvl
+lpS
 apT
 uht
 apT
@@ -128849,7 +128856,7 @@ emG
 hJr
 lnR
 xfK
-rvl
+lpS
 vFV
 cSO
 rZe
