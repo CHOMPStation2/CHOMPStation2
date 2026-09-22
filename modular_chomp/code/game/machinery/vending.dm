@@ -158,7 +158,7 @@
 				// Armor fittings
 					/obj/item/clothing/accessory/armor/armguards/security/white = 6,
 					/obj/item/clothing/accessory/armor/legguards/security/white = 6,
-					/obj/item/clothing/accessory/armor/armorplate/merc = 6
+					/obj/item/clothing/accessory/armor/armorplate/security/heavy = 6
 				)
 
 //Temp Starhunter Fix
