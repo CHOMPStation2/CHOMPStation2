@@ -527,4 +527,4 @@
 	for(var/mob/living/L in view(src, 5))
 		if(L.stat == DEAD || !IIsAlly(L))
 			continue
-			L.add_modifier(/datum/modifier/aura/astralcollect_church, null, src)
+		L.add_modifier(/datum/modifier/aura/astralcollect_church, null, src)
