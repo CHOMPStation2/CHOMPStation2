@@ -163,3 +163,7 @@
       at low damage
   Will:
   - bugfix: Surgery is no longer attempted when any item is used on a mob
+2026-09-25:
+  Will:
+  - bugfix: astral collective shield aura mob properly applies shield modifier
+  - code_imp: Fixes a SDMM warning about unreachable code
