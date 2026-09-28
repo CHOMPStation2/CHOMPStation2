@@ -99,26 +99,9 @@
 	icon_state = "clown"
 	slowdown = SHOES_SLOWDOWN+0.5
 	force = 0
-<<<<<<< HEAD
-	//CHOMPRemove - removed built in squeak sounds
-	species_restricted = null
-
-/*	CHOMPEdit - Replaced with squeak component
-/obj/item/clothing/shoes/clown_shoes/handle_movement(turf/walking, running)
-	if(running)
-		if(footstep >= 2)
-			footstep = 0
-			playsound(src, "clownstep", 50, 1) // this will get annoying very fast.
-		else
-			footstep++
-	else
-		playsound(src, "clownstep", 20, 1)
-*/
-=======
 	species_restricted = null
 	custom_footstep = "clownstep"
 	custom_footstep_volume = 75
->>>>>>> 866e78047b (Clown shoes, footsteps (#19735))
 
 /obj/item/clothing/shoes/cult
 	name = "boots"
