@@ -193,11 +193,7 @@
 		var/mob/living/carbon/human/H = target
 		affecting = H.get_organ(hit_zone)
 
-<<<<<<< HEAD
-	if(user.a_intent == I_HURT) //CHOMPEdit: No disarm. ONLY HARM.
-=======
 	if(user.a_intent == I_HURT)
->>>>>>> 72f33e4b22 (Taser and harmbaton adjustment (#19741))
 		. = ..()
 		//whacking someone causes a much poorer electrical contact than deliberately prodding them.
 		agony *= 0.5
