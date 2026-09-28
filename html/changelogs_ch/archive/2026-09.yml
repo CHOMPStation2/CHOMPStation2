@@ -167,3 +167,6 @@
   Will:
   - bugfix: astral collective shield aura mob properly applies shield modifier
   - code_imp: Fixes a SDMM warning about unreachable code
+2026-09-28:
+  Diana:
+  - qol: Hard feet stops mousetraps from stunning you.
