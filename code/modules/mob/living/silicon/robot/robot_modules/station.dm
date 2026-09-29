@@ -476,11 +476,8 @@
 	src.modules += new /obj/item/pickaxe/plasmacutter/borg(src)
 	src.modules += new /obj/item/dogborg/stasis_clamp(src)
 	src.modules += new /obj/item/storage/pouch/eng_parts/borg(src)
-<<<<<<< HEAD
 	src.modules += new /obj/item/holosign_creator/combifan(src) //CHOMPAdd
-=======
 	src.emag += new /obj/item/melee/robotic/baton/arm(src)
->>>>>>> 4575b149d2 (Give drones analysers and signalers and grippers (#19757))
 
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal(40000)
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass(40000)
