@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Gave drones atmospheric analysers, signalers and an engineering gripper"
