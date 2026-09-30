@@ -1247,6 +1247,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/warehouse)
 "aci" = (
@@ -1891,11 +1894,6 @@
 	name = "Cargo Lockdown";
 	opacity = 0
 	},
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
 /obj/structure/cable/green{
 	icon_state = "1-10"
 	},
@@ -2116,10 +2114,12 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/Reception)
 "adP" = (
-/obj/effect/wingrille_spawn/reinforced/polarized,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "qm_window_tint"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/QM_Office)
@@ -2172,6 +2172,17 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/security/security_restroom)
+"adU" = (
+/obj/machinery/conveyor{
+	id = "disposalsorter";
+	dir = 8
+	},
+/obj/machinery/button/garbosystem{
+	pixel_x = -21;
+	pixel_y = -19
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twocargo)
 "adY" = (
 /obj/structure/undies_wardrobe{
 	anchored = 1
@@ -13837,9 +13848,9 @@
 /obj/structure/dummystairs,
 /obj/machinery/button/windowtint{
 	id = "hottubtint";
-	pixel_x = 23;
-	pixel_y = -23;
-	req_access = list(58)
+	pixel_y = -25;
+	req_access = list(58);
+	pixel_x = 22
 	},
 /obj/machinery/button/remote/airlock{
 	id = "hottub";
@@ -34776,7 +34787,9 @@
 /area/hallway/secondary/entry/D3)
 "lpS" = (
 /obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn/reinforced/polarized,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "qm_window_tint"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/QM_Office)
 "lqa" = (
@@ -53309,11 +53322,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
-"rvl" = (
-/obj/effect/wingrille_spawn/reinforced/polarized,
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/quartermaster/QM_Office)
 "rvp" = (
 /turf/simulated/wall/r_wall,
 /area/rnd/Xenobiology_Lab)
@@ -60014,24 +60022,6 @@
 /area/chapel/main)
 "tKF" = (
 /obj/structure/closet/crate/mail,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
 /obj/random/junk,
 /obj/machinery/conveyor{
 	id = "QMDelivery";
@@ -61665,6 +61655,11 @@
 	dir = 4;
 	pixel_x = 24
 	},
+/obj/machinery/button/windowtint{
+	id = "qm_window_tint";
+	pixel_x = -10;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/QM_Office)
 "ulT" = (
@@ -61782,21 +61777,6 @@
 /area/engineering/cetus/jointsubstation)
 "upg" = (
 /obj/structure/closet/crate/mail,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
 /obj/machinery/conveyor{
 	id = "QMDelivery"
 	},
@@ -67271,16 +67251,6 @@
 	dir = 4;
 	pixel_x = -28
 	},
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
 /turf/simulated/floor/tiled,
 /area/quartermaster/disposal_sort)
 "wjY" = (
@@ -71997,8 +71967,8 @@
 	},
 /obj/machinery/button/windowtint{
 	id = "hottubtint";
-	pixel_x = 23;
-	pixel_y = 23;
+	pixel_x = 22;
+	pixel_y = 24;
 	req_access = list(58)
 	},
 /obj/machinery/button/remote/airlock{
@@ -123209,7 +123179,7 @@ sBO
 abK
 acL
 add
-acW
+adU
 acA
 unt
 acC
@@ -128108,7 +128078,7 @@ xaa
 apT
 apT
 adP
-rvl
+lpS
 apT
 uht
 apT
@@ -128886,7 +128856,7 @@ emG
 hJr
 lnR
 xfK
-rvl
+lpS
 vFV
 cSO
 rZe
