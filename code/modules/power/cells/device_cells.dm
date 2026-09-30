@@ -72,15 +72,8 @@
  * Device
  */
 /obj/item/cell/device/weapon
-<<<<<<< HEAD
-	// CHOMPEdit Start
-	name = "advanced device power cell" //This was a yawn change. I quite like this, makes more sense.
-	desc = "A small upgraded power cell designed to power handheld devices."
-	// CHOMPEdit End
-=======
 	name = "advanced device power cell"
 	desc = "A small power cell designed to power handheld devices."
->>>>>>> 17396a6d13 (Weapon Power Cell (#19742))
 	icon_state = "m_sup"
 	charge = 2400
 	maxcharge = 2400
