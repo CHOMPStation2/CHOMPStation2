@@ -185,3 +185,12 @@
   - bugfix: Give the final Rebooting World message a one second buffer before reboot
       as intended.
   - bugfix: config time for round end and start now uses full seconds only
+2026-09-30:
+  DIana:
+  - bugfix: APC Authentication error shows up if hacked by malf AI
+  - qol: AI can now speak/understand more languages
+  Will:
+  - qol: holding a TTS device in your active hand will allow you to speak through
+      it by using the say input
+  - code_imp: Adds radio_creeper element
+  - code_imp: Signal handling for say code
