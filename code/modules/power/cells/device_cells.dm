@@ -69,13 +69,18 @@
 	charge = 0
 
 /*
- * Weapon
+ * Device
  */
 /obj/item/cell/device/weapon
+<<<<<<< HEAD
 	// CHOMPEdit Start
 	name = "advanced device power cell" //This was a yawn change. I quite like this, makes more sense.
 	desc = "A small upgraded power cell designed to power handheld devices."
 	// CHOMPEdit End
+=======
+	name = "advanced device power cell"
+	desc = "A small power cell designed to power handheld devices."
+>>>>>>> 17396a6d13 (Weapon Power Cell (#19742))
 	icon_state = "m_sup"
 	charge = 2400
 	maxcharge = 2400
@@ -85,11 +90,11 @@
 	charge = 0
 
 /*
- * EMP Proof Weapon
+ * EMP Proof Device
  */
 /obj/item/cell/device/weapon/empproof
-	name = "shielded weapon power cell"
-	desc = "A small power cell designed to power handheld weaponry. Shielded from EMPs."
+	name = "shielded advanced device power cell"
+	desc = "A small power cell designed to power handheld devices. Shielded from EMPs."
 	icon_state = "s_hi"
 	matter = list(MAT_STEEL = MATERIAL_COST(0.2), MAT_GLASS = MATERIAL_COST(0.03))
 
@@ -101,11 +106,11 @@
 	charge = 0
 
 /*
- * Self-charging Weapon
+ * Self-charging Device
  */
 /obj/item/cell/device/weapon/recharge
-	name = "self-charging weapon power cell"
-	desc = "A small power cell designed to power handheld weaponry. This one recharges itself."
+	name = "self-charging device power cell"
+	desc = "A small power cell designed to power handheld devices. This one recharges itself."
 	icon_state = "meb_m_nu"
 	matter = list(MAT_STEEL = MATERIAL_COST(0.2), MAT_GLASS = MATERIAL_COST(0.04))
 	self_recharge = TRUE
