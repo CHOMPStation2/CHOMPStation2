@@ -1,0 +1,7 @@
+author: "lbnesquik"
+delete-after: True
+changes:
+  - maptweak: "Cetus: Fixed the QM not being able to use their electrochromatic windows."
+  - maptweak: "Cetus: Added a switch to the grinder in the recycling area."
+  - maptweak: "Cetus: Extra light in the recycling bay."
+  - maptweak: "Cetus: Removed the bugged junk mail from the bay."
