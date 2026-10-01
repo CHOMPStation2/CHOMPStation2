@@ -1,0 +1,14 @@
+2026-10-01:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Gave drones atmospheric analysers, signalers and an engineering gripper
+  - spellcheck: Renamed 'weapon power cell' to 'advanced device power cell' to indicate
+      it can be used in more than just weapons.
+  - balance: Allows any department to make the power cell.
+  Diana:
+  - rscadd: Xenochimera interactions with the sleevemate added.
+  lbnesquik:
+  - code_imp: Added a task for compiling cetus
+  - maptweak: 'Cetus: Fixed the QM not being able to use their electrochromatic windows.'
+  - maptweak: 'Cetus: Added a switch to the grinder in the recycling area.'
+  - maptweak: 'Cetus: Extra light in the recycling bay.'
+  - maptweak: 'Cetus: Removed the bugged junk mail from the bay.'
