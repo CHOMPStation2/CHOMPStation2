@@ -12,3 +12,6 @@
   - maptweak: 'Cetus: Added a switch to the grinder in the recycling area.'
   - maptweak: 'Cetus: Extra light in the recycling bay.'
   - maptweak: 'Cetus: Removed the bugged junk mail from the bay.'
+2026-10-02:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: vore death pref not being applied properly on login
