@@ -396,6 +396,7 @@
 #define JOB_TALON_ENGINEER "Talon Engineer"
 	// Talon Engineer alt titles
 	#define JOB_ALT_TALON_TECHNICIAN "Talon Technician"
+	#define JOB_ALT_TALON_ATMOSTECHIAN "Talon Atmospheric Technician"
 
 #define JOB_TALON_GUARD "Talon Guard"
 	// Talon Guard alt titles
