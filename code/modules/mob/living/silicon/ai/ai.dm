@@ -1052,5 +1052,8 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	GLOB.silicon_mob_list -= src
 	QDEL_NULL(eyeobj)
 
+/mob/living/silicon/ai/CanObtainCentcommMessage()
+	return TRUE
+
 #undef AI_CHECK_WIRELESS
 #undef AI_CHECK_RADIO
