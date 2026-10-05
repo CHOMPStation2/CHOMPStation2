@@ -69,3 +69,6 @@
   - balance: crew monitor blocking bellies now also block tracking implants
   - balance: death alarms and tracking implants respect radio jammers
   - balance: UAV connection is blocked by radio jammers
+2026-10-05:
+  Will:
+  - bugfix: AI eye correctly moves up and down z levels
