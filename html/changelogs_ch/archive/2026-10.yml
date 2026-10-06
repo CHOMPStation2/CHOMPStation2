@@ -72,3 +72,8 @@
 2026-10-05:
   Will:
   - bugfix: AI eye correctly moves up and down z levels
+2026-10-06:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: some missing gear tweaks
+  Diana:
+  - code_imp: Removes a broken check for inserting diona nymphs into FBPs
