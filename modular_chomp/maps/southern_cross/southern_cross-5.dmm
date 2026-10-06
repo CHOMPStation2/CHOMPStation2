@@ -3494,6 +3494,7 @@
 	},
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/visible/black,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
 "gM" = (
