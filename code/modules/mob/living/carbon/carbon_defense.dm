@@ -150,6 +150,7 @@
 
 	return damage
 
+<<<<<<< HEAD
 /*
  * CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
  * The reason we're doing this here is to enable carbons to handle pain differently if they need to - in this case, we're going to check if we're synthetic here, anyways. Essentially a dupe of human_damage.dm's updatehealth()
@@ -184,3 +185,27 @@
 						if(prob(pain_noise * 3)  && !isbelly(loc)) // More likely, most severe damage. No pain noises inside bellies.
 							emote("pain")
 	// CHOMPEdit End: Pain
+=======
+/mob/living/carbon/can_slip(lube)
+	//Slip Godmode
+	if(HAS_TRAIT(src, TRAIT_NO_SLIP_ALL))
+		return FALSE
+	//Not standing on a surface to slip on...
+	if(flying || hovering)
+		return FALSE
+	//Not on this plane of existance (and also not able to touch whatever would be slipping them, probably.)
+	if(is_incorporeal())
+		return FALSE
+	if(lube & PUZZLE_ICE) //Puzzle ice. Gear cant help block these slips.
+		return TRUE
+	// General magboot check to my knowledge. Should block lube-level slips.
+	if(Check_Shoegrip())
+		return FALSE
+	if(!(lube & GALOSHES_DONT_HELP)) //Non-lube slippery (water, soap)
+		if(HAS_TRAIT(src, TRAIT_NO_SLIP_WATER) || HAS_TRAIT(src, TRAIT_NO_SLIP_GREATER))
+			return FALSE
+	else
+		if(HAS_TRAIT(src, TRAIT_NO_SLIP_GREATER))
+			return FALSE
+	return TRUE
+>>>>>>> 08c897ffe6 (Major slip refactor + slight* rebalance (#19739))
