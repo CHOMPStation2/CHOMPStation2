@@ -658,7 +658,7 @@
 	if(!istype(T))
 		return
 	if(volume >= 1)
-		T.wet_floor(2)
+		T.MakeSlippery(TURF_WET_LUBE, 160 SECONDS, min(volume * 2 SECONDS, 120))
 
 /datum/reagent/silicate
 	name = REAGENT_SILICATE
