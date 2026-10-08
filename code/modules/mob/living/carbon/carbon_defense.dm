@@ -150,7 +150,6 @@
 
 	return damage
 
-<<<<<<< HEAD
 /*
  * CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
  * The reason we're doing this here is to enable carbons to handle pain differently if they need to - in this case, we're going to check if we're synthetic here, anyways. Essentially a dupe of human_damage.dm's updatehealth()
@@ -185,7 +184,7 @@
 						if(prob(pain_noise * 3)  && !isbelly(loc)) // More likely, most severe damage. No pain noises inside bellies.
 							emote("pain")
 	// CHOMPEdit End: Pain
-=======
+
 /mob/living/carbon/can_slip(lube)
 	//Slip Godmode
 	if(HAS_TRAIT(src, TRAIT_NO_SLIP_ALL))
@@ -208,4 +207,3 @@
 		if(HAS_TRAIT(src, TRAIT_NO_SLIP_GREATER))
 			return FALSE
 	return TRUE
->>>>>>> 08c897ffe6 (Major slip refactor + slight* rebalance (#19739))
