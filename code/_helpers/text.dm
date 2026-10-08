@@ -790,8 +790,6 @@ GLOBAL_LIST_EMPTY(text_tag_cache)
 		text2num(semver_regex.group[2]),
 		text2num(semver_regex.group[3]),
 	)
-<<<<<<< HEAD
-=======
 
 ///Properly format a string of text by using replacetext()
 /proc/format_text(text)
@@ -806,4 +804,3 @@ GLOBAL_LIST_INIT(hex_characters, list("0","1","2","3","4","5","6","7","8","9","a
 
 /proc/random_short_color()
 	return random_string(3, GLOB.hex_characters)
->>>>>>> af58420595 (Holidays Refactor (#19726))

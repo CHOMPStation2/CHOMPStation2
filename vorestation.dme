@@ -2254,11 +2254,8 @@
 #include "code\game\turfs\flooring\flooring_decals.dm"
 #include "code\game\turfs\flooring\flooring_decals_ch.dm"
 #include "code\game\turfs\flooring\flooring_decals_vr.dm"
-<<<<<<< HEAD
 #include "code\game\turfs\flooring\flooring_decals_yw.dm"
-=======
 #include "code\game\turfs\flooring\flooring_holiday.dm"
->>>>>>> af58420595 (Holidays Refactor (#19726))
 #include "code\game\turfs\flooring\flooring_premade.dm"
 #include "code\game\turfs\flooring\flooring_vr.dm"
 #include "code\game\turfs\flooring\gas_cracks.dm"
