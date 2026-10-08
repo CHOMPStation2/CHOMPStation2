@@ -5445,7 +5445,6 @@
 #include "modular_chomp\code\modules\clothing\head\misc.dm"
 #include "modular_chomp\code\modules\clothing\masks\hailer.dm"
 #include "modular_chomp\code\modules\clothing\masks\miscellaneous.dm"
-#include "modular_chomp\code\modules\clothing\shoes\miscellaneous.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\spacesuits.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\.behemoth.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\clockwork_ch.dm"

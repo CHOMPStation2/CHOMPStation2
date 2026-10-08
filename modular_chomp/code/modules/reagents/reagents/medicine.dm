@@ -456,6 +456,5 @@
 	if(volume >= 5)
 		if(istype(T, /turf/simulated/floor))
 			var/turf/simulated/floor/F = T
-			if(F.wet)
-				F.wet = 0
+			F.MakeDry(TURF_WET_WATER, TRUE)
 	return
