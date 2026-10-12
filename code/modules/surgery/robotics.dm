@@ -204,19 +204,6 @@
 	max_duration = 60
 
 /datum/surgery_step/robotics/repair_brute/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-<<<<<<< HEAD
-	if(..()) //CHOMPEdit begin. Added damage check.
-		var/obj/item/organ/external/affected = target.get_organ(target_zone)
-		if(istype(tool, /obj/item/weldingtool))
-			var/obj/item/weldingtool/welder = tool
-			if(affected.brute_dam == 0)
-				to_chat(user, span_notice("There is no damage to the internal structure here!"))
-				return SURGERY_FAILURE
-			else
-				if(!welder.isOn() || !welder.remove_fuel(1,user))
-					return FALSE //CHOMPEdit End
-		return affected && affected.open == BONE_RETRACTED && (affected.disfigured || affected.brute_dam > 0) && target_zone != O_MOUTH
-=======
 	. = ..()
 	if(!.)
 		return //Return Parent
@@ -234,7 +221,6 @@
 		if(!welder.isOn() || !welder.remove_fuel(1,user))
 			return SURGERY_FAILURE
 	return //Parent will be true if we make it here.
->>>>>>> 9d0cfbf6f0 (Fixes a few issues with robolimb repair (#19803))
 
 /datum/surgery_step/robotics/repair_brute/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
