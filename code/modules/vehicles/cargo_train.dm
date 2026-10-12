@@ -204,8 +204,8 @@
 /obj/vehicle/train/engine/examine(mob/user)
 	. = ..()
 	if(Adjacent(user))
-		. += "The power light is [on ? "on" : "off"].\nThere are[key ? "" : " no"] keys in the ignition."
-		. += "The charge meter reads [cell? round(cell.percent(), 0.01) : 0]%"
+		. += span_notice("The power light is [on ? "on" : "off"].\nThere are[key ? "" : " no"] keys in the ignition.")
+		. += span_notice("The charge meter reads [cell? round(cell.percent(), 0.01) : 0]%")
 
 
 /obj/vehicle/train/engine/click_ctrl(mob/user)
@@ -513,7 +513,7 @@
 
 /obj/vehicle/train/trolley_tank/examine(mob/user, infix, suffix)
 	. = ..()
-	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u."
+	. += span_notice("The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u.")
 
 /obj/vehicle/train/trolley_tank/update_icon()
 	. = ..()
