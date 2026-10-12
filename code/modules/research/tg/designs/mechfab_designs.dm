@@ -816,6 +816,15 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
+<<<<<<< HEAD
+=======
+/datum/design_techweb/mechfab/polecat
+	desc = "A part used in the construction of the Polecat micro mech series"
+	category = list(
+		RND_CATEGORY_MECHFAB_POLECAT + RND_SUBCATEGORY_MECHFAB_CHASSIS
+	)
+
+>>>>>>> b501a35c20 (A fairly large description improvement pass. (#19756))
 /datum/design_techweb/mechfab/polecat/polecat_main
 	name = "'Polecat' central control circuit"
 	id = "polecat_main"
