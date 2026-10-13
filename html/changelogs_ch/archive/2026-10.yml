@@ -126,3 +126,25 @@
 2026-10-10:
   Diana:
   - bugfix: Glass wire no longer runtimes when crossed.
+2026-10-13:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Large description improvement. Added descriptions to a number of objects
+      missing them. Fixed a bunch of typos, and made a lot of them fit in span_notice,
+      the blueish text.
+  - code_imp: Shifted some lines around.
+  - bugfix: missing null check in reagent code which could lead to server crashes
+  - bugfix: movement pain mod calculations for traits with high numbers
+  - rscadd: Add a 'Silicon Description' like the already present 'Antag Description'
+      and 'Flavor Description' helpers
+  - qol: Rejuvenation doesnt set your nutrition to 400 if it's above 400.
+  - bugfix: status updates on prey in vorebellies should show up in the rare circumstance
+      they go from dead to conscious instantly
+  - bugfix: fixed full body prothetics getting their synthetic var set to null when
+      rejuvenated
+  Diana:
+  - bugfix: Glass wire now damages mobs and does not break from ghosts.
+  Guti:
+  - refactor: Refactored holiday code
+  Will:
+  - refactor: removed a duplicated medical side effects file, and cleaned up the code
+      to stop lifetick memory bloat
