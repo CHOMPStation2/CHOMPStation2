@@ -148,3 +148,10 @@
   Will:
   - refactor: removed a duplicated medical side effects file, and cleaned up the code
       to stop lifetick memory bloat
+2026-10-14:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixes cable coil being used before repairs are actually done.
+  - bugfix: do_after progress bar when repairing should now appear over the mob it
+      is owned by, instead of the limb organ itself.
+  - bugfix: Fixes robo_repair not accounting for toolspeed
+  - bugfix: Fixed an unused variable.
