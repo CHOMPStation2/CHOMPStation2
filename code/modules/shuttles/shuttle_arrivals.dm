@@ -14,6 +14,8 @@
 	// landmark_offsite
 	// docking_controller_tag
 
+	ceiling_type = /turf/simulated/floor/reinforced // So it at minimum works on multi-z planets
+
 // For debugging.
 /obj/machinery/computer/shuttle_control/arrivals
 	name = "shuttle control console"
