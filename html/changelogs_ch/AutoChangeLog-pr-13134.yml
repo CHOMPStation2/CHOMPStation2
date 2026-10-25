@@ -1,5 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "runtime in robot sleeper when there is no patient"
-  - bugfix: "ladder spont vore"
