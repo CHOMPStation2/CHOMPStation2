@@ -187,3 +187,6 @@
   Will:
   - bugfix: AI shell will not get disconnected on a valid AI z level when entering
       some objects
+2026-10-28:
+  Will:
+  - bugfix: Hose connectors do not run process while not in use
