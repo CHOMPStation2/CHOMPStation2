@@ -23,14 +23,24 @@
 	if(..())
 		return TRUE
 
+/datum/vore_look/export_panel/tgui_static_data(mob/user)
+	. = ..()
+	.["vore_pref_type_list"] = GLOB.vore_pref_types
+	.["db_version"] = "0.3"
+	.["db_repo"] = "vorestation"
+	.["mob_name"] = host.read_preference(/datum/preference/name/real_name)
+
 /datum/vore_look/export_panel/tgui_data(mob/user)
 	var/list/data = list()
 	var/mob/living/host = user
 
+<<<<<<< HEAD
 	data["db_version"] = "0.3"
 	data["db_repo"] = "chompstation" // CHOMPEdit
 	data["mob_name"] = host.read_preference(/datum/preference/name/real_name)
 
+=======
+>>>>>>> 9486910af7 (Vore type checks (#19808))
 	for(var/belly in host.vore_organs)
 		if(isbelly(belly))
 			var/obj/belly/B = belly
@@ -40,6 +50,7 @@
 			belly_data["name"] = B.name
 			belly_data["desc"] = B.desc
 			belly_data["display_name"] = B.display_name
+			belly_data["vore_pref_type_flags"] = B.vore_pref_type_flags
 			belly_data["absorbed_desc"] = B.absorbed_desc
 			belly_data["vore_verb"] = B.vore_verb
 			belly_data["release_verb"] = B.release_verb
