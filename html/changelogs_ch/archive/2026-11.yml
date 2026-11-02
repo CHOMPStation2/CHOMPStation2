@@ -1,0 +1,14 @@
+2026-11-02:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: an edge case vore panl tgui crash on old save files
+  - qol: Add gas analyzers, screwdrivers & grenade casings to the toximate vendor.
+      Also increased the amount of parts on sale.
+  - bugfix: Fix NIF internal communicators from using the handheld icon
+  - rscadd: Added some cybernetic implants on order via cargo
+  - qol: Make it so ghosts have a lil funny description
+  - qol: Make it so the cyborg shells without a mind don't count for round end
+  - bugfix: fixed a typo
+  - rscadd: Added a scavenging trait that makes you search lootables faster
+  - rscadd: Add mecha equipment slots information to the cyborg / mecha analyzer
+  Diana:
+  - bugfix: Multiple entities can no longer be trapped in a ghost trap
