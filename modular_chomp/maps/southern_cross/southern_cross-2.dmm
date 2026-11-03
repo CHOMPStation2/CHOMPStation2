@@ -599,6 +599,12 @@
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/large_escape_pod2/station)
+"abl" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/aftport)
 "abm" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/large_escape_pod2/station)
@@ -620,6 +626,13 @@
 /obj/random/powercell,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
+"abp" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/aftport)
 "abq" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
@@ -631,6 +644,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
+"abr" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/aftport)
 "abs" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
@@ -647,6 +667,47 @@
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
 /area/hallway/primary/firstdeck/auxdockfore)
+"abu" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "crglockdown";
+	name = "Cargo Lockdown";
+	opacity = 0
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/aftport)
+"abv" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall,
+/area/maintenance/substation/firstdeck/cargo)
+"abw" = (
+/obj/random/trash,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/aftport)
+"abx" = (
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/aftport)
+"aby" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/aftport)
 "abz" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
@@ -657,6 +718,34 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/auxdockfore)
+"abB" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
+"abC" = (
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
+"abD" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
+"abE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "abF" = (
 /obj/machinery/door/airlock/glass_external/public{
 	name = "Large Escape Pod 2";
@@ -665,6 +754,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/secondary/escape/firstdeck/ep_port)
+"abG" = (
+/obj/machinery/door/airlock,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/white,
+/area/teleporter/firstdeck)
 "abI" = (
 /turf/simulated/floor/tiled,
 /area/hangar/two)
@@ -9645,12 +9740,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tcomm/entrance)
-"bmF" = (
-/obj/machinery/door/airlock,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/white,
-/area/teleporter/firstdeck)
 "bmG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -10761,14 +10850,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"ciy" = (
-/obj/structure/catwalk,
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/aftport)
 "cji" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -11490,13 +11571,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
-"cTN" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/foreport)
 "cUb" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -15782,11 +15856,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/medical/morgue)
-"fwM" = (
-/obj/random/trash,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/aftport)
 "fwR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -18322,13 +18391,6 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
-"ivs" = (
-/obj/structure/reagent_dispensers/watertank,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/foreport)
 "iws" = (
 /obj/structure/bed/chair/shuttle_padded{
 	dir = 1
@@ -20097,10 +20159,6 @@
 	temperature = 80
 	},
 /area/tcomm/chamber)
-"koo" = (
-/obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
-/area/maintenance/substation/firstdeck/cargo)
 "kpe" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -22764,17 +22822,6 @@
 "npu" = (
 /turf/simulated/wall,
 /area/hangar/lockerroomthree)
-"nql" = (
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "crglockdown";
-	name = "Cargo Lockdown";
-	opacity = 0
-	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/aftport)
 "nqO" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/firealarm{
@@ -23331,19 +23378,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
-"ofl" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/catwalk,
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/aftport)
 "ofL" = (
 /obj/item/radio/intercom{
 	dir = 4;
@@ -24304,12 +24338,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fscenter)
-"pmI" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/aftport)
 "pny" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -24401,13 +24429,6 @@
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod3/station)
-"psc" = (
-/obj/structure/catwalk,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/foreport)
 "psu" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
@@ -25468,13 +25489,6 @@
 /obj/machinery/newscaster,
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/firstdeck/elevator)
-"qvh" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/aftport)
 "qvD" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -29265,13 +29279,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo/autoresleeve)
-"uCW" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/aftport)
 "uDE" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
@@ -32025,13 +32032,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
-"xnf" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/foreport)
 "xqr" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -59336,9 +59336,9 @@ aGd
 aCC
 avo
 ayK
-koo
-nql
-qvh
+abv
+abu
+abr
 bFS
 dWo
 dWo
@@ -59597,7 +59597,7 @@ aGd
 aGd
 aVy
 aVx
-pmI
+abl
 dWo
 aaa
 aaa
@@ -59855,7 +59855,7 @@ ddh
 aGe
 aVy
 aJM
-pmI
+abl
 dWo
 aaa
 aaa
@@ -60069,7 +60069,7 @@ aaa
 aaa
 aiY
 aMO
-bmF
+abG
 xFC
 pAv
 chC
@@ -60371,7 +60371,7 @@ ddh
 aEc
 aVy
 aHD
-pmI
+abl
 dWo
 aaf
 aaf
@@ -60585,7 +60585,7 @@ aaa
 aaa
 aiY
 aMO
-bmF
+abG
 aKL
 elz
 aiY
@@ -60595,7 +60595,7 @@ dVV
 aiY
 aiY
 aah
-ivs
+abD
 aMJ
 gwv
 aEn
@@ -60853,7 +60853,7 @@ aiY
 aiY
 ajn
 aTE
-cTN
+abE
 adk
 adk
 adk
@@ -60862,7 +60862,7 @@ adk
 adk
 mNn
 oEy
-xnf
+abB
 aFf
 vys
 umi
@@ -61120,14 +61120,14 @@ aiI
 aiZ
 acp
 adl
-psc
+abC
 aFf
 sTT
 unF
 vyL
 aVy
-ciy
-fwM
+abx
+abw
 xJP
 fQH
 dVi
@@ -61145,7 +61145,7 @@ aPr
 aED
 aPr
 aVA
-uCW
+abp
 dYJ
 aaa
 aaa
@@ -61384,7 +61384,7 @@ sVZ
 unM
 vBh
 aED
-ofl
+aby
 cBw
 pFU
 vbP
