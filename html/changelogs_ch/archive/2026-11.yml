@@ -33,3 +33,6 @@
       them, instead of only the initial victim (multiple could be launched from a
       single trigger)
   - admin: adminbus subtype is a bit faster. For bussin' purposes.
+2026-11-04:
+  Will:
+  - maptweak: Emitter in Misc Lab no longer activates when the engine emitter is activated
