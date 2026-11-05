@@ -186,7 +186,13 @@
 		I.forceMove(src)
 		teleplumb_crystal = I
 		//TODO: add a way to link this to custom destinations.
-		teleplumb_dest_ref = WEAKREF(locate(/obj/effect/landmark/teleplumb_exit))
+		//CHOMPEdit Start: Toilets attempt to connect to waste tanks if they exist.
+		//teleplumb_dest_ref = WEAKREF(locate(/obj/effect/landmark/teleplumb_exit))
+		var/toilet_dest = locate(/obj/structure/biowaste_tank)
+		if(!toilet_dest) //No waste tank, try to connect to the teleplumb exit landmark.
+			toilet_dest = locate(/obj/effect/landmark/teleplumb_exit)
+		teleplumb_dest_ref = WEAKREF(toilet_dest)
+		//CHOMPEdit End
 		desc = "The BS-500, a bluespace rift-rotation-based waste disposal unit for small matter. This one seems remarkably clean."
 		return
 
