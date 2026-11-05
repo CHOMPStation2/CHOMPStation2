@@ -3721,6 +3721,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/photocopier/faxmachine{
+	department = "engineering"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/Breakroom)
 "aEQ" = (
@@ -13639,6 +13642,9 @@
 "dYn" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/nifsofts_security,
+/obj/item/storage/box/donut{
+	pixel_y = -14
+	},
 /turf/simulated/floor/carpet,
 /area/security/briefing_room)
 "dYq" = (
@@ -15100,13 +15106,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twofp)
 "eyX" = (
-/obj/structure/table/reinforced,
-/obj/machinery/chemical_dispenser/full{
-	pixel_y = 16
-	},
+/obj/machinery/chemical_dispenser/full,
 /obj/item/reagent_containers/glass/beaker/large{
-	pixel_y = 1;
-	pixel_x = -13
+	pixel_y = -2;
+	pixel_x = -39
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/Chemistry)
@@ -32498,11 +32501,6 @@
 	c_tag = "MED - Chemistry";
 	dir = 9
 	},
-/obj/item/reagent_containers/spray/cleaner{
-	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
-	name = "Chemistry Cleaner";
-	pixel_y = 17
-	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/Chemistry)
 "kzS" = (
@@ -33388,12 +33386,6 @@
 /obj/machinery/computer/supplycomp/control,
 /turf/simulated/floor/tiled,
 /area/quartermaster/QM_Office)
-"kRh" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/crew_quarters/cetus/atrium/primary)
 "kRt" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular{
@@ -40558,7 +40550,6 @@
 /turf/simulated/open,
 /area/crew_quarters/cetus/atrium/primary)
 "nlS" = (
-/obj/structure/table/reinforced,
 /obj/machinery/chemical_dispenser/biochemistry/full,
 /obj/machinery/alarm{
 	dir = 4;
@@ -47507,7 +47498,6 @@
 /turf/simulated/floor/tiled/red,
 /area/security/Brig)
 "pDN" = (
-/obj/structure/table/reinforced,
 /obj/machinery/chemical_dispenser/biochemistry/full,
 /turf/simulated/floor/tiled/dark,
 /area/medical/Chemistry)
@@ -48726,6 +48716,10 @@
 /obj/structure/table/bench/standard,
 /obj/item/toy/eight_ball,
 /obj/effect/floor_decal/corner/beige/diagonal,
+/obj/machinery/photocopier/faxmachine{
+	department = "medical";
+	pixel_y = 12
+	},
 /turf/simulated/floor/tiled,
 /area/medical/Lounge)
 "pUj" = (
@@ -56713,6 +56707,9 @@
 /area/hallway/primary/seconddeck/dockhallway)
 "sEk" = (
 /obj/structure/table/bench/steel,
+/obj/machinery/photocopier/faxmachine{
+	department = "cargo"
+	},
 /turf/simulated/floor/carpet/brown,
 /area/quartermaster/Breakroom)
 "sEo" = (
@@ -66991,6 +66988,12 @@
 	dir = 4;
 	pixel_y = -7
 	},
+/obj/item/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
+	name = "Chemistry Cleaner";
+	pixel_y = 8;
+	pixel_x = -10
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/Chemistry)
 "wgd" = (
@@ -71264,7 +71267,9 @@
 /area/crew_quarters/heads/sc/hor)
 "xAF" = (
 /obj/structure/table/standard,
-/obj/item/storage/box/donut,
+/obj/machinery/photocopier/faxmachine{
+	department = "Security"
+	},
 /turf/simulated/floor/carpet,
 /area/security/briefing_room)
 "xAP" = (
@@ -108458,7 +108463,7 @@ heG
 heG
 heG
 heG
-kRh
+heG
 qWu
 qWu
 qWu
