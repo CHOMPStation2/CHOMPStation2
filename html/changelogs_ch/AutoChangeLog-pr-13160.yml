@@ -1,5 +1,0 @@
-author: "ReoDaProtovali"
-delete-after: True
-changes:
-  - bugfix: "fixes toilets not linking to biowaste tanks."
-  - code_imp: "Removes a file that was deleted on virgo."

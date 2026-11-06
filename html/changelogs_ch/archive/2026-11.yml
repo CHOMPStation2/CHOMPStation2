@@ -36,3 +36,20 @@
 2026-11-04:
   Will:
   - maptweak: Emitter in Misc Lab no longer activates when the engine emitter is activated
+2026-11-06:
+  Diana:
+  - bugfix: Epinephirine will no longer cause a cylic 'take damage which causes more
+      epi which causes more damage' cycle.
+  - balance: Epi now gives CE_SPEEDBOOST 1 instead of CE_SPEEDBOOST 3. Now hyperzine
+      speed instead of tickspeed.
+  - bugfix: Lingboots actually work now.
+  - bugfix: Disabilities reapply after rejuv.
+  - bugfix: Horror Event Disease is cured by xenochimeraism.
+  ReoDaProtovali:
+  - bugfix: fixes toilets not linking to biowaste tanks.
+  - code_imp: Removes a file that was deleted on virgo.
+  SaintLuther:
+  - rscadd: Sewer system for southern cross, you can flush the toilets now.
+  - rscadd: Prison toilet so people can not escape the brig
+  zeskorion:
+  - maptweak: a few cetus changes/fixes
