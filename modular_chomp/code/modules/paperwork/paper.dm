@@ -84,3 +84,21 @@
 /obj/item/paper/zap_brief
 	info = "To the Magnificent Z.A.P.<BR>A small mining base has been created within our territory by wandless scum. Send them a message from the wizard federation they will not forget. I know your kind is rather fragile, but a group of lightly armed miners should not pose any threat to you at all. Just be warned they have a security cyborg for self defence, you might want to tune your spells to that threat. I look forward to hearing of your success.<BR>Grand Magus Abra the Wonderous"
 	name = "Mission Briefing"
+
+/obj/item/paper/crumpled/bloody/whiskeystation
+	icon_state = "scrap_bloodied"
+	info = "By Gods, Jenkins was right. We dug too deep, and now those things escaped the blast doors. I can hear them pounding on the walls. I hope Hephaestus gets our distress signal so-"
+
+/obj/item/paper/crumpled/whiskeymine
+	name = "Emergency lockdown"
+	icon_state = "scrap"
+	info = "For the love of god, I hate it when they lockdown the deep mine in these damn tests. One of these days I'll give bill a piece of my mind. I'm tired of having to walk all the way back to the station just to hit a damn button."
+
+/obj/item/paper/crumpled/whiskeyhermit
+	name = "Hermit's notes"
+	icon_state = "scrap"
+	info = "I told them over and over! Stop digging. But no, of course not. They kept digging, and digging and digging on down, and now their dead. now we're all dead."
+
+/obj/item/paper/psmartfridge
+	name = "Hastily scribbled smartfridge note"
+	info = "For the last time, the only smartfridges that we do not empty when doing clean up is the ones in cargo and in the kitchen freezer stop leaving materials in the temporary ones do we look like cargo personel to you? Love from a concerned member of the cleanup crew"

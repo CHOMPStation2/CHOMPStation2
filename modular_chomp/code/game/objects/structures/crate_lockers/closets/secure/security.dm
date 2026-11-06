@@ -255,7 +255,7 @@
 /obj/structure/closet/secure_closet/detective
 	name = "detective's cabinet"
 	req_access = list(access_forensics_lockers)
-	closet_appearance = /decl/closet_appearance/cabinet/secure
+	closet_appearance = /datum/decl/closet_appearance/cabinet/secure
 
 	open_sound = 'sound/effects/wooden_closet_open.ogg'
 	close_sound = 'sound/effects/wooden_closet_close.ogg'
