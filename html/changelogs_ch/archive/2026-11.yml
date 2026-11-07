@@ -53,3 +53,14 @@
   - rscadd: Prison toilet so people can not escape the brig
   zeskorion:
   - maptweak: a few cetus changes/fixes
+2026-11-07:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a random button to randomly pick a hair, or beard, or tail, or wings,
+      etc.
+  - rscadd: Made it possible for ghosts to see current department goals with a verb.
+  - qol: adds vore type flags to tag bellies
+  - bugfix: some css layout on the vorepanel floating
+  - bugfix: an error in export flag handling for html export
+  - code_imp: enable typescript 7 as default
+  Poojawa:
+  - bugfix: fixed airlock helper errors in Aerostat and Overrun Tourist ship
