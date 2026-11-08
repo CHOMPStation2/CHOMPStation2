@@ -64,3 +64,23 @@
   - code_imp: enable typescript 7 as default
   Poojawa:
   - bugfix: fixed airlock helper errors in Aerostat and Overrun Tourist ship
+2026-11-08:
+  CHOMPStation2StaffMirrorBot:
+  - qol: made it so vore is opt out not opt in
+  - qol: adds missing tag for bv
+  - bugfix: Fixes repeated headsmashing when you slide recursively
+  - bugfix: Fixes an inconsistant runtime with trying to delete slip_timer when it
+      is sometimes null
+  Diana:
+  - bugfix: Fever no longer lowers your temperature from lethal to normal.
+  - bugfix: Fever no longer will instantly make your temperature go from normal to
+      lethal. (Fever slightly adjusted to make up for this bug being fixed.)
+  - code_imp: Oxygen braindamage in life() slightly optimized.
+  Poojawa:
+  - qol: added SPACE_ and VOID_ to suit and helmet spawn menu listing, for those much
+      easier selections.
+  Will:
+  - code_imp: added COMSIG_EXTERNAL_ORGAN_STANCE_DAMAGE_APPLICATION signal
+  - code_imp: added COMSIG_EXTERNAL_ORGAN_GRASP_DAMAGE_APPLICATION signal
+  - code_imp: added COMSIG_MOB_HEAR_SAY signal
+  - bugfix: missing parent call for remote view gene's signals
