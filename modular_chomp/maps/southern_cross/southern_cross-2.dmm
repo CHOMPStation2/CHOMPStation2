@@ -26880,18 +26880,13 @@
 /turf/simulated/floor/tiled/white,
 /area/teleporter/firstdeck)
 "saD" = (
-/obj/structure/closet/crate,
-/obj/item/storage/belt/champion,
-/obj/item/stack/material/gold{
-	amount = 6
-	},
-/obj/item/stack/material/silver{
-	amount = 6
+/obj/structure/filingcabinet/medical{
+	desc = "A large cabinet with hard copy medical records.";
+	name = "Medical Records"
 	},
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/instrument/violin/golden,
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "sbb" = (
@@ -27131,10 +27126,15 @@
 /turf/simulated/floor/tiled,
 /area/hangar/two)
 "svz" = (
-/obj/structure/filingcabinet/medical{
-	desc = "A large cabinet with hard copy medical records.";
-	name = "Medical Records"
+/obj/structure/closet/crate,
+/obj/item/storage/belt/champion,
+/obj/item/stack/material/gold{
+	amount = 6
 	},
+/obj/item/stack/material/silver{
+	amount = 6
+	},
+/obj/item/instrument/violin/golden,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -68308,7 +68308,7 @@ aaa
 aaa
 aOh
 aOh
-uad
+jmu
 saD
 agk
 tTb
@@ -69340,7 +69340,7 @@ aaa
 aaa
 aOh
 aOh
-jmu
+uad
 svz
 gBk
 qMs
