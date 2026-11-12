@@ -123,6 +123,26 @@
 		{
 			"type": "process",
 			"command": "tools/build/build.sh",
+			"args": ["-DLOWMEMORYMODE", "-DCITESTING", "-DUSE_MAP_SOUTHERN_CROSS"],
+			"windows": {
+				"command": ".\\tools\\build\\build.bat",
+				"args": ["-DLOWMEMORYMODE", "-DCITESTING", "-DUSE_MAP_SOUTHERN_CROSS"]
+			},
+			"options": {
+				"env": {
+					"DM_EXE": "${config:dreammaker.byondPath}"
+				}
+			},
+			"problemMatcher": ["$dreammaker", "$tsc", "$eslint-stylish"],
+			"group": {
+				"kind": "build"
+			},
+			"dependsOn": "dm: reparse",
+			"label": "Build All (Force Southern Cross)"
+		},
+		{
+			"type": "process",
+			"command": "tools/build/build.sh",
 			"args": ["-DLOWMEMORYMODE", "-DCITESTING", "-DUSE_MAP_MINITEST"],
 			"windows": {
 				"command": ".\\tools\\build\\build.bat",
