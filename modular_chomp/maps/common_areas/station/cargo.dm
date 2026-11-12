@@ -99,3 +99,6 @@
 
 /area/quartermaster/Recycling
 	holomap_color = HOLOMAP_AREACOLOR_CARGO
+
+/area/quartermaster/refinery
+	name = "\improper Cargo Refinery"
