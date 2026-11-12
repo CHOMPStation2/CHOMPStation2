@@ -21504,9 +21504,6 @@
 	dir = 4;
 	id = "QMDelivery"
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
 /turf/simulated/floor/plating,
 /area/quartermaster/delivery)
 "lZZ" = (
@@ -27459,6 +27456,9 @@
 	pixel_y = -21
 	},
 /obj/machinery/papershredder,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "sJC" = (
