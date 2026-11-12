@@ -1047,12 +1047,12 @@
 /turf/simulated/floor/greengrid,
 /area/ai)
 "aAf" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "aAA" = (
@@ -1063,7 +1063,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/hologram/holopad,
+/obj/machinery/porta_turret/ai_defense,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "aAM" = (
@@ -1255,11 +1255,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/hologram/holopad,
+/obj/machinery/porta_turret/ai_defense,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "aFB" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -1267,6 +1266,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "aFT" = (
