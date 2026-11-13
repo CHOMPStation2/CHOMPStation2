@@ -844,6 +844,7 @@
 	cost = 4 // Expensive!
 	var_changes = list("item_slowdown_mod" = 1)
 	custom_only = FALSE
+	hidden = TRUE //CHOMPEdit - Disable
 	allowed_species = list(SPECIES_SHADEKIN_CREW, SPECIES_PROMETHEAN, SPECIES_PROTEAN, SPECIES_TESHARI) // The slowed down species.
 	excludes = list(/datum/trait/positive/hardy_major_weakspecies)
 
@@ -853,6 +854,7 @@
 	cost = 7 // Very expensive! You must reallllly want that!
 	var_changes = list("item_slowdown_mod" = 0.7)
 	custom_only = FALSE
+	hidden = TRUE //CHOMPEdit - Disable
 	allowed_species = list( SPECIES_SHADEKIN_CREW, SPECIES_PROMETHEAN, SPECIES_PROTEAN, SPECIES_TESHARI) // The slowed down species.
 	excludes = list(/datum/trait/positive/hardy_weakspecies)
 
