@@ -30,6 +30,9 @@
 
 	new /datum/random_map/droppod/supply(null, land_target.x-2, land_target.y-2, land_target.z, supplied_drops = list(/obj/structure/ghost_pod/manual/lost_drone/dogborg))
 
+<<<<<<< HEAD
 //YW Addition: Adding named landmark for events
+=======
+>>>>>>> 8860e9c5e0 (Bundle of fixes (#19865))
 /obj/effect/landmark/event_spawn/dronepod_landing
 	name = "droppod_landing"
