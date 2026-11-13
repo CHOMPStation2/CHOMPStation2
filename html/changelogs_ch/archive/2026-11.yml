@@ -92,3 +92,15 @@
   - code_imp: converted a camera variable to true | false flags.
   - qol: Made it so examining a broken camera tells you it is broken
   - code_imp: Converted cameras to an HP system so you can have stronger cameras
+2026-11-13:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: update dependencies
+  - bugfix: timer added to qdelled porta gens
+  Poojawa:
+  - bugfix: fixed gibber debug message being useless
+  - refactor: mapping debug tools now utilize admin jump hotlinks, universal adaptors
+      don't report as unconnected when they're mapped in with, y'know, adapting pipe
+      networks
+  lbnesquik:
+  - maptweak: Southern Cross tiny tweak to the mail room
+  - code_imp: Add a special task for compiling Southern Cross
