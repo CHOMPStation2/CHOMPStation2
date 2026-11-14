@@ -516,6 +516,9 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/maintenance/abchemistry)
+"bn" = (
+/turf/simulated/wall/r_wall/turfpack/airless,
+/area/quartermaster/refinery)
 "bo" = (
 /obj/item/radio/subspace,
 /turf/simulated/floor/plating/turfpack/station,
@@ -567,6 +570,13 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/thrift)
+"bu" = (
+/turf/simulated/wall/r_wall/turfpack/station,
+/area/quartermaster/refinery)
+"bv" = (
+/obj/effect/wingrille_spawn/reinforced_phoron,
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "bw" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/light/small{
@@ -574,6 +584,79 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abhydroponicssupp)
+"bx" = (
+/obj/structure/table/rack,
+/obj/item/circuitboard/industrial_reagent_waste_processor{
+	pixel_y = 13
+	},
+/obj/item/circuitboard/industrial_reagent_waste_processor{
+	pixel_y = 11
+	},
+/obj/item/circuitboard/industrial_reagent_reactor{
+	pixel_y = 9
+	},
+/obj/item/circuitboard/industrial_reagent_reactor{
+	pixel_y = 7
+	},
+/obj/item/circuitboard/industrial_reagent_vat{
+	pixel_y = 5
+	},
+/obj/item/circuitboard/industrial_reagent_vat{
+	pixel_y = 3
+	},
+/obj/item/circuitboard/industrial_reagent_pump{
+	pixel_y = 1
+	},
+/obj/item/circuitboard/industrial_reagent_hub{
+	pixel_y = -1
+	},
+/obj/item/circuitboard/industrial_reagent_furnace{
+	pixel_y = -3
+	},
+/obj/item/circuitboard/industrial_reagent_filter{
+	pixel_y = -5
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/refinery)
+"by" = (
+/obj/structure/table/rack,
+/obj/item/circuitboard/industrial_reagent_pipe{
+	pixel_y = 13
+	},
+/obj/item/circuitboard/industrial_reagent_pipe{
+	pixel_y = 11
+	},
+/obj/item/circuitboard/industrial_reagent_pipe{
+	pixel_y = 9
+	},
+/obj/item/circuitboard/industrial_reagent_pipe{
+	pixel_y = 7
+	},
+/obj/item/circuitboard/industrial_reagent_pipe{
+	pixel_y = 5
+	},
+/obj/item/circuitboard/industrial_reagent_grinder{
+	pixel_y = 3
+	},
+/obj/item/circuitboard/industrial_reagent_hub{
+	pixel_y = 1
+	},
+/obj/item/circuitboard/industrial_reagent_grinder{
+	pixel_y = -1
+	},
+/obj/item/circuitboard/industrial_reagent_furnace{
+	pixel_y = -3
+	},
+/obj/item/circuitboard/industrial_reagent_filter{
+	pixel_y = -5
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
+"bz" = (
+/obj/machinery/smart_centrifuge,
+/obj/machinery/light/yellowed,
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "bA" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -595,11 +678,25 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/zerostarboard)
+"bC" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/chemical_analyzer,
+/turf/simulated/floor/plating,
+/area/quartermaster/refinery)
 "bD" = (
 /obj/effect/floor_decal/rust,
 /obj/random/flashlight,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroport)
+"bE" = (
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
+"bF" = (
+/obj/machinery/light/yellowed,
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "bG" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/border_only,
@@ -610,6 +707,27 @@
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
+"bI" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
+"bJ" = (
+/obj/machinery/reagent_refinery/vat{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
+"bK" = (
+/obj/machinery/reagent_refinery/reactor,
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
+"bL" = (
+/obj/machinery/light{
+	dir = 8;
+	name = "1E-light fixture"
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "bM" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -617,6 +735,10 @@
 /obj/random/trash,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
+"bN" = (
+/obj/machinery/reagent_refinery/grinder,
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "bO" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -625,6 +747,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet/blue2/turfpack/station,
 /area/maintenance/thrift)
+"bP" = (
+/obj/machinery/atmospherics/portables_connector,
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "bQ" = (
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/accessory/badge/sheriff,
@@ -643,6 +769,12 @@
 /obj/structure/mob_spawner/mouse_nest/mousehole,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/fieldthrift)
+"bS" = (
+/obj/machinery/light/yellowed{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "bT" = (
 /obj/structure/catwalk,
 /obj/machinery/door/firedoor/glass,
@@ -666,23 +798,79 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ragecage)
+"bW" = (
+/obj/machinery/reagent_refinery/filter/alt{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
+"bX" = (
+/obj/structure/sign/warning/fire,
+/turf/simulated/wall/r_wall/turfpack/station,
+/area/maintenance/abcargo)
+"bY" = (
+/obj/machinery/reagent_refinery/hub{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
+"bZ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "ca" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled,
 /area/maintenance/abcargo)
+"cb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
+"cc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
+"cd" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "ce" = (
 /obj/effect/landmark{
 	name = "maint_pred"
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerostarboard)
+"cf" = (
+/obj/fiftyspawner/rglass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/structure/table/rack/steel,
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "cg" = (
 /obj/structure/smoletrack/roadT{
 	dir = 8
 	},
 /turf/simulated/floor/smole,
 /area/maintenance/smoleroom)
+"ch" = (
+/obj/machinery/light/broken{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "ci" = (
 /obj/machinery/door/airlock/maintenance/rnd{
 	name = "Genetics";
@@ -707,12 +895,24 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ragecage)
+"ck" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "cl" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/maintenance/field)
+"cm" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "cn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -745,6 +945,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
+"cr" = (
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "cs" = (
 /obj/random/trash,
 /obj/machinery/light/small{
@@ -758,6 +964,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/gravlobby)
+"cu" = (
+/obj/vehicle/train/trolley_tank{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "cv" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/cable{
@@ -771,6 +983,24 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
+"cw" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/firealarm{
+	layer = 3.3;
+	pixel_y = 26
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
+"cx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "cy" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -784,6 +1014,36 @@
 /obj/item/laserdome_flag/red,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/field)
+"cA" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
+"cB" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24;
+	on = 0
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
+"cC" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "cD" = (
 /obj/random/trash,
 /obj/structure/mob_spawner/mouse_nest/mousehole,
@@ -806,11 +1066,19 @@
 /obj/random/maintenance,
 /turf/simulated/floor/bmarble,
 /area/maintenance/thrift)
+"cG" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/simulated/floor/plating/turfpack/station,
+/area/quartermaster/refinery)
 "cH" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/zeroaft)
+"cI" = (
+/obj/structure/sign/warning/caution,
+/turf/simulated/wall/r_wall/turfpack/station,
+/area/maintenance/zeroport)
 "cJ" = (
 /obj/random/flashlight,
 /turf/simulated/floor/plating/turfpack/station,
@@ -844,6 +1112,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fieldhallway)
+"cN" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Maint Room 2";
+	id_tag = "MaintRoom2";
+	req_one_access = null
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zeroport)
+"cO" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zeroport)
 "cP" = (
 /obj/structure/sign/directions/engineering{
 	dir = 8;
@@ -858,6 +1140,12 @@
 	},
 /turf/simulated/wall,
 /area/engineering/lowlobby)
+"cQ" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zeroport)
 "cR" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -865,6 +1153,26 @@
 /obj/random/tool/powermaint,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/field)
+"cS" = (
+/obj/structure/catwalk,
+/obj/effect/floor_decal/rust,
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zeroport)
+"cT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance/cargo,
+/turf/simulated/floor/tiled/techmaint,
+/area/engineering/lowlobby)
+"cU" = (
+/obj/structure/sign/warning/engineering_access,
+/turf/simulated/wall,
+/area/engineering/lowlobby)
 "cV" = (
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -3652,6 +3960,10 @@
 /turf/space,
 /area/space)
 "ov" = (
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Technical Storage";
+	dir = 1
+	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/lowlobby)
@@ -3966,9 +4278,13 @@
 /turf/simulated/floor/wood/alt/parquet/broken/turfpack/station,
 /area/maintenance/lookout)
 "pT" = (
-/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /obj/machinery/door/firedoor/border_only,
-/obj/item/tape/engineering,
+/obj/machinery/door/airlock/maintenance/cargo,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroport)
 "pV" = (
@@ -6543,7 +6859,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/zeroaft)
 "BB" = (
-/obj/structure/bed/chair,
 /obj/machinery/firealarm{
 	layer = 3.3;
 	pixel_y = 26
@@ -6551,6 +6866,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/bed/chair,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/lowlobby)
 "BC" = (
@@ -8848,8 +9164,11 @@
 /turf/simulated/wall/turfpack/station,
 /area/maintenance/absgenetics)
 "LG" = (
-/obj/structure/catwalk,
-/obj/random/flashlight,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroport)
 "LH" = (
@@ -9846,12 +10165,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Technical Storage";
-	dir = 1
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
+/obj/structure/cable{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/lowlobby)
@@ -10378,8 +10696,8 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerobar)
 "Ta" = (
-/obj/structure/reagent_dispensers/fueltank,
-/turf/simulated/floor/plating/turfpack/station,
+/obj/structure/sign/warning/fire,
+/turf/simulated/wall,
 /area/maintenance/zeroport)
 "Tb" = (
 /obj/random/mouseremains,
@@ -32423,14 +32741,14 @@ ua
 Nc
 ax
 ua
-TJ
-TJ
-TJ
-TJ
-TJ
-TJ
-TJ
-TJ
+bn
+bn
+bn
+bn
+bn
+bn
+bn
+bn
 TJ
 TJ
 TJ
@@ -32681,14 +32999,14 @@ ua
 Ox
 PK
 ua
-iP
-iP
-iP
-iP
-iP
-iP
-iP
-iP
+bE
+ch
+bE
+bE
+bL
+bE
+bx
+bu
 iP
 iP
 iP
@@ -32939,14 +33257,14 @@ ua
 sA
 Fo
 ua
-iP
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
+cr
+bE
+bY
+bW
+bN
+bE
+by
+bu
 wZ
 wZ
 wZ
@@ -33197,14 +33515,14 @@ ua
 fT
 PK
 US
-iP
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
+bE
+bI
+bE
+bJ
+bE
+bE
+bz
+bu
 wZ
 wZ
 wZ
@@ -33455,14 +33773,14 @@ ee
 PJ
 PJ
 Jk
-iP
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
+cu
+bE
+bZ
+bE
+bE
+bE
+bC
+bv
 wZ
 wZ
 wZ
@@ -33710,17 +34028,17 @@ qB
 QV
 XJ
 iv
-Kb
-PJ
-US
-iP
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
+Pb
+cN
+ua
+cu
+bE
+cb
+bE
+bE
+bI
+bE
+bu
 wZ
 wZ
 wZ
@@ -33968,17 +34286,17 @@ hj
 ei
 ov
 iv
-PJ
-PJ
+cQ
+Fo
 ua
-iP
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
+cw
+bE
+cb
+bE
+bE
+bE
+bE
+bu
 wZ
 wZ
 wZ
@@ -34225,18 +34543,18 @@ pa
 Nj
 Ro
 Qh
-iv
-PJ
+cT
+LG
 LG
 pT
-iP
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
+cx
+ck
+cc
+bE
+bE
+bJ
+bE
+bu
 wZ
 wZ
 wZ
@@ -34483,18 +34801,18 @@ yO
 NI
 hj
 Cx
-iv
-PJ
-PJ
-pT
-iP
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
+cU
+Fo
+cO
+cI
+cA
+bE
+cd
+bE
+bE
+bE
+bF
+bu
 wZ
 wZ
 wZ
@@ -34742,17 +35060,17 @@ sF
 MH
 As
 cP
-le
+cN
 Ta
-pT
-iP
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
+ua
+cB
+bE
+bE
+bE
+bI
+bE
+bE
+bv
 wZ
 wZ
 wZ
@@ -35003,14 +35321,14 @@ nF
 le
 lE
 ua
-iP
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
-wZ
+cC
+bE
+bI
+bE
+bP
+bK
+bE
+bu
 wZ
 wZ
 wZ
@@ -35258,17 +35576,17 @@ pr
 xg
 gh
 Pb
-le
+cS
 le
 ua
-iP
-iP
-iP
-iP
-iP
-iP
-iP
-iP
+cG
+cm
+cf
+bE
+bS
+bE
+bE
+bu
 iP
 iP
 iP
@@ -35522,7 +35840,7 @@ We
 We
 We
 We
-We
+bX
 We
 We
 We
