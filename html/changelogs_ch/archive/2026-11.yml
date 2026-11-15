@@ -104,3 +104,6 @@
   lbnesquik:
   - maptweak: Southern Cross tiny tweak to the mail room
   - code_imp: Add a special task for compiling Southern Cross
+2026-11-15:
+  Kashargul:
+  - bugfix: some missing checks that exist upstream
