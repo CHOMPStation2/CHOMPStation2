@@ -152,7 +152,7 @@
 /turf/attack_hand(mob/user)
 	//QOL feature, clicking on turf can toggle doors, unless pulling something
 	if(!user.pulling)
-		/* For use downstream
+		// CHOMPEnable Start
 		if(istype(fire, /obj/fire/lingering)) // Allow patting out lingering fires
 			fire.firelevel -= rand(0.1, 1.1)
 			if(fire.firelevel <= 0)
@@ -162,7 +162,7 @@
 			else
 				visible_message("\The [user] tries to extinguish the flames!")
 			return TRUE
-		*/
+		// CHOMPEnable End
 		var/obj/machinery/door/airlock/AL = locate(/obj/machinery/door/airlock) in src.contents
 		if(AL)
 			AL.attack_hand(user)
