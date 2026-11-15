@@ -2091,7 +2091,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	//make sure our target still exists and is on a turf
 	if(QDELETED(A) || !isturf(get_turf(A)))
 		return
-	var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
+	var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon/blackhole(get_turf(src))
 	src.visible_message(span_danger("\The [src] spews fire at \the [A]!"))
 	playsound(src, "sound/weapons/serdy/heavyflamethrower.ogg", 50, 1)
 	P.launch_projectile(A, BP_TORSO, src)
@@ -2169,11 +2169,11 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	closest_desired_distance = 5
 	cooperative = FALSE
 	electric_defense_radius = 5			// How big to assume electric defense's area is.
-	microsingulo_radius = 9				// Same but for microsingulo pull.
+	microsingulo_radius = 99				// Same but for microsingulo pull.
 	rocket_explosive_radius = 4			// Explosion radius for the rockets.
 
 	electric_defense_threshold = 1		// How many non-targeted people are needed in close proximity before electric defense is viable.
-	microsingulo_threshold = 4			// Similar to above, but uses an area around the target.
+	microsingulo_threshold = 99			// Similar to above, but uses an area around the target.
 
 // Used to control the mob's positioning based on which special attack it has done.
 // Note that the intent will not change again until the next special attack is about to happen.
@@ -2242,69 +2242,206 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 			holder.a_intent = I_DISARM // Electricity might not work but it's safe up close.
 
 
-/obj/item/projectile/arc/explosive_rocket/rocket/bh1
-	name = "mini mortar shell"
-	icon_state = "grenade"
-	damage = 30
-	arc_height_multiplier = 0.2
-	damage_type = BRUTE
-	var/list/fragment_types = list(
-		/obj/item/projectile/bullet/pellet/fragment, /obj/item/projectile/bullet/pellet/fragment, \
-		/obj/item/projectile/bullet/pellet/fragment, /obj/item/projectile/bullet/pellet/fragment
-		)
-	var/fragment_amount = 8 // Same as a grenade.
-	var/spread_range = 7
-	check_armour = "bullet"
-	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
-	fire_sound = 'sound/weapons/rpg.ogg'
-	speed = 0.5
-	light_range = 3
-	light_power = 1
-	light_color = "#FFB25B"
-
-/obj/item/projectile/arc/explosive_rocket/rocket/bh1/on_impact(turf/T)
-	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
-	explosion(T, 0, 0, 2, adminlog = FALSE)
-	fragmentate(T, fragment_amount, spread_range, fragment_types)
-
-/obj/item/projectile/energy/homing_bolt/microrocket
-	name = "displacer micro rocket"
-	icon_state = "atrocket"
-	damage = 15
-	range = 100
-	damage_type = BRUTE
-	check_armour = "bullet"
-	fire_sound = 'sound/weapons/grenade_launcher.ogg'
-	speed = 1
-	hitsound_wall = 'sound/effects/contactor_off.ogg'
-	light_range = 3
-	light_power = 1
-	light_color = "#FFB25B"
+///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
+///sniper doggy///
+///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 
 
-/obj/item/projectile/energy/homing_bolt/microrocket/on_hit(atom/movable/target, blocked = 0)
-	if(istype(target))
-		var/throwdir = get_dir(firer,target)
-		target.throw_at(get_edge_target_turf(target, throwdir),1,1)
-		new /obj/effect/explosion(target)
-		explosion(target, 0, 0, 0, adminlog = FALSE)
-		return 1
 
-/obj/item/projectile/arc/explosive_rocket/rocket/bh2
-	name = "artillery rocket"
-	icon_state = "bigrocket"
-	damage = 30
-	range = 350
-	arc_height_multiplier = 0.2
-	damage_type = BRUTE
-	check_armour = "bullet"
-	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
-	fire_sound = 'sound/weapons/rocketartillery1.ogg'
-	speed = 0.5
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf
+	name = "BhX. 07R gewehrwolf"
+	desc = "A well armored, but lithe framed, shockingly agile synthetic hound with a massive rifle mounted on it's back, and chainsaw teeth."
+	catalogue_data = list(/datum/category_item/catalogue/technology/adv_dark_gygax)
+	has_eye_glow = TRUE
+	icon_state = "gwolf"
+	icon_living = "gwolf"
+	icon_dead = "gwolf"
+	faction = FACTION_BLACKHOLE
+	pixel_x = -16
+	default_pixel_x = -16
+	old_x = -16
+	old_y = 0
+	vis_height = 92
+	movement_cooldown = 1
+	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
+	wreckage = /obj/structure/loot_pile/mecha/gygax/dark/adv/blackhole/gewehrwolf
+	icon_scale_x = 1
+	icon_scale_y = 1
+	movement_shake_radius = 0
+	movement_cooldown = 0
+	maxHealth = 350
+	deflect_chance = 35
+	has_repair_droid = FALSE
+	devourable = 0	//fuck off immediately
+	digestable = 0
+	allow_mind_transfer = FALSE //i know what you are
+	mob_size = MOB_LARGE //also no grab fu
+	armor = list(
+				"melee"		= 20,
+				"bullet"	= 20,
+				"laser"		= 20,
+				"energy"	= 20,
+				"bomb"		= 90,
+				"bio"		= 100,
+				"rad"		= 100
+				)
 
-/obj/item/projectile/arc/explosive_rocket/rocket/bh2/on_impact(turf/T)
-	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
-	explosion(T, 0, 1, 4, adminlog = FALSE)
+	special_attack_min_range = 0
+	special_attack_max_range = 15
+	special_attack_cooldown = 15 SECONDS
+	projectiletype = /obj/item/projectile/bullet/rifle/a545/bh4
+	glow_range = 7
+	glow_intensity = 3
+	glow_color = "#ED9200"
+	ranged_attack_delay = 0.5 SECONDS
+	needs_reload = 1
+	reload_max = 10
+	reload_time = 3 SECONDS
+	projectile_dispersion = 2
+	projectile_accuracy = -15
+	base_attack_cooldown = 4 DECISECONDS
+	reload_sound = 'sound/weapons/serdy/launcher_open.ogg'
+	attacktext = list("chomped","sawed")
+	attack_sound = 'sound/mob/robots/Cyber_Horror_ChangelingMelee.ogg'
+
+	var/flames
+	var/charge_warmup = 2 SECOND
+
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole
+
+/obj/structure/loot_pile/mecha/gygax/dark/adv/blackhole/gewehrwolf
+	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
+	icon_state = "gwolf_wreck"
+	pixel_x = -16
+	density = 0
+	old_x = -16
+	old_y = 0
+	icon_scale_x = 1
+	icon_scale_y = 1
+
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/do_special_attack(atom/A)
+	. = TRUE // So we don't fire a bolt as well.
+	switch(a_intent)
+		if(I_DISARM)
+			electric_defense(A)
+
+
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/update_icon()
+	..()
+	build_icons()
+
+
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/proc/build_icons()
+	cut_overlays()
+	if(stat == DEAD)
+		plane = MOB_LAYER
+		return
+	else
+		plane = ABOVE_MOB_PLANE
+	var/image/I = image(icon)
+	if(flames)
+		I = image(icon, "rocketdoggy_flame")
+		I.appearance_flags |= PIXEL_SCALE
+		I.plane = PLANE_LIGHTING_ABOVE
+		add_overlay(I)
+
+
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/proc/electric_defense(atom/target)
+	glow_toggle = 1
+	set_light(glow_range, glow_intensity, glow_color) //Setting it here so the light starts immediately
+	set_AI_busy(TRUE)
+	flames = 1
+	visible_message(span_warning("\The [src] ignites it's mouth flamethrower!"))
+	build_icons()
+	addtimer(CALLBACK(src, PROC_REF(firebreathend), target), 2 SECONDS, TIMER_DELETE_ME)
+	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
+
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/proc/firebreathend(atom/A)
+	// clear our cosmetics even if the target is deleted
+	glow_toggle = 0
+	flames = 0
+	build_icons()
+	set_light(0)
+	set_AI_busy(FALSE)
+	//make sure our target still exists and is on a turf
+	if(QDELETED(A) || !isturf(get_turf(A)))
+		return
+	var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon/blackhole/light(get_turf(src))
+	src.visible_message(span_danger("\The [src] spews fire at \the [A]!"))
+	playsound(src, "sound/weapons/serdy/heavyflamethrower.ogg", 50, 1)
+	P.launch_projectile(A, BP_TORSO, src)
+
+
+/datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole
+	conserve_ammo = TRUE
+	vision_range = 15
+	closest_desired_distance = 6
+	cooperative = FALSE
+	electric_defense_radius = 4			// How big to assume electric defense's area is.
+	electric_defense_threshold = 1		// How many non-targeted people are needed in close proximity before electric defense is viable.
+
+
+// Used to control the mob's positioning based on which special attack it has done.
+// Note that the intent will not change again until the next special attack is about to happen.
+/datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole/on_engagement(atom/A)
+	// Make the AI backpeddle if using an AoE special attack.
+	var/list/risky_intents = list(I_GRAB, I_HURT) // Mini-singulo and missiles.
+	if(holder.a_intent in risky_intents)
+		var/closest_distance = 1
+		switch(holder.a_intent) // Plus one just in case.
+			if(I_HURT)
+				closest_distance = rocket_explosive_radius + 1
+			if(I_GRAB)
+				closest_distance = microsingulo_radius + 1
+
+		if(get_dist(holder, A) <= closest_distance)
+			holder.IMove(get_step_away(holder, A, closest_distance))
+
+	// Otherwise get up close and personal.
+	else if(get_dist(holder, A) > closest_desired_distance)
+		holder.IMove(get_step_towards(holder, A))
+
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/plasma
+	name = "BhX. 07P plasgewehrwolf"
+	desc = "A well armored, but lithe framed, shockingly agile synthetic hound with a massive plasma culverin mounted on it's back, and chainsaw teeth."
+	icon_state = "gwolfplas"
+	icon_living = "gwolfplas"
+	icon_dead = "gwolfplas"
+	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
+	special_attack_min_range = 0
+	special_attack_max_range = 15
+	special_attack_cooldown = 15 SECONDS
+	projectiletype = /obj/item/projectile/scatter/shotgun/plasma/blackhole
+	ranged_attack_delay = 0.1 SECONDS
+	needs_reload = 1
+	reload_max = 10
+	reload_time = 2 SECONDS
+	projectile_dispersion = 2
+	projectile_accuracy = -15
+	base_attack_cooldown = 18 DECISECONDS
+	reload_sound = 'sound/weapons/serdy/launcher_open.ogg'
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole
+
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/machinegun
+	name = "BhX. 07M maschinengewehrwolf"
+	desc = "A well armored, but lithe framed, shockingly agile synthetic hound with a machinegun mounted on it's back, and chainsaw teeth."
+	icon_state = "gwolfmg"
+	icon_living = "gwolfmg"
+	icon_dead = "gwolfmg"
+	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
+	special_attack_min_range = 0
+	special_attack_max_range = 15
+	special_attack_cooldown = 15 SECONDS
+	projectiletype = /obj/item/projectile/bullet/rifle/a545/bh1
+	ranged_attack_delay = 0 SECONDS
+	needs_reload = 1
+	reload_max = 100
+	reload_time = 15 SECONDS
+	projectile_dispersion = 5
+	projectile_accuracy = -15
+	base_attack_cooldown = 0.5 DECISECONDS
+	reload_sound = 'sound/weapons/serdy/launcher_open.ogg'
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole
 
 
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
@@ -2433,6 +2570,75 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 
 
+
+
+
+
+/obj/item/projectile/arc/explosive_rocket/rocket/bh1
+	name = "mini mortar shell"
+	icon_state = "grenade"
+	damage = 30
+	arc_height_multiplier = 0.2
+	damage_type = BRUTE
+	var/list/fragment_types = list(
+		/obj/item/projectile/bullet/pellet/fragment, /obj/item/projectile/bullet/pellet/fragment, \
+		/obj/item/projectile/bullet/pellet/fragment, /obj/item/projectile/bullet/pellet/fragment
+		)
+	var/fragment_amount = 8 // Same as a grenade.
+	var/spread_range = 7
+	check_armour = "bullet"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	fire_sound = 'sound/weapons/rpg.ogg'
+	speed = 0.5
+	light_range = 3
+	light_power = 1
+	light_color = "#FFB25B"
+
+/obj/item/projectile/arc/explosive_rocket/rocket/bh1/on_impact(turf/T)
+	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
+	explosion(T, 0, 0, 2, adminlog = FALSE)
+	fragmentate(T, fragment_amount, spread_range, fragment_types)
+
+/obj/item/projectile/energy/homing_bolt/microrocket
+	name = "displacer micro rocket"
+	icon_state = "atrocket"
+	damage = 15
+	range = 100
+	damage_type = BRUTE
+	check_armour = "bullet"
+	fire_sound = 'sound/weapons/grenade_launcher.ogg'
+	speed = 1
+	hitsound_wall = 'sound/effects/contactor_off.ogg'
+	light_range = 3
+	light_power = 1
+	light_color = "#FFB25B"
+
+
+/obj/item/projectile/energy/homing_bolt/microrocket/on_hit(atom/movable/target, blocked = 0)
+	if(istype(target))
+		var/throwdir = get_dir(firer,target)
+		target.throw_at(get_edge_target_turf(target, throwdir),1,1)
+		new /obj/effect/explosion(target)
+		explosion(target, 0, 0, 0, adminlog = FALSE)
+		return 1
+
+/obj/item/projectile/arc/explosive_rocket/rocket/bh2
+	name = "artillery rocket"
+	icon_state = "bigrocket"
+	damage = 30
+	range = 350
+	arc_height_multiplier = 0.2
+	damage_type = BRUTE
+	check_armour = "bullet"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	fire_sound = 'sound/weapons/rocketartillery1.ogg'
+	speed = 0.5
+
+/obj/item/projectile/arc/explosive_rocket/rocket/bh2/on_impact(turf/T)
+	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
+	explosion(T, 0, 1, 4, adminlog = FALSE)
+
+
 /obj/item/projectile/bullet/pistol/bh1
 	name = "bullet"
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
@@ -2489,13 +2695,28 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	armor_penetration = 50
 	speed = 1
 
+/obj/item/projectile/bullet/rifle/a545/bh4
+	name = "bullet"
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	icon_state = "bullet5"
+	fire_sound = 'sound/weapons/serdy/strela.ogg'
+	damage = 45
+	stun = 0
+	weaken = 0
+	penetrating = 2250
+	light_range = 2
+	light_power = 1
+	light_color = "#CC60FF"
+	armor_penetration = 15
+	speed = 0.5
+
 /obj/item/projectile/bullet/rifle/a145/bh1
 	name = "bullet"
 	fire_sound = 'sound/weapons/gunshot_cannon.ogg'
-	damage = 90
+	damage = 80
 	stun = 1
 	weaken = 1
-	penetrating = 5450
+	penetrating = 15450
 	armor_penetration = 90
 	hitscan = 1 //so the PTR isn't useless as a sniper weapon
 	hud_state = "sniper"
@@ -2521,14 +2742,15 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	name = "gauss rifle slug"
 	fire_sound = 'sound/weapons/serdy/gauss2.ogg'
 	damage = 50
+	mob_bonus_damage = 50
 	stun = 1
 	weaken = 1
-	penetrating = 13400
+	penetrating = 999999
 	armor_penetration = 100
 	hitscan = 1
 	hud_state = "sniper"
 	light_range = 3
-	light_power = 1
+	light_power = 3
 	light_color = "#FFB25B"
 	icon_state = "bullet_alt"
 	tracer_type = /obj/effect/projectile/tracer/cannon
@@ -2558,15 +2780,16 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon_state = "grenade"
 	fire_sound = 'sound/weapons/serdy/recoilless.ogg'
 	damage = 90
-	speed = 0.5
-	light_range = 2
-	light_power = 1
+	speed = 1
+	mob_bonus_damage = 300
+	light_range = 3
+	light_power = 3
 	light_color = "#FFB25B"
-	armor_penetration = 90
+	armor_penetration = 100
 
 /obj/item/projectile/explosive_rocket/blackhole/on_impact(turf/T)
 	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
-	explosion(T, 0, 0, 4, adminlog = FALSE)
+	explosion(T, 0, 1, 6, adminlog = FALSE)
 
 
 /obj/item/projectile/scatter/shotgun/blackhole
@@ -2581,14 +2804,28 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 		)
 
 
+/obj/item/projectile/scatter/shotgun/plasma/blackhole
+	name = "plasma bolt"
+	fire_sound = 'sound/weapons/serdy/plasma2.ogg'
+	hud_state = "shotgun_buckshot"
+	spread_submunition_damage = FALSE
+	submunition_spread_max = 120
+	submunition_spread_min = 10
+	light_range = 3
+	light_power = 2
+	light_color = "#CC60FF"
+	submunitions = list(
+		/obj/item/projectile/energy/plasma/vepr/blackhole/weak = 6
+		)
+
 /obj/item/projectile/energy/plasma/vepr/blackhole
 	name = "plasma bolt"
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
 	icon_state = "energy_darkpulse"
 	fire_sound = 'sound/weapons/serdy/plasma2.ogg'
-	damage = 30
-	armor_penetration = 20
-	speed = 1
+	damage = 35
+	armor_penetration = 30
+	speed = 1.2
 	damage_type = BURN
 	check_armour = "laser"
 	light_range = 3
@@ -2600,17 +2837,24 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	hitsound = 'sound/weapons/sear.ogg'
 	hud_state = "laser_overcharge"
 
-/* //a bit TOO strong -- Serdy
-
-/obj/item/projectile/energy/plasma/vepr/blackhole/strong
+/obj/item/projectile/energy/plasma/vepr/blackhole/weak
 	name = "plasma bolt"
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
 	icon_state = "energy_darkpulse"
 	fire_sound = 'sound/weapons/serdy/plasma2.ogg'
-	damage = 40
-	armor_penetration = 20
-	speed = 0.5
-*/
+	damage = 10
+	armor_penetration = 30
+	speed = 1.5
+	damage_type = BURN
+	check_armour = "laser"
+	light_range = 3
+	light_power = 1
+	light_color = "#CC60FF"
+	muzzle_type = null
+	impact_effect_type = null
+	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
+	hitsound = 'sound/weapons/sear.ogg'
+	hud_state = "laser_overcharge"
 
 /obj/item/projectile/ion/bh1
 	name = "ion bolt"
@@ -2637,12 +2881,48 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon_state = "u_laser"
 	fire_sound = 'sound/weapons/serdy/plasma4.ogg'
 	damage = 40	//halved from normal
+	mob_bonus_damage = 50
 	armor_penetration = 50
 	light_range = 3
-	light_power = 1
+	light_power = 3
 	light_color = "#0066FF"
 	hud_state = "pulse"
 
 	muzzle_type = /obj/effect/projectile/muzzle/laser_pulse
 	tracer_type = /obj/effect/projectile/tracer/laser_pulse
 	impact_type = /obj/effect/projectile/impact/laser_pulse
+
+/obj/item/projectile/bullet/dragon/blackhole
+	use_submunitions = 1
+	only_submunitions = 1 	//lmao this var doesn't even do anything
+	range = 0				//so instead we circumvent it with this :^)
+	embed_chance = 0
+	submunition_spread_max = 400
+	submunition_spread_min = 250
+	submunitions = list(/obj/item/projectile/bullet/incendiary/dragonflame/blackhole = 10)
+
+/obj/item/projectile/bullet/dragon/on_range()
+	qdel(src)
+
+/obj/item/projectile/bullet/incendiary/dragonflame/blackhole
+	name = "ignited flamer fuel"
+	icon_state = null
+	damage = 10
+	embed_chance = 0
+	accuracy = 100	//This is a bullet facading as a swathe of fire, how's a wall of fire gonna miss huh?
+	speed = 2
+	incendiary = 2
+	flammability = 2
+	mob_bonus_damage = 30
+	range = 14
+	penetrating = 0
+	fire_stacks = 1
+
+/obj/item/projectile/bullet/dragon/blackhole/light
+	use_submunitions = 1
+	only_submunitions = 1 	//lmao this var doesn't even do anything
+	range = 0				//so instead we circumvent it with this :^)
+	embed_chance = 0
+	submunition_spread_max = 300
+	submunition_spread_min = 150
+	submunitions = list(/obj/item/projectile/bullet/incendiary/dragonflame/blackhole = 4)
