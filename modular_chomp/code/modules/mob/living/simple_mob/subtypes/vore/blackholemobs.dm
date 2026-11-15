@@ -1945,6 +1945,22 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	addtimer(CALLBACK(src, PROC_REF(explode)), delay, TIMER_DELETE_ME)
 	return ..()
 
+/mob/living/simple_mob/mechanical/blackhole/proc/explode()
+	if(src && !exploded)
+		visible_message(span_danger("\The [src]'s body violently explodes!"))
+		exploded = TRUE
+		explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
+		gib(src)
+
+/mob/living/simple_mob/mechanical/blackhole/death()
+	visible_message(span_critical("\The [src]'s explosive payload lets out a shrill beep!!!"))
+	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
+	animate(src, color = "#FFFFFF", time = 0.5 SECONDS, loop = ceil(delay/2))
+	animate(color = "#A663FF", time = 0.5 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(explode)), delay, TIMER_DELETE_ME)
+	return ..()
+
+
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 ///rocket doggy///
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
@@ -1953,7 +1969,8 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/artilleryhound
 	name = "BhX. 08 mobile artillery platform"
 	desc = "A massive, hulking quadrupedal platform with five self-loading rocket artillery pods on it's back, and multiple smaller MLRS pods. The heavy armor has arrived."
-	catalogue_data = list(/datum/category_item/catalogue/technology/adv_dark_gygax)
+	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/blackhole/mechanical)
+
 	has_eye_glow = TRUE
 	icon_state = "rocketdoggy"
 	icon_living = "rocketdoggy"
@@ -2163,18 +2180,6 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 		A.singularity_pull(src, pull_strength)
 
 
-/datum/ai_holder/simple_mob/intentional/adv_dark_gygax/blackhole
-	conserve_ammo = TRUE
-	vision_range = 30
-	closest_desired_distance = 5
-	cooperative = FALSE
-	electric_defense_radius = 5			// How big to assume electric defense's area is.
-	microsingulo_radius = 99				// Same but for microsingulo pull.
-	rocket_explosive_radius = 4			// Explosion radius for the rockets.
-
-	electric_defense_threshold = 1		// How many non-targeted people are needed in close proximity before electric defense is viable.
-	microsingulo_threshold = 99			// Similar to above, but uses an area around the target.
-
 // Used to control the mob's positioning based on which special attack it has done.
 // Note that the intent will not change again until the next special attack is about to happen.
 /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/on_engagement(atom/A)
@@ -2251,7 +2256,8 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf
 	name = "BhX. 07R gewehrwolf"
 	desc = "A well armored, but lithe framed, shockingly agile synthetic hound with a massive rifle mounted on it's back, and chainsaw teeth."
-	catalogue_data = list(/datum/category_item/catalogue/technology/adv_dark_gygax)
+	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/blackhole/mechanical)
+
 	has_eye_glow = TRUE
 	icon_state = "gwolf"
 	icon_living = "gwolf"
@@ -2340,7 +2346,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 		plane = ABOVE_MOB_PLANE
 	var/image/I = image(icon)
 	if(flames)
-		I = image(icon, "rocketdoggy_flame")
+		I = image(icon, "gwolf_flames")
 		I.appearance_flags |= PIXEL_SCALE
 		I.plane = PLANE_LIGHTING_ABOVE
 		add_overlay(I)
@@ -2372,17 +2378,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	P.launch_projectile(A, BP_TORSO, src)
 
 
-/datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole
-	conserve_ammo = TRUE
-	vision_range = 15
-	closest_desired_distance = 6
-	cooperative = FALSE
-	electric_defense_radius = 4			// How big to assume electric defense's area is.
-	electric_defense_threshold = 1		// How many non-targeted people are needed in close proximity before electric defense is viable.
 
-
-// Used to control the mob's positioning based on which special attack it has done.
-// Note that the intent will not change again until the next special attack is about to happen.
 /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole/on_engagement(atom/A)
 	// Make the AI backpeddle if using an AoE special attack.
 	var/list/risky_intents = list(I_GRAB, I_HURT) // Mini-singulo and missiles.
@@ -2408,19 +2404,20 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon_living = "gwolfplas"
 	icon_dead = "gwolfplas"
 	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
+	movement_cooldown = 0.2
 	special_attack_min_range = 0
 	special_attack_max_range = 15
 	special_attack_cooldown = 15 SECONDS
 	projectiletype = /obj/item/projectile/scatter/shotgun/plasma/blackhole
-	ranged_attack_delay = 0.1 SECONDS
+	ranged_attack_delay = 0 SECONDS
 	needs_reload = 1
-	reload_max = 10
+	reload_max = 5
 	reload_time = 2 SECONDS
 	projectile_dispersion = 2
 	projectile_accuracy = -15
 	base_attack_cooldown = 18 DECISECONDS
 	reload_sound = 'sound/weapons/serdy/launcher_open.ogg'
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/aggressive
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/machinegun
 	name = "BhX. 07M maschinengewehrwolf"
@@ -2429,6 +2426,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon_living = "gwolfmg"
 	icon_dead = "gwolfmg"
 	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
+	movement_cooldown = 0.2
 	special_attack_min_range = 0
 	special_attack_max_range = 15
 	special_attack_cooldown = 15 SECONDS
@@ -2437,11 +2435,70 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	needs_reload = 1
 	reload_max = 100
 	reload_time = 15 SECONDS
-	projectile_dispersion = 5
-	projectile_accuracy = -15
+	projectile_dispersion = 15
+	projectile_accuracy = -25
 	base_attack_cooldown = 0.5 DECISECONDS
 	reload_sound = 'sound/weapons/serdy/launcher_open.ogg'
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/aggressive
+
+
+
+/mob/living/simple_mob/mechanical/blackhole
+	name = "BhX. 02 bombspider"
+	desc = "A small four legged swarm drone with a single purple eyeslit, equipped with a small explosive payload. Known to cascade violently when deployed in groups, as soon as one goes off."
+	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/blackhole/mechanical)
+	density = 0
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
+	icon_state = "bombspider"
+	icon_living = "bombspider"
+	hovering = TRUE // Won't trigger landmines.
+	var/exploded = FALSE
+	var/explosion_dev_range		= 0
+	var/explosion_heavy_range	= 0
+	var/explosion_light_range	= 3
+	var/explosion_flash_range	= 2
+
+	var/explosion_delay_lower	= 1 SECOND	// Lower bound for explosion delay.
+	var/explosion_delay_upper	= 1 SECONDS	// Upper bound.
+	faction = FACTION_BLACKHOLE
+	maxHealth = 25
+	health = 25
+	movement_cooldown = -1
+	pass_flags = PASSTABLE | PASSMOB
+	mob_swap_flags = 0
+	mob_push_flags = 0
+
+	melee_attack_delay = null
+	melee_damage_lower = 5
+	melee_damage_upper = 5
+	base_attack_cooldown = 3
+	attack_sharp = TRUE
+	attack_edge = 1
+	attack_sound = 'sound/weapons/bladeslice.ogg'
+	attacktext = list("slashed", "stabbed")
+
+	organ_names = /datum/decl/mob_organ_names/bombspider
+
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+
+/mob/living/simple_mob/mechanical/blackhole/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/swarming)
+
+/mob/living/simple_mob/mechanical/blackhole/death()
+	playsound(src, 'sound/machines/buzzbeep.ogg', 50, 1)
+	..()
+
+/mob/living/simple_mob/mechanical/blackhole/gib()
+	..("gibbed-r")
+	gibs(loc, null, /obj/effect/gibspawner/robot)
+
+/datum/decl/mob_organ_names/bombspider
+	hit_zones = list("upper shell", "lower shell", "forelegs", "hindlegs", "sensor array")
+
+
+
+
 
 
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
@@ -2496,9 +2553,17 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	value = CATALOGUER_REWARD_HARD
 	unlocked_by_any = list(/datum/category_item/catalogue/fauna/mercenary/blackhole)
 
+/datum/category_item/catalogue/fauna/mercenary/blackhole/mechanical
+	name = "Black Hole synthetics"
+	desc = "Synthetic units designed by an unknown benefactor utilized by the heavily militarized faction of Black Hole. All designed with terror tactics in mind, ranging from hulking armored walker\
+	units to tiny explosive sabotage drones. They make up a moderate size of any one Black Hole splinter fleet, and seem to utilize a mix of Panslavic and Tajaran tech in their construction."
+	value = CATALOGUER_REWARD_HARD
+	unlocked_by_any = list(/datum/category_item/catalogue/fauna/mercenary/blackhole/mechanical)
+
 /mob/living/simple_mob/vore/blackhole/death()
 	playsound(src, 'sound/voice/death/feline/feline_death.ogg', 50, 1)
 	..()
+
 
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 ///ai holder stuff!///
@@ -2563,6 +2628,34 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	call_distance = 20
 	cooperative = TRUE
 
+/datum/ai_holder/simple_mob/intentional/adv_dark_gygax/blackhole
+	conserve_ammo = TRUE
+	vision_range = 30
+	closest_desired_distance = 5
+	cooperative = FALSE
+	electric_defense_radius = 5			// How big to assume electric defense's area is.
+	microsingulo_radius = 99				// Same but for microsingulo pull.
+	rocket_explosive_radius = 4			// Explosion radius for the rockets.
+
+	electric_defense_threshold = 1		// How many non-targeted people are needed in close proximity before electric defense is viable.
+	microsingulo_threshold = 99			// Similar to above, but uses an area around the target.
+
+/datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole
+	conserve_ammo = TRUE
+	vision_range = 15
+	closest_desired_distance = 6
+	cooperative = FALSE
+	electric_defense_radius = 4
+	electric_defense_threshold = 1
+
+/datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/aggressive
+	conserve_ammo = TRUE
+	vision_range = 9
+	closest_desired_distance = 4
+	call_distance = 14
+	cooperative = TRUE
+	electric_defense_radius = 1
+	electric_defense_threshold = 1
 
 
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
