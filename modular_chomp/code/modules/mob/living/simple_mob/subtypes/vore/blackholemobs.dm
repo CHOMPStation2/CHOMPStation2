@@ -2460,7 +2460,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	var/exploded = FALSE
 	var/explosion_dev_range		= 0
 	var/explosion_heavy_range	= 0
-	var/explosion_light_range	= 2
+	var/explosion_light_range	= 3
 	var/explosion_flash_range	= 3
 
 	var/explosion_delay_lower	= 1 SECOND	// Lower bound for explosion delay.
@@ -2484,7 +2484,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 	organ_names = /datum/decl/mob_organ_names/bombspider
 
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+	ai_holder_type = /datum/ai_holder/simple_mob/melee
 
 /mob/living/simple_mob/mechanical/blackhole/Initialize(mapload)
 	. = ..()
