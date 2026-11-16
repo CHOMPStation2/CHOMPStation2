@@ -2460,8 +2460,8 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	var/exploded = FALSE
 	var/explosion_dev_range		= 0
 	var/explosion_heavy_range	= 0
-	var/explosion_light_range	= 4
-	var/explosion_flash_range	= 2
+	var/explosion_light_range	= 2
+	var/explosion_flash_range	= 3
 
 	var/explosion_delay_lower	= 1 SECOND	// Lower bound for explosion delay.
 	var/explosion_delay_upper	= 1 SECONDS	// Upper bound.
