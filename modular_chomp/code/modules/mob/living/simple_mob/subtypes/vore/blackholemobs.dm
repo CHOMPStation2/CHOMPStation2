@@ -1970,7 +1970,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	name = "BhX. 08 mobile artillery platform"
 	desc = "A massive, hulking quadrupedal platform with five self-loading rocket artillery pods on it's back, and multiple smaller MLRS pods. The heavy armor has arrived."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/blackhole/mechanical)
-
+	maxbodytemp = 5700
 	has_eye_glow = TRUE
 	icon_state = "rocketdoggy"
 	icon_living = "rocketdoggy"
@@ -2019,6 +2019,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	projectile_dispersion = 8
 	projectile_accuracy = -18
 	reload_sound = 'sound/weapons/serdy/rpg_reload.ogg'
+	movement_sound = 'sound/mecha/bigmech_rstep.ogg'
 
 	var/flames
 	var/charge_warmup = 2 SECOND
@@ -2257,7 +2258,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	name = "BhX. 07R gewehrwolf"
 	desc = "A well armored, but lithe framed, shockingly agile synthetic hound with a massive rifle mounted on it's back, and chainsaw teeth."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/blackhole/mechanical)
-
+	maxbodytemp = 5700
 	has_eye_glow = TRUE
 	icon_state = "gwolf"
 	icon_living = "gwolf"
@@ -2307,6 +2308,8 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	projectile_accuracy = -15
 	base_attack_cooldown = 4 DECISECONDS
 	reload_sound = 'sound/weapons/serdy/launcher_open.ogg'
+	movement_sound = 'sound/effects/mech/hightechstep2.ogg'
+
 	attacktext = list("chomped","sawed")
 	attack_sound = 'sound/mob/robots/Cyber_Horror_ChangelingMelee.ogg'
 
@@ -2452,6 +2455,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon_state = "bombspider"
 	icon_living = "bombspider"
 	hovering = TRUE // Won't trigger landmines.
+	movement_sound = 'sound/effects/footstep/hull3.ogg'
 	var/exploded = FALSE
 	var/explosion_dev_range		= 0
 	var/explosion_heavy_range	= 0
