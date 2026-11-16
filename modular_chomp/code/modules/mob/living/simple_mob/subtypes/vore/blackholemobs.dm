@@ -2332,43 +2332,36 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	. = TRUE // So we don't fire a bolt as well.
 	switch(a_intent)
 		if(I_DISARM)
-			electric_defense(A)
-
+			start_firebreath(A)
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/update_icon()
-	..()
-	build_icons()
-
-
-/mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/proc/build_icons()
 	cut_overlays()
+	. = ..()
 	if(stat == DEAD)
-		plane = MOB_LAYER
+		plane = MOB_PLANE
 		return
 	plane = ABOVE_MOB_PLANE
-	var/image/I = image(icon)
 	if(flames)
-		I = image(icon, "gwolf_flames")
+		var/image/I = image(icon, "gwolf_flames")
 		I.appearance_flags |= PIXEL_SCALE
 		I.plane = PLANE_LIGHTING_ABOVE
 		add_overlay(I)
 
-
-/mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/proc/electric_defense(atom/target)
-	glow_toggle = 1
+/mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/proc/start_firebreath(atom/target)
+	glow_toggle = TRUE
 	set_light(glow_range, glow_intensity, glow_color) //Setting it here so the light starts immediately
 	set_AI_busy(TRUE)
-	flames = 1
+	flames = TRUE
 	visible_message(span_warning("\The [src] ignites it's mouth flamethrower!"))
-	build_icons()
+	update_icon()
 	addtimer(CALLBACK(src, PROC_REF(firebreathend), target), 2 SECONDS, TIMER_DELETE_ME)
 	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/proc/firebreathend(atom/A)
 	// clear our cosmetics even if the target is deleted
-	glow_toggle = 0
-	flames = 0
-	build_icons()
+	glow_toggle = FALSE
+	flames = FALSE
+	update_icon()
 	set_light(0)
 	set_AI_busy(FALSE)
 	//make sure our target still exists and is on a turf
