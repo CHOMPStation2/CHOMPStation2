@@ -2020,6 +2020,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	projectile_accuracy = -18
 	reload_sound = 'sound/weapons/serdy/rpg_reload.ogg'
 	movement_sound = 'sound/mecha/bigmech_rstep.ogg'
+	turn_sound = 'sound/mecha/bigmech_lstep.ogg'
 
 	var/flames
 	var/charge_warmup = 2 SECOND
@@ -2079,8 +2080,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	if(stat == DEAD)
 		plane = MOB_LAYER
 		return
-	else
-		plane = ABOVE_MOB_PLANE
+	plane = ABOVE_MOB_PLANE
 	var/image/I = image(icon)
 	if(flames)
 		I = image(icon, "rocketdoggy_flame")
@@ -2309,7 +2309,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	base_attack_cooldown = 4 DECISECONDS
 	reload_sound = 'sound/weapons/serdy/launcher_open.ogg'
 	movement_sound = 'sound/effects/mech/hightechstep2.ogg'
-
+	turn_sound = 'sound/effects/mech/hightechstep1.ogg'
 	attacktext = list("chomped","sawed")
 	attack_sound = 'sound/mob/robots/Cyber_Horror_ChangelingMelee.ogg'
 
@@ -2345,8 +2345,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	if(stat == DEAD)
 		plane = MOB_LAYER
 		return
-	else
-		plane = ABOVE_MOB_PLANE
+	plane = ABOVE_MOB_PLANE
 	var/image/I = image(icon)
 	if(flames)
 		I = image(icon, "gwolf_flames")
@@ -2451,15 +2450,17 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	desc = "A small four legged swarm drone with a single purple eyeslit, equipped with a small explosive payload. Known to cascade violently when deployed in groups, as soon as one goes off."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/blackhole/mechanical)
 	density = 0
+	has_eye_glow = TRUE
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bombspider"
+	icon_dead = "bombspider-dead"
 	icon_living = "bombspider"
 	hovering = TRUE // Won't trigger landmines.
 	movement_sound = 'sound/effects/footstep/hull3.ogg'
 	var/exploded = FALSE
 	var/explosion_dev_range		= 0
 	var/explosion_heavy_range	= 0
-	var/explosion_light_range	= 5
+	var/explosion_light_range	= 4
 	var/explosion_flash_range	= 2
 
 	var/explosion_delay_lower	= 1 SECOND	// Lower bound for explosion delay.
@@ -2635,21 +2636,21 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/blackhole
 	conserve_ammo = TRUE
 	vision_range = 30
-	closest_desired_distance = 5
+	closest_desired_distance = 6
 	cooperative = FALSE
-	electric_defense_radius = 5			// How big to assume electric defense's area is.
+	electric_defense_radius = 7			// How big to assume electric defense's area is.
 	microsingulo_radius = 99				// Same but for microsingulo pull.
-	rocket_explosive_radius = 4			// Explosion radius for the rockets.
+	rocket_explosive_radius = 10			// Explosion radius for the rockets.
 
 	electric_defense_threshold = 1		// How many non-targeted people are needed in close proximity before electric defense is viable.
 	microsingulo_threshold = 99			// Similar to above, but uses an area around the target.
 
 /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole
 	conserve_ammo = TRUE
-	vision_range = 15
+	vision_range = 9
 	closest_desired_distance = 6
 	cooperative = FALSE
-	electric_defense_radius = 4
+	electric_defense_radius = 5
 	electric_defense_threshold = 1
 
 /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/aggressive
@@ -2658,7 +2659,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	closest_desired_distance = 4
 	call_distance = 14
 	cooperative = TRUE
-	electric_defense_radius = 1
+	electric_defense_radius = 4
 	electric_defense_threshold = 1
 
 
