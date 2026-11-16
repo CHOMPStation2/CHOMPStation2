@@ -107,3 +107,6 @@
 2026-11-15:
   Kashargul:
   - bugfix: some missing checks that exist upstream
+2026-11-16:
+  CHOMPStation2StaffMirrorBot:
+  - balance: Make it so you can make ATV's without osmium
