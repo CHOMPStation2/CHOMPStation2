@@ -2300,13 +2300,13 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	glow_range = 7
 	glow_intensity = 3
 	glow_color = "#ED9200"
-	ranged_attack_delay = 0.5 SECONDS
+	ranged_attack_delay = 0 SECONDS
 	needs_reload = 1
 	reload_max = 10
 	reload_time = 3 SECONDS
 	projectile_dispersion = 2
-	projectile_accuracy = -15
-	base_attack_cooldown = 4 DECISECONDS
+	projectile_accuracy = 0
+	base_attack_cooldown = 15 DECISECONDS
 	reload_sound = 'sound/weapons/serdy/launcher_open.ogg'
 	movement_sound = 'sound/effects/mech/hightechstep2.ogg'
 	turn_sound = 'sound/effects/mech/hightechstep1.ogg'
@@ -2316,7 +2316,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	var/flames
 	var/charge_warmup = 2 SECOND
 
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/sniper/blackhole/gwolf
 
 /obj/structure/loot_pile/mecha/gygax/dark/adv/blackhole/gewehrwolf
 	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
@@ -2412,7 +2412,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	projectile_accuracy = -15
 	base_attack_cooldown = 18 DECISECONDS
 	reload_sound = 'sound/weapons/serdy/launcher_open.ogg'
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/aggressive
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole
 
 /mob/living/simple_mob/mechanical/mecha/combat/blackhole/gewehrwolf/machinegun
 	name = "BhX. 07M maschinengewehrwolf"
@@ -2434,7 +2434,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	projectile_accuracy = -25
 	base_attack_cooldown = 0.5 DECISECONDS
 	reload_sound = 'sound/weapons/serdy/launcher_open.ogg'
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/aggressive
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/blackhole
 
 
 
@@ -2626,6 +2626,20 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	call_distance = 20
 	cooperative = TRUE
 
+/datum/ai_holder/simple_mob/merc/ranged/sniper/blackhole/gwolf
+	vision_range = 30
+	threaten = FALSE
+	returns_home = TRUE
+	pointblank = TRUE		// They get close? Just shoot 'em!
+	firing_lanes = TRUE
+	wander = TRUE
+	intelligence_level = AI_SMART
+	threaten_delay = 0 SECONDS
+	use_astar = TRUE
+	home_low_priority = TRUE
+	call_distance = 20
+	cooperative = TRUE
+
 /datum/ai_holder/simple_mob/intentional/adv_dark_gygax/blackhole
 	conserve_ammo = TRUE
 	vision_range = 30
@@ -2642,15 +2656,6 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	conserve_ammo = TRUE
 	vision_range = 9
 	closest_desired_distance = 6
-	cooperative = FALSE
-	electric_defense_radius = 5
-	electric_defense_threshold = 1
-
-/datum/ai_holder/simple_mob/intentional/adv_dark_gygax/gwolf/aggressive
-	conserve_ammo = TRUE
-	vision_range = 9
-	closest_desired_distance = 4
-	call_distance = 14
 	cooperative = TRUE
 	electric_defense_radius = 4
 	electric_defense_threshold = 1
@@ -2789,17 +2794,17 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 /obj/item/projectile/bullet/rifle/a545/bh4
 	name = "bullet"
 	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
-	icon_state = "bullet5"
-	fire_sound = 'sound/weapons/serdy/strela.ogg'
-	damage = 45
+	icon_state = "bullet6"
+	fire_sound = 'sound/weapons/gunshot_cannon.ogg'
+	damage = 35
 	stun = 0
-	weaken = 0
-	penetrating = 2250
+	weaken = 0.1
+	penetrating = 122250
 	light_range = 2
-	light_power = 1
-	light_color = "#CC60FF"
-	armor_penetration = 15
-	speed = 0.5
+	light_power = 3
+	light_color = "#FFC700"
+	armor_penetration = 150
+	speed = 0.2
 
 /obj/item/projectile/bullet/rifle/a145/bh1
 	name = "bullet"
