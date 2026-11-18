@@ -130,6 +130,17 @@
 	landmark_tag = "arrivals_station"
 	docking_controller = "arrivals_dock"
 
+/obj/effect/shuttle_landmark/cryogaia/arrivals_offsite
+	name = "Transit to Station"
+	landmark_tag = "arrivals_offsite"
+	base_area = /area/space
+	base_turf = /turf/space
+
+/obj/effect/shuttle_landmark/cryogaia/arrivals_station
+	name = "NSB Cryogaia"
+	landmark_tag = "arrivals_station"
+	docking_controller = "arrivals_dock"
+
 //Exploration carrier
 /obj/machinery/computer/shuttle_control/exploration
 	name = "Exploration Sling Control Console"
