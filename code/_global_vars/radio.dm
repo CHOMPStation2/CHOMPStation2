@@ -5,7 +5,11 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	CHANNEL_MEDICAL			= MED_FREQ,
 	CHANNEL_ENGINEERING		= ENG_FREQ,
 	CHANNEL_SECURITY		= SEC_FREQ,
+<<<<<<< HEAD
 	CHANNEL_BODYCAM			= BDCM_FREQ, // CHOMPAdd
+=======
+	CHANNEL_BODYCAM			= BDCM_FREQ,
+>>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 	CHANNEL_RESPONSE_TEAM	= ERT_FREQ,
 	CHANNEL_SPECIAL_OPS		= DTH_FREQ,
 	CHANNEL_MERCENARY		= SYND_FREQ,
@@ -17,9 +21,13 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	CHANNEL_ENTERTAINMENT	= ENT_FREQ,
 	CHANNEL_MEDICAL_1		= MED_I_FREQ,
 	CHANNEL_SECURITY_1		= SEC_I_FREQ,
-	CHANNEL_TALON			= TALON_FREQ, //VOREStation Add
+	CHANNEL_TALON			= TALON_FREQ,
 	CHANNEL_CASINO			= CSN_FREQ,
+<<<<<<< HEAD
 	CHANNEL_OUTSIDER		= OUT_FREQ, // CHOMPAdd
+=======
+	CHANNEL_OUTSIDER		= OUT_FREQ,
+>>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 	CHANNEL_ATC				= ATC_FREQ,
 	CHANNEL_CULTURE			= CULTURE_FREQ
 ))
@@ -62,9 +70,15 @@ GLOBAL_LIST_INIT(cent_frequencies, list(ERT_FREQ, DTH_FREQ))
 GLOBAL_LIST_INIT(antag_frequencies, list(SYND_FREQ, RAID_FREQ))
 
 //Department channels, arranged lexically
+<<<<<<< HEAD
 GLOBAL_LIST_INIT(department_frequencies, list(AI_FREQ, BDCM_FREQ, COMM_FREQ, ENG_FREQ, ENT_FREQ, MED_FREQ, SEC_FREQ, SCI_FREQ, SRV_FREQ, SUP_FREQ)) // CHOMPEdit
 
 GLOBAL_LIST_INIT(offmap_frequencies, list(TALON_FREQ, CSN_FREQ, OUT_FREQ)) var/list/OFFMAP_FREQS = list(TALON_FREQ, CSN_FREQ, OUT_FREQ) // CHOMPEdit: Added outsider
+=======
+GLOBAL_LIST_INIT(department_frequencies, list(AI_FREQ, BDCM_FREQ, COMM_FREQ, ENG_FREQ, ENT_FREQ, MED_FREQ, SEC_FREQ, SCI_FREQ, SRV_FREQ, SUP_FREQ))
+
+GLOBAL_LIST_INIT(offmap_frequencies, list(TALON_FREQ, CSN_FREQ, OUT_FREQ))
+>>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 
 /proc/frequency_span_class(frequency)
 	// Antags!

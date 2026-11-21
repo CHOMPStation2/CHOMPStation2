@@ -40,6 +40,7 @@
 
 #define AI_CAMERA_LUMINOSITY 6
 
+<<<<<<< HEAD
 // Camera networks
 #define NETWORK_CRESCENT "Spaceport"
 // #define NETWORK_CAFE_DOCK "Cafe Dock"
@@ -92,6 +93,8 @@
 #define NETWORK_CARRIER "Exploration Carrier"
 #define NETWORK_MAINT_DECK "Maintenance Deck"
 
+=======
+>>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 #define TRANSMISSION_WIRE		0 //Is this ever used? I don't think it is.
 #define TRANSMISSION_RADIO		1 //Radio transmissions (like airlock controller to pump)
 #define TRANSMISSION_SUBSPACE	2 //Like headsets

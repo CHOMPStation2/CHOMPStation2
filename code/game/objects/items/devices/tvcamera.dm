@@ -163,7 +163,10 @@
 	if(camera.status)
 		SEND_SIGNAL(camera, COMSIG_MOVABLE_ATTEMPTED_MOVE) // Forward the movement signal
 
+<<<<<<< HEAD
 // CHOMPEdit Start - Bodycam
+=======
+>>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 // Security Bodycam
 
 /obj/item/clothing/accessory/bodycam
@@ -221,6 +224,7 @@
 		return TRUE
 	add_fingerprint(user)
 	//user.set_machine(src)
+<<<<<<< HEAD
 	show_bodycam_ui(user)
 
 /obj/item/clothing/accessory/bodycam/proc/show_bodycam_ui(mob/user)
@@ -270,6 +274,68 @@
 			to_chat(usr,span_notice("Audio streaming deactivated."))
 	if(!href_list["close"])
 		attack_self(usr)
+=======
+	tgui_interact(user)
+
+/obj/item/clothing/accessory/bodycam/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "Bodycam", name)
+		ui.open()
+
+/obj/structure/stationboiler/tgui_act(action, params)
+	if(..())
+		return TRUE
+
+/obj/item/clothing/accessory/bodycam/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
+	if(..())
+		return TRUE
+
+	switch(action)
+		if("channel")
+			var/nc = sanitize(params["name"], MAX_NAME_LEN)
+			if(!nc)
+				return FALSE
+			channel = nc
+			bcamera.c_tag = channel
+			to_chat(ui.user, span_notice("New channel name - '[channel]' is set"))
+			return TRUE
+		if("video")
+			bcamera.set_status(!bcamera.status)
+			var/turf/here = get_turf(ui.user)
+			if(bcamera.status)
+				to_chat(ui.user,span_notice("Video streaming activated. Broadcasting on channel '[channel]'"))
+				if(here)
+					here.visible_message(span_notice("[ui.user] turns on their body camera."))
+				show_bodycamera_tvs(loc)
+			else
+				to_chat(ui.user,span_notice("Video streaming deactivated."))
+				if(here)
+					here.visible_message(span_warning("[ui.user] turns off their body camera!"))
+				hide_bodycamera_tvs()
+				for(var/obj/machinery/computer/security/telescreen/bodycamera/ES as anything in GLOB.bodycamera_screens)
+					ES.stop_showing()
+			update_icon()
+			return TRUE
+		if("sound")
+			bradio.ToggleBroadcast()
+			if(bradio.broadcasting)
+				to_chat(ui.user,span_notice("Audio streaming activated. Broadcasting on frequency [format_frequency(bradio.frequency)]."))
+			else
+				to_chat(ui.user,span_notice("Audio streaming deactivated."))
+			return TRUE
+
+/obj/item/clothing/accessory/bodycam/tgui_data(mob/user)
+	var/list/data = list(
+		"channel" = channel,
+		"status" = bcamera.status,
+		"shown_name" = showing_name,
+		"broadcasting" = bradio.broadcasting,
+		"frequency" = format_frequency(bradio.frequency),
+		"frequency_name" = get_frequency_name(bradio.frequency)
+	)
+	return data
+>>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 
 /obj/item/clothing/accessory/bodycam/proc/show_bodycamera_tvs(atom/thing)
 	if(showing)
@@ -295,6 +361,11 @@
 	. = ..()
 	if(bcamera.status && loc != old_loc)
 		show_bodycamera_tvs(loc)
+<<<<<<< HEAD
+=======
+		// Delay's a bit faster then standard cameras to "avoid running out of the camera's fov" whatever that means
+		SScameras.camera_moved(bcamera, get_turf(src), get_turf(src), 0.5 SECONDS)
+>>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 
 /*  // Kinda unneeded, since this one is worn on the suit.
 /obj/item/clothing/accessory/bodycam/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
@@ -327,7 +398,10 @@
 		H.update_inv_r_hand()
 		H.update_inv_l_hand()
 		H.update_inv_belt()
+<<<<<<< HEAD
 // CHOMPEdit End
+=======
+>>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 
 //Assembly by roboticist
 
