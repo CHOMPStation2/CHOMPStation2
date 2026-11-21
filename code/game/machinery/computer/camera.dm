@@ -73,7 +73,7 @@
 	return proximity_flag
 
 GLOBAL_LIST_EMPTY(entertainment_screens)
-GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
+GLOBAL_LIST_EMPTY(bodycamera_screens)
 
 /obj/machinery/computer/security/telescreen/entertainment
 	name = "entertainment monitor"

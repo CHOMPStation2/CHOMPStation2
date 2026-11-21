@@ -95,8 +95,8 @@ On the map:
 #define ATC_FREQ 1477
 #define CULTURE_FREQ 1479
 
-#define BDCM_FREQ 1483 // CHOMPAdd
-#define OUT_FREQ 1367 // CHOMPAdd
+#define BDCM_FREQ 1483
+#define OUT_FREQ 1367
 
 #define LOCKED_COM_FREQ 1481
 
