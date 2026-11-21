@@ -44,10 +44,6 @@
 	. = ..()
 	network = NETWORK_THUNDER
 
-<<<<<<< HEAD
-// CHOMPEdit Begin - Bodycam
-=======
->>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 /obj/item/circuitboard/security/telescreen/bodycamera
 	name = T_BOARD("security bodycamera monitor")
 	build_path = /obj/machinery/computer/security/telescreen/bodycamera
@@ -57,10 +53,6 @@
 /obj/item/circuitboard/security/telescreen/bodycamera/Initialize(mapload)
 	. = ..()
 	network = NETWORK_BODYCAM
-<<<<<<< HEAD
-// CHOMPEdit End
-=======
->>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 
 /obj/item/circuitboard/security/construct(obj/machinery/computer/security/C)
 	if (..(C))

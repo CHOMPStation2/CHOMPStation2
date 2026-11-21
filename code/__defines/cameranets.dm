@@ -43,6 +43,8 @@
 #define NETWORK_ALARM_FIRE "Fire Alarms"
 #define NETWORK_TALON_HELMETS "TalonHelmets"
 #define NETWORK_TALON_SHIP "TalonShip"
+#define NETWORK_TCOMMS "Telecommunications"	//YW ADD: needs to be defined here or it freaks out
+#define NETWORK_SUBSTATIONS "Substations"	//YW ADD: and again
 
 //Camera networks
 #define NETWORK_TETHER "Tether"

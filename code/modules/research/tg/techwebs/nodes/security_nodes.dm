@@ -240,13 +240,7 @@
 		// "zipties",
 		// "seclite",
 		// "electropack",
-<<<<<<< HEAD
-		//CHOMPEnable Start
 		"bodycam_monitor",
-		//CHOMPEnable End
-=======
-		"bodycam_monitor",
->>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_SECURITY)

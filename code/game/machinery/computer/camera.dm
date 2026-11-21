@@ -73,11 +73,7 @@
 	return proximity_flag
 
 GLOBAL_LIST_EMPTY(entertainment_screens)
-<<<<<<< HEAD
-GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
-=======
 GLOBAL_LIST_EMPTY(bodycamera_screens)
->>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 
 /obj/machinery/computer/security/telescreen/entertainment
 	name = "entertainment monitor"
