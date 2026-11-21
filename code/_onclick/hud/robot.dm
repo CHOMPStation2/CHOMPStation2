@@ -1,5 +1,3 @@
-var/atom/movable/screen/robot_inventory
-
 /mob/living/silicon/robot/create_mob_hud(datum/hud/HUD, apply_to_client = TRUE)
 	..()
 
@@ -16,6 +14,7 @@ var/atom/movable/screen/robot_inventory
 	HUD.other = other
 
 	var/atom/movable/screen/using
+	var/atom/movable/screen/robot_inventory
 
 //Radio
 	using = new /atom/movable/screen()
@@ -271,7 +270,7 @@ var/atom/movable/screen/robot_inventory
 	update_robot_modules_display()
 
 
-/datum/hud/proc/update_robot_modules_display(var/reset = FALSE)
+/datum/hud/proc/update_robot_modules_display(reset = FALSE)
 	if(!isrobot(mymob))
 		return
 

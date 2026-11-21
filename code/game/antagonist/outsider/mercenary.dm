@@ -1,4 +1,4 @@
-var/datum/antagonist/mercenary/mercs
+GLOBAL_DATUM(mercs, /datum/antagonist/mercenary)
 
 /datum/antagonist/mercenary
 	id = MODE_MERCENARY
@@ -21,7 +21,7 @@ var/datum/antagonist/mercenary/mercs
 
 /datum/antagonist/mercenary/New()
 	..()
-	mercs = src
+	GLOB.mercs = src
 
 /datum/antagonist/mercenary/create_global_objectives()
 	if(!..())
@@ -30,7 +30,7 @@ var/datum/antagonist/mercenary/mercs
 	global_objectives |= new /datum/objective/nuclear
 	return 1
 
-/datum/antagonist/mercenary/equip(var/mob/living/carbon/human/player)
+/datum/antagonist/mercenary/equip(mob/living/carbon/human/player)
 
 	if(!..())
 		return 0

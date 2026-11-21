@@ -18,20 +18,20 @@
 	description_info = "Fluid pumps can be used to frack for reagents in nearby ores, and a mining drill can also bore through trapped gas deposits beneath it."
 	name = "cracked sand"
 	icon_state = "asteroid_cracked"
-	initial_flooring = /decl/flooring/rock
+	initial_flooring = /datum/decl/flooring/rock
 	var/list/gas_type = null
 	oxygen = 0
 	nitrogen = 0
 
-/turf/simulated/floor/gas_crack/pump_reagents(var/datum/reagents/R, var/volume)
+/turf/simulated/floor/gas_crack/pump_reagents(datum/reagents/R, volume)
 	// pick random turfs in range, then use their deep ores to get some extra reagents
 	var/i = 0
 	while(i++ < 4) // Do this a few times
 		var/turf/simulated/mineral/M = pick(orange(5,src))
-		if(!istype(M))
+		if(!istype(M) || !M.resources)
 			return
 		for(var/metal in GLOB.deepore_fracking_reagents)
-			if(!M.resources[metal])
+			if(!(metal in M.resources))
 				continue
 			var/list/ore_list = GLOB.deepore_fracking_reagents[metal]
 			if(!ore_list || !ore_list.len)
@@ -46,7 +46,7 @@
 	gas_type = list(GAS_O2)
 	oxygen = 500
 
-/turf/simulated/floor/gas_crack/oxygen/pump_reagents(var/datum/reagents/R, var/volume)
+/turf/simulated/floor/gas_crack/oxygen/pump_reagents(datum/reagents/R, volume)
 	. = ..()
 	R.add_reagent(REAGENT_ID_OXYGEN, round(volume / 2, 0.1))
 
@@ -59,7 +59,7 @@
 	gas_type = list(GAS_N2)
 	nitrogen = 500
 
-/turf/simulated/floor/gas_crack/nitrogen/pump_reagents(var/datum/reagents/R, var/volume)
+/turf/simulated/floor/gas_crack/nitrogen/pump_reagents(datum/reagents/R, volume)
 	. = ..()
 	R.add_reagent(REAGENT_ID_NITROGEN, round(volume / 2, 0.1))
 
@@ -71,7 +71,7 @@
 	gas_type = list(GAS_CO2)
 	carbon_dioxide = 500
 
-/turf/simulated/floor/gas_crack/carbon/pump_reagents(var/datum/reagents/R, var/volume)
+/turf/simulated/floor/gas_crack/carbon/pump_reagents(datum/reagents/R, volume)
 	. = ..()
 	R.add_reagent(REAGENT_ID_CARBON, round(volume / 2, 0.1))
 
@@ -84,7 +84,7 @@
 	nitrogen = 250
 	carbon_dioxide = 250
 
-/turf/simulated/floor/gas_crack/nitro/pump_reagents(var/datum/reagents/R, var/volume)
+/turf/simulated/floor/gas_crack/nitro/pump_reagents(datum/reagents/R, volume)
 	. = ..()
 	R.add_reagent(REAGENT_ID_OXYGEN, round(volume / 3, 0.1))
 	R.add_reagent(REAGENT_ID_NITROGEN, round(volume / 3, 0.1))
@@ -97,7 +97,7 @@
 	gas_type = list(GAS_PHORON)
 	phoron = 500
 
-/turf/simulated/floor/gas_crack/phoron/pump_reagents(var/datum/reagents/R, var/volume)
+/turf/simulated/floor/gas_crack/phoron/pump_reagents(datum/reagents/R, volume)
 	. = ..()
 	R.add_reagent(REAGENT_ID_PHORON, round(volume / 3, 0.1))
 
@@ -110,7 +110,7 @@
 	oxygen = 250
 	nitrogen = 250
 
-/turf/simulated/floor/gas_crack/air/pump_reagents(var/datum/reagents/R, var/volume)
+/turf/simulated/floor/gas_crack/air/pump_reagents(datum/reagents/R, volume)
 	. = ..()
 	R.add_reagent(REAGENT_ID_OXYGEN, round(volume / 2, 0.1))
 	R.add_reagent(REAGENT_ID_NITROGEN, round(volume / 2, 0.1))
@@ -123,7 +123,7 @@
 	gas_type = list(GAS_CH4)
 	methane = 250
 
-/turf/simulated/floor/gas_crack/methane/pump_reagents(var/datum/reagents/R, var/volume)
+/turf/simulated/floor/gas_crack/methane/pump_reagents(datum/reagents/R, volume)
 	. = ..()
 	R.add_reagent(REAGENT_ID_SULFUR, round(volume / 2, 0.1))
 	R.add_reagent(REAGENT_ID_PHOSPHORUS, round(volume / 2, 0.1))
@@ -138,7 +138,7 @@
 	methane = 250
 	phoron = 250
 
-/turf/simulated/floor/gas_crack/terrible/pump_reagents(var/datum/reagents/R, var/volume)
+/turf/simulated/floor/gas_crack/terrible/pump_reagents(datum/reagents/R, volume)
 	. = ..()
 	R.add_reagent(REAGENT_ID_NITROGEN, round(volume / 2, 0.1))
 	R.add_reagent(REAGENT_ID_SULFUR, round(volume / 2, 0.1))
@@ -211,7 +211,7 @@
 								REAGENT_ID_FLUORINE,
 								REAGENT_ID_CHLORINE))
 
-/turf/simulated/floor/gas_crack/random/pump_reagents(var/datum/reagents/R, var/volume)
+/turf/simulated/floor/gas_crack/random/pump_reagents(datum/reagents/R, volume)
 	. = ..()
 	R.add_reagent(pick(random_reagents), round(volume / 3, 0.1))
 	R.add_reagent(pick(random_reagents), round(volume / 3, 0.1))

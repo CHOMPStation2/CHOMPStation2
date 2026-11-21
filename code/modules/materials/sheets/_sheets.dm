@@ -21,6 +21,7 @@
 	var/apply_colour //temp pending icon rewrite
 	drop_sound = 'sound/items/drop/axe.ogg'
 	pickup_sound = 'sound/items/pickup/axe.ogg'
+	custom_handling = TRUE
 
 /obj/item/stack/material/Initialize(mapload)
 	. = ..()
@@ -36,8 +37,6 @@
 
 	recipes = material.get_recipes()
 	stacktype = material.stack_type
-	if(islist(material.stack_origin_tech))
-		origin_tech = material.stack_origin_tech.Copy()
 
 	if(apply_colour)
 		color = material.icon_colour
@@ -73,13 +72,13 @@
 		return "There [amount == 1 ? "is" : "are"] [amount] [material.sheet_singular_name]\s in the [material.sheet_collective_name]."
 	return ..()
 
-/obj/item/stack/material/use(var/used)
+/obj/item/stack/material/use(used)
 	. = ..()
 	if(QDELETED(src))
 		return
 	update_strings()
 
-/obj/item/stack/material/transfer_to(obj/item/stack/S, var/tamount=null, var/type_verified)
+/obj/item/stack/material/transfer_to(obj/item/stack/S, tamount=null, type_verified)
 	var/obj/item/stack/material/M = S
 	if(!istype(M) || material.name != M.material.name)
 		return 0
@@ -90,11 +89,14 @@
 		M.update_strings()
 	return transfer
 
-/obj/item/stack/material/attack_self(var/mob/user)
+/obj/item/stack/material/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!material.build_windows(user, src))
-		..()
+		tgui_interact(user)
 
-/obj/item/stack/material/attackby(var/obj/item/W, var/mob/user)
+/obj/item/stack/material/attackby(obj/item/W, mob/user)
 	if(istype(W,/obj/item/stack/cable_coil))
 		material.build_wired_product(user, W, src)
 		return

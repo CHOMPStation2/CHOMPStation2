@@ -12,7 +12,7 @@
 	reagents = new/datum/reagents(reagent_amount)
 	reagents.my_atom = src
 
-/obj/item/projectile/bullet/chemdart/on_hit(var/atom/target, var/blocked = 0, var/def_zone = null)
+/obj/item/projectile/bullet/chemdart/on_hit(atom/target, blocked = 0, def_zone = null)
 	if(blocked < 2 && isliving(target))
 		var/mob/living/L = target
 		if(L.can_inject(target_zone=def_zone))
@@ -34,7 +34,6 @@
 	desc = "A rack of hollow darts."
 	icon_state = "darts"
 	item_state = "rcdammo"
-	origin_tech = list(TECH_MATERIAL = 2)
 	mag_type = MAGAZINE
 	caliber = "dart"
 	ammo_type = /obj/item/ammo_casing/chemdart
@@ -49,7 +48,6 @@
 	icon_state = "dartgun-empty"
 	item_state = null
 	var/base_state = "dartgun"
-	origin_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 6, TECH_BIO = 5, TECH_MAGNET = 2, TECH_ILLEGAL = 3)
 
 	caliber = "dart"
 	fire_sound = 'sound/weapons/empty.ogg'
@@ -69,6 +67,7 @@
 	var/dart_reagent_amount = 15
 	var/container_type = /obj/item/reagent_containers/glass/beaker
 	var/list/starting_chems = null
+	special_weapon_handling = TRUE
 
 /obj/item/gun/projectile/dartgun/Initialize(mapload)
 	. = ..()
@@ -127,13 +126,16 @@
 	..()
 
 //fills the given dart with reagents
-/obj/item/gun/projectile/dartgun/proc/fill_dart(var/obj/item/projectile/bullet/chemdart/dart)
+/obj/item/gun/projectile/dartgun/proc/fill_dart(obj/item/projectile/bullet/chemdart/dart)
 	if(mixing.len)
 		var/mix_amount = dart.reagent_amount/mixing.len
 		for(var/obj/item/reagent_containers/glass/beaker/B in mixing)
 			B.reagents.trans_to_obj(dart, mix_amount)
 
 /obj/item/gun/projectile/dartgun/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	user.set_machine(src)
 	var/dat = span_bold("[src] mixing control:") + "<br><br>"
 
@@ -166,7 +168,7 @@
 	popup.set_content(dat)
 	popup.open()
 
-/obj/item/gun/projectile/dartgun/proc/check_beaker_mixing(var/obj/item/B)
+/obj/item/gun/projectile/dartgun/proc/check_beaker_mixing(obj/item/B)
 	if(!mixing || !beakers)
 		return 0
 	for(var/obj/item/M in mixing)
@@ -214,7 +216,6 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/chemdart)
 	default_magazine_casing_count = 3
 	max_beakers = 2
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 4, TECH_BIO = 4, TECH_MAGNET = 2, TECH_ILLEGAL = 1)
 
 /obj/item/ammo_casing/chemdart/small
 	name = "short chemical dart"
@@ -228,7 +229,6 @@
 	desc = "A rack of hollow darts."
 	icon_state = "darts_small"
 	item_state = "rcdammo"
-	origin_tech = list(TECH_MATERIAL = 2)
 	mag_type = MAGAZINE
 	caliber = "dart"
 	ammo_type = /obj/item/ammo_casing/chemdart/small

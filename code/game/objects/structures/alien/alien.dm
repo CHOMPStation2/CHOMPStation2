@@ -13,7 +13,7 @@
 		qdel(src)
 	return
 
-/obj/structure/alien/bullet_act(var/obj/item/projectile/Proj)
+/obj/structure/alien/bullet_act(obj/item/projectile/Proj)
 	health -= Proj.damage
 	..()
 	healthcheck()
@@ -33,7 +33,7 @@
 	healthcheck()
 	return
 
-/obj/structure/alien/hitby(atom/movable/source)
+/obj/structure/alien/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	..()
 	visible_message(span_danger("\The [src] was hit by \the [source]."))
 	var/tforce
@@ -52,7 +52,7 @@
 	..()
 	return
 
-/obj/structure/alien/attack_generic(var/mob/user, var/damage, var/attack_verb)
+/obj/structure/alien/attack_generic(mob/user, damage, attack_verb)
 	visible_message(span_danger("[user] [attack_verb] the [src]!"))
 	playsound(src, 'sound/effects/attackblob.ogg', 100, 1)
 	user.do_attack_animation(src)
@@ -88,7 +88,7 @@
 					healthcheck()
 					return
 				if(locate(/obj/item/organ/internal/xenos/resinspinner/replicant) in M.internal_organs)
-					if(!do_after(M, 3 SECONDS))
+					if(!do_after(M, 3 SECONDS, src))
 						return
 					visible_message (span_warning("[usr] strokes the [name] and it melts away!"), 1)
 					health = 0

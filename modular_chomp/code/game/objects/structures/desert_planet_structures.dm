@@ -26,6 +26,7 @@
 	density = FALSE
 
 /obj/structure/prop/desert_rock/pebble/Crossed(atom/movable/source)
+	. = ..()
 	if(source.is_incorporeal())
 		return
 	if(istype(source, /mob/living))

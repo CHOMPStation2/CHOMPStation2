@@ -42,7 +42,6 @@
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, tgui_id, name)
-		ui.autoupdate = TRUE
 		ui.open()
 	ui_ref = ui
 
@@ -99,7 +98,7 @@
 		return STATUS_INTERACTIVE
 	return STATUS_UPDATE
 
-/datum/tgui_state/air_alarm_remote/proc/has_access(var/mob/user)
+/datum/tgui_state/air_alarm_remote/proc/has_access(mob/user)
 	return user && (isAI(user) || atmos_control.access.allowed(user) || atmos_control.emagged || air_alarm.rcon_setting == RCON_YES || (air_alarm.alarm_area.atmosalm && air_alarm.rcon_setting == RCON_AUTO) || (ACCESS_CE in user.GetAccess()))
 
 /datum/tgui_state/air_alarm_remote/Destroy()

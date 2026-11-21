@@ -82,19 +82,17 @@
 		if("bluespacerift")
 			GLOB.endgame_exits += loc
 			delete_me = TRUE
-		//VOREStation Add Start
 		if("vinestart")
 			GLOB.vinestart += loc
 			delete_me = TRUE
-		//VORE Station Add End
 
 	if(delete_me)
 		return INITIALIZE_HINT_QDEL
 	else
 		GLOB.landmarks_list += src
 
-/obj/effect/landmark/Destroy(var/force = FALSE)
-	if(force)
+/obj/effect/landmark/Destroy(force = FALSE)
+	if(delete_me || force)
 		GLOB.landmarks_list -= src
 		return ..()
 	return QDEL_HINT_LETMELIVE

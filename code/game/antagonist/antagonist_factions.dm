@@ -3,9 +3,9 @@
 	set category = "Abilities.Antag"
 	if(!M.mind)
 		return
-	convert_to_faction(M.mind, revs)
+	convert_to_faction(M.mind, GLOB.revs)
 
-/mob/living/proc/convert_to_faction(var/datum/mind/player, var/datum/antagonist/faction)
+/mob/living/proc/convert_to_faction(datum/mind/player, datum/antagonist/faction)
 
 	if(!player || !faction || !player.current)
 		return
@@ -17,7 +17,7 @@
 		to_chat(src, span_warning("\The [player.current] already serves the [faction.faction_descriptor]."))
 		return
 
-	if(player_is_antag(player))
+	if(SSantag_job.player_is_antag(player))
 		to_chat(src, span_warning("\The [player.current]'s loyalties seem to be elsewhere..."))
 		return
 
@@ -47,4 +47,4 @@
 	set category = "Abilities.Antag"
 	if(!M.mind)
 		return
-	convert_to_faction(M.mind, loyalists)
+	convert_to_faction(M.mind, GLOB.loyalists)

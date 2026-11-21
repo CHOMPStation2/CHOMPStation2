@@ -47,8 +47,8 @@
 					/obj/item/reagent_containers/food/drinks/glass2/shot = 10,
 					/obj/item/reagent_containers/food/drinks/glass2/pint = 10,
 					/obj/item/reagent_containers/food/drinks/glass2/mug = 10,
-					/obj/item/reagent_containers/food/drinks/glass2/carafe = 2,	//VOREStation Add - Carafes and Pitchers
-					/obj/item/reagent_containers/food/drinks/glass2/pitcher = 2,	//VOREStation Add - Carafes and Pitchers
+					/obj/item/reagent_containers/food/drinks/glass2/carafe = 2,
+					/obj/item/reagent_containers/food/drinks/glass2/pitcher = 2,
 					/obj/item/reagent_containers/food/drinks/glass2/wine = 10,
 					/obj/item/reagent_containers/food/drinks/bottle/whitewine = 5,
 					/obj/item/reagent_containers/food/drinks/bottle/grapejuice = 5,
@@ -129,8 +129,8 @@
 					/obj/item/reagent_containers/food/drinks/glass2/shot = 10,
 					/obj/item/reagent_containers/food/drinks/glass2/pint = 10,
 					/obj/item/reagent_containers/food/drinks/glass2/mug = 10,
-					/obj/item/reagent_containers/food/drinks/glass2/carafe = 2,	//VOREStation Add - Carafes and Pitchers
-					/obj/item/reagent_containers/food/drinks/glass2/pitcher = 2,	//VOREStation Add - Carafes and Pitchers
+					/obj/item/reagent_containers/food/drinks/glass2/carafe = 2,
+					/obj/item/reagent_containers/food/drinks/glass2/pitcher = 2,
 					/obj/item/reagent_containers/food/drinks/glass2/wine = 10,
 					/obj/item/reagent_containers/food/drinks/bottle/whitewine = 5,
 					/obj/item/reagent_containers/food/drinks/bottle/grapejuice = 5,
@@ -202,7 +202,7 @@
 					/obj/item/reagent_containers/food/drinks/decaf_tea = 2,
 					/obj/item/reagent_containers/food/drinks/h_chocolate = 2,
 					/obj/item/reagent_containers/food/drinks/greentea = 10,
-					/obj/item/reagent_containers/food/drinks/chaitea = 5) // VOREStation Edit - Lowers Coffee/Hot Chocolate/Tea Prices from 3 -> 2.
+					/obj/item/reagent_containers/food/drinks/chaitea = 5)
 	vending_sound = "machines/vending/vending_coffee.ogg"
 
 /obj/machinery/vending/snack
@@ -366,7 +366,7 @@
 
 	contraband = list(/obj/item/reagent_containers/syringe/steroid = 4,
 						/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteanshake = 2,
-						/obj/item/toy/baseball = 2) // VOREStation Add - Slurpable blobs.
+						/obj/item/toy/baseball = 2)
 
 /obj/machinery/vending/cart
 	name = "PTech"
@@ -448,7 +448,7 @@
 
 /obj/machinery/vending/medical
 	name = "NanoMed Plus"
-	desc = "Medical drug dispenser."
+	desc = "Medical drug dispenser. Alongside other bits and bobs."
 	description_fluff = "NanoMed is NanoTrasen's medical science division, and provides almost all of the modern medbay essentials in-house at no extra charge. By using this vending machine, employees accept liability for products that may or may not be temporarily replaced by placebos or experimental treatments."
 	icon_state = "med"
 	product_ads = "Go save some lives!;The best stuff for your medbay.;Only the finest tools.;Natural chemicals!;This stuff saves lives.;Don't you want some?;Ping!"
@@ -483,14 +483,18 @@
 /obj/machinery/vending/phoronresearch
 	name = "Toximate 3000"
 	desc = "All the fine parts you need in one vending machine!"
-	products = list(/obj/item/clothing/under/rank/scientist = 6,
-					/obj/item/clothing/suit/bio_suit = 6,
-					/obj/item/clothing/head/bio_hood = 6,
-					/obj/item/transfer_valve = 6,
-					/obj/item/assembly/timer = 6,
-					/obj/item/assembly/signaler = 6,
-					/obj/item/assembly/prox_sensor = 6,
-					/obj/item/assembly/igniter = 6)
+	products = list(/obj/item/clothing/under/rank/scientist = 4,
+					/obj/item/clothing/suit/bio_suit = 4,
+					/obj/item/clothing/head/bio_hood = 4,
+					/obj/item/transfer_valve = 8,
+					/obj/item/assembly/timer = 8,
+					/obj/item/assembly/signaler = 8,
+					/obj/item/assembly/prox_sensor = 8,
+					/obj/item/assembly/igniter = 8,
+					/obj/item/grenade/chem_grenade = 6,
+					/obj/item/tool/screwdriver = 4,
+					/obj/item/analyzer = 4
+					)
 	req_log_access = ACCESS_RD
 	has_logs = 1
 
@@ -547,6 +551,7 @@
 	icon_state = "sec"
 	req_access = list(ACCESS_SECURITY)
 	products = list(/obj/item/handcuffs = 8,
+					/obj/item/handcuffs/legcuffs = 8,
 					/obj/item/grenade/flashbang = 4,
 					/obj/item/flash = 5,
 					/obj/item/reagent_containers/food/snacks/donut/plain = 6,
@@ -556,6 +561,9 @@
 					/obj/item/gun/energy/stunrevolver = 4,
 					/obj/item/reagent_containers/spray/pepper = 6,
 					/obj/item/taperoll/police = 6,
+					/obj/item/cell/device/weapon = 8,
+					/obj/item/hailer = 3,
+					/obj/item/flashlight/maglight = 3,
 					/obj/item/clothing/glasses/omnihud/sec = 6,
 					/obj/item/clothing/accessory/bodycam = 10) // CHOMPAdd
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,
@@ -703,7 +711,7 @@
 	/obj/item/storage/toolbox/lunchbox/syndicate = 3,
 	/obj/item/reagent_containers/cooking_container/oven = 5,
 	/obj/item/reagent_containers/cooking_container/fryer = 4,
-	/obj/item/trash/bowl = 10) //VOREStation Add
+	/obj/item/trash/bowl = 10)
 	contraband = list(/obj/item/material/knife/butch = 2)
 
 /obj/machinery/vending/tool
@@ -728,7 +736,7 @@
 					/obj/item/reagent_containers/spray/windowsealant = 5)
 	contraband = list(/obj/item/weldingtool/hugetank = 2,
 					/obj/item/clothing/gloves/fyellow = 2)
-	premium = list(/obj/item/clothing/gloves/heavy_engineer = 1) //VOREStation Edit - yellow gloves are common in engineering, let's make "premium" actually mean something
+	premium = list(/obj/item/clothing/gloves/heavy_engineer = 1)
 	req_log_access = ACCESS_CE
 	has_logs = 1
 
@@ -742,34 +750,15 @@
 					/obj/item/multitool = 4,
 					/obj/item/cell/high = 10,
 					/obj/item/airlock_electronics = 10,
+					/obj/item/circuitboard/autolathe = 3,
+					/obj/item/circuitboard/circuit_imprinter = 3,
 					/obj/item/circuitboard/airlock_cycling = 20,
 					/obj/item/module/power_control = 10,
 					/obj/item/circuitboard/airalarm = 10,
 					/obj/item/circuitboard/firealarm = 10,
-					/obj/item/circuitboard/status_display = 2,
-					/obj/item/circuitboard/ai_status_display = 2,
-					/obj/item/circuitboard/newscaster = 2,
-					/obj/item/circuitboard/holopad = 2,
-					/obj/item/circuitboard/intercom = 4,
-					/obj/item/circuitboard/security/telescreen/entertainment = 4,
 					/obj/item/stock_parts/motor = 2,
 					/obj/item/stock_parts/spring = 2,
 					/obj/item/stock_parts/gear = 2,
-					/obj/item/circuitboard/atm,
-					/obj/item/circuitboard/guestpass,
-					/obj/item/circuitboard/keycard_auth,
-					/obj/item/circuitboard/geiger,
-					/obj/item/circuitboard/photocopier,
-					/obj/item/circuitboard/fax,
-					/obj/item/circuitboard/request,
-					/obj/item/circuitboard/microwave,
-					/obj/item/circuitboard/washing,
-					/obj/item/circuitboard/scanner_console,
-					/obj/item/circuitboard/sleeper_console,
-					/obj/item/circuitboard/body_scanner,
-					/obj/item/circuitboard/medical_kiosk,
-					/obj/item/circuitboard/sleeper,
-					/obj/item/circuitboard/dna_analyzer,
 					/obj/item/clothing/glasses/omnihud/eng = 6)
 	contraband = list(/obj/item/cell/potato = 3,
 						/obj/item/rms = 5)
@@ -1335,15 +1324,17 @@
 		/obj/item/clothing/under/rank/security/turtleneck = 5,
 		/obj/item/clothing/under/rank/security/modern = 5,
 		/obj/item/clothing/under/rank/security/aces = 5,
+		/obj/item/clothing/suit/storage/vest/aces = 5,
 		/obj/item/clothing/under/rank/security/skirt = 5,
-		/obj/item/clothing/shoes/boots/jackboots = 5,
 		/obj/item/clothing/head/soft/sec = 5,
 		/obj/item/clothing/head/beret/sec = 5,
+		/obj/item/clothing/head/soft/sec/corp = 5,
 		/obj/item/clothing/head/beret/sec/corporate/officer = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/neo_bodyguard_dep = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/neo_sec_blue_dep = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/neo_sec_red_dep = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/neo_police = 5,
+		/obj/item/clothing/under/rank/security/corp = 5,
 		/obj/item/clothing/under/rank/bodyguard_suit = 5,
 		/obj/item/clothing/under/rank/bodyguard_skirt = 5,
 		/obj/item/clothing/under/rank/bodyguard_turtleneck = 5,
@@ -1362,13 +1353,21 @@
 		/obj/item/clothing/under/rank/neo_runner = 5,
 		/obj/item/clothing/under/rank/neo_gorka/sec = 5,
 		/obj/item/clothing/suit/neo_runner_coat = 5,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/security = 5,
+		/obj/item/clothing/shoes/boots/winter/security = 5,
 		/obj/item/clothing/shoes/boots/jackboots/silver = 5,
 		/obj/item/clothing/shoes/boots/jackboots/white = 5,
+		/obj/item/clothing/shoes/boots/jackboots = 5,
+		/obj/item/clothing/shoes/boots/jackboots/toeless = 5,
+		/obj/item/clothing/shoes/boots/jackboots/knee = 5,
+		/obj/item/clothing/shoes/boots/jackboots/toeless/knee = 5,
+		/obj/item/clothing/shoes/boots/jackboots/thigh = 5,
+		/obj/item/clothing/shoes/boots/jackboots/toeless/thigh = 5,
 		/obj/item/clothing/mask/bandana/red = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security = 5,
 		/obj/item/clothing/accessory/armband = 5,
-		/obj/item/clothing/glasses/sunglasses/sechud/tactical_sec_vis = 5, //VoreStation edit - cool visor!!!
-		/obj/item/clothing/glasses/hud/security/eyepatch2 = 5, //VoreStation edit - cool eyepatch!
+		/obj/item/clothing/glasses/sunglasses/sechud/tactical_sec_vis = 5,
+		/obj/item/clothing/glasses/hud/security/eyepatch2 = 5,
 		/obj/item/clothing/accessory/holster/armpit = 2,
 		/obj/item/clothing/accessory/holster/armpit/black = 2,
 		/obj/item/clothing/accessory/holster/waist = 2,
@@ -1377,7 +1376,11 @@
 		/obj/item/clothing/accessory/holster/hip/black = 2,
 		/obj/item/clothing/accessory/holster/leg = 2,
 		/obj/item/clothing/accessory/holster/leg/black = 2,
-		/obj/item/clothing/accessory/holster/waist/lanyard = 2
+		/obj/item/clothing/accessory/holster/waist/lanyard = 2,
+		/obj/item/clothing/accessory/storage/black_vest = 2,
+		/obj/item/radio/headset/alt/headset_sec = 3,
+		/obj/item/radio/headset/earbud/headset_sec = 3
+
 	)
 	req_log_access = ACCESS_HOP
 	has_logs = 1
@@ -1445,7 +1448,7 @@
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/modern = 5,
-		/obj/item/clothing/suit/storage/toggle/labcoat/old = 5, //VoreStation edit, pre-fulp labcoat.
+		/obj/item/clothing/suit/storage/toggle/labcoat/old = 5,
 		/obj/item/clothing/mask/surgical = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/alt = 5,
@@ -1466,7 +1469,7 @@
 		/obj/item/clothing/under/rank/chemist/skirt = 5,
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/chemist = 5,
-		/obj/item/clothing/suit/storage/toggle/labcoat/old/chem = 5, //VoreStation edit, pre-fulp labcoat.
+		/obj/item/clothing/suit/storage/toggle/labcoat/old/chem = 5,
 		/obj/item/clothing/under/rank/neo_chem = 5,
 		/obj/item/clothing/under/rank/neo_chem_skirt = 5,
 		/obj/item/clothing/under/rank/neo_pharma = 5,
@@ -1513,7 +1516,7 @@
 		/obj/item/clothing/under/rank/neo_viro_skirt = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/virologist = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/old/vir = 5,
-		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/viro = 5, //VoreStation edit, pre-fulp labcoat.
+		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/viro = 5,
 		/obj/item/clothing/head/beret/medical/viro = 5,
 		/obj/item/clothing/mask/surgical = 5,
 		/obj/item/storage/backpack/virology = 5,
@@ -1533,7 +1536,7 @@
 		/obj/item/clothing/under/rank/scientist/skirt = 5,
 		/obj/item/clothing/under/rank/scientist/turtleneck = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat = 5,
-		/obj/item/clothing/suit/storage/toggle/labcoat/old = 5, //VoreStation edit, pre-fulp labcoat.
+		/obj/item/clothing/suit/storage/toggle/labcoat/old = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/modern = 5,
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/shoes/slippers = 5,

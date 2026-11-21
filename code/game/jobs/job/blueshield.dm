@@ -22,7 +22,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/blueshield
 	job_description = "Placeholder desc: General rules is to not get involved with security matters, your job is only to keep command personnel alive."
 
-/datum/job/blueshield/equip(var/mob/living/carbon/human/H)
+/datum/job/blueshield/equip(mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty()

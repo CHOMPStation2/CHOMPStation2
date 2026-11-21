@@ -15,7 +15,6 @@
 
 	caliber = "nsfw"
 
-	origin_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 6, TECH_MAGNET = 4)
 
 	fire_sound = 'sound/weapons/taser.ogg'
 
@@ -27,6 +26,9 @@
 	var/charge_left = 0
 	var/max_charge = 0
 	charge_sections = 5
+
+	special_handling = TRUE
+	special_weapon_handling = TRUE
 
 /obj/item/gun/projectile/cell_loaded/consume_next_projectile()
 	if(chambered && ammo_magazine)
@@ -71,6 +73,9 @@
 		M?.hud_used.update_ammo_hud(M, src)
 
 /obj/item/gun/projectile/cell_loaded/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!chambered)
 		return
 
@@ -99,12 +104,12 @@
 
 	return TRUE
 */
-/obj/item/gun/projectile/cell_loaded/load_ammo(var/obj/item/A, mob/user)
+/obj/item/gun/projectile/cell_loaded/load_ammo(obj/item/A, mob/user)
 	. = ..()
 	if(ammo_magazine && ammo_magazine.stored_ammo.len)
 		switch_to(ammo_magazine.stored_ammo[1])
 
-/obj/item/gun/projectile/cell_loaded/unload_ammo(mob/user, var/allow_dump=1)
+/obj/item/gun/projectile/cell_loaded/unload_ammo(mob/user, allow_dump=1)
 	chambered = null
 	return ..()
 
@@ -144,7 +149,6 @@
 	desc = "A microbattery holder for a cell-based variable weapon."
 	icon = 'icons/obj/ammo_vr.dmi'
 	icon_state = "cell_mag"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 5, TECH_MAGNET = 3)
 	caliber = "nsfw"
 	ammo_type = /obj/item/ammo_casing/microbattery
 	initial_ammo = 0

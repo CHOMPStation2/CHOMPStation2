@@ -58,7 +58,7 @@ export const ChemSynthesizerQueueRecipes = (props) => {
           <LabeledList>
             {(queue.length &&
               queue.map((item) => {
-                if (item.index === 1 && !!busy) {
+                if (item.index === 1 && busy) {
                   return (
                     <LabeledList.Item key="" label={item.name} labelColor="bad">
                       {

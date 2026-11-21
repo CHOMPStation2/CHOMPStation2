@@ -17,7 +17,7 @@
 	if((. = ..()))
 		mode = 1
 
-/datum/nifsoft/medichines_org/deactivate(var/force = FALSE)
+/datum/nifsoft/medichines_org/deactivate(force = FALSE)
 	if((. = ..()))
 		a_drain = initial(a_drain)
 		mode = initial(mode)
@@ -96,7 +96,7 @@
 	if((. = ..()))
 		mode = 1
 
-/datum/nifsoft/medichines_syn/deactivate(var/force = FALSE)
+/datum/nifsoft/medichines_syn/deactivate(force = FALSE)
 	if((. = ..()))
 		mode = 0
 
@@ -174,7 +174,7 @@
 	if((. = ..()))
 		nif.notify("Now taking air from reserves.")
 
-/datum/nifsoft/spare_breath/deactivate(var/force = FALSE)
+/datum/nifsoft/spare_breath/deactivate(force = FALSE)
 	if((. = ..()))
 		nif.notify("Now taking air from environment and refilling reserves.")
 
@@ -225,7 +225,7 @@
 		deactivate()
 		return TRUE
 
-/datum/nifsoft/mindbackup/deactivate(var/force = FALSE)
+/datum/nifsoft/mindbackup/deactivate(force = FALSE)
 	if((. = ..()))
 		return TRUE
 

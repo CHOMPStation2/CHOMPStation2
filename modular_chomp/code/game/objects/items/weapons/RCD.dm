@@ -35,7 +35,7 @@ borosilicate = 9
 rborosilicate = 12
 */
 
-/obj/item/rcd/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/rcd/emag_act(remaining_charges, mob/user)
 	..()
 	if(!emagged)
 		emagged = 1
@@ -389,15 +389,15 @@ rborosilicate = 12
 	accesses += "<table style='width:100%'>"
 	accesses += "<tr>"
 	for(var/i = 1; i <= 7; i++)
-		accesses += "<td style='width:14%'>" + span_bold("[get_region_accesses_name(i)]:") + "</td>"
+		accesses += "<td style='width:14%'>" + span_bold("[SSaccess.get_region_accesses_name(i)]:") + "</td>"
 	accesses += "</tr><tr>"
 	for(var/i = 1; i <= 7; i++)
 		accesses += "<td style='width:14%' valign='top'>"
-		for(var/A in get_region_accesses(i))
+		for(var/A in SSaccess.get_region_accesses(i))
 			if(A in conf_access)
-				accesses += "<a href='byond://?src=[REF(src)];access=[A]'>" + span_red("[replacetext(get_access_desc(A), " ", "&nbsp")]") + "</a> "
+				accesses += "<a href='byond://?src=[REF(src)];access=[A]'>" + span_red("[replacetext(SSaccess.get_access_desc(A), " ", "&nbsp")]") + "</a> "
 			else
-				accesses += "<a href='byond://?src=[REF(src)];access=[A]'>[replacetext(get_access_desc(A), " ", "&nbsp")]</a> "
+				accesses += "<a href='byond://?src=[REF(src)];access=[A]'>[replacetext(SSaccess.get_access_desc(A), " ", "&nbsp")]</a> "
 			accesses += "<br>"
 		accesses += "</td>"
 	accesses += "</tr></table>"
@@ -823,7 +823,7 @@ rborosilicate = 12
 			var/turf/simulated/wall/new_T = get_turf(src) // Ref to the wall we just built.
 			// Apparently set_material(...) for walls requires refs to the material singletons and not strings.
 			// This is different from how other material objects with their own set_material(...) do it, but whatever.
-			var/datum/material/M = name_to_material[the_rcd.material_to_use]
+			var/datum/material/M = GLOB.name_to_material[the_rcd.material_to_use]
 			new_T.set_material(M, the_rcd.make_rwalls ? M : null, girder_material)
 			new_T.add_hiddenprint(user)
 			qdel(src)

@@ -5,14 +5,11 @@ GLOBAL_VAR_INIT(runedec, 0)
 GLOBAL_LIST_INIT(engwords, list("travel", "blood", "join", "hell", "destroy", "technology", "self", "see", "other", "hide"))
 GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","mgar","balaq", "karazet", "geeri"))
 
-/client/proc/check_words() // -- Urist
-	set category = "Admin.Secrets"
-	set name = "Check Rune Words"
-	set desc = "Check the rune-word meaning"
+ADMIN_VERB(check_words, R_ADMIN|R_EVENT, "Check Rune Words", "Check the rune-word meaning.", ADMIN_CATEGORY_SECRETS) // -- Urist
 	if(!GLOB.cultwords["travel"])
 		runerandom()
-	for (var/word in GLOB.engwords)
-		to_chat(usr, "[GLOB.cultwords[word]] is [word]")
+	for (var/word, rune in GLOB.engwords)
+		to_chat(user, "[rune] is [word]")
 
 /proc/runerandom() //randomizes word meaning
 	var/list/runewords=GLOB.rnwords
@@ -89,7 +86,7 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 		. += "This spell circle reads: <i>[word1] [word2] [word3]</i>."
 
 
-/obj/effect/rune/attackby(I as obj, user as mob)
+/obj/effect/rune/attackby(obj/I, mob/user)
 	if(istype(I, /obj/item/book/tome) && iscultist(user))
 		to_chat(user, "You retrace your steps, carefully undoing the lines of the rune.")
 		qdel(src)
@@ -101,7 +98,7 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 	return
 
 
-/obj/effect/rune/attack_hand(mob/living/user as mob)
+/obj/effect/rune/attack_hand(mob/living/user)
 	if(!iscultist(user))
 		to_chat(user, "You can't mouth the arcane scratchings without fumbling over them.")
 		return
@@ -191,6 +188,7 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 	unique = 1
 	var/tomedat = ""
 	var/list/words = list("ire" = "ire", "ego" = "ego", "nahlizet" = "nahlizet", "certum" = "certum", "veri" = "veri", "jatkaa" = "jatkaa", "balaq" = "balaq", "mgar" = "mgar", "karazet" = "karazet", "geeri" = "geeri")
+	occult_tier = 1
 
 	tomedat = {"<html>
 				<head>
@@ -295,27 +293,33 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 	for(var/V in GLOB.cultwords)
 		words[GLOB.cultwords[V]] = V
 
-/obj/item/book/tome/attack(mob/living/M as mob, mob/living/user as mob)
+/obj/item/book/tome/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	add_attack_logs(user,M,"Hit with [name]")
 
 	if(isobserver(M))
 		var/mob/observer/dead/D = M
 		D.manifest(user)
-		return
+		return ITEM_INTERACT_SUCCESS
 	if(!istype(M))
-		return
+		return ITEM_INTERACT_FAILURE
 	if(!iscultist(user))
 		return ..()
 	if(iscultist(M))
-		return
+		return ITEM_INTERACT_FAILURE
 	M.take_organ_damage(0,rand(5,20)) //really lucky - 5 hits for a crit
 	for(var/mob/O in viewers(M, null))
 		O.show_message(span_warning("\The [user] beats \the [M] with \the [src]!"), 1)
 	to_chat(M, span_danger("You feel searing heat inside!"))
+	return ITEM_INTERACT_SUCCESS
 
 
-/obj/item/book/tome/attack_self(mob/living/user as mob)
+/obj/item/book/tome/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!user.canmove || user.stat || user.restrained())
+		return
+	if(occult_tier > 1) //This is a low tier book. If it's a higher tier, use ITS parent call instead of  continuing.
 		return
 
 	if(!GLOB.cultwords["travel"])
@@ -328,7 +332,7 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 			to_chat(user, span_warning("You do not have enough space to write a proper rune."))
 			return
 
-		if (C>=26 + GLOB.runedec + cult.current_antagonists.len) //including the useless rune at the secret room, shouldn't count against the limit of 25 runes - Urist
+		if (C>=26 + GLOB.runedec + GLOB.cult.current_antagonists.len) //including the useless rune at the secret room, shouldn't count against the limit of 25 runes - Urist
 			tgui_alert_async(user, "The cloth of reality can't take that much of a strain. Remove some runes first!")
 			return
 		else
@@ -435,8 +439,12 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 
 /obj/item/book/tome/imbued //admin tome, spawns working runes without waiting
 	w_class = ITEMSIZE_SMALL
+	occult_tier = 2
 	var/cultistsonly = 1
-/obj/item/book/tome/imbued/attack_self(mob/user as mob)
+/obj/item/book/tome/imbued/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(src.cultistsonly && !iscultist(user))
 		return
 	if(!GLOB.cultwords["travel"])

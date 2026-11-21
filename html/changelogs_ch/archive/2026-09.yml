@@ -1,0 +1,196 @@
+2026-09-01:
+  Diana:
+  - bugfix: Horror armor will no longer be stuck on permanently pre-death but post-cure
+  - bugfix: Shadekin properly have their vision flags set when phasing back in
+  Will:
+  - bugfix: VR sleeper properly ends remote view when exited
+2026-09-03:
+  Diana:
+  - bugfix: Fat Feline 3color can no longer enter a bugged state via vwag.
+  Will:
+  - bugfix: Removes an invalid item from the arcade prize pool
+  - bugfix: APCs properly check if you are in range when alt-clicked to toggle lock.
+  - bugfix: Flashlight light beams can no longer be thrown by shuttle throw triggers,
+      or pulled by singularities
+2026-09-04:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: tgui dependency update
+2026-09-06:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixes attaching certain objects to disposal trunks when other disposal
+      pipes are on the same tile.
+  Guti:
+  - bugfix: Fixed showers throwing a runtime when cleaning anything but carbon mobs
+2026-09-09:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: player effects min value input
+  - bugfix: fixed paper bins being impossible to remove from storage.
+  - balance: Make it so emagging a bot also unlocks it and remove access restrictions
+  - qol: Added more special descriptions for antags
+  - bugfix: fixed salt shakers from condimaster not having an icon
+  Will:
+  - rscadd: Service and clown borgs get a rolling pin for kitchen tasks
+  - bugfix: Boozeborgs get the correct type of rolling pin
+  - rscadd: Lathe printable toolbox for use with gear painter
+  lbnesquik:
+  - maptweak: Change the stools to actually face their related tables and counters
+2026-09-10:
+  Will:
+  - bugfix: Fixed water and lava not respecting signal behaviors
+  - bugfix: RUST injectors respect signal behaviors
+  - bugfix: Borgs can no longer remove RUST fuel cells from injectors from afar
+  - bugfix: Being thrown over water will no longer get you wet
+  - rscadd: Being thrown over landmines no longer triggers the mine if you don't land
+      on it.
+2026-09-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fix jerichoes not having an empty box sprite
+  - bugfix: fixed a few googles not providing eye protection.
+  - bugfix: fix the translator piece still working when you are asleep
+  - bugfix: Fix the fancy drinks showcase not displaying their proper icon
+  - bugfix: fixed ventcrawl using an incorrect error message for welded vents.
+  - balance: Add some missing AI languages to the AI
+  - bugfix: Fixed warrants only being authorized by the head of security
+  - qol: toggling hud vis will also update it for all contained prey
+  - bugfix: fixed the makarov and luger lacking sprites.
+  - qol: makes nerdle a bit more accessible for color blind people
+  Guti:
+  - rscadd: Added Telecomms Engineer role, as well as a handful of alternative titles.
+  Will:
+  - qol: Removes prehistorically ancient abiotic check from bodyscanner and related
+      medical machines.
+  - bugfix: incorrect year calculation being used in ATM accounts
+  - qol: Point defense turrets support mapper placed upgrades
+  - bugfix: escaped slimes event now checks if a vent is welded before spawning a
+      slime
+  - bugfix: borgs are no longer kicked off of the rotary generators as soon as they
+      get on
+  - bugfix: multiple loc atoms no longer teleport upward when moved by shuttle
+  - balance: Zaddat light burn intensity curve tweaked for more clear difference between
+      low light and full light
+  - bugfix: Fingerprints no longer change if a character respawns or is ahealed
+  - qol: airlocks show if they are welded when examined
+2026-09-12:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: added a self-resetting spring trap. The normal one nolonger self-resets
+      as a side effect.
+  - rscadd: Made springtraps craftable via gui hand-crafting menu
+  - rscdel: Removed spring traps from the protolathe. They're improvised now.
+  - qol: Added a mini-grace period to disarming spring traps without them going off.
+      This should help with misclicks.
+  FluffMedic:
+  - balance: The Astral Collective Walker And Orb have been made slightly less tanky,
+      although one leans towards bullet/melee defense whilst the other leans the other
+      direction.
+  - balance: Loot for the above two has been slightly buffed
+  - balance: A tiny increase between sections of the bullet rain
+  Will:
+  - rscdel: Removes non-functional xenochimera version of hardfeet trait
+2026-09-14:
+  Will:
+  - qol: Species list in character editor is more clear about which species is whitelisted
+      only at a glance
+  - bugfix: Xenomorph hybrid species has a preview icon
+2026-09-16:
+  CHOMPStation2StaffMirrorBot:
+  - spellcheck: Capitalized nerdle subsystem
+  - admin: Make the player panel a LITTLE less cluttered.
+  - maptweak: Expanded the minitest map with better bar, R&D and medical facilities
+  Diana:
+  - qol: Changes the RUST generator to produce more radiation and radiate further.
+      Rad collectors (at 1013kpa) now collect about as much as a mag-trap
+  Will:
+  - rscadd: Reversible TEG circulator pump directions
+  - bugfix: Dry galoshes also count as galoshes for frayed wire mechanics
+  - rscadd: Frayed wires, and config to enable or disable them at round start.
+  - rscadd: You can now fray wires with sharp items, and fix them with tape.
+  - rscadd: Explosions can now cause frayed wires.
+  - rscadd: Borgs now get a tape roll item
+  - rscadd: Tape rolls can now be put into most belts
+  - rscadd: Tape rolls can now be put in most overwear pockets
+2026-09-17:
+  Will:
+  - rscadd: Geiger counters now show the type of radiation being emitted.
+  - refactor: Restored geiger counter to pre-radiation update behavior
+  - bugfix: geiger counters in hands show the current turf's radiation, not a reduced
+      radiation from being inside your mob
+  - bugfix: radiation sources that qdel before processing their radiation pulse would
+      lock up radiation subsystem
+  - code_imp: Radiation debug object
+2026-09-18:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Made it possible to wrench smartfridges.
+  - maptweak: Tweaked map to removed further objects in solid walls for unit test
+      stuff
+  Poojawa:
+  - bugfix: fixed infinite food supplies via construction abuse of the Food Synthesizer
+  - code_imp: Hardened some edge case issues involved with the reagent cartridge.
+      Byond needs its references!
+  - bugfix: fixes numerous broken digitigrade suit, shoe, and undersuit sprites
+  - image: Digitigrade sprites are 1 to 1 parity with what's in mob.dmi of their respective
+      zones.
+  Will:
+  - refactor: Moves storage items can_hold var to global shared lists for memory savings
+  - code_imp: Fixes SDMM should_not_sleep issue on compile
+  lbnesquik:
+  - maptweak: Improved library privacy with extra curtains on SC.
+2026-09-19:
+  Will:
+  - balance: Tripled Supermatter radiation output to match old bayrads values
+  - balance: Raised singulo rad chance, and restored old bayrad strength calculations
+  - balance: Singularity radiation upped by 2.5x to match bayrad strength values
+  - balance: Quintupled radiation collector scaling to match bayrad radiation to wattage
+      values
+  - bugfix: Radiation collectors respect walls and radiation falloff
+  - bugfix: Doors no longer block radiation while open
+2026-09-20:
+  Guti:
+  - rscadd: Sneezing with unlucky might make your glasses go flying
+  Poojawa:
+  - maptweak: Food Synths have been added to Groundbase, Stellar Delight, and Tether!
+  Will:
+  - bugfix: Wrenchable smartfridges no longer block all item inputs
+2026-09-21:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed cyborgs not being able to finish the reattach arm surgery with their
+      medical gripper
+2026-09-23:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: persistent smart storages
+2026-09-24:
+  Diana:
+  - bugfix: Being electrocuted will properly stun you at high damage and weaken you
+      at low damage
+  Will:
+  - bugfix: Surgery is no longer attempted when any item is used on a mob
+2026-09-25:
+  Will:
+  - bugfix: astral collective shield aura mob properly applies shield modifier
+  - code_imp: Fixes a SDMM warning about unreachable code
+2026-09-28:
+  Diana:
+  - qol: Hard feet stops mousetraps from stunning you.
+2026-09-29:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Powerloader footstep sounds are able to be selected.
+  - bugfix: Clown shoes now no longer play the squeak and footstep sound at the same
+      time.
+  Diana:
+  - bugfix: Batons will no longer do lethal damage when on grab intent
+  - bugfix: Tasers will no longer do lethal damage if you shoot yourself.
+  - qol: Makes the jackboot variants accessible via the security wardrobe vendor instead
+      of loadout only.
+  Lira:
+  - bugfix: Fixed round end timer skipping 1 minute remaining warning.
+  - bugfix: Give the final Rebooting World message a one second buffer before reboot
+      as intended.
+  - bugfix: config time for round end and start now uses full seconds only
+2026-09-30:
+  DIana:
+  - bugfix: APC Authentication error shows up if hacked by malf AI
+  - qol: AI can now speak/understand more languages
+  Will:
+  - qol: holding a TTS device in your active hand will allow you to speak through
+      it by using the say input
+  - code_imp: Adds radio_creeper element
+  - code_imp: Signal handling for say code

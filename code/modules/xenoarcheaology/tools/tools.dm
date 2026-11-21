@@ -3,8 +3,7 @@
 	desc = "A coiled metallic tape used to check dimensions and lengths."
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	icon_state = "measuring"
-	origin_tech = list(TECH_MATERIAL = 1)
-	matter = list(MAT_STEEL = 100)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.05))
 	w_class = ITEMSIZE_SMALL
 
 /obj/item/storage/bag/fossils
@@ -36,8 +35,7 @@
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	icon_state = "xenoarch_scanner"
 	item_state = "analyzer"
-	origin_tech = list(TECH_BLUESPACE = 3, TECH_MAGNET = 3)
-	matter = list(MAT_STEEL = 10000,MAT_GLASS = 5000)
+	matter = list(MAT_STEEL = MATERIAL_COST(5),MAT_GLASS = MATERIAL_COST(2.5))
 	w_class = ITEMSIZE_SMALL
 	slot_flags = SLOT_BELT
 
@@ -46,10 +44,13 @@
 	var/last_repopulation_time = 0
 	var/repopulation_delay = 600 //Anti spam.
 
-/obj/item/ano_scanner/attack_self(var/mob/living/user)
+/obj/item/ano_scanner/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	interact(user)
 
-/obj/item/ano_scanner/interact(var/mob/living/user)
+/obj/item/ano_scanner/interact(mob/user)
 	if(world.time - last_scan_time >= scan_delay)
 		last_scan_time = world.time
 
@@ -100,8 +101,7 @@
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	icon_state = "depth_scanner"
 	item_state = "analyzer"
-	origin_tech = list(TECH_MAGNET = 2, TECH_ENGINEERING = 2, TECH_BLUESPACE = 2)
-	matter = list(MAT_STEEL = 1000,MAT_GLASS = 1000)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.5),MAT_GLASS = MATERIAL_COST(0.5))
 	w_class = ITEMSIZE_SMALL
 	slot_flags = SLOT_BELT
 	var/list/positive_locations = list()
@@ -114,7 +114,7 @@
 	var/record_index = 1
 	var/material = "unknown"
 
-/obj/item/depth_scanner/proc/scan_atom(var/mob/user, var/atom/A)
+/obj/item/depth_scanner/proc/scan_atom(mob/user, atom/A)
 	user.visible_message(span_bold("\The [user]") + " scans \the [A], the air around them humming gently.")
 
 	if(istype(A, /turf/simulated/mineral))
@@ -154,7 +154,10 @@
 
 			to_chat(user, span_notice("[icon2html(src, user.client)] [src] pings [pick("madly","wildly","excitedly","crazily")]!"))
 
-/obj/item/depth_scanner/attack_self(var/mob/living/user)
+/obj/item/depth_scanner/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	tgui_interact(user)
 
 /obj/item/depth_scanner/tgui_state(mob/user)
@@ -165,6 +168,12 @@
 	if(!ui)
 		ui = new(user, src, "XenoarchDepthScanner", name)
 		ui.open()
+
+/obj/item/depth_scanner/tgui_static_data(mob/user)
+	. = ..()
+	if(isrobot(loc))
+		var/mob/living/silicon/robot/robot_owner = loc
+		.["theme"] = robot_owner.get_ui_theme()
 
 /obj/item/depth_scanner/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
@@ -224,8 +233,7 @@
 	icon = 'icons/obj/device.dmi'
 	icon_state = "pinoff"	//pinonfar, pinonmedium, pinonclose, pinondirect, pinonnull
 	item_state = "electronic"
-	origin_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 2, TECH_BLUESPACE = 3)
-	matter = list(MAT_STEEL = 1000,MAT_GLASS = 500)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.5),MAT_GLASS = MATERIAL_COST(0.25))
 	var/frequency = PUB_FREQ
 	var/scan_ticks = 0
 	var/obj/item/radio/target_radio
@@ -259,16 +267,16 @@
 					set background = 1
 					if(datum_flags & DF_ISPROCESSING)
 						//scan radios in the world to try and find one
+						var/turf/T = get_turf(src)
 						var/cur_dist = 999
 						for(var/obj/item/radio/beacon/R in GLOB.all_beacons)
-							if(R.z == src.z && R.frequency == src.frequency)
-								var/check_dist = get_dist(src,R)
+							if(R.z == T.z && R.frequency == src.frequency)
+								var/check_dist = get_dist(T,R)
 								if(check_dist < cur_dist)
 									cur_dist = check_dist
 									target_radio = R
 
 						scan_ticks = 0
-						var/turf/T = get_turf(src)
 						if(target_radio)
 							T.visible_message("[icon2html(src,viewers(src))] [src] [pick("chirps","chirrups","cheeps")] happily.")
 						else
@@ -277,6 +285,9 @@
 			icon_state = "pinoff"
 
 /obj/item/beacon_locator/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	return tgui_interact(user)
 
 /obj/item/beacon_locator/tgui_state(mob/user)
@@ -323,8 +334,7 @@
 	icon_state = "ano_scanner2"
 	item_state = "lampgreen"
 	icon = 'icons/obj/xenoarchaeology.dmi'
-	origin_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 3, TECH_BLUESPACE = 2)
-	matter = list(MAT_STEEL = 10000,MAT_GLASS = 5000)
+	matter = list(MAT_STEEL = MATERIAL_COST(5),MAT_GLASS = MATERIAL_COST(2.5))
 	w_class = ITEMSIZE_SMALL
 	slot_flags = SLOT_BELT
 	var/mode = 1 //Start off scanning. 1 = scanning, 0 = measuring
@@ -336,7 +346,10 @@
 	anomaly_scanner = new/obj/item/ano_scanner(src)
 	depth_scanner = new/obj/item/depth_scanner(src)
 
-/obj/item/xenoarch_multi_tool/attack_self(var/mob/living/user)
+/obj/item/xenoarch_multi_tool/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	depth_scanner.tgui_interact(user)
 
 /obj/item/xenoarch_multi_tool/verb/swap_settings()

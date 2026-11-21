@@ -8859,7 +8859,7 @@
 /area/centcom/command)
 "tn" = (
 /obj/structure/sign/poster{
-	poster_type = "/decl/poster/bay_50";
+	poster_type = "/datum/decl/poster/bay_50";
 	pixel_x = -32
 	},
 /turf/simulated/shuttle/floor/darkred,

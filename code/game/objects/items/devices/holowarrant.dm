@@ -23,7 +23,10 @@
 		. += span_notice("You have to go closer if you want to read it.")
 
 //hit yourself with it
-/obj/item/holowarrant/attack_self(mob/living/user as mob)
+/obj/item/holowarrant/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	active = null
 	var/list/warrants = list()
 	if(!isnull(GLOB.data_core.general))
@@ -54,10 +57,11 @@
 	..()
 
 //hit other people with it
-/obj/item/holowarrant/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+/obj/item/holowarrant/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	user.visible_message(span_notice("You show the warrant to [M]."), \
 			span_notice("[user] holds up a warrant projector and shows the contents to [M]."))
 	M.examinate(src)
+	return ITEM_INTERACT_SUCCESS
 
 /obj/item/holowarrant/update_icon()
 	if(active)

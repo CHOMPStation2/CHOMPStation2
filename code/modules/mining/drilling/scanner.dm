@@ -4,13 +4,16 @@
 	icon = 'icons/obj/device.dmi'
 	icon_state = "deep_scan_device"
 	item_state = "electronic"
-	origin_tech = list(TECH_MAGNET = 1, TECH_ENGINEERING = 1)
-	matter = list(MAT_STEEL = 150)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.075))
 	var/scan_time = 2 SECONDS
 	var/range = 2
 	var/exact = FALSE
+	var/sediment_scan = TRUE
 
-/obj/item/mining_scanner/attack_self(mob/user as mob)
+/obj/item/mining_scanner/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	to_chat(user, span_notice("You begin sweeping \the [src] about, scanning for metal deposits."))
 	playsound(src, 'sound/items/goggles_charge.ogg', 50, 1, -6)
 
@@ -19,7 +22,15 @@
 
 	ScanTurf(get_turf(user), user)
 
-/obj/item/mining_scanner/proc/ScanTurf(var/atom/target, var/mob/user)
+/obj/item/mining_scanner/verb/toggle_sediment_scan()
+	set name = "Toggle Sediment Scan"
+	set category = "Object"
+	set src in view(1)
+
+	to_chat(usr, span_notice("\The [src] will [sediment_scan ? "no longer" : "now"] scan for reagents."))
+	sediment_scan = !sediment_scan
+
+/obj/item/mining_scanner/proc/ScanTurf(atom/target, mob/user)
 	var/list/metals = list(
 		"surface minerals" = 0,
 		"industrial metals" = 0,
@@ -72,7 +83,7 @@
 
 		message += "<br>" + span_notice("- [result] of [ore_type].")
 
-	if(reagents_found.len)
+	if(sediment_scan && reagents_found.len)
 		message += "<br>" + span_infoplain("Sediment sample contains: ")
 		for(var/reg_id in reagents_found)
 			var/amnt = reagents_found[reg_id]
@@ -96,8 +107,7 @@
 	name = "advanced ore detector"
 	desc = "An advanced device used to locate ore deep underground."
 	description_info = "This scanner has variable range, you can use the Set Scanner Range verb, or alt+click the device. Drills dig in 5x5."
-	origin_tech = list(TECH_MAGNET = 4, TECH_ENGINEERING = 4)
-	matter = list(MAT_STEEL = 150)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.075))
 	scan_time = 0.5 SECONDS
 	exact = TRUE
 

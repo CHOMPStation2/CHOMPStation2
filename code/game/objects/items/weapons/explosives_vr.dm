@@ -1,7 +1,7 @@
 /obj/item/plastique/seismic/locked
 	desc = "Used to dig holes in specific areas without too much extra hole. Has extra mechanism that safely implodes the bomb if it is used in close proximity to the facility."
 
-/obj/item/plastique/seismic/locked/explode(var/location)
+/obj/item/plastique/seismic/locked/explode(location)
 	if(!target)
 		target = get_atom_on_turf(src)
 	if(!target)
@@ -10,7 +10,7 @@
 	var/turf/T = get_turf(target)
 	if((T.z in using_map.station_levels) || (T.z in using_map.admin_levels))
 		target.visible_message(span_danger("\The [src] lets out a loud beep as safeties trigger, before imploding and falling apart."))
-		target.cut_overlay(image_overlay, TRUE)
+		target.cut_overlay(image_overlay)
 		qdel(src)
 		return 0
 	else

@@ -31,7 +31,11 @@
 	ion_trail = new /datum/effect/effect/system/ion_trail_follow()
 	ion_trail.set_up(src)
 
-/obj/mecha/working/hoverpod/moved_inside(var/mob/living/carbon/human/H as mob)
+/obj/mecha/working/hoverpod/Destroy()
+	QDEL_NULL(ion_trail)
+	. = ..()
+
+/obj/mecha/working/hoverpod/moved_inside(mob/living/carbon/human/H as mob)
 	. = ..(H)
 	if(.)
 		ion_trail.start()

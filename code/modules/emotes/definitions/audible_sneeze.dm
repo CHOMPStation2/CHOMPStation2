@@ -1,4 +1,4 @@
-/decl/emote/audible/sneeze
+/datum/decl/emote/audible/sneeze
 	key = "sneeze"
 	emote_message_1p = "You sneeze."
 	emote_message_3p = "sneezes."
@@ -6,8 +6,10 @@
 	emote_message_synthetic_1p_target = "You emit a robotic sneeze towards TARGET."
 	emote_message_synthetic_3p = "emits a robotic sneeze."
 	emote_message_synthetic_3p_target = "emits a robotic sneeze towards TARGET."
+	emote_message_mute_1p = "You act out an exaggerated silent sneeze."
+	emote_message_mute_3p = "acts out an exaggerated silent sneeze."
 
-/decl/emote/audible/sneeze/get_emote_sound(var/atom/user)
+/datum/decl/emote/audible/sneeze/get_emote_sound(atom/user)
 	if(ishuman(user) && !check_synthetic(user))
 		var/mob/living/carbon/human/H = user
 		var/vol = H.species.sneeze_volume
@@ -25,3 +27,12 @@
 			)
 			// CHOMPEdit End
 	return ..()
+
+/datum/decl/emote/audible/sneeze/do_extra(atom/user, atom/target)
+	if(ishuman(user) && HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(10))
+		var/mob/living/carbon/human/human = user
+		if(human.glasses)
+			var/obj/item/glasses = human.glasses
+			human.unEquip(glasses, FALSE, get_step(human, human.dir))
+			glasses.throw_at(get_step(human, human.dir), 10, 10)
+			human.visible_message(span_notice("[human]'s [glasses] go flying after a sneeze!"), span_danger("Your [glasses] go flying!"))

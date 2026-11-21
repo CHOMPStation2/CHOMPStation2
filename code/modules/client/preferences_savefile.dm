@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN	8
-#define SAVEFILE_VERSION_MAX	18
+#define SAVEFILE_VERSION_MAX	19
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -98,6 +98,16 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 		log_world("[client_ckey] preferences successfully migrated from [current_version] to v18.")
 		to_chat(client, span_danger("v18 savefile migration complete."))
+
+	// Migration for pai to tg pregs
+	if(current_version < 19)
+		log_world("[client_ckey] preferences migrating from [current_version] to v19....")
+		to_chat(client, span_danger("Migrating savefile from version [current_version] to v19..."))
+
+		migration_19_paifile(S)
+
+		log_world("[client_ckey] preferences successfully migrated from [current_version] to v19.")
+		to_chat(client, span_danger("v19 savefile migration complete."))
 /datum/preferences/proc/update_character(current_version, list/save_data)
 	// Migration from BYOND savefiles to JSON: Important milemark.
 	if(current_version == -3)
@@ -290,7 +300,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	clear_character_previews()
 	return TRUE
 
-/datum/preferences/proc/save_character()
+/datum/preferences/proc/save_character(override)
 	SHOULD_NOT_SLEEP(TRUE)
 	if(!savefile)
 		return FALSE
@@ -303,10 +313,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	var/save_data = savefile.get_entry(tree_key)
 
 	for(var/datum/preference/preference as anything in get_preferences_in_priority_order())
-		if(preference.savefile_identifier != PREFERENCE_CHARACTER && !first_save)
+		if(preference.savefile_identifier != PREFERENCE_CHARACTER && !first_save && !override)
 			continue
 
-		if(!(preference.type in recently_updated_keys) && !first_save)
+		if(!(preference.type in recently_updated_keys) && !first_save && !override)
 			continue
 
 		recently_updated_keys -= preference.type
@@ -332,6 +342,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		default_slot = slot
 		nif_path = nif_durability = nif_savedata = null //VOREStation Add - Don't copy NIF
 		savefile.set_entry("default_slot", slot)
+
+	// Clear stale data before overwriting.
+	savefile.remove_entry("character[slot]")
 
 	return TRUE
 

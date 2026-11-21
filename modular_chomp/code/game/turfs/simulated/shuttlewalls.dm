@@ -52,7 +52,7 @@
 /turf/simulated/shuttlewalls/proc/get_material()
 	return material
 
-/turf/simulated/shuttlewalls/bullet_act(var/obj/item/projectile/Proj)
+/turf/simulated/shuttlewalls/bullet_act(obj/item/projectile/Proj)
 	if(istype(Proj,/obj/item/projectile/beam))
 		burn(2500)
 	else if(istype(Proj,/obj/item/projectile/ion))
@@ -90,12 +90,13 @@
 	take_damage(damage)
 	return
 
-/turf/simulated/shuttlewalls/hitby(atom/movable/source, var/speed=THROWFORCE_SPEED_DIVISOR)
+/turf/simulated/shuttlewalls/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	..()
 	if(ismob(source))
 		return
 
 	var/tforce = 0
+	var/speed = throwingdatum?.speed || THROWFORCE_SPEED_DIVISOR
 	if(isitem(source))
 		var/obj/item/O = source
 		tforce = O.throwforce * (speed/THROWFORCE_SPEED_DIVISOR)
@@ -115,7 +116,7 @@
 			plant.pixel_y = 0
 		plant.update_neighbors()
 
-/turf/simulated/shuttlewalls/ChangeTurf(var/turf/N, var/tell_universe, var/force_lighting_update, var/preserve_outdoors)
+/turf/simulated/shuttlewalls/ChangeTurf(turf/N, tell_universe, force_lighting_update, preserve_outdoors)
 	clear_plants()
 	..(N, tell_universe, force_lighting_update, preserve_outdoors)
 
@@ -185,7 +186,7 @@
 
 	return ..()
 
-/turf/simulated/shuttlewalls/proc/dismantle_wall(var/devastated, var/explode, var/no_product)
+/turf/simulated/shuttlewalls/proc/dismantle_wall(devastated, explode, no_product)
 
 	playsound(src, 'sound/items/Welder.ogg', 100, 1)
 	if(!no_product)
@@ -290,7 +291,14 @@
 	if(!total_radiation)
 		return
 
-	SSradiation.radiate(src, total_radiation)
+	radiation_pulse(
+		src,
+		max_range = 5,
+		threshold = RAD_MEDIUM_INSULATION,
+		chance = total_radiation,
+		minimum_exposure_time = URANIUM_RADIATION_MINIMUM_EXPOSURE_TIME,
+		strength = total_radiation
+	)
 	return total_radiation
 
 /turf/simulated/shuttlewalls/proc/burn(temperature)

@@ -37,7 +37,7 @@
 	if(direct)
 		direction = direct
 
-/datum/effect/effect/system/confetti_spread/start(var/I)
+/datum/effect/effect/system/confetti_spread/start(I)
 	var/i = 0
 	for(i=0, i<src.number, i++)
 		if(src.total_confetti > 20)

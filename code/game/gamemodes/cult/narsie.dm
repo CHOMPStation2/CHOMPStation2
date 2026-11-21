@@ -1,5 +1,5 @@
-var/global/narsie_behaviour = "CultStation13"
-var/global/narsie_cometh = 0
+GLOBAL_VAR_INIT(narsie_behaviour, "CultStation13")
+GLOBAL_VAR_INIT(narsie_cometh, 0)
 /obj/singularity/narsie //Moving narsie to its own file for the sake of being clearer
 	name = "Nar-Sie"
 	desc = "Your mind begins to bubble and ooze as it tries to comprehend what it sees."
@@ -47,15 +47,15 @@ var/global/narsie_cometh = 0
 
 	narsie_spawn_animation()
 
-	if(!narsie_cometh)//so we don't initiate Hell more than one time.
+	if(!GLOB.narsie_cometh)//so we don't initiate Hell more than one time.
 		if(cause_hell)
 			SetUniversalState(/datum/universal_state/hell)
-		narsie_cometh = 1
+		GLOB.narsie_cometh = 1
 
 		spawn(10 SECONDS)
-			if(emergency_shuttle)
-				emergency_shuttle.call_evac()
-				emergency_shuttle.launch_time = 0	// Cannot recall
+			if(SSemergency_shuttle)
+				SSemergency_shuttle.call_evac()
+				SSemergency_shuttle.launch_time = 0	// Cannot recall
 
 /obj/singularity/narsie/process()
 	eat()
@@ -96,7 +96,7 @@ var/global/narsie_cometh = 0
 	else if(istype(A, /obj/structure/cult))
 		qdel(A)
 
-/obj/singularity/narsie/move(var/force_move = 0)
+/obj/singularity/narsie/move(force_move = 0)
 	if(!move_self)
 		return 0
 
@@ -114,7 +114,7 @@ var/global/narsie_cometh = 0
 		step(src, movement_dir)
 	return 1
 
-/obj/singularity/narsie/large/move(var/force_move = 0)
+/obj/singularity/narsie/large/move(force_move = 0)
 	if(!move_self)
 		return 0
 
@@ -139,7 +139,7 @@ var/global/narsie_cometh = 0
 				M.see_narsie(src,movement_dir)
 	return 1
 
-/obj/singularity/narsie/proc/narsiefloor(var/turf/T)//leaving "footprints"
+/obj/singularity/narsie/proc/narsiefloor(turf/T)//leaving "footprints"
 	if(!(istype(T, /turf/simulated/wall/cult)||istype(T, /turf/space)))
 		if(T.icon_state != "cult-narsie")
 			T.desc = "something that goes beyond your understanding went this way."
@@ -147,7 +147,7 @@ var/global/narsie_cometh = 0
 			T.icon_state = "cult-narsie"
 			T.set_light(1)
 
-/obj/singularity/narsie/proc/narsiewall(var/turf/T)
+/obj/singularity/narsie/proc/narsiewall(turf/T)
 	T.desc = "An opening has been made on that wall, but who can say if what you seek truly lies on the other side?"
 	T.icon = 'icons/turf/walls.dmi'
 	T.icon_state = "cult-narsie"
@@ -157,12 +157,12 @@ var/global/narsie_cometh = 0
 
 /obj/singularity/narsie/large/consume(const/atom/A) //Has its own consume proc because it doesn't need energy and I don't want BoHs to explode it. --NEO
 //NEW BEHAVIOUR
-	if(narsie_behaviour == "CultStation13")
+	if(GLOB.narsie_behaviour == "CultStation13")
 	//MOB PROCESSING
 		new_narsie(A)
 
 //OLD BEHAVIOUR
-	else if(narsie_behaviour == "Nar-Singulo")
+	else if(GLOB.narsie_behaviour == "Nar-Singulo")
 		old_narsie(A)
 
 /obj/singularity/narsie/proc/new_narsie(const/atom/A)
@@ -273,7 +273,7 @@ var/global/narsie_cometh = 0
 
 /obj/singularity/narsie/proc/pickcultist() //Narsie rewards his cultists with being devoured first, then picks a ghost to follow. --NEO
 	var/list/cultists = list()
-	for(var/datum/mind/cult_nh_mind in cult.current_antagonists)
+	for(var/datum/mind/cult_nh_mind in GLOB.cult.current_antagonists)
 		if(!cult_nh_mind.current)
 			continue
 		if(cult_nh_mind.current.stat)

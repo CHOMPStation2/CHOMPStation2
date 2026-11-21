@@ -60,7 +60,7 @@
 /obj/structure/mob_spawner/proc/choose_spawn()
 	return pickweight(spawn_types)
 
-/obj/structure/mob_spawner/proc/do_spawn(var/mob_path)
+/obj/structure/mob_spawner/proc/do_spawn(mob_path)
 	if(!ispath(mob_path))
 		return 0
 	//CHOMPEdit Start
@@ -84,11 +84,11 @@
 	return 0
 	//CHOMPEdit End
 
-/obj/structure/mob_spawner/proc/get_death_report(var/mob/living/L)
+/obj/structure/mob_spawner/proc/get_death_report(mob/living/L)
 	if(L in spawned_mobs)
 		spawned_mobs.Remove(L)
 
-/obj/structure/mob_spawner/attackby(var/obj/item/I, var/mob/living/user)
+/obj/structure/mob_spawner/attackby(obj/item/I, mob/living/user)
 	if(!I.force || I.flags & NOBLUDGEON || !destructible)
 		return
 
@@ -97,12 +97,12 @@
 	visible_message(span_warning("\The [src] has been [LAZYLEN(I.attack_verb) ? "[pick(I.attack_verb)]":"attacked"] with \the [I] by [user]."))
 	take_damage(I.force)
 
-/obj/structure/mob_spawner/bullet_act(var/obj/item/projectile/Proj)
+/obj/structure/mob_spawner/bullet_act(obj/item/projectile/Proj)
 	..()
 	if(destructible)
 		take_damage(Proj.get_structure_damage())
 
-/obj/structure/mob_spawner/take_damage(var/damage)
+/obj/structure/mob_spawner/take_damage(damage)
 	health -= damage
 	if(health <= 0)
 		visible_message(span_warning("\The [src] breaks apart!"))
@@ -141,7 +141,7 @@ It also makes it so a ghost wont know where all the goodies/mobs are.
 	prox = new(src, range)
 
 //CHOMPEdit Start
-/obj/structure/mob_spawner/scanner/do_spawn(var/mob_path)
+/obj/structure/mob_spawner/scanner/do_spawn(mob_path)
 	if(!ispath(mob_path))
 		return 0
 	if(!ispath(mob_path, /mob/living) && !ispath(mob_path, /obj/structure/closet/crate/mimic))
@@ -310,7 +310,7 @@ It also makes it so a ghost wont know where all the goodies/mobs are.
 		/mob/living/simple_mob/vore/demon = 0.5 // VERY rare!
 	)
 
-/obj/structure/mob_spawner/proc/get_used_report(var/obj/structure/closet/crate/mimic/O)
+/obj/structure/mob_spawner/proc/get_used_report(obj/structure/closet/crate/mimic/O)
 	if(O in spawned_mobs)
 		spawned_mobs.Remove(O)
 

@@ -1,10 +1,9 @@
 
 //Either pass the mob you wish to ban in the 'banned_mob' attribute, or the banckey, banip and bancid variables. If both are passed, the mob takes priority! If a mob is not passed, banckey is the minimum that needs to be passed! banip and bancid are optional.
-/datum/admins/proc/DB_ban_record(var/bantype, var/mob/banned_mob, var/duration = -1, var/reason, var/job = "", var/rounds = 0, var/banckey = null, var/banip = null, var/bancid = null)
+/datum/admins/proc/DB_ban_record(bantype, mob/banned_mob, duration = -1, reason, job = "", rounds = 0, banckey = null, banip = null, bancid = null)
 
 	if(!check_rights(R_MOD,0) && !check_rights(R_BAN))	return
 
-	establish_db_connection()
 	if(!SSdbcore.IsConnected())
 		return
 
@@ -85,11 +84,11 @@
 	var/datum/db_query/query_insert = SSdbcore.NewQuery(sql)
 	query_insert.Execute()
 	to_chat(usr, span_filter_adminlog("[span_blue("Ban saved to database.")]"))
-	message_admins("[key_name_admin(usr)] has added a [bantype_str] for [ckey] [(job)?"([job])":""] [(duration > 0)?"([duration] minutes)":""] with the reason: \"[reason]\" to the ban database.",1)
+	message_admins("[key_name_admin(usr)] has added a [bantype_str] for [ckey] [(job)?"([job])":""] [(duration > 0)?"([duration] minutes)":""] with the reason: \"[reason]\" to the ban database.")
 	qdel(query_insert)
 
 
-/datum/admins/proc/DB_ban_unban(var/ckey, var/bantype, var/job = "")
+/datum/admins/proc/DB_ban_unban(ckey, bantype, job = "")
 
 	if(!check_rights(R_BAN))
 		return
@@ -126,7 +125,6 @@
 	if(job)
 		sql += " AND job = '[job]'"
 
-	establish_db_connection()
 	if(!SSdbcore.IsConnected())
 		return
 
@@ -155,7 +153,7 @@
 
 	DB_ban_unban_by_id(ban_id)
 
-/datum/admins/proc/DB_ban_edit(client/user, var/banid = null, var/param = null)
+/datum/admins/proc/DB_ban_edit(client/user, banid = null, param = null)
 
 	if(!check_rights_for(user, R_BAN))
 		return
@@ -196,7 +194,7 @@
 
 			var/datum/db_query/update_query = SSdbcore.NewQuery("UPDATE erro_ban SET reason = '[value]', edits = CONCAT(edits,'- [eckey] changed ban reason from <cite><b>\\\"[reason]\\\"</b></cite> to <cite><b>\\\"[value]\\\"</b></cite><BR>') WHERE id = [banid]")
 			update_query.Execute()
-			message_admins("[key_name_admin(user)] has edited a ban for [pckey]'s reason from [reason] to [value]",1)
+			message_admins("[key_name_admin(user)] has edited a ban for [pckey]'s reason from [reason] to [value]")
 			qdel(update_query)
 			return
 		if("duration")
@@ -207,7 +205,7 @@
 					return
 
 			var/datum/db_query/update_query = SSdbcore.NewQuery("UPDATE erro_ban SET duration = [value], edits = CONCAT(edits,'- [eckey] changed ban duration from [duration] to [value]<br>'), expiration_time = DATE_ADD(bantime, INTERVAL [value] MINUTE) WHERE id = [banid]")
-			message_admins("[key_name_admin(user)] has edited a ban for [pckey]'s duration from [duration] to [value]",1)
+			message_admins("[key_name_admin(user)] has edited a ban for [pckey]'s duration from [duration] to [value]")
 			update_query.Execute()
 			qdel(update_query)
 			return
@@ -218,13 +216,12 @@
 	to_chat(user, span_filter_adminlog("Cancelled"))
 	return
 
-/datum/admins/proc/DB_ban_unban_by_id(var/id)
+/datum/admins/proc/DB_ban_unban_by_id(id)
 
 	if(!check_rights(R_BAN))	return
 
 	var/sql = "SELECT ckey FROM erro_ban WHERE id = [id]"
 
-	establish_db_connection()
 	if(!SSdbcore.IsConnected())
 		return
 
@@ -252,7 +249,7 @@
 	var/unban_computerid = src.owner:computer_id
 	var/unban_ip = src.owner:address
 	var/sql_update = "UPDATE erro_ban SET unbanned = 1, unbanned_datetime = Now(), unbanned_ckey = '[unban_ckey]', unbanned_computerid = '[unban_computerid]', unbanned_ip = '[unban_ip]' WHERE id = [id]"
-	message_admins("[key_name_admin(usr)] has lifted [pckey]'s ban.",1)
+	message_admins("[key_name_admin(usr)] has lifted [pckey]'s ban.")
 
 	var/datum/db_query/query_update = SSdbcore.NewQuery(sql_update)
 	query_update.Execute()
@@ -269,14 +266,13 @@
 	holder.DB_ban_panel(src)
 
 
-/datum/admins/proc/DB_ban_panel(client/user, var/playerckey = null)
+/datum/admins/proc/DB_ban_panel(client/user, playerckey = null)
 	if(!user)
 		return
 
 	if(!check_rights_for(user, R_BAN))
 		return
 
-	establish_db_connection()
 	if(!SSdbcore.IsConnected())
 		to_chat(usr, span_filter_adminlog("[span_red("Failed to establish database connection")]"))
 		return

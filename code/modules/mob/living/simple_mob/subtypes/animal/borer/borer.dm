@@ -16,7 +16,7 @@
 	attacktext = list("nipped")
 	friendly = list("prods")
 
-	organ_names = /decl/mob_organ_names/borer
+	organ_names = /datum/decl/mob_organ_names/borer
 
 	status_flags = CANPUSH
 	pass_flags = PASSTABLE
@@ -77,7 +77,7 @@
 /mob/living/simple_mob/animal/borer/Login()
 	. = ..()
 	if(antag && mind)
-		borers.add_antagonist(mind)
+		GLOB.borers.add_antagonist(mind)
 
 /mob/living/simple_mob/animal/borer/Initialize(mapload)
 	add_language("Cortical Link")
@@ -284,7 +284,7 @@
 		return
 
 	if(host.mind)
-		borers.remove_antagonist(host.mind)
+		GLOB.borers.remove_antagonist(host.mind)
 
 	if(!QDELETED(src))
 		forceMove(get_turf(host.loc))
@@ -316,21 +316,21 @@
 /mob/living/simple_mob/animal/borer/cannot_use_vents()
 	return host || stat
 
-/mob/living/simple_mob/animal/borer/extra_huds(var/datum/hud/hud,var/icon/ui_style,var/list/hud_elements)
+/mob/living/simple_mob/animal/borer/extra_huds(datum/hud/hud,icon/ui_style,list/hud_elements)
 	// Chem hud
 	borer_chem_display = new /atom/movable/screen/borer/chems()
 	borer_chem_display.screen_loc = ui_ling_chemical_display
 	borer_chem_display.icon_state = "ling_chems"
 	hud_elements |= borer_chem_display
 
-/mob/living/simple_mob/animal/borer/UnarmedAttack(var/atom/A, var/proximity)
+/mob/living/simple_mob/animal/borer/UnarmedAttack(atom/A, proximity)
 	if(ismob(loc))
 		to_chat(src, span_notice("You cannot interact with that from inside a host!"))
 		return
 	. = ..()
 
 // This is awful but its literally say code.
-/mob/living/simple_mob/animal/borer/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
+/mob/living/simple_mob/animal/borer/say(message, datum/language/speaking = null, whispering = 0)
 	message = sanitize(message)
 	message = capitalize(message)
 
@@ -387,5 +387,5 @@
 			to_chat(M, "[src.true_name] whispers to [host], \"[message]\"")
 
 
-/decl/mob_organ_names/borer
+/datum/decl/mob_organ_names/borer
 	hit_zones = list("head", "central segment", "tail segment")

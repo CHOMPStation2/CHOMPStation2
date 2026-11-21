@@ -66,6 +66,8 @@
 	add_verb(src, /mob/living/proc/ventcrawl)
 	add_verb(src, /mob/living/proc/hide)
 
+	ADD_TRAIT(src, TRAIT_AMBIENT_PEST_MOB, ROUNDSTART_TRAIT)
+
 	if(!keep_parent_data && name == initial(name))
 		name = "[name] ([rand(1, 1000)])"
 	real_name = name
@@ -100,6 +102,7 @@
 	EXTRAPOLATOR_ACT_ADD_DISEASES(., rat_diseases)
 
 /mob/living/simple_mob/animal/passive/mouse/Crossed(atom/movable/AM as mob|obj)
+	. = ..()
 	if(AM.is_incorporeal())
 		return
 	if( ishuman(AM) )
@@ -107,7 +110,6 @@
 			var/mob/M = AM
 			M.visible_message(span_blue("[icon2html(src,viewers(src))] Squeek!"))
 			playsound(src, 'sound/effects/mouse_squeak.ogg', 35, 1)
-	..()
 
 /mob/living/simple_mob/animal/passive/mouse/death()
 	layer = MOB_LAYER

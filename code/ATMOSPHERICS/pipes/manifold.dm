@@ -86,7 +86,7 @@
 	else
 		. = PROCESS_KILL
 
-/obj/machinery/atmospherics/pipe/manifold/change_color(var/new_color)
+/obj/machinery/atmospherics/pipe/manifold/change_color(new_color)
 	..()
 	//for updating connected atmos device pipes (i.e. vents, manifolds, etc)
 	if(node1)
@@ -96,15 +96,12 @@
 	if(node3)
 		node3.update_underlays()
 
-/obj/machinery/atmospherics/pipe/manifold/update_icon(var/safety = 0)
-	if(!check_icon_cache())
-		return
-
+/obj/machinery/atmospherics/pipe/manifold/update_icon(safety = 0)
 	alpha = 255
 
 	cut_overlays()
-	add_overlay(icon_manager.get_atmos_icon("manifold", , pipe_color, "core" + icon_connect_type))
-	add_overlay(icon_manager.get_atmos_icon("manifold", , , "clamps" + icon_connect_type))
+	add_overlay(GLOB.icon_manager.get_atmos_icon("manifold", , pipe_color, "core" + icon_connect_type))
+	add_overlay(GLOB.icon_manager.get_atmos_icon("manifold", , , "clamps" + icon_connect_type))
 	underlays.Cut()
 
 	var/turf/T = get_turf(src)
@@ -139,7 +136,7 @@
 
 	for(var/direction in GLOB.cardinal)
 		if(direction&connect_directions)
-			for(var/obj/machinery/atmospherics/target in get_step(src,direction))
+			for(var/obj/machinery/atmospherics/target in get_prioritized_nodes(get_step(src,direction)))
 				if (can_be_node(target, 1))
 					node1 = target
 					connect_directions &= ~direction
@@ -150,7 +147,7 @@
 
 	for(var/direction in GLOB.cardinal)
 		if(direction&connect_directions)
-			for(var/obj/machinery/atmospherics/target in get_step(src,direction))
+			for(var/obj/machinery/atmospherics/target in get_prioritized_nodes(get_step(src,direction)))
 				if (can_be_node(target, 2))
 					node2 = target
 					connect_directions &= ~direction
@@ -161,7 +158,7 @@
 
 	for(var/direction in GLOB.cardinal)
 		if(direction&connect_directions)
-			for(var/obj/machinery/atmospherics/target in get_step(src,direction))
+			for(var/obj/machinery/atmospherics/target in get_prioritized_nodes(get_step(src,direction)))
 				if (can_be_node(target, 3))
 					node3 = target
 					connect_directions &= ~direction

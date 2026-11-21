@@ -90,7 +90,7 @@
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(check_keywords), message), rand(1 SECOND, 3 SECONDS))
 
-/datum/ai_holder/simple_mob/passive/possum/poppy/proc/check_keywords(var/message)
+/datum/ai_holder/simple_mob/passive/possum/poppy/proc/check_keywords(message)
 	var/mob/living/simple_mob/animal/passive/opossum/poss = holder
 	if(!istype(poss) || holder.client || holder.stat != CONSCIOUS)
 		return
@@ -127,7 +127,7 @@
 	response_disarm = "gently pushes aside"
 	response_harm = "stamps on"
 	density = FALSE
-	organ_names = /decl/mob_organ_names/possum
+	organ_names = /datum/decl/mob_organ_names/possum
 	minbodytemp = 223
 	maxbodytemp = 323
 	universal_speak = FALSE
@@ -140,12 +140,12 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/opossum)
 	meat_amount = 2
 
-/mob/living/simple_mob/animal/passive/opossum/adjustBruteLoss(var/amount,var/include_robo)
+/mob/living/simple_mob/animal/passive/opossum/adjustBruteLoss(amount,include_robo)
 	. = ..()
 	if(amount >= 3)
 		respond_to_damage()
 
-/mob/living/simple_mob/animal/passive/opossum/adjustFireLoss(var/amount,var/include_robo)
+/mob/living/simple_mob/animal/passive/opossum/adjustFireLoss(amount,include_robo)
 	. = ..()
 	if(amount >= 3)
 		respond_to_damage()
@@ -197,12 +197,16 @@
 	icon_dead = "poppy_dead"
 	icon_rest = "poppy_dead"
 	tt_desc = "Didelphis astrum salutem"
-	organ_names = /decl/mob_organ_names/poppy
+	organ_names = /datum/decl/mob_organ_names/poppy
 	holder_type = /obj/item/holder/possum/poppy
 	ai_holder_type = /datum/ai_holder/simple_mob/passive/possum/poppy
 
-/decl/mob_organ_names/possum
+/datum/decl/mob_organ_names/possum
 	hit_zones = list("head", "body", "left foreleg", "right foreleg", "left hind leg", "right hind leg", "pouch")
 
-/decl/mob_organ_names/poppy
+/datum/decl/mob_organ_names/poppy
 	hit_zones = list("head", "body", "left foreleg", "right foreleg", "left hind leg", "right hind leg", "pouch", "cute little jacket")
+
+/mob/living/simple_mob/animal/passive/opossum/beastmode/Initialize(mapload)
+	. = ..()
+	remove_verb(src,/mob/living/proc/ventcrawl) //No ventcrawl for hanner

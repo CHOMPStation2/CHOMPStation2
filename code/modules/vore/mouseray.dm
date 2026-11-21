@@ -8,7 +8,6 @@
 	fire_sound = 'sound/weapons/wave.ogg'
 	charge_cost = 240
 	projectile_type = /obj/item/projectile/beam/mouselaser
-	origin_tech = list(TECH_BLUESPACE = 4)
 	battery_lock = 1
 	firemodes = list()
 	force = 0 //CHOMPEdit
@@ -24,7 +23,9 @@
 		)
 
 /obj/item/gun/energy/mouseray/attack_self(mob/user)
-	. = ..()
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(tf_allow_select)
 		pick_type(user)
 
@@ -81,7 +82,7 @@
 	tracer_type = /obj/effect/projectile/tracer/laser_omni
 	impact_type = /obj/effect/projectile/impact/laser_omni
 
-/obj/item/projectile/beam/mouselaser/on_hit(var/atom/target)
+/obj/item/projectile/beam/mouselaser/on_hit(atom/target)
 	var/mob/living/M = target
 	if(!istype(M))
 		return
@@ -92,40 +93,7 @@
 			return
 	M.drop_both_hands()
 	if(M.tf_mob_holder && M.tf_mob_holder.loc == M)
-		new /obj/effect/effect/teleport_greyscale(M.loc)
-		var/mob/living/ourmob = M.tf_mob_holder
-		if(ourmob.ai_holder)
-			var/datum/ai_holder/our_AI = ourmob.ai_holder
-			our_AI.set_stance(STANCE_IDLE)
-		M.tf_mob_holder = null
-		var/turf/get_dat_turf = get_turf(target)
-		ourmob.loc = get_dat_turf
-		ourmob.forceMove(get_dat_turf)
-		if(!M.tf_form_ckey)
-			ourmob.vore_selected = M.vore_selected
-			M.vore_selected = null
-			ourmob.mob_belly_transfer(M)
-			ourmob.nutrition = M.nutrition
-			M.soulgem.transfer_self(ourmob)
-
-		ourmob.ckey = M.ckey
-
-		ourmob.Life(1)
-		if(ishuman(M))
-			for(var/obj/item/W in M)
-				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
-					continue
-				M.drop_from_inventory(W)
-
-		if(M.tf_form == ourmob)
-			if(M.tf_form_ckey)
-				M.ckey = M.tf_form_ckey
-			else
-				M.mind = null
-			ourmob.tf_form = M
-			M.forceMove(ourmob)
-		else
-			qdel(target)
+		M.revert_mob_tf()
 		return
 	else
 		if(M.stat == DEAD)	//We can let it undo the TF, because the person will be dead, but otherwise things get weird.
@@ -134,7 +102,7 @@
 
 		M.tf_into(new_mob)
 
-/obj/item/projectile/beam/mouselaser/proc/spawn_mob(var/mob/living/target)
+/obj/item/projectile/beam/mouselaser/proc/spawn_mob(mob/living/target)
 	if(!ispath(tf_type))
 		return
 	var/new_mob = new tf_type(get_turf(target))
@@ -167,7 +135,7 @@
 	name = "recombobulation beam"
 	tf_admin_pref_override = FALSE
 
-/obj/item/projectile/beam/mouselaser/reversion/on_hit(var/atom/target)
+/obj/item/projectile/beam/mouselaser/reversion/on_hit(atom/target)
 	if(istype(target,/obj/item)) //Are we shooting an item?
 		var/obj/item/O = target
 		if(O.possessed_voice.len) //Does the object have a voice? AKA, if someone inhabiting it?
@@ -192,44 +160,7 @@
 			firer.visible_message(span_warning("\The [src] buzzes impolitely."))
 			return
 	if(M.tf_mob_holder)
-		var/mob/living/ourmob = M.tf_mob_holder
-		if(ourmob.ai_holder)
-			var/datum/ai_holder/our_AI = ourmob.ai_holder
-			our_AI.set_stance(STANCE_IDLE)
-		M.tf_mob_holder = null
-		var/turf/get_dat_turf = get_turf(target)
-		ourmob.loc = get_dat_turf
-		ourmob.forceMove(get_dat_turf)
-		if(!M.tf_form_ckey)
-			ourmob.vore_selected = M.vore_selected
-			M.vore_selected = null
-			for(var/obj/belly/B as anything in M.vore_organs)
-				B.loc = ourmob
-				B.forceMove(ourmob)
-				B.owner = ourmob
-				M.vore_organs -= B
-				ourmob.vore_organs += B
-			ourmob.nutrition = M.nutrition
-			M.soulgem.transfer_self(ourmob)
-		ourmob.ckey = M.ckey
-
-		ourmob.Life(1)
-
-		if(ishuman(M))
-			for(var/obj/item/W in M)
-				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
-					continue
-				M.drop_from_inventory(W)
-
-		if(M.tf_form == ourmob)
-			if(M.tf_form_ckey)
-				M.ckey = M.tf_form_ckey
-			else
-				M.mind = null
-			ourmob.tf_form = M
-			M.forceMove(ourmob)
-		else
-			qdel(target)
+		M.revert_mob_tf()
 		firer.visible_message(span_notice("\The [shot_from] boops pleasantly."))
 		return
 	else
@@ -324,16 +255,30 @@
 		"leopardmander" = /mob/living/simple_mob/vore/leopardmander
 		)
 
+
 /obj/item/gun/energy/mouseray/metamorphosis/advanced/random
 	name = "unstable metamorphosis ray"
 	tf_allow_select = FALSE
+
+/obj/item/gun/energy/mouseray/metamorphosis/advanced/random/attackby(obj/item/A as obj, mob/user as mob)
+	if(A.has_tool_quality(TOOL_MULTITOOL))
+		if(tf_allow_select)
+			to_chat(user, span_warning("You scramble the stored data on \the [src], making it less reliable."))
+			tf_allow_select = FALSE
+			name = "unstable metamorphosis ray"
+		else
+			to_chat(user, span_warning("You repair the damage to the \the [src]."))
+			tf_allow_select = TRUE
+			name = "stable metamorphosis ray"
+	..()
 
 /obj/item/gun/energy/mouseray/metamorphosis/advanced/random/Fire(atom/target, mob/living/user, clickparams, pointblank, reflex)
 	if(world.time < cooldown)
 		to_chat(user, span_warning("\The [src] isn't ready yet."))
 		return
-	var/choice = pick(tf_possible_types)
-	tf_type = tf_possible_types[choice]
+	if(!tf_allow_select) //Keep a repaired gun from re-randomizing
+		var/choice = pick(tf_possible_types)
+		tf_type = tf_possible_types[choice]
 	. = ..()
 
 /obj/item/gun/energy/mouseray/woof

@@ -95,7 +95,7 @@
 
 /datum/tgui_module/camera/Destroy()
 	if(active_camera)
-		UnregisterSignal(active_camera, COMSIG_MOVABLE_MOVED)
+		UnregisterSignal(active_camera, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 	active_camera = null
 	last_camera_turf = null
 	QDEL_NULL(cam_screen_tg)
@@ -164,11 +164,11 @@
 		var/list/cameras = get_available_cameras(ui.user)
 		var/obj/machinery/camera/C = cameras["[ckey(c_tag)]"]
 		if(active_camera)
-			UnregisterSignal(active_camera, COMSIG_MOVABLE_MOVED)
+			UnregisterSignal(active_camera, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 		if(C)
 			active_camera = C
 			active_camera.AddComponent(/datum/component/recursive_move)
-			RegisterSignal(active_camera, COMSIG_MOVABLE_MOVED, PROC_REF(update_active_camera_screen))
+			RegisterSignal(active_camera, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(update_active_camera_screen))
 		playsound(tgui_host(), get_sfx("terminal_type"), 25, FALSE)
 		update_active_camera_screen()
 		return TRUE
@@ -193,10 +193,10 @@
 
 			if(target)
 				if(active_camera)
-					UnregisterSignal(active_camera, COMSIG_MOVABLE_MOVED)
+					UnregisterSignal(active_camera, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 				active_camera = target
 				active_camera.AddComponent(/datum/component/recursive_move)
-				RegisterSignal(active_camera, COMSIG_MOVABLE_MOVED, PROC_REF(update_active_camera_screen))
+				RegisterSignal(active_camera, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(update_active_camera_screen))
 				playsound(tgui_host(), get_sfx("terminal_type"), 25, FALSE)
 				update_active_camera_screen()
 				. = TRUE
@@ -257,7 +257,7 @@
 		all_networks += additional_networks
 
 	var/list/D = list()
-	for(var/obj/machinery/camera/C in cameranet.cameras)
+	for(var/obj/machinery/camera/C in SScameras.cameras)
 		if(!C.network)
 			stack_trace("Camera in a cameranet has no camera network")
 			continue
@@ -290,7 +290,7 @@
 	// Turn off the console
 	if(length(concurrent_users) == 0 && is_living)
 		if(active_camera)
-			UnregisterSignal(active_camera, COMSIG_MOVABLE_MOVED)
+			UnregisterSignal(active_camera, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 		active_camera = null
 		last_camera_turf = null
 		playsound(tgui_host(), 'sound/machines/terminal_off.ogg', 25, FALSE)
@@ -316,5 +316,8 @@
 
 /datum/tgui_module/camera/bigscreen/tgui_state(mob/user)
 	return GLOB.tgui_physical_state_bigscreen
+
+/datum/tgui_module/camera/virtual/tgui_state(mob/user)
+	return GLOB.tgui_camera_view
 
 #undef DEFAULT_MAP_SIZE

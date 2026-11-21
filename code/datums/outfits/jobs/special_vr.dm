@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/job/centcom_officer
+/datum/decl/hierarchy/outfit/job/centcom_officer
 	name = OUTFIT_JOB_NAME("CentCom Officer")
 	uniform = /obj/item/clothing/under/rank/centcom
 	gloves = /obj/item/clothing/gloves/white
@@ -13,14 +13,14 @@
 	headset_alt = /obj/item/radio/headset/centcom
 	headset_earbud = /obj/item/radio/headset/centcom
 
-/decl/hierarchy/outfit/job/emergency_responder
+/datum/decl/hierarchy/outfit/job/emergency_responder
 	name = OUTFIT_JOB_NAME("Emergency Responder")
 	uniform = /obj/item/clothing/under/ert
 	shoes = /obj/item/clothing/shoes/boots/swat
 	gloves = /obj/item/clothing/gloves/swat
 	glasses = /obj/item/clothing/glasses/sunglasses
 	back = /obj/item/storage/backpack/satchel
-	id_type = /obj/item/card/id/centcom/ERT
+	id_type = /obj/item/card/id/centcom/ert
 	pda_type = /obj/item/pda/centcom
 	flags = OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
 
@@ -28,11 +28,11 @@
 	headset_alt = /obj/item/radio/headset/ert
 	headset_earbud = /obj/item/radio/headset/ert
 
-/decl/hierarchy/outfit/job/emergency_responder/post_equip(var/mob/living/carbon/human/H)
+/datum/decl/hierarchy/outfit/job/emergency_responder/post_equip(mob/living/carbon/human/H)
 	..()
-	ert.add_antagonist(H.mind)
+	GLOB.ert.add_antagonist(H.mind)
 
-/decl/hierarchy/outfit/job/clown
+/datum/decl/hierarchy/outfit/job/clown
 	name = OUTFIT_JOB_NAME(JOB_CLOWN)
 	uniform = /obj/item/clothing/under/rank/clown
 	back = /obj/item/storage/backpack/clown
@@ -43,17 +43,21 @@
 	pda_type = /obj/item/pda/clown
 	flags = NONE
 
-/decl/hierarchy/outfit/job/mime
+/datum/decl/hierarchy/outfit/job/mime
 	name = OUTFIT_JOB_NAME(JOB_MIME)
 	uniform = /obj/item/clothing/under/mime
 	shoes = /obj/item/clothing/shoes/mime
 	head = /obj/item/clothing/head/soft/mime
 	mask = /obj/item/clothing/mask/gas/mime
-	backpack_contents = list(/obj/item/pen/crayon/mime = 1)
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/drinks/bottle/bottleofnothing = 1,
+		/obj/item/stamp/mime = 1, //CHOMPEdit - Enable Mimery book
+		/obj/item/spellbook/oneuse/mime/mimery = 1) //Disabled on Virgo - No magic //ChompEdit - Enable Mimery book
 	id_type = /obj/item/card/id/civilian/mime
 	pda_type = /obj/item/pda/mime
+	l_hand = /obj/item/storage/backpack/mime
 
-/decl/hierarchy/outfit/job/mime/post_equip(var/mob/living/carbon/human/H)
+/datum/decl/hierarchy/outfit/job/mime/post_equip(mob/living/carbon/human/H)
 	..()
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(new /obj/item/pen/crayon/mime(H), slot_l_hand)

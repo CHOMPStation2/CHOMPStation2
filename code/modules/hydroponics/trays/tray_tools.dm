@@ -30,12 +30,16 @@
 	var/list/last_reagents
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
+	special_handling = TRUE
 
 /obj/item/analyzer/plant_analyzer/Destroy()
 	. = ..()
 	QDEL_NULL(last_seed)
 
 /obj/item/analyzer/plant_analyzer/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	tgui_interact(user)
 
 /obj/item/analyzer/plant_analyzer/tgui_interact(mob/user, datum/tgui/ui)
@@ -136,7 +140,7 @@
 		return
 	print_report(usr)
 
-/obj/item/analyzer/plant_analyzer/proc/print_report(var/mob/living/user)
+/obj/item/analyzer/plant_analyzer/proc/print_report(mob/living/user)
 	var/datum/seed/grown_seed = last_seed
 	if(!istype(grown_seed))
 		to_chat(user, span_warning("There is no scan data to print."))

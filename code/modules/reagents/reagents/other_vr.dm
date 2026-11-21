@@ -3,11 +3,13 @@
 	id = REAGENT_ID_ADVMUTATIONTOXIN
 	description = "A corruptive toxin produced by slimes. Turns the subject of the chemical into a Promethean."
 	reagent_state = LIQUID
+	dermal_absorption = 0 //Injection only.
 	color = "#13BC5E"
+	scannable = SCANNABLE_ADVANCED
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/advmutationtoxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/advmutationtoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(!(M.allow_spontaneous_tf))
 		return
 	if(ishuman(M))
@@ -39,14 +41,14 @@
 	taste_description = "metallic"
 	reagent_state = LIQUID
 	color = "#333333"
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	affects_robots = TRUE
 	wiki_flag = WIKI_SPOILER
 
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/nif_repair_nanites/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/nif_repair_nanites/affect_blood(mob/living/carbon/M, alien, removed)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.nif)
@@ -60,12 +62,14 @@
 	id = REAGENT_ID_FIREFOAM
 	description = "A historical fire suppressant. Originally believed to simply displace oxygen to starve fires, it actually interferes with the combustion reaction itself. Vastly superior to the cheap water-based extinguishers found on most NT vessels."
 	reagent_state = LIQUID
+	dermal_absorption = 0 //Custom touch handling. As funny as PFAS poisoning is.
 	color = "#A6FAFF"
+	scannable = SCANNABLE_ADVANCED
 	taste_description = "the inside of a fire extinguisher"
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_INDUSTRY
 
-/datum/reagent/firefighting_foam/touch_turf(var/turf/T, reac_volume)
+/datum/reagent/firefighting_foam/touch_turf(turf/T, reac_volume)
 	if(reac_volume >= 1)
 		var/obj/effect/effect/foam/firefighting/F = (locate(/obj/effect/effect/foam/firefighting) in T)
 		if(!F)
@@ -83,8 +87,10 @@
 		lowertemp.react()
 		T.assume_air(lowertemp)
 		qdel(hotspot)
+	for(var/obj/effect/decal/cleanable/liquid_fuel/fuel_source in T) //Foam cleans up fuel sources.
+		qdel(fuel_source)
 
-	if (environment && environment.temperature > min_temperature) // Abstracted as steam or something
+	if(environment?.temperature > min_temperature) // Abstracted as steam or something
 		var/removed_heat = between(0, volume * 19000, -environment.get_thermal_energy_change(min_temperature))
 		environment.add_thermal_energy(-removed_heat)
 		if(prob(5))
@@ -92,10 +98,10 @@
 
 	T.apply_fire_protection() // CHOMPEdit - Apply fire protection to the turf
 
-/datum/reagent/firefighting_foam/touch_obj(var/obj/O, reac_volume)
+/datum/reagent/firefighting_foam/touch_obj(obj/O, reac_volume)
 	O.water_act(reac_volume / 5)
 
-/datum/reagent/firefighting_foam/touch_mob(var/mob/living/M, reac_volume)
+/datum/reagent/firefighting_foam/touch_mob(mob/living/M, reac_volume)
 	if(istype(M, /mob/living/simple_mob/slime)) //I'm sure foam is water-based!
 		var/mob/living/simple_mob/slime/S = M
 		S.adjustToxLoss(15 * reac_volume)
@@ -111,13 +117,13 @@
 	taste_description = "wiggly peanutbutter"
 	reagent_state = LIQUID
 	color = "#1d1d1d"
-	scannable = 0
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = REM * 0.5
 	affects_robots = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/liquid_protean/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/liquid_protean/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		var/chem_effective = 1
 		if(alien == IS_SLIME)
@@ -142,9 +148,10 @@
 	reagent_state = LIQUID
 	color = "#E4EC2F"
 	metabolism = 2.50
+	scannable = SCANNABLE_ADVANCED
 	var/power = 9
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/grubshock/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/grubshock/affect_blood(mob/living/carbon/M, alien, removed)
 	M.take_organ_damage(0, removed * power * 0.2)

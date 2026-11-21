@@ -74,7 +74,7 @@
 // Parameters: 1 (amount - how much to test and drain if there is enough)
 // Description: Use this to make spells cost energy.  It returns false if the technomancer cannot pay for the spell for any reason, and
 // if they are able to pay, it is deducted automatically.
-/obj/item/spell/proc/pay_energy(var/amount)
+/obj/item/spell/proc/pay_energy(amount)
 	if(!core)
 		return 0
 	return core.pay_energy(amount)
@@ -82,7 +82,7 @@
 // Proc: give_energy()
 // Parameters: 1 (amount - how much to give to the technomancer)
 // Description: Redirects the call to the core's give_energy().
-/obj/item/spell/proc/give_energy(var/amount)
+/obj/item/spell/proc/give_energy(amount)
 	if(!core)
 		return 0
 	return core.give_energy(amount)
@@ -90,7 +90,7 @@
 // Proc: adjust_instability()
 // Parameters: 1 (amount - how much instability to give)
 // Description: Use this to quickly add or subtract instability from the caster of the spell.  Owner is set by New().
-/obj/item/spell/proc/adjust_instability(var/amount)
+/obj/item/spell/proc/adjust_instability(amount)
 	if(!owner || !core)
 		return 0
 	amount = round(amount * core.instability_modifier, 0.1)
@@ -111,7 +111,7 @@
 // Proc: New()
 // Parameters: 0
 // Description: Sets owner to equal its loc, links to the owner's core, then applies overlays if needed.
-/obj/item/spell/Initialize(mapload, var/coreless)
+/obj/item/spell/Initialize(mapload, coreless)
 	. = ..()
 	if(isliving(loc))
 		owner = loc
@@ -136,7 +136,7 @@
 // Proc: unref_spells()
 // Parameters: 0
 // Description: Nulls object references on specific mobs so it can qdel() cleanly.
-/mob/proc/unref_spell(var/obj/item/spell/the_spell)
+/mob/proc/unref_spell(obj/item/spell/the_spell)
 	return
 
 // Proc: update_icon()
@@ -165,7 +165,7 @@
 	if(core.loc != owner || owner.back != core) //Make sure the core's being worn.
 		to_chat(owner, span_danger("You need to be wearing a core on your back!"))
 		return 0
-	if(!technomancers.is_antagonist(owner.mind) && !core.universal) //Now make sure the person using this is the actual antag. //VOREStation Edit - Universal cores
+	if(!GLOB.technomancers.is_antagonist(owner.mind) && !core.universal) //Now make sure the person using this is the actual antag. //VOREStation Edit - Universal cores
 		to_chat(owner, span_danger("You can't seem to figure out how to make the machine work properly."))
 		return 0
 	return 1
@@ -186,7 +186,7 @@
 // Proc: get_other_hand()
 // Parameters: 1 (I - item being compared to determine what the offhand is)
 // Description: Helper for Aspect spells.
-/mob/living/carbon/human/proc/get_other_hand(var/obj/item/I)
+/mob/living/carbon/human/proc/get_other_hand(obj/item/I)
 	if(r_hand == I)
 		return l_hand
 	else
@@ -196,9 +196,11 @@
 // Parameters: 1 (user - the Technomancer that invoked this proc)
 // Description: Tries to call on_use_cast() if it is allowed to do so.  Don't override this, override on_use_cast() instead.
 /obj/item/spell/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(run_checks() && (cast_methods & CAST_USE))
 		on_use_cast(user)
-	..()
 
 // Proc: attackby()
 // Parameters: 2 (W - the item this spell object is hitting, user - the technomancer who clicked the other object)
@@ -241,13 +243,13 @@
 // Proc: place_spell_in_hand()
 // Parameters: 1 (path - the type path for the spell that is desired.)
 // Description: Returns immediately, this is here to override for other mobs as needed.
-/mob/living/proc/place_spell_in_hand(var/path)
+/mob/living/proc/place_spell_in_hand(path)
 	return
 
 // Proc: place_spell_in_hand()
 // Parameters: 1 (path - the type path for the spell that is desired.)
 // Description: Gives the spell to the human mob, if it is allowed to have spells, hands are not full, etc.  Otherwise it deletes itself.
-/mob/living/carbon/human/place_spell_in_hand(var/path)
+/mob/living/carbon/human/place_spell_in_hand(path)
 	if(!path || !ispath(path))
 		return 0
 

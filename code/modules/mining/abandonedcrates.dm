@@ -1,7 +1,7 @@
 /obj/structure/closet/crate/secure/loot
 	name = "abandoned crate"
 	desc = "What could be inside?"
-	closet_appearance = /decl/closet_appearance/crate/secure
+	closet_appearance = /datum/decl/closet_appearance/crate/secure
 	var/list/code = list()
 	var/list/lastattempt = list()
 	var/attempts = 10
@@ -185,12 +185,12 @@ vorestation edit end */
 			explosion(T, 0, 0, 1, 2)
 			qdel(src)
 
-/obj/structure/closet/crate/secure/loot/emag_act(var/remaining_charges, var/mob/user)
+/obj/structure/closet/crate/secure/loot/emag_act(remaining_charges, mob/user)
 	if (locked)
 		to_chat(user, span_notice("The crate unlocks!"))
 		locked = 0
 
-/obj/structure/closet/crate/secure/loot/proc/check_input(var/input)
+/obj/structure/closet/crate/secure/loot/proc/check_input(input)
 	if(length(input) != codelen)
 		return 0
 

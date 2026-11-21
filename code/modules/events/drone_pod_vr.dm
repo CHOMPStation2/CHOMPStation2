@@ -22,7 +22,7 @@
 		qdel(target_spot)
 
 /datum/event/drone_pod_drop/announce()
-	command_announcement.Announce("An unidentified drone pod has been detected on a collision course towards the [location_name()]. Open and examine at your own risk.", "[location_name()] Sensor Network")
+	GLOB.command_announcement.Announce("An unidentified drone pod has been detected on a collision course towards the [location_name()]. Open and examine at your own risk.", "[location_name()] Sensor Network", ANNOUNCER_MSG_DRONEPOD)
 
 /datum/event/drone_pod_drop/start()
 	if(!land_target)
@@ -30,6 +30,5 @@
 
 	new /datum/random_map/droppod/supply(null, land_target.x-2, land_target.y-2, land_target.z, supplied_drops = list(/obj/structure/ghost_pod/manual/lost_drone/dogborg))
 
-//YW Addition: Adding named landmark for events
 /obj/effect/landmark/event_spawn/dronepod_landing
 	name = "droppod_landing"

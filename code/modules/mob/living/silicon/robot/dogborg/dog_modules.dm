@@ -11,6 +11,9 @@
 	flags = NOBLUDGEON //No more attack messages
 
 /obj/item/boop_module/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if (!( istype(user.loc, /turf) ))
 		return
 
@@ -132,9 +135,13 @@
 	var/emagged = 0
 	var/datum/matter_synth/water = null //CHOMPAdd readds water
 	var/busy = 0 	//prevents abuse and runtimes
-	flags = NOBLUDGEON //No more attack messages
+	flags = NOBLUDGEON | ALLOW_ATTACK_ANIMATIONS | HIDE_ATTACK_MESSAGE
+	no_attack_log = TRUE
 
 /obj/item/robot_tongue/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/mob/living/silicon/robot/R = user
 	if(R.emagged || R.emag_items)
 		emagged = !emagged
@@ -143,12 +150,38 @@
 			desc = "Your tongue has been upgraded successfully. Congratulations."
 			icon = 'icons/mob/dogborg_vr.dmi'
 			icon_state = "syndietongue"
+			no_attack_log = FALSE
 		else
 			name = "synthetic tongue"
 			desc = "Useful for slurping mess off the floor before affectionately licking the crew members in the face."
 			icon = 'icons/mob/dogborg_vr.dmi'
 			icon_state = "synthtongue"
 		update_icon()
+
+/obj/item/robot_tongue/attack(mob/living/target, mob/living/user, target_zone, attack_modifier)
+	. = ..()
+	if(. != ITEM_INTERACT_SUCCESS)
+		return
+	if(emagged)
+		var/mob/living/silicon/robot/R = user
+		if(!R.use_direct_power(666, 100))
+			to_chat(user, span_warning("Warning, low power detected. Aborting action."))
+			return ITEM_INTERACT_SUCCESS //Still a success, even if we ran out of power.
+		target.Stun(1)
+		target.Weaken(1)
+		target.apply_effect(STUTTER, 1)
+		target.visible_message(span_danger("[user] has shocked [target] with its tongue!"), \
+							span_userdanger("[user] has shocked you with its tongue! You can feel the betrayal."))
+		playsound(src, 'sound/weapons/egloves.ogg', 50, 1, -1)
+		return ITEM_INTERACT_SUCCESS
+
+	user.visible_message(span_notice("\The [user] affectionately licks all over \the [target]'s face!"), span_notice("You affectionately lick all over \the [target]'s face!"))
+	water.use_charge(5) //CHOMPAdd
+	if(ishuman(target))
+		var/mob/living/carbon/human/H = target
+		if(H.species.lightweight == 1)
+			H.Weaken(3)
+	return ITEM_INTERACT_SUCCESS
 
 /obj/item/robot_tongue/afterattack(atom/target, mob/user, proximity)
 	if(!proximity)
@@ -235,28 +268,6 @@
 			qdel(C)
 			target.wash(CLEAN_WASH)
 		busy = 0
-		//CHOMPADD End
-	else if(ishuman(target))
-		if(src.emagged)
-			var/mob/living/silicon/robot/R = user
-			var/mob/living/L = target
-			if(!R.use_direct_power(666, 100))
-				to_chat(user, span_warning("Warning, low power detected. Aborting action."))
-				return
-			L.Stun(1)
-			L.Weaken(1)
-			L.apply_effect(STUTTER, 1)
-			L.visible_message(span_danger("[user] has shocked [L] with its tongue!"), \
-								span_userdanger("[user] has shocked you with its tongue! You can feel the betrayal."))
-			playsound(src, 'sound/weapons/egloves.ogg', 50, 1, -1)
-		else
-			user.visible_message(span_notice("\The [user] affectionately licks all over \the [target]'s face!"), span_notice("You affectionately lick all over \the [target]'s face!"))
-			playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
-			water.use_charge(5) //CHOMPAdd
-			var/mob/living/carbon/human/H = target
-			if(H.species.lightweight == 1)
-				H.Weaken(3)
-	//CHOMPAdd Start
 	else
 		user.visible_message(span_filter_notice("[user] begins to lick \the [target.name] clean..."), span_notice("You begin to lick \the [target.name] clean..."))
 		busy = 1
@@ -282,6 +293,9 @@
 	flags = NOBLUDGEON
 
 /obj/item/pupscrubber/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/mob/living/silicon/robot/R = user
 	if(!enabled)
 		R.scrubbing = TRUE
@@ -299,9 +313,12 @@
 	uses = 10
 	var/cooldown = 0
 	var/datum/matter_synth/glass = null
+	special_handling = TRUE
 
 /obj/item/lightreplacer/dogborg/attack_self(mob/user)//Recharger refill is so last season. Now we recycle without magic!
-
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/choice = tgui_alert(user, "Do you wish to check the reserves or change the color?", "Selection List", list("Reserves", "Color"))
 	if(!choice)
 		return
@@ -340,7 +357,7 @@
 	var/busy
 	var/list/clamps = list()
 
-/obj/item/dogborg/stasis_clamp/afterattack(var/atom/A, mob/user as mob, proximity)
+/obj/item/dogborg/stasis_clamp/afterattack(atom/A, mob/user as mob, proximity)
 	if(!proximity)
 		return
 
@@ -386,10 +403,13 @@
 	flags = NOBLUDGEON
 
 /obj/item/dogborg/pounce/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/mob/living/silicon/robot/R = user
 	R.leap(bluespace)
 
-/mob/living/silicon/robot/proc/leap(var/bluespace = FALSE)
+/mob/living/silicon/robot/proc/leap(bluespace = FALSE)
 	if(last_special > world.time)
 		to_chat(src, span_filter_notice("Your leap actuators are still recharging."))
 		return
@@ -480,7 +500,7 @@
 /obj/item/reagent_containers/glass/beaker/large/borg/Initialize(mapload)
 	. = ..()
 	R = loc.loc
-	RegisterSignal(src, COMSIG_MOVABLE_MOVED, PROC_REF(check_loc))
+	RegisterSignal(src, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(check_loc))
 
 /obj/item/reagent_containers/glass/beaker/large/borg/proc/check_loc(atom/movable/mover, atom/old_loc, atom/new_loc)
 	SIGNAL_HANDLER
@@ -496,34 +516,20 @@
 			hud_layerise()
 
 /obj/item/reagent_containers/glass/beaker/large/borg/Destroy()
-	UnregisterSignal(src, COMSIG_MOVABLE_MOVED)
+	UnregisterSignal(src, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 	R = null
 	last_robot_loc = null
 	. = ..()
 
 /obj/item/mining_scanner/robot
 	name = "integrated deep scan device"
-	description_info = "This scanner can be upgraded for mining points."
-	var/upgrade_cost = 2500
-
-/obj/item/mining_scanner/robot/attackby(obj/item/O, mob/user)
-	if(exact)
-		return
-	if(!istype(O, /obj/item/card/id/cargo/miner/borg))
-		return
-	if(!(user == loc || user == loc.loc))
-		return
-	var/obj/item/card/id/cargo/miner/borg/id = O
-	if(!id.adjust_mining_points(-upgrade_cost))
-		return
-	upgrade(user)
+	description_info = "A basic, integrated ore scanning device which can be upgraded."
 
 /obj/item/mining_scanner/robot/proc/upgrade(mob/user)
 	desc = "An advanced device used to locate ore deep underground."
 	description_info = "This scanner has variable range, you can use the Set Scanner Range verb, or alt+click the device. Drills dig in 5x5."
 	scan_time = 0.5 SECONDS
 	exact = TRUE
-	to_chat(user, span_notice("You've upgraded the mining scanner for [upgrade_cost] points."))
 
 /obj/item/mining_scanner/robot/click_alt(mob/user)
 	change_size(user)

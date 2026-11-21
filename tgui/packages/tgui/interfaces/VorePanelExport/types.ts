@@ -4,6 +4,7 @@ export type Data = {
   db_version: string;
   db_repo: string;
   mob_name: string;
+  vore_pref_type_list: Record<string, number>;
   bellies?: Belly[];
   soulcatcher?: Soulcatcher;
 };
@@ -23,6 +24,7 @@ export type Belly = {
   mode: string;
   addons: string[];
   item_mode: string;
+  vore_pref_type_flags: number;
 
   // Options
   digest_brute: number;
@@ -150,7 +152,7 @@ export type Belly = {
   disable_hud: BooleanLike;
 
   // Interactions
-  escapable: BooleanLike;
+  escapable: number;
 
   escapechance: number;
   escapechance_absorbed: number;
@@ -189,6 +191,7 @@ export type Belly = {
   // Liquid Options
   show_liquids: BooleanLike;
   reagentbellymode: BooleanLike;
+  reagent_gen_cost_limit: number;
   reagent_chosen: string;
   reagent_name: string;
   reagent_transfer_verb: string;

@@ -72,7 +72,7 @@
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
 
-/obj/item/closet_painter/afterattack(atom/A, var/mob/user, proximity)
+/obj/item/closet_painter/afterattack(atom/A, mob/user, proximity)
 	if(!proximity)
 		return
 
@@ -119,7 +119,10 @@
 		to_chat(user, span_warning("\The [src] flashes an error light. You might need to reconfigure it."))
 		return
 
-/obj/item/closet_painter/attack_self(var/mob/user)
+/obj/item/closet_painter/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/choice = tgui_alert(user, "Do you wish to change the regular closet color or the secure closet color?", "Color Selection", list("Regular Closet Colour","Cancel","Secure Closet Colour"))
 	if(choice == "Regular Closet Colour")
 		choose_colour()

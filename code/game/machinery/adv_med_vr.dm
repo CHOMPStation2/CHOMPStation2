@@ -45,6 +45,8 @@
 	var/state
 	var/scan = TRUE
 	var/h_ratio = occupant.health / occupant.getMaxHealth()
+	if(occupant.status_flags & FAKEDEATH)
+		h_ratio = -1 //shows up dead
 	if(console)
 		console.update_icon(h_ratio)
 
@@ -93,7 +95,7 @@
 		add_overlay(gradient)
 
 
-/obj/machinery/body_scanconsole/update_icon(var/h_ratio)
+/obj/machinery/body_scanconsole/update_icon(h_ratio)
 	if(stat & (NOPOWER|BROKEN))
 		icon_state = "scanner_terminal_off"
 		set_light(0)

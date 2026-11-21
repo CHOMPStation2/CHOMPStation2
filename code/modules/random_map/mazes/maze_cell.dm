@@ -1,4 +1,4 @@
-var/maze_cell_count = 0
+GLOBAL_VAR_INIT(maze_cell_count, 0)
 
 /datum/maze_cell
 	var/name
@@ -8,9 +8,9 @@ var/maze_cell_count = 0
 	var/ox
 	var/oy
 
-/datum/maze_cell/New(var/nx,var/ny,var/nox,var/noy)
-	maze_cell_count++
-	uid = maze_cell_count
+/datum/maze_cell/New(nx,ny,nox,noy)
+	GLOB.maze_cell_count++
+	uid = GLOB.maze_cell_count
 	name = "cell #[uid]"
 	x = nx
 	y = ny

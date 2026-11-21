@@ -209,8 +209,8 @@
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "tM" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
 /obj/effect/floor_decal/corner/grey/diagonal,
+/mob/living/simple_mob/humanoid/astral_collective/ranged/zaddat,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "uh" = (
@@ -287,8 +287,8 @@
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "DA" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
 /obj/effect/floor_decal/corner/grey/diagonal,
+/mob/living/simple_mob/humanoid/astral_collective/purity,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "Ej" = (

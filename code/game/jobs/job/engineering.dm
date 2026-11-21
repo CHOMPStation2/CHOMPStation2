@@ -38,7 +38,7 @@
 	alt_titles = list(JOB_ALT_HEAD_ENGINEER = /datum/alt_title/head_engineer, JOB_ALT_FOREMAN = /datum/alt_title/foreman, JOB_ALT_MAINTENANCE_MANAGER = /datum/alt_title/maintenance_manager)
 	minimal_player_age = 31 //ChompEDIT
 
-	outfit_type = /decl/hierarchy/outfit/job/engineering/chief_engineer
+	outfit_type = /datum/decl/hierarchy/outfit/job/engineering/chief_engineer
 	job_description = "The " + JOB_CHIEF_ENGINEER + " manages the Engineering Department, ensuring that the Engineers work on what needs to be done, handling distribution \
 						of manpower as much as they handle hands-on operations and repairs. They are also expected to keep the rest of the station informed of \
 						any structural threats to the station that may be hazardous to health or disruptive to work."
@@ -85,7 +85,7 @@
 	minimal_player_age = 3
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 
-	outfit_type = /decl/hierarchy/outfit/job/engineering/engineer
+	outfit_type = /datum/decl/hierarchy/outfit/job/engineering/engineer
 	job_description = "An " + JOB_ENGINEER + " keeps the station running. They repair damages, keep the atmosphere stable, and ensure that power is being \
 						generated and distributed. On quiet shifts, they may be called upon to make cosmetic alterations to the station."
 
@@ -138,7 +138,7 @@
 /datum/alt_title/chem_tech
 	title = JOB_ALT_CHEMENGINEER
 	title_blurb = "A " + JOB_ALT_CHEMENGINEER + " specializes in industrial scale chemical production. They are responsible for planning the construction of and operating chemical refinery machines."
-	title_outfit = /decl/hierarchy/outfit/job/engineering/chems
+	title_outfit = /datum/decl/hierarchy/outfit/job/engineering/chems
 
 //////////////////////////////////
 //			Atmos Tech
@@ -164,7 +164,7 @@
 	minimal_player_age = 3
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 
-	outfit_type = /decl/hierarchy/outfit/job/engineering/atmos
+	outfit_type = /datum/decl/hierarchy/outfit/job/engineering/atmos
 	job_description = "An " + JOB_ATMOSPHERIC_TECHNICIAN + " is primarily concerned with keeping the station's atmosphere breathable. They are expected to have a good \
 						understanding of the pipes, vents, and scrubbers that move gasses around the station, and to be familiar with proper firefighting procedure."
 
@@ -187,3 +187,50 @@
 /datum/alt_title/disposals_tech
 	title = JOB_ALT_DISPOSALS_TECHNICIAN
 	title_blurb = "A " + JOB_ALT_DISPOSALS_TECHNICIAN + " is an " + JOB_ATMOSPHERIC_TECHNICIAN + " still and can fulfill all the same duties, although specializes more in disposals delivery system's operations and configurations."
+
+//////////////////////////////////
+//			Telecomms Specialist
+//////////////////////////////////
+/datum/job/telecomms_specialist
+	title = JOB_TELECOMMS_SPECIALIST
+	flag = TCOMMS
+	departments = list(DEPARTMENT_ENGINEERING)
+	department_flag = ENGSEC
+	faction = FACTION_STATION
+	total_positions = 2
+	spawn_positions = 3
+	pto_type = PTO_ENGINEERING
+	supervisors = "the " + JOB_CHIEF_ENGINEER
+	selection_color = "#5B4D20"
+	economic_modifier = 6
+	access = list(ACCESS_EVA, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_TCOMSAT)
+	minimal_access = list(ACCESS_EVA, ACCESS_ENGINE, ACCESS_MAINT_TUNNELS, ACCESS_EMERGENCY_STORAGE, ACCESS_CONSTRUCTION, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_TCOMSAT)
+
+	alt_titles = list(
+		JOB_ALT_WIRELESS_OPERATOR = /datum/alt_title/wireless_operator,
+		JOB_ALT_NETWORK_ENGINEER = /datum/alt_title/network_engineer,
+		JOB_ALT_SYSADMIN = /datum/alt_title/sysadmin,
+		JOB_ALT_TECHNICIAN = /datum/alt_title/tram_technician
+	)
+
+	minimal_player_age = 3
+	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
+
+	outfit_type = /datum/decl/hierarchy/outfit/job/engineering/telecomms_specialist
+	job_description = "A " + JOB_TELECOMMS_SPECIALIST + " is primarily concerned with keeping the station's communications stable. They are expected to have a good \
+						understanding of networking, and to be familiar with proper telecommunications repairs procedure. They may also help Engineering with light repairwork."
+
+/datum/job/telecomms_specialist/get_request_reasons()
+	return list("Construction project", "Repairs necessary", "Assembling expedition team")
+
+/datum/alt_title/wireless_operator
+	title = JOB_ALT_WIRELESS_OPERATOR
+
+/datum/alt_title/network_engineer
+	title = JOB_ALT_NETWORK_ENGINEER
+
+/datum/alt_title/sysadmin
+	title = JOB_ALT_SYSADMIN
+
+/datum/alt_title/tram_technician
+	title = JOB_ALT_TECHNICIAN

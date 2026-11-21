@@ -13,7 +13,6 @@
 	one_handed_penalty = 30 //A bit easier to aim then a sniper to aim but still not accurate
 	phase_power = 30 //Same as sniper.
 	projectile_type = /obj/item/projectile/scatter/frontierlaser
-	move_delay = 0
 	charge_cost = 400
 	fire_delay = 8
 	firemodes = list(

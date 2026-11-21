@@ -34,7 +34,7 @@
 "aaO" = (
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
@@ -1059,7 +1059,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 1
@@ -1418,10 +1418,6 @@
 /area/engineering/atmos/storage)
 "bow" = (
 /obj/random_multi/single_item/captains_spare_id,
-/obj/structure/closet/secure_closet/captains{
-	name = "station director's locker";
-	starts_with = list(/obj/item/storage/backpack/dufflebag/captain,/obj/item/clothing/head/helmet,/obj/item/clothing/suit/storage/vest,/obj/item/cartridge/captain,/obj/item/storage/lockbox/medal,/obj/item/radio/headset/heads/captain,/obj/item/radio/headset/alt/heads/captain,/obj/item/melee/telebaton,/obj/item/flash,/obj/item/storage/box/ids,/obj/item/melee/rapier,/obj/item/clothing/accessory/holster/machete/rapier)
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -1435,6 +1431,9 @@
 /obj/item/ammo_magazine/tp23s/rubber,
 /obj/item/ammo_magazine/tp23s/rubber,
 /obj/item/perfect_tele,
+/obj/structure/closet/secure_closet/captains{
+	name = "station director's locker"
+	},
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/heads/sc/sd)
 "bqy" = (
@@ -4320,11 +4319,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_10/upstairs)
-"eck" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/tcommsat/chamber)
 "ecu" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1381;
@@ -6367,7 +6361,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/engineering/engine_room)
@@ -6634,9 +6628,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/storage)
 "ggm" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/quartermaster/storage)
 "ggn" = (
 /obj/machinery/door/airlock/command{
@@ -7856,7 +7848,7 @@
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -8483,9 +8475,7 @@
 /area/crew_quarters/heads/sc/sd)
 "hSc" = (
 /obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/engine_monitoring)
 "hSv" = (
 /obj/structure/railing{
@@ -11102,7 +11092,7 @@
 	id_tag = "engine_access_hatch";
 	locked = 1;
 	name = "Reactor Core";
-	rad_resistance = 150;
+	rad_insulation = 0;
 	req_access = list(11)
 	},
 /turf/simulated/floor/reinforced,
@@ -11396,9 +11386,6 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
-/obj/structure/closet/secure_closet/guncabinet/sidearm{
-	starts_with = null
-	},
 /obj/item/ammo_magazine/m9mm/rubber,
 /obj/item/ammo_magazine/m9mm/rubber,
 /obj/item/ammo_magazine/m9mm/rubber,
@@ -11420,6 +11407,9 @@
 /obj/item/gun/energy/gun,
 /obj/item/gun/energy/gun,
 /obj/item/gun/energy/gun,
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "emergency weapon cabinet"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "kAb" = (
@@ -12575,9 +12565,7 @@
 /obj/structure/sign/directions/stairs_up{
 	dir = 8
 	},
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/atmos/storage)
 "lxn" = (
 /turf/simulated/wall/r_wall,
@@ -13359,7 +13347,7 @@
 /obj/machinery/door/blast/radproof{
 	dir = 4;
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/engineering/engine_room)
@@ -15102,11 +15090,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
-"nLj" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/engineering/atmos/storage)
 "nLq" = (
 /obj/structure/railing{
 	dir = 4
@@ -16273,9 +16256,7 @@
 /area/quartermaster/storage)
 "oLX" = (
 /obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/engine_room)
 "oMe" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -18363,9 +18344,6 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 9
 	},
-/obj/structure/closet/secure_closet/guncabinet/sidearm{
-	starts_with = null
-	},
 /obj/item/ammo_magazine/m9mm/rubber,
 /obj/item/ammo_magazine/m9mm/rubber,
 /obj/item/ammo_magazine/m9mm/rubber,
@@ -18390,6 +18368,9 @@
 /obj/item/gun/energy/gun,
 /obj/item/gun/energy/gun,
 /obj/item/gun/energy/gun,
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "emergency weapon cabinet"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "qmv" = (
@@ -19238,11 +19219,6 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/outpost/main/dorms/dorm_7/upstairs)
-"qRx" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/tcommsat/entrance)
 "qRI" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/bmarble,
@@ -21691,7 +21667,7 @@
 	opacity = 0
 	},
 /obj/machinery/door/blast/radproof{
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/plating/thor/planetuse,
 /area/engineering/engine_waste)
@@ -22521,7 +22497,7 @@
 	},
 /obj/machinery/door/blast/radproof{
 	id = "EngineReactor";
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/engineering/engine_room)
@@ -24003,7 +23979,7 @@
 "uWk" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/radproof{
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /turf/simulated/floor/plating,
@@ -24906,9 +24882,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/outpost/main/dorms/dorm_1/upstairs)
 "vOl" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/quartermaster/office)
 "vOy" = (
 /obj/machinery/door/airlock/hatch{
@@ -25468,11 +25442,6 @@
 	outdoors = 1
 	},
 /area/surface/outpost/wall)
-"wsD" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/tcommsat/computer)
 "wsL" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -26287,7 +26256,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Reactor Auxiliary Room";
-	rad_resistance = 150;
+	rad_insulation = 0;
 	req_one_access = list(11)
 	},
 /turf/simulated/floor/plating,
@@ -26767,9 +26736,7 @@
 	},
 /area/surface/outside/plains/outpost)
 "xGn" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/quartermaster/warehouse)
 "xGs" = (
 /obj/machinery/shipsensors,
@@ -27111,7 +27078,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
-	rad_resistance = 150
+	rad_insulation = 0
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_monitoring)
@@ -39947,16 +39914,16 @@ pur
 pur
 pur
 pur
-eck
-eck
-eck
-eck
-eck
-eck
-eck
-eck
-eck
-eck
+fML
+fML
+fML
+fML
+fML
+fML
+fML
+fML
+fML
+fML
 pur
 pur
 pur
@@ -40204,7 +40171,6 @@ pur
 pur
 pur
 pur
-eck
 fML
 fML
 fML
@@ -40213,7 +40179,8 @@ fML
 fML
 fML
 fML
-eck
+fML
+fML
 pur
 pur
 pur
@@ -40461,7 +40428,7 @@ pur
 pur
 pur
 pur
-eck
+fML
 fML
 aGJ
 wrl
@@ -40470,7 +40437,7 @@ wrl
 wrl
 cpM
 fML
-eck
+fML
 pur
 pur
 pur
@@ -40718,7 +40685,7 @@ jLH
 jLH
 jLH
 jLH
-eck
+fML
 fML
 jTW
 wrl
@@ -40727,7 +40694,7 @@ hbg
 wrl
 hLb
 fML
-eck
+fML
 rbk
 pur
 pur
@@ -40975,7 +40942,7 @@ jLH
 jLH
 jLH
 jLH
-eck
+fML
 fML
 lqv
 wrl
@@ -40984,7 +40951,7 @@ jrg
 wrl
 cTj
 fML
-eck
+fML
 pur
 pur
 pur
@@ -41232,7 +41199,7 @@ jLH
 jLH
 jLH
 xjA
-eck
+fML
 fML
 jjB
 wrl
@@ -41241,7 +41208,7 @@ uUc
 wrl
 iaU
 fML
-eck
+fML
 pur
 pur
 pur
@@ -41489,7 +41456,7 @@ tDM
 tDM
 tDM
 jLH
-eck
+fML
 fML
 qgP
 wrl
@@ -41498,7 +41465,7 @@ kZf
 wrl
 sqL
 fML
-eck
+fML
 pur
 pur
 pur
@@ -41744,9 +41711,9 @@ kfL
 syy
 tZP
 syy
-nLj
+tDM
 jLH
-eck
+fML
 fML
 ktk
 nMp
@@ -41755,7 +41722,7 @@ wNx
 qMD
 igy
 fML
-eck
+fML
 pur
 pur
 pur
@@ -42001,9 +41968,9 @@ pmB
 eih
 ctP
 ezx
-nLj
+tDM
 jLH
-eck
+fML
 fML
 nWs
 igC
@@ -42012,7 +41979,7 @@ pni
 pmH
 tXq
 fML
-eck
+fML
 pur
 pur
 pur
@@ -42258,9 +42225,9 @@ ekZ
 syy
 jnW
 qmU
-nLj
+tDM
 jLH
-eck
+fML
 fML
 jjB
 kqG
@@ -42269,7 +42236,7 @@ cHz
 pmH
 iaU
 fML
-eck
+fML
 xJA
 pur
 pur
@@ -42515,9 +42482,9 @@ tuu
 eih
 jnW
 qmU
-nLj
+tDM
 jLH
-eck
+fML
 fML
 goo
 kqG
@@ -42526,7 +42493,7 @@ teJ
 pmH
 hAJ
 fML
-eck
+fML
 pur
 pur
 pur
@@ -42774,7 +42741,7 @@ sAs
 syy
 lxi
 jLH
-eck
+fML
 fML
 kXx
 hHd
@@ -42782,8 +42749,8 @@ wTA
 cJd
 xwm
 hFz
-qRx
-qRx
+iJW
+iJW
 iJW
 iJW
 pur
@@ -43029,9 +42996,9 @@ syy
 syy
 sAs
 sMt
-nLj
+tDM
 jLH
-eck
+fML
 fML
 hxr
 klJ
@@ -43039,7 +43006,7 @@ hgO
 pJF
 jqS
 kDT
-qRx
+iJW
 sar
 lgB
 iJW
@@ -43286,9 +43253,9 @@ elb
 tnZ
 tQu
 oaY
-nLj
+tDM
 aCe
-wsD
+lVo
 lVo
 ecu
 mBp
@@ -43296,7 +43263,7 @@ lVo
 kAX
 kdr
 eEB
-qRx
+iJW
 tRI
 cgu
 iJW
@@ -43543,9 +43510,9 @@ krZ
 gYd
 mSy
 oaY
-nLj
+tDM
 jLH
-wsD
+lVo
 lVo
 pbI
 cNT
@@ -43553,7 +43520,7 @@ dYp
 uod
 peO
 nSj
-qRx
+iJW
 wpo
 oHf
 jzk
@@ -43800,12 +43767,12 @@ oHO
 oHy
 sIm
 oaY
-nLj
+tDM
 kdk
-wsD
+lVo
 lVo
 mlH
-wsD
+lVo
 lVo
 jTx
 osL
@@ -44059,10 +44026,10 @@ kDI
 tDM
 tDM
 vGk
-wsD
-wsD
-wsD
-wsD
+lVo
+lVo
+lVo
+lVo
 nHq
 vAg
 aTa
@@ -44319,8 +44286,8 @@ wNa
 ogx
 jZD
 jZD
-wsD
-wsD
+lVo
+lVo
 jEX
 lDB
 vRA
@@ -44577,11 +44544,11 @@ lcN
 lcN
 hAF
 wNa
-wsD
-wsD
-wsD
-qRx
-qRx
+lVo
+lVo
+lVo
+iJW
+iJW
 ilL
 geg
 eRN

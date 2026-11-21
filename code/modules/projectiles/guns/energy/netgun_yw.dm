@@ -13,7 +13,6 @@
 
 
 	fire_sound = 'sound/weapons/Taser.ogg'
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 6, TECH_MAGNET = 4)
 
 	firemodes = list(
 		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun/blue, fire_sound='sound/weapons/Taser.ogg', charge_cost=320, fire_delay=10),

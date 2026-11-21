@@ -9,9 +9,7 @@
 	var/moving_diagonally
 	var/move_speed = 10
 	var/l_move_time = 1
-	var/throwing = 0
-	var/thrower
-	var/turf/throw_source = null
+	var/datum/thrownthing/throwing
 	var/throw_speed = 2
 	var/throw_range = 7
 	var/moved_recently = 0
@@ -38,18 +36,27 @@
 
 /atom/movable/Initialize(mapload)
 	. = ..()
-	switch(blocks_emissive)
-		if(EMISSIVE_BLOCK_GENERIC)
-			var/mutable_appearance/gen_emissive_blocker = mutable_appearance(icon, icon_state, plane = PLANE_EMISSIVE, alpha = src.alpha)
-			gen_emissive_blocker.color = GLOB.em_block_color
-			gen_emissive_blocker.dir = dir
-			gen_emissive_blocker.appearance_flags |= appearance_flags
-			add_overlay(list(gen_emissive_blocker), TRUE)
-		if(EMISSIVE_BLOCK_UNIQUE)
+
+#if EMISSIVE_BLOCK_GENERIC != 0
+	#error EMISSIVE_BLOCK_GENERIC is expected to be 0 to facilitate a weird optimization hack where we rely on it being the most common.
+	#error Read the comment in code/game/atoms_movable.dm for details.
+#endif
+
+	if (blocks_emissive)
+		if (blocks_emissive == EMISSIVE_BLOCK_UNIQUE)
 			render_target = ref(src)
-			em_block = new(src, render_target)
+			em_block = new(null, src)
+			// Note, this should be refactored to drop priority overlays
 			add_overlay(list(em_block), TRUE)
 			RegisterSignal(em_block, COMSIG_QDELETING, PROC_REF(emblocker_gc))
+	else
+		var/mutable_appearance/gen_emissive_blocker = mutable_appearance(icon, icon_state, plane = PLANE_EMISSIVE, alpha = src.alpha)
+		gen_emissive_blocker.color = GLOB.em_block_color
+		gen_emissive_blocker.dir = dir
+		gen_emissive_blocker.appearance_flags |= appearance_flags
+		// Note, this should be refactored to drop priority overlays
+		add_overlay(list(gen_emissive_blocker), TRUE)
+
 	if(opacity)
 		AddElement(/datum/element/light_blocking)
 	if(icon_scale_x != DEFAULT_ICON_SCALE_X || icon_scale_y != DEFAULT_ICON_SCALE_Y || icon_rotation != DEFAULT_ICON_ROTATION)
@@ -277,6 +284,12 @@
 		return FALSE
 	return CanPass(AM, loc)
 
+///oldloc = old location on atom, inserted when forceMove is called and ONLY when forceMove is called!
+/atom/movable/Crossed(atom/movable/AM, oldloc)
+	SHOULD_CALL_PARENT(TRUE)
+	. = ..()
+	SEND_SIGNAL(src, COMSIG_MOVABLE_CROSSED, AM)
+
 /atom/movable/CanPass(atom/movable/mover, turf/target)
 	. = ..()
 	if(locs && locs.len >= 2)	// If something is standing on top of us, let them pass.
@@ -288,9 +301,8 @@
 	if(!A)
 		CRASH("Bump was called with no argument.")
 	. = ..()
-	if(throwing)
-		throw_impact(A)
-		throwing = 0
+	if(!QDELETED(throwing))
+		throwing.finalize(hit = TRUE, t_target = A)
 		if(QDELETED(A))
 			return
 
@@ -410,49 +422,22 @@
 /////////////////////////////////////////////////////////////////
 
 //called when src is thrown into hit_atom
-/atom/movable/proc/throw_impact(atom/hit_atom, var/speed)
+/atom/movable/proc/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	if(isliving(hit_atom))
 		var/mob/living/M = hit_atom
 		if(M.buckled == src)
 			return // Don't hit the thing we're buckled to.
-		M.hitby(src,speed)
+		M.hitby(src, throwingdatum)
 
 	else if(isobj(hit_atom))
 		var/obj/O = hit_atom
 		if(!O.anchored)
 			step(O, src.last_move)
-		O.hitby(src,speed)
+		O.hitby(src, throwingdatum)
 
 	else if(isturf(hit_atom))
-		src.throwing = 0
 		var/turf/T = hit_atom
-		T.hitby(src,speed)
-
-//decided whether a movable atom being thrown can pass through the turf it is in.
-/atom/movable/proc/hit_check(var/speed)
-	if(src.throwing)
-		for(var/atom/A in get_turf(src))
-			if(A == src)
-				continue
-			if(A.is_incorporeal())
-				continue
-			if(isliving(A))
-				var/mob/living/M = A
-				if(M.lying)
-					continue
-				src.throw_impact(A,speed)
-			if(isobj(A))
-				if(!A.density || A.throwpass)
-					continue
-				// Special handling of windows, which are dense but block only from some directions
-				if(istype(A, /obj/structure/window))
-					var/obj/structure/window/W = A
-					if (!W.is_fulltile() && !(turn(src.last_move, 180) & A.dir))
-						continue
-				// Same thing for (closed) windoors, which have the same problem
-				else if(istype(A, /obj/machinery/door/window) && !(turn(src.last_move, 180) & A.dir))
-					continue
-				src.throw_impact(A,speed)
+		T.hitby(src, throwingdatum)
 
 /atom/movable/proc/throw_at(atom/target, range, speed, mob/thrower, spin = TRUE, datum/callback/callback) //If this returns FALSE then callback will not be called.
 	. = TRUE
@@ -462,7 +447,12 @@
 	if (pulledby)
 		pulledby.stop_pulling()
 
-	var/datum/thrownthing/TT = new(src, target, range, speed, thrower, callback)
+	var/real_force = 0
+	if(isitem(src))
+		var/obj/item/thrown_item = src
+		real_force = thrown_item.throwforce
+
+	var/datum/thrownthing/TT = new(src, target, dir, range, speed, thrower, FALSE, real_force, FALSE, callback)
 	throwing = TT
 
 	pixel_z = 0
@@ -607,7 +597,7 @@
 
 
 // Animations for cloaking/uncloaking
-/atom/movable/proc/cloak_animation(var/length = 1 SECOND)
+/atom/movable/proc/cloak_animation(length = 1 SECOND)
 	//Save these
 	var/initial_alpha = alpha
 
@@ -628,7 +618,7 @@
 	//Back to original alpha
 	alpha = initial_alpha
 
-/atom/movable/proc/uncloak_animation(var/length = 1 SECOND)
+/atom/movable/proc/uncloak_animation(length = 1 SECOND)
 	//Save these
 	var/initial_alpha = alpha
 
@@ -666,7 +656,7 @@
 /atom/movable/proc/get_cell()
 	return
 
-/atom/movable/proc/emblocker_gc(var/datum/source)
+/atom/movable/proc/emblocker_gc(datum/source)
 	SIGNAL_HANDLER
 	UnregisterSignal(source, COMSIG_QDELETING)
 	cut_overlay(source)
@@ -686,7 +676,7 @@
 /atom/movable/proc/exit_belly(obj/belly/B)
 	return
 
-/atom/movable/proc/set_listening(var/set_to)
+/atom/movable/proc/set_listening(set_to)
 	if (listening_recursive && !set_to)
 		LAZYREMOVE(recursive_listeners, src)
 		if (!LAZYLEN(recursive_listeners))

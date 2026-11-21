@@ -39,12 +39,12 @@
 		if(candymaker_loop)
 			candymaker_loop.stop(src)
 
-/obj/machinery/appliance/mixer/candy/change_product_appearance(var/obj/item/reagent_containers/food/snacks/product)
+/obj/machinery/appliance/mixer/candy/change_product_appearance(obj/item/reagent_containers/food/snacks/product)
 	food_color = get_random_colour(1)
 	. = ..()
 
 
-/obj/machinery/appliance/mixer/candy/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/machinery/appliance/mixer/candy/attackby(obj/item/O as obj, mob/user as mob)
 	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
 		return
 	if(default_deconstruction_crowbar(user, O))

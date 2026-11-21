@@ -1,0 +1,356 @@
+2026-01-01:
+  Wide Eyes:
+  - maptweak: modifies the CS psych office
+  Willburd:
+  - bugfix: Unsimmed turfs now have a properly set blast resistance
+2026-01-02:
+  Aroliacue:
+  - balance: Removed the combat medkit from the security armory on Southern Cross.
+      Replaced with two advanced (red) medkits.
+  CHOMPStation2StaffMirrorBot:
+  - qol: removed the same-limb restriction on synth limb self repairs
+  - bugfix: fixed synths being able to get disfigured at full health by being non-surgically
+      repaired.
+  - rscadd: Added new sets of modular security armor - Regular black/red and black/red/white
+      sets.
+  - image: Added icons for new black/red/white modular security armor.
+  - rscadd: Added black gas half-masks and security black gas half-masks to loadout
+      under masks section. Added security black gas half-masks to security lockers.
+  - image: "Added digi sprites for riot, laserproof, bulletproof and combat leg guards.\
+      \ Credit to @\_ballisticarmoredchan (Valinari) on Chomp for sprites and concept."
+  Diana:
+  - qol: Clicking the ammo hud will swap firemodes for guns if applicable, now.
+2026-01-03:
+  Aroliacue:
+  - rscadd: Added a new armor vendor to the security armory.
+  - balance: Reduced the strength of the default plate carrier equipment available
+      in security.
+  - maptweak: Added a new vendor to the security armory, consolidated the regular
+      combat armor into one tile.
+  FluffMedic:
+  - rscadd: New special effects for painite, and bronze ants. Added Graphite ant with
+      no special ability
+  - rscadd: New Lore bits hidden within the Tyrian maze
+  - rscadd: Adds Lighting Fog to Tyr, removes fierce sandstorm and hidden weathers
+  - balance: nerfed ant damage, and spawn rate, increased spawn amount
+  - balance: reworked two boss fights
+  - bugfix: Area coding for both inside and outside, and for area overhaul
+  - bugfix: Also fixes the corrupted lore looking horrendous
+  - bugfix: fixed active edges on some POIs
+  Guti:
+  - rscadd: Added weather anomaly
+  - qol: Smoke from neutralized anomalies is now much short-lived
+  - bugfix: Fixed spawned anomalies from telesci not having cores
+2026-01-05:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added premade liquid options to the Swoopie mob's stomach.
+  - image: Changed Swoopie's fullscreen overlays to use animated versions.
+  - spellcheck: Changed Swoopie's throat vbellies to use fancier worded progressive
+      stages rather than numbered stages.
+  - code_imp: moves all forceMoves for vore code to nom_atom
+  - bugfix: limits belly entered messages and transfer lookups
+  - bugfix: Fixes the number of hours until a job is available.
+  Diana:
+  - bugfix: Things that 'knock you out' will properly KO you now, instead of simply
+      paralyzing you.
+  - bugfix: Plushies can be interacted with again
+  - qol: Changeling helmet can eat more than just survival rations.
+  - bugfix: Vox magclaws no longer slow you down when enabled.
+  - bugfix: Holywater thresholds adjusted for horror elements.
+  - spellcheck: fixes a typo with the bodysnatcher
+  FluffMedic:
+  - bugfix: Makes the aegis bridge armory more consistent with other armories
+  - bugfix: Alters the areas so the rust computers share the area with the rust
+  Guti:
+  - bugfix: Fixed accidental mob vore not caring about prefs
+  - rscadd: Added weather anomaly event
+  - balance: Various events now weight more with their heads on, and scaled as more
+      people join in.
+  - rscdel: Removed various events out of rotation, mostly broken or completely ignored.
+  - bugfix: Fixed lead ingots not being grindable
+  - bugfix: Teshari CE cloak can now be properly selected
+  - spellcheck: Changes multiple instances of "Cheif" to "Chief"
+2026-01-06:
+  CHOMPStation2StaffMirrorBot:
+  - config: new config entries to set discord channels for round start/end announcements
+  - rscadd: Added new xenomorph queen backplate to wing menu.
+  - image: Added new sprites for xeno queen backplate.
+  - bugfix: Fixed xenomorph tail (vwag) not being able to toggle off vwag.
+  Diana:
+  - bugfix: You can no longer activate grenades in your hand while dead.
+  - code_imp: Rightclick functionality with held objects is possible now.
+  - bugfix: Fultons can no longer be deployed inside of things.
+  Guti:
+  - bugfix: Fixed Dark Maw not eating captured prey, if prefs aligned
+  Will:
+  - bugfix: Attempting to pass mob grabs to another player no longer drops a qdeleted
+      grab on the floor
+2026-01-07:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: updates rust g to 6.0.0
+  - bugfix: Ctrl+R in tgui works again
+  - bugfix: Passthrough in tgui works again
+  - rscadd: Added a new vac-pack subtype and a new power level and effects.
+  - qol: Vac-pack custom sounds and verbs and anim toggle are now editable vars.
+  - code_imp: update overlay subsystem
+  - code_imp: modernises the chat and tgui backend code
+  Shoanaea, Zayahpapayah:
+  - rscadd: Added the Electrovore trait to allow players to drain power cells for
+      nutrition
+  - rscadd: Added the Electrovore, Obligate to allow players to drain cells for and
+      charge cells with nutrition
+  - code_imp: Added the Electrovore and Obligate code, touched up cell.dm to allow
+      for draining and charging
+2026-01-08:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed mech maintenance mode causing issues for clients and server whilst
+      trying to move
+  - rscadd: 'Added two more admin player effects: Wet Surrounding Surfaces and Give
+      Quest'
+  Guti:
+  - bugfix: Fixed pyroclastic anomaly sending weather anomaly alerts
+  wide eyes:
+  - bugfix: fixes airlock, solars, and hopefully fixes sec intercom
+2026-01-09:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: moves those alists to lists
+  - balance: Security Protolathe can now print researched device cells.
+  - code_imp: cleans up the vore fx and resist code
+  - bugfix: multiple throwing issues
+2026-01-13:
+  CHOMPStation2StaffMirrorBot:
+  - qol: prey struggles are now intent based
+  - bugfix: Fixes the ddraig description.
+  FluffMedic:
+  - bugfix: fixed the bug where if haste was picked first, hardy and the strength
+      buffs could be grabbed
+2026-01-14:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: start Now shown as usable after pregame
+  - rscadd: Added new options for hanner beastforms.
+  - spellcheck: Minor reordering of beastform lists to keep them alphabetical.
+  - bugfix: People flying above tables when they should fall down.
+  - bugfix: the sql schema can now be cleanly imported including the procedures and
+      events
+  - bugfix: loose round associations should no longer exist
+  - bugfix: Fixed simple mobs requiring insane amounts of nutrition to remove their
+      hunger bar.
+  - bugfix: Fixed TFd mobs showing up on crew monitors.
+  Diana:
+  - bugfix: Blacklists some more mobs from spawning in tsci
+  Will:
+  - qol: Look upward verb now lets you look upward one z level
+  - code_imp: remote views with zoom hude or different sizes are easier to start
+  zeskorion:
+  - bugfix: cetus fixes
+2026-01-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: painting meta data runtiming
+  zeskorion:
+  - balance: caps feralness damage bonus to chimera punches at 40
+2026-01-16:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: initial input getting dropped in the backend
+2026-01-17:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: speeds up robot sprite sheet gen
+  - bugfix: changes player note stack behaviour
+  - rscadd: 'Added new signals: COMSIG_DISPOSAL_SEND, COMSIG_DISPOSAL_LINK, and COMSIG_DISPOSAL_UNLINK,
+      also renamed COMSIG_DISPOSAL_RECEIVING to COMSIG_DISPOSAL_RECEIVE'
+  - rscadd: Added the ability to adjust the ejection distance on disposal pipe outlets.
+      A treat for mappers and disposal pipe enthusiasts alike, just use a multitool!
+  - rscdel: Removed the /datum/component/disposal_system_connection/disposaloutlet
+      subtype of the disposal connection component as is now redundant.
+  - qol: Lets you alt-click on a disposal bin to flush it. Nice.
+  - qol: Adds the destination tagger to the autolathe. It's a thing on TG code, and
+      makes tagging stuff far less of a hassle than it currently is if you lost/dont
+      have a tagger.
+  - qol: You can resist to break out of a disposal tube that has stopped moving. No
+      longer shall you be trapped forever!
+  - bugfix: Fixed that minor issue with disposal bin/chute ejecting in a wildly overthetop
+      way. Because muh disposal code
+  - spellcheck: Fixed a missing space in hazardous disposal bin's name.
+  - code_imp: Moved disposal device ejection code back to the object that receives
+      the packet.
+  - refactor: Entirely refactored how disposal connection components work and connect
+      to objects... Again.
+  - admin: Disposal pipes will now give an alert for any mob that has a client getting
+      flushed, not just carbon humans
+  Guti:
+  - rscdel: Removed gib tumors from random malignant organ event
+2026-01-18:
+  Azzy.Dreemurr:
+  - qol: Mentors now have the ability to communicate more easily in the Mentor Channel
+      via the button F9
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: spasm self ownership not being reversible
+  - bugfix: some missing buttons in the vorepanel for examine messages
+  - code_imp: updates the changelog
+  - bugfix: prevents signal reg spam on holomap spam clicking
+  - bugfix: linking in motd
+  - image: Janitor catborg
+  - bugfix: ss explosion runtiming in stat entry lookups
+  - bugfix: jani catborg still using the placeholder
+  - bugfix: chat message order for event announcements
+  Guti:
+  - bugfix: Fixed Anomalies not having a randomized frequency
+  - bugfix: Fixed weather anomalies not spawning with telescience
+  - bugfix: Fixed dimensional anomaly removing all the airlocks required access
+  - code_imp: Fixed get_station_areas returning areas from other stations
+  - code_imp: Moves a couple of procs from weather anomaly to anomalous weather datum
+  - balance: You can now have up to 3 viruses in your body.
+  - balance: Viruses will have a varied range of reagents for their cures now.
+  - balance: Removed nutriment-based virus protection.
+  - balance: Cure chance lowered to 5-10
+  - balance: Headache symptom stun reduced from 15 to 5
+  - balance: Incremented the power of Tissue Hydration
+  - balance: Reduced the severity of Weight Loss symptom to 1
+  - balance: Spyndrome's stealth changed to -1, resistance to 3
+  - rscadd: Added Narcolepsy symptom
+  - bugfix: Fixed admin-created viruses having the developer warning name
+  - bugfix: Injecting diseased blood will no longer check for clothing immunity
+  - code_imp: Cleaned up a few old symptom files
+  - code_imp: Added comparators for virus resistance and symptom names
+  - spellcheck: Corrected some spelling mistakes across various symptoms
+  Tost:
+  - qol: Moved a bunch of of cleaning messages to ballons.
+  - bugfix: Advanced Mop has sprites now.
+  nova:
+  - qol: Adds option to avoid attempts at being picked up with the personal space
+      bubble trait
+2026-01-19:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: detailed subsystem stat view crashing
+  - bugfix: runtime in clothing selection in the char editor
+  - bugfix: disable capture prefs should not hardfail on nif soulcatcher transfers
+  - rscadd: Major Slobberer trait, adds wet stacks on lick and makes people drippy.
+  - rscadd: Makes Prey Wet belly addon, adds wet stacks to prey in a belly and makes
+      them drippy. Basically irrelevant unless you spit them back out.
+  - bugfix: Fixed a handful of big strong mobs that have leap attacks literally throwing
+      themselves into spont vore bellies.
+  - bugfix: crashes in the station disposals system
+  Kashargul:
+  - bugfix: food replicator runtiming
+2026-01-20:
+  CHOMPStation2StaffMirrorBot:
+  - admin: added new dbranks permission
+  - admin: updated permissions panel
+  - admin: ranks with no permission will now be displayed with the "NONE" permission
+  - bugfix: belch chance not being properly accounted for on intent based struggling
+  - bugfix: some casino vendor runtimes
+  - bugfix: stale settings in rare cases
+  Diana:
+  - bugfix: Collars, when worn in the 'suit' slot, now properly show.
+  - bugfix: Translocators work when clicked vs having to press Z
+  Guti:
+  - bugfix: Fixed being able to contract the same disease multiple times.
+  - bugfix: Fixed viruses not removing their mob reference when the mob was deleted.
+  Will:
+  - bugfix: Disposal expel runtime fixed
+2026-01-21:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: some missing vanity copy traits
+  - qol: reduce protean tab flicker
+  - code_imp: moves the loading for the browser to promiseAll, similar to chat data
+      loading
+  - maptweak: Removes the window from the door to the security processing room on
+      the SD, and adds a lock to it.
+  FluffMedic:
+  - rscadd: Two new bosses
+  - rscadd: Alien tools are printable once the conditions are met
+  - balance: Several things are restricted behind exploration now, Omni Part, Recharging
+      Cells, and the alien tools mentioned
+  - balance: Several bosses have been buffed
+  - bugfix: Ants properly glow now
+  - bugfix: The final option and a fluff item be obtainable in explo
+  - maptweak: Ambush Base, it's alt, and Blackshuttledown have been altered
+  zeskorion:
+  - bugfix: cs maintenance
+2026-01-22:
+  Azzy.Dreemurr:
+  - qol: Added buttons for Staff chats Easy -> F10; Msay -> F9
+  - bugfix: MentorSay now F11 and the button works
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: janicart examine dupe
+  - bugfix: empty to chat runtime for digestive turfs
+  Cameron-The-Raven:
+  - bugfix: Non-revivable entities can no longer be revived via CPR
+  - bugfix: Synthetics can no longer be revived via CPR
+  - bugfix: You will no longer gasp after being revived via CPR if you have no lungs
+2026-01-23:
+  CHOMPStation2StaffMirrorBot:
+  - qol: adds spoiler to character directory
+  - bugfix: a crash case in the character editor
+  - code_imp: tgui dependency up
+2026-01-24:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a new preference that allows you to drop all of your items and possibly
+      underwear upon being suddenly resized by more than 30%.
+  - bugfix: Fixed temperature damage toggle saving.
+  - bugfix: Bluespace collars changing into shock collar sprites on toggling power.
+  - qol: Made unlucky trigger toe stubbing one tenth as often.
+  FluffMedic:
+  - qol: Some more POIs can unlock omnis
+  Guti:
+  - bugfix: Fixed mlemington activating the mlem spree at any time
+  - bugfix: Fixed narcolepsy missing a description
+  - bugfix: Fixed Pandemic UI not showing the severity of a virus
+  - bugfix: Fixed viruses changing cures when taking it out of a mob
+  - bugfix: Fixed the PanDEMIC showing the ID for the reagent instead of the name
+      as the cure
+  - spellcheck: Removed "the" when Biometallic Replication symptom picked any organ
+  - code_imp: Added IMMUTABLE flag for viruses, to not allow them to change
+2026-01-25:
+  CHOMPStation2StaffMirrorBot:
+  - rscdel: no longer existing config entry
+  - bugfix: another bad object spawn in xenoarch
+  - bugfix: empty lists for auto transfer
+  - bugfix: ghost leaving VR not getting ghostized before qdel
+  - bugfix: flip no longer restores any flags badly
+  - rscadd: 'Added a new Skin Reagent trait, that allows you to pick one of six reagents
+      that coat your skin and are applied to people when they lick you. These include:
+      Ethanol, Capsaicin, Sleep Toxin, Rainbow Toxin, Paralysis Toxin and Pain Enzyme.'
+  - code_imp: Also added a new option to traits to allow you to use a single list
+      for them to select preferences, using a list variable called "multiple_choice".
+  Kashargul:
+  - bugfix: missing init hint
+  - bugfix: server crash on egg laying
+2026-01-27:
+  CHOMPStation2StaffMirrorBot:
+  - qol: allows to lower limit liquid gen %
+  - code_imp: converts a bunch of variables to GLOB
+  - bugfix: a few runtimes
+  Diana:
+  - code_imp: Adds more framework for radiation component to do more fancy things.
+  - qol: Nutrition gain from radiation gains can be toggled on/off
+  Guti:
+  - balance: Lowered the threshold for chemical addictions
+2026-01-30:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Showers now instantly run a wash call on things that go under them while
+      active
+  - code_imp: Removed a fair few unnecessary variables on showers and replaced it
+      with better code.
+  - code_imp: Showers can have their output reagent overridden, either by adminbus
+      or subtypes.
+  - code_imp: Showers no longer run process() calls while inactive. This should free
+      up a fair few SSmachines process calls that did literally nothing
+  - code_imp: converts the next set of globals to GLOBs
+  - bugfix: Fixes an uncleared hardref on disposal pipe trunks when deleting their
+      linked object
+  - bugfix: Makes the pet rat undevourable and undigestable, like most other pets.
+  Diana:
+  - bugfix: Tsci can no longer be spam-failed
+  - bugfix: Tsci can no longer cause a failure while an active teleport is ongoing.
+  FluffMedic:
+  - balance: Cult Cell recharges faster
+  - balance: Tyr Agate Hammer has gone from 20 to 35 force
+  - bugfix: Tyr Agate Hammer has the proper meta desc.
+  - bugfix: Tyr weapons should no longer gain a blue hue
+  Will:
+  - bugfix: plastique explosive explosion reduced, seismic charge unchanged
+  - qol: Methane canisters can now be ordered from cargo, like all other gasses.
+2026-01-31:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: dependency up
+  - code_imp: converts the next set of globals to GLOBs

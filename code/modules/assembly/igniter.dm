@@ -2,11 +2,11 @@
 	name = "igniter"
 	desc = "A small electronic device able to ignite combustable substances."
 	icon_state = "igniter"
-	origin_tech = list(TECH_MAGNET = 1)
-	matter = list(MAT_STEEL = 500, MAT_GLASS = 50)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.25), MAT_GLASS = MATERIAL_COST(0.025))
 
 	secured = 1
 	wires = WIRE_RECEIVE
+	special_handling = TRUE
 
 /obj/item/assembly/igniter/activate()
 	if(!..())
@@ -32,7 +32,10 @@
 	return TRUE
 
 
-/obj/item/assembly/igniter/attack_self(var/mob/user)
+/obj/item/assembly/igniter/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	activate()
 	add_fingerprint(user)
 

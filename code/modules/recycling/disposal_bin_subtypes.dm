@@ -23,24 +23,24 @@
 
 // Incin/space
 /obj/machinery/disposal/burn_pit
-	name = "disposal(hazardous)"
+	name = "disposal (hazardous)"
 	desc = "A pneumatic waste disposal unit. This unit is either connected directly to the station's waste processor or dumped into space."
 	icon_state = "red"
 
 /obj/machinery/disposal/wall/burn_pit
-	name = "disposal(hazardous)"
+	name = "disposal (hazardous)"
 	desc = "A pneumatic waste disposal unit. This unit is either connected directly to the station's waste processor or dumped into space."
 	icon_state = "redwall"
 
 // Amnesty box
 /obj/machinery/disposal/turn_in
 	name = "amnesty bin"
-	desc = "A pneumatic waste disposal unit. A place to legally turn in contraban to security."
+	desc = "A pneumatic waste disposal unit. A place to legally turn in contraband to security."
 	icon_state = "green"
 
 /obj/machinery/disposal/wall/turn_in
 	name = "amnesty bin"
-	desc = "A pneumatic waste disposal unit. A place to legally turn in contraban to security."
+	desc = "A pneumatic waste disposal unit. A place to legally turn in contraband to security."
 	icon_state = "greenwall"
 
 // Gets mail

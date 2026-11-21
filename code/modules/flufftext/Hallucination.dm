@@ -31,6 +31,8 @@ Gunshots/explosions/opening doors/less rare audio (done)
 	if(halitem.len)
 		remove_hallucination_item()
 	our_human = null
+	halbody = null
+	halimage = null
 	. = ..()
 
 /datum/component/hallucinations/proc/make_timer()
@@ -49,7 +51,7 @@ Gunshots/explosions/opening doors/less rare audio (done)
 // Traditional hallucinations
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /mob/living/carbon/proc/handle_hallucinations()
-	if(get_hallucination_component() || !client)
+	if(get_hallucination_component() || !client || HAS_TRAIT(src, TRAIT_MADNESS_IMMUNE))
 		return
 	LoadComponent(/datum/component/hallucinations)
 

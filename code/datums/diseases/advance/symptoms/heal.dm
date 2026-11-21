@@ -261,10 +261,10 @@
 		. += power
 	if(H.ingested.has_reagent(REAGENT_ID_HOLYWATER))
 		H.ingested.remove_reagent(REAGENT_ID_HOLYWATER, 0.5 * absorption_coeff)
-		. += power * 0.75
+		. += power * 1.25
 	else if(H.ingested.has_reagent(REAGENT_ID_WATER))
 		H.ingested.remove_reagent(REAGENT_ID_WATER, 0.5 * absorption_coeff)
-		. += power * 0.5
+		. += power * 0.75
 
 /datum/symptom/heal/water/Heal(mob/living/carbon/human/H, datum/disease/advance/A, actual_power)
 	if(!istype(H))
@@ -314,7 +314,7 @@ Bonus
 	level = 5
 	severity = 0
 
-/datum/symptom/heal/dna/Heal(var/mob/living/carbon/M, var/datum/disease/advance/A)
+/datum/symptom/heal/dna/Heal(mob/living/carbon/M, datum/disease/advance/A)
 	var/amt_healed = max(0, (sqrtor0(20+A.stage_rate*(3+rand())))-(sqrtor0(16+A.stealth*rand())))
 	M.adjustBrainLoss(-amt_healed)
 	M.radiation = max(M.radiation - 3, 0)

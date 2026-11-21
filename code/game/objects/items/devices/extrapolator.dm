@@ -3,6 +3,7 @@
 	icon = 'icons/obj/device.dmi'
 	icon_state = "extrapolator_scan"
 	desc = "A bulky scanning device, used to extract genetic material of potential pathogens."
+	description_info = "Use on hand to change between SCAN and EXTRACT mode."
 	item_flags = NOBLUDGEON
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_NORMAL
@@ -61,7 +62,7 @@
 		return TRUE
 
 /obj/item/extrapolator/attack_self(mob/user)
-	. = ..()
+	. = ..(user)
 	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
 	if(scan)
 		icon_state = "extrapolator_sample"
@@ -92,8 +93,8 @@
 	// maximum_stealth = scanner.rating + 2
 	maximum_level = scanner.rating + 5
 
-/obj/item/extrapolator/attack(atom/AM, mob/living/user)
-	return
+/obj/item/extrapolator/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	return ITEM_INTERACT_FAILURE
 
 /obj/item/extrapolator/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()

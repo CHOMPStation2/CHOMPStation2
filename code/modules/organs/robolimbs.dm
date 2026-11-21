@@ -2,28 +2,6 @@ GLOBAL_LIST_EMPTY(all_robolimbs)
 GLOBAL_LIST_EMPTY(robolimb_data)
 GLOBAL_LIST_EMPTY(chargen_robolimbs)
 GLOBAL_DATUM(basic_robolimb, /datum/robolimb)
-var/const/standard_monitor_styles = "blank=ipc_blank;\
-	pink=ipc_pink;\
-	green=ipc_green;\
-	red=ipc_red;\
-	blue=ipc_blue;\
-	shower=ipc_shower;\
-	orange=ipc_orange;\
-	nature=ipc_nature;\
-	eight=ipc_eight;\
-	goggles=ipc_goggles;\
-	heart=ipc_heart;\
-	monoeye=ipc_monoeye;\
-	breakout=ipc_breakout;\
-	yellow=ipc_yellow;\
-	static=ipc_static;\
-	purple=ipc_purple;\
-	scroll=ipc_scroll;\
-	console=ipc_console;\
-	glider=ipc_gol_glider;\
-	rainbow=ipc_rainbow;\
-	smiley=ipc_smiley;\
-	database=ipc_database"
 
 /proc/populate_robolimb_list()
 	GLOB.basic_robolimb = new()
@@ -71,7 +49,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	desc = "A generic unbranded interpretation of a popular prosthetic head model. It looks rudimentary and cheaply constructed."
 	icon = 'icons/mob/human_races/cyberlimbs/unbranded/unbranded_monitor.dmi'
 	parts = list(BP_HEAD)
-	monitor_styles = standard_monitor_styles
+	monitor_styles = STANDARD_MONITOR_STYLES
 	unavailable_to_build = 1
 
 /datum/robolimb/unbranded_alt1
@@ -186,7 +164,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	icon = 'icons/mob/human_races/cyberlimbs/bishop/bishop_monitor.dmi'
 	unavailable_to_build = 1
 	parts = list(BP_HEAD)
-	monitor_styles = standard_monitor_styles
+	monitor_styles = STANDARD_MONITOR_STYLES
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/gestaltframe
@@ -199,9 +177,6 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	unavailable_to_build = 1
 	species_cannot_use = list(SPECIES_TESHARI, SPECIES_PROMETHEAN, SPECIES_TAJARAN, SPECIES_HUMAN, SPECIES_VOX, SPECIES_HUMAN_VATBORN, SPECIES_UNATHI, SPECIES_SKRELL, SPECIES_ZADDAT)
 	suggested_species = SPECIES_DIONA
-	// Dionaea are naturally very tanky, so the robotic limbs are actually far weaker than their normal bodies.
-	robo_brute_mod = 1.3
-	robo_burn_mod = 1.3
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/cybersolutions
@@ -244,12 +219,12 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Grayson"
 	desc = "This limb has a sturdy and heavy build to it."
 	icon = 'icons/mob/human_races/cyberlimbs/grayson/grayson_main.dmi'
-	unavailable_to_build = 0 // CHOMP Edit
-	monitor_styles = "blank=grayson_off;\
-		red=grayson_red;\
-		green=grayson_green;\
-		blue=grayson_blue;\
-		rgb=grayson_rgb"
+	unavailable_to_build = 0 // CHOMPEdit
+	monitor_styles = "blank=grayson_off-colored;\
+		red=grayson_red-colored;\
+		green=grayson_green-colored;\
+		blue=grayson_blue-colored;\
+		rgb=grayson_rgb-colored"
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/grayson_alt1
@@ -271,7 +246,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	icon = 'icons/mob/human_races/cyberlimbs/grayson/grayson_monitor.dmi'
 	unavailable_to_build = 1
 	parts = list(BP_HEAD)
-	monitor_styles = standard_monitor_styles
+	monitor_styles = STANDARD_MONITOR_STYLES
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/hephaestus
@@ -287,13 +262,13 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	icon = 'icons/mob/human_races/cyberlimbs/hephaestus/hephaestus_alt1.dmi'
 	unavailable_to_build = 1
 	parts = list(BP_HEAD)
-	monitor_styles = "blank=hephaestus_alt_off;\
-		pink=hephaestus_alt_pink;\
-		orange=hephaestus_alt_orange;\
-		goggles=hephaestus_alt_goggles;\
-		scroll=hephaestus_alt_scroll;\
-		rgb=hephaestus_alt_rgb;\
-		rainbow=hephaestus_alt_rainbow"
+	monitor_styles = "blank=hesphiastos_alt_off-colored;\
+		pink=hesphiastos_alt_pink-colored;\
+		orange=hesphiastos_alt_orange-colored;\
+		goggles=hesphiastos_alt_goggles-colored;\
+		scroll=hesphiastos_alt_scroll;\
+		rgb=hesphiastos_alt_rgb-colored;\
+		rainbow=hesphiastos_alt_rainbow-colored"
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/hephaestus_alt2
@@ -301,8 +276,8 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	desc = "This rather thick limb has a militaristic green plating."
 	icon = 'icons/mob/human_races/cyberlimbs/hephaestus/hephaestus_alt2.dmi'
 	unavailable_to_build = 1
-	monitor_styles = "red=athena_red;\
-		blank=athena_off"
+	monitor_styles = "red=athena_red-colored;\
+		blank=athena_off-colored"
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/hephaestus_monitor
@@ -311,7 +286,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	icon = 'icons/mob/human_races/cyberlimbs/hephaestus/hephaestus_monitor.dmi'
 	unavailable_to_build = 1
 	parts = list(BP_HEAD)
-	monitor_styles = standard_monitor_styles
+	monitor_styles = STANDARD_MONITOR_STYLES
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/morpheus
@@ -319,7 +294,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	desc = "This limb is simple and functional; no effort has been made to make it look human."
 	icon = 'icons/mob/human_races/cyberlimbs/morpheus/morpheus_main.dmi'
 	unavailable_to_build = 0 // CHOMP Edit
-	monitor_styles = standard_monitor_styles
+	monitor_styles = STANDARD_MONITOR_STYLES
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/morpheus_alt1
@@ -396,7 +371,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	icon = 'icons/mob/human_races/cyberlimbs/wardtakahashi/wardtakahashi_monitor.dmi'
 	unavailable_to_build = 1
 	parts = list(BP_HEAD)
-	monitor_styles = standard_monitor_styles
+	monitor_styles = STANDARD_MONITOR_STYLES
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/xion
@@ -419,11 +394,11 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	desc = "This limb has a thick orange casing with steel plating."
 	icon = 'icons/mob/human_races/cyberlimbs/xion/xion_alt2.dmi'
 	unavailable_to_build = 1
-	monitor_styles = "blank=xion_off;\
-		red=xion_red;\
-		green=xion_green;\
-		blue=xion_blue;\
-		rgb=xion_rgb"
+	monitor_styles = "blank=xion_off-colored;\
+		red=xion_red-colored;\
+		green=xion_green-colored;\
+		blue=xion_blue-colored;\
+		rgb=xion_rgb-colored"
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/xion_alt3
@@ -448,7 +423,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	icon = 'icons/mob/human_races/cyberlimbs/xion/xion_monitor.dmi'
 	unavailable_to_build = 1
 	parts = list(BP_HEAD)
-	monitor_styles = standard_monitor_styles
+	monitor_styles = STANDARD_MONITOR_STYLES
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC			//VOREStation Edit - remove the restrictions
 
 /datum/robolimb/zenghu

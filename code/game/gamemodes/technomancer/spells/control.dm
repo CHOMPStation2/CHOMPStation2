@@ -24,7 +24,7 @@
 	var/allowed_mob_classes = MOB_CLASS_ANIMAL|MOB_CLASS_SYNTHETIC
 
 //This unfortunately is gonna be rather messy due to the various mobtypes involved.
-/obj/item/spell/control/proc/select(var/mob/living/L)
+/obj/item/spell/control/proc/select(mob/living/L)
 	if(!(L.mob_class & allowed_mob_classes))
 		return FALSE
 
@@ -41,10 +41,11 @@
 		var/mob/living/simple_mob/SM = L
 		SM.friends |= src.owner
 
+	// Note, this should be refactored to drop priority overlays
 	L.add_overlay(control_overlay, TRUE)
 	controlled_mobs |= L
 
-/obj/item/spell/control/proc/deselect(var/mob/living/L)
+/obj/item/spell/control/proc/deselect(mob/living/L)
 	if(!(L in controlled_mobs))
 		return FALSE
 

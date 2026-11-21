@@ -163,7 +163,7 @@
 				addtimer(CALLBACK(src, PROC_REF(teleport_attack), A, 1), 1 SECOND, TIMER_DELETE_ME)
 
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/omega(atom/target, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/omega(atom/target, next_cycle)
 	if(!target)
 		return
 	addtimer(CALLBACK(src, PROC_REF(omega_one), target, next_cycle), 1.5 SECONDS, TIMER_DELETE_ME)
@@ -172,7 +172,7 @@
 	upfour_leftfour(target)
 	downfour_rightfour(target)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/omega_one(atom/target, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/omega_one(atom/target, next_cycle)
 	if(!target)
 		return
 	addtimer(CALLBACK(src, PROC_REF(omega_two), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
@@ -181,7 +181,7 @@
 	upfour_rightfour(target)
 	downfour_leftfour(target)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/omega_two(atom/target, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/omega_two(atom/target, next_cycle)
 	if(!target)
 		return
 	addtimer(CALLBACK(src, PROC_REF(omega_three), target, next_cycle), 1.5 SECONDS, TIMER_DELETE_ME)
@@ -194,7 +194,7 @@
 	downfour_rightfour(target)
 	upfour_rightfour(target)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/omega_three(atom/target, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/omega_three(atom/target, next_cycle)
 	if(!target)
 		return
 	addtimer(CALLBACK(src, PROC_REF(omega_four), target, next_cycle), 1.5 SECONDS, TIMER_DELETE_ME)
@@ -205,7 +205,7 @@
 	upfour(target)
 	downfour(target)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/omega_four(atom/target, var/next_cycle)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/omega_four(atom/target, next_cycle)
 	if(!target)
 		return
 	attackcycle = next_cycle
@@ -216,7 +216,7 @@
 	leftfour(target)
 	rightfour(target)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_slash(atom/target, var/next_cycle) //upright
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_slash(atom/target, next_cycle) //upright
 	if(!target)
 		return
 	addtimer(CALLBACK(src, PROC_REF(alpha_one), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
@@ -224,7 +224,7 @@
 	upfour_rightthree(target)
 	upthree_rightfour(target)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_one(atom/target, var/next_cycle) //right
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_one(atom/target, next_cycle) //right
 	if(!target)
 		return
 	addtimer(CALLBACK(src, PROC_REF(alpha_two), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
@@ -232,7 +232,7 @@
 	upone_rightfour(target)
 	downone_rightfour(target)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_two(atom/target, var/next_cycle) //downleft
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_two(atom/target, next_cycle) //downleft
 	if(!target)
 		return
 	addtimer(CALLBACK(src, PROC_REF(alpha_three), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
@@ -240,7 +240,7 @@
 	downthree_leftfour(target)
 	downfour_leftthree(target)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_three(atom/target, var/next_cycle) //left
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_three(atom/target, next_cycle) //left
 	if(!target)
 		return
 	addtimer(CALLBACK(src, PROC_REF(alpha_four), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
@@ -248,7 +248,7 @@
 	upone_leftfour(target)
 	downone_leftfour(target)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_four(atom/target, var/next_cycle) //upleft
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_four(atom/target, next_cycle) //upleft
 	if(!target)
 		return
 	addtimer(CALLBACK(src, PROC_REF(alpha_five), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
@@ -256,7 +256,7 @@
 	upone_leftfour(target)
 	downone_leftfour(target)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_five(atom/target, var/next_cycle) //down
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_five(atom/target, next_cycle) //down
 	if(!target)
 		return
 	addtimer(CALLBACK(src, PROC_REF(alpha_six), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
@@ -264,7 +264,7 @@
 	downfour_leftone(target)
 	downfour_rightone(target)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_six(atom/target, var/next_cycle) //up
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_six(atom/target, next_cycle) //up
 	if(!target)
 		return
 	addtimer(CALLBACK(src, PROC_REF(alpha_seven), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
@@ -272,7 +272,7 @@
 	upfour_leftone(target)
 	upfour_rightone(target)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_seven(atom/target, var/next_cycle) //downright
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/alpha_seven(atom/target, next_cycle) //downright
 	if(!target)
 		return
 	downfour_leftfour(target)
@@ -288,7 +288,7 @@
 	icon ='modular_chomp/icons/mob/hivebot.dmi'
 	icon_state = "arti"
 
-/obj/effect/callstrike_nanoweave/end_fall(var/crushing = FALSE)
+/obj/effect/callstrike_nanoweave/end_fall(crushing = FALSE)
 	for(var/mob/living/L in loc)
 		var/target_zone = ran_zone()
 		var/blocked = L.run_armor_check(target_zone, "laser")

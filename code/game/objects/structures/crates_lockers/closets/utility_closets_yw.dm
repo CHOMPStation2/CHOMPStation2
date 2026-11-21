@@ -1,7 +1,7 @@
 /obj/structure/closet/shuttleemerg //wall mounted fire closet
 	name = "emergency repairs closet"
 	desc = "It's a storage unit for emergency repair supplies."
-	closet_appearance = /decl/closet_appearance/wall/autolok/shuttleemerg
+	closet_appearance = /datum/decl/closet_appearance/wall/autolok/shuttleemerg
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 	anchored = 1
@@ -20,4 +20,4 @@
 /obj/structure/closet/medical
 	name = "medical supply closet"
 	desc = "May or may not contain medical junk."
-	closet_appearance = /decl/closet_appearance/medical_yw
+	closet_appearance = /datum/decl/closet_appearance/medical_yw

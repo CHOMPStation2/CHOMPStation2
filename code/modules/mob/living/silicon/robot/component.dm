@@ -31,12 +31,14 @@
 		var/obj/item/cell/cell = wrapped
 		max_damage = cell.robot_durability
 
-/datum/robot_component/proc/uninstall()
+/datum/robot_component/proc/uninstall(clear)
+	SHOULD_CALL_PARENT(TRUE)
 	max_damage = initial(max_damage)
 	idle_usage = initial(idle_usage)
 	active_usage = initial(active_usage)
-	installed = 0
-	wrapped = null
+	if(clear)
+		installed = 0
+		wrapped = null
 
 /datum/robot_component/Destroy(force)
 	if(wrapped)
@@ -44,6 +46,7 @@
 	. = ..()
 
 /datum/robot_component/proc/destroy()
+	SHOULD_CALL_PARENT(TRUE)
 	var/brokenstate = "broken" // Generic icon
 	if (istype(wrapped, /obj/item/robot_parts/robot_component))
 		var/obj/item/robot_parts/robot_component/comp = wrapped
@@ -176,10 +179,12 @@
 		camera.status = 1
 
 /datum/robot_component/camera/uninstall()
+	..()
 	if (camera)
 		camera.status = 0
 
 /datum/robot_component/camera/destroy()
+	..()
 	if (camera)
 		camera.status = 0
 
@@ -215,7 +220,7 @@
 	return C && C.installed == 1 && C.toggled && C.is_powered()
 
 // Returns component by it's string name
-/mob/living/silicon/robot/proc/get_component(var/component_name)
+/mob/living/silicon/robot/proc/get_component(component_name)
 	var/datum/robot_component/C = components[component_name]
 	return C
 
@@ -232,7 +237,7 @@
 	name = "broken component"
 	icon = 'icons/obj/robot_component.dmi'
 	icon_state = "broken"
-	matter = list(MAT_STEEL = 1000)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.5))
 
 /obj/item/broken_device/random
 	var/list/possible_icons = list("binradio_broken",

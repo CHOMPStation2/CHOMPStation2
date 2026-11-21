@@ -13,8 +13,8 @@
 //Burst accuracy is the accuracy of each bullet fired in the burst. Dispersion is how much the bullets will 'spread' away from where you aimed.
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)))
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)))
 
 /*
  * Advanced SMG
@@ -28,15 +28,14 @@
 	w_class = ITEMSIZE_NORMAL
 	load_method = MAGAZINE
 	caliber = "9mm"
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
 	slot_flags = SLOT_BELT
 	magazine_type = null // R&D builds this. Starts unloaded.
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mmAdvanced, /obj/item/ammo_magazine/m9mm)
 	fire_sound = "sound/weapons/gunshot_pathetic.ogg" //CHOMPedit
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 
 /obj/item/gun/projectile/automatic/advanced_smg/update_icon()
@@ -66,7 +65,6 @@
 	w_class = ITEMSIZE_NORMAL
 	force = 10
 	caliber = "10mm"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
 	slot_flags = SLOT_BELT|SLOT_BACK
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m10mm
@@ -108,7 +106,6 @@
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	caliber = "5.45mm"
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m545
@@ -119,11 +116,11 @@
 	one_handed_penalty = 30
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=6,    burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
 		)
 
-/obj/item/gun/projectile/automatic/sts35/update_icon(var/ignore_inhands)
+/obj/item/gun/projectile/automatic/sts35/update_icon(ignore_inhands)
 	..()
 	if(istype(ammo_magazine,/obj/item/ammo_magazine/m545/small))
 		icon_state = "arifle-small" // If using the small magazines, use the small magazine sprite.
@@ -142,7 +139,6 @@
 	item_state = "c20r"
 	w_class = ITEMSIZE_NORMAL
 	caliber = "9mm"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
 	slot_flags = SLOT_BELT
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m9mmAdvanced
@@ -150,11 +146,11 @@
 	fire_sound = "sound/weapons/gunshot_pathetic.ogg" //CHOMPedit
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=6,    burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
 		)
 
-/obj/item/gun/projectile/automatic/pdw/update_icon(var/ignore_inhands)
+/obj/item/gun/projectile/automatic/pdw/update_icon(ignore_inhands)
 	..()
 	if(ammo_magazine)
 		icon_state = "pdw"
@@ -174,14 +170,12 @@
 	item_state = "wt550"
 	w_class = ITEMSIZE_NORMAL
 	caliber = "9mm"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
 	slot_flags = SLOT_BELT
 	ammo_type = "/obj/item/ammo_casing/a9mmr"
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m9mmt/rubber
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mmt)
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 	fire_sound = "sound/weapons/gunshot_pathetic.ogg" //CHOMPedit
 
 /obj/item/gun/projectile/automatic/wt550/update_icon()
@@ -210,7 +204,6 @@
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	caliber = "7.62mm"
-	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 3)
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m762
@@ -224,9 +217,9 @@
 
 	burst_delay = 4
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1,    fire_delay=0.1,    move_delay=null, use_launcher=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="2-round bursts", burst=2,    fire_delay=null, move_delay=6,    use_launcher=null, burst_accuracy=list(0,-15), dispersion=list(0.0, 0.6)),
-		list(mode_name="fire grenades",  burst=null, fire_delay=null, move_delay=null, use_launcher=1,    burst_accuracy=null, dispersion=null)
+		list(mode_name="semiauto",       burst=1,    fire_delay=0.1, use_launcher=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="2-round bursts", burst=2,    fire_delay=null,    use_launcher=null, burst_accuracy=list(0,-15), dispersion=list(0.0, 0.6)),
+		list(mode_name="fire grenades",  burst=null, fire_delay=null, use_launcher=1,    burst_accuracy=null, dispersion=null)
 		)
 
 	var/use_launcher = 0
@@ -256,7 +249,7 @@
 	else
 		..()
 
-/obj/item/gun/projectile/automatic/z8/update_icon(var/ignore_inhands)
+/obj/item/gun/projectile/automatic/z8/update_icon(ignore_inhands)
 	..()
 	if(ammo_magazine)
 		icon_state = "carbine-[round(ammo_magazine.stored_ammo.len,2)]"
@@ -292,7 +285,6 @@
 	slot_flags = 0
 	max_shells = 50
 	caliber = "5.45mm"
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 2)
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m545saw
@@ -305,10 +297,12 @@
 	var/cover_open = 0
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3,burst_delay=1 ,fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)), //CHOMPedit, firerate buff
-		list(mode_name="short bursts",	burst=5,burst_delay=1 ,move_delay=3, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)) //CHOMPedit, firerate buff
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",	burst=5, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 		)
+
+	special_weapon_handling = TRUE
 
 /obj/item/gun/projectile/automatic/l6_saw/special_check(mob/user)
 	if(cover_open)
@@ -322,11 +316,14 @@
 	update_icon()
 	update_held_icon()
 
-/obj/item/gun/projectile/automatic/l6_saw/attack_self(mob/user as mob)
+/obj/item/gun/projectile/automatic/l6_saw/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(cover_open)
 		toggle_cover(user) //close the cover
 	else
-		return ..() //once closed, behave like normal
+		return ..(user, TRUE) //once closed, behave like normal
 
 /obj/item/gun/projectile/automatic/l6_saw/attack_hand(mob/user as mob)
 	if(!cover_open && user.get_inactive_hand() == src)
@@ -343,13 +340,13 @@
 		item_state = "l6[cover_open ? "open" : "closed"][ammo_magazine ? "" : "-empty"]"
 	update_held_icon()
 
-/obj/item/gun/projectile/automatic/l6_saw/load_ammo(var/obj/item/A, mob/user)
+/obj/item/gun/projectile/automatic/l6_saw/load_ammo(obj/item/A, mob/user)
 	if(!cover_open)
 		to_chat(user, span_warning("You need to open the cover to load [src]."))
 		return
 	..()
 
-/obj/item/gun/projectile/automatic/l6_saw/unload_ammo(mob/user, var/allow_dump=1)
+/obj/item/gun/projectile/automatic/l6_saw/unload_ammo(mob/user, allow_dump=1)
 	if(!cover_open)
 		to_chat(user, span_warning("You need to open the cover to unload [src]."))
 		return
@@ -370,7 +367,6 @@
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	caliber = "12g"
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m12gdrum
@@ -381,7 +377,7 @@
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0.1),
-		list(mode_name="3-round bursts", burst=3, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.0, 0.6, 0.6))
+		list(mode_name="3-round bursts", burst=3, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.0, 0.6, 0.6))
 		)
 
 /obj/item/gun/projectile/automatic/as24/update_icon()
@@ -407,17 +403,15 @@
 	w_class = ITEMSIZE_NORMAL
 	load_method = MAGAZINE
 	caliber = ".45"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ILLEGAL = 5)
 	magazine_type = /obj/item/ammo_magazine/m45uzi
 	allowed_magazines = list(/obj/item/ammo_magazine/m45uzi)
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 	var/is64x32 = TRUE
 	var/is_picked_up = FALSE
 	fire_sound = "sound/weapons/gunshot_pathetic.ogg" //CHOMPedit
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0.1),
-		list(mode_name="3-round bursts", burst=3, burst_delay=1, fire_delay=4, move_delay=4, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0))
+		list(mode_name="3-round bursts", burst=3, burst_delay=1, fire_delay=4, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0))
 		)
 
 /obj/item/gun/projectile/automatic/mini_uzi/update_icon()
@@ -433,7 +427,7 @@
 	if(is64x32)
 		update_transform()
 
-/obj/item/gun/projectile/automatic/mini_uzi/equipped()
+/obj/item/gun/projectile/automatic/mini_uzi/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
@@ -443,7 +437,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/automatic/mini_uzi/dropped(mob/living/user)
+/obj/item/gun/projectile/automatic/mini_uzi/dropped(mob/user, equipping, slot)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()
@@ -465,7 +459,6 @@
 	item_state = "p90"
 	w_class = ITEMSIZE_NORMAL
 	caliber = "9mm"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
 	slot_flags = SLOT_BELT // ToDo: Belt sprite.
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m9mmp90
@@ -473,7 +466,7 @@
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0.1),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0))
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0))
 		)
 
 /obj/item/gun/projectile/automatic/p90/update_icon()
@@ -491,7 +484,6 @@
 	item_state = "stg44"
 	w_class = ITEMSIZE_NORMAL
 	caliber = ".45"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ILLEGAL = 5)
 	slot_flags = SLOT_BELT // ToDo: Belt sprite.
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m45tommy
@@ -500,7 +492,7 @@
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0.1),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0))
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0))
 		)
 
 /obj/item/gun/projectile/automatic/tommygun/update_icon()
@@ -524,7 +516,6 @@
 	w_class = ITEMSIZE_LARGE
 	force = 10
 	caliber = "7.62mm"
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m762
@@ -535,11 +526,11 @@
 	one_handed_penalty = 45
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="2-round bursts", burst=2, fire_delay=null, move_delay=6,    burst_accuracy=list(0,-15), dispersion=list(0.0, 0.6))
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1, burst_accuracy=null, dispersion=null),
+		list(mode_name="2-round bursts", burst=2, fire_delay=null,    burst_accuracy=list(0,-15), dispersion=list(0.0, 0.6))
 		)
 
-/obj/item/gun/projectile/automatic/bullpup/update_icon(var/ignore_inhands)
+/obj/item/gun/projectile/automatic/bullpup/update_icon(ignore_inhands)
 	..()
 	if(istype(ammo_magazine,/obj/item/ammo_magazine/m762))
 		icon_state = "bullpup-small"
@@ -563,14 +554,13 @@
 	w_class = ITEMSIZE_NORMAL
 	load_method = MAGAZINE
 	caliber = "9mm"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 4)
 	magazine_type = /obj/item/ammo_magazine/m9mmt
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mmt)
 	fire_sound = "sound/weapons/Gunshot1.ogg" //CHOMPedit
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0.1),
-		list(mode_name="3-round bursts", burst=3, burst_delay=1, fire_delay=4, move_delay=4, burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
+		list(mode_name="3-round bursts", burst=3, burst_delay=1, fire_delay=4, burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
 		)
 
 /obj/item/gun/projectile/automatic/combatsmg/update_icon()

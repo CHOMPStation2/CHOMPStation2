@@ -11,7 +11,7 @@
 	//no stripping of simplemobs
 	strip_pref = FALSE
 
-/mob/living/simple_mob/RangedAttack(var/atom/A)
+/mob/living/simple_mob/RangedAttack(atom/A)
 	if(!isnull(spit_projectile) && spitting)
 		Spit(A)
 	. = ..()

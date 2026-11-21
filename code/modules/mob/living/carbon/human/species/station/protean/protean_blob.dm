@@ -58,7 +58,7 @@
 	holder_type = /obj/item/holder/protoblob
 	var/hiding = FALSE
 	vore_icons = TRUE
-	vore_active = TRUE
+	vore_active = FALSE
 
 	plane = ABOVE_MOB_PLANE	//Necessary for overlay based icons
 
@@ -68,7 +68,7 @@
 	emote_see = list("shifts wetly","undulates placidly")
 
 //Constructor allows passing the human to sync damages
-/mob/living/simple_mob/protean_blob/Initialize(mapload, var/mob/living/carbon/human/H)
+/mob/living/simple_mob/protean_blob/Initialize(mapload, mob/living/carbon/human/H)
 	. = ..()
 	if(!H)
 		stack_trace("URGENT: A protean blob was created without a humanform! src = [src] ckey = [ckey]! The blob has been deleted.")
@@ -174,7 +174,7 @@
 		healing.expire()
 	return ..()
 
-/mob/living/simple_mob/protean_blob/say_understands(var/mob/other, var/datum/language/speaking = null)
+/mob/living/simple_mob/protean_blob/say_understands(mob/other, datum/language/speaking = null)
 	// The parent of this proc and its parent are SHAMS and should be rewritten, but I'm not up to it right now.
 	if(!speaking)
 		return TRUE // can understand common, they're like, a normal person thing
@@ -190,8 +190,8 @@
 	return TRUE // yup
 
 /mob/living/simple_mob/protean_blob/get_available_emotes()
-	var/list/fulllist = global._robot_default_emotes.Copy()
-	fulllist |= global._human_default_emotes //they're living nanites, they can make whatever sounds they want
+	var/list/fulllist = GLOB.robot_default_emotes.Copy()
+	fulllist |= GLOB.human_default_emotes //they're living nanites, they can make whatever sounds they want
 	return fulllist
 
 /mob/living/simple_mob/protean_blob/update_misc_tabs()
@@ -249,19 +249,19 @@
 			healths.icon_state = "health7"
 
 // All the damage and such to the blob translates to the human
-/mob/living/simple_mob/protean_blob/apply_effect(var/effect = 0, var/effecttype = STUN, var/blocked = 0, var/check_protection = 1)
+/mob/living/simple_mob/protean_blob/apply_effect(effect = 0, effecttype = STUN, blocked = 0, check_protection = 1)
 	if(humanform)
 		return humanform.apply_effect(effect, effecttype, blocked, check_protection)
 	else
 		return ..()
 
-/mob/living/simple_mob/protean_blob/adjustBruteLoss(var/amount,var/include_robo)
+/mob/living/simple_mob/protean_blob/adjustBruteLoss(amount,include_robo)
 	if(humanform)
 		return humanform.adjustBruteLoss(amount)
 	else
 		return ..()
 
-/mob/living/simple_mob/protean_blob/adjustFireLoss(var/amount,var/include_robo)
+/mob/living/simple_mob/protean_blob/adjustFireLoss(amount,include_robo)
 	if(humanform)
 		return humanform.adjustFireLoss(amount)
 	else
@@ -298,22 +298,15 @@
 		return ..()
 
 /mob/living/simple_mob/protean_blob/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(humanform)
 		return humanform.emp_act(severity, recursive)
-	else
-		return ..()
 
 /mob/living/simple_mob/protean_blob/ex_act(severity)
 	if(humanform)
 		return humanform.ex_act(severity)
-	else
-		return ..()
-
-/mob/living/simple_mob/protean_blob/rad_act(severity)
-	if(istype(loc, /obj/item/rig))
-		return	//Don't irradiate us while we're in rig mode
-	if(humanform)
-		return humanform.rad_act(severity)
 	else
 		return ..()
 
@@ -388,7 +381,7 @@
 				if(can_spontaneous_vore(src, target))
 					if(target.buckled)
 						target.buckled.unbuckle_mob(target, force = TRUE)
-					target.forceMove(vore_selected)
+					vore_selected.nom_atom(target)
 					to_chat(target,span_warning("\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.get_belly_name()]!"))
 	update_canmove()
 
@@ -399,7 +392,7 @@
 	else
 		..()
 
-/mob/living/simple_mob/protean_blob/attackby(var/obj/item/O, var/mob/user)
+/mob/living/simple_mob/protean_blob/attackby(obj/item/O, mob/user)
 	if(refactory && istype(O,/obj/item/stack/material))
 		var/obj/item/stack/material/S = O
 		var/substance = S.material.name
@@ -419,7 +412,7 @@
 	else
 		..()
 
-/mob/living/simple_mob/protean_blob/MouseDrop(var/atom/over_object)
+/mob/living/simple_mob/protean_blob/MouseDrop(atom/over_object)
 	if(ishuman(over_object) && usr == src && src.Adjacent(over_object))
 		var/mob/living/carbon/human/H = over_object
 		get_scooped(H, TRUE)
@@ -529,7 +522,7 @@
 		to_chat(src, span_warning("You must remain still to blobform!"))
 
 //For some reason, there's no way to force drop all the mobs grabbed. This ought to fix that. And be moved elsewhere. Call with caution, doesn't handle cycles.
-/proc/remove_micros(var/source, var/mob/root)
+/proc/remove_micros(source, mob/root)
 	for(var/obj/item/I in source)
 		remove_micros(I, root) //Recursion. I'm honestly depending on there being no containment loop, but at the cost of performance that can be fixed too.
 		if(istype(I, /obj/item/holder))
@@ -547,7 +540,7 @@
 	else
 		to_chat(src, "You are not in RIG form.")
 
-/mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob, force)
+/mob/living/carbon/human/proc/nano_outofblob(mob/living/simple_mob/protean_blob/blob, force)
 	if(!istype(blob))
 		return
 	if(blob.loc == /obj/item/rig/protean)
@@ -574,6 +567,7 @@
 
 		if(blob.mob_radio)
 			blob.mob_radio.forceMove(src)
+			equip_to_appropriate_slot(blob.mob_radio) // Actually put it back on the mob in a slot
 			blob.mob_radio = null
 		if(blob.myid)
 			blob.myid = null
@@ -635,11 +629,11 @@
 	else
 		to_chat(src, span_warning("You must remain still to reshape yourself!"))
 
-/mob/living/carbon/human/proc/nano_set_panel(var/client/C)
+/mob/living/carbon/human/proc/nano_set_panel(client/C)
 	if(C)
 		C.statpanel = "Protean"
 
-/mob/living/simple_mob/protean_blob/ClickOn(var/atom/A, var/params)
+/mob/living/simple_mob/protean_blob/ClickOn(atom/A, params)
 	if(istype(loc, /obj/item/rig/protean))
 		HardsuitClickOn(A)
 	..()
@@ -647,7 +641,7 @@
 /mob/living/simple_mob/protean_blob/can_use_rig()
 	return 1
 
-/mob/living/simple_mob/protean_blob/HardsuitClickOn(var/atom/A, var/alert_ai = 0)
+/mob/living/simple_mob/protean_blob/HardsuitClickOn(atom/A, alert_ai = 0)
 	if(istype(loc, /obj/item/rig/protean))
 		var/obj/item/rig/protean/prig = loc
 		if(istype(prig) && !prig.offline && prig.selected_module)

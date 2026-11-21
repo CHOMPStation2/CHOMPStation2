@@ -3,7 +3,7 @@
 /turf/simulated/floor/maglev/unpowered
 	desc = "Magnetic levitation tram tracks. Unpowered? Looks like it. Safe? Your try."
 
-/turf/simulated/floor/maglev/unpowered/Entered(var/atom/movable/AM, var/atom/old_loc)
+/turf/simulated/floor/maglev/unpowered/Entered(atom/movable/AM, atom/old_loc)
 	return // No zappy.
 
 /turf/simulated/mineral/thor
@@ -88,10 +88,10 @@
 	oxygen		= MOLES_O2STANDARD
 	nitrogen	= MOLES_N2STANDARD
 	temperature = T20C
-	initial_flooring = /decl/flooring/rock/cetus
+	initial_flooring = /datum/decl/flooring/rock/cetus
 	flags = TURF_UNSHIELDABLE
 
-/decl/flooring/rock/cetus
+/datum/decl/flooring/rock/cetus
 	icon_base = "rock_brown"
 
 /turf/simulated/mineral/cetus/edge
@@ -150,9 +150,9 @@
 	desc = "A dusty, gray carpeted floor."
 	icon = 'modular_chomp/icons/turf/flooring/carpet.dmi'
 	icon_state = "gcarpet"
-	initial_flooring = /decl/flooring/carpet/gray
+	initial_flooring = /datum/decl/flooring/carpet/gray
 
-/decl/flooring/carpet/gray
+/datum/decl/flooring/carpet/gray
 	name = "gray carpet"
 	desc = "A dusty, gray carpeted floor."
 	icon = 'modular_chomp/icons/turf/flooring/carpet.dmi'

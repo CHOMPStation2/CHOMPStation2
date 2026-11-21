@@ -5,7 +5,7 @@
 	icon_state = "rift"
 	icon_state_opened = "tendril_dead"
 	density = FALSE
-	ghost_query_type = /datum/ghost_query/maints_spawner
+	ghost_query_type = /datum/ghost_query/maints_critter
 	anchored = TRUE
 	invisibility = INVISIBILITY_OBSERVER
 	spawn_active = TRUE
@@ -15,7 +15,7 @@
 	attack_ghost(user)
 
 //override the standard attack_ghost proc for custom messages
-/obj/structure/ghost_pod/ghost_activated/unified_hole/attack_ghost(var/mob/observer/dead/user)
+/obj/structure/ghost_pod/ghost_activated/unified_hole/attack_ghost(mob/observer/dead/user)
 	var/choice
 	if(jobban_isbanned(user, JOB_GHOSTROLES))
 		to_chat(user, span_warning("You cannot use this spawnpoint because you are banned from playing ghost roles."))
@@ -39,15 +39,16 @@
 		if("Morph")
 			create_morph(user)
 		if("Lurker")
-			if(!is_alien_whitelisted(user.client, GLOB.all_species[user.client.prefs.species]))
+			if(!is_alien_whitelisted(user.client, GLOB.all_species[user.client.prefs.read_preference(/datum/preference/choiced/species)]))
 				to_chat(user, span_warning("You cannot use this spawnpoint to spawn as a species you are not whitelisted for!"))
 				return
 			create_lurker(user)
 	used = TRUE
 	icon_state = icon_state_opened
+	update_icon()
 	GLOB.active_ghost_pods -= src
 
-/obj/structure/ghost_pod/ghost_activated/unified_hole/proc/create_simplemob(var/mob/M)
+/obj/structure/ghost_pod/ghost_activated/unified_hole/proc/create_simplemob(mob/M)
 	var/choice
 	var/finalized = FALSE
 	GLOB.active_ghost_pods -= src
@@ -89,7 +90,7 @@
 			newPred.vore_selected = newPred.vore_organs[1]
 	qdel(src)
 
-/obj/structure/ghost_pod/ghost_activated/unified_hole/proc/create_morph(var/mob/M)
+/obj/structure/ghost_pod/ghost_activated/unified_hole/proc/create_morph(mob/M)
 	GLOB.active_ghost_pods -= src
 	var/mob/living/simple_mob/vore/morph/newMorph = new /mob/living/simple_mob/vore/morph(get_turf(src))
 	newMorph.voremob_loaded = TRUE // On-demand belly loading.
@@ -111,7 +112,7 @@
 			newMorph.vore_selected = newMorph.vore_organs[1]
 	qdel(src)
 
-/obj/structure/ghost_pod/ghost_activated/unified_hole/proc/create_lurker(var/mob/M)
+/obj/structure/ghost_pod/ghost_activated/unified_hole/proc/create_lurker(mob/M)
 	var/picked_ckey = M.ckey
 	var/picked_slot = M.client.prefs.default_slot
 	GLOB.active_ghost_pods -= src
@@ -131,7 +132,7 @@
 	new_character.mind.loaded_from_ckey = picked_ckey
 	new_character.mind.loaded_from_slot = picked_slot
 
-	job_master.EquipRank(new_character, JOB_MAINT_LURKER, 1)
+	SSjob.equip_rank(new_character, JOB_MAINT_LURKER, 1)
 
 	for(var/lang in new_character.client.prefs.alternate_languages)
 		var/datum/language/chosen_language = GLOB.all_languages[lang]
@@ -158,6 +159,19 @@
 /obj/structure/ghost_pod/ghost_activated/unified_hole/Initialize(mapload)
 	. = ..()
 	GLOB.active_ghost_pods += src
+
+	update_icon()
+
+/obj/structure/ghost_pod/ghost_activated/unified_hole/update_icon()
+	cut_overlays()
+
+	if(used)
+		return
+
+	var/list/glows = list()
+	glows += mutable_appearance(icon, "rift_glow")
+	glows += emissive_appearance(icon, "rift_glow")
+	add_overlay(glows)
 
 /obj/structure/ghost_pod/ghost_activated/unified_hole/Destroy()
 	GLOB.active_ghost_pods -= src

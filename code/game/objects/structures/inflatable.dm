@@ -6,11 +6,18 @@
 	drop_sound = 'sound/items/drop/rubber.ogg'
 	w_class = ITEMSIZE_NORMAL
 	var/deploy_path = /obj/structure/inflatable
+	///Var used for attack_self chain
+	var/special_handling = FALSE
 
 /obj/item/inflatable/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
 	inflate(user,user.loc)
 
-/obj/item/inflatable/afterattack(var/atom/A, var/mob/user)
+/obj/item/inflatable/afterattack(atom/A, mob/user)
 	..(A, user)
 	if(!user)
 		return
@@ -42,7 +49,7 @@
 	update_nearby_tiles()
 	return ..()
 
-/obj/structure/inflatable/bullet_act(var/obj/item/projectile/Proj)
+/obj/structure/inflatable/bullet_act(obj/item/projectile/Proj)
 	var/proj_damage = Proj.get_structure_damage()
 	if(!proj_damage) return
 
@@ -83,7 +90,7 @@
 		..()
 	return
 
-/obj/structure/inflatable/proc/hit(var/damage, var/sound_effect = 1)
+/obj/structure/inflatable/proc/hit(damage, sound_effect = 1)
 	health = max(0, health - damage)
 	if(sound_effect)
 		playsound(src, 'sound/effects/Glasshit.ogg', 75, 1)
@@ -93,7 +100,7 @@
 /obj/structure/inflatable/click_ctrl()
 	hand_deflate()
 
-/obj/item/inflatable/proc/inflate(var/mob/user,var/location)
+/obj/item/inflatable/proc/inflate(mob/user,location)
 	playsound(location, 'sound/items/zip.ogg', 75, 1)
 	to_chat(user, span_notice("You inflate [src]."))
 	var/obj/structure/inflatable/R = new deploy_path(location)
@@ -128,7 +135,7 @@
 	verbs -= /obj/structure/inflatable/verb/hand_deflate
 	deflate()
 
-/obj/structure/inflatable/attack_generic(var/mob/user, var/damage, var/attack_verb)
+/obj/structure/inflatable/attack_generic(mob/user, damage, attack_verb)
 	health -= damage
 	user.do_attack_animation(src)
 	if(health <= 0)
@@ -138,7 +145,7 @@
 		user.visible_message(span_danger("[user] [attack_verb] at [src]!"))
 	return 1
 
-/obj/structure/inflatable/take_damage(var/damage)
+/obj/structure/inflatable/take_damage(damage)
 	health -= damage
 	if(health <= 0)
 		visible_message(span_danger("The [src] deflates!"))
@@ -246,8 +253,12 @@
 	desc = "A folded membrane which rapidly expands into a large cubical shape on activation. It is too torn to be usable."
 	icon = 'icons/obj/inflatable.dmi'
 	icon_state = "folded_wall_torn"
+	special_handling = TRUE
 
 /obj/item/inflatable/torn/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	to_chat(user, span_notice("The inflatable wall is too torn to be inflated!"))
 	add_fingerprint(user)
 
@@ -256,8 +267,12 @@
 	desc = "A folded membrane which rapidly expands into a simple door on activation. It is too torn to be usable."
 	icon = 'icons/obj/inflatable.dmi'
 	icon_state = "folded_door_torn"
+	special_handling = TRUE
 
 /obj/item/inflatable/door/torn/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	to_chat(user, span_notice("The inflatable door is too torn to be inflated!"))
 	add_fingerprint(user)
 

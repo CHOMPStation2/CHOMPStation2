@@ -60,7 +60,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 
 	// Rate limiting
 	var/mtl = CONFIG_GET(number/minute_topic_limit)
-	if(href_list["window_id"] != "statbrowser") //Deviation from TG. Our statbrowser has so many commands that logging in as a borg can cause it to rate limit you. This needs fixing eventually.
+	if(!bypass_topic_limit(href_list))
 		if (!check_rights_for(src, R_HOLDER) && mtl)
 			var/minute = round(world.time, 600)
 			if (!topiclimiter)
@@ -94,13 +94,13 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 				return
 
 	//search the href for script injection
-	if( findtext(href,"<script",1,0) )
+	if(findtext(href,"<script",1,0) )
 		log_world("Attempted use of scripts within a topic call, by [src]")
 		message_admins("Attempted use of scripts within a topic call, by [src]")
 		return
 
 	// Tgui Topic middleware
-	if(!tgui_Topic(href_list))
+	if(tgui_Topic(href_list))
 		return
 
 	//Admin PM
@@ -285,14 +285,14 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	GLOB.tickets.ClientLogin(src)
 
 	//preferences datum - also holds some persistant data for the client (because we may as well keep these datums to a minimum)
-	prefs = preferences_datums[ckey]
+	prefs = GLOB.preferences_datums[ckey]
 	if(prefs)
 		prefs.client = src
 		prefs.load_savefile() // just to make sure we have the latest data
 		prefs.apply_all_client_preferences()
 	else
 		prefs = new /datum/preferences(src)
-		preferences_datums[ckey] = prefs
+		GLOB.preferences_datums[ckey] = prefs
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
 
@@ -358,12 +358,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	connection_realtime = world.realtime
 	connection_timeofday = world.timeofday
 
-	if(GLOB.custom_event_msg && GLOB.custom_event_msg != "")
-		to_chat(src, "<h1 class='alert'>Custom Event</h1>")
-		to_chat(src, "<h2 class='alert'>A custom event is taking place. OOC Info:</h2>")
-		to_chat(src, span_alert("[GLOB.custom_event_msg]"))
-		to_chat(src, "<br>")
-
 	if(!winexists(src, "asset_cache_browser")) // The client is using a custom skin, tell them.
 		to_chat(src, span_warning("Unable to access asset cache browser, if you are using a custom skin file, please allow DS to download the updated version, if you are not, then make a bug report. This is not a critical issue but can cause issues with resource downloading, as it is impossible to know when extra resources arrived to you."))
 
@@ -381,12 +375,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if(!void)
 		void = new()
 	screen += void
-
-	if((prefs?.read_preference(/datum/preference/text/lastchangelog) != GLOB.changelog_hash) && isnewplayer(src.mob)) //bolds the changelog button on the interface so we know there are updates.
-		to_chat(src, span_info("You have unread updates in the changelog."))
-		winset(src, "rpane.changelog", "background-color=#eaeaea;font-style=bold")
-		if(CONFIG_GET(flag/aggressive_changelog))
-			src.changes()
 
 	if(CONFIG_GET(flag/paranoia_logging))
 		var/alert = FALSE //VOREStation Edit start.
@@ -429,14 +417,17 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 /client/Destroy()
 	GLOB.directory -= ckey
 	GLOB.clients -= src
-	persistent_client.set_client(null)
+	persistent_client?.set_client(null)
 
 	log_access("Logout: [key_name(src)]")
 	GLOB.tickets.ClientLogout(src)
 	if(holder)
 		holder.owner = null
 		GLOB.admins -= src
-
+	if(skybox)
+		QDEL_NULL(skybox)
+	if(fakeConversations)
+		QDEL_NULL(fakeConversations)
 	QDEL_NULL(loot_panel)
 	..()
 	return QDEL_HINT_HARDDEL_NOW
@@ -446,7 +437,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 // Returns null if no DB connection can be established, or -1 if the requested key was not found in the database
 
 /proc/get_player_age(key)
-	establish_db_connection()
 	if(!SSdbcore.IsConnected())
 		return null
 
@@ -467,14 +457,15 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if ( IsGuestKey(src.key) )
 		return
 
-	establish_db_connection()
 	if(!SSdbcore.IsConnected())
 		return
 
 	var/sql_ckey = sql_sanitize_text(src.ckey)
 
 	var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = '[sql_ckey]'")
-	query.Execute()
+	if(!query.Execute())
+		qdel(query)
+		return
 	var/sql_id = 0
 	player_age = 0	// New players won't have an entry so knowing we have a connection we set this to zero to be updated if their is a record.
 	while(query.NextRow())
@@ -486,11 +477,17 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	account_join_date = sanitizeSQL(findJoinDate())
 	if(account_join_date && SSdbcore.IsConnected())
 		var/datum/db_query/query_datediff = SSdbcore.NewQuery("SELECT DATEDIFF(Now(),'[account_join_date]')")
-		if(query_datediff.Execute() && query_datediff.NextRow())
+		if(!query_datediff.Execute())
+			qdel(query)
+			return
+		if(query_datediff.NextRow())
 			account_age = text2num(query_datediff.item[1])
 		qdel(query_datediff)
 
 	var/datum/db_query/query_ip = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'")
+	if(!query_ip.Execute())
+		qdel(query)
+		return
 	query_ip.Execute()
 	related_accounts_ip = ""
 	while(query_ip.NextRow())
@@ -499,6 +496,9 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	qdel(query_ip)
 
 	var/datum/db_query/query_cid = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'")
+	if(!query_cid.Execute())
+		qdel(query)
+		return
 	query_cid.Execute()
 	related_accounts_cid = ""
 	while(query_cid.NextRow())
@@ -612,14 +612,14 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 			addtimer(CALLBACK(SSassets.transport, TYPE_PROC_REF(/datum/asset_transport, send_assets_slow), src, SSassets.transport.preload), 5 SECONDS)
 
 /mob/proc/MayRespawn()
-	return 0
+	return FALSE
 
 /client/proc/MayRespawn()
 	if(mob)
 		return mob.MayRespawn()
 
 	// Something went wrong, client is usually kicked or transfered to a new mob at this point
-	return 0
+	return FALSE
 
 /client/verb/character_setup()
 	set name = "Character Setup"
@@ -715,7 +715,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		ip_reputation = score
 		return TRUE
 
-/client/proc/disconnect_with_message(var/message = "You have been intentionally disconnected by the server.<br>This may be for security or administrative reasons.")
+/client/proc/disconnect_with_message(message = "You have been intentionally disconnected by the server.<br>This may be for security or administrative reasons.")
 	message = "<head><title>You Have Been Disconnected</title></head><body><hr><center>" + span_bold("[message]") + "</center><hr><br>If you feel this is in error, you can contact an administrator out-of-game (for example, on Discord).</body>"
 	window_flash(src)
 	src << browse("<html>[message]</html>","window=dropmessage;size=480x360;can_close=1")

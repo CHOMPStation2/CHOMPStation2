@@ -25,7 +25,7 @@
 	var/datum/computer_file/data/email_message/current_message = null
 
 /datum/tgui_module/email_client/proc/log_in()
-	for(var/datum/computer_file/data/email_account/account in ntnet_global.email_accounts)
+	for(var/datum/computer_file/data/email_account/account in GLOB.ntnet_global.email_accounts)
 		if(!account.can_login)
 			continue
 		if(account.login == stored_login)
@@ -43,7 +43,7 @@
 
 // Returns 0 if no new messages were received, 1 if there is an unread message but notification has already been sent.
 // and 2 if there is a new message that appeared in this tick (and therefore notification should be sent by the program).
-/datum/tgui_module/email_client/proc/check_for_new_messages(var/messages_read = FALSE)
+/datum/tgui_module/email_client/proc/check_for_new_messages(messages_read = FALSE)
 	if(!current_account)
 		return 0
 
@@ -128,7 +128,7 @@
 		data["current_account"] = current_account.login
 		if(addressbook)
 			var/list/all_accounts = list()
-			for(var/datum/computer_file/data/email_account/account in ntnet_global.email_accounts)
+			for(var/datum/computer_file/data/email_account/account in GLOB.ntnet_global.email_accounts)
 				if(!account.can_login)
 					continue
 				all_accounts.Add(list(list(
@@ -186,7 +186,7 @@
 
 	return data
 
-/datum/tgui_module/email_client/proc/find_message_by_fuid(var/fuid)
+/datum/tgui_module/email_client/proc/find_message_by_fuid(fuid)
 	if(!istype(current_account))
 		return
 
@@ -206,7 +206,7 @@
 	msg_attachment = null
 	current_message = null
 
-/datum/tgui_module/email_client/proc/relayed_process(var/netspeed)
+/datum/tgui_module/email_client/proc/relayed_process(netspeed)
 	download_speed = netspeed
 	if(!downloading)
 		return

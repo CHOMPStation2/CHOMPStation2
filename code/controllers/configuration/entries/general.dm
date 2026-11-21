@@ -4,13 +4,11 @@
 /// Countdown between lobby and the round starting.
 /datum/config_entry/number/lobby_countdown
 	default = 120
-	integer = FALSE
 	min_val = 0
 
 /// Post round murder death kill countdown.
 /datum/config_entry/number/round_end_countdown
 	default = 25
-	integer = FALSE
 	min_val = 0
 
 /// generate numeric suffix based on server port
@@ -191,7 +189,7 @@
 /datum/config_entry/flag/allow_holidays/ValidateAndSet()
 	. = ..()
 	if(.)
-		GLOB.Holiday = config_entry_value
+		GLOB.holidays = config_entry_value
 
 /datum/config_entry/number/minute_topic_limit
 	config_entry_value = 250
@@ -433,8 +431,6 @@
 /datum/config_entry/number/ipr_minimum_age //How many days before a player is considered 'fine' for the purposes of allowing them to use VPNs.
 	default = 5
 
-/datum/config_entry/string/serverurl
-
 /datum/config_entry/string/server
 
 /datum/config_entry/string/banappeals
@@ -523,36 +519,6 @@
 /datum/config_entry/flag/enter_allowed
 	default = TRUE
 
-/datum/config_entry/flag/use_irc_bot
-
-/datum/config_entry/flag/use_node_bot
-
-/datum/config_entry/number/irc_bot_port
-	default = 0
-	min_val = 0
-	max_val = 65535
-	protection = CONFIG_ENTRY_LOCKED | CONFIG_ENTRY_HIDDEN
-
-/datum/config_entry/string/irc_bot_host
-	protection = CONFIG_ENTRY_LOCKED | CONFIG_ENTRY_HIDDEN
-
-/// whether the IRC bot in use is a Bot32 (or similar) instance; Bot32 uses world.Export() instead of nudge.py/libnudge
-/datum/config_entry/flag/irc_bot_export
-
-/datum/config_entry/string/main_irc
-
-/datum/config_entry/string/admin_irc
-
-/// Path to the python executable.
-/// Defaults to "python" on windows and "/usr/bin/env python2" on unix
-/datum/config_entry/string/python_path
-
-/// Use the C library nudge instead of the python nudge.
-/datum/config_entry/flag/use_lib_nudge
-
-// FIXME: Unused. Deprecated?
-///datum/config_entry/flag/use_overmap
-
 // Engines to choose from. Blank means fully random.
 /datum/config_entry/str_list/engine_map
 	default = list("Supermatter Engine", "Edison's Bane")
@@ -634,40 +600,6 @@
 /// Only single character keys are supported. If unset, defaults to , # and -
 /datum/config_entry/str_list/language_prefixes
 	default = list(",", "#", "-")
-
-// 0:1 subtraction:division for computing effective radiation on a turf
-/// 0 / RAD_RESIST_CALC_DIV = Each turf absorbs some fraction of the working radiation level
-/// 1 / RAD_RESIST_CALC_SUB = Each turf absorbs a fixed amount of radiation
-/datum/config_entry/flag/radiation_resistance_calc_mode
-	default = RAD_RESIST_CALC_DIV // CHOMPEdit
-
-/datum/config_entry/flag/radiation_resistance_calc_mode/ValidateAndSet(str_val)
-	if(!VASProcCallGuard(str_val))
-		return FALSE
-	var/val_as_num = text2num(str_val)
-	if(val_as_num in list(RAD_RESIST_CALC_DIV, RAD_RESIST_CALC_SUB))
-		config_entry_value = val_as_num
-		return TRUE
-	return FALSE
-
-///How much radiation is reduced by each tick
-/datum/config_entry/number/radiation_decay_rate
-	default = 1
-	integer = FALSE
-
-/datum/config_entry/number/radiation_resistance_multiplier
-	default = 8.5 //VOREstation edit
-	integer = FALSE
-
-/datum/config_entry/number/radiation_material_resistance_divisor
-	default = 1
-	min_val = 0.1
-	integer = FALSE
-
-///If the radiation level for a turf would be below this, ignore it.
-/datum/config_entry/number/radiation_lower_limit
-	default = 0.35
-	integer = FALSE
 
 /// If true, submaps loaded automatically can be rotated.
 /datum/config_entry/flag/random_submap_orientation
@@ -761,13 +693,18 @@
 /datum/config_entry/flag/allow_simple_mob_recolor
 
 /// Chatlogs are now saved by calling the chatlogging library instead of letting the clients handle it
-/// REQUIRES an database
+/// REQUIRES a database
 /datum/config_entry/flag/chatlog_database_backend
 	default = FALSE
 
 /// The endpoint for the chat to fetch the chatlogs from (for example, the last 2500 messages on init for the history)
 /// REQUIRES chatlog_database_backend to be enabled
 /datum/config_entry/string/chatlog_database_api_endpoint
+
+/// Enables logging dialogue and attack logs to the database
+/// REQUIRES a database
+/datum/config_entry/flag/database_logging
+	default = FALSE
 
 /datum/config_entry/flag/forbid_admin_profiling
 
@@ -822,6 +759,16 @@
 
 /// Turn this on if you want all admin-PMs to go to be sent to discord, and not only the first message of a ticket.
 /datum/config_entry/flag/discord_ahelps_all
+	default = FALSE
+
+/datum/config_entry/str_list/channel_announce_new_game
+
+/datum/config_entry/str_list/channel_announce_end_game
+
+/datum/config_entry/str_list/chat_new_game_notifications
+
+/// validate ownership of admin flags for chat commands
+/datum/config_entry/flag/secure_chat_commands
 	default = FALSE
 
 /datum/config_entry/number/mc_tick_rate/base_mc_tick_rate

@@ -119,7 +119,7 @@
 		return
 	if(usr.stat || usr.restrained())
 		return
-	if(ismouse(usr) || (isobserver(usr)))
+	if(HAS_TRAIT(usr, TRAIT_AMBIENT_PEST_MOB) || (isobserver(usr)))
 		return
 
 	if(busy)
@@ -243,7 +243,7 @@
 		. += " with [trapped.name] trapped within"
 	return
 
-/obj/item/roulette_ball/hollow/attackby(var/obj/item/W, var/mob/user)
+/obj/item/roulette_ball/hollow/attackby(obj/item/W, mob/user)
 	if(trapped)
 		to_chat(user, span_notice("This ball already has something trapped in it!"))
 		return
@@ -269,6 +269,9 @@
 		icon_state = "roulette_ball_glass"
 
 /obj/item/roulette_ball/hollow/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!trapped)
 		to_chat(user, span_notice("\The [src] is empty!"))
 		return
@@ -415,9 +418,8 @@
 				if(public_spin == 0)
 					to_chat(user,span_notice("The Wheel makes a sad beep, public spins are not enabled right now..."))
 					return
-				else
-					to_chat(user,span_notice("You spin the wheel!"))
-					spin_the_wheel("not_lottery")
+				to_chat(user,span_notice("You spin the wheel!"))
+				spin_the_wheel("not_lottery")
 			if("Set the interval")
 				setinterval()
 
@@ -434,53 +436,53 @@
 		if(!check_access(W))
 			to_chat(user, span_warning("Access Denied."))
 			return
-		else
-			to_chat(user, span_warning("Proper access, allowed staff controls."))
-			if(ishuman(user) || isrobot(user))
-				switch(tgui_input_list(user,"Choose what to do (Management)","Wheel Of Fortune (Management)", list("Spin the Lottery Wheel!", "Toggle Lottery Sales", "Toggle Public Spins", "Reset Lottery", "Cancel")))
-					if("Cancel")
+
+		to_chat(user, span_warning("Proper access, allowed staff controls."))
+		if(ishuman(user) || isrobot(user))
+			switch(tgui_input_list(user,"Choose what to do (Management)","Wheel Of Fortune (Management)", list("Spin the Lottery Wheel!", "Toggle Lottery Sales", "Toggle Public Spins", "Reset Lottery", "Cancel")))
+				if("Cancel")
+					return
+				if("Spin the Lottery Wheel!")
+					to_chat(user,span_notice("You spin the wheel for the lottery!"))
+					spin_the_wheel("lottery")
+
+				if("Toggle Lottery Sales")
+					if(lottery_sale == "disabled")
+						lottery_sale = "enabled"
+						to_chat(user,span_notice("Public Lottery sale has been enabled."))
 						return
-					if("Spin the Lottery Wheel!")
-						to_chat(user,span_notice("You spin the wheel for the lottery!"))
-						spin_the_wheel("lottery")
+					lottery_sale = "disabled"
+					to_chat(user,span_notice("Public Lottery sale has been disabled."))
 
-					if("Toggle Lottery Sales")
-						if(lottery_sale == "disabled")
-							lottery_sale = "enabled"
-							to_chat(user,span_notice("Public Lottery sale has been enabled."))
-						else
-							lottery_sale = "disabled"
-							to_chat(user,span_notice("Public Lottery sale has been disabled."))
+				if("Toggle Public Spins")
+					if(public_spin == 0)
+						public_spin = 1
+						to_chat(user,span_notice("Public spins has been enabled."))
+						return
+					public_spin = 0
+					to_chat(user,span_notice("Public spins has been disabled."))
 
-					if("Toggle Public Spins")
-						if(public_spin == 0)
-							public_spin = 1
-							to_chat(user,span_notice("Public spins has been enabled."))
-						else
-							public_spin = 0
-							to_chat(user,span_notice("Public spins has been disabled."))
-
-					if("Reset Lottery")
-						var/confirm = tgui_alert(user, "Are you sure you want to reset Lottery?", "Confirm Lottery Reset", list("Yes", "No"))
-						if(confirm == "Yes")
-							to_chat(user, span_warning("Lottery has been Reset!"))
-							lottery_entries = 0
-							lottery_tickets = list()
-							lottery_tickets_ckeys = list()
+				if("Reset Lottery")
+					var/confirm = tgui_alert(user, "Are you sure you want to reset Lottery?", "Confirm Lottery Reset", list("Yes", "No"))
+					if(confirm == "Yes")
+						to_chat(user, span_warning("Lottery has been Reset!"))
+						lottery_entries = 0
+						lottery_tickets = list()
+						lottery_tickets_ckeys = list()
 
 	if(istype(W, /obj/item/spacecasinocash))
 		if(lottery_sale == "disabled")
 			to_chat(user, span_warning("Lottery sales are currently disabled."))
 			return
-		else
-			if(user.client.ckey in lottery_tickets_ckeys)
-				to_chat(user, span_warning("The scanner beeps in an upset manner, you already have a ticket!"))
-				return
 
-			var/obj/item/spacecasinocash/C = W
-			insert_chip(C, user)
+		if(user.client.ckey in lottery_tickets_ckeys)
+			to_chat(user, span_warning("The scanner beeps in an upset manner, you already have a ticket!"))
+			return
 
-/obj/machinery/wheel_of_fortune/proc/insert_chip(var/obj/item/spacecasinocash/cashmoney, mob/user)
+		var/obj/item/spacecasinocash/C = W
+		insert_chip(C, user)
+
+/obj/machinery/wheel_of_fortune/proc/insert_chip(obj/item/spacecasinocash/cashmoney, mob/user)
 	if (busy)
 		to_chat(user,span_notice("The Wheel of Fortune is busy, wait for it to be done to buy a lottery ticket."))
 		return
@@ -501,7 +503,7 @@
 	lottery_tickets += "Number.[lottery_entries] [user.name]"
 	lottery_tickets_ckeys += user.client.ckey
 
-/obj/machinery/wheel_of_fortune/proc/spin_the_wheel(var/mode)
+/obj/machinery/wheel_of_fortune/proc/spin_the_wheel(mode)
 	var/result = 0
 
 	if(mode == "not_lottery")
@@ -608,7 +610,7 @@
 				selected_collar = tgui_input_list(user, "Select a prize", "Chose a collar", collar_list)
 				if(QDELETED(selected_collar))
 					collar_list -= selected_collar
-					sentientprizes_ckeys_list -= selected_collar.sentientprizeckey
+					sentientprizes_ckeys_list -= selected_collar?.sentientprizeckey
 					to_chat(user, span_warning("No collars to chose, or selected collar has been destroyed or deactived, selection has been removed from list."))
 					selected_collar = null
 					return
@@ -665,12 +667,10 @@
 			if(user.client.ckey == selected_collar.sentientprizeckey)
 				insert_chip(C, user, "selfbuy")
 				return
-			else
-				insert_chip(C, user, "buy")
-				return
-		else
-			to_chat(user, span_warning("This Sentient Prize is already owned! If you are the owner you can release the prize by swiping the collar on the SPASM!"))
+			insert_chip(C, user, "buy")
 			return
+		to_chat(user, span_warning("This Sentient Prize is already owned! If you are the owner you can release the prize by swiping the collar on the SPASM!"))
+		return
 
 	if(istype(W, /obj/item/clothing/accessory/collar/casinosentientprize))
 		var/obj/item/clothing/accessory/collar/casinosentientprize/C = W
@@ -681,7 +681,7 @@
 			if(!C.ownername)
 				to_chat(user,span_notice("If collar isn't disabled and entry removed, please select your entry and insert chips. Or contact staff if you need assistance."))
 				return
-			else
+			if(C.sentientprizename != C.ownername)
 				to_chat(user,span_notice("If collar isn't disabled and entry removed, please ask your owner to free you with collar swipe on the SPASM, or contact staff if you need assistance."))
 				return
 		if(user.name == C.ownername)
@@ -700,56 +700,56 @@
 		if(!check_access(W))
 			to_chat(user, span_warning("Access Denied."))
 			return
-		else
-			to_chat(user, span_warning("Proper access, allowed staff controls."))
-			if(ishuman(user) || isrobot(user))
-				switch(tgui_input_list(user,"Choose what to do (Management)","SPASM (Management)", list("Toggle Sentient Prize Sales", "Wipe Selected Prize Entry", "Change Prize Value", "Cancel")))
-					if("Cancel")
+
+		to_chat(user, span_warning("Proper access, allowed staff controls."))
+		if(ishuman(user) || isrobot(user))
+			switch(tgui_input_list(user,"Choose what to do (Management)","SPASM (Management)", list("Toggle Sentient Prize Sales", "Wipe Selected Prize Entry", "Change Prize Value", "Cancel")))
+				if("Cancel")
+					return
+
+				if("Toggle Sentient Prize Sales")
+					if(casinosentientprize_sale == "disabled")
+						casinosentientprize_sale = "enabled"
+						icon_state = "casinoslave_hub_on"
+						update_icon()
+						to_chat(user,span_notice("Prize sale has been enabled."))
+					else
+						casinosentientprize_sale = "disabled"
+						icon_state = "casinoslave_hub_off"
+						update_icon()
+						to_chat(user,span_notice("Prize sale has been disabled."))
+
+				if("Wipe Selected Prize Entry")
+					if(!selected_collar)
+						to_chat(user, span_warning("No collar selected!"))
 						return
-
-					if("Toggle Sentient Prize Sales")
-						if(casinosentientprize_sale == "disabled")
-							casinosentientprize_sale = "enabled"
-							icon_state = "casinoslave_hub_on"
-							update_icon()
-							to_chat(user,span_notice("Prize sale has been enabled."))
-						else
-							casinosentientprize_sale = "disabled"
-							icon_state = "casinoslave_hub_off"
-							update_icon()
-							to_chat(user,span_notice("Prize sale has been disabled."))
-
-					if("Wipe Selected Prize Entry")
-						if(!selected_collar)
-							to_chat(user, span_warning("No collar selected!"))
-							return
-						if(QDELETED(selected_collar))
-							collar_list -= selected_collar
+					if(QDELETED(selected_collar))
+						collar_list -= selected_collar
+						sentientprizes_ckeys_list -= selected_collar.sentientprizeckey
+						to_chat(user, span_warning("Collar has been destroyed!"))
+						selected_collar = null
+						return
+					var/safety_ckey = selected_collar.sentientprizeckey
+					var/confirm = tgui_alert(user, "Are you sure you want to wipe [selected_collar.sentientprizename] entry?", "Confirm Sentient Prize", list("Yes", "No"))
+					if(confirm == "Yes")
+						if(safety_ckey == selected_collar.sentientprizeckey)
+							to_chat(user, span_warning("[selected_collar.sentientprizename] collar has been deleted from registry!"))
+							selected_collar.icon_state = "casinoslave"
+							selected_collar.update_icon()
+							selected_collar.name = "disabled Sentient Prize Collar: [selected_collar.sentientprizename]"
+							selected_collar.desc = "A collar worn by sentient prizes on the Golden Goose Casino. The tag says its registered to [selected_collar.sentientprizename], but harsh red text informs you its been disabled." //CHOMPEdit
 							sentientprizes_ckeys_list -= selected_collar.sentientprizeckey
-							to_chat(user, span_warning("Collar has been destroyed!"))
+							selected_collar.sentientprizeckey = null
+							collar_list -= selected_collar
 							selected_collar = null
 							return
-						var/safety_ckey = selected_collar.sentientprizeckey
-						var/confirm = tgui_alert(user, "Are you sure you want to wipe [selected_collar.sentientprizename] entry?", "Confirm Sentient Prize", list("Yes", "No"))
-						if(confirm == "Yes")
-							if(safety_ckey == selected_collar.sentientprizeckey)
-								to_chat(user, span_warning("[selected_collar.sentientprizename] collar has been deleted from registry!"))
-								selected_collar.icon_state = "casinoslave"
-								selected_collar.update_icon()
-								selected_collar.name = "disabled Sentient Prize Collar: [selected_collar.sentientprizename]"
-								selected_collar.desc = "A collar worn by sentient prizes on the Golden Goose Casino. The tag says its registered to [selected_collar.sentientprizename], but harsh red text informs you its been disabled." //CHOMPEdit
-								sentientprizes_ckeys_list -= selected_collar.sentientprizeckey
-								selected_collar.sentientprizeckey = null
-								collar_list -= selected_collar
-								selected_collar = null
-							else
-								to_chat(user, span_warning("Registry deletion aborted! Changed collar selection!"))
-								return
+						to_chat(user, span_warning("Registry deletion aborted! Changed collar selection!"))
+						return
 
-					if("Change Prize Value")
-						setprice(user)
+				if("Change Prize Value")
+					setprice(user)
 
-/obj/machinery/casinosentientprize_handler/proc/do_item_tf(mob/living/sentient_prize, var/target_item_name)
+/obj/machinery/casinosentientprize_handler/proc/do_item_tf(mob/living/sentient_prize, target_item_name)
 	var/item_type = GLOB.item_tf_options[target_item_name]
 	var/obj/item/newitem = new item_type(null) // Starts off in nullspace while we customize!
 	var/item_color = newitem.color
@@ -778,7 +778,7 @@
 	sentient_prize.tf_into(newitem, TRUE, item_name)
 	return newitem
 
-/obj/machinery/casinosentientprize_handler/proc/insert_chip(var/obj/item/spacecasinocash/cashmoney, mob/user, var/buystate)
+/obj/machinery/casinosentientprize_handler/proc/insert_chip(obj/item/spacecasinocash/cashmoney, mob/user, buystate)
 	if(cashmoney.worth < casinosentientprize_price)
 		to_chat(user,span_notice("You dont have enough chips to pay for the sentient prize!"))
 		return
@@ -812,7 +812,7 @@
 				// Show the claimer a list of options to turn their prize into.
 				var/item_choice = tgui_input_list(user, "Choose the item to claim your prize as. (Cancelling will default you to claiming your prize without transformation!)", "Choose Sentient Prize Item", GLOB.item_tf_options)
 				if(LAZYLEN(item_choice))
-					var/mob/living/sentient_prize = selected_collar.wearer.resolve()
+					var/mob/living/sentient_prize = selected_collar.wearer?.resolve()
 					if(sentient_prize)
 						do_item_tf(selected_collar.wearer, item_choice)
 					else

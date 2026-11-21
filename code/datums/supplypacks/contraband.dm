@@ -145,8 +145,8 @@
 /datum/supply_pack/supply/stolen
 	name = "Stolen supply crate"
 	desc = "ERR: NO DATA!"
-	contains = list(/obj/item/stolenpackage = 1)
-	cost = 1000 //YW edit
+	contains = list(/obj/item/stolenpackage = 2)
+	cost = 200
 	containertype = /obj/structure/closet/crate
 	containername = "Stolen crate"
 	contraband = 1

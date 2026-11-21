@@ -11,9 +11,12 @@
 	name = "Reward Surplus Voucher"
 	desc = "A surplus voucher! This one is meant to reward valued employees! Activate it for your surplus delivery!"
 /obj/item/surplus_voucher/com/attack_self(mob/user as mob)
+	. = ..(user)
+	if(.)
+		return TRUE
 	spawn_item(get_turf(src))
 
-/obj/item/surplus_voucher/com/proc/spawn_item(var/turf/T)
+/obj/item/surplus_voucher/com/proc/spawn_item(turf/T)
 	var/path = pick(prob(6);/obj/item/reagent_containers/food/drinks/bottle/whiskey,
 					prob(3);/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
 					prob(3);/obj/item/reagent_containers/food/drinks/bottle/vodka,
@@ -49,9 +52,12 @@
 	name = "Engineering Surplus Voucher"
 	desc = "A surplus voucher! This one is meant to resupply engineering with tools! Activate it for your surplus delivery!"
 /obj/item/surplus_voucher/eng/attack_self(mob/user as mob)
+	. = ..(user)
+	if(.)
+		return TRUE
 	spawn_item(get_turf(src))
 
-/obj/item/surplus_voucher/eng/proc/spawn_item(var/turf/T)
+/obj/item/surplus_voucher/eng/proc/spawn_item(turf/T)
 	var/path = pick(prob(2);/obj/item/storage/briefcase/inflatable,
 					prob(2);/obj/item/clamp,
 					prob(3);/obj/item/extinguisher,
@@ -73,9 +79,12 @@
 	name = "Medical Surplus Voucher"
 	desc = "A surplus voucher! This one is meant to resupply medical with chemicals and kits! Activate it for your surplus delivery!"
 /obj/item/surplus_voucher/med/attack_self(mob/user as mob)
+	. = ..(user)
+	if(.)
+		return TRUE
 	spawn_item(get_turf(src))
 
-/obj/item/surplus_voucher/med/proc/spawn_item(var/turf/T)
+/obj/item/surplus_voucher/med/proc/spawn_item(turf/T)
 	var/path = pick(prob(6);/obj/item/storage/firstaid/regular,
 					prob(6);/obj/item/storage/firstaid/fire,
 					prob(6);/obj/item/storage/firstaid/toxin,
@@ -103,9 +112,12 @@
 	name = "Science Surplus Voucher"
 	desc = "A surplus voucher! This one is meant to supply science with a variety of miscellaneous items! Activate it for your surplus delivery!"
 /obj/item/surplus_voucher/sci/attack_self(mob/user as mob)
+	. = ..(user)
+	if(.)
+		return TRUE
 	spawn_item(get_turf(src))
 
-/obj/item/surplus_voucher/sci/proc/spawn_item(var/turf/T)
+/obj/item/surplus_voucher/sci/proc/spawn_item(turf/T)
 	var/path = pick(prob(1);/obj/item/kit/paint/ripley,
 					prob(1);/obj/item/kit/paint/ripley/death,
 					prob(1);/obj/item/kit/paint/ripley/flames_red,
@@ -133,9 +145,12 @@
 	name = "Security Surplus Voucher"
 	desc = "A surplus voucher! This one is meant to resupply security with gear... and donuts! Activate it for your surplus delivery!"
 /obj/item/surplus_voucher/sec/attack_self(mob/user as mob)
+	. = ..(user)
+	if(.)
+		return TRUE
 	spawn_item(get_turf(src))
 
-/obj/item/surplus_voucher/sec/proc/spawn_item(var/turf/T)
+/obj/item/surplus_voucher/sec/proc/spawn_item(turf/T)
 	var/path = pick(prob(2);/obj/item/storage/box/flashbangs,
 					prob(4);/obj/item/storage/box/flare,
 					prob(5);/obj/item/storage/box/donut,
@@ -156,9 +171,12 @@
 	name = "Service Surplus Voucher"
 	desc = "A surplus voucher! This one is meant to generally resupply service employees! Activate it for your surplus delivery!"
 /obj/item/surplus_voucher/ser/attack_self(mob/user as mob)
+	. = ..(user)
+	if(.)
+		return TRUE
 	spawn_item(get_turf(src))
 
-/obj/item/surplus_voucher/ser/proc/spawn_item(var/turf/T)
+/obj/item/surplus_voucher/ser/proc/spawn_item(turf/T)
 	var/path = pick(prob(4);/obj/item/reagent_containers/food/drinks/milk,
 					prob(4);/obj/item/reagent_containers/food/condiment/carton/flour,
 					prob(4);/obj/item/reagent_containers/food/drinks/soymilk,

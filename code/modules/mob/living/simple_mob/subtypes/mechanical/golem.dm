@@ -16,7 +16,7 @@
 	harm_intent_damage = 3
 	friendly = "hugs"
 
-	organ_names = /decl/mob_organ_names/golem
+	organ_names = /datum/decl/mob_organ_names/golem
 
 	melee_damage_lower = 30 // It has a built in esword.
 	melee_damage_upper = 30
@@ -78,7 +78,7 @@
 	s.start()
 	qdel(src)
 
-/mob/living/simple_mob/mechanical/technomancer_golem/place_spell_in_hand(var/path)
+/mob/living/simple_mob/mechanical/technomancer_golem/place_spell_in_hand(path)
 	if(!path || !ispath(path))
 		return FALSE
 	if(active_spell)
@@ -154,5 +154,5 @@
 	casting = FALSE
 	ranged_post_animation(A)
 
-/decl/mob_organ_names/golem
+/datum/decl/mob_organ_names/golem
 	hit_zones = list("helmet", "cuirass", "left tasset", "right tasset", "left gauntlet", "right gauntlet", "weapon")

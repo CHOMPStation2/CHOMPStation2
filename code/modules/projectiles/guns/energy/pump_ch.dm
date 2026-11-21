@@ -7,7 +7,6 @@
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_NORMAL
 	force = 10
-	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2)
 	matter = list(MAT_STEEL = 2000)
 	fire_sound = 'sound/weapons/mandalorian.ogg'
 	projectile_type = /obj/item/projectile/beam/imperial
@@ -29,16 +28,15 @@
 	pixel_x = -16
 
 	projectile_type = /obj/item/projectile/beam/stun/weak
-	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2, TECH_ILLEGAL = 3)
 	modifystate = "g44estun"
 
 	one_handed_penalty = 60
 
 	firemodes = list(
 		list(mode_name="stun", burst=1, projectile_type=/obj/item/projectile/beam/stun/weak, modifystate="g44estun", fire_sound='sound/weapons/Taser.ogg', charge_cost = 100),
-		list(mode_name="stun burst", burst=3, fire_delay=null, move_delay=4, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/stun/weak, modifystate="g44estun", fire_sound='sound/weapons/Taser.ogg'),
+		list(mode_name="stun burst", burst=3, fire_delay=null, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/stun/weak, modifystate="g44estun", fire_sound='sound/weapons/Taser.ogg'),
 		list(mode_name="lethal", burst=1, projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="g44ekill", fire_sound='sound/weapons/Laser.ogg', charge_cost = 200),
-		list(mode_name="lethal burst", burst=3, fire_delay=null, move_delay=4, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="g44ekill", fire_sound='sound/weapons/Laser.ogg'),
+		list(mode_name="lethal burst", burst=3, fire_delay=null, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="g44ekill", fire_sound='sound/weapons/Laser.ogg'),
 		)
 */
 
@@ -61,7 +59,6 @@
 	modifystate = null
 	battery_lock = 1
 	fire_sound = 'sound/weapons/Taser.ogg'
-	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
 	firemodes = list(
 		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun, fire_sound='sound/weapons/Taser.ogg', charge_cost = 600),
 		list(mode_name="lethal", projectile_type=/obj/item/projectile/beam, fire_sound='sound/weapons/Laser.ogg', charge_cost = 1200),
@@ -95,7 +92,7 @@
 	else
 		return ..()
 
-/obj/item/gun/energy/locked/emag_act(var/remaining_charges,var/mob/user)
+/obj/item/gun/energy/locked/emag_act(remaining_charges,mob/user)
 	..()
 	if(lockable)
 		locked = !locked
@@ -119,7 +116,6 @@
 	item_state = "phaser"
 	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_guns_vr.dmi', slot_r_hand_str = 'icons/mob/items/righthand_guns_vr.dmi', "slot_belt" = 'icons/inventory/belt/mob.dmi')
 	fire_sound = 'sound/weapons/laser2.ogg'
-	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2, TECH_POWER = 4)
 	charge_cost = 100 //Chompedit Reduced cost
 
 	battery_lock = 1
@@ -136,7 +132,7 @@
 	)  //CHOMPedit Adjusts cost and fire delay to match adjusted beams.
 	recoil_mode = 0
 
-/obj/item/gun/energy/locked/frontier/unload_ammo(var/mob/user)
+/obj/item/gun/energy/locked/frontier/unload_ammo(mob/user)
 	if(recharging)
 		return
 	recharging = 1
@@ -192,7 +188,7 @@
 	firemodes = list(
 		list(mode_name="lethal", fire_delay=10, projectile_type=/obj/item/projectile/beam/phaser, modifystate="carbinekill", charge_cost = 60), //Chompedit Reduced cost
 		list(mode_name="low-power", fire_delay=5, projectile_type=/obj/item/projectile/beam/phaser/light, modifystate="carbinestun", charge_cost = 30), //Chompedit Reduced cost
-		list(mode_name="burst", burst=3, fire_delay=10, move_delay=4, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/phaser/light, charge_cost = 90), //Chompedit Added this
+		list(mode_name="burst", burst=3, fire_delay=10, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/phaser/light, charge_cost = 90), //Chompedit Added this
 	)
 
 /obj/item/gun/energy/locked/frontier/carbine/update_icon()
@@ -254,7 +250,7 @@
 	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="riflestun", charge_cost = 60), //Chompedit Reduced cost
-		list(mode_name="sniper", fire_delay=35, move_delay=4, projectile_type=/obj/item/projectile/beam/phaser/heavy, modifystate="riflekill", charge_cost = 100), //Chompedit Reduced cost
+		list(mode_name="sniper", fire_delay=35, projectile_type=/obj/item/projectile/beam/phaser/heavy, modifystate="riflekill", charge_cost = 100), //Chompedit Reduced cost
 	)
 
 /obj/item/gun/energy/locked/frontier/rifle/ui_action_click()
@@ -265,7 +261,7 @@
 	set name = "Use Scope"
 	set popup_menu = 1
 
-	toggle_scope(2.0)
+	toggle_scope(usr, 2.0)
 
 /obj/item/gun/energy/locked/frontier/rifle/update_icon()
 	if(recharging)

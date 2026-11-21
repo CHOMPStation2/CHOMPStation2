@@ -159,3 +159,7 @@
 
 /area/rnd/cetus/meteor/toxtest
 	name = "\improper Toxins Testing"
+
+/area/rnd/cetus/meteor/anomtest
+	name = "\improper Anomaly Research"
+	ambience = AMBIENCE_TECH_RUINS

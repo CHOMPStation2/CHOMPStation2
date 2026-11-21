@@ -1,4 +1,4 @@
-/obj/item/clothing/proc/describe_armor(var/armor_type, var/descriptive_attack_type)
+/obj/item/clothing/proc/describe_armor(armor_type, descriptive_attack_type)
 	if(armor[armor_type])
 		switch(armor[armor_type])
 			if(1 to 20)
@@ -45,7 +45,7 @@
 		else
 			return "It's difficult to tell how much it'll influence your speed."
 
-/obj/item/clothing/get_description_info()
+/obj/item/clothing/get_description_info(list/additional_information)
 	var/armor_stats = description_info + "\
 	<br>"
 

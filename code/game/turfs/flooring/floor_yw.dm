@@ -5,12 +5,12 @@
 	icon_state = "clockwork_floor"
 //	floor_tile = /obj/item/stack/tile/bronze
 
-	initial_flooring = /decl/flooring/bronze
+	initial_flooring = /datum/decl/flooring/bronze
 
 /turf/simulated/floor/flesh/attackby()
 	return
 
-/decl/flooring/bronze
+/datum/decl/flooring/bronze
 	name = "bronze"
 	desc = "Some heavy bronze tiles."
 	icon = 'icons/obj/clockwork_objects.dmi'
@@ -23,7 +23,7 @@
 	icon ='icons/obj/clockwork_objects.dmi'
 	icon_state = "grass"
 
-/decl/flooring/grass2
+/datum/decl/flooring/grass2
 	name = "grass"
 	desc = "You can't tell if this is real grass or just cheap plastic imitation."
 	icon ='icons/obj/clockwork_objects.dmi'

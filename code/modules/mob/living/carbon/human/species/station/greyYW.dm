@@ -70,7 +70,7 @@
 
 	inherent_verbs = list(/mob/living/carbon/human/proc/telepathy)
 
-/datum/species/grey/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/species/grey/handle_environment_special(mob/living/carbon/human/H)
 	if(H.fire_stacks < 0 && H.get_water_protection() <= 0.5)	// If over half your body is soaked, you're melting.
 		H.adjustFireLoss(max(0,(3 - (3 * H.get_water_protection()))))	// Tripled because 0.5 is miniscule, and fire_stacks are capped in both directions.
 

@@ -23,19 +23,19 @@
 			if(prob(25))
 				cam.wires.cut(WIRE_CAM_ALARM)
 
-/datum/event2/event/camera_damage/proc/acquire_random_camera(var/remaining_attempts = 5)
-	if(!cameranet.cameras.len)
+/datum/event2/event/camera_damage/proc/acquire_random_camera(remaining_attempts = 5)
+	if(!SScameras.cameras.len)
 		return
 	if(!remaining_attempts)
 		return
 
-	var/obj/machinery/camera/C = pick(cameranet.cameras)
+	var/obj/machinery/camera/C = pick(SScameras.cameras)
 	if(is_valid_camera(C))
 		return C
 	// It is very important to use --var and not var-- for recursive calls, as var-- will cause an infinite loop.
 	return acquire_random_camera(--remaining_attempts)
 
-/datum/event2/event/camera_damage/proc/is_valid_camera(var/obj/machinery/camera/C)
+/datum/event2/event/camera_damage/proc/is_valid_camera(obj/machinery/camera/C)
 	// Only return a functional camera, not installed in a silicon/hardsuit/circuit/etc, and that exists somewhere players have access
 	var/turf/T = get_turf(C)
 	return T && C?.can_use() && istype(C.loc, /turf) && (T.z in using_map.player_levels)

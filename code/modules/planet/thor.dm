@@ -1,4 +1,4 @@
-var/datum/planet/thor/planet_thor = null
+GLOBAL_DATUM(planet_thor, /datum/planet/thor)
 
 /datum/time/thor
 	seconds_in_day = 24 HOURS
@@ -12,7 +12,7 @@ var/datum/planet/thor/planet_thor = null
 
 /datum/planet/thor/New()
 	..()
-	planet_thor = src
+	GLOB.planet_thor = src
 	weather_holder = new /datum/weather_holder/thor(src)
 
 /datum/planet/thor/update_sun()
@@ -557,7 +557,13 @@ var/datum/planet/thor/planet_thor = null
 		if(!T.is_outdoors())
 			return // They're indoors, so no need to irradiate them with fallout.
 
-		L.rad_act(rand(direct_rad_low, direct_rad_high))
+		radiation_pulse(
+			L,
+			max_range = 1,
+			threshold = RAD_VERY_LIGHT_INSULATION,
+			chance = rand(fallout_rad_low, fallout_rad_high),
+			strength = rand(fallout_rad_low, fallout_rad_high)
+		)
 
 // This makes random tiles near people radioactive for awhile.
 // Tiles far away from people are left alone, for performance.
@@ -569,7 +575,14 @@ var/datum/planet/thor/planet_thor = null
 	if(!istype(T))
 		return
 	if(T.is_outdoors())
-		SSradiation.radiate(T, rand(fallout_rad_low, fallout_rad_high))
+		radiation_pulse(
+			T,
+			max_range = 7,
+			threshold = RAD_MEDIUM_INSULATION,
+			chance = URANIUM_IRRADIATION_CHANCE,
+			minimum_exposure_time = URANIUM_RADIATION_MINIMUM_EXPOSURE_TIME,
+			strength = rand(fallout_rad_low, fallout_rad_high)
+		)
 
 /datum/weather/thor/fallout/temp
 	name = "short-term fallout"

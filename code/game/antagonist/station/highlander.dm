@@ -1,4 +1,4 @@
-var/datum/antagonist/highlander/highlanders
+GLOBAL_DATUM(highlanders, /datum/antagonist/highlander)
 
 /datum/antagonist/highlander
 	role_text = "Highlander"
@@ -12,13 +12,13 @@ var/datum/antagonist/highlander/highlanders
 	initial_spawn_req = 3
 	initial_spawn_target = 5
 
-	id_type = /obj/item/card/id/centcom/ERT
+	id_type = /obj/item/card/id/centcom/ert
 
 /datum/antagonist/highlander/New()
 	..()
-	highlanders = src
+	GLOB.highlanders = src
 
-/datum/antagonist/highlander/create_objectives(var/datum/mind/player)
+/datum/antagonist/highlander/create_objectives(datum/mind/player)
 
 	var/datum/objective/steal/steal_objective = new
 	steal_objective.owner = player
@@ -29,7 +29,7 @@ var/datum/antagonist/highlander/highlanders
 	hijack_objective.owner = player
 	player.objectives |= hijack_objective
 
-/datum/antagonist/highlander/equip(var/mob/living/carbon/human/player)
+/datum/antagonist/highlander/equip(mob/living/carbon/human/player)
 
 	if(!..())
 		return
@@ -53,7 +53,7 @@ var/datum/antagonist/highlander/highlanders
 
 	var/obj/item/card/id/id = create_id("Highlander", player)
 	if(id)
-		id.access |= get_all_station_access()
+		id.access |= SSaccess.get_all_station_access()
 		id.icon_state = "centcom"
 	create_radio(DTH_FREQ, player)
 
@@ -80,7 +80,7 @@ var/datum/antagonist/highlander/highlanders
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(H.stat == 2 || !(H.client)) continue
 		if(is_special_character(H)) continue
-		highlanders.add_antagonist(H.mind)
+		GLOB.highlanders.add_antagonist(H.mind)
 
 /client/proc/only_one_delayed()
 	//send_to_playing_players(span_userdanger("Bagpipes begin to blare. You feel Scottish pride coming over you."))

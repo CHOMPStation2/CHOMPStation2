@@ -5,7 +5,7 @@
 #define RMS_STONE 5
 #define RMS_RAND 6
 
-var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
+GLOBAL_LIST_INIT(RMS_random_malfunction, list(/obj/item/fbp_backup_cell,
 									/obj/item/trash/rkibble,
 									/obj/item/clothing/gloves/bluespace/deluxe,
 									/obj/item/flame/lighter/supermatter/syndismzippo,
@@ -20,7 +20,8 @@ var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
 									/obj/item/clothing/shoes/clown_shoes,
 									/obj/item/clothing/mask/gas/clown_hat,
 									/obj/item/pda/clown,
-									/mob/living/simple_mob/vore/catgirl)
+									/mob/living/simple_mob/vore/catgirl
+	))
 
 /obj/item/rms
 	name = "Rapid Material Synthesizer"
@@ -37,7 +38,6 @@ var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
 	throw_speed = 1
 	throw_range = 5
 	w_class = ITEMSIZE_NORMAL
-	origin_tech = list(TECH_ENGINEERING = 3, TECH_MATERIAL = 3)
 	matter = list(DEFAULT_WALL_MATERIAL = 5000)
 	preserve_item = FALSE
 
@@ -85,7 +85,7 @@ var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
 	. += display_resources()
 
 /obj/item/rms/proc/display_resources()
-	return "It currently holds [round(stored_charge/1000)]/[max_charge/1000] kW charge."
+	return span_notice("It currently holds [round(stored_charge/1000)]/[max_charge/1000] kW charge.")
 
 /obj/item/rms/proc/drain_battery(user, battery)
 	var/obj/item/cell/C = battery
@@ -135,15 +135,15 @@ var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
 	if(do_after(user, 5, target = A))
 		if(overcharge)
 			if(prob(5)) //5% chance for malfunction
-				var/thing_to_spawn = pick(RMS_random_malfunction)
+				var/thing_to_spawn = pick(GLOB.RMS_random_malfunction)
 				product = new thing_to_spawn
 			else
 				product = choose_overcharge(user)
 		else
 			product = choose_normal(user)
 
-	spark_system.start()
-	product.loc = get_turf(A)
+		spark_system.start()
+		product.loc = get_turf(A)
 
 /obj/item/rms/proc/choose_overcharge(mob/living/user)
 	var/final_product
@@ -188,7 +188,13 @@ var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
 	var/list/banned_sheet_materials = list(
 		/obj/item/stack/material/supermatter,
 		/obj/item/stack/material/glamour,
-		/obj/item/stack/material/morphium
+		/obj/item/stack/material/morphium, //CHOMPAdd Start
+		/obj/item/stack/material/shellchitin,
+		/obj/item/stack/material/dreamscale,
+		/obj/item/stack/material/crystalscale,
+		/obj/item/stack/material/frostscale,
+		/obj/item/stack/material/wisp,
+		/obj/item/stack/material/weathered_agate //CHOMPAdd End
 		// Include if you enable in the .dme /obj/item/stack/material/debug
 		)
 	possible_object_paths -= banned_sheet_materials
@@ -241,6 +247,9 @@ var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
 		return
 
 /obj/item/rms/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/list/choices = list(
 		"Steel" = radial_image_steel,
 		"Glass" = radial_image_glass,
@@ -277,7 +286,6 @@ var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
 
 	to_chat(user, span_notice("Changed mode to '[choice]'."))
 	playsound(src.loc, 'sound/effects/pop.ogg', 50, 0)
-	return ..()
 
 /obj/item/rms/attackby(obj/item/W, mob/user)
 	if(W.has_tool_quality(TOOL_MULTITOOL))

@@ -8,7 +8,6 @@
 	fire_delay = 10 // Handguns should be inferior to two-handed weapons.
 
 	projectile_type = /obj/item/projectile/beam/stun
-	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
 	modifystate = "lasgunstun"
 
 	firemodes = list(
@@ -31,7 +30,6 @@
 	burst_delay = 0.5
 
 	projectile_type = /obj/item/projectile/beam/burstlaser
-	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2, TECH_ILLEGAL = 3)
 	modifystate = "mg42-e"
 
 //	requires_two_hands = 1
@@ -39,9 +37,9 @@
 
 	firemodes = list(
 		list(mode_name="single fire", burst=1, projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="mg42-e", fire_sound='sound/weapons/Laser.ogg', charge_cost = 100),
-		list(mode_name="burst fire", burst=3, fire_delay=null, move_delay=4, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="mg42-e", fire_sound='sound/weapons/Laser.ogg'),
-		list(mode_name="5 laser burst", burst=5, fire_delay=null, move_delay=4, burst_accuracy=list(0,0,0,0,0), dispersion=list(0.0, 0.2, 0.5, 0.5, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="mg42-e", fire_sound='sound/weapons/Laser.ogg'),
-		list(mode_name="15 laser burst, ye boi.", burst=15, fire_delay=null, move_delay=4, burst_accuracy=list(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0), dispersion=list(0.0, 0.2, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="mg42-e", fire_sound='sound/weapons/Laser.ogg'),
+		list(mode_name="burst fire", burst=3, fire_delay=null, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="mg42-e", fire_sound='sound/weapons/Laser.ogg'),
+		list(mode_name="5 laser burst", burst=5, fire_delay=null, burst_accuracy=list(0,0,0,0,0), dispersion=list(0.0, 0.2, 0.5, 0.5, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="mg42-e", fire_sound='sound/weapons/Laser.ogg'),
+		list(mode_name="15 laser burst, ye boi.", burst=15, fire_delay=null, burst_accuracy=list(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0), dispersion=list(0.0, 0.2, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="mg42-e", fire_sound='sound/weapons/Laser.ogg'),
 		)
 
 /obj/item/gun/energy/x01
@@ -55,7 +53,6 @@
 	fire_delay = 8 // Handguns should be inferior to two-handed weapons.
 
 	projectile_type = /obj/item/projectile/beam/stun
-	origin_tech = list(TECH_COMBAT = 6, TECH_MAGNET = 5)
 	modifystate = "x01stun"
 
 	firemodes = list(

@@ -31,7 +31,7 @@
 	kill()
 	return
 
-/datum/event/bluespace_locker/proc/pick_locker(var/list/areas, var/crates = FALSE, var/sealed = FALSE)
+/datum/event/bluespace_locker/proc/pick_locker(list/areas, crates = FALSE, sealed = FALSE)
 	var/area/picked_area = pick(areas)
 	var/list/obj/structure/closet/valid_lockers = list()
 
@@ -57,4 +57,4 @@
 	log_and_message_admins("Bluespace lockers linked. Entry: [get_area(entry_point)] Exit: [get_area(exit_point)]")
 
 /datum/event/bluespace_locker/announce()
-	command_announcement.Announce("Bluespace anomaly detected near [station_name()]. Possible location, [get_area(pick(entry_point, exit_point))].", "Anomaly Alert")
+	GLOB.command_announcement.Announce("Bluespace anomaly detected near [station_name()]. Possible location, [get_area(pick(entry_point, exit_point))].", "Anomaly Alert")

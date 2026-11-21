@@ -641,7 +641,7 @@
 		icon_state = "implant_melted"
 		malfunction = MALFUNCTION_PERMANENT
 
-/obj/item/implant/fluff/coda/proc/coda_implant_resize(var/mob/living/carbon/human/H)
+/obj/item/implant/fluff/coda/proc/coda_implant_resize(mob/living/carbon/human/H)
 	set name = "Resize (Implant)"
 	set desc = "Change your size between two different preset options."
 	set category = "IC.Game" //CHOMPEdit

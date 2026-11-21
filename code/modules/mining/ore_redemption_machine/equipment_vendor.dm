@@ -26,7 +26,9 @@
 			inserted_id = null
 		else
 			QDEL_NULL(inserted_id)
-	QDEL_NULL_LIST(prize_list)
+	for(var/key, value in prize_list)
+		var/list/item_list = value
+		QDEL_LIST_ASSOC_VAL(item_list)
 	. = ..()
 
 /datum/data/mining_equipment
@@ -67,7 +69,7 @@
 		EQUIPMENT("Jump Boots",									/obj/item/clothing/shoes/bhop,								2500),
 		EQUIPMENT("Mini-Translocator",							/obj/item/perfect_tele/one_beacon,							1200),
 		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,									750),
-		EQUIPMENT("Mining Satchel of Holding",					/obj/item/storage/bag/ore/holding,							1500),
+		EQUIPMENT("Mining Satchel of Holding",					/obj/item/ore_bag/holding,							1500),
 		EQUIPMENT("Industrial Equipment - Sheet-Snatcher",		/obj/item/storage/bag/sheetsnatcher,						500),
 		EQUIPMENT("Sheet Snatcher of Holding",					/obj/item/storage/bag/sheetsnatcher/holding,				1000),
 		EQUIPMENT("Advanced Ore Scanner",						/obj/item/mining_scanner/advanced,							500),
@@ -168,6 +170,7 @@
 	if(inserted_id && !powered())
 		visible_message(span_notice("The ID slot indicator light flickers on \the [src] as it spits out a card before powering down."))
 		inserted_id.forceMove(get_turf(src))
+		inserted_id = null
 
 /obj/machinery/mineral/equipment_vendor/update_icon()
 	if(panel_open)
@@ -274,7 +277,8 @@
 
 			remove_points(inserted_id, prize.cost)
 			var/obj/item/I = new prize.equipment_path(loc)
-			I.persist_storable = FALSE
+			if(isitem(I))
+				I.persist_storable = FALSE
 			flick(icon_vend, src)
 		else
 			flick(icon_deny, src)
@@ -307,6 +311,7 @@
 /obj/machinery/mineral/equipment_vendor/dismantle()
 	if(inserted_id)
 		inserted_id.forceMove(loc) //Prevents deconstructing the ORM from deleting whatever ID was inside it.
+		inserted_id = null
 	. = ..()
 
 /**
@@ -383,7 +388,7 @@
 			new_card.mine_points = 1000
 	qdel(voucher)
 
-/obj/machinery/mineral/equipment_vendor/proc/new_prize(var/name, var/path, var/cost) // Generic proc for adding new entries. Good for abusing for FUN and PROFIT.
+/obj/machinery/mineral/equipment_vendor/proc/new_prize(name, path, cost) // Generic proc for adding new entries. Good for abusing for FUN and PROFIT.
 	if(!cost)
 		cost = 100
 	if(!path)

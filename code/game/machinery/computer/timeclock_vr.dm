@@ -7,6 +7,7 @@
 //
 /obj/machinery/computer/timeclock
 	name = "timeclock terminal"
+	desc = "This device is connected to the employment servers, allowing you to clock in, or out, of your job. Slacker."
 	icon = 'icons/obj/machines/timeclock_vr.dmi'
 	icon_state = "timeclock"
 	icon_keyboard = null
@@ -16,6 +17,7 @@
 	density = FALSE
 	circuit = /obj/item/circuitboard/timeclock
 	clicksound = null
+	flags = WALL_ITEM
 	var/channel = "Common" //Radio channel to announce on
 
 	var/obj/item/card/id/card // Inserted Id card
@@ -63,7 +65,7 @@
 		return
 	. = ..()
 
-/obj/machinery/computer/timeclock/attack_hand(var/mob/user as mob)
+/obj/machinery/computer/timeclock/attack_hand(mob/user as mob)
 	if(..())
 		return
 	tgui_interact(user)
@@ -92,7 +94,7 @@
 		data["card"] = "[card]"
 		data["assignment"] = card.assignment
 		data["card_cooldown"] = getCooldown()
-		var/datum/job/job = job_master.GetJob(card.rank)
+		var/datum/job/job = SSjob.get_job(card.rank)
 		if(job)
 			data["job_datum"] = list(
 				"title" = job.title,
@@ -148,9 +150,9 @@
 			update_icon()
 			return TRUE
 
-/obj/machinery/computer/timeclock/proc/getOpenOnDutyJobs(var/mob/user, var/department)
+/obj/machinery/computer/timeclock/proc/getOpenOnDutyJobs(mob/user, department)
 	var/list/available_jobs = list()
-	for(var/datum/job/job in job_master.occupations)
+	for(var/datum/job/job in SSjob.occupations)
 		if(isOpenOnDutyJob(user, department, job))
 			available_jobs[job.title] = list(job.title)
 			if(job.alt_titles)
@@ -159,7 +161,7 @@
 						available_jobs[job.title] += alt_job
 	return available_jobs
 
-/obj/machinery/computer/timeclock/proc/isOpenOnDutyJob(var/mob/user, var/department, var/datum/job/job)
+/obj/machinery/computer/timeclock/proc/isOpenOnDutyJob(mob/user, department, datum/job/job)
 	return job \
 		&& job.is_position_available() \
 		&& !job.whitelist_only \
@@ -170,9 +172,9 @@
 		&& !job.disallow_jobhop \
 		&& job.timeoff_factor > 0
 
-/obj/machinery/computer/timeclock/proc/makeOnDuty(var/newrank, var/newassignment, var/mob/user)
-	var/datum/job/oldjob = job_master.GetJob(card.rank)
-	var/datum/job/newjob = job_master.GetJob(newrank)
+/obj/machinery/computer/timeclock/proc/makeOnDuty(newrank, newassignment, mob/user)
+	var/datum/job/oldjob = SSjob.get_job(card.rank)
+	var/datum/job/newjob = SSjob.get_job(newrank)
 	if(!oldjob || !isOpenOnDutyJob(user, oldjob.pto_type, newjob))
 		return
 	if(newassignment != newjob.title && !(newassignment in newjob.alt_titles))
@@ -202,13 +204,13 @@
 		announce.autosay("[card.registered_name] has moved On-Duty as [card.assignment].", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
 	return
 
-/obj/machinery/computer/timeclock/proc/makeOffDuty(var/mob/user)
-	var/datum/job/foundjob = job_master.GetJob(card.rank)
+/obj/machinery/computer/timeclock/proc/makeOffDuty(mob/user)
+	var/datum/job/foundjob = SSjob.get_job(card.rank)
 	if(!foundjob)
 		return
 	var/new_dept = foundjob.pto_type || PTO_CIVILIAN
 	var/datum/job/ptojob = null
-	for(var/datum/job/job in job_master.occupations)
+	for(var/datum/job/job in SSjob.occupations)
 		if(job.pto_type == new_dept && job.timeoff_factor < 0)
 			ptojob = job
 			break
@@ -228,7 +230,7 @@
 		announce.autosay("[card.registered_name], [oldtitle], has moved Off-Duty.", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
 	return
 
-/obj/machinery/computer/timeclock/proc/checkCardCooldown(var/mob/user)
+/obj/machinery/computer/timeclock/proc/checkCardCooldown(mob/user)
 	if(!card)
 		return FALSE
 	var/time_left = getCooldown()
@@ -240,7 +242,7 @@
 /obj/machinery/computer/timeclock/proc/getCooldown()
 	return 1 MINUTES - (world.time - card.last_job_switch) // CHOMPedit: 10 minute wait down to 1 minute.
 
-/obj/machinery/computer/timeclock/proc/checkFace(var/mob/user)
+/obj/machinery/computer/timeclock/proc/checkFace(mob/user)
 	var/turf/location = get_turf(src) // CHOMPedit: Needed for admin logs.
 	if(!card)
 		to_chat(user, span_notice("No ID is inserted."))
@@ -265,6 +267,13 @@ CHOMPedit end. */
 /obj/item/card/id
 	var/last_job_switch
 
+	///Var for attack_self chain
+	var/special_handling = FALSE
+
+	///Var for event IDs
+	var/can_configure = FALSE
+	var/configured = FALSE
+
 /obj/item/card/id/Initialize(mapload)
 	. = ..()
 	last_job_switch = world.time
@@ -281,7 +290,7 @@ CHOMPedit end. */
 	y_offset = 30
 	icon_override = 'icons/obj/machines/timeclock_vr.dmi'
 
-/datum/frame/frame_types/timeclock_terminal/get_icon_state(var/state)
+/datum/frame/frame_types/timeclock_terminal/get_icon_state(state)
 	return "timeclock_b[state]"
 
 //

@@ -43,8 +43,8 @@ SUBSYSTEM_DEF(appreciation)
 
 		current_player_list = GLOB.player_list.Copy()
 
-	while(current_player_list.len)
-		var/mob/M = current_player_list[current_player_list.len]
+	while(length(current_player_list))
+		var/mob/M = current_player_list[length(current_player_list)]
 		current_player_list.len--
 
 		if(ishuman(M))
@@ -66,22 +66,22 @@ SUBSYSTEM_DEF(appreciation)
 
 
 /datum/controller/subsystem/appreciation/proc/build_appreciation()
-	if(human_list.len < required_humans)
-		appreciated = pick(loremaster.appreciation_targets)
+	if(length(human_list) < required_humans)
+		appreciated = pick(GLOB.loremaster.appreciation_targets)
 		return
 
 	if(prob(50))
-		appreciated = pick(loremaster.appreciation_targets)
+		appreciated = pick(GLOB.loremaster.appreciation_targets)
 		return
 
 	var/mob/living/carbon/human/H = pick(human_list)
 
 	if(!istype(H))
-		appreciated = pick(loremaster.appreciation_targets)
+		appreciated = pick(GLOB.loremaster.appreciation_targets)
 		return
 
 	if(H.absorbed)
-		appreciated = pick(loremaster.appreciation_targets)
+		appreciated = pick(GLOB.loremaster.appreciation_targets)
 		return
 
 	if(H.custom_species)
@@ -92,18 +92,18 @@ SUBSYSTEM_DEF(appreciation)
 
 
 /datum/controller/subsystem/appreciation/proc/do_appreciate()
-	var/appreciation_message = pick(loremaster.appreciation_messages)
-	var/terrible_factoid = pick(loremaster.terrible_factoids)
+	var/appreciation_message = pick(GLOB.loremaster.appreciation_messages)
+	var/terrible_factoid = pick(GLOB.loremaster.terrible_factoids)
 	msg("Today is [appreciated] appreciation day! [terrible_factoid] [appreciation_message]")
 
-/datum/controller/subsystem/appreciation/proc/msg(var/message,var/sender)
+/datum/controller/subsystem/appreciation/proc/msg(message,sender)
 	ASSERT(message)
-	GLOB.global_announcer.autosay("[message]", sender ? sender : "Cultural Awareness")
+	GLOB.global_announcer.autosay("[message]", sender ? sender : "Cultural Awareness", CHANNEL_CULTURE)
 
 /datum/controller/subsystem/appreciation/proc/is_squelched()
 	return squelched
 
-/datum/controller/subsystem/appreciation/proc/cancel_appreciation(var/yes = 1,var/silent = FALSE)
+/datum/controller/subsystem/appreciation/proc/cancel_appreciation(yes = 1,silent = FALSE)
 	if(yes)
 		if(!squelched && !silent)
 			msg("Today's appreciation day has been suspended.")

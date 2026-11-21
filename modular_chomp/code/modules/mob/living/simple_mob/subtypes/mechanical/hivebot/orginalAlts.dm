@@ -15,10 +15,7 @@
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege
 	projectiletype = /obj/item/projectile/arc //Polaris, don't make the same mob twice.
 
-/mob/living/simple_mob/mechanical/hivebot/tyr
-	name = "tyrian hivebot"
-	maxHealth = 0.5 LASERS_TO_KILL // 20 hp
-	health = 0.5 LASERS_TO_KILL
+/mob/living/simple_mob/mechanical/hivebot/tyr //not a hivebot but stealing the 'oil puddle on death' thing
 	icon = 'modular_chomp/icons/mob/hivebot.dmi'
 	pass_flags = PASSTABLE
 	hovering = TRUE
@@ -30,16 +27,33 @@
 	icon_living = "orange"
 
 /mob/living/simple_mob/mechanical/hivebot/tyr/swarm
+	name = "replicating swarmer"
 	maxHealth = 3
 	health = 3
 	icon_state = "bright_green"
 	icon_living = "bright_green"
 
 /mob/living/simple_mob/mechanical/hivebot/tyr/meteor
-	maxHealth = 2 LASERS_TO_KILL // 80 hp
-	health = 2 LASERS_TO_KILL
-	ai_holder_type = /datum/ai_holder/hostile/ranged/robust
+	name = "repair drone"
+	icon = 'modular_chomp/icons/mob/tyr.dmi'
+	maxHealth = 6 LASERS_TO_KILL // 240 hp
+	health = 6 LASERS_TO_KILL // 240 hp
+	icon_state = "guardian"
+	icon_living = "guardian"
+	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting/dodge
 	projectiletype = /obj/item/projectile/energy/agate_lighting/fast
+
+/mob/living/simple_mob/mechanical/hivebot/tyr/meteor/bullet_act(obj/item/projectile/Proj)
+	if(!Proj)
+		return
+	projectiletype = Proj
+	..()
+
+/datum/ai_holder/simple_mob/ranged/kiting/dodge
+
+/datum/ai_holder/simple_mob/ranged/kiting/dodge/post_ranged_attack(atom/A)
+	holder.IMove(get_step(holder, pick(GLOB.alldirs)))
+	holder.face_atom(A)
 
 /obj/item/projectile/energy/spikeenergy_ball/boss
 	damage = 40
@@ -60,4 +74,3 @@
 	icon_living = "janitor"
 	projectiletype = /obj/item/projectile/beam/midlaser/shortrange
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/pointblank
-

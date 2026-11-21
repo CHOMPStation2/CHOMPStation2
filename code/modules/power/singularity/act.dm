@@ -65,6 +65,9 @@
 /obj/effect/overlay/singularity_pull()
 	return
 
+/obj/effect/abstract/singularity_act()
+	return
+
 /obj/machinery/power/supermatter/shard/singularity_act()
 	qdel(src)
 	return 5000
@@ -77,6 +80,7 @@
 	if(forensic_data?.get_hiddenprints())
 		prints = ", all touchers : " + forensic_data?.get_hiddenprints()
 
+	SSturf_cascade.start_cascade(get_turf(src), /turf/unsimulated/wall/supermatter)
 	SetUniversalState(/datum/universal_state/supermatter_cascade)
 	log_admin("New super singularity made by eating a SM crystal [prints]. Last touched by [forensic_data?.get_lastprint()].")
 	message_admins("New super singularity made by eating a SM crystal [prints]. Last touched by [forensic_data?.get_lastprint()].")
@@ -120,4 +124,7 @@
 	return 0
 
 /mob/new_player/singuloCanEat()
+	return 0
+
+/turf/unsimulated/wall/supermatter/singuloCanEat()
 	return 0

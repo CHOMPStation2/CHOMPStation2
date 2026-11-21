@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/job/blueshield
+/datum/decl/hierarchy/outfit/job/blueshield
 	name = OUTFIT_JOB_NAME(JOB_BLUESHIELD_GUARD)
 	uniform = /obj/item/clothing/under/yw/blueshield
 	shoes = /obj/item/clothing/shoes/laceup

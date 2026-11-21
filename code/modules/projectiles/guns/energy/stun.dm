@@ -49,8 +49,7 @@
 	icon_state = "crossbow"
 	w_class = ITEMSIZE_SMALL
 	item_state = "crossbow"
-	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 2, TECH_ILLEGAL = 5)
-	matter = list(MAT_STEEL = 2000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1))
 	slot_flags = SLOT_BELT | SLOT_HOLSTER
 	silenced = 1
 	projectile_type = /obj/item/projectile/energy/bolt
@@ -69,7 +68,7 @@
 	icon_state = "crossbowlarge"
 	w_class = ITEMSIZE_LARGE
 	force = 10
-	matter = list(MAT_STEEL = 200000)
+	matter = list(MAT_STEEL = MATERIAL_COST(100))
 	slot_flags = SLOT_BELT
 	projectile_type = /obj/item/projectile/energy/bolt/large
 
@@ -84,7 +83,6 @@
 	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "plasma_stun"
 	item_state = "plasma_stun"
-	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_POWER = 3)
 	fire_delay = 20
 	charge_cost = 600
 	projectile_type = /obj/item/projectile/energy/plasmastun
@@ -103,7 +101,6 @@
 	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "stunrevolver"
 	item_state = "stunrevolver"
-	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 2)
 	projectile_type = /obj/item/projectile/energy/electrode/strong
 	charge_cost = 400
 
@@ -115,7 +112,7 @@
 	several TSCs have been trying to get a hold of the blueprints for half a decade."
 	var/unique_reskin
 
-/obj/item/gun/energy/stunrevolver/detective/update_icon(var/ignore_inhands)
+/obj/item/gun/energy/stunrevolver/detective/update_icon(ignore_inhands)
 	if(power_supply == null)
 		if(unique_reskin)
 			icon_state = "[unique_reskin]_open"
@@ -197,7 +194,6 @@
 	their own variants of the Stun Revolver."
 	icon_state = "vinstunrevolver"
 	item_state = "stunrevolver"
-	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 2)
 
 /*
  * Snubnose Stun Revolver
@@ -213,4 +209,3 @@
 	icon_state = "snubstunrevolver"
 	item_state = "stunrevolver"
 	w_class = ITEMSIZE_SMALL //small pistol is small
-	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 2)

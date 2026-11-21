@@ -18,7 +18,8 @@ GLOBAL_VAR_INIT(allowed_ghost_spawns, 2)
 	if(isobserver(user))
 		var/mob/observer/dead/observer = user
 		observer.selecting_ghostrole = FALSE
-	qdel(src)
+	if(!QDELETED(src))
+		qdel(src)
 
 /datum/tgui_module/ghost_spawn_menu/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	. = ..()
@@ -174,7 +175,7 @@ GLOBAL_VAR_INIT(allowed_ghost_spawns, 2)
 			)
 
 /datum/tgui_module/ghost_spawn_menu/proc/get_vr_data(mob/user)
-	var/datum/data/record/record_found = find_general_record("name", user.client.prefs.real_name)
+	var/datum/data/record/record_found = find_general_record("name", user.client.prefs.read_preference(/datum/preference/name/real_name))
 	var/list/vr_landmarks = list()
 	for(var/obj/effect/landmark/virtual_reality/sloc in GLOB.landmarks_list)
 		vr_landmarks += list(REF(sloc) = sloc.name)
@@ -201,7 +202,7 @@ GLOBAL_VAR_INIT(allowed_ghost_spawns, 2)
 		if(player.soulgem?.flag_check(SOULGEM_ACTIVE | SOULGEM_CATCHING_GHOSTS, TRUE))
 			soulcatcher_vore_active = TRUE
 
-		if(!player.no_vore && (get_z(player) in using_map.station_levels))
+		if(!player.no_vore && (get_z(player) in using_map.player_levels))
 			if(ishuman(player))
 				var/mob/living/carbon/human/H = player
 				if(H.latejoin_vore)

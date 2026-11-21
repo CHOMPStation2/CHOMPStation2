@@ -21,11 +21,11 @@ jobs:
     # Otherwise, it will output `Run Tests (map; max)`.
     # For example, `Run Tests (runtimestation; 515)`.
     name: Run Extra Map Tests (${{ inputs.major && format('{0}.{1}; ', inputs.major, inputs.minor) || '' }}${{ inputs.map }})
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7.0.1
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
@@ -39,9 +39,12 @@ jobs:
           sudo dpkg --add-architecture i386
           sudo apt update || true
           sudo apt install zlib1g-dev:i386
-          ldd librust_g.so
-          ldd libbapi_dmm_reader.so
-          ldd libverdigris.so
+      - name: Install rust-g
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt update || true
+          sudo apt install -o APT::Immediate-Configure=false zlib1g-dev:i386 libssl-dev:i386 curl:i386
+          bash tools/ci/install_rust_g.sh
       - name: Compile POIs
         run: tools/ci/compile_and_run.sh
         env:

@@ -14,6 +14,7 @@
 	var/list/filtered_gases = list(GAS_PHORON, GAS_N2O)
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 75, rad = 0)
 	pickup_sound = 'sound/items/pickup/rubber.ogg'
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/mask/gas/filter_air(datum/gas_mixture/air)
 	var/datum/gas_mixture/gas_filtered = new
@@ -92,6 +93,8 @@
 	filtered_gases = list(GAS_O2, GAS_N2O)
 	var/mask_open = FALSE	// Controls if the Vox can eat through this mask
 	actions_types = list(/datum/action/item_action/toggle_feeding_port)
+	helmet_handling = TRUE
+	special_handling = TRUE
 
 /obj/item/clothing/mask/gas/swat/vox/proc/feeding_port(mob/user)
 	if(user.canmove && !user.stat)
@@ -105,8 +108,10 @@
 	return
 
 /obj/item/clothing/mask/gas/swat/vox/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	feeding_port(user)
-	..()
 
 /obj/item/clothing/mask/gas/zaddat
 	name = "Zaddat Veil"

@@ -101,7 +101,7 @@
 	else
 		phase_out(T, SK)
 
-/mob/living/proc/phase_in(var/turf/T, var/datum/component/shadekin/SK)
+/mob/living/proc/phase_in(turf/T, datum/component/shadekin/SK)
 	//In case we're not passed args, do it ourself.
 	if(!T)
 		T = get_turf(src)
@@ -138,6 +138,7 @@
 		//cut_overlays()
 		invisibility = initial(invisibility)
 		see_invisible = initial(see_invisible)
+		see_invisible_default = initial(see_invisible_default)
 		incorporeal_move = initial(incorporeal_move)
 		density = initial(density)
 		can_pull_size = initial(can_pull_size)
@@ -156,7 +157,7 @@
 		addtimer(CALLBACK(src, PROC_REF(shadekin_complete_phase_in), original_canmove, SK), SK.phase_time, TIMER_DELETE_ME)
 
 
-/mob/living/proc/shadekin_complete_phase_in(var/original_canmove, var/datum/component/shadekin/SK)
+/mob/living/proc/shadekin_complete_phase_in(original_canmove, datum/component/shadekin/SK)
 	canmove = original_canmove
 	alpha = initial(alpha)
 	remove_modifiers_of_type(/datum/modifier/shadekin_phase_vision)
@@ -170,13 +171,13 @@
 		if(potentials.len)
 			var/mob/living/target = pick(potentials)
 			if(can_phase_vore(src, target))
-				target.forceMove(vore_selected)
+				vore_selected.nom_atom(target)
 				to_chat(target, span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.get_belly_name()]!"))
 				to_chat(src, span_vwarning("You phase around [target], [vore_selected.vore_verb]ing them into your [vore_selected.get_belly_name()]!"))
 				our_prey = target
 			else if(can_phase_vore(target, src))
 				our_prey = src
-				forceMove(target.vore_selected)
+				target.vore_selected.nom_atom(src)
 				to_chat(target, span_vwarning("\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.get_belly_name()]!"))
 				to_chat(src, span_vwarning("You phase into [target], having them [target.vore_selected.vore_verb] you into their [target.vore_selected.get_belly_name()]!"))
 			if(our_prey)
@@ -212,7 +213,7 @@
 				continue
 			held_lights.flicker(SK.flicker_time, SK.flicker_color, TRUE)
 
-/mob/living/proc/phase_out(var/turf/T)
+/mob/living/proc/phase_out(turf/T)
 	var/datum/component/shadekin/SK = get_shadekin_component()
 	if(!(SK.in_phase))
 		// pre-change
@@ -248,7 +249,7 @@
 			name = get_visible_name()
 
 		for(var/obj/belly/B as anything in vore_organs)
-			B.escapable = FALSE
+			B.escapable = B_ESCAPABLE_NONE
 
 		var/obj/effect/temp_visual/shadekin/phase_out/phaseanim = new SK.phase_out_anim(src.loc)
 		phaseanim.pixel_y = (src.size_multiplier - 1) * 16 // Pixel shift for the animation placement
@@ -261,7 +262,7 @@
 		addtimer(CALLBACK(src, PROC_REF(complete_phase_out), original_canmove, SK), SK.phase_time, TIMER_DELETE_ME)
 
 
-/mob/living/proc/complete_phase_out(original_canmove, var/datum/component/shadekin/SK)
+/mob/living/proc/complete_phase_out(original_canmove, datum/component/shadekin/SK)
 	invisibility = INVISIBILITY_SHADEKIN
 	see_invisible = INVISIBILITY_SHADEKIN
 	see_invisible_default = INVISIBILITY_SHADEKIN // Allow seeing phased entities while phased.

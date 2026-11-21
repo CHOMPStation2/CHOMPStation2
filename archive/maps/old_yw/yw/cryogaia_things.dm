@@ -34,7 +34,7 @@
 /obj/effect/step_trigger/lost_in_space
 	var/deathmessage = "You drift off into space, floating alone in the void until your life support runs out."
 
-/obj/effect/step_trigger/lost_in_space/Trigger(var/atom/movable/A) //replacement for shuttle dump zones because there's no empty space levels to dump to
+/obj/effect/step_trigger/lost_in_space/Trigger(atom/movable/A) //replacement for shuttle dump zones because there's no empty space levels to dump to
 	if(ismob(A))
 		to_chat(A, span_danger("[deathmessage]"))
 	qdel(A)
@@ -87,13 +87,13 @@
 	shock_area = locate(shock_area)
 
 // Walking on maglev tracks will shock you! Horray!
-/turf/simulated/floor/maglev/Entered(var/atom/movable/AM, var/atom/old_loc)
+/turf/simulated/floor/maglev/Entered(atom/movable/AM, atom/old_loc)
 	if(isliving(AM) && prob(50))
 		track_zap(AM)
-/turf/simulated/floor/maglev/attack_hand(var/mob/user)
+/turf/simulated/floor/maglev/attack_hand(mob/user)
 	if(prob(75))
 		track_zap(user)
-/turf/simulated/floor/maglev/proc/track_zap(var/mob/living/user)
+/turf/simulated/floor/maglev/proc/track_zap(mob/living/user)
 	if (!istype(user)) return
 	if (electrocute_mob(user, shock_area, src))
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
@@ -185,7 +185,7 @@
 	// Otherwise just operate normally
 	return ..()
 
-/obj/machinery/cryopod/robot/door/tram/Bumped(var/atom/movable/AM)
+/obj/machinery/cryopod/robot/door/tram/Bumped(atom/movable/AM)
 	if(!ishuman(AM))
 		return
 
@@ -197,15 +197,12 @@
 		newghost.timeofdeath = world.time
 		despawn_occupant(user)
 
-// Tram arrival point landmarks and datum
-var/global/list/latejoin_tram   = list()
-
 /obj/effect/landmark/tram
 	name = "JoinLateTram"
 	delete_me = 1
 
 /obj/effect/landmark/tram/Initialize(mapload)
-	latejoin_tram += loc // Register this turf as tram latejoin.
+	GLOB.latejoin_tram += loc // Register this turf as tram latejoin.
 	latejoin += loc // Also register this turf as fallback latejoin, since we won't have any arrivals shuttle landmarks.
 	. = ..()
 
@@ -215,7 +212,7 @@ var/global/list/latejoin_tram   = list()
 
 /datum/spawnpoint/tram/New()
 	..()
-	turfs = latejoin_tram
+	turfs = GLOB.latejoin_tram
 
 //
 // Holodorms
@@ -408,7 +405,7 @@ var/global/list/latejoin_tram   = list()
 		return
 	..()
 
-/obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/W as obj, mob/user as mob, var/time = 15 as num)
+/obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/W as obj, mob/user as mob, time = 15 as num)
 	to_chat(user, span_notice("You start to chip at the ice covering \the [src]"))
 	if(do_after(user, text2num(time SECONDS), src))
 		unFreeze()
@@ -454,7 +451,7 @@ var/global/list/latejoin_tram   = list()
 	if(frozen)
 		to_chat(user, "it's frozen shut!")
 
-/obj/machinery/door/airlock/glass_external/freezable/open(var/forced = 0)
+/obj/machinery/door/airlock/glass_external/freezable/open(forced = 0)
 	//Frozen airlocks can't open.
 	if(frozen && !forced)
 		return
@@ -464,7 +461,7 @@ var/global/list/latejoin_tram   = list()
 	else
 		..()
 
-/obj/machinery/door/airlock/glass_external/freezable/close(var/forced = 0)
+/obj/machinery/door/airlock/glass_external/freezable/close(forced = 0)
 	//Frozen airlocks can't shut either. (Though they shouldn't be able to freeze open)
 	if(frozen && !forced)
 		return
@@ -538,7 +535,7 @@ var/global/list/latejoin_tram   = list()
 	density = 0
 	anchored = 1
 
-/obj/structure/dancepole/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/structure/dancepole/attackby(obj/item/O as obj, mob/user as mob)
 	if(O.is_wrench())
 		anchored = !anchored
 		playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)

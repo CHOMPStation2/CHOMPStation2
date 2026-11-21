@@ -75,7 +75,6 @@
 	name = "glock magazine (9mm)"
 	icon_state = "glock-mag"
 	icon = 'icons/obj/gun_yw.dmi'
-	origin_tech = list(TECH_COMBAT = 2)
 	mag_type = MAGAZINE
 	matter = list(DEFAULT_WALL_MATERIAL = 480)
 	caliber = "9mm"
@@ -108,7 +107,6 @@
 	multiple_sprites = 0
 	w_class = ITEMSIZE_NORMAL
 	mag_type = MAGAZINE
-	origin_tech = list(TECH_COMBAT = 2)
 	matter = list(DEFAULT_WALL_MATERIAL = 10000)
 
 /obj/item/ammo_magazine/mg42/empty

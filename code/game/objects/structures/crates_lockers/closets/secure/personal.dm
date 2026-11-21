@@ -20,7 +20,7 @@
 
 /obj/structure/closet/secure_closet/personal/patient
 	name = "patient's closet"
-	closet_appearance = /decl/closet_appearance/secure_closet/patient
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/patient
 
 	starts_with = list(
 		/obj/item/clothing/under/medigown,
@@ -29,7 +29,7 @@
 
 
 /obj/structure/closet/secure_closet/personal/cabinet
-	closet_appearance = /decl/closet_appearance/cabinet/secure
+	closet_appearance = /datum/decl/closet_appearance/cabinet/secure
 
 	open_sound = 'sound/effects/wooden_closet_open.ogg'
 	close_sound = 'sound/effects/wooden_closet_close.ogg'
@@ -83,7 +83,7 @@
 		to_chat(user, span_warning("Access Denied"))
 	update_icon()
 
-/obj/structure/closet/secure_closet/personal/emag_act(var/remaining_charges, var/mob/user, var/visual_feedback, var/audible_feedback)
+/obj/structure/closet/secure_closet/personal/emag_act(remaining_charges, mob/user, visual_feedback, audible_feedback)
 	if(!broken)
 		broken = 1
 		locked = 0

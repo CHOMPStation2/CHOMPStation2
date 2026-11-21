@@ -149,7 +149,7 @@
 		if(selected.message_mode || selected.escapechance)
 			tab_data["subtypes"] += SUCCESS_MESSAGE
 		if(!message_subtab)
-			message_subtab = ATTEMPT_MESSAGE
+			message_subtab = ITEM_MESSAGE
 		if(message_subtab == ATTEMPT_MESSAGE)
 			tab_data["possible_messages"] = list(TO_PREY, TO_YOU)
 			if(!selected_message)
@@ -498,7 +498,10 @@
 		if(selected.message_mode || selected.digest_mode == DM_UNABSORB)
 			tab_data["possible_messages"] += UNABSORB_MESSAGE
 		if(!selected_message)
-			selected_message = DIGEST_MESSAGE
+			if(length(tab_data["possible_messages"]))
+				selected_message = tab_data["possible_messages"][1]
+			else
+				selected_message = DIGEST_MESSAGE
 		if(selected_message == DIGEST_MESSAGE)
 			tab_data["max_length"] = BELLIES_IDLE_MAX
 			tab_data["active_message"] = SANITIZE_LIST(selected.emote_lists[DM_DIGEST])
@@ -717,6 +720,7 @@
 			"liq_reagent_transfer_verb" = selected.reagent_transfer_verb,
 			"liq_reagent_nutri_rate" = selected.gen_time,
 			"liq_reagent_capacity" = selected.custom_max_volume,
+			"liq_gen_cost_limit" = selected.reagent_gen_cost_limit,
 			"liq_sloshing" = selected.vorefootsteps_sounds,
 			"liq_reagent_addons" = liquid_addon_list,
 			"custom_reagentcolor" = (selected.custom_reagentcolor ? selected.custom_reagentcolor : selected.reagentcolor),

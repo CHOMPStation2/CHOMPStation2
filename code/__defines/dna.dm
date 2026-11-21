@@ -11,7 +11,7 @@
 #define FAT             6
 #define HUSK            7
 #define NOCLONE         8
-#define LASER           9  // Harm intent - click anywhere to shoot lasers from eyes.
+#define LASER_EYES      9  // Harm intent - click anywhere to shoot lasers from eyes.
 #define HEAL            10 // Healing people with hands.
 #define FLASHPROOF		11 // Flashproof eyes.
 
@@ -145,3 +145,5 @@
 // Misc
 #define TK_DENIED_MESSAGE span_warning("You are too distracted to focus your telekinesis.")
 #define TK_OUTRANGED_MESSAGE span_notice("Your telekinesis won't reach that far.")
+#define CLUMSY_FAIL_CHANCE(U) ((CLUMSY in U.mutations) && prob(15))
+#define CLUMSY_HARM_CHANCE(U) ((CLUMSY in U.mutations) && prob(10))

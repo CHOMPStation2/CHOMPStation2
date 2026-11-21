@@ -13,7 +13,6 @@
 	slot_flags = 0
 	max_shells = 75
 	caliber = "mauser"
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 2)
 	ammo_type = "/obj/item/ammo_casing/a792x57m/lmg" // Is this really needed anymore?
 	fire_sound = 'sound/weapons/mg42.ogg'
 	load_method = MAGAZINE
@@ -24,10 +23,10 @@
 	one_handed_penalty = 6
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-1,-1), dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
-		list(mode_name="15-round bursts.. unleash hell",	burst=15, move_delay=6, burst_accuracy = list(0,-1,-1,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2))
+		list(mode_name="semiauto",       burst=1, fire_delay=0, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,    burst_accuracy=list(0,-1,-1), dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="short bursts",	burst=5, burst_accuracy = list(0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="15-round bursts.. unleash hell",	burst=15, burst_accuracy = list(0,-1,-1,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2))
 		)
 
 	var/cover_open = 0
@@ -61,13 +60,13 @@
 	item_state = "mg42"
 	update_held_icon()
 
-/obj/item/gun/projectile/automatic/mg42/load_ammo(var/obj/item/A, mob/user)
+/obj/item/gun/projectile/automatic/mg42/load_ammo(obj/item/A, mob/user)
 	if(!cover_open)
 		to_chat(user, span_warning("You need to open the cover to load [src]."))
 		return
 	..()
 
-/obj/item/gun/projectile/automatic/mg42/unload_ammo(mob/user, var/allow_dump=1)
+/obj/item/gun/projectile/automatic/mg42/unload_ammo(mob/user, allow_dump=1)
 	if(!cover_open)
 		to_chat(user, span_warning("You need to open the cover to unload [src]."))
 		return

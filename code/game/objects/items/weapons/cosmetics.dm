@@ -31,7 +31,10 @@
 	colour = pick("red","purple","jade","black")
 	name = "[colour] lipstick"
 
-/obj/item/lipstick/attack_self(mob/user as mob)
+/obj/item/lipstick/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	to_chat(user, span_notice("You twist \the [src] [open ? "closed" : "open"]."))
 	open = !open
 	if(open)
@@ -39,21 +42,21 @@
 	else
 		icon_state = initial(icon_state)
 
-/obj/item/lipstick/attack(mob/M as mob, mob/user as mob)
-	if(!open)	return
-
-	if(!istype(M, /mob))	return
+/obj/item/lipstick/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	if(!open)
+		return ITEM_INTERACT_FAILURE
 
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.lip_style)	//if they already have lipstick on
 			to_chat(user, span_notice("You need to wipe off the old lipstick first!"))
-			return
+			return ITEM_INTERACT_FAILURE
 		if(H == user)
 			user.visible_message(span_notice("[user] does their lips with \the [src]."), \
 									span_notice("You take a moment to apply \the [src]. Perfect!"))
 			H.lip_style = colour
 			H.update_icons_body()
+			return ITEM_INTERACT_SUCCESS
 		else
 			user.visible_message(span_warning("[user] begins to do [H]'s lips with \the [src]."), \
 									span_notice("You begin to apply \the [src]."))
@@ -62,8 +65,10 @@
 										span_notice("You apply \the [src]."))
 				H.lip_style = colour
 				H.update_icons_body()
+				return ITEM_INTERACT_SUCCESS
 	else
 		to_chat(user, span_notice("Where are the lips on that?"))
+		return ITEM_INTERACT_FAILURE
 
 //you can wipe off lipstick with paper! see code/modules/paperwork/paper.dm, paper/attack()
 
@@ -76,6 +81,9 @@
 	icon_state = "purplecomb"
 
 /obj/item/haircomb/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/text = "person"
 	if(ishuman(user))
 		var/mob/living/carbon/human/U = user
@@ -104,7 +112,10 @@
 	. = ..()
 	M = new(src, null)
 
-/obj/item/makeover/attack_self(mob/living/carbon/user as mob)
+/obj/item/makeover/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(ishuman(user))
 		to_chat(user, span_notice("You flip open \the [src] and begin to adjust your appearance."))
 		M.tgui_interact(user)

@@ -42,7 +42,10 @@
 	colourName = "mime"
 	uses = 0
 
-/obj/item/pen/crayon/mime/attack_self(mob/living/user as mob) //inversion
+/obj/item/pen/crayon/mime/attack_self(mob/living/user) //inversion
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(colour != "#FFFFFF" && shadeColour != "#000000")
 		colour = "#FFFFFF"
 		shadeColour = "#000000"
@@ -61,6 +64,9 @@
 	uses = 0
 
 /obj/item/pen/crayon/rainbow/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/new_colour = tgui_color_picker(user, "Please select the main colour.", "Crayon colour", colour)
 	if(new_colour)
 		colour = new_colour
@@ -124,7 +130,7 @@
 					qdel(src)
 	return
 
-/obj/item/pen/crayon/attack(mob/living/M as mob, mob/living/user as mob)
+/obj/item/pen/crayon/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(M == user)
 		to_chat(user, "You take a bite of the crayon and swallow it.")
 		user.nutrition += 1
@@ -138,6 +144,7 @@
 			if(uses <= 0)
 				to_chat(user, span_warning("You ate your crayon!"))
 				qdel(src)
+		return ITEM_INTERACT_SUCCESS
 	else
 		..()
 
@@ -192,6 +199,9 @@
 	uses = 0
 
 /obj/item/pen/crayon/marker/mime/attack_self(mob/living/user) //inversion
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(colour != "#FFFFFF" && shadeColour != "#000000")
 		colour = "#FFFFFF"
 		shadeColour = "#000000"
@@ -210,6 +220,9 @@
 	uses = 0
 
 /obj/item/pen/crayon/marker/rainbow/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/new_colour = tgui_color_picker(user, "Please select the main colour.", "Marker colour", colour)
 	if(new_colour)
 		colour = new_colour
@@ -218,7 +231,7 @@
 		shadeColour = new_colour
 	return
 
-/obj/item/pen/crayon/marker/attack(mob/living/M, mob/living/user)
+/obj/item/pen/crayon/marker/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(M == user)
 		to_chat(user, "You take a bite of the marker and swallow it.")
 		user.nutrition += 1
@@ -232,8 +245,6 @@
 			if(uses <= 0)
 				to_chat(user, span_warning("You ate the marker!"))
 				qdel(src)
+		return ITEM_INTERACT_SUCCESS
 	else
 		..()
-
-/obj/item/pen/crayon/attack_self(var/mob/user)
-	return

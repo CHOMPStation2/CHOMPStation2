@@ -23,7 +23,7 @@
 
 /datum/gear/accessory/armband/colored/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/accessory/wallet
 	display_name = "wallet, orange"
@@ -41,7 +41,7 @@
 
 /datum/gear/accessory/wallet/womens/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/accessory/clutch
 	display_name = "clutch bag"
@@ -50,7 +50,7 @@
 
 /datum/gear/accessory/clutch/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/accessory/purse
 	display_name = "purse"
@@ -59,7 +59,7 @@
 
 /datum/gear/accessory/purse/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/accessory/wcoat
 	display_name = "waistcoat selection"
@@ -138,7 +138,7 @@
 
 /datum/gear/accessory/scarfcolor/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/accessory/jacket
 	display_name = "suit jacket selection"
@@ -222,7 +222,7 @@
 
 /datum/gear/accessory/virginkiller/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/accessory/bracelet/material
 	display_name = "bracelet selection"
@@ -270,7 +270,7 @@
 
 /datum/gear/accessory/sash/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/accessory/asym
 	display_name = "asymmetric jacket selection"
@@ -356,7 +356,7 @@
 
 /datum/gear/accessory/wristband/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/accessory/wristband_collection
 	display_name = "wristbands (selection)"
@@ -385,7 +385,7 @@
 
 /datum/gear/choker/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/collar
 	display_name = "collar, silver"
@@ -395,7 +395,7 @@
 
 /datum/gear/collar/New()
 	..()
-	gear_tweaks += gear_tweak_collar_tag
+	gear_tweaks += GLOB.gear_tweak_collar_tag
 
 /datum/gear/collar/golden
 	display_name = "collar, golden"
@@ -408,6 +408,10 @@
 /datum/gear/collar/shock
 	display_name = "collar, shock"
 	path = /obj/item/clothing/accessory/collar/shock
+
+/datum/gear/collar/bluespace
+	display_name = "collar, bluespace"
+	path = /obj/item/clothing/accessory/collar/shock/bluespace
 
 /datum/gear/collar/spike
 	display_name = "collar, spike"
@@ -455,7 +459,7 @@
 
 /datum/gear/accessory/flops/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/accessory/dosimeter
 	display_name = "Dosimeter"
@@ -568,7 +572,7 @@ Talon pin
 	"Studded Belt" = /obj/item/clothing/accessory/belt/studded
 	)
 	gear_tweaks += new/datum/gear_tweak/path(wristband_lists)
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/accessory/bunny_tail
 	display_name = "bunny tail, colorable"
@@ -576,7 +580,7 @@ Talon pin
 
 /datum/gear/accessory/bunny_tail/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/accessory/legwarmer_selection
 	display_name = "legwarmers (selection, colorable)"
@@ -590,4 +594,4 @@ Talon pin
 	"Legwarmers, short" = /obj/item/clothing/accessory/legwarmersshort
 	)
 	gear_tweaks += new/datum/gear_tweak/path(legwarmer_lists)
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice

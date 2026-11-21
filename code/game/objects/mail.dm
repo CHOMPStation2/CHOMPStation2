@@ -8,14 +8,14 @@
 	drop_sound = 'sound/items/drop/paper.ogg'
 	pickup_sound = 'sound/items/pickup/paper.ogg'
 	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
-	// Destination tagging for the mail sorter.
+	/// Destination tagging for the mail sorter.
 	var/sortTag = 0
-	// Who this mail is for and who can open it.
-	var/datum/weakref/recipient_ref
-	// How many goodies this mail contains.
+	/// Who this mail is for and who can open it.
+	var/recipient_ref
+	/// How many goodies this mail contains.
 	var/goodie_count = 1
 	// Goodies which can be given to anyone.
-	// Weight sum will be 1000
+	/// Weight sum will be 1000
 	var/list/generic_goodies = list(
 		/obj/item/spacecash/c50 = 75,
 		/obj/item/reagent_containers/food/drinks/cans/cola = 75,
@@ -30,24 +30,28 @@
 		/obj/item/reagent_containers/food/drinks/bluespace_coffee = 5
 	)
 	// Overlays (pure fluff)
-	// Does the letter have the postmark overlay?
+	/// Does the letter have the postmark overlay?
 	var/postmarked = TRUE
-	// Does the letter have a stamp overlay?
+	/// Does the letter have a stamp overlay?
 	var/stamped = TRUE
-	// List of all stamp overlays on the letter.
+	/// List of all stamp overlays on the letter.
 	var/list/stamps = list()
-	// Maximum number of stamps on the letter.
+	/// Maximum number of stamps on the letter.
 	var/stamp_max = 1
-	// Physical offset of stamps on the object. X direction.
+	/// Physical offset of stamps on the object. X direction.
 	var/stamp_offset_x = 0
-	// Physical offset of stamps on the object. Y direction.
+	/// Physical offset of stamps on the object. Y direction.
 	var/stamp_offset_y = 2
-	// If the mail is actively being opened right now
+	/// If the mail is actively being opened right now
 	var/opening = FALSE
-	// If the mail has been scanned with a mail scanner
+	/// If the mail has been scanned with a mail scanner
 	var/scanned
-	// Does it have a colored envelope?
+	/// Does it have a colored envelope?
 	var/colored_envelope
+
+	///Var for attack_self chainn
+	var/special_handling = FALSE
+	resistance_flags = FLAMMABLE
 
 /obj/item/mail/container_resist(mob/living/M)
 	if(istype(M, /mob/living/voice)) return
@@ -84,6 +88,7 @@
 	var/set_content = FALSE
 	var/sealed = FALSE
 	var/list/mail_recipients
+	special_handling = TRUE
 
 /obj/item/mail/blank/attackby(obj/item/W, mob/user)
 	..()
@@ -108,7 +113,7 @@
 	var/list/recipients = list()
 	var/mob/living/recipient_mob
 	for(var/mob/living/player in GLOB.player_list)
-		if(!player_is_antag(player.mind) && player.mind.show_in_directory)
+		if(!SSantag_job.player_is_antag(player.mind) && player.mind.show_in_directory)
 			recipients += player
 
 	recipient_mob = tgui_input_list(usr, "Choose recipient", "Recipients", recipients, recipients)
@@ -137,13 +142,18 @@
 			desc = "A signed envelope, from [sender]."
 
 /obj/item/mail/blank/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!sealed)
 		if(!do_after(user, 1.5 SECONDS, target = user))
 			sealed = FALSE
 		sealed = TRUE
 		description_info = "Shift Click to add the sender's name to the envelope, or attack with a pen to set a receiver."
 		return
-	. = ..()
+	if(!unwrap(user))
+		return FALSE
+	return after_unwrap(user)
 
 /obj/item/mail/update_icon()
 	. = ..()
@@ -191,14 +201,18 @@
 		return
 
 /obj/item/mail/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!unwrap(user))
+		return FALSE
+	if(special_handling)
 		return FALSE
 	return after_unwrap(user)
 
 /obj/item/mail/proc/unwrap(mob/user)
 	if(recipient_ref)
-		var/datum/mind/recipient = recipient_ref.resolve()
-		if(recipient && recipient.current?.dna.unique_enzymes != user.dna.unique_enzymes)
+		if(recipient_ref != user.dna.unique_enzymes)
 			balloon_alert(user, "you can't open somebody's mail! That's <em>illegal</em>")
 			return FALSE
 
@@ -229,12 +243,12 @@
 	playsound(loc, 'sound/items/poster_ripped.ogg', 100, TRUE)
 	qdel(src)
 
-/obj/item/mail/proc/initialize_for_recipient(var/datum/mind/recipient, var/preset_goodies = FALSE)
+/obj/item/mail/proc/initialize_for_recipient(datum/mind/recipient, preset_goodies = FALSE)
 	var/current_title = recipient.role_alt_title ? recipient.role_alt_title : recipient.assigned_role
 	name = "[initial(name)] for [recipient.name] ([current_title])"
-	recipient_ref = WEAKREF(recipient)
+	recipient_ref = recipient.current.dna.unique_enzymes
 
-	var/datum/job/this_job = SSjob.name_occupations[recipient.assigned_role]
+	var/datum/job/this_job = SSjob.occupations_by_name[recipient.assigned_role]
 
 	var/list/goodies = generic_goodies
 	if(this_job)
@@ -246,6 +260,9 @@
 					goodies = job_goodies
 				else
 					goodies += job_goodies
+
+	if(!isemptylist(GLOB.holiday_mail))
+		goodies += GLOB.holiday_mail
 
 	if(!preset_goodies)
 		for(var/iterator in 1 to goodie_count)
@@ -262,13 +279,7 @@
 		disposal_holder.destinationTag = sortTag
 
 // Mail spawn for events
-/datum/admins/proc/spawn_mail(var/object as text)
-	set name = "Spawn Mail"
-	set category = "Fun.Event Kit"
-	set desc = "Spawn mail for a specific player, with a specific item."
-
-	if(!check_rights(R_SPAWN)) return
-
+ADMIN_VERB(spawn_mail, R_SPAWN, "Spawn Mail", "Spawn mail for a specific player, with a specific item.", ADMIN_CATEGORY_FUN_EVENT_KIT, object as text)
 	var/list/types = typesof(/atom)
 	var/list/matches = new()
 	var/list/recipients = list()
@@ -284,23 +295,25 @@
 	if(matches.len==1)
 		chosen = matches[1]
 	else
-		chosen = tgui_input_list(usr, "Select an atom type", "Spawn Atom in Mail", matches)
+		chosen = tgui_input_list(user, "Select an atom type", "Spawn Atom in Mail", matches)
 		if(!chosen)
 			return
 
 	for(var/mob/living/player in GLOB.player_list)
 		recipients += player
 
-	var/mob/living/chosen_player = tgui_input_list(usr, "Choose recipient", "Recipients", recipients, recipients)
+	var/mob/living/chosen_player = tgui_input_list(user, "Choose recipient", "Recipients", recipients, recipients)
 
 	recipient_mind = chosen_player.mind
 
 	if(!recipient_mind)
 		return
 
-	var/shuttle_spawn = tgui_alert(usr, "Spawn mail at location or in the shuttle?", "Spawn mail", list("Location", "Shuttle"))
+	var/shuttle_spawn = tgui_alert(user, "Spawn mail at location or in the shuttle?", "Spawn mail", list("Location", "Shuttle"))
 	if(!shuttle_spawn)
 		return
+
+	var/mob/user_mob = user.mob
 	if(shuttle_spawn == "Shuttle")
 		var/obj/item/mail/new_mail = new
 		new_mail.initialize_for_recipient(recipient_mind, TRUE)
@@ -308,10 +321,10 @@
 		SSmail.admin_mail += new_mail
 		log_and_message_admins("spawned [chosen] inside an envelope at the shuttle")
 	else
-		var/obj/item/mail/ground_mail = new /obj/item/mail(usr.loc)
+		var/obj/item/mail/ground_mail = new /obj/item/mail(user_mob.loc)
 		ground_mail.initialize_for_recipient(recipient_mind, TRUE)
 		new chosen(ground_mail)
-		log_and_message_admins("spawned [chosen] inside an envelope at ([usr.x],[usr.y],[usr.z])")
+		log_and_message_admins("spawned [chosen] inside an envelope at ([user_mob.x],[user_mob.y],[user_mob.z])")
 
 	feedback_add_details("admin_verb","SM")
 
@@ -320,7 +333,7 @@
 	name = "mail crate"
 	desc = "An official mail crate from CentCom"
 	points_per_crate = 0
-	closet_appearance = /decl/closet_appearance/crate/nanotrasen
+	closet_appearance = /datum/decl/closet_appearance/crate/nanotrasen
 
 /obj/structure/closet/crate/mail/full/Initialize(mapload)
 	. = ..()
@@ -364,6 +377,15 @@
 		/obj/item/pen
 	)
 
+/obj/item/storage/bag/mail/borg
+	name = "letter compartment"
+	desc = "A compartment specifically made for small postage."
+
+/obj/item/storage/bag/mail/borg/proc/upgrade()
+	name += " of holding"
+	storage_slots = 45
+	max_storage_space = 75
+
 // Mail Scanner
 /obj/item/mail_scanner
 	name = "mail scanner"
@@ -381,8 +403,8 @@
 	. = ..()
 	. += span_notice("Scan a letter to log it into the active database, then scan the person you wish to hand the letter to. Correctly scanning the recipient of the letter logged into the active database will add points to the supply budget.")
 
-/obj/item/mail_scanner/attack()
-	return
+/obj/item/mail_scanner/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	return NONE
 
 /obj/item/mail_scanner/afterattack(atom/A, mob/user)
 	if(istype(A, /obj/item/mail))
@@ -401,18 +423,19 @@
 			playsound(loc, 'sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
 
-		var/datum/mind/recipient
-		if(saved.recipient_ref)
-			recipient = saved.recipient_ref.resolve()
+		var/mob/living/recipient_mob = A
+		var/datum/mind/recipient = recipient_mob.mind
 
 		if(isnull(recipient) || isnull(recipient.current))
+			to_chat(user, span_warning("Consent Verification failed: Scanned mail has no recipient!"))
+			playsound(loc, 'sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
 
 		if(recipient.current.stat == DEAD)
 			to_chat(user, span_warning("Consent Verification failed: You can't deliver mail to a corpse!"))
 			playsound(loc, 'sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
-		if(recipient.current.dna.unique_enzymes != recipient.current.dna.unique_enzymes)
+		if(saved.recipient_ref != recipient.current.dna.unique_enzymes)
 			to_chat(user, span_warning("Identity Verification failed: Target is not authorized recipient of this envelope!"))
 			playsound(loc, 'sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
@@ -428,6 +451,7 @@
 		to_chat(user, span_notice("Succesful delivery acknowledged! [cargo_points] points added to Supply."))
 		playsound(loc, 'sound/items/mail/mailapproved.ogg', 50, TRUE)
 		SSsupply.points += cargo_points
+		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MAIL_DELIVERED)
 
 // JUNK MAIL STUFF
 

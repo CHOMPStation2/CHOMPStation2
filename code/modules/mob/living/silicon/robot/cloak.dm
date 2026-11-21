@@ -17,6 +17,9 @@
 	. = ..()
 
 /obj/item/borg/cloak/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	set_cloak_level(user)
 
 /obj/item/borg/cloak/item_ctrl_click(mob/user)
@@ -41,7 +44,7 @@
 			update_cloak(R) //Update the cloak strength on the robot.
 			return //We ran out of power. RIP.
 
-/obj/item/borg/cloak/proc/update_cloak(var/mob/living/silicon/robot/robot)
+/obj/item/borg/cloak/proc/update_cloak(mob/living/silicon/robot/robot)
 	if(!robot || !isrobot(robot))
 		return
 	if(active && cloak_strength) //We remove any cloaks they might have

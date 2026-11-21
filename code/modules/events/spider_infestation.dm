@@ -1,4 +1,4 @@
-/var/global/sent_spiders_to_station = 0
+GLOBAL_VAR_INIT(sent_spiders_to_station, 0)
 
 /datum/event/spider_infestation
 	announceWhen	= 90
@@ -7,11 +7,11 @@
 
 /datum/event/spider_infestation/setup()
 	announceWhen = rand(announceWhen, announceWhen + 60)
-	spawncount = rand(4 * severity, 10 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: old: 2/4 new: 6/14 new: 4/10
-	sent_spiders_to_station = 0
+	spawncount = rand(4 * severity, 10 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMPEdit: old: 4/6 new: 4/10
+	GLOB.sent_spiders_to_station = 0
 
 /datum/event/spider_infestation/announce()
-	command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
+	GLOB.command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = ANNOUNCER_MSG_UNIDENTIFIED_LIFESIGNS)
 
 
 /datum/event/spider_infestation/start()

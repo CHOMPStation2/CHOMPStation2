@@ -27,9 +27,9 @@
 	if(!victim)
 		switch(severity)
 			if(EVENT_LEVEL_MAJOR)
-				command_announcement.Announce("Meatyores have been detected on collision course with \the [location_name()].", "Meteor Alert", new_sound = 'sound/AI/meteors.ogg')
+				GLOB.command_announcement.Announce("Meatyores have been detected on collision course with \the [location_name()].", "Meteor Alert", new_sound = 'sound/AI/meteors.ogg')
 			else
-				command_announcement.Announce("\The [location_name()] is now in a meatyore shower.", "Meteor Alert")
+				GLOB.command_announcement.Announce("\The [location_name()] is now in a meatyore shower.", "Meteor Alert")
 
 /datum/event/meteor_wave/meatyores/end()
 	if(has_skybox_image)
@@ -37,9 +37,9 @@
 	if(!victim)
 		switch(severity)
 			if(EVENT_LEVEL_MAJOR)
-				command_announcement.Announce("\The [location_name()] has cleared the meatyore storm.", "Meteor Alert")
+				GLOB.command_announcement.Announce("\The [location_name()] has cleared the meatyore storm.", "Meteor Alert")
 			else
-				command_announcement.Announce("\The [location_name()] has cleared the meatyore shower", "Meteor Alert")
+				GLOB.command_announcement.Announce("\The [location_name()] has cleared the meatyore shower", "Meteor Alert")
 
 /datum/event/meteor_wave/meatyores/proc/get_meatyores()
 	switch(severity)

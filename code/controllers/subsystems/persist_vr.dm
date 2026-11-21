@@ -12,15 +12,14 @@ SUBSYSTEM_DEF(persist)
 	var/list/currentrun = list()
 	var/list/query_stack = list()
 
-/datum/controller/subsystem/persist/fire(var/resumed = FALSE)
+/datum/controller/subsystem/persist/fire(resumed = FALSE)
 	update_department_hours(resumed)
 
 // Do PTO Accruals
-/datum/controller/subsystem/persist/proc/update_department_hours(var/resumed = FALSE)
+/datum/controller/subsystem/persist/proc/update_department_hours(resumed = FALSE)
 	if(!CONFIG_GET(flag/time_off))
 		return
 
-	establish_db_connection()
 	if(!SSdbcore.IsConnected())
 		src.currentrun.Cut()
 		return
@@ -31,8 +30,8 @@ SUBSYSTEM_DEF(persist)
 	//cache for sanic speed (lists are references anyways)
 	var/list/currentrun = src.currentrun
 	var/list/query_stack = src.query_stack
-	while (currentrun.len)
-		var/mob/M = currentrun[currentrun.len]
+	while (length(currentrun))
+		var/mob/M = currentrun[length(currentrun)]
 		currentrun.len--
 		if (QDELETED(M) || !istype(M) || !M.mind || !M.client || TICKS2DS(M.client.inactivity) > wait)
 			continue
@@ -97,22 +96,23 @@ SUBSYSTEM_DEF(persist)
 
 		if (MC_TICK_CHECK)
 			return
-	if(query_stack.len)
+
+	if(length(query_stack))
 		SSdbcore.MassInsert(format_table_name("vr_player_hours"), query_stack, duplicate_key = "ON DUPLICATE KEY UPDATE hours = VALUES(hours), total_hours = VALUES(total_hours)")
 		query_stack.Cut()
 
 
 // This proc tries to find the job datum of an arbitrary mob.
-/datum/controller/subsystem/persist/proc/detect_job(var/mob/M)
+/datum/controller/subsystem/persist/proc/detect_job(mob/M)
 	// Records are usually the most reliable way to get what job someone is.
 	var/datum/data/record/R = find_general_record("name", M.real_name)
 	if(R) // We found someone with a record.
 		var/recorded_rank = R.fields["real_rank"]
 		if(recorded_rank)
-			. = job_master.GetJob(recorded_rank)
+			. = SSjob.get_job(recorded_rank)
 			if(.) return
 
 	// They have a custom title, aren't crew, or someone deleted their record, so we need a fallback method.
 	// Let's check the mind.
 	if(M.mind && M.mind.assigned_role)
-		. = job_master.GetJob(M.mind.assigned_role)
+		. = SSjob.get_job(M.mind.assigned_role)

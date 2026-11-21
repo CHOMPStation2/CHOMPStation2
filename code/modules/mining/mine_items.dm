@@ -19,10 +19,9 @@
 	icon_state = "pickaxe"
 	item_state = "pickaxe"
 	w_class = ITEMSIZE_LARGE
-	matter = list(MAT_STEEL = 2500)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.25))
 	var/digspeed = 36 //moving the delay to an item var so R&D can make improved picks. --NEO
 	var/sand_dig = FALSE // does this thing dig sand?
-	origin_tech = list(TECH_MATERIAL = 1)
 	attack_verb = list("hit", "pierced", "sliced", "attacked")
 	var/drill_sound = "pickaxe"
 	var/drill_verb = "picking"
@@ -38,7 +37,6 @@
 	icon_state = "spickaxe"
 	item_state = "spickaxe"
 	digspeed = 27
-	origin_tech = list(TECH_MATERIAL = 3)
 	desc = "This makes no metallurgic sense."
 
 /obj/item/pickaxe/gold
@@ -46,7 +44,6 @@
 	icon_state = "gpickaxe"
 	item_state = "gpickaxe"
 	digspeed = 18
-	origin_tech = list(TECH_MATERIAL = 4)
 	desc = "This makes no metallurgic sense."
 	drill_verb = "picking"
 
@@ -55,7 +52,6 @@
 	icon_state = "dpickaxe"
 	item_state = "dpickaxe"
 	digspeed = 9
-	origin_tech = list(TECH_MATERIAL = 6, TECH_ENGINEERING = 4)
 	desc = "A pickaxe with a diamond pick head."
 	drill_verb = "picking"
 
@@ -67,8 +63,7 @@
 	item_state = "jackhammer"
 	digspeed = 30 //Only slighty better than a pickaxe
 	sand_dig = TRUE
-	origin_tech = list(TECH_MATERIAL = 1, TECH_POWER = 2, TECH_ENGINEERING = 1)
-	matter = list(MAT_STEEL = 3750)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.875))
 	desc = "The most basic of mining drills, for short excavations and small mineral extractions."
 	drill_verb = "drilling"
 
@@ -78,8 +73,7 @@
 	item_state = "jackhammer"
 	digspeed = 27
 	sand_dig = TRUE
-	origin_tech = list(TECH_MATERIAL = 2, TECH_POWER = 3, TECH_ENGINEERING = 2)
-	matter = list(MAT_STEEL = 4000, MAT_PLASTEEL = 2500)
+	matter = list(MAT_STEEL = MATERIAL_COST(2), MAT_PLASTEEL = MATERIAL_COST(1.25))
 	desc = "Yours is the drill that will pierce through the rock walls."
 	drill_verb = "drilling"
 
@@ -89,8 +83,7 @@
 	item_state = "jackhammer"
 	digspeed = 4 //Digs through walls, girders, and can dig up sand
 	sand_dig = TRUE
-	origin_tech = list(TECH_MATERIAL = 6, TECH_POWER = 4, TECH_ENGINEERING = 5)
-	matter = list(MAT_STEEL = 4500, MAT_PLASTEEL = 3000, MAT_DIAMONDS = 1000)
+	matter = list(MAT_STEEL = MATERIAL_COST(2.25), MAT_PLASTEEL = MATERIAL_COST(1.5), MAT_DIAMONDS = 1000)
 	desc = "Yours is the drill that will pierce the heavens!"
 	drill_verb = "drilling"
 
@@ -99,7 +92,6 @@
 	icon_state = "jackhammer"
 	item_state = "jackhammer"
 	digspeed = 18 //faster than drill, but cannot dig
-	origin_tech = list(TECH_MATERIAL = 3, TECH_POWER = 2, TECH_ENGINEERING = 2)
 	desc = "Cracks rocks with sonic blasts, perfect for killing cave lizards."
 	drill_verb = "hammering"
 	destroy_artefacts = TRUE
@@ -122,8 +114,7 @@
 	w_class = ITEMSIZE_NORMAL //it is smaller than the pickaxe
 	damtype = BURN
 	digspeed = 18 //Can slice though normal walls, all girders, or be used in reinforced wall deconstruction/light thermite on fire
-	origin_tech = list(TECH_MATERIAL = 4, TECH_PHORON = 3, TECH_ENGINEERING = 3)
-	matter = list(MAT_STEEL = 3000, MAT_PLASTEEL = 1500, MAT_DIAMONDS = 500, MAT_PHORON = 500)
+	matter = list(MAT_STEEL = MATERIAL_COST(1.5), MAT_PLASTEEL = MATERIAL_COST(0.75), MAT_DIAMONDS = 500, MAT_PHORON = MATERIAL_COST(0.25))
 	drill_verb = "cutting"
 	drill_sound = 'sound/items/Welder.ogg'
 	sharp = TRUE
@@ -145,8 +136,7 @@
 	force = 8.0
 	throwforce = 4.0
 	w_class = ITEMSIZE_NORMAL
-	origin_tech = list(TECH_MATERIAL = 1, TECH_ENGINEERING = 1)
-	matter = list(MAT_STEEL = 50)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.025))
 	attack_verb = list("bashed", "bludgeoned", "thrashed", "whacked")
 	sharp = FALSE
 	edge = TRUE
@@ -162,8 +152,9 @@
 	icon_state = "whiteshovel"
 	item_state = "whiteshovel"
 	var/datum/material/material
+	resistance_flags = FLAMMABLE
 
-/obj/item/shovel/wood/Initialize(mapload, var/_mat)
+/obj/item/shovel/wood/Initialize(mapload, _mat)
 	. = ..()
 	material = get_material_by_name(_mat)
 	if(!istype(material))
@@ -195,11 +186,23 @@
 	slot_flags = SLOT_BELT
 	item_state = "woodshovel"
 	w_class = ITEMSIZE_NORMAL
-	matter = list(MAT_WOOD = 50)
+	matter = list(MAT_WOOD = MATERIAL_COST(0.025))
 	sharp = 0
 	edge = 1
 
-// Flags.
+/*****************************Icepick********************************/
+
+//Ice pick, mountain axe, or ice axe.YW Creation.
+/obj/item/ice_pick
+	name = "ice axe"
+	desc = "A sharp tool for climbers and hikers to break up ice and keep themselves from slipping on a steep slope."
+	icon_state = "icepick"
+	item_state = "icepick"
+	matter = list(MAT_STEEL = MATERIAL_COST(6)) //Same as a knife
+	force = 15 //increasing force for icepick/axe, cause it's a freaking iceaxe.
+	throwforce = 0
+
+/*****************************Flags********************************/
 
 /obj/item/stack/flag
 	name = "flags"
@@ -210,6 +213,7 @@
 	icon = 'icons/obj/mining.dmi'
 	var/upright = 0
 	var/base_state
+	custom_handling = TRUE
 
 /obj/item/stack/flag/Initialize(mapload)
 	. = ..()
@@ -251,7 +255,10 @@
 	else
 		..()
 
-/obj/item/stack/flag/attack_self(mob/user as mob)
+/obj/item/stack/flag/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 
 	var/obj/item/stack/flag/F = locate() in get_turf(src)
 
@@ -273,70 +280,111 @@
 	newflag.visible_message(span_infoplain(span_bold("[user]") + " plants [newflag] firmly in the ground."))
 	src.use(1)
 
-// Lightpoles for lumber colony
+/*****************************Trailblazer item********************************/
+
 /obj/item/stack/lightpole
 	name = "Trailblazers"
 	desc = "Some colourful trail lights."
-	singular_name = "flag"
+	singular_name = "trailblazer"
 	amount = 10
 	max_amount = 10
 	icon = 'icons/obj/mining.dmi'
-	var/upright = 0
-	var/base_state
-	var/on = 0
-	var/brightness_on = 4 //luminosity when on
-
-/obj/item/stack/lightpole/Initialize(mapload)
-	. = ..()
-	base_state = icon_state
-
-/obj/item/stack/lightpole/blue
-	name = "blue trail blazers"
-	singular_name = "blue trail blazer"
-	icon_state = "bluetrail_light"
-	light_color = "#599DFF"
+	custom_handling = TRUE
+	var/blazer_type = /obj/structure/trailblazer
 
 /obj/item/stack/lightpole/red
 	name = "red flags"
 	singular_name = "red trail blazer"
 	icon_state = "redtrail_light"
-	light_color = "#FC0F29"
+	blazer_type = /obj/structure/trailblazer/red
 
-/obj/item/stack/lightpole/attackby(obj/item/W as obj, mob/user as mob)
-	if(upright && istype(W,src.type))
-		src.attack_hand(user)
-	else
-		..()
+/obj/item/stack/lightpole/blue
+	name = "blue trail blazers"
+	singular_name = "blue trail blazer"
+	icon_state = "bluetrail_light"
+	blazer_type = /obj/structure/trailblazer/blue
 
-/obj/item/stack/lightpole/attack_hand(user as mob)
-	if(upright)
-		upright = 0
-		icon_state = base_state
-		anchored = 0
-		src.visible_message("<b>[user]</b> knocks down [src].")
-	else
-		..()
+/obj/item/stack/lightpole/yellow
+	name = "red flags"
+	singular_name = "red trail blazer"
+	icon_state = "yellowtrail_light"
+	blazer_type = /obj/structure/trailblazer/yellow
 
-/obj/item/stack/lightpole/attack_self(mob/user as mob)
+/obj/item/stack/lightpole/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 
-	var/obj/item/stack/lightpole/F = locate() in get_turf(src)
+	var/turf/T = get_turf(user)
+	if(!T || (!istype(T,/turf/simulated/mineral) && !istype(T,/turf/simulated/floor/outdoors) && !istype(T,/turf/simulated/floor/snow) && !istype(T,/turf/snow)))
+		to_chat(user, span_warning("The light won't stand up in this terrain."))
+		return TRUE
+	var/obj/structure/trailblazer/F = locate() in get_turf(src)
+	if(F)
+		to_chat(user, span_warning("There is already a light here."))
+		return TRUE
+	if(!do_after(user, 8 SECONDS, target = src))
+		return TRUE
 
-	var/turf/T = get_turf(src)
-	if(!T || !istype(T,/turf/snow/snow2))
-		user << "The flag won't stand up in this terrain."
+	var/obj/structure/trailblazer/newlightpole = new blazer_type(T)
+	newlightpole.visible_message("\The [user] plants \the [newlightpole] firmly in the ground.")
+	use(1)
+
+/*****************************Trailblazer structure********************************/
+
+/datum/category_item/catalogue/material/trail_blazer
+	name = "Ice Colony Equipment - Trailblazer"
+	desc = "This is a glowing stick embedded in the ground with a light on top, commonly used in snowy installations and in tundra conditions."
+	value = CATALOGUER_REWARD_EASY
+
+/obj/structure/trailblazer
+	name = "trail blazer"
+	desc = "A glowing stick- light."
+	icon = 'icons/obj/mining.dmi'
+	icon_state = "redtrail_light_on"
+	density = TRUE
+	anchored = TRUE
+	var/stack_type = /obj/item/stack/lightpole/red
+	catalogue_data = list(/datum/category_item/catalogue/material/trail_blazer)
+
+/obj/structure/trailblazer/Initialize(mapload)
+	. = ..()
+	set_color()
+	AddElement(/datum/element/climbable)
+
+/obj/structure/trailblazer/proc/set_color()
+	icon_state = "redtrail_light_on"
+	set_light(2, 2, "#FF0000")
+
+/obj/structure/trailblazer/attack_hand(mob/user)
+	if(do_after(user, 8 SECONDS, target = src))
+		visible_message("\The [user] knocks down \the [src].")
+		new stack_type(get_turf(src), 1)
+		qdel(src)
 		return
 
-	if(F && F.upright)
-		user << "There is already a flag here."
-		return
+/obj/structure/trailblazer/red
+	name = "trail blazer"
+	desc = "A glowing stick- light.This one is glowing red."
+	icon_state = "redtrail_light_on"
+	stack_type = /obj/item/stack/lightpole/red
 
-	var/obj/item/stack/lightpole/newlightpole = new src.type(T)
-	newlightpole.amount = 1
-	newlightpole.upright = 1
-	brightness_on = 2
-	set_light(brightness_on)
-	anchored = 1
-	newlightpole.name = newlightpole.singular_name
-	newlightpole.icon_state = "[newlightpole.base_state]_on"
-	newlightpole.visible_message("<b>[user]</b> plants [newlightpole] firmly in the ground.")
-	src.use(1)
+/obj/structure/trailblazer/blue
+	name = "trail blazer"
+	desc = "A glowing stick- light. This one is glowing blue."
+	icon_state = "bluetrail_light_on"
+	stack_type = /obj/item/stack/lightpole/blue
+
+/obj/structure/trailblazer/blue/set_color()
+	icon_state = "bluetrail_light_on"
+	set_light(2, 2, "#C4FFFF")
+
+/obj/structure/trailblazer/yellow
+	name = "trail blazer"
+	desc = "A glowing stick- light. This one is glowing yellow."
+	icon_state = "yellowtrail_light_on"
+	stack_type = /obj/item/stack/lightpole/yellow
+
+/obj/structure/trailblazer/yellow/set_color()
+	icon_state = "yellowtrail_light_on"
+	set_light(2, 2, "#ffea00")

@@ -1,5 +1,5 @@
 // allow teshari to always be scooped, as long as pref is enabled
-/mob/living/MouseDrop(var/atom/over_object)
+/mob/living/MouseDrop(atom/over_object)
 	// make sure src (The dragged) is human
 	if(!istype(src, /mob/living/carbon/human))
 		return ..()

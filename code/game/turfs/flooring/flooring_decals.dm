@@ -1,7 +1,7 @@
 // These are objects that destroy themselves and add themselves to the
 // decal list of the floor under them. Use them rather than distinct icon_states
 // when mapping in interesting floor designs.
-var/list/floor_decals = list()
+GLOBAL_LIST_EMPTY(floor_decals)
 
 /obj/effect/floor_decal
 	name = "floor decal"
@@ -10,7 +10,7 @@ var/list/floor_decals = list()
 	layer = DECAL_LAYER
 	var/supplied_dir
 
-/obj/effect/floor_decal/Initialize(mapload, var/newdir, var/newcolour)
+/obj/effect/floor_decal/Initialize(mapload, newdir, newcolour)
 	supplied_dir = newdir
 	if(newcolour)
 		color = newcolour
@@ -25,10 +25,10 @@ var/list/floor_decals = list()
 	var/turf/T = get_turf(src)
 	if(istype(T, /turf/simulated/floor) || istype(T, /turf/unsimulated/floor) || istype(T, /turf/simulated/shuttle/floor))
 		var/cache_key = get_cache_key(T)
-		var/image/I = floor_decals[cache_key]
+		var/image/I = GLOB.floor_decals[cache_key]
 		if(!I)
 			I = make_decal_image()
-			floor_decals[cache_key] = I
+			GLOB.floor_decals[cache_key] = I
 		LAZYADD(T.decals, I) // Add to its decals list (so it remembers to re-apply after it cuts overlays)
 		T.add_overlay(I) // Add to its current overlays too.
 		return T
@@ -40,7 +40,7 @@ var/list/floor_decals = list()
 	I.alpha = alpha
 	return I
 
-/obj/effect/floor_decal/proc/get_cache_key(var/turf/T)
+/obj/effect/floor_decal/proc/get_cache_key(turf/T)
 	return "[alpha]-[color]-[dir]-[icon_state]-[T.layer]"
 
 /obj/effect/floor_decal/reset

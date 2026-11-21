@@ -20,6 +20,7 @@
 	var/full_icon = "full"
 	var/spawn_mob_name = "A mob"
 	var/capture_chance_modifier = 1		//So we can have special subtypes with different capture rates!
+	var/loadout = FALSE
 
 /obj/item/capture_crystal/Initialize(mapload)
 	. = ..()
@@ -209,25 +210,36 @@
 		return FALSE
 	else return TRUE
 
-/obj/item/capture_crystal/attack(mob/living/M, mob/living/user)
+/obj/item/capture_crystal/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(bound_mob)
 		if(!bound_mob.devourable)	//Don't eat if prefs are bad
-			return
+			return ITEM_INTERACT_FAILURE
 		if(user.zone_sel.selecting == "mouth")	//Click while targetting the mouth and you eat/feed the stored mob to whoever you clicked on
 			if(bound_mob in contents)
 				user.visible_message("\The [user] moves \the [src] to [M]'s [M.vore_selected]...")
 				M.perform_the_nom(M, bound_mob, M, M.vore_selected)
+				return ITEM_INTERACT_SUCCESS
 	else if(M == user)		//You don't have a mob, you ponder the orb instead of trying to capture yourself
 		user.visible_message("\The [user] ponders \the [src]...", "You ponder \the [src]...")
+		return ITEM_INTERACT_FAILURE
 	else if (cooldown_check())	//Try to capture someone without throwing
 		user.visible_message("\The [user] taps \the [M] with \the [src].")
 		activate(user, M)
+		return ITEM_INTERACT_SUCCESS
 	else
 		to_chat(user, span_notice("\The [src] emits an unpleasant tone... It is not ready yet."))
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
+		return ITEM_INTERACT_FAILURE
 
 //Tries to unleash or recall your stored mob
 /obj/item/capture_crystal/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(loadout && !bound_mob)
+		to_chat(user, span_notice("\The [src] emits an unpleasant tone... It is not ready yet."))
+		playsound(src, 'sound/effects/capture-crystal-problem.ogg', 75, 1, -1)
+		return
 	if(bound_mob && !owner)
 		if(bound_mob == user)
 			to_chat(user, span_notice("\The [src] emits an unpleasant tone... It does not activate for you."))
@@ -325,8 +337,15 @@
 	else if(!M.capture_crystal || M.capture_caught)
 		to_chat(U, span_warning("This creature is not suitable for capture."))
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
-	else if(tgui_alert(M, "Would you like to be caught by in [src] by [U]? You will be bound to their will.", "Become Caught",list("No","Yes")) == "Yes")
-		if(tgui_alert(M, "Are you really sure? The only way to undo this is to OOC escape while you're in the crystal.", "Become Caught", list("No","Yes")) == "Yes")
+	//What if someone slips and tries to capture themselves?
+	else if(M == U && tgui_alert(M, "Would you like to be caught by [src]? You will be bound to the will of whomever claims ownership of the crystal.", "Become Caught",list("No","Yes")) == "Yes")
+		if(tgui_alert(M, "Are you really sure? The only way to undo this is to OOC escape while you're in the crystal.", "Become Caught", list("No", "Yes")) == "Yes")
+			log_admin("[key_name(M)] has, by their own volition and discretion, decided to catch themselves with [src].")
+			capture(M, null)
+			return
+	//Make sure the player can opt out of getting captured
+	else if(M != U && tgui_alert(M, "Would you like to be caught in [src] by [U]? You will be bound to their will.", "Become Caught",list("No", "Yes")) == "Yes")
+		if(tgui_alert(M, "Are you really sure? The only way to undo this is to OOC escape while you're in the crystal.", "Become Caught", list("No", "Yes")) == "Yes")
 			log_admin("[key_name(M)] has agreed to become caught by [key_name(U)].")
 			capture(M, U)
 			recall(U)
@@ -356,7 +375,7 @@
 //If the crystal hasn't been set up, it does this
 /obj/item/capture_crystal/proc/activate(mob/living/user, target)
 	if(!cooldown_check())		//Are we ready to do things yet?
-		to_chat(thrower, span_notice("\The [src] clicks unsatisfyingly... It is not ready yet."))
+		to_chat(user, span_notice("\The [src] clicks unsatisfyingly... It is not ready yet."))
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 		return
 	if(spawn_mob_type && !bound_mob)			//We don't already have a mob, but we know what kind of mob we want
@@ -416,7 +435,7 @@
 //We're using the crystal, but what will it do?
 /obj/item/capture_crystal/proc/determine_action(mob/living/U, T)
 	if(!cooldown_check())	//Are we ready yet?
-		to_chat(thrower, span_notice("\The [src] clicks unsatisfyingly... It is not ready yet."))
+		to_chat(U, span_notice("\The [src] clicks unsatisfyingly... It is not ready yet."))
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 		return				//No
 	if(bound_mob in contents)	//Do we have our mob?
@@ -478,14 +497,14 @@
 	thing.overlays += coolanimation
 	addtimer(CALLBACK(src, PROC_REF(animate_action_finished),thing,coolanimation), 1.1 SECOND, TIMER_DELETE_ME)
 
-/obj/item/capture_crystal/proc/animate_action_finished(atom/thing,var/image/coolanimation)
+/obj/item/capture_crystal/proc/animate_action_finished(atom/thing,image/coolanimation)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PROTECTED_PROC(TRUE)
 	thing.overlays -= coolanimation
 	qdel(coolanimation)
 
 //IF the crystal somehow ends up in a tummy and digesting with a bound mob who doesn't want to be eaten, let's move them to the ground
-/obj/item/capture_crystal/digest_act(var/atom/movable/item_storage = null)
+/obj/item/capture_crystal/digest_act(atom/movable/item_storage = null)
 	if(bound_mob)
 		if((bound_mob in contents) && !bound_mob.devourable)
 			bound_mob.forceMove(src.drop_location())
@@ -869,20 +888,15 @@
 
 /obj/item/capture_crystal/loadout
 	active = TRUE
+	loadout = TRUE
 
-/obj/item/capture_crystal/loadout/attack(mob/living/M, mob/living/user)
+/obj/item/capture_crystal/loadout/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(!bound_mob && M != user)
 		to_chat(user, span_notice("\The [src] emits an unpleasant tone..."))
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
-		return
+		return ITEM_INTERACT_FAILURE
 	. = ..()
 
-/obj/item/capture_crystal/loadout/attack_self(mob/living/user)
-	if(!bound_mob)
-		to_chat(user, span_notice("\The [src] emits an unpleasant tone... It is not ready yet."))
-		playsound(src, 'sound/effects/capture-crystal-problem.ogg', 75, 1, -1)
-		return
-	. = ..()
 
 /obj/item/capture_crystal/loadout/capture_chance()
 	return 0
@@ -914,7 +928,7 @@
 
 /obj/item/capture_crystal/cheap/activate(mob/living/user, target)
 	if(!cooldown_check())		//Are we ready to do things yet?
-		to_chat(thrower, span_notice("\The [src] clicks unsatisfyingly... It is not ready yet."))
+		to_chat(user, span_notice("\The [src] clicks unsatisfyingly... It is not ready yet."))
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 		return
 	if(spawn_mob_type && !bound_mob)			//We don't already have a mob, but we know what kind of mob we want

@@ -1,9 +1,13 @@
-/turf/simulated/floor/attackby(var/obj/item/C, var/mob/user, attack_modifier, click_parameters)
+/turf/simulated/floor/attackby(obj/item/C, mob/user, attack_modifier, click_parameters)
 
 	if(!C || !user)
 		return 0
 
-	if(isliving(user) && istype(C, /obj/item)) //CHOMPEDIT START - Making engraving require disarm intent (and simplifying the proc)
+	// Check parent signals
+	if(..())
+		return
+
+	if(isliving(user) && istype(C, /obj/item))
 		var/mob/living/L = user
 		if(L.a_intent != I_HELP)
 			if(L.a_intent == I_GRAB)
@@ -100,9 +104,9 @@
 				to_chat(user, span_warning("This section is too damaged to support anything. Use a welder to fix the damage."))
 				return
 			var/obj/item/stack/S = C
-			var/decl/flooring/use_flooring
-			for(var/flooring_type in flooring_types)
-				var/decl/flooring/F = flooring_types[flooring_type]
+			var/datum/decl/flooring/use_flooring
+			for(var/flooring_type in GLOB.flooring_types)
+				var/datum/decl/flooring/F = GLOB.flooring_types[flooring_type]
 				if(!F.build_type)
 					continue
 				if((S.type == F.build_type) || (S.build_type == F.build_type))

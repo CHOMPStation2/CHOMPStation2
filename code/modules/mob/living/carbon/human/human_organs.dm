@@ -17,11 +17,11 @@
 	last_dam = damage_this_tick
 
 // Takes care of organ related updates, such as broken and missing limbs
-/mob/living/carbon/human/proc/handle_organs()
+/mob/living/carbon/human/proc/handle_organs(force = FALSE)
 
 	var/force_process = recheck_bad_external_organs()
 
-	if(force_process)
+	if(force_process || force)
 		bad_external_organs.Cut()
 		for(var/obj/item/organ/external/Ex in organs)
 			bad_external_organs += Ex //VOREStation Edit - Silly and slow to |= this
@@ -73,6 +73,9 @@
 	if (istype(buckled, /obj/structure/bed))
 		return
 
+	if(SEND_SIGNAL(src, COMSIG_EXTERNAL_ORGAN_STANCE_DAMAGE_APPLICATION) & COMPONENT_CANCEL_EXTERNAL_ORGAN_DAMAGE)
+		return
+
 	var/limb_pain = FALSE
 	for(var/limb_tag in list(BP_L_LEG,BP_R_LEG,BP_L_FOOT,BP_R_FOOT))
 		var/obj/item/organ/external/E = organs_by_name[limb_tag]
@@ -87,8 +90,7 @@
 				spark_system.set_up(5, 0, src)
 				spark_system.attach(src)
 				spark_system.start()
-				spawn(10)
-					qdel(spark_system)
+				QDEL_IN(spark_system, 1 SECOND)
 		else if (E.is_broken())
 			stance_damage += 1
 		else if (E.is_dislocated())
@@ -117,10 +119,13 @@
 				emote("scream")
 			automatic_custom_emote(VISIBLE_MESSAGE, "collapses!", check_stat = TRUE)
 		if(!(lying || resting)) // stops permastun with SPINE sdisability
-			Weaken(5) //can't emote while weakened, apparently.
+			Weaken(5)
 
 /mob/living/carbon/human/proc/handle_grasp()
 	if(!l_hand && !r_hand)
+		return
+
+	if(SEND_SIGNAL(src, COMSIG_EXTERNAL_ORGAN_GRASP_DAMAGE_APPLICATION) & COMPONENT_CANCEL_EXTERNAL_ORGAN_DAMAGE)
 		return
 
 	// You should not be able to pick anything up, but stranger things have happened.
@@ -194,7 +199,7 @@
 		O.trace_chemicals[A.name] = 100
 
 // Traitgenes Init genes based on the traits currently active
-/mob/living/carbon/human/proc/sync_dna_traits(var/refresh_traits, var/hide_message = TRUE)
+/mob/living/carbon/human/proc/sync_dna_traits(refresh_traits, hide_message = TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE) //Don't. Even. /Think/. About. It.
 	if(!dna || !species)
 		return
@@ -224,7 +229,7 @@
 	for(var/obj/item/organ/O in all_bits)
 		O.set_dna(dna)
 
-/mob/living/carbon/human/proc/set_gender(var/g)
+/mob/living/carbon/human/proc/set_gender(g)
 	if(g != gender)
 		gender = g
 

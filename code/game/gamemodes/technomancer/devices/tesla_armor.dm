@@ -21,7 +21,7 @@
 	var/normal_icon_state = "tesla_armor_0"
 	var/cooldown_to_charge = 15 SECONDS
 
-/obj/item/clothing/suit/armor/tesla/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/suit/armor/tesla/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	//First, some retaliation.
 	if(active)
 		if(istype(damage_source, /obj/item/projectile))
@@ -53,6 +53,9 @@
 	return 0
 
 /obj/item/clothing/suit/armor/tesla/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	active = !active
 	to_chat(user, span_notice("You [active ? "" : "de"]activate \the [src]."))
 	update_icon()

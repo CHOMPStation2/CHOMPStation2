@@ -137,7 +137,7 @@
 /// payment account status changed /obj/machinery/account_database/tgui_act() : (datum/money_account/account)
 #define COMSIG_GLOB_PAYMENT_ACCOUNT_REVOKE "!payment_account_revoke_payroll"
 
-// base /decl/emote/proc/do_emote() : (mob/user, extra_params)
+// base /datum/decl/emote/proc/do_emote() : (mob/user, extra_params)
 #define COMSIG_GLOB_EMOTE_PERFORMED "!emote_performed"
 // base /proc/say_dead_direct() : (message)
 #define COMSIG_GLOB_DEAD_SAY "!dead_say"
@@ -158,3 +158,14 @@
 
 // base /obj/item/autopsy_scanner/do_surgery() : (mob/user, mob/target)
 #define COMSIG_GLOB_AUTOPSY_PERFORMED "!performed_autopsy"
+// base /datum/disease/proc/cure() : (id)
+#define COMSIG_GLOB_ADV_DISEASE_CURED "!adv_disease_cured"
+
+// base /obj/machinery/anomaly_harvester/proc/add_points() : (add_points)
+#define COMSIG_GLOB_ANOMALY_HARVESTED "!anomaly_harvested"
+// base /obj/item/mail_scanner/afterattack()
+#define COMSIG_GLOB_MAIL_DELIVERED "!mail_delivered"
+// base /obj/machinery/computer/arcade/proc/pricevend()
+#define COMSIG_GLOB_ARCADE_PRIZEVEND "!arcade_win"
+
+#define COMSIG_GLOB_DONATE_BLOOD "!donate_blood"

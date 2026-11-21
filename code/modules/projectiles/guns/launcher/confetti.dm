@@ -6,13 +6,13 @@
 	icon_state = "confetti_cannon"
 	item_state = "confetti_cannon"
 	w_class = ITEMSIZE_NORMAL
-	origin_tech = list(TECH_COMBAT = 1, TECH_MATERIAL = 2)
 	throw_distance = 7
 	release_force = 5
 	var/obj/item/grenade/confetti/party_ball/chambered = null
 
 	var/confetti_charge = 0
 	var/max_confetti = 20
+	special_handling = TRUE
 
 /obj/item/gun/launcher/confetti_cannon/examine(mob/user)
 	. = ..()
@@ -42,6 +42,9 @@
 		to_chat(user, span_red("The [src] is already loaded!"))
 
 /obj/item/gun/launcher/confetti_cannon/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	pump(user)
 
 /obj/item/gun/launcher/confetti_cannon/consume_next_projectile()

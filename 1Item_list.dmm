@@ -6914,7 +6914,7 @@
 	},
 /area/survivalpod)
 "cbq" = (
-/obj/item/storage/bag/ore,
+/obj/item/ore_bag,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -24062,7 +24062,7 @@
 	},
 /area/survivalpod)
 "hdH" = (
-/obj/item/storage/bag/ore/holding,
+/obj/item/ore_bag/holding,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -79445,12 +79445,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"xqI" = (
-/obj/item/gps/advanced,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "xqJ" = (
 /obj/item/clothing/under/suit_jacket/female/fluff/asuna,
 /turf/simulated/fitness{
@@ -112128,7 +112122,7 @@ rKJ
 xKG
 pGN
 gpu
-xqI
+tHP
 cKf
 mnp
 uJi

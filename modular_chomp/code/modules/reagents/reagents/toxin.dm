@@ -29,7 +29,7 @@
 /datum/reagent/toxin/liquidlife
 	name = REAGENT_LIQUIDLIFE
 	id = REAGENT_ID_LIQUIDLIFE
-	description = "Life Drained from a victim, and processed into a liquid form. ."
+	description = "Life Drained from a victim, and processed into a liquid form."
 	taste_description = "plastic"
 	reagent_state = LIQUID
 	color = "#CF3600"

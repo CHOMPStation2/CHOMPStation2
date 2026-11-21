@@ -36,7 +36,7 @@
 */
 
 // Assoc list containing all material datums indexed by name.
-var/list/name_to_material
+GLOBAL_LIST_INIT(name_to_material, populate_material_list())
 
 //Returns the material the object is made of, if applicable.
 //Will we ever need to return more than one value here? Or should we just return the "dominant" material.
@@ -95,21 +95,18 @@ var/list/name_to_material
 
 
 // Builds the datum list above.
-/proc/populate_material_list(force_remake=0)
-	if(name_to_material && !force_remake) return // Already set up!
-	name_to_material = list()
+/proc/populate_material_list()
+	var/list/materia_list = list()
 	for(var/type in subtypesof(/datum/material))
 		var/datum/material/new_mineral = new type
 		if(!new_mineral.name)
 			continue
-		name_to_material[lowertext(new_mineral.name)] = new_mineral
-	return 1
+		materia_list[lowertext(new_mineral.name)] = new_mineral
+	return materia_list
 
 // Safety proc to make sure the material list exists before trying to grab from it.
 /proc/get_material_by_name(name)
-	if(!name_to_material)
-		populate_material_list()
-	return name_to_material[name]
+	return GLOB.name_to_material[name]
 
 /proc/material_display_name(name)
 	if(istype(name, /datum/material)) //We were fed a datum.
@@ -133,15 +130,12 @@ var/list/name_to_material
  *   - The following elements are used to generate bespoke IDs
  */
 /proc/_GetMaterialRef(list/arguments)
-	if(!name_to_material)
-		populate_material_list()
-
 	var/datum/material/key = arguments[1]
 	if(istype(key))
 		return key // we want to convert anything we're given to a material
 
 	if(istext(key))	// text ID
-		. = name_to_material[key]
+		. = GLOB.name_to_material[key]
 		if(!.)
 			WARNING("Attempted to fetch material ref with invalid text id '[key]'")
 		return
@@ -150,7 +144,7 @@ var/list/name_to_material
 		CRASH("Attempted to fetch material ref with invalid key [key]")
 
 	key = GetIdFromArguments(arguments)
-	. = name_to_material[key]
+	. = GLOB.name_to_material[key]
 	if(!.)
 		WARNING("Attempted to fetch nonexistent material with key [key]")
 
@@ -211,7 +205,6 @@ var/list/name_to_material
 	var/door_icon_base = "metal"                         // Door base icon tag. See header.
 	var/table_icon_base = "metal"						 // Table base icon tag. See header.
 	var/icon_reinf = "reinf_metal"                       // Overlay used
-	var/list/stack_origin_tech = list(TECH_MATERIAL = 1) // Research level for stacks.
 	var/pass_stack_colors = FALSE                        // Will stacks made from this material pass their colors onto objects?
 
 	// Attributes
@@ -230,7 +223,6 @@ var/list/name_to_material
 	var/conductivity = null      // How conductive the material is. Iron acts as the baseline, at 10.
 	var/list/composite_material  // If set, object matter var will be a list containing these values.
 	var/luminescence
-	var/radiation_resistance = 0 // Radiation resistance, which is added on top of a material's weight for blocking radiation. Needed to make lead special without superrobust weapons.
 	var/supply_conversion_value  // Supply points per sheet that this material sells for.
 	var/can_sharpen = TRUE // Is this material compatible with a sharpening kit?
 
@@ -257,7 +249,7 @@ var/list/name_to_material
 	var/wiki_flag = 0
 
 // Placeholders for light tiles and rglass.
-/datum/material/proc/build_rod_product(var/mob/user, var/obj/item/stack/used_stack, var/obj/item/stack/target_stack)
+/datum/material/proc/build_rod_product(mob/user, obj/item/stack/used_stack, obj/item/stack/target_stack)
 	if(!rod_product)
 		to_chat(user, span_warning("You cannot make anything out of \the [target_stack]"))
 		return
@@ -270,7 +262,7 @@ var/list/name_to_material
 	S.add_fingerprint(user)
 	S.add_to_stacks(user)
 
-/datum/material/proc/build_wired_product(var/mob/living/user, var/obj/item/stack/used_stack, var/obj/item/stack/target_stack)
+/datum/material/proc/build_wired_product(mob/living/user, obj/item/stack/used_stack, obj/item/stack/target_stack)
 	if(!wire_product)
 		to_chat(user, span_warning("You cannot make anything out of \the [target_stack]"))
 		return
@@ -295,7 +287,7 @@ var/list/name_to_material
 		shard_icon = shard_type
 
 // This is a placeholder for proper integration of windows/windoors into the system.
-/datum/material/proc/build_windows(var/mob/living/user, var/obj/item/stack/used_stack)
+/datum/material/proc/build_windows(mob/living/user, obj/item/stack/used_stack)
 	return 0
 
 // Weapons handle applying a divisor for this value locally.
@@ -317,7 +309,7 @@ var/list/name_to_material
 	return hardness //todo
 
 // Snowflakey, only checked for alien doors at the moment.
-/datum/material/proc/can_open_material_door(var/mob/living/user)
+/datum/material/proc/can_open_material_door(mob/living/user)
 	return 1
 
 // Currently used for weapons and objects made of uranium to irradiate things.
@@ -328,9 +320,10 @@ var/list/name_to_material
 /datum/material/placeholder
 	name = "placeholder"
 	wiki_flag = WIKI_SPOILER
+	supply_conversion_value = 0
 
 // Places a girder object when a wall is dismantled, also applies reinforced material.
-/datum/material/proc/place_dismantled_girder(var/turf/target, var/datum/material/reinf_material, var/datum/material/girder_material)
+/datum/material/proc/place_dismantled_girder(turf/target, datum/material/reinf_material, datum/material/girder_material)
 	var/obj/structure/girder/G = new(target)
 	if(reinf_material)
 		G.reinf_material = reinf_material
@@ -341,17 +334,17 @@ var/list/name_to_material
 
 // General wall debris product placement.
 // Not particularly necessary aside from snowflakey cult girders.
-/datum/material/proc/place_dismantled_product(var/turf/target, var/amount = 1) //Added an amount var to this. Lets multi-dropped walls to drop all of their sheets together. Woo!
+/datum/material/proc/place_dismantled_product(turf/target, amount = 1) //Added an amount var to this. Lets multi-dropped walls to drop all of their sheets together. Woo!
 	place_sheet(target, amount)
 
 // Debris product. Used ALL THE TIME.
-/datum/material/proc/place_sheet(var/turf/target, amount)
+/datum/material/proc/place_sheet(turf/target, amount)
 	amount = round(amount)
 	if(stack_type && amount > 0)
 		return new stack_type(target, amount)
 
 // As above.
-/datum/material/proc/place_shard(var/turf/target)
+/datum/material/proc/place_shard(turf/target)
 	if(shard_type)
 		return new /obj/item/material/shard(target, src.name)
 
@@ -359,11 +352,11 @@ var/list/name_to_material
 /datum/material/proc/is_brittle()
 	return !!(flags & MATERIAL_BRITTLE)
 
-/datum/material/proc/combustion_effect(var/turf/T, var/temperature)
+/datum/material/proc/combustion_effect(turf/T, temperature)
 	return
 
 // Used by walls to do on-touch things, after checking for crumbling and open-ability.
-/datum/material/proc/wall_touch_special(var/turf/simulated/wall/W, var/mob/living/L)
+/datum/material/proc/wall_touch_special(turf/simulated/wall/W, mob/living/L)
 	return
 
 /datum/material/proc/get_recipes()

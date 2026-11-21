@@ -590,7 +590,7 @@
 
 
 // This proc controls the timing for each step in a reaction. Step is the index for the current chem of our recipe, step + 1 is the volume of said chem.
-/obj/machinery/chemical_synthesizer/proc/follow_recipe(var/r_id, var/step as num)
+/obj/machinery/chemical_synthesizer/proc/follow_recipe(r_id, step as num)
 	if(stalled) // Emergency stop if() check.
 		stalled = FALSE
 		stall()
@@ -607,7 +607,7 @@
 	addtimer(CALLBACK(src, PROC_REF(perform_reaction), r_id, step), recipes[r_id][step + 1] * delay_modifier)
 
 // This proc carries out the actual steps in each reaction.
-/obj/machinery/chemical_synthesizer/proc/perform_reaction(var/r_id, var/step as num)
+/obj/machinery/chemical_synthesizer/proc/perform_reaction(r_id, step as num)
 	if(stalled) // Emergency stop if() check.
 		stalled = FALSE
 		stall()
@@ -668,7 +668,7 @@
 		follow_recipe(r_id, step)
 
 // Now that we're done, bottle up the product.
-/obj/machinery/chemical_synthesizer/proc/bottle_product(var/r_id)
+/obj/machinery/chemical_synthesizer/proc/bottle_product(r_id)
 	if(stat & (BROKEN|NOPOWER))
 		stall()
 		return

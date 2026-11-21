@@ -24,7 +24,6 @@
 	load_method = MAGAZINE
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4)
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/lamia/update_icon()
@@ -48,7 +47,6 @@
 	load_method = MAGAZINE
 	w_class = ITEMSIZE_SMALL
 	fire_sound = 'sound/weapons/gunshot_pathetic.ogg'
-	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 3)
 
 /obj/item/gun/projectile/giskard/update_icon()
 	..()
@@ -64,8 +62,8 @@
 	icon_state = "olivawcivil"
 	item_state = "olivawcivil"
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=1.2,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="2-round bursts", burst=2, fire_delay=0.2, move_delay=4,    burst_accuracy=list(0,-15),       dispersion=list(1.2, 1.8)),
+		list(mode_name="semiauto",       burst=1, fire_delay=1.2, burst_accuracy=null, dispersion=null),
+		list(mode_name="2-round bursts", burst=2, fire_delay=0.2,    burst_accuracy=list(0,-15),       dispersion=list(1.2, 1.8)),
 		)
 
 /obj/item/gun/projectile/giskard/olivaw/update_icon()

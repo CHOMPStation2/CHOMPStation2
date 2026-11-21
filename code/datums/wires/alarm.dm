@@ -31,7 +31,7 @@
 				A.locked = TRUE
 
 		if(WIRE_MAIN_POWER1)
-			A.shock(usr, 50)
+			A.shock(usr, 50) // TODO - REMOVE USR
 			A.shorted = !mend
 			A.update_icon()
 
@@ -65,7 +65,6 @@
 		if(WIRE_AI_CONTROL)
 			if(!A.aidisabled)
 				A.aidisabled = TRUE
-			A.updateDialog()
 			addtimer(VARSET_CALLBACK(A, aidisabled, FALSE), 10 SECONDS, TIMER_DELETE_ME)
 
 		if(WIRE_SYPHON)

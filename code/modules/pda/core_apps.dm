@@ -3,7 +3,7 @@
 	template = "pda_main_menu"
 	hidden = 1
 
-/datum/data/pda/app/main_menu/update_ui(mob/user as mob, list/data)
+/datum/data/pda/app/main_menu/update_ui(mob/user, list/data)
 	title = pda.name
 
 	data["app"]["is_home"] = 1
@@ -63,7 +63,7 @@
 		note = "Thank you for choosing the [pda.model_name]!"
 		notetitle = "Congratulations!"
 
-/datum/data/pda/app/notekeeper/update_ui(mob/user as mob, list/data)
+/datum/data/pda/app/notekeeper/update_ui(mob/user, list/data)
 	data["note"] = note									// current pda notes
 	data["notename"] = "Note [GLOB.alphabet_upper[currentnote]] : [notetitle]"
 
@@ -186,7 +186,7 @@
 			to_chat(user, span_notice("You must be holding paper for the pda to print to!"))
 
 
-/datum/data/pda/app/notekeeper/proc/changetonote(var/noteindex)
+/datum/data/pda/app/notekeeper/proc/changetonote(noteindex)
 	// save note to current slot, then load another slot
 	storednotes[currentnote] = note
 	storedtitles[currentnote] = notetitle
@@ -206,7 +206,7 @@
 	icon = "user"
 	template = "pda_manifest"
 
-/datum/data/pda/app/manifest/update_ui(mob/user as mob, list/data)
+/datum/data/pda/app/manifest/update_ui(mob/user, list/data)
 	if(GLOB.data_core)
 		GLOB.data_core.get_manifest_list()
 	data["manifest"] = GLOB.PDA_Manifest
@@ -221,7 +221,7 @@
 	template = "pda_atmos_scan"
 	category = "Utilities"
 
-/datum/data/pda/app/atmos_scanner/update_ui(mob/user as mob, list/data)
+/datum/data/pda/app/atmos_scanner/update_ui(mob/user, list/data)
 	data["aircontents"] = get_gas_mixture_default_scan_data(get_turf(user))
 
 /datum/data/pda/app/news
@@ -231,7 +231,7 @@
 
 	var/newsfeed_channel
 
-/datum/data/pda/app/news/update_ui(mob/user as mob, list/data)
+/datum/data/pda/app/news/update_ui(mob/user, list/data)
 	data["feeds"] = compile_news()
 	data["latest_news"] = get_recent_news()
 	if(newsfeed_channel)
@@ -248,7 +248,7 @@
 
 /datum/data/pda/app/news/proc/compile_news()
 	var/list/feeds = list()
-	for(var/datum/feed_channel/channel in news_network.network_channels)
+	for(var/datum/feed_channel/channel in GLOB.news_network.network_channels)
 		var/list/messages = list()
 		if(!channel.censored)
 			var/index = 0
@@ -280,7 +280,7 @@
 	var/list/news = list()
 
 	// Compile all the newscasts
-	for(var/datum/feed_channel/channel in news_network.network_channels)
+	for(var/datum/feed_channel/channel in GLOB.news_network.network_channels)
 		if(!channel.censored)
 			var/index = 0
 			for(var/datum/feed_message/FM in channel.messages)
@@ -305,3 +305,25 @@
 		news.Swap(1, 3) // List is sorted in ascending order of timestamp, we want descending
 
 	return news
+
+/datum/data/pda/app/goals
+	name = "Departmental Goals"
+	icon = "list-check"
+	template = "pda_depgoals"
+
+/datum/data/pda/app/goals/update_ui(mob/user, list/data)
+	data["goals"] = get_goals()
+
+/datum/data/pda/app/goals/proc/get_goals()
+	var/list/goals = list()
+
+	for(var/category in SSdepartmentgoals.active_department_goals)
+		var/list/dept_goal = SSdepartmentgoals.active_department_goals[category]
+		for(var/datum/goal/goal in dept_goal)
+			goals += list(list(
+				"name" = goal.name,
+				"description" = goal.goal_text,
+				"count" = FLOOR((goal.current_count / goal.goal_count) * 100, 1),
+				"ref" = REF(goal)
+			))
+	return goals

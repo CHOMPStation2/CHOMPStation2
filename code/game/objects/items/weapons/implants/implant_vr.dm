@@ -87,7 +87,7 @@
 		hear(say_in_me.group[2])
 
 
-/obj/item/implant/sizecontrol/hear(var/msg)
+/obj/item/implant/sizecontrol/hear(msg)
 	if (malfunction)
 		return
 
@@ -114,6 +114,9 @@
 
 
 /obj/item/implant/sizecontrol/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(isliving(imp_in))
 		var/newsize = pick(RESIZE_HUGE,RESIZE_BIG,RESIZE_NORMAL,RESIZE_SMALL,RESIZE_TINY,RESIZE_A_HUGEBIG,RESIZE_A_BIGNORMAL,RESIZE_A_NORMALSMALL,RESIZE_A_SMALLTINY)
 		var/mob/living/H = imp_in
@@ -152,6 +155,7 @@ Due to the small chemical capacity of the implant, the life of the implant is re
 	entities to perform espionage and in some parts of space are used off the books for interrogation. Most of the makers of these modified implants have put in \
 	safeties to prevent lethal or actively harmful commands from being input to lessen the severity of the crime if they are caught. This one has a golden stamp \
 	with the shape of a star on it, the letters 'KE' in black text on it."
+	special_handling = TRUE
 
 /obj/item/implanter/compliance/Initialize(mapload)
 	. = ..()
@@ -159,6 +163,9 @@ Due to the small chemical capacity of the implant, the life of the implant is re
 	update()
 
 /obj/item/implanter/compliance/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(istype(imp,/obj/item/implant/compliance))
 		var/obj/item/implant/compliance/implant = imp
 		var/newlaws = tgui_input_text(user, "Please Input Laws", "Compliance Laws", "", multiline = TRUE, prevent_enter = TRUE)

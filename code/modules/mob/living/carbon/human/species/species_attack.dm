@@ -25,7 +25,7 @@
 	sharp = TRUE
 	edge = TRUE
 
-/datum/unarmed_attack/claws/show_attack(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
+/datum/unarmed_attack/claws/show_attack(mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
 	attack_damage = CLAMP(attack_damage, 1, 5)
 
@@ -60,12 +60,44 @@
 	shredding = 1
 
 /datum/unarmed_attack/claws/strong/xeno
-	attack_verb = list("slashed", "gouged", "stabbed")
-	damage = 15
+	attack_name = "xenomorph claws"
+	attack_verb = list("slashed", "gouged", "punctured", "hacked", "ripped")
+	attack_noun = list("claws", "tailblade", "talons")
+	attack_sound = 'sound/weapons/alien_claw_flesh.ogg'
+	damage = 10
+	shredding = 0
+
+/datum/unarmed_attack/claws/strong/xeno/show_attack(mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
+	var/obj/item/organ/external/affecting = target.get_organ(zone)
+	attack_damage = CLAMP(attack_damage, 1, 5)
+
+	if(target == user)
+		user.visible_message(span_danger("[user] [pick(attack_verb)] [user.p_themselves()] in the [affecting.name]!"))
+		return 0
+
+	switch(zone)
+		if(BP_HEAD, O_MOUTH, O_EYES)
+			// ----- HEAD ----- //
+			switch(attack_damage)
+				if(1 to 2)
+					user.visible_message(span_danger("[user] rakes [user.p_their()] [pick(attack_noun)] across [target]'s face!"))
+				if(3 to 4)
+					user.visible_message(span_danger("[user] [pick(attack_verb)] [target]'s [pick("head", "neck")]!"))
+				if(5)
+					user.visible_message(span_danger("[user] tears [user.p_their()] [pick(attack_noun)] into [target]'s face!"))
+		else
+			// ----- BODY ----- //
+			switch(attack_damage)
+				if(1 to 2)	user.visible_message(span_danger("[user] maims [target]'s [affecting.name]!"))
+				if(3 to 4)	user.visible_message(span_danger("[user] [pick(attack_verb)] [pick("", "", "the side of")] [target]'s [affecting.name]!"))
+				if(5)		user.visible_message(span_danger("[user] impales [user.p_their()] [pick(attack_noun)] deep into [target]'s [affecting.name]!"))
 
 /datum/unarmed_attack/claws/strong/xeno/queen
-	attack_verb = list("slashed", "gouged", "stabbed", "gored")
-	damage = 20
+	attack_name = "enormous xenomorph claws"
+	attack_verb = list("mutiliated", "shredded", "impaled", "lacerated", "rended")
+	attack_noun = list("enormous claws", "regal tailblade", "horrific talons")
+	damage = 15
+	shredding = 1
 
 /datum/unarmed_attack/bite/strong
 	attack_name = "strong bite"
@@ -74,7 +106,12 @@
 	shredding = 1
 
 /datum/unarmed_attack/bite/strong/xeno
-	damage = 15
+	attack_name = "inner jaw"
+	attack_verb = list("punctured")
+	attack_noun = list("inner jaw", "inner mouth")
+	damage = 10
+	shredding = 0
+	sharp = TRUE
 
 /datum/unarmed_attack/slime_glomp
 	attack_name = "glomp"
@@ -82,7 +119,7 @@
 	attack_noun = list("body")
 	damage = 2
 
-/datum/unarmed_attack/slime_glomp/apply_effects(var/mob/living/carbon/human/user,var/mob/living/carbon/human/target,var/armour,var/attack_damage,var/zone)
+/datum/unarmed_attack/slime_glomp/apply_effects(mob/living/carbon/human/user,mob/living/carbon/human/target,armour,attack_damage,zone)
 	..()
 	user.apply_stored_shock_to(target)
 
@@ -93,7 +130,7 @@
 /datum/unarmed_attack/stomp/weak/get_unarmed_damage()
 	return damage
 
-/datum/unarmed_attack/stomp/weak/show_attack(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
+/datum/unarmed_attack/stomp/weak/show_attack(mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
 	user.visible_message(span_warning("[user] jumped up and down on \the [target]'s [affecting.name]!"))
 	playsound(user, attack_sound, 25, 1, -1)
@@ -107,7 +144,7 @@
 	sharp = TRUE
 	edge = TRUE
 
-/datum/unarmed_attack/bite/sharp/numbing/show_attack(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
+/datum/unarmed_attack/bite/sharp/numbing/show_attack(mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
 
 	attack_damage = CLAMP(attack_damage, 1, 5)
@@ -148,7 +185,7 @@
 
 /datum/unarmed_attack/claws/shadekin
 
-/datum/unarmed_attack/claws/shadekin/apply_effects(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
+/datum/unarmed_attack/claws/shadekin/apply_effects(mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
 	..()
 	if(!(target == user))
 		var/datum/component/shadekin/SK = user.get_shadekin_component()
@@ -157,22 +194,33 @@
 
 /datum/unarmed_attack/bite/sharp/shadekin
 
-/datum/unarmed_attack/bite/sharp/shadekin/apply_effects(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
+/datum/unarmed_attack/bite/sharp/shadekin/apply_effects(mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
 	..()
 	if(!(target == user))
 		var/datum/component/shadekin/SK = user.get_shadekin_component()
 		if(SK)
 			SK.shadekin_adjust_energy(attack_damage)
 
-/datum/unarmed_attack/claws/chimera //special feral attack that gets stronger as they get angrier
+/datum/unarmed_attack/bite/sharp/xenochimera
 
-/datum/unarmed_attack/claws/chimera/get_unarmed_damage(var/mob/living/carbon/human/user)
-	return user.species.unarmed_bonus + (user.get_feralness()/5)
-
-/datum/unarmed_attack/claws/chimera/apply_effects(var/mob/living/carbon/human/user,var/mob/living/carbon/human/target,var/armour,var/attack_damage,var/zone)
+/datum/unarmed_attack/bite/sharp/xenochimera/apply_effects(mob/living/carbon/human/user, mob/living/carbon/human/target, armour, attack_damage, zone)
 	..()
-	if(user.get_feralness() && !(target == user))
-		var/selfdamage = ((user.get_feralness()/10)-7.5)
+	user.attempt_xenochimera_infection(user, target, armour, attack_damage, zone)
+
+/datum/unarmed_attack/claws/chimera //special feral attack that gets stronger as they get angrier
+	sparring_variant_type = /datum/unarmed_attack/claws/chimera
+
+/datum/unarmed_attack/claws/chimera/get_unarmed_damage(mob/living/carbon/human/user)
+	if(HAS_TRAIT(user, TRAIT_NONLETHAL_BLOWS) && !user.get_feralness())//don't add extra species strength when pulling punches, but can't pull punches when feral
+		return damage
+	return user.species.unarmed_bonus + damage + min(user.get_feralness()/5, 40)
+
+/datum/unarmed_attack/claws/chimera/apply_effects(mob/living/carbon/human/user, mob/living/carbon/human/target, armour, attack_damage, zone)
+	..()
+	if(target == user)
+		return
+	if(user.get_feralness())
+		var/selfdamage = (min((user.get_feralness()/10), 20)-7.5)
 		if(selfdamage > 0)
 			var/selfdamagezone = null
 			if (user.hand)
@@ -180,3 +228,4 @@
 			else
 				selfdamagezone=pick(BP_R_ARM, BP_R_HAND)
 			user.apply_damage(selfdamage, BRUTE, selfdamagezone, 0, FALSE, FALSE)
+	user.attempt_xenochimera_infection(user, target, armour, attack_damage, zone)

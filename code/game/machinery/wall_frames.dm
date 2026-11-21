@@ -11,6 +11,10 @@
 	var/list/frame_types_floor
 	var/list/frame_types_wall
 
+/obj/item/frame/examine(mob/user)
+	. = ..()
+	. += span_notice("Use in hands to choose a machine or computer frame. Use against an open wall to place an alarm or other mounted frame.")
+
 /obj/item/frame/proc/update_type_list()
 	if(!frame_types_floor)
 		frame_types_floor = GLOB.construction_frame_floor
@@ -24,8 +28,10 @@
 		return
 	..()
 
-/obj/item/frame/attack_self(mob/user as mob)
-	..()
+/obj/item/frame/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	update_type_list()
 	var/datum/frame/frame_types/frame_type
 	if(!build_machine_type && !build_wall_only)

@@ -12,11 +12,15 @@
 	appearance_flags = TILE_BOUND|PIXEL_SCALE|NO_CLIENT_COLOR
 	layer = LAYER_HUD_BASE
 	plane = PLANE_PLAYER_HUD
-	var/obj/master = null	//A reference to the object in the slot. Grabs or items, generally.
+	/// A reference to the object in the slot. Grabs or items, generally, but any datum will do.
+	var/datum/weakref/master_ref = null
+	/// A reference to the owner HUD, if any.
+	//VAR_PRIVATE/datum/hud/hud = null //This SHOULD be converted to private eventually, but we're not there yet.
 	var/datum/hud/hud = null // A reference to the owner HUD, if any.
 
 /atom/movable/screen/Destroy()
-	master = null
+	master_ref = null
+	hud = null
 	return ..()
 
 /atom/movable/screen/proc/component_click(atom/movable/screen/component_button/component, params)
@@ -67,6 +71,7 @@
 	name = "close"
 
 /atom/movable/screen/close/Click()
+	var/obj/master = master_ref?.resolve()
 	if(master)
 		if(istype(master, /obj/item/storage))
 			var/obj/item/storage/S = master
@@ -100,6 +105,7 @@
 	name = "grab"
 
 /atom/movable/screen/grab/Click()
+	var/obj/master = master_ref?.resolve()
 	var/obj/item/grab/G = master
 	G.s_click(src)
 	return 1
@@ -121,6 +127,7 @@
 		return 1
 	if (istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech
 		return 1
+	var/obj/master = master_ref?.resolve()
 	if(master)
 		var/obj/item/I = usr.get_active_hand()
 		if(I)
@@ -321,8 +328,6 @@
 		if(I_RUN)
 			usr.m_intent = I_RUN
 			usr.m_int = "13,14"
-		if("Reset Machine")
-			usr.unset_machine()
 		if("internal") //dear god this entire thing needs to be rewritten this is literally assaulting my eyes with how awful it is. FUCK.
 			if(iscarbon(usr))
 				var/mob/living/carbon/C = usr
@@ -857,7 +862,7 @@
 	owner = null
 	return ..()
 
-/atom/movable/screen/movable/mapper_holder/proc/update(var/atom/movable/screen/mapper/map, var/atom/movable/screen/mapper/extras_holder/extras, ping = FALSE)
+/atom/movable/screen/movable/mapper_holder/proc/update(atom/movable/screen/mapper/map, atom/movable/screen/mapper/extras_holder/extras, ping = FALSE)
 	if(!running)
 		running = TRUE
 		if(ping)
@@ -888,7 +893,7 @@
 		owner.pinging = !owner.pinging
 		on()
 
-/atom/movable/screen/movable/mapper_holder/proc/off(var/inform = TRUE)
+/atom/movable/screen/movable/mapper_holder/proc/off(inform = TRUE)
 	frame.cut_overlay("powlight")
 	bg.vis_contents.Cut()
 	vis_contents.Remove(mask_ping, mask_full, extras_holder)
@@ -897,7 +902,7 @@
 	if(inform)
 		owner.stop_updates()
 
-/atom/movable/screen/movable/mapper_holder/proc/on(var/inform = TRUE)
+/atom/movable/screen/movable/mapper_holder/proc/on(inform = TRUE)
 	frame.add_overlay("powlight")
 	if(inform)
 		owner.start_updates()
@@ -1009,8 +1014,27 @@
 	screen_loc = ui_ammo_hud1
 	var/warned = FALSE
 	var/static/list/ammo_screen_loc_list = list(ui_ammo_hud1, ui_ammo_hud2, ui_ammo_hud3 ,ui_ammo_hud4)
+	var/datum/weakref/our_gun
 
-/atom/movable/screen/ammo/proc/add_hud(var/mob/living/user, var/obj/item/gun/G)
+/atom/movable/screen/ammo/Destroy()
+	. = ..()
+	our_gun = null
+
+/atom/movable/screen/ammo/Click()
+	var/mob/user = usr
+	if(!user.checkClickCooldown())
+		return TRUE
+	if(user.stat || user.paralysis || user.stunned || user.weakened)
+		return TRUE
+	if(istype(user.loc,/obj/mecha)) // stops inventory actions in a mech
+		return TRUE
+	var/obj/item/gun/gun = our_gun.resolve()
+	if(!gun)
+		return TRUE
+	gun.switch_firemodes(user)
+	return TRUE
+
+/atom/movable/screen/ammo/proc/add_hud(mob/living/user, obj/item/gun/G)
 
 	if(!user?.client)
 		return
@@ -1028,10 +1052,10 @@
 
 	user.client.screen += src
 
-/atom/movable/screen/ammo/proc/remove_hud(var/mob/living/user)
+/atom/movable/screen/ammo/proc/remove_hud(mob/living/user)
 	user?.client?.screen -= src
 
-/atom/movable/screen/ammo/proc/update_hud(var/mob/living/user, var/obj/item/gun/G)
+/atom/movable/screen/ammo/proc/update_hud(mob/living/user, obj/item/gun/G)
 	if(!user?.client?.screen.Find(src))
 		return
 

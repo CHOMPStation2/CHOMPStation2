@@ -84,7 +84,7 @@
 	response_disarm = "gently pushes aside"
 	response_harm   = "punches"
 
-	organ_names = /decl/mob_organ_names/spider
+	organ_names = /datum/decl/mob_organ_names/spider
 
 
 	melee_damage_lower = 18
@@ -129,6 +129,8 @@
 
 	no_pull_when_living = TRUE
 
+	export_research_value = TECHWEB_TIER_1_POINTS
+	export_research_diminished_max = 3
 
 /mob/living/simple_mob/animal/giant_spider/Initialize(mapload)
 	. = ..()
@@ -139,7 +141,7 @@
 		return FALSE
 	return ..()
 
-/mob/living/simple_mob/animal/giant_spider/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/animal/giant_spider/apply_melee_effects(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		if(L.reagents)
@@ -216,5 +218,5 @@
 
 	set_AI_busy(FALSE)
 
-/decl/mob_organ_names/spider
+/datum/decl/mob_organ_names/spider
 	hit_zones = list("cephalothorax", "abdomen", "left forelegs", "right forelegs", "left hind legs", "right hind legs", "pedipalp", "mouthparts")

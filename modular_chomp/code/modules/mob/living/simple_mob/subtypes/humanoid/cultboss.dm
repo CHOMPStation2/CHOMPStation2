@@ -39,7 +39,7 @@
 			/obj/item/capture_crystal/wendigo = 25
 			)
 
-/mob/living/simple_mob/humanoid/cultist/magus/rift/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/humanoid/cultist/magus/rift/apply_melee_effects(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		var/leech = rand(1,100)
@@ -201,7 +201,6 @@
 	name = "cult blade"
 	desc = "An arcane weapon wielded by the followers of Nar-Sie."
 	icon_state = "cultblade"
-	origin_tech = list(TECH_COMBAT = 1, TECH_ARCANE = 2)
 	w_class = ITEMSIZE_LARGE
 	force = 40
 	throwforce = 20

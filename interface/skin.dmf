@@ -93,6 +93,12 @@ macro "borghotkeymode"
 		name = "CTRL+SHIFT+EAST"
 		command = "shifteast"
 	elem
+		name = "SHIFT+EAST"
+		command = "tiltclock"
+	elem
+		name = "SHIFT+WEST"
+		command = "tiltcounterclock"
+	elem
 		name = "INSERT"
 		command = "a-intent right"
 	elem
@@ -261,6 +267,15 @@ macro "borghotkeymode"
 		name = "F8"
 		command = "Invisimin"
 	elem
+		name = "F9"
+		command = "msay"
+	elem
+		name = "F10"
+		command = "esay"
+	elem
+		name = "F11"
+		command = "mentorsay"
+	elem
 		name = "F12"
 		command = "F12"
 	elem
@@ -364,6 +379,12 @@ macro "macro"
 	elem "ctrlshifteast"
 		name = "CTRL+SHIFT+EAST"
 		command = "shifteast"
+	elem "tiltclock"
+		name = "SHIFT+EAST"
+		command = "tiltclock"
+	elem "tiltcounterclock"
+		name = "SHIFT+WEST"
+		command = "tiltcounterclock"
 	elem "insert"
 		name = "INSERT"
 		command = "a-intent right"
@@ -490,6 +511,15 @@ macro "macro"
 	elem "f8"
 		name = "F8"
 		command = "Invisimin"
+	elem "f9"
+		name = "F9"
+		command = "msay"
+	elem "f10"
+		name = "F10"
+		command = "esay"
+	elem "f11"
+		name = "F11"
+		command = "mentorsay"
 	elem "f12"
 		name = "F12"
 		command = "F12"
@@ -594,6 +624,12 @@ macro "hotkeymode"
 	elem "ctrlshifteast"
 		name = "CTRL+SHIFT+EAST"
 		command = "shifteast"
+	elem "tiltclock"
+		name = "SHIFT+EAST"
+		command = "tiltclock"
+	elem "tiltcounterclock"
+		name = "SHIFT+WEST"
+		command = "tiltcounterclock"
 	elem "insert"
 		name = "INSERT"
 		command = "a-intent right"
@@ -783,6 +819,15 @@ macro "hotkeymode"
 	elem "f8"
 		name = "F8"
 		command = "Invisimin"
+	elem "f9"
+		name = "F9"
+		command = "msay"
+	elem "f10"
+		name = "F10"
+		command = "esay"
+	elem "f11"
+		name = "F11"
+		command = "mentorsay"
 	elem "f12"
 		name = "F12"
 		command = "F12"
@@ -892,6 +937,12 @@ macro "borgmacro"
 	elem "ctrlshifteast"
 		name = "CTRL+SHIFT+EAST"
 		command = "shifteast"
+	elem "tiltclock"
+		name = "SHIFT+EAST"
+		command = "tiltclock"
+	elem "tiltcounterclock"
+		name = "SHIFT+WEST"
+		command = "tiltcounterclock"
 	elem "insert"
 		name = "INSERT"
 		command = "a-intent right"
@@ -1012,6 +1063,15 @@ macro "borgmacro"
 	elem "f8"
 		name = "F8"
 		command = "Invisimin"
+	elem "f9"
+		name = "F9"
+		command = "msay"
+	elem "f10"
+		name = "F10"
+		command = "esay"
+	elem "f11"
+		name = "F11"
+		command = "mentorsay"
 	elem "f12"
 		name = "F12"
 		command = "F12"
@@ -1290,7 +1350,7 @@ window "mapwindow"
 		saved-params = "icon-size"
 		on-show = ".winset\"mainwindow.mainvsplit.left=mapwindow\""
 		on-hide = ".winset\"mainwindow.mainvsplit.left=\""
-		style = ".center { text-align: center; } .runechatdiv {background-color: #20202070} .black_outline { -dm-text-outline: 1px black } .boldtext { font-weight: bold; } .maptext { font-family: 'Grand9K Pixel'; font-size: 6pt; -dm-text-outline: 1px black; color: white; line-height: 1.0; } .command_headset { font-weight: bold;\tfont-size: 8px; } .small { font-size: 6px; } .very_small { font-size: 5px;} .big { font-size: 8px; } .reallybig { font-size: 8px; } .extremelybig { font-size: 8px; } .greentext { color: #00FF00; font-size: 7px; } .redtext { color: #FF0000; font-size: 7px; } .clown { color: #FF69Bf; font-size: 7px;  font-weight: bold; } .his_grace { color: #15D512; } .hypnophrase { color: #0d0d0d; font-weight: bold; } .yell { font-weight: bold; } .italics { font-size: 7px; font-style: italic; }"
+		style = ".center { text-align: center; } .runechatdiv {background-color: #20202070} .black_outline { -dm-text-outline: 1px black } .bold { font-weight: bold; } .maptext { font-family: 'Grand9K Pixel'; font-size: 6pt; -dm-text-outline: 1px black; color: white; line-height: 1.0; } .command_headset { font-weight: bold;\tfont-size: 8px; } .small { font-size: 6px; } .very_small { font-size: 5px;} .big { font-size: 8px; } .reallybig { font-size: 8px; } .extremelybig { font-size: 8px; } .greentext { color: #00FF00; font-size: 7px; } .redtext { color: #FF0000; font-size: 7px; } .clown { color: #FF69Bf; font-size: 7px;  font-weight: bold; } .his_grace { color: #15D512; } .hypnophrase { color: #0d0d0d; font-weight: bold; } .yell { font-weight: bold; } .italics { font-size: 7px; font-style: italic; }"
 	elem "lobby_browser"
 		type = BROWSER
 		pos = 0,0
@@ -1374,30 +1434,6 @@ window "popupwindow"
 		saved-params = "pos;size;is-minimized;is-maximized"
 		statusbar = false
 		can-resize = false
-
-window "prefs_markings_subwindow"
-	elem "prefs_markings_subwindow"
-		type = MAIN
-		pos = 281,0
-		size = 400x400
-		anchor1 = -1,-1
-		anchor2 = -1,-1
-		background-color = none
-		is-visible = false
-		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "Marking Selection Editing"
-		statusbar = false
-		can-minimize = false
-		outer-size = 416x439
-		inner-size = 400x400
-	elem "prefs_markings_browser"
-		type = BROWSER
-		pos = 0,0
-		size = 400x400
-		anchor1 = -1,-1
-		anchor2 = -1,-1
-		background-color = none
-		saved-params = ""
 
 window "rpane"
 	elem "rpane"
@@ -1655,3 +1691,7 @@ window "statwindow"
 		anchor2 = 100,100
 		is-visible = false
 		saved-params = ""
+
+window "character_preview_map"
+	elem "character_preview_map"
+	type = BROWSER

@@ -3,12 +3,12 @@
 /mob/living/silicon/robot
 	var/step_count = 0
 
-/mob/living/silicon/robot/handle_footstep(var/turf/T)
+/mob/living/silicon/robot/handle_footstep(turf/T)
 	if(step_count++ % 2)
 		check_vorefootstep(I_RUN, T) //CHOMPstation edit: sloshing reagent belly walk system
 
 // Handle footstep sounds
-/mob/living/silicon/robot/handle_vorefootstep(var/m_intent, var/turf/T)
+/mob/living/silicon/robot/handle_vorefootstep(m_intent, turf/T)
 
 	if(!CONFIG_GET(number/vorefootstep_volume) || !T.vorefootstep_sounds || !T.vorefootstep_sounds.len || !vore_footstep_volume)
 		return

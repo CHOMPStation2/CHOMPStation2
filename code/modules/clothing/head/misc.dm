@@ -52,7 +52,7 @@
 	name = "magnetic 'pin'"
 	addblends = null
 	desc = "Finally, a hair pin even a Morpheus chassis can use."
-	matter = list(MAT_STEEL = 10)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.005))
 
 /obj/item/clothing/head/pin/flower
 	name = "red flower pin"
@@ -530,6 +530,13 @@
 	name = "red laser tag helmet"
 	desc = "Reputed to go faster."
 	icon_state = "redtag"
+	flags_inv = HIDEEARS|BLOCKHEADHAIR
+	body_parts_covered = HEAD|EYES
+
+/obj/item/clothing/head/omnitag
+	name = "omni laser tag helmet"
+	desc = "FIRST BLOOD!"
+	icon_state = "marine"
 	flags_inv = HIDEEARS|BLOCKHEADHAIR
 	body_parts_covered = HEAD|EYES
 

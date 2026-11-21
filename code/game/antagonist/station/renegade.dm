@@ -1,4 +1,4 @@
-var/datum/antagonist/renegade/renegades
+GLOBAL_DATUM(renegades, /datum/antagonist/renegade)
 
 /datum/antagonist/renegade
 	id = MODE_RENEGADE
@@ -64,9 +64,9 @@ var/datum/antagonist/renegade/renegades
 
 /datum/antagonist/renegade/New()
 	..()
-	renegades = src
+	GLOB.renegades = src
 
-/datum/antagonist/renegade/create_objectives(var/datum/mind/player)
+/datum/antagonist/renegade/create_objectives(datum/mind/player)
 
 	if(!..())
 		return
@@ -75,7 +75,7 @@ var/datum/antagonist/renegade/renegades
 	survive.owner = player
 	player.objectives |= survive
 
-/datum/antagonist/renegade/equip(var/mob/living/carbon/human/player)
+/datum/antagonist/renegade/equip(mob/living/carbon/human/player)
 
 	if(!..())
 		return
@@ -103,4 +103,4 @@ var/datum/antagonist/renegade/renegades
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(H.stat == 2 || !(H.client)) continue
 		if(is_special_character(H)) continue
-		renegades.add_antagonist(H.mind)
+		GLOB.renegades.add_antagonist(H.mind)

@@ -8,7 +8,7 @@
 	var/is64x32_override = FALSE
 	var/is_picked_up = FALSE
 
-/obj/item/gun/energy/laser/equipped()
+/obj/item/gun/energy/laser/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
@@ -18,7 +18,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/energy/laser/dropped(mob/living/user)
+/obj/item/gun/energy/laser/dropped(mob/user, equipping, slot)
 	. = ..()
 	if(!istype(loc,/mob/living))
 		is_picked_up = FALSE
@@ -60,7 +60,7 @@
 	firemodes = list(
 		list(mode_name="normal", fire_delay=8, projectile_type=/obj/item/projectile/beam/midlaser, charge_cost = 240),
 		list(mode_name="suppressive", fire_delay=5, projectile_type=/obj/item/projectile/beam/weaklaser, charge_cost = 60),
-		list(mode_name="burst", burst=3, fire_delay=null, move_delay=4, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, charge_cost = 200),
+		list(mode_name="burst", burst=3, fire_delay=null, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, charge_cost = 200),
 		)
 	force = 8
 	w_class = ITEMSIZE_HUGE		//Probably gonna make it a rifle sooner or later //CHOMP Edit, and so I did.
@@ -68,7 +68,6 @@
 	is64x32_override = TRUE
 	accept_cell_type = /obj/item/cell/vepr
 	cell_type = /obj/item/cell/vepr
-	origin_tech = list(TECH_POWER = 4, TECH_COMBAT = 6, TECH_MAGNET = 4, TECH_ILLEGAL = 4)
 
 /obj/item/cell/vepr
 	name = "VEPR cell"
@@ -81,7 +80,6 @@
 	charge_amount = 20
 	matter = list(MAT_METAL = 350, MAT_GLASS = 50)
 	preserve_item = 1
-	origin_tech = list(TECH_POWER = 6)
 
 /obj/item/gun/energy/tommylaser
 	name = "M-2421 'Tommy-Laser'"
@@ -93,12 +91,11 @@
 	charge_cost = 60 // 40 shots, lay down the firepower
 	projectile_type = /obj/item/projectile/beam/weaklaser
 	cell_type = /obj/item/cell/device/weapon
-	origin_tech = list(TECH_COMBAT = 5, TECH_MAGNET = 5, TECH_ILLEGAL = 3)
 
 	firemodes = list(
-		list(mode_name="single shot", burst = 1, fire_delay=4, move_delay=null, burst_accuracy = null, dispersion = null),
-		list(mode_name="three shot bursts", burst=3, fire_delay=10 , move_delay=4,    burst_accuracy=list(65,65,65), dispersion=list(1,1,1)),
-		list(mode_name="short bursts",	burst=5, fire_delay=10 ,move_delay=6, burst_accuracy = list(65,65,65,65,65), dispersion = list(4,4,4,4,4)),
+		list(mode_name="single shot", burst = 1, fire_delay=4, burst_accuracy = null, dispersion = null),
+		list(mode_name="three shot bursts", burst=3, fire_delay=10,    burst_accuracy=list(65,65,65), dispersion=list(1,1,1)),
+		list(mode_name="short bursts",	burst=5, fire_delay=10, burst_accuracy = list(65,65,65,65,65), dispersion = list(4,4,4,4,4)),
 		)
 
 /obj/item/gun/energy/vepr/plasma
@@ -116,4 +113,79 @@
 	var/is64x32_override = TRUE
 	accept_cell_type = /obj/item/cell/vepr
 	cell_type = /obj/item/cell/vepr
-	origin_tech = list(TECH_POWER = 4, TECH_COMBAT = 6, TECH_MAGNET = 4, TECH_ILLEGAL = 4)
+
+/obj/item/gun/energy/plasma/x16b
+	name = "X16b plasma carbine"
+	desc = "An advanced plasma caster, used by elite Black Hole fanatics. Light, powerful, and concealable. Uses it's own proprietary batteries."
+	icon_expected_width = 64
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	icon_state = "x16b"
+	fire_delay = 0.5
+	projectile_type = /obj/item/projectile/energy/plasma/vepr/blackhole
+	force = 8
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "x16b"
+	wielded_item_state = "x16b_w"
+	firemodes = list(
+		list(mode_name="single shot", burst = 1, fire_delay=1, burst_accuracy = null, dispersion = null),
+		list(mode_name="three shot bursts", burst=3, fire_delay=5,    burst_accuracy=list(65,65,65), dispersion=list(1,1,1)),
+		list(mode_name="short bursts",	burst=5, fire_delay=5, burst_accuracy = list(65,65,65,65,65), dispersion = list(4,4,4,4,4)),
+		)
+
+	w_class = ITEMSIZE_NORMAL
+	slot_flags = SLOT_BELT|SLOT_BACK
+	var/is64x32_override = TRUE
+	accept_cell_type = /obj/item/cell/x16b
+	cell_type = /obj/item/cell/x16b
+
+/obj/item/cell/x16b
+	name = "plasma canister"
+	desc = "An ominous silver plated cylinder. Quite weighty, and it makes an ominous sloshing sound when you shake it."
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	icon_state = "plasma"
+	item_state = "egg6"
+	w_class = ITEMSIZE_SMALL
+	maxcharge = 7200
+	charge = 7200
+	charge_amount = 20
+	matter = list(MAT_DURASTEEL = 350, MAT_GLASS = 50, MAT_PHORON = 1000)
+	preserve_item = 1
+
+/obj/item/gun/energy/laser/las91f
+	name = "Las91f retro laser rifle"
+	desc = "The Las91f is a rare example of modern illegal hellfire laser tech, approved only for use by government forces, and even then, only in rare cases. Uses it's own proprietary batteries."
+	icon_expected_width = 64
+	icon = 'modular_chomp/icons/blackhole/pre-gatteningx64.dmi'
+	icon_state = "las91f"
+	fire_delay = 1
+	projectile_type = /obj/item/projectile/beam/hellfire
+	force = 18
+	charge_cost = 80
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/blackhole/mobs_lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/blackhole/mobs_righthand.dmi',
+		)
+	item_state = "las91f"
+	wielded_item_state = "las91f_w"
+	firemodes = null
+	w_class = ITEMSIZE_LARGE
+	slot_flags = SLOT_BELT|SLOT_BACK
+	is64x32_override = TRUE
+	accept_cell_type = /obj/item/cell/las91f
+	cell_type = /obj/item/cell/las91f
+
+/obj/item/cell/las91f
+	name = "retro laser canister"
+	desc = "An old school retro laser battery. Heavy and cumbersome, these are used by the illegal 'hellfire' lasers of days past. Or by select Government forces."
+	icon = 'modular_chomp/icons/blackhole/pre-gattening-misc.dmi'
+	icon_state = "retrolas"
+	item_state = "egg6"
+	w_class = ITEMSIZE_NORMAL
+	maxcharge = 2000
+	charge = 2000
+	charge_amount = 20
+	matter = list(MAT_DURASTEEL = 350, MAT_GLASS = 50, MAT_URANIUM = 1000)
+	preserve_item = 1

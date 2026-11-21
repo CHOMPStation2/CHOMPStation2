@@ -1,7 +1,7 @@
 /turf/simulated/floor/plating/snow/plating
 	name = "frozen plating"
 	icon_state = "snowyplating"
-	icon = 'icons/turf/snow_new.dmi'
+	icon = 'icons/turf/snow.dmi'
 /turf/simulated/floor/snow
 	name = "heavy snow"
 	icon_state = "snow"

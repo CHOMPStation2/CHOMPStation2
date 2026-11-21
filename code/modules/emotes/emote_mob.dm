@@ -4,16 +4,16 @@
 	var/last_emote_summary
 
 /mob/proc/get_available_emotes()
-	return global._default_mob_emotes.Copy()
+	return GLOB.default_mob_emotes.Copy()
 
-/mob/proc/can_emote(var/emote_type)
+/mob/proc/can_emote(emote_type)
 	return (stat == CONSCIOUS)
 
 #define EMOTE_REFRESH_SPAM_COOLDOWN (5 SECONDS)
-/mob/living/can_emote(var/emote_type)
+/mob/living/can_emote(emote_type)
 	return (..() && !(silent && emote_type == AUDIBLE_MESSAGE))
 
-/mob/proc/emote(var/act, var/m_type, var/message)
+/mob/proc/emote(act, m_type, message)
 	set waitfor = FALSE
 	// s-s-snowflake
 	if(src.stat == DEAD && act != "deathgasp")
@@ -40,7 +40,7 @@
 				var/list/usable_emotes = list()
 				next_emote_refresh = world.time + EMOTE_REFRESH_SPAM_COOLDOWN
 				for(var/emote in get_available_emotes())
-					var/decl/emote/emote_datum = decls_repository.get_decl(emote)
+					var/datum/decl/emote/emote_datum = GLOB.decls_repository.get_decl(emote)
 					if(emote_datum.mob_can_use(src))
 						usable_emotes[emote_datum.key] = emote_datum
 				last_emote_summary = english_list(sortAssoc(usable_emotes))
@@ -80,7 +80,7 @@
 		return nme(message)
 	//VOREStation Add End
 
-	var/decl/emote/use_emote = get_emote_by_key(act)
+	var/datum/decl/emote/use_emote = get_emote_by_key(act)
 	if(!istype(use_emote))
 		to_chat(src, span_warning("Unknown emote '[act]'. Type " + span_bold("say *help") + " for a list of usable emotes. ([act] [message])")) // Add full message in the event you used * instead of ! or something like that
 		return
@@ -92,12 +92,12 @@
 	if(m_type != use_emote.message_type && use_emote.conscious && stat != CONSCIOUS)
 		return
 
+	next_emote = world.time + use_emote.emote_delay
 	if(use_emote.message_type == AUDIBLE_MESSAGE && is_muzzled())
 		var/muffle_message = use_emote.emote_message_muffled || "makes a muffled sound."
 		audible_message(span_bold("\The [src]") + " [muffle_message]", runemessage = "[muffle_message]")
 		return
 
-	next_emote = world.time + use_emote.emote_delay
 	use_emote.do_emote(src, message)
 	for (var/obj/item/implant/I in src)
 		if (I.implanted)
@@ -105,7 +105,7 @@
 
 #undef EMOTE_REFRESH_SPAM_COOLDOWN
 
-/mob/proc/format_emote(var/emoter = null, var/message = null)
+/mob/proc/format_emote(emoter = null, message = null)
 	var/pretext
 	var/subtext
 	var/nametext
@@ -161,7 +161,7 @@
 	return list("pretext" = pretext, "nametext" = nametext, "subtext" = subtext)
 
 // Specific mob type exceptions below.
-/mob/living/silicon/ai/emote(var/act, var/type, var/message)
+/mob/living/silicon/ai/emote(act, type, message)
 	var/obj/machinery/hologram/holopad/T = src.holo
 	if(T && T.masters[src]) //Is the AI using a holopad?
 		src.holopad_emote(message)

@@ -17,6 +17,9 @@
 		capsuleowner = user
 
 /obj/item/buttonofnormal/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(colorindex)
 		nonrandom()
 	addtimer(CALLBACK(src, PROC_REF(do_size_effect), capsuleowner), 10, TIMER_DELETE_ME)
@@ -79,6 +82,9 @@
 	..()
 
 /obj/item/daredevice/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/mob/living/capsuleowner = user
 	playsound(src, 'sound/effects/splat.ogg', 30, 1)
 	var/item = pick(winitems)
@@ -132,7 +138,7 @@
 					"#0F0F0F",
 					)
 
-/obj/item/projectile/beam/sizelaser/chaos/on_hit(var/atom/target)
+/obj/item/projectile/beam/sizelaser/chaos/on_hit(atom/target)
 	light_color = pick(chaos_colors)
 	var/chaos = rand(25,200)
 	var/mob/living/M = target

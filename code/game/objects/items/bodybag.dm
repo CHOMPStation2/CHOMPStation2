@@ -7,10 +7,39 @@
 	icon_state = "bodybag_folded"
 	w_class = ITEMSIZE_SMALL
 
+	//Used for cryogenic bodybags
+	var/obj/item/reagent_containers/syringe/syringe
+	var/cryogenic = FALSE
+	var/robotic = FALSE
+	var/mass_grave = FALSE //CHOMPEdit
+
 /obj/item/bodybag/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(mass_grave) //CHOMPedit - TODO, upport this.
+		return FALSE //CHOMPedit - TODO, upport this.
+
+	if(cryogenic)
+		var/obj/structure/closet/body_bag/cryobag/R = new /obj/structure/closet/body_bag/cryobag(user.loc)
+		R.add_fingerprint(user)
+		if(syringe)
+			R.syringe = syringe
+			syringe = null
+		qdel(src)
+		return
+	if(robotic)
+		var/obj/structure/closet/body_bag/cryobag/robobag/R = new /obj/structure/closet/body_bag/cryobag/robobag(user.loc)
+		R.add_fingerprint(user)
+		if(syringe)
+			R.syringe = syringe
+			syringe = null
+		qdel(src)
+		return
 	var/obj/structure/closet/body_bag/R = new /obj/structure/closet/body_bag(user.loc)
 	R.add_fingerprint(user)
 	qdel(src)
+	return
 
 
 /obj/item/storage/box/bodybags
@@ -38,8 +67,12 @@
 	desc = "A large folded bag designed for the storage and transportation of cadavers."
 	icon = 'icons/obj/closets/bodybag_large.dmi'
 	w_class = ITEMSIZE_LARGE
+	mass_grave = TRUE
 
 /obj/item/bodybag/large/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/obj/structure/closet/body_bag/large/R = new /obj/structure/closet/body_bag/large(user.loc)
 	R.add_fingerprint(user)
 	qdel(src)
@@ -52,7 +85,7 @@
 	item_path = /obj/item/bodybag/large
 //End of Yawn add
 
-/obj/structure/closet/body_bag/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/structure/closet/body_bag/attackby(obj/item/W as obj, mob/user as mob)
 	if (istype(W, /obj/item/pen))
 		var/t = tgui_input_text(user, "What would you like the label to be?", text("[]", src.name), null, MAX_NAME_LEN	)
 		if (user.get_active_hand() != W)
@@ -76,7 +109,7 @@
 		cut_overlays()
 		return
 
-/obj/structure/closet/body_bag/store_mobs(var/stored_units)
+/obj/structure/closet/body_bag/store_mobs(stored_units)
 	contains_body = ..()
 	return contains_body
 
@@ -110,7 +143,7 @@
 		occupants += H
 	return occupants
 
-/obj/structure/closet/body_bag/proc/update(var/broadcast=0)
+/obj/structure/closet/body_bag/proc/update(broadcast=0)
 	if(istype(loc, /obj/structure/morgue))
 		var/obj/structure/morgue/M = loc
 		M.update(broadcast)
@@ -133,16 +166,7 @@
 	icon = 'icons/obj/closets/cryobag.dmi'
 	icon_state = "bodybag_folded"
 	item_state = "bodybag_cryo_folded"
-	origin_tech = list(TECH_BIO = 4)
-	var/obj/item/reagent_containers/syringe/syringe
-
-/obj/item/bodybag/cryobag/attack_self(mob/user)
-	var/obj/structure/closet/body_bag/cryobag/R = new /obj/structure/closet/body_bag/cryobag(user.loc)
-	R.add_fingerprint(user)
-	if(syringe)
-		R.syringe = syringe
-		syringe = null
-	qdel(src)
+	cryogenic = TRUE
 
 /obj/structure/closet/body_bag/cryobag
 	name = "stasis bag"
@@ -197,6 +221,7 @@
 		syringe = null
 
 /obj/structure/closet/body_bag/cryobag/Entered(atom/movable/AM)
+	ADD_TRAIT(AM, TRAIT_STASIS, REF(src))
 	if(ishuman(AM))
 		var/mob/living/carbon/human/H = AM
 		H.Stasis(stasis_level)
@@ -211,6 +236,7 @@
 	..()
 
 /obj/structure/closet/body_bag/cryobag/Exited(atom/movable/AM)
+	REMOVE_TRAIT(AM, TRAIT_STASIS, REF(src))
 	if(ishuman(AM))
 		var/mob/living/carbon/human/H = AM
 		H.Stasis(0)
@@ -227,7 +253,7 @@
 		return tank.air_contents
 	..()
 
-/obj/structure/closet/body_bag/cryobag/proc/inject_occupant(var/mob/living/carbon/human/H)
+/obj/structure/closet/body_bag/cryobag/proc/inject_occupant(mob/living/carbon/human/H)
 	if(!syringe)
 		return
 

@@ -19,8 +19,8 @@
 	var/dos_capacity = 500		// Amount of DoS "packets" in buffer required to crash the relay
 	var/dos_dissipate = 1		// Amount of DoS "packets" dissipated over time.
 
-	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
-	var/noisy = TRUE  // CHOMPStation Add: Hummy noises
+	var/datum/looping_sound/tcomms/soundloop
+	var/noisy = TRUE
 
 
 // TODO: Implement more logic here. For now it's only a placeholder.
@@ -37,12 +37,12 @@
 	if(operable())
 		icon_state = initial(icon_state)
 		if(!noisy)
-			soundloop.start() // CHOMPStation Add: Hummy noises
-			noisy = TRUE // CHOMPStation Add: Hummy noises
+			soundloop.start()
+			noisy = TRUE
 	else
 		icon_state = "[initial(icon_state)]_off"
-		soundloop.stop() // CHOMPStation Add: Hummy noises
-		noisy = FALSE // CHOMPStation Add: Hummy noises
+		soundloop.stop()
+		noisy = FALSE
 
 /obj/machinery/ntnet_relay/process()
 	if(operable())
@@ -57,12 +57,12 @@
 	if((dos_overload > dos_capacity) && !dos_failure)
 		dos_failure = 1
 		update_icon()
-		ntnet_global.add_log("Quantum relay switched from normal operation mode to overload recovery mode.")
+		GLOB.ntnet_global.add_log("Quantum relay switched from normal operation mode to overload recovery mode.")
 	// If the DoS buffer reaches 0 again, restart.
 	if((dos_overload == 0) && dos_failure)
 		dos_failure = 0
 		update_icon()
-		ntnet_global.add_log("Quantum relay switched from overload recovery mode to normal operation mode.")
+		GLOB.ntnet_global.add_log("Quantum relay switched from overload recovery mode to normal operation mode.")
 	..()
 
 /obj/machinery/ntnet_relay/tgui_interact(mob/user, datum/tgui/ui)
@@ -79,7 +79,7 @@
 	data["dos_crashed"] = dos_failure
 	return data
 
-/obj/machinery/ntnet_relay/attack_hand(var/mob/living/user)
+/obj/machinery/ntnet_relay/attack_hand(mob/living/user)
 	tgui_interact(user)
 
 /obj/machinery/ntnet_relay/tgui_act(action, params)
@@ -91,16 +91,16 @@
 			dos_overload = 0
 			dos_failure = 0
 			update_icon()
-			ntnet_global.add_log("Quantum relay manually restarted from overload recovery mode to normal operation mode.")
+			GLOB.ntnet_global.add_log("Quantum relay manually restarted from overload recovery mode to normal operation mode.")
 			. = TRUE
 		if("toggle")
 			enabled = !enabled
-			ntnet_global.add_log("Quantum relay manually [enabled ? "enabled" : "disabled"].")
+			GLOB.ntnet_global.add_log("Quantum relay manually [enabled ? "enabled" : "disabled"].")
 			update_icon()
 			. = TRUE
 		if("purge")
-			ntnet_global.banned_nids.Cut()
-			ntnet_global.add_log("Manual override: Network blacklist cleared.")
+			GLOB.ntnet_global.banned_nids.Cut()
+			GLOB.ntnet_global.add_log("Manual override: Network blacklist cleared.")
 			. = TRUE
 
 /obj/machinery/ntnet_relay/Initialize(mapload)
@@ -110,11 +110,10 @@
 
 /obj/machinery/ntnet_relay/Initialize(mapload)
 	. = ..()
-	if(ntnet_global)
-		ntnet_global.relays.Add(src)
-		NTNet = ntnet_global
-		ntnet_global.add_log("New quantum relay activated. Current amount of linked relays: [NTNet.relays.len]")
-	// CHOMPAdd: PDA Multicaster Server humming
+	if(GLOB.ntnet_global)
+		GLOB.ntnet_global.relays.Add(src)
+		NTNet = GLOB.ntnet_global
+		GLOB.ntnet_global.add_log("New quantum relay activated. Current amount of linked relays: [NTNet.relays.len]")
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
 		if(prob(40))
@@ -127,12 +126,11 @@
 			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
 			soundloop.mid_length = 30
 	soundloop.start() // Have to do this here bc it starts on
-	// CHOMPAdd End
 
 /obj/machinery/ntnet_relay/Destroy()
-	if(ntnet_global)
-		ntnet_global.relays.Remove(src)
-		ntnet_global.add_log("Quantum relay connection severed. Current amount of linked relays: [NTNet.relays.len]")
+	if(GLOB.ntnet_global)
+		GLOB.ntnet_global.relays.Remove(src)
+		GLOB.ntnet_global.add_log("Quantum relay connection severed. Current amount of linked relays: [NTNet.relays.len]")
 		NTNet = null
 	for(var/datum/computer_file/program/ntnet_dos/D in dos_sources)
 		D.target = null
@@ -140,7 +138,7 @@
 	QDEL_NULL(soundloop)
 	. = ..()
 
-/obj/machinery/ntnet_relay/attackby(var/obj/item/W as obj, var/mob/user as mob)
+/obj/machinery/ntnet_relay/attackby(obj/item/W as obj, mob/user as mob)
 	if(default_deconstruction_screwdriver(user, W))
 		return
 	if(default_deconstruction_crowbar(user, W))

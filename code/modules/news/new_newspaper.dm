@@ -19,7 +19,10 @@
 	drop_sound = 'sound/items/drop/wrapper.ogg'
 	pickup_sound = 'sound/items/pickup/wrapper.ogg'
 
-obj/item/newspaper/attack_self(mob/user)
+/obj/item/newspaper/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_user = user
 		var/dat
@@ -64,7 +67,7 @@ obj/item/newspaper/attack_self(mob/user)
 							i++
 							dat+="-[MESSAGE.body] <BR>"
 							if(MESSAGE.img)
-								user << browse_rsc(MESSAGE.img, "tmp_photo[i].png")
+								send_rsc(user, MESSAGE.img, "tmp_photo[i].png")
 								dat+="<img src='tmp_photo[i].png' width = '180'><BR>"
 							dat+=span_small("\[[MESSAGE.message_type] by " + span_maroon("[MESSAGE.author]") + "\]") + "<BR><BR>"
 						dat+="</ul>"
@@ -80,7 +83,7 @@ obj/item/newspaper/attack_self(mob/user)
 					dat+=span_bold("Description") + ": [important_message.body]<BR>"
 					dat+=span_bold("Photo:") + ": "
 					if(important_message.img)
-						user << browse_rsc(important_message.img, "tmp_photow.png")
+						send_rsc(user, important_message.img, "tmp_photow.png")
 						dat+="<BR><img src='tmp_photow.png' width = '180'>"
 					else
 						dat+="None"

@@ -1,9 +1,9 @@
 #define ALL_SPELLS "All"
 
-var/list/all_technomancer_spells = subtypesof(/datum/technomancer/spell)
-var/list/all_technomancer_equipment = subtypesof(/datum/technomancer/equipment)
-var/list/all_technomancer_consumables = subtypesof(/datum/technomancer/consumable)
-var/list/all_technomancer_assistance = subtypesof(/datum/technomancer/assistance)
+GLOBAL_LIST_INIT(all_technomancer_spells, subtypesof(/datum/technomancer/spell))
+GLOBAL_LIST_INIT(all_technomancer_equipment, subtypesof(/datum/technomancer/equipment))
+GLOBAL_LIST_INIT(all_technomancer_consumables, subtypesof(/datum/technomancer/consumable))
+GLOBAL_LIST_INIT(all_technomancer_assistance, subtypesof(/datum/technomancer/assistance))
 
 /datum/technomancer
 	var/name = "technomancer thing"
@@ -62,8 +62,8 @@ var/list/all_technomancer_assistance = subtypesof(/datum/technomancer/assistance
 // Proc: bind_to_owner()
 // Parameters: 1 (new_owner - mob that the book is trying to bind to)
 // Description: Links the catalog to hopefully the technomancer, so that only they can access it.
-/obj/item/technomancer_catalog/proc/bind_to_owner(var/mob/living/carbon/human/new_owner)
-	if(!owner && (technomancers.is_antagonist(new_owner.mind) || universal)) //VOREStation Edit - Universal catalogs
+/obj/item/technomancer_catalog/proc/bind_to_owner(mob/living/carbon/human/new_owner)
+	if(!owner && (GLOB.technomancers.is_antagonist(new_owner.mind) || universal)) //VOREStation Edit - Universal catalogs
 		owner = new_owner
 
 // Proc: New()
@@ -78,16 +78,16 @@ var/list/all_technomancer_assistance = subtypesof(/datum/technomancer/assistance
 // Description: Instantiates all the catalog datums for everything that can be bought.
 /obj/item/technomancer_catalog/proc/set_up()
 	if(!spell_instances.len)
-		for(var/S in all_technomancer_spells)
+		for(var/S in GLOB.all_technomancer_spells)
 			spell_instances += new S()
 	if(!equipment_instances.len)
-		for(var/E in all_technomancer_equipment)
+		for(var/E in GLOB.all_technomancer_equipment)
 			equipment_instances += new E()
 	if(!consumable_instances.len)
-		for(var/C in all_technomancer_consumables)
+		for(var/C in GLOB.all_technomancer_consumables)
 			consumable_instances += new C()
 	if(!assistance_instances.len)
-		for(var/A in all_technomancer_assistance)
+		for(var/A in GLOB.all_technomancer_assistance)
 			assistance_instances += new A()
 
 /obj/item/technomancer_catalog/apprentice/set_up()
@@ -99,7 +99,7 @@ var/list/all_technomancer_assistance = subtypesof(/datum/technomancer/assistance
 // Parameters: 1 (category - the category link to display)
 // Description: Shows an href link to go to a spell subcategory if the category is not already selected, otherwise is bold, to reduce
 // code duplicating.
-/obj/item/technomancer_catalog/proc/show_categories(var/category)
+/obj/item/technomancer_catalog/proc/show_categories(category)
 	if(category)
 		if(spell_tab != category)
 			return "<a href='byond://?src=\ref[src];spell_category=[category]'>[category]</a>"
@@ -110,11 +110,14 @@ var/list/all_technomancer_assistance = subtypesof(/datum/technomancer/assistance
 // Parameters: 1 (user - the mob clicking on the catalog)
 // Description: Shows an HTML window, to buy equipment and spells, if the user is the legitimate owner.  Otherwise it cannot be used.
 /obj/item/technomancer_catalog/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!user)
-		return 0
+		return
 	if(owner && user != owner)
 		to_chat(user, span_danger("\The [src] knows that you're not the original owner, and has locked you out of it!"))
-		return 0
+		return
 	else if(!owner)
 		bind_to_owner(user)
 
@@ -330,7 +333,7 @@ var/list/all_technomancer_assistance = subtypesof(/datum/technomancer/assistance
 					budget -= desired_object.cost
 					to_chat(H, span_notice("You have just bought \a [desired_object.name]."))
 					var/obj/O = new desired_object.obj_path(get_turf(H))
-					technomancer_belongings.Add(O) // Used for the Track spell.
+					GLOB.technomancer_belongings.Add(O) // Used for the Track spell.
 
 				else //Can't afford.
 					to_chat(H, span_danger("You can't afford that!"))
@@ -354,7 +357,7 @@ var/list/all_technomancer_assistance = subtypesof(/datum/technomancer/assistance
 							break
 		attack_self(H)
 
-/obj/item/technomancer_catalog/attackby(var/atom/movable/AM, var/mob/user)
+/obj/item/technomancer_catalog/attackby(atom/movable/AM, mob/user)
 	var/turf/T = get_turf(user)
 	if(T.z in using_map.player_levels)
 		to_chat(user, span_danger("You can only refund at your base, it's too late now!"))

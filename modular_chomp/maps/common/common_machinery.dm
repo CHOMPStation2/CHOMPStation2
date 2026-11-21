@@ -19,7 +19,7 @@
 	icon = 'icons/mob/screen1.dmi' //VS Edit
 	icon_state = "centermarker" //VS Edit
 
-/obj/effect/step_trigger/tramblock/Trigger(var/atom/movable/A)
+/obj/effect/step_trigger/tramblock/Trigger(atom/movable/A)
 	if(istype(A, /mob/living/carbon/human))
 		to_chat(A, span_notice("OOC Notice: You have an itch to explore, it seems! \
 		This tunnel does not go any further past the doors, thanks to game limitations and stuff in the way! \

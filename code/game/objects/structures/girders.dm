@@ -18,8 +18,9 @@
 	var/upgrading = FALSE
 	var/applies_material_colour = 1
 	var/wall_type = /turf/simulated/wall
+	rad_insulation = RAD_VERY_LIGHT_INSULATION
 
-/obj/structure/girder/Initialize(mapload, var/material_key)
+/obj/structure/girder/Initialize(mapload, material_key)
 	. = ..()
 	if(!material_key)
 		material_key = default_material
@@ -42,13 +43,20 @@
 /obj/structure/girder/proc/radiate()
 	var/total_radiation = girder_material.radioactivity + (reinf_material ? reinf_material.radioactivity / 2 : 0)
 	if(!total_radiation)
-		return
+		return FALSE
 
-	SSradiation.radiate(src, total_radiation)
+	radiation_pulse(
+		src,
+		max_range = 5,
+		threshold = RAD_MEDIUM_INSULATION,
+		chance = URANIUM_IRRADIATION_CHANCE,
+		minimum_exposure_time = URANIUM_RADIATION_MINIMUM_EXPOSURE_TIME,
+		strength = total_radiation
+	)
 	return total_radiation
 
 
-/obj/structure/girder/proc/set_material(var/datum/material/new_material)
+/obj/structure/girder/proc/set_material(datum/material/new_material)
 	girder_material = new_material
 	name = "[girder_material.display_name] [initial(name)]"
 	max_health = round(girder_material.integrity) //Should be 150 with default integrity (steel). Weaker than ye-olden Girders now.
@@ -82,12 +90,13 @@
 
 /obj/structure/girder/proc/displace()
 	name = "displaced [girder_material.display_name] [initial(name)]"
+	desc = "The bolted frame for a wall. Without the wall, bit."
 	icon_state = "displaced"
 	anchored = FALSE
 	health = (displaced_health - round(current_damage / 4))
 	cover = 25
 
-/obj/structure/girder/attack_generic(var/mob/user, var/damage, var/attack_message = "smashes apart")
+/obj/structure/girder/attack_generic(mob/user, damage, attack_message = "smashes apart")
 	if(damage < STRUCTURE_MIN_DAMAGE_THRESHOLD)
 		return 0
 	user.do_attack_animation(src)
@@ -95,7 +104,7 @@
 	spawn(1) dismantle()
 	return 1
 
-/obj/structure/girder/bullet_act(var/obj/item/projectile/Proj)
+/obj/structure/girder/bullet_act(obj/item/projectile/Proj)
 	//Girders only provide partial cover. There's a chance that the projectiles will just pass through. (unless you are trying to shoot the girder)
 	if(Proj.original != src && !prob(cover))
 		return PROJECTILE_CONTINUE //pass through
@@ -221,7 +230,7 @@
 	else
 		return ..()
 
-/obj/structure/girder/take_damage(var/damage)
+/obj/structure/girder/take_damage(damage)
 	health -= damage
 	if(health <= 0)
 		dismantle()
@@ -238,7 +247,7 @@
 		to_chat(user, span_notice("There isn't enough material here to construct a wall."))
 		return FALSE
 
-	var/datum/material/M = name_to_material[S.default_type]
+	var/datum/material/M = GLOB.name_to_material[S.default_type]
 	if(!istype(M))
 		return FALSE
 
@@ -279,7 +288,7 @@
 		to_chat(user, span_notice("There isn't enough material here to reinforce the girder."))
 		return 0
 
-	var/datum/material/M = name_to_material[S.default_type]
+	var/datum/material/M = GLOB.name_to_material[S.default_type]
 	if(!istype(M) || M.integrity < 50)
 		to_chat(user, "You cannot reinforce \the [src] with that; it is too soft.")
 		return 0
@@ -413,7 +422,7 @@
 			var/turf/simulated/wall/new_T = get_turf(src) // Ref to the wall we just built.
 			// Apparently set_material(...) for walls requires refs to the material singletons and not strings.
 			// This is different from how other material objects with their own set_material(...) do it, but whatever.
-			var/datum/material/M = name_to_material[the_rcd.material_to_use]
+			var/datum/material/M = GLOB.name_to_material[the_rcd.material_to_use]
 			new_T.set_material(M, the_rcd.make_rwalls ? M : null, girder_material)
 			new_T.add_hiddenprint(user)
 			qdel(src)

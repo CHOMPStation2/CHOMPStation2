@@ -38,9 +38,9 @@
 	QDEL_NULL(contained)
 	return ..()
 
-/obj/machinery/oxygen_pump/MouseDrop(var/mob/living/carbon/human/target, src_location, over_location)
+/obj/machinery/oxygen_pump/MouseDrop(mob/living/carbon/human/target, src_location, over_location)
 	var/mob/living/user = usr
-	if(!istype(user) || !istype(target))
+	if(!istype(user) || !istype(target) || user.is_incorporeal())
 		return ..()
 
 	if(CanMouseDrop(target, user))
@@ -55,6 +55,8 @@
 		src.add_fingerprint(user)
 
 /obj/machinery/oxygen_pump/attack_hand(mob/user as mob)
+	if(user.is_incorporeal())
+		return
 	if((stat & MAINT) && tank)
 		user.visible_message(span_infoplain(span_bold("\The [user]") + " removes \the [tank] from \the [src]."), span_notice("You remove \the [tank] from \the [src]."))
 		user.put_in_hands(tank)
@@ -80,7 +82,7 @@
 /obj/machinery/oxygen_pump/attack_ai(mob/user as mob)
 	tgui_interact(user)
 
-/obj/machinery/oxygen_pump/proc/attach_mask(var/mob/living/carbon/C)
+/obj/machinery/oxygen_pump/proc/attach_mask(mob/living/carbon/C)
 	if(C && istype(C))
 		contained.forceMove(get_turf(C))
 		C.equip_to_slot(contained, slot_wear_mask)
@@ -94,7 +96,7 @@
 				breather.internals.icon_state = "internal1"
 		update_use_power(USE_POWER_ACTIVE)
 
-/obj/machinery/oxygen_pump/proc/can_apply_to_target(var/mob/living/carbon/human/target, mob/user as mob)
+/obj/machinery/oxygen_pump/proc/can_apply_to_target(mob/living/carbon/human/target, mob/user as mob)
 	if(!user)
 		user = target
 	// Check target validity
@@ -130,6 +132,8 @@
 	return 1
 
 /obj/machinery/oxygen_pump/attackby(obj/item/W as obj, mob/user as mob)
+	if(user.is_incorporeal())
+		return
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		stat ^= MAINT
 		user.visible_message(span_notice("\The [user] [(stat & MAINT) ? "opens" : "closes"] \the [src]."), span_notice("You [(stat & MAINT) ? "open" : "close"] \the [src]."))
@@ -147,7 +151,7 @@
 	if(istype(W, /obj/item/tank) && !stat)
 		to_chat(user, span_warning("Please open the maintenance hatch first."))
 
-/obj/machinery/oxygen_pump/examine(var/mob/user)
+/obj/machinery/oxygen_pump/examine(mob/user)
 	. = ..()
 	if(tank)
 		. += "The meter shows [round(tank.air_contents.return_pressure())] kPa."
@@ -241,7 +245,7 @@
 	mask_type = /obj/item/clothing/mask/breath/anesthetic
 
 // CHOMPStation Add: Cozy Music
-/obj/machinery/oxygen_pump/anesthetic/attach_mask(var/mob/living/carbon/C)
+/obj/machinery/oxygen_pump/anesthetic/attach_mask(mob/living/carbon/C)
 	if(C && istype(C))
 		contained.forceMove(get_turf(C))
 		C.equip_to_slot(contained, slot_wear_mask)
@@ -294,7 +298,7 @@
 	mask_type = /obj/item/clothing/mask/breath/anesthetic
 
 // CHOMPStation Add: Cozy Music
-/obj/machinery/oxygen_pump/mobile/anesthetic/attach_mask(var/mob/living/carbon/C)
+/obj/machinery/oxygen_pump/mobile/anesthetic/attach_mask(mob/living/carbon/C)
 	if(C && istype(C))
 		contained.forceMove(get_turf(C))
 		C.equip_to_slot(contained, slot_wear_mask)

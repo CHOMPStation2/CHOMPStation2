@@ -99,9 +99,32 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "ax" = (
-/obj/structure/closet/crate/trashcart{
-	starts_with = list(/obj/item/stock_parts/capacitor/omni = 5, /obj/item/stock_parts/manipulator/omni = 5, /obj/item/stock_parts/matter_bin/omni = 5, /obj/item/stock_parts/micro_laser/omni = 5, /obj/item/stock_parts/scanning_module/omni = 5)
-	},
+/obj/structure/closet/crate/trashcart,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/manipulator/omni,
+/obj/item/stock_parts/manipulator/omni,
+/obj/item/stock_parts/manipulator/omni,
+/obj/item/stock_parts/manipulator/omni,
+/obj/item/stock_parts/manipulator/omni,
+/obj/item/stock_parts/matter_bin/omni,
+/obj/item/stock_parts/matter_bin/omni,
+/obj/item/stock_parts/matter_bin/omni,
+/obj/item/stock_parts/matter_bin/omni,
+/obj/item/stock_parts/matter_bin/omni,
+/obj/item/stock_parts/micro_laser/omni,
+/obj/item/stock_parts/micro_laser/omni,
+/obj/item/stock_parts/micro_laser/omni,
+/obj/item/stock_parts/micro_laser/omni,
+/obj/item/stock_parts/micro_laser/omni,
+/obj/item/stock_parts/scanning_module/omni,
+/obj/item/stock_parts/scanning_module/omni,
+/obj/item/stock_parts/scanning_module/omni,
+/obj/item/stock_parts/scanning_module/omni,
+/obj/item/stock_parts/scanning_module/omni,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "ay" = (

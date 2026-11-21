@@ -1,4 +1,4 @@
-var/datum/antagonist/wizard/wizards
+GLOBAL_DATUM(wizards, /datum/antagonist/wizard)
 
 /datum/antagonist/wizard
 	id = MODE_WIZARD
@@ -19,9 +19,9 @@ var/datum/antagonist/wizard/wizards
 
 /datum/antagonist/wizard/New()
 	..()
-	wizards = src
+	GLOB.wizards = src
 
-/datum/antagonist/wizard/create_objectives(var/datum/mind/wizard)
+/datum/antagonist/wizard/create_objectives(datum/mind/wizard)
 
 	if(!..())
 		return
@@ -64,13 +64,13 @@ var/datum/antagonist/wizard/wizards
 		wizard.objectives |= hijack_objective
 	return
 
-/datum/antagonist/wizard/update_antag_mob(var/datum/mind/wizard)
+/datum/antagonist/wizard/update_antag_mob(datum/mind/wizard)
 	..()
 	wizard.store_memory(span_bold("Remember:") + " do not forget to prepare your spells.")
 	wizard.current.real_name = "[pick(GLOB.wizard_first)] [pick(GLOB.wizard_second)]"
 	wizard.current.name = wizard.current.real_name
 
-/datum/antagonist/wizard/equip(var/mob/living/carbon/human/wizard_mob)
+/datum/antagonist/wizard/equip(mob/living/carbon/human/wizard_mob)
 
 	if(!..())
 		return 0
@@ -108,14 +108,18 @@ var/datum/antagonist/wizard/wizards
 
 //To batch-remove wizard spells. Linked to mind.dm.
 /mob/proc/spellremove()
-	for(var/spell/spell_to_remove in src.spell_list)
+	for(var/datum/spell/spell_to_remove in src.spell_list)
 		remove_spell(spell_to_remove)
 
 /obj/item/clothing
 	var/wizard_garb = 0
+	///Var for attack_self chain
+	var/special_handling = FALSE
+	///Var for attack_self chain as well
+	var/helmet_handling = FALSE
 
 // Does this clothing slot count as wizard garb? (Combines a few checks)
-/proc/is_wiz_garb(var/obj/item/clothing/C)
+/proc/is_wiz_garb(obj/item/clothing/C)
 	return C && C.wizard_garb
 
 /*Checks if the wizard is wearing the proper attire.

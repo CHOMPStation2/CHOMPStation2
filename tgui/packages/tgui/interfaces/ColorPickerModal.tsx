@@ -4,8 +4,18 @@
  * @license MIT
  */
 
+import { colorList } from 'common/colorpicker';
+import React, {
+  useCallback,
+  useEffect,
+  useEffectEvent,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
 import {
-  colorList,
   type HsvaColor,
   hexToHsva,
   hsvaToHex,
@@ -13,24 +23,16 @@ import {
   hsvaToRgba,
   rgbaToHsva,
   validHex,
-} from 'common/colorpicker';
-import React, {
-  useCallback,
-  useEffect,
-  useEffectEvent,
-  useMemo,
-  useState,
-} from 'react';
-import { useBackend } from 'tgui/backend';
-import { Pointer } from 'tgui/components';
-import { type Interaction, Interactive } from 'tgui/components/Interactive';
-import { Window } from 'tgui/layouts';
+} from 'tgui-core/color';
 import {
   Autofocus,
   Box,
   Button,
   Input,
+  type Interaction,
+  Interactive,
   NumberInput,
+  Pointer,
   Section,
   Stack,
   Tooltip,
@@ -40,7 +42,7 @@ import { classes } from 'tgui-core/react';
 import { InputButtons } from './common/InputButtons';
 import { Loader } from './common/Loader';
 
-interface ColorPickerData {
+type ColorPickerData = {
   autofocus: boolean;
   buttons: string[];
   message: string;
@@ -50,7 +52,7 @@ interface ColorPickerData {
   title: string;
   default_color: string;
   presets?: string;
-}
+};
 
 type ColorPickerModalProps = Record<never, never>;
 
@@ -94,7 +96,11 @@ export const ColorPickerModal: React.FC<ColorPickerModalProps> = () => {
   });
 
   useEffect(() => {
-    syncColorPreset();
+    const timeoutId = setTimeout(() => {
+      syncColorPreset();
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
   }, [selectedColor]);
 
   if (!title) {
@@ -168,7 +174,7 @@ export const ColorPickerModal: React.FC<ColorPickerModalProps> = () => {
   );
 };
 
-interface ColorPresetsProps {
+type ColorPresetsProps = {
   setColor: (color: HsvaColor) => void;
   setShowPresets: (show: boolean) => void;
   presetList?: string[][];
@@ -176,7 +182,7 @@ interface ColorPresetsProps {
   onSelectedPreset: React.Dispatch<React.SetStateAction<number | undefined>>;
   allowEditing?: boolean;
   onAllowEditing?: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
 const ColorPresets: React.FC<ColorPresetsProps> = React.memo(
   ({
@@ -254,7 +260,7 @@ const ColorPresets: React.FC<ColorPresetsProps> = React.memo(
             ))}
           </Stack.Item>
         </Stack>
-        {!!onAllowEditing && (
+        {!!onAllowEditing && presetList?.length && (
           <Button
             color={allowEditing ? 'green' : 'red'}
             position="absolute"
@@ -269,7 +275,7 @@ const ColorPresets: React.FC<ColorPresetsProps> = React.memo(
   },
 );
 
-interface ColorSelectorProps {
+type ColorSelectorProps = {
   color: HsvaColor;
   setColor: React.Dispatch<React.SetStateAction<HsvaColor>>;
   defaultColor: string;
@@ -278,7 +284,7 @@ interface ColorSelectorProps {
   onSelectedPreset: React.Dispatch<React.SetStateAction<number | undefined>>;
   allowEditing?: boolean;
   onAllowEditing?: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
 export const ColorSelector: React.FC<ColorSelectorProps> = React.memo(
   ({
@@ -299,7 +305,6 @@ export const ColorSelector: React.FC<ColorSelectorProps> = React.memo(
     );
 
     const [showPresets, setShowPresets] = useState<boolean>(false);
-    const rgb = hsvaToRgba(color);
     const hexColor = hsvaToHex(color);
 
     return (
@@ -332,14 +337,14 @@ export const ColorSelector: React.FC<ColorSelectorProps> = React.memo(
                   backgroundColor={hexColor}
                 />
               </Tooltip>
-              <Tooltip content={defaultColor} position="bottom">
-                <Box
-                  inline
-                  width="100px"
-                  height="30px"
-                  backgroundColor={defaultColor}
-                />
-              </Tooltip>
+              <Button
+                tooltip={defaultColor}
+                tooltipPosition="bottom"
+                width="100px"
+                height="30px"
+                backgroundColor={defaultColor}
+                onClick={() => setColor(hexToHsva(defaultColor))}
+              />
             </Stack.Item>
           </Stack>
         </Stack.Item>
@@ -394,10 +399,10 @@ export const ColorSelector: React.FC<ColorSelectorProps> = React.memo(
   },
 );
 
-interface RowProps {
+type RowProps = {
   color: HsvaColor;
   handleChange: (c: Partial<HsvaColor>) => void;
-}
+};
 
 const HueRow: React.FC<RowProps> = React.memo(({ color, handleChange }) => (
   <Stack.Item>
@@ -462,10 +467,10 @@ const ValueRow: React.FC<RowProps> = React.memo(({ color, handleChange }) => (
   </Stack.Item>
 ));
 
-interface RGBRowProps {
+type RGBRowProps = {
   color: HsvaColor;
   handleChange: (c: HsvaColor) => void;
-}
+};
 
 const RedRow: React.FC<RGBRowProps> = React.memo(({ color, handleChange }) => {
   const rgb = hsvaToRgba(color);
@@ -544,13 +549,13 @@ const BlueRow: React.FC<RGBRowProps> = React.memo(({ color, handleChange }) => {
   );
 });
 
-interface TextSetterProps {
+type TextSetterProps = {
   value: number;
   callback: (value: number) => void;
   min?: number;
   max?: number;
   unit?: string;
-}
+};
 
 const TextSetter: React.FC<TextSetterProps> = React.memo(
   ({ value, callback, min = 0, max = 100, unit }) => {
@@ -568,13 +573,13 @@ const TextSetter: React.FC<TextSetterProps> = React.memo(
   },
 );
 
-interface HexColorInputProps {
+type HexColorInputProps = {
   prefixed?: boolean;
   alpha?: boolean;
   color: string;
   fluid?: boolean;
   onChange: (newColor: string) => void;
-}
+};
 
 const HexColorInput: React.FC<HexColorInputProps> = React.memo(
   ({ alpha, color, fluid, onChange, ...rest }) => {
@@ -636,10 +641,10 @@ const HexColorInput: React.FC<HexColorInputProps> = React.memo(
   },
 );
 
-interface SaturationValueProps {
+type SaturationValueProps = {
   hsva: HsvaColor;
   onChange: (newColor: Partial<HsvaColor>) => void;
-}
+};
 
 const SaturationValue: React.FC<SaturationValueProps> = React.memo(
   ({ hsva, onChange }) => {
@@ -668,6 +673,7 @@ const SaturationValue: React.FC<SaturationValueProps> = React.memo(
       }),
       [hsva.h],
     );
+    const containerRef = useRef<HTMLDivElement>(null);
 
     return (
       <div className="react-colorful__saturation_value" style={containerStyle}>
@@ -678,6 +684,7 @@ const SaturationValue: React.FC<SaturationValueProps> = React.memo(
           aria-valuetext={`Saturation ${Math.round(
             hsva.s,
           )}%, Brightness ${Math.round(hsva.v)}%`}
+          containerRef={containerRef}
         >
           <Pointer
             className="react-colorful__saturation_value-pointer"
@@ -691,11 +698,11 @@ const SaturationValue: React.FC<SaturationValueProps> = React.memo(
   },
 );
 
-interface HueProps {
+type HueProps = {
   className?: string;
   hue: number;
   onChange: (newHue: Partial<HsvaColor>) => void;
-}
+};
 
 const Hue: React.FC<HueProps> = React.memo(({ className, hue, onChange }) => {
   const handleMove = (interaction: Interaction) => {
@@ -705,12 +712,14 @@ const Hue: React.FC<HueProps> = React.memo(({ className, hue, onChange }) => {
   const handleKey = (offset: Interaction) => {
     onChange({ h: clamp(hue + offset.left * 360, 0, 360) });
   };
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const nodeClassName = classes(['react-colorful__hue', className]);
 
   return (
     <div className={nodeClassName}>
       <Interactive
+        containerRef={containerRef}
         onMove={handleMove}
         onKey={handleKey}
         aria-label="Hue"
@@ -728,11 +737,11 @@ const Hue: React.FC<HueProps> = React.memo(({ className, hue, onChange }) => {
   );
 });
 
-interface SaturationProps {
+type SaturationProps = {
   className?: string;
   color: HsvaColor;
   onChange: (newSaturation: Partial<HsvaColor>) => void;
-}
+};
 
 const Saturation: React.FC<SaturationProps> = React.memo(
   ({ className, color, onChange }) => {
@@ -756,10 +765,12 @@ const Saturation: React.FC<SaturationProps> = React.memo(
         })}, ${hsvaToHslString({ h: color.h, s: 100, v: color.v, a: 1 })})`,
       [color],
     );
+    const containerRef = useRef<HTMLDivElement>(null);
 
     return (
       <div className={nodeClassName}>
         <Interactive
+          containerRef={containerRef}
           style={{ background }}
           onMove={handleMove}
           onKey={handleKey}
@@ -784,11 +795,11 @@ const Saturation: React.FC<SaturationProps> = React.memo(
   },
 );
 
-interface ValueProps {
+type ValueProps = {
   className?: string;
   color: HsvaColor;
   onChange: (newValue: Partial<HsvaColor>) => void;
-}
+};
 
 const Value: React.FC<ValueProps> = React.memo(
   ({ className, color, onChange }) => {
@@ -814,10 +825,12 @@ const Value: React.FC<ValueProps> = React.memo(
         })}, ${hsvaToHslString({ h: color.h, s: color.s, v: 100, a: 1 })})`,
       [color],
     );
+    const containerRef = useRef<HTMLDivElement>(null);
 
     return (
       <div className={nodeClassName}>
         <Interactive
+          containerRef={containerRef}
           style={{
             background,
           }}
@@ -839,12 +852,12 @@ const Value: React.FC<ValueProps> = React.memo(
   },
 );
 
-interface RGBSliderProps {
+type RGBSliderProps = {
   className?: string;
   color: HsvaColor;
   onChange: (newValue: HsvaColor) => void;
   target: 'r' | 'g' | 'b';
-}
+};
 
 const RGBSlider: React.FC<RGBSliderProps> = React.memo(
   ({ className, color, onChange, target }) => {
@@ -872,10 +885,12 @@ const RGBSlider: React.FC<RGBSliderProps> = React.memo(
     };
 
     const selected = channels[target];
+    const containerRef = useRef<HTMLDivElement>(null);
 
     return (
       <div className={nodeClassName}>
         <Interactive
+          containerRef={containerRef}
           onMove={handleMove}
           onKey={handleKey}
           aria-valuenow={rgb[target]}

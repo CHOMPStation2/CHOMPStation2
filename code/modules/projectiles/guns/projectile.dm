@@ -2,9 +2,8 @@
 	name = "gun"
 	desc = "A gun that fires bullets."
 	icon_state = "revolver"
-	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	w_class = ITEMSIZE_NORMAL
-	matter = list(MAT_STEEL = 1000)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.5))
 	recoil = 1
 	projectile_type = /obj/item/projectile/bullet/pistol/strong	//Only used for chameleon guns
 
@@ -33,7 +32,12 @@
 
 	var/random_start_ammo = FALSE	//randomize amount of starting ammo
 
-/obj/item/gun/projectile/Initialize(mapload, var/starts_loaded = 1)
+	special_handling = TRUE
+
+	///Var for attack_self chain
+	var/special_weapon_handling = FALSE
+
+/obj/item/gun/projectile/Initialize(mapload, starts_loaded = 1)
 	. = ..()
 	if(starts_loaded)
 		if(ispath(ammo_type) && (load_method & (SINGLE_CASING|SPEEDLOADER)))
@@ -51,15 +55,18 @@
 	update_icon()
 
 /obj/item/gun/projectile/consume_next_projectile()
-	//get the next casing
-	if(loaded.len)
-		chambered = loaded[1] //load next casing.
-		if(handle_casings != HOLD_CASINGS)
-			loaded -= chambered
-	else if(ammo_magazine && ammo_magazine.stored_ammo.len)
-		chambered = ammo_magazine.stored_ammo[ammo_magazine.stored_ammo.len]
-		if(handle_casings != HOLD_CASINGS)
-			ammo_magazine.stored_ammo -= chambered
+	if(!manual_chamber) //CHOMPEdit Start - Manual Chambering
+		//get the next casing
+		if(loaded.len)
+			chambered = loaded[1] //load next casing.
+			if(handle_casings != HOLD_CASINGS)
+				loaded -= chambered
+		else if(ammo_magazine && ammo_magazine.stored_ammo.len)
+			chambered = ammo_magazine.stored_ammo[ammo_magazine.stored_ammo.len]
+			if(handle_casings != HOLD_CASINGS)
+				ammo_magazine.stored_ammo -= chambered
+	if(manual_chamber && auto_loading_type && CHECK_BITFIELD(auto_loading_type,OPEN_BOLT) && bolt_open)
+		chamber_bullet() //CHOMPEdit End - Manual Chambering
 
 	var/mob/living/M = loc // TGMC Ammo HUD
 	if(istype(M)) // TGMC Ammo HUD
@@ -77,7 +84,8 @@
 
 /obj/item/gun/projectile/handle_click_empty()
 	..()
-	process_chambered()
+	if(!manual_chamber) //CHOMPEdit - Manual Chambering
+		process_chambered() //CHOMPEdit - Manual Chambering
 
 /obj/item/gun/projectile/proc/process_chambered()
 	if (!chambered) return
@@ -116,7 +124,7 @@
 
 //Attempts to load A into src, depending on the type of thing being loaded and the load_method
 //Maybe this should be broken up into separate procs for each load method?
-/obj/item/gun/projectile/proc/load_ammo(var/obj/item/A, mob/user)
+/obj/item/gun/projectile/proc/load_ammo(obj/item/A, mob/user)
 	if(istype(A, /obj/item/ammo_magazine))
 		var/obj/item/ammo_magazine/AM = A
 		if(!(load_method & AM.mag_type) || caliber != AM.caliber || allowed_magazines && !is_type_in_list(A, allowed_magazines))
@@ -191,7 +199,11 @@
 	user.hud_used.update_ammo_hud(user, src)
 
 //attempts to unload src. If allow_dump is set to 0, the speedloader unloading method will be disabled
-/obj/item/gun/projectile/proc/unload_ammo(mob/user, var/allow_dump=1)
+/obj/item/gun/projectile/proc/unload_ammo(mob/user, allow_dump=1)
+	if(manual_chamber && only_open_load && !bolt_open) //CHOMPEdit - Manual Chambering
+		to_chat(user,span_warning("You must open the bolt to load or unload this gun!")) //CHOMPEdit - Manual Chambering
+		return //CHOMPEdit - Manual Chambering
+
 	if(ammo_magazine)
 		user.put_in_hands(ammo_magazine)
 		user.visible_message("[user] removes [ammo_magazine] from [src].", span_notice("You remove [ammo_magazine] from [src]."))
@@ -223,12 +235,20 @@
 	update_icon()
 	user.hud_used.update_ammo_hud(user, src)
 
-/obj/item/gun/projectile/attackby(var/obj/item/A as obj, mob/user as mob)
+/obj/item/gun/projectile/attackby(obj/item/A as obj, mob/user as mob)
 	..()
 	load_ammo(A, user)
 
-/obj/item/gun/projectile/attack_self(mob/user as mob)
-	if(firemodes.len > 1)
+/obj/item/gun/projectile/attack_self(mob/user, callback)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_weapon_handling && !callback)
+		return FALSE
+	if(manual_chamber) //CHOMPEdit Gun Rework
+		if(do_after(user, 0.4 SECONDS, src)) //CHOMPEdit Gun Rework
+			bolt_handle(user) //CHOMPEdit Gun Rework
+	else if(firemodes.len > 1) //CHOMPEdit Gun Rework
 		switch_firemodes(user)
 	else
 		unload_ammo(user)
@@ -241,7 +261,7 @@
 
 /obj/item/gun/projectile/afterattack(atom/A, mob/living/user)
 	..()
-	if(auto_eject && ammo_magazine && ammo_magazine.stored_ammo && !ammo_magazine.stored_ammo.len)
+	if(auto_eject && ammo_magazine && ammo_magazine.stored_ammo && !ammo_magazine.stored_ammo.len && !(manual_chamber && chambered && chambered.BB != null)) //CHOMPEdit - Manual Chambering
 		ammo_magazine.loc = get_turf(src.loc)
 		user.visible_message(
 			"[ammo_magazine] falls out and clatters on the floor!",

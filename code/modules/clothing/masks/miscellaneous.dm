@@ -236,7 +236,7 @@
 	. = ..()
 	eye = new(src)
 
-/obj/item/clothing/mask/ai/equipped(var/mob/user, var/slot)
+/obj/item/clothing/mask/ai/equipped(mob/user, slot)
 	..(user, slot)
 	if(slot == slot_wear_mask)
 		eye.owner = user
@@ -246,7 +246,7 @@
 			c.remove(eye)
 		eye.setLoc(user)
 
-/obj/item/clothing/mask/ai/dropped(mob/user)
+/obj/item/clothing/mask/ai/dropped(mob/user, equipping, slot)
 	..()
 	if(eye.owner == user)
 		for(var/datum/chunk/c in eye.visibleChunks)
@@ -265,7 +265,7 @@
 	icon_state = "bandblack"
 	item_state_slots = list(slot_r_hand_str = "bandblack", slot_l_hand_str = "bandblack")
 
-/obj/item/clothing/mask/bandana/equipped(var/mob/user, var/slot)
+/obj/item/clothing/mask/bandana/equipped(mob/user, slot)
 	switch(slot)
 		if(slot_wear_mask) //Mask is the default for all the settings
 			flags_inv = initial(flags_inv)
@@ -324,6 +324,7 @@
 	icon_state = "papermask"
 	actions_types = list(/datum/action/item_action/hands_free/redraw_design)
 	var/list/papermask_designs = list()
+	special_handling = TRUE
 
 /obj/item/clothing/mask/paper/Initialize(mapload)
 	. = ..()
@@ -356,7 +357,9 @@
 		)
 
 /obj/item/clothing/mask/paper/attack_self(mob/user)
-	. = ..()
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!istype(user) || user.incapacitated())
 		return
 
@@ -377,7 +380,6 @@
 		user.update_inv_wear_mask()
 		user.update_mob_action_buttons()
 		to_chat(user, span_notice("Your paper mask now is now [choice]."))
-		return 1
 
 /obj/item/clothing/mask/emotions
 	name = "emotional mask"
@@ -387,6 +389,7 @@
 	icon_state = "joy"
 	actions_types = list(/datum/action/item_action/hands_free/redraw_design)
 	var/static/list/joymask_designs = list()
+	special_handling = TRUE
 
 
 /obj/item/clothing/mask/emotions/Initialize(mapload)
@@ -399,7 +402,9 @@
 		)
 
 /obj/item/clothing/mask/emotions/attack_self(mob/user)
-	. = ..()
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!istype(user) || user.incapacitated())
 		return
 
@@ -412,7 +417,6 @@
 		user.update_inv_wear_mask()
 		user.update_mob_action_buttons()
 		to_chat(user, span_notice("Your [src] now displays a [choice] emotion."))
-		return 1
 
 /obj/item/clothing/mask/mouthwheat
 	name = "mouth wheat"

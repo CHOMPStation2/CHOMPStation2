@@ -1,4 +1,4 @@
-/obj/item/holder/dropped(mob/user)
+/obj/item/holder/dropped(mob/user, equipping, slot)
 	// CHOMPEdit Start
 	..()
 	spawn(1)
@@ -31,7 +31,6 @@
 			return
 
 	src.pickup(user)
-	src.throwing = 0
 	if (src.loc == user)
 		if(!mob_can_unequip(user, user.get_inventory_slot(src))) //VOREStation Edit
 			return

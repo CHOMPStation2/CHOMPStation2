@@ -1,4 +1,4 @@
-import type { ActionButtonData } from './types';
+import type { ActionButtonData, Overlay } from './types';
 
 export function abilitiy_usable(nutri: number, cost: number): boolean {
   return nutri >= cost;
@@ -27,31 +27,32 @@ export function calcLineHeight(lim: number, height: number): string {
 }
 
 export function fixCorruptedData(
-  toSanitize:
-    | string
-    | string[]
-    | null
-    | Record<string | number, string | number>,
+  toSanitize: string | string[] | null | Record<string, string | number>,
 ): { corrupted?: boolean; data: string | string[] } {
   if (toSanitize === null) {
     return { data: '' };
   }
-  if (typeof toSanitize === 'string') {
+
+  if (typeof toSanitize === 'string' || Array.isArray(toSanitize)) {
     return { data: toSanitize };
   }
-  if (Array.isArray(toSanitize)) {
-    return { data: toSanitize };
-  }
-  const clearedData = Object.entries(toSanitize).map((entry) => {
-    if (typeof entry[0] === 'string') {
-      return entry[0];
-    } else if (typeof entry[1] === 'string') {
-      return entry[1];
-    } else {
-      return '';
+
+  const isNumeric = (value: string): boolean => /^\d+$/.test(value);
+
+  const clearedData = Object.entries(toSanitize).map(([key, value]) => {
+    if (typeof value === 'string' && !isNumeric(value)) {
+      return value;
     }
+    if (!isNumeric(key)) {
+      return key;
+    }
+    return '';
   });
-  return { corrupted: true, data: clearedData || [] };
+
+  return {
+    corrupted: true,
+    data: clearedData,
+  };
 }
 
 export function bellyTemperatureToColor(temp: number): string | undefined {
@@ -125,7 +126,7 @@ export function ourTypeToOptions(
       },
     ];
     const interaction_options: ActionButtonData[] = [];
-    if (type === 'Human') {
+    if (type === 'Human' || type === 'HumanC') {
       interaction_options.push({
         name: 'Transform',
         color: 'purple',
@@ -137,6 +138,12 @@ export function ourTypeToOptions(
         tooltip: 'Check the health of your current target.',
       });
     }
+    if (type === 'Living' || type === 'LivingC') {
+      interaction_options.push({
+        name: 'Health',
+        tooltip: 'Display the health of the current target.',
+      });
+    }
     if (type === 'Observer') {
       interaction_options.push({
         name: 'Reform',
@@ -145,21 +152,12 @@ export function ourTypeToOptions(
         tooltip: 'Reform your current target.',
       });
     }
-    if (type === 'LivingC') {
+    if (type === 'LivingC' || type === 'HumanC') {
       interaction_options.push({
         name: 'Process',
         color: 'red',
         needsConfirm: true,
         tooltip: 'Process your current target instantly.',
-      });
-      interaction_options.push({
-        name: 'Health',
-        tooltip: 'Display the health of the current target.',
-      });
-    } else if (type === 'Living') {
-      interaction_options.push({
-        name: 'Health',
-        tooltip: 'Display the health of the current target.',
       });
     }
     return [commonOption, ...baseOptions, ...interaction_options];
@@ -193,4 +191,32 @@ export function ourTypeToOptions(
     ];
   }
   return [];
+}
+
+export function getOverlays(
+  state: string,
+  colors: string[],
+  colorize: boolean,
+): Overlay[] {
+  if (!colorize)
+    return [
+      {
+        icon: 'icons/mob/vore_fullscreens/ui_lists/screen_full_vore.dmi',
+        iconState: state,
+      },
+    ];
+
+  const base =
+    'icons/mob/vore_fullscreens/ui_lists/screen_full_vore_list_base.dmi';
+  const layers = [
+    'icons/mob/vore_fullscreens/ui_lists/screen_full_vore_list_layer1.dmi',
+    'icons/mob/vore_fullscreens/ui_lists/screen_full_vore_list_layer2.dmi',
+    'icons/mob/vore_fullscreens/ui_lists/screen_full_vore_list_layer3.dmi',
+  ];
+
+  return [base, ...layers].map((icon, i) => ({
+    icon,
+    iconState: state,
+    color: colors[i],
+  }));
 }

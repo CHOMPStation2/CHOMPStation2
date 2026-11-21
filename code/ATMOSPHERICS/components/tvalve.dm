@@ -5,7 +5,7 @@
 	pipe_state = "mtvalve"
 
 	name = "manual switching valve"
-	desc = "A pipe valve"
+	desc = "A pipe valve."
 
 	level = 1
 	dir = SOUTH
@@ -34,17 +34,17 @@
 		icon_state = "tvalve[mirrored ? "m" : ""][state]"
 
 /obj/machinery/atmospherics/tvalve/update_underlays()
-	if(..())
-		underlays.Cut()
-		var/turf/T = get_turf(src)
-		if(!istype(T))
-			return
-		var/list/node_connects = get_node_connect_dirs()
-		add_underlay(T, node1, node_connects[1])
-		add_underlay(T, node2, node_connects[2])
-		add_underlay(T, node3, node_connects[3])
+	..()
+	underlays.Cut()
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		return
+	var/list/node_connects = get_node_connect_dirs()
+	add_underlay(T, node1, node_connects[1])
+	add_underlay(T, node2, node_connects[2])
+	add_underlay(T, node3, node_connects[3])
 
-/obj/machinery/atmospherics/tvalve/hide(var/i)
+/obj/machinery/atmospherics/tvalve/hide(i)
 	update_underlays()
 
 /obj/machinery/atmospherics/tvalve/init_dir()
@@ -326,7 +326,7 @@
 			else
 				go_to_side()
 
-/obj/machinery/atmospherics/tvalve/attackby(var/obj/item/W as obj, var/mob/user as mob)
+/obj/machinery/atmospherics/tvalve/attackby(obj/item/W as obj, mob/user as mob)
 	if (!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 	if(!can_unwrench())
@@ -340,7 +340,7 @@
 			span_infoplain(span_bold("\The [user]") + " unfastens \the [src]."), \
 			span_notice("You have unfastened \the [src]."), \
 			"You hear a ratchet.")
-		deconstruct()
+		atom_deconstruct()
 
 /obj/machinery/atmospherics/tvalve/mirrored
 	icon_state = "map_tvalvem0"

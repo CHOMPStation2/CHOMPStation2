@@ -26,14 +26,25 @@
 	w_class = ITEMSIZE_TINY
 	throw_speed = 7
 	throw_range = 15
-	matter = list(MAT_STEEL = 10)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.005))
 	var/colour = "black"	//what colour the ink is!
 	pressure_resistance = 2
 	drop_sound = 'sound/items/drop/accessory.ogg'
 	pickup_sound = 'sound/items/pickup/accessory.ogg'
+	var/can_click = TRUE
 
-/obj/item/pen/attack_self(var/mob/user)
+	///Var for attack_self chain
+	var/special_handling = FALSE
+
+/obj/item/pen/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
 	if(!user.checkClickCooldown())
+		return
+	if(!can_click)
 		return
 	user.setClickCooldown(1 SECOND)
 	to_chat(user, span_notice("Click."))
@@ -99,6 +110,7 @@
 	desc = "It's a pen with multiple colors of ink!"
 	var/selectedColor = 1
 	var/colors = list("black","blue","red")
+	special_handling = TRUE
 
 /obj/item/pen/click_alt(mob/user)
 	if(!Adjacent(user))
@@ -107,6 +119,9 @@
 	playsound(src, 'sound/items/penclick.ogg', 50, 1)
 
 /obj/item/pen/multi/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(++selectedColor > 3)
 		selectedColor = 1
 
@@ -130,17 +145,12 @@
 
 /obj/item/pen/reagent
 	flags = OPENCONTAINER
-	origin_tech = list(TECH_MATERIAL = 2, TECH_ILLEGAL = 5)
 
 /obj/item/pen/reagent/Initialize(mapload)
 	. = ..()
 	create_reagents(30)
 
-/obj/item/pen/reagent/attack(mob/living/M as mob, mob/user as mob)
-
-	if(!istype(M))
-		return
-
+/obj/item/pen/reagent/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	. = ..()
 
 	if(M.can_inject(user,1))
@@ -149,6 +159,7 @@
 				var/contained = reagents.get_reagents()
 				var/trans = reagents.trans_to_mob(M, 30, CHEM_BLOOD)
 				add_attack_logs(user,M,"Injected with [src.name] containing [contained], trasferred [trans] units")
+				return ITEM_INTERACT_SUCCESS
 
 /*
  * Blade Pens
@@ -246,7 +257,6 @@
  */
 /obj/item/pen/reagent/sleepy
 	desc = "It's a black ink pen with a sharp point and a carefully engraved \"Waffle Co.\""
-	origin_tech = list(TECH_MATERIAL = 2, TECH_ILLEGAL = 5)
 
 /obj/item/pen/reagent/sleepy/Initialize(mapload)
 	. = ..()
@@ -258,7 +268,6 @@
  * Parapens
  */
 /obj/item/pen/reagent/paralysis
-	origin_tech = list(TECH_MATERIAL = 2, TECH_ILLEGAL = 5)
 
 /obj/item/pen/reagent/paralysis/Initialize(mapload)
 	. = ..()
@@ -270,8 +279,12 @@
  */
 /obj/item/pen/chameleon
 	var/signature = ""
+	special_handling = TRUE
 
 /obj/item/pen/chameleon/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	/*
 	// Limit signatures to official crew members
 	var/personnel_list[] = list()
@@ -285,10 +298,10 @@
 	*/
 	signature = tgui_input_text(user, "Enter new signature. Leave blank for 'Anonymous'", "New Signature", signature, MAX_MESSAGE_LEN)
 
-/obj/item/pen/proc/get_signature(var/mob/user)
+/obj/item/pen/proc/get_signature(mob/user)
 	return (user && user.real_name) ? user.real_name : "Anonymous"
 
-/obj/item/pen/chameleon/get_signature(var/mob/user)
+/obj/item/pen/chameleon/get_signature(mob/user)
 	return signature ? signature : "Anonymous"
 
 /obj/item/pen/chameleon/verb/set_colour()
@@ -338,6 +351,8 @@
 	var/colourName = "red" //for updateIcon purposes
 	drop_sound = 'sound/items/drop/gloves.ogg'
 	pickup_sound = 'sound/items/pickup/gloves.ogg'
+	can_click = FALSE
+	special_handling = TRUE
 
 /obj/item/pen/crayon/Initialize(mapload)
 	. = ..()

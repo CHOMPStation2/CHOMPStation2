@@ -221,6 +221,9 @@
 /datum/status_effect/fire_handler/fire_stacks/proc/deal_damage(seconds_per_tick)
 	owner.on_fire_stack(seconds_per_tick, src)
 
+	if(owner.is_incorporeal()) // Shadekin don't spread fire in phase, but still take damage
+		return
+
 	var/turf/location = get_turf(owner)
 	location.hotspot_expose(700, 25 * seconds_per_tick, TRUE)
 
@@ -364,7 +367,7 @@
 
 /datum/status_effect/fire_handler/wet_stacks/proc/become_slippery()
 	SIGNAL_HANDLER
-	// slipperiness = owner.AddComponent(/datum/component/slippery, 5 SECONDS, lube_flags = SLIPPERY_WHEN_LYING_DOWN|NO_SLIP_WHEN_WALKING|WEAK_SLIDE)
+	// slipperiness = owner.AddComponent(/datum/component/slippery, 5 SECONDS, slip_flags = SLIPPERY_WHEN_LYING_DOWN|NO_SLIP_WHEN_WALKING|WEAK_SLIDE)
 	ADD_TRAIT(owner, TRAIT_NO_SLIP_WATER, TRAIT_STATUS_EFFECT(id))
 
 /datum/status_effect/fire_handler/wet_stacks/proc/no_longer_slippery()

@@ -32,7 +32,7 @@
 	#define JOB_ALT_SECURITY_MANAGER "Security Manager"
 
 #define JOB_CHIEF_ENGINEER "Chief Engineer"
-	// Cheif Engineer alt titles
+	// Chief Engineer alt titles
 	#define JOB_ALT_HEAD_ENGINEER "Head Engineer"
 	#define JOB_ALT_FOREMAN "Foreman"
 	#define JOB_ALT_MAINTENANCE_MANAGER "Maintenance Manager"
@@ -113,6 +113,7 @@
 	#define JOB_ALT_DISPOSALS_SORTER "Disposals Sorter"
 	#define JOB_ALT_MAILMAN "Mailman"
 	#define JOB_ALT_DELIVERY_WORKER "Delivery Worker"
+	#define JOB_ALT_LOGISTICS_CONTRACTOR "Logistics Contractor"
 
 #define JOB_SHAFT_MINER "Shaft Miner"
 	// Shaft Miner alt titles
@@ -120,6 +121,7 @@
 	#define JOB_ALT_DRILL_TECHNICIAN "Drill Technician"
 	#define JOB_ALT_PROSPECTOR "Prospector"
 	#define JOB_ALT_EXCAVATOR "Excavator"
+	#define JOB_ALT_MINING_CONTRACTOR "Mining Contractor"
 
 #define JOB_JANITOR "Janitor"
 	// Janitor alt titles
@@ -220,6 +222,13 @@
 	#define JOB_ALT_DISPOSALS_TECHNICIAN "Disposals Technician"
 	#define JOB_ALT_FUEL_TECHNICIAN "Fuel Technician"
 	#define JOB_ALT_FIREFIGHTER "Firefighter"
+
+#define JOB_TELECOMMS_SPECIALIST "Telecomms Specialist"
+	// Telecomms Specialist alt titles
+	#define JOB_ALT_WIRELESS_OPERATOR "Wireless Operator"
+	#define JOB_ALT_NETWORK_ENGINEER "Network Engineer"
+	#define JOB_ALT_SYSADMIN "Sysadmin"
+	#define JOB_ALT_TECHNICIAN "Tram Technician"
 //___________________________________________________________
 
 
@@ -297,6 +306,7 @@
 	#define JOB_ALT_GAS_PHYSICIST "Gas Physicist"
 	#define JOB_ALT_CIRCUIT_DESIGNER "Circuit Designer"
 	#define JOB_ALT_CIRCUIT_PROGRAMMER "Circuit Programmer"
+	#define JOB_ALT_RESEARCH_CONTRACTOR "Research Contractor"
 
 #define JOB_XENOBIOLOGIST "Xenobiologist"
 	// Xenobiologist alt titles
@@ -386,6 +396,7 @@
 #define JOB_TALON_ENGINEER "Talon Engineer"
 	// Talon Engineer alt titles
 	#define JOB_ALT_TALON_TECHNICIAN "Talon Technician"
+	#define JOB_ALT_TALON_ATMOSTECHIAN "Talon Atmospheric Technician"
 
 #define JOB_TALON_GUARD "Talon Guard"
 	// Talon Guard alt titles
@@ -480,6 +491,7 @@
 #define AI_DEPT (1<<8)
 #define CYBORG (1<<9)
 #define BRIGPHYS (1<<10) // CHOMPAdd - Brig Physician
+#define TCOMMS (1<<12)
 #define CLOWN (1<<13)
 #define MIME (1<<14)
 #define INTERN (1<<15)

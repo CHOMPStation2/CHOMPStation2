@@ -1,6 +1,6 @@
 /mob/living/simple_mob/vore/ddraig
 	name = "ddraig"
-	desc = "A massive drake-like creature with dark purple scales and a seemingly exposed skull."
+	desc = "A massive, slender dragon like creature. It's body is covered in slick, vibrant pink scales. Atop its back sits large, thin white wings that are reminiscent of those scene on butterflies."
 	tt_desc = "Draconis glamoris"
 	icon = 'icons/mob/vore96x96.dmi'
 	icon_dead = "ddraig-dead"
@@ -76,6 +76,7 @@
 	vore_default_mode = DM_DIGEST
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to devour"
+	can_be_drop_prey = FALSE
 
 /mob/living/simple_mob/vore/ddraig/faster
 	special_attack_cooldown = 10 SECONDS
@@ -178,7 +179,7 @@
 	if(Adjacent(L))	//We leapt at them but we didn't manage to hit them, let's see if we're next to them
 		L.Weaken(2)	//get knocked down, idiot
 
-/mob/living/simple_mob/vore/ddraig/proc/firebreathstart(var/atom/A) //Borrowed from le big dragon
+/mob/living/simple_mob/vore/ddraig/proc/firebreathstart(atom/A) //Borrowed from le big dragon
 	glow_toggle = 1
 	set_light(glow_range, glow_intensity, glow_color) //Setting it here so the light starts immediately
 	flames = 1
@@ -188,7 +189,7 @@
 	firebreathtimer = addtimer(CALLBACK(src, PROC_REF(firebreathend), A), charge_warmup, TIMER_STOPPABLE)
 	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
 
-/mob/living/simple_mob/vore/ddraig/proc/firebreathend(var/atom/A)
+/mob/living/simple_mob/vore/ddraig/proc/firebreathend(atom/A)
 	//make sure our target still exists and is on a turf
 	if(QDELETED(A) || !isturf(get_turf(A)))
 		set_AI_busy(FALSE)
@@ -201,7 +202,7 @@
 	glow_toggle = 0
 	flames = 0
 
-/mob/living/simple_mob/vore/ddraig/proc/tfbeam(var/atom/A)
+/mob/living/simple_mob/vore/ddraig/proc/tfbeam(atom/A)
 	if(!isturf(get_turf(A)))
 		return
 	set_AI_busy(TRUE)
@@ -221,7 +222,7 @@
 	tracer_type = /obj/effect/projectile/tracer/rainbow
 	impact_type = /obj/effect/projectile/impact/rainbow
 
-/obj/item/projectile/beam/mouselaser/ddraig/on_hit(var/atom/target)
+/obj/item/projectile/beam/mouselaser/ddraig/on_hit(atom/target)
 	var/mob/living/M = target
 	if(!istype(M))
 		return
@@ -229,27 +230,7 @@
 		if(!M.allow_spontaneous_tf && !tf_admin_pref_override)
 			return
 	if(M.tf_mob_holder)
-		var/mob/living/ourmob = M.tf_mob_holder
-		if(ourmob.ai_holder)
-			var/datum/ai_holder/our_AI = ourmob.ai_holder
-			our_AI.set_stance(STANCE_IDLE)
-		M.tf_mob_holder = null
-		ourmob.ckey = M.ckey
-		var/turf/get_dat_turf = get_turf(target)
-		ourmob.loc = get_dat_turf
-		ourmob.forceMove(get_dat_turf)
-		ourmob.vore_selected = M.vore_selected
-		M.vore_selected = null
-		ourmob.mob_belly_transfer(M)
-
-		ourmob.Life(1)
-		if(ishuman(M))
-			for(var/obj/item/W in M)
-				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
-					continue
-				M.drop_from_inventory(W)
-
-		qdel(target)
+		M.revert_mob_tf()
 		return
 	else
 		if(M.stat == DEAD)	//We can let it undo the TF, because the person will be dead, but otherwise things get weird.
@@ -260,7 +241,7 @@
 
 		addtimer(CALLBACK(new_mob, TYPE_PROC_REF(/mob/living, revert_mob_tf)), 30 SECONDS, TIMER_DELETE_ME)
 
-/obj/item/projectile/beam/mouselaser/ddraig/spawn_mob(var/mob/living/target)
+/obj/item/projectile/beam/mouselaser/ddraig/spawn_mob(mob/living/target)
 	var/list/tf_list = list(/mob/living/simple_mob/animal/passive/mouse,
 		/mob/living/simple_mob/animal/passive/mouse/rat/strong,
 		/mob/living/simple_mob/vore/alienanimals/dustjumper,
@@ -473,52 +454,12 @@
 		new_mob.faction = M.faction
 
 		if(new_mob && isliving(new_mob))
-			for(var/obj/belly/B as anything in new_mob.vore_organs)
-				new_mob.vore_organs -= B
-				qdel(B)
-			new_mob.vore_organs = list()
-			new_mob.name = M.name
-			new_mob.real_name = M.real_name
 			new_mob.verbs |= /mob/living/proc/revert_beast_form
 			new_mob.verbs |= /mob/living/proc/set_size
-			for(var/lang in M.languages)
-				new_mob.languages |= lang
-			M.copy_vore_prefs_to_mob(new_mob)
-			new_mob.vore_selected = M.vore_selected
-			if(ishuman(M))
-				var/mob/living/carbon/human/H = M
-				if(ishuman(new_mob))
-					var/mob/living/carbon/human/N = new_mob
-					N.gender = H.gender
-					N.identifying_gender = H.identifying_gender
-				else
-					new_mob.gender = H.gender
-			else
-				new_mob.gender = M.gender
-				if(ishuman(new_mob))
-					var/mob/living/carbon/human/N = new_mob
-					N.identifying_gender = M.gender
-
-			for(var/obj/belly/B as anything in M.vore_organs)
-				B.loc = new_mob
-				B.forceMove(new_mob)
-				B.owner = new_mob
-				M.vore_organs -= B
-				new_mob.vore_organs += B
-
-			new_mob.ckey = M.ckey
-			if(M.ai_holder && new_mob.ai_holder)
-				var/datum/ai_holder/old_AI = M.ai_holder
-				old_AI.set_stance(STANCE_SLEEP)
-				var/datum/ai_holder/new_AI = new_mob.ai_holder
-				new_AI.hostile = old_AI.hostile
-				new_AI.retaliate = old_AI.retaliate
-			M.loc = new_mob
-			M.forceMove(new_mob)
-			new_mob.tf_mob_holder = M
+			transfer_mob_identity(new_mob)
 			new_mob.visible_message("<b>\The [src]</b> has transformed into \the [chosen_beast]!")
 
-/mob/living/proc/spawn_polymorph_mob(var/chosen_beast)
+/mob/living/proc/spawn_polymorph_mob(chosen_beast)
 	var/tf_type = chosen_beast
 	if(!ispath(tf_type))
 		return

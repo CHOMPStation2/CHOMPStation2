@@ -16,7 +16,7 @@
 	var/selfdestructing = 0
 	var/charges = 1
 
-/obj/machinery/syndicate_beacon/attack_hand(var/mob/user as mob)
+/obj/machinery/syndicate_beacon/attack_hand(mob/user as mob)
 	user.set_machine(src)
 	var/dat = span_darkgreen(span_italics("Scanning [pick("retina pattern", "voice print", "fingerprints", "dna sequence")]...<br>Identity confirmed,<br>"))
 	if(ishuman(user) || isAI(user))
@@ -61,8 +61,8 @@
 		if(ishuman(M))
 			var/mob/living/carbon/human/N = M
 			to_chat(N, span_infoplain(span_bold("You have joined the ranks of the Syndicate and become a traitor to the station!")))
-			traitors.add_antagonist(N.mind)
-			traitors.equip(N)
+			GLOB.traitors.add_antagonist(N.mind)
+			GLOB.traitors.equip(N)
 			message_admins("[N]/([N.ckey]) has accepted a traitor objective from a syndicate beacon.")
 
 	updateUsrDialog(usr)
@@ -115,7 +115,7 @@
 /obj/machinery/power/singularity_beacon/attack_ai(mob/user as mob)
 	return
 
-/obj/machinery/power/singularity_beacon/attack_hand(var/mob/user as mob)
+/obj/machinery/power/singularity_beacon/attack_hand(mob/user as mob)
 	if(anchored)
 		return active ? Deactivate(user) : Activate(user)
 	else

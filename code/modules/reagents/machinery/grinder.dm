@@ -52,7 +52,7 @@
 	icon_state = "juicer"+num2text(!isnull(beaker))
 	return
 
-/obj/machinery/reagentgrinder/attackby(var/obj/item/O, var/mob/user)
+/obj/machinery/reagentgrinder/attackby(obj/item/O, mob/user)
 	if(beaker)
 		if(default_deconstruction_screwdriver(user, O))
 			return
@@ -109,7 +109,7 @@
 
 	if(istype(O,/obj/item/gripper))
 		var/obj/item/gripper/B = O	//B, for Borg.
-		var/obj/item/wrapped = B.get_current_pocket()
+		var/obj/item/wrapped = B.get_wrapped_item()
 		if(!wrapped)
 			to_chat(user, "\The [B] is not holding anything.")
 			return 0

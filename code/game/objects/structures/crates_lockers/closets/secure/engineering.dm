@@ -1,7 +1,7 @@
 /obj/structure/closet/secure_closet/engineering_chief
 	name = "chief engineer's locker"
 	req_access = list(ACCESS_CE)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering/ce
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/engineering/ce
 
 	starts_with = list(
 		/obj/item/clothing/accessory/storage/brown_vest,
@@ -54,7 +54,7 @@
 /obj/structure/closet/secure_closet/engineering_electrical
 	name = "electrical supplies"
 	req_access = list(ACCESS_ENGINE_EQUIP)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering/electrical
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/engineering/electrical
 
 	starts_with = list(
 		/obj/item/clothing/gloves/yellow = 2,
@@ -72,7 +72,7 @@
 /obj/structure/closet/secure_closet/engineering_welding
 	name = "welding supplies"
 	req_access = list(ACCESS_CONSTRUCTION)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering/welding
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/engineering/welding
 
 	starts_with = list(
 		/obj/item/clothing/head/welding = 3,
@@ -90,7 +90,7 @@
 /obj/structure/closet/secure_closet/engineering_personal
 	name = "engineer's locker"
 	req_access = list(ACCESS_ENGINE_EQUIP)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/engineering
 
 	starts_with = list(
 		/obj/item/clothing/accessory/storage/brown_vest,
@@ -124,7 +124,7 @@
 /obj/structure/closet/secure_closet/atmos_personal
 	name = "technician's locker"
 	req_access = list(ACCESS_ATMOSPHERICS)
-	closet_appearance = /decl/closet_appearance/secure_closet/engineering/atmos
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/engineering/atmos
 
 	starts_with = list(
 		/obj/item/clothing/accessory/storage/brown_vest,

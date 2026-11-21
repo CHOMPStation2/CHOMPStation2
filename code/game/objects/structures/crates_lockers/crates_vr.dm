@@ -1,7 +1,7 @@
 /obj/structure/closet/crate/secure
 	var/tamper_proof = 0
 
-/obj/structure/closet/crate/secure/bullet_act(var/obj/item/projectile/Proj)
+/obj/structure/closet/crate/secure/bullet_act(obj/item/projectile/Proj)
 	if(!(Proj.damage_type == BRUTE || Proj.damage_type == BURN))
 		return
 
@@ -34,11 +34,11 @@
 	return
 
 /obj/structure/closet/crate/medical/blood
-	closet_appearance = /decl/closet_appearance/cart/biohazard/alt
+	closet_appearance = /datum/decl/closet_appearance/cart/biohazard/alt
 
 /obj/structure/closet/crate/fennec
 	name = "fennec treats crate"
 	desc = "A colorful crate filled with specialties catering to fennecs."
 	icon = 'icons/obj/closets/bases/fencrate_vr.dmi'
-	closet_appearance = /decl/closet_appearance/crate/fennec
+	closet_appearance = /datum/decl/closet_appearance/crate/fennec
 	points_per_crate = 0

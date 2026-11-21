@@ -103,7 +103,7 @@ Bonus
 		else
 			SneezeTeleport(A, A.affected_mob)
 
-/datum/symptom/bsneeze/proc/SneezeTeleport(datum/disease/advance/A, var/mob/living/mob)
+/datum/symptom/bsneeze/proc/SneezeTeleport(datum/disease/advance/A, mob/living/mob)
 	var/list/destination = list()
 	var/place
 
@@ -128,7 +128,7 @@ Bonus
 		if(can_spontaneous_vore(unlucky, mob))
 			place = unlucky.vore_selected
 		else if(can_spontaneous_vore(mob, unlucky))
-			unlucky.forceMove(mob.vore_selected)
+			mob.vore_selected.nom_atom(unlucky)
 
 	mob.emote("sneeze")
 	do_teleport(mob, place)

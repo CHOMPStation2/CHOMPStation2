@@ -2,7 +2,7 @@
 	name = "Tyrian Longarm"
 	id = "tyr_rifle"
 	build_type = PROTOLATHE
-	materials = list(MAT_BRONZE = 12000,MAT_DIAMOND = 4000,MAT_URANIUM = 3000,MAT_COPPER = 3000,MAT_GOLD = 3000,MAT_METALHYDROGEN = 3000,MAT_QUARTZ = 3000,MAT_EAGATE = 3000)
+	materials = list(MAT_BRONZE = MATERIAL_COST(6), MAT_DIAMOND = MATERIAL_COST(2), MAT_URANIUM = MATERIAL_COST(1.5), MAT_COPPER = MATERIAL_COST(1.5), MAT_GOLD = MATERIAL_COST(1.5), MAT_METALHYDROGEN = MATERIAL_COST(1.5), MAT_QUARTZ = MATERIAL_COST(1.5), MAT_EAGATE = MATERIAL_COST(1.5))
 	build_path = /obj/item/gun/energy/tyr_rifle
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
@@ -14,7 +14,7 @@
 	name = "Magnet Belt"
 	id = "magnet_belt"
 	build_type = PROTOLATHE
-	materials = list(MAT_BRONZE = 12000,MAT_DIAMOND = 700,MAT_COPPER = 3000,MAT_METALHYDROGEN = 1000,MAT_QUARTZ = 5000,MAT_EAGATE = 8000)
+	materials = list(MAT_BRONZE = MATERIAL_COST(6), MAT_DIAMOND = MATERIAL_COST(0.35), MAT_COPPER = MATERIAL_COST(1.5), MAT_METALHYDROGEN = MATERIAL_COST(0.5), MAT_QUARTZ = MATERIAL_COST(2.5), MAT_EAGATE = MATERIAL_COST(4))
 	build_path = /obj/item/personal_shield_generator/belt/magnetbelt
 	category = list(
 		RND_CATEGORY_EQUIPMENT
@@ -25,7 +25,7 @@
 	name = "Tyrian Energy Blade"
 	id = "tyr_sabre"
 	build_type = PROTOLATHE
-	materials = list(MAT_BRONZE = 10000,MAT_DIAMOND = 6000,MAT_COPPER = 8000,MAT_METALHYDROGEN = 2000,MAT_QUARTZ = 2000,MAT_EAGATE = 6000)
+	materials = list(MAT_BRONZE = MATERIAL_COST(5), MAT_DIAMOND = MATERIAL_COST(3), MAT_COPPER = MATERIAL_COST(4), MAT_METALHYDROGEN = MATERIAL_COST(1), MAT_QUARTZ = MATERIAL_COST(1), MAT_EAGATE = MATERIAL_COST(3))
 	build_path = /obj/item/melee/energy/tyr_sabre
 	category = list(
 		RND_CATEGORY_EQUIPMENT
@@ -36,7 +36,7 @@
 	name = "Tyrian Energy Katar"
 	id = "tyr_katar"
 	build_type = PROTOLATHE
-	materials = list(MAT_BRONZE = 10000,MAT_DIAMOND = 6000,MAT_COPPER = 8000,MAT_METALHYDROGEN = 2000,MAT_QUARTZ = 2000,MAT_EAGATE = 6000)
+	materials = list(MAT_BRONZE = MATERIAL_COST(5), MAT_DIAMOND = MATERIAL_COST(3), MAT_COPPER = MATERIAL_COST(4), MAT_METALHYDROGEN = MATERIAL_COST(1), MAT_QUARTZ = MATERIAL_COST(1), MAT_EAGATE = MATERIAL_COST(3))
 	build_path = /obj/item/melee/energy/tyr_katar
 	category = list(
 		RND_CATEGORY_EQUIPMENT
@@ -47,7 +47,7 @@
 	name = "Tyrian Energy Hammer"
 	id = "tyr_hammer"
 	build_type = PROTOLATHE
-	materials = list(MAT_BRONZE = 10000,MAT_DIAMOND = 6000,MAT_COPPER = 8000,MAT_METALHYDROGEN = 2000,MAT_QUARTZ = 2000,MAT_EAGATE = 6000)
+	materials = list(MAT_BRONZE = MATERIAL_COST(5), MAT_DIAMOND = MATERIAL_COST(3), MAT_COPPER = MATERIAL_COST(4), MAT_METALHYDROGEN = MATERIAL_COST(1), MAT_QUARTZ = MATERIAL_COST(1), MAT_EAGATE = MATERIAL_COST(3))
 	build_path = /obj/item/melee/energy/tyr_hammer
 	category = list(
 		RND_CATEGORY_EQUIPMENT
@@ -58,7 +58,7 @@
 	name = "Tyrian Barrier Bubble"
 	id = "tyr_barrier"
 	build_type = PROTOLATHE
-	materials = list(MAT_BRONZE = 20000,MAT_DIAMOND = 15000,MAT_COPPER = 15000,MAT_METALHYDROGEN = 20000,MAT_QUARTZ = 50000,MAT_EAGATE = 60000)
+	materials = list(MAT_BRONZE = MATERIAL_COST(10), MAT_DIAMOND = MATERIAL_COST(7.5), MAT_COPPER = MATERIAL_COST(7.5), MAT_METALHYDROGEN = MATERIAL_COST(10), MAT_QUARTZ = MATERIAL_COST(25), MAT_EAGATE = MATERIAL_COST(30))
 	build_path = /obj/item/shield_projector/rectangle/automatic/tyrbarrier
 	category = list(
 		RND_CATEGORY_EQUIPMENT

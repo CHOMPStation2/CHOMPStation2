@@ -9,7 +9,6 @@
 	throwforce = 5.0
 	throw_range = 15
 	throw_speed = 3
-	origin_tech = list(TECH_DATA = 1, TECH_ENGINEERING = 1)
 	var/obj/item/bug_monitor/linkedmonitor
 	var/brokentype = /obj/item/brokenbug
 
@@ -26,11 +25,13 @@
 	camera = new camtype(src)
 
 /obj/item/camerabug/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(user.a_intent == I_HURT)
 		to_chat(user, span_notice("You crush the [src] under your foot, breaking it."))
 		visible_message(span_notice("[user.name] crushes the [src] under their foot, breaking it!"))
 		new brokentype(get_turf(src))
-		spawn(0)
 		qdel(src)
 /*	else
 		radio.interact(user)
@@ -56,7 +57,6 @@
 	throwforce = 5.0
 	throw_range = 15
 	throw_speed = 3
-	origin_tech = list(TECH_ENGINEERING = 1)
 
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
@@ -70,7 +70,6 @@
 	layer = TURF_LAYER+0.2
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS
-	origin_tech = list(TECH_ENGINEERING = 1, TECH_ILLEGAL = 3) //crush it and you lose the data
 	force = 0
 	throwforce = 5.0
 	throw_range = 15
@@ -85,7 +84,6 @@
 	layer = TURF_LAYER+0.2
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS
-	origin_tech = list(TECH_DATA = 1, TECH_ENGINEERING = 1, TECH_ILLEGAL = 3)
 	camtype = /obj/machinery/camera/bug/spy
 
 /obj/item/camerabug/examine(mob/user)
@@ -156,7 +154,6 @@
 	icon_state = "forensic0"
 	item_state = "electronic"
 	w_class  = ITEMSIZE_SMALL
-	origin_tech = list(TECH_DATA = 1, TECH_ENGINEERING = 1)
 
 //	var/obj/item/radio/bug/radio
 	var/obj/machinery/camera/bug/selected_camera
@@ -170,7 +167,9 @@
 	radio = new(src)
 */
 /obj/item/bug_monitor/attack_self(mob/user)
-//	radio.attack_self(user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	view_cameras(user)
 
 /obj/item/bug_monitor/attackby(obj/item/W as obj, mob/living/user as mob)
@@ -179,11 +178,11 @@
 		return
 	. = ..()
 
-/obj/item/bug_monitor/proc/unpair(var/obj/item/camerabug/SB)
+/obj/item/bug_monitor/proc/unpair(obj/item/camerabug/SB)
 	if(SB.camera in cameras)
 		cameras -= SB.camera
 
-/obj/item/bug_monitor/proc/pair(var/obj/item/camerabug/SB)
+/obj/item/bug_monitor/proc/pair(obj/item/camerabug/SB)
 	cameras += SB.camera
 
 /obj/item/bug_monitor/proc/view_cameras(mob/user)
@@ -213,7 +212,7 @@
 		unpair(selected_camera)
 		selected_camera = null
 		return
-	user.AddComponent(/datum/component/remote_view/item_zoom, focused_on = selected_camera, vconfig_path = /datum/remote_view_config/camera_standard, our_item = src, viewsize = null, tileoffset = 0, show_visible_messages = TRUE)
+	user.AddComponent(/datum/component/remote_view, focused_on = selected_camera, vconfig_path = /datum/remote_view_config/camera_standard, managing_item = src, viewsize = null, tileoffset = 0, show_visible_messages = TRUE)
 
 /obj/item/bug_monitor/proc/can_use_cam(mob/user)
 	if(!cameras.len)
@@ -228,7 +227,6 @@
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pda"
 	item_state = "electronic"
-	origin_tech = list(TECH_DATA = 1, TECH_ENGINEERING = 1, TECH_ILLEGAL = 3)
 
 /obj/item/bug_monitor/spy/examine(mob/user)
 	. = ..()

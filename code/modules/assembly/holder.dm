@@ -13,7 +13,7 @@
 	var/obj/item/assembly/a_right = null
 	var/obj/special_assembly = null
 
-/obj/item/assembly_holder/proc/attach(var/obj/item/assembly/D, var/obj/item/assembly/D2, var/mob/user)
+/obj/item/assembly_holder/proc/attach(obj/item/assembly/D, obj/item/assembly/D2, mob/user)
 	if(!D || !D2)
 		return FALSE
 
@@ -83,6 +83,7 @@
 		a_right.HasProximity(T, WF, old_loc)
 
 /obj/item/assembly_holder/Crossed(atom/movable/AM as mob|obj)
+	. = ..()
 	if(AM.is_incorporeal())
 		return
 	if(a_left)
@@ -108,7 +109,7 @@
 		a_right.holder_movement()
 	..()
 
-/obj/item/assembly_holder/attackby(var/obj/item/W, var/mob/user)
+/obj/item/assembly_holder/attackby(obj/item/W, mob/user)
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(!a_left || !a_right)
 			to_chat(user, span_warning(" BUG:Assembly part missing, please report this!"))
@@ -125,8 +126,11 @@
 	else
 		..()
 
-/obj/item/assembly_holder/attack_self(var/mob/user)
-	src.add_fingerprint(user)
+/obj/item/assembly_holder/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	add_fingerprint(user)
 	if(src.secured)
 		if(!a_left || !a_right)
 			to_chat(user, span_warning(" BUG:Assembly part missing, please report this!"))
@@ -153,7 +157,7 @@
 			a_right.forceMove(T)
 		qdel(src)
 
-/obj/item/assembly_holder/proc/process_activation(var/obj/D, var/normal = 1)
+/obj/item/assembly_holder/proc/process_activation(obj/D, normal = 1)
 	if(!D)
 		return 0
 	if(!secured)
@@ -220,12 +224,12 @@
 		if(tmr.timing)
 			to_chat(usr, span_notice("Clock is ticking already."))
 		else
-			var/ntime = tgui_input_number(usr, "Enter desired time in seconds", "Time", "5", 1000, 0)
-			if (ntime>0 && ntime<1000)
+			var/ntime = tgui_input_number(usr, "Enter desired time in seconds", "Time", 5, 1000, 0)
+			if (ntime > 0 && ntime < 1000)
 				tmr.time = ntime
 				name = initial(name) + "([tmr.time] secs)"
 				to_chat(usr, span_notice("Timer set to [tmr.time] seconds."))
 			else
-				to_chat(usr, span_notice("Timer can't be [ntime<=0?"negative":"more than 1000 seconds"]."))
+				to_chat(usr, span_notice("Timer can't be [ntime <= 0 ? "negative" : "more than 1000 seconds"]."))
 	else
-		to_chat(usr, span_notice("You cannot do this while [usr.stat?"unconscious/dead":"restrained"]."))
+		to_chat(usr, span_notice("You cannot do this while [usr.stat ? "unconscious/dead" : "restrained"]."))

@@ -163,7 +163,7 @@
 	. += ""
 	. += "Affinity: [round(affinity)]"
 
-/mob/living/simple_mob/vore/overmap/stardog/start_pulling(var/atom/movable/AM)
+/mob/living/simple_mob/vore/overmap/stardog/start_pulling(atom/movable/AM)
 	if(!istype(loc, /turf/unsimulated/map))	//Don't pull stuff on the overmap
 		..()
 
@@ -369,8 +369,7 @@
 	icon = 'icons/turf/fur.dmi'
 	icon_state = "fur0"
 	edge_blending_priority = 4
-	initial_flooring = /decl/flooring/fur
-	can_dig = FALSE
+	initial_flooring = /datum/decl/flooring/fur
 	var/tree_chance = 25
 	var/tree_color = null
 	var/tree_type = /obj/structure/flora/tree/fur
@@ -503,7 +502,7 @@
 				if(M.read_preference(/datum/preference/toggle/subtle_sounds))
 					M << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
 
-/decl/flooring/fur
+/datum/decl/flooring/fur
 	name = "fur"
 	desc = "Thick, silky fur!"
 	icon = 'icons/turf/fur.dmi'
@@ -915,7 +914,7 @@
 	requires_power = 0
 	spawnstuff = FALSE
 
-/area/redgate/stardog/flesh_abyss/play_ambience(var/mob/living/L, initial = TRUE)
+/area/redgate/stardog/flesh_abyss/play_ambience(mob/living/L, initial = TRUE)
 	if(!L.check_sound_preference(/datum/preference/toggle/digestion_noises))
 		return
 	..()
@@ -1346,10 +1345,9 @@
 	teleport_message = span_notice("The thundering drum of the dog's heart beat throbs all around you, while the sweltering heat of its body soaks into you. It's soft and wet as a symphony of gurgles and glorps fills the steamy air!")
 
 /obj/effect/dog_teleporter/food_gobbler/Crossed(atom/movable/AM)
-
+	. = ..()
 	if(istype(AM, /obj/item/reagent_containers/food))
 		gobble_food(AM)
-	else return	..()
 
 /obj/effect/dog_teleporter/food_gobbler/proc/gobble_food(obj/item/I)
 	if(!isitem(I))
@@ -1364,7 +1362,8 @@
 		playsound(src, teleport_sound, vol = 100, vary = 1, preference = /datum/preference/toggle/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
 		visible_message(span_warning("The dog gobbles up \the [I]!"))
 		if(dog.client)
-			to_chat(dog, span_notice("[I.thrower ? "\The [I.thrower]" : "Someone"] feeds \the [I] to you!"))
+			var/mob/thrower = I.throwing?.get_thrower()
+			to_chat(dog, span_notice("[thrower ? "\The [thrower]" : "Someone"] feeds \the [I] to you!"))
 		qdel(I)
 		GLOB.items_digested_roundstat++
 
@@ -1436,7 +1435,7 @@
 		START_PROCESSING(SSturfs, src)
 		we_process = TRUE
 
-/turf/simulated/floor/water/digestive_enzymes/hitby(atom/movable/source)
+/turf/simulated/floor/water/digestive_enzymes/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	if(digest_stuff(source) && !we_process)
 		START_PROCESSING(SSturfs, src)
 		we_process = TRUE
@@ -1445,6 +1444,11 @@
 	if(!digest_stuff())
 		we_process = FALSE
 		return PROCESS_KILL
+
+/turf/simulated/floor/water/digestive_enzymes/Destroy()
+	if(we_process)
+		STOP_PROCESSING(SSturfs, src)
+	. = ..()
 
 /turf/simulated/floor/water/digestive_enzymes/proc/can_digest(atom/movable/digest_target)
 	. = FALSE
@@ -1503,7 +1507,7 @@
 		var/mob/living/carbon/human/H = thing
 		if(!H)
 			return
-		visible_message(runemessage = "blub...")
+		balloon_alert_visible("*blub...*")
 		if(H.stat == DEAD)
 			H.unacidable = TRUE	//Don't touch this one again, we're gonna delete it in a second
 			H.release_vore_contents()
@@ -1533,7 +1537,7 @@
 		var/mob/living/L = thing
 		if(!L)
 			return
-		visible_message(runemessage = "blub...")
+		balloon_alert_visible("*blub...*")
 		if(L.stat == DEAD)
 			L.unacidable = TRUE	//Don't touch this one again, we're gonna delete it in a second
 			L.release_vore_contents()
@@ -1566,7 +1570,7 @@
 	if(!we_process)
 		START_PROCESSING(SSturfs, src)
 
-/turf/simulated/floor/flesh/mover/hitby(atom/movable/source)
+/turf/simulated/floor/flesh/mover/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	if(!we_process)
 		START_PROCESSING(SSturfs, src)
 

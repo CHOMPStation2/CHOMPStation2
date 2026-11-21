@@ -170,9 +170,11 @@
 	icon = 'icons/obj/egg.dmi'
 	icon_state = "egg_slimeglob"
 
-	origin_tech = list(TECH_BIO = 10)
 
-/obj/item/royal_spider_egg/attack_self(mob/user as mob)
+/obj/item/royal_spider_egg/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/response = tgui_alert(user, "Are you sure you want to release the royal spiderling right now? It appears ready to imprint the moment its born.", "Royal Spider Egg", list("Yes", "No"))
 
 	if(response == "Yes")

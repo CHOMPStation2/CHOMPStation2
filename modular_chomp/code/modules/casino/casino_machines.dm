@@ -5,7 +5,7 @@
 	icon_state = "deluxe_dispenser"
 	ui_title = "Deluxe Drink Dispenser"
 	accept_drinking = 1
-	max_catriges = 90 //Because it keeps getting borked by upstream, now gotta do it with variable until we can make more permanent solution - Jack
+	max_cartridges = 90 //Because it keeps getting borked by upstream, now gotta do it with variable until we can make more permanent solution - Jack
 
 
 /obj/machinery/chemical_dispenser/deluxe

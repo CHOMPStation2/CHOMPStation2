@@ -23,7 +23,7 @@
 
 	var/ghostimage = null
 	var/datum/visualnet/visualnet
-	var/use_static = TRUE
+	var/use_visibility = TRUE
 	var/static_visibility_range = 16
 
 /mob/observer/eye/Initialize(mapload)
@@ -58,7 +58,7 @@
 
 // Use this when setting the eye's location.
 // It will also stream the chunk that the new loc is in.
-/mob/observer/eye/proc/setLoc(var/T)
+/mob/observer/eye/proc/setLoc(T)
 	if(owner)
 		T = get_turf(T)
 		if(T != loc)
@@ -69,8 +69,8 @@
 				visualnet.updateVisibility(owner, 0)
 				owner.loc = loc
 				visualnet.updateVisibility(owner, 0)
-			if(use_static)
-				visualnet.visibility(src, owner.client)
+			if(use_visibility)
+				SScameras.update_eye_chunk(src)
 			return 1
 	return 0
 

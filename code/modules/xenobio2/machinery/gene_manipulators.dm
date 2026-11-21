@@ -20,7 +20,10 @@
 	var/list/genes = list()
 	var/genesource = "unknown"
 
-/obj/item/disk/xenobio/attack_self(var/mob/user as mob)
+/obj/item/disk/xenobio/attack_self(mob/user as mob)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(genes.len)
 		var/choice = tgui_alert(user, "Are you sure you want to wipe the disk?", "Xenobiological Data", list("No", "Yes"))
 		if(src && user && genes && choice && choice == "Yes" && user.Adjacent(get_turf(src)))
@@ -142,15 +145,15 @@
 		return
 	..()
 
-/obj/machinery/xenobio/extractor/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
+/obj/machinery/xenobio/extractor/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 1)
 	if(!user)
 		return
 
 	var/list/data = list()
 
 	var/list/geneMasks[0]
-	for(var/gene_tag in xenobio_controller.gene_tag_masks)
-		geneMasks.Add(list(list("tag" = gene_tag, "mask" = xenobio_controller.gene_tag_masks[gene_tag])))
+	for(var/gene_tag in GLOB.xenobio_controller.gene_tag_masks)
+		geneMasks.Add(list(list("tag" = gene_tag, "mask" = GLOB.xenobio_controller.gene_tag_masks[gene_tag])))
 	data["geneMasks"] = geneMasks
 
 	data["activity"] = active
@@ -228,8 +231,8 @@
 
 		loaded_disk.genesource = "[genetics.source]"
 
-		loaded_disk.name += " ([xenobio_controller.gene_tag_masks[href_list["get_gene"]]], [genetics.source])"
-		loaded_disk.desc += " The label reads \'gene [xenobio_controller.gene_tag_masks[href_list["get_gene"]]], sampled from [genetics.source]\'."
+		loaded_disk.name += " ([GLOB.xenobio_controller.gene_tag_masks[href_list["get_gene"]]], [genetics.source])"
+		loaded_disk.desc += " The label reads \'gene [GLOB.xenobio_controller.gene_tag_masks[href_list["get_gene"]]], sampled from [genetics.source]\'."
 		eject_disk = 1
 
 		degradation += rand(20,60)
@@ -282,7 +285,7 @@
 	..()
 
 
-/obj/machinery/xenobio/editor/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
+/obj/machinery/xenobio/editor/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 1)
 
 	if(!user)
 		return
@@ -303,7 +306,7 @@
 
 		for(var/datum/xeno/genes/X in loaded_disk.genes)
 			if(data["locus"] != "") data["locus"] += ", "
-			data["locus"] += "[xenobio_controller.gene_tag_masks[X.genetype]]"
+			data["locus"] += "[GLOB.xenobio_controller.gene_tag_masks[X.genetype]]"
 
 	else
 		data["disk"] = 0
@@ -357,7 +360,7 @@
 		return
 	move_into_editor(user,target)
 
-/obj/machinery/xenobio/editor/proc/move_into_editor(var/mob/user,var/mob/living/victim)
+/obj/machinery/xenobio/editor/proc/move_into_editor(mob/user,mob/living/victim)
 
 	if(src.occupant)
 		to_chat(user, span_danger("The [src] is full, empty it first!"))
@@ -391,7 +394,6 @@
 	name = T_BOARD("biological product destructive analyzer")
 	build_path = "/obj/machinery/xenobio/extractor"
 	board_type = "machine"
-	origin_tech = list(TECH_DATA = 4, TECH_BIO = 4)
 	req_components = list(
 							/obj/item/stock_parts/manipulator = 2,
 							/obj/item/stock_parts/matter_bin = 1,
@@ -402,7 +404,6 @@
 	name = T_BOARD("biological genetic bombarder")
 	build_path = "/obj/machinery/xenobio/editor"
 	board_type = "machine"
-	origin_tech = list(TECH_DATA = 4, TECH_BIO = 4)
 	req_components = list(
 							/obj/item/stock_parts/manipulator = 2,
 							/obj/item/stock_parts/matter_bin = 2,

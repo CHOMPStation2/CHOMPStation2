@@ -2,7 +2,7 @@
  * Donut Box
  */
 
-var/list/random_weighted_donuts = list(
+GLOBAL_LIST_INIT(random_weighted_donuts, list(
 	/obj/item/reagent_containers/food/snacks/donut/plain = 5,
 	/obj/item/reagent_containers/food/snacks/donut/plain/jelly = 5,
 	/obj/item/reagent_containers/food/snacks/donut/pink = 4,
@@ -26,7 +26,7 @@ var/list/random_weighted_donuts = list(
 	/obj/item/reagent_containers/food/snacks/donut/choc_sprinkles = 3,
 	/obj/item/reagent_containers/food/snacks/donut/choc_sprinkles/jelly = 3,
 	/obj/item/reagent_containers/food/snacks/donut/chaos = 1
-)
+))
 
 /obj/item/storage/box/donut
 	icon = 'icons/obj/food_donuts.dmi'
@@ -43,7 +43,7 @@ var/list/random_weighted_donuts = list(
 /obj/item/storage/box/donut/Initialize(mapload)
 	if(!empty)
 		for(var/i in 1 to 6)
-			var/type_to_spawn = pickweight(random_weighted_donuts)
+			var/type_to_spawn = pickweight(GLOB.random_weighted_donuts)
 			new type_to_spawn(src)
 	. = ..()
 	update_icon()
@@ -77,7 +77,7 @@ var/list/random_weighted_donuts = list(
 	. = ..()
 	update_icon()
 
-/obj/item/storage/box/wormcan/update_icon(var/itemremoved = 0)
+/obj/item/storage/box/wormcan/update_icon(itemremoved = 0)
 	if (contents.len == 0)
 		icon_state = "wormcan_empty"
 
@@ -88,7 +88,7 @@ var/list/random_weighted_donuts = list(
 	max_storage_space = ITEMSIZE_COST_TINY * 6
 	starts_with = list(/obj/item/reagent_containers/food/snacks/wormsickly = 6)
 
-/obj/item/storage/box/wormcan/sickly/update_icon(var/itemremoved = 0)
+/obj/item/storage/box/wormcan/sickly/update_icon(itemremoved = 0)
 	if (contents.len == 0)
 		icon_state = "wormcan_empty_sickly"
 
@@ -99,6 +99,6 @@ var/list/random_weighted_donuts = list(
 	max_storage_space = ITEMSIZE_COST_TINY * 6
 	starts_with = list(/obj/item/reagent_containers/food/snacks/wormdeluxe = 6)
 
-/obj/item/storage/box/wormcan/deluxe/update_icon(var/itemremoved = 0)
+/obj/item/storage/box/wormcan/deluxe/update_icon(itemremoved = 0)
 	if (contents.len == 0)
 		icon_state = "wormcan_empty_deluxe"

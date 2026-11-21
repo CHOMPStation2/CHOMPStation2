@@ -5,7 +5,6 @@
 //renaming CHmecha for Chomp mecha to allow for more to be made if needed.
 
 /obj/item/circuitboard/mecha/scarab
-		origin_tech = list(TECH_DATA = 4)
 
 /obj/item/circuitboard/mecha/scarab/peripherals
 		name = T_BOARD_CHMECHA("Scarab peripherals control")
@@ -14,7 +13,6 @@
 /obj/item/circuitboard/mecha/scarab/targeting
 		name = T_BOARD_CHMECHA("Scarab weapon control and targeting")
 		icon_state = "mcontroller"
-		origin_tech = list(TECH_DATA = 4, TECH_COMBAT = 4)
 
 /obj/item/circuitboard/mecha/scarab/main
 		name = T_BOARD_CHMECHA("Scarab central control")

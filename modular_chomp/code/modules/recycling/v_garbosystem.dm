@@ -151,7 +151,7 @@ GLOBAL_VAR_INIT(Recycled_Items, 0)
 			playsound(src, 'sound/items/electronic_assembly_emptying.ogg', 50, 1)
 			playsound(src, 'sound/effects/metalscrape2.ogg', 50, 1)
 
-/obj/machinery/v_garbosystem/emag_act(var/remaining_charges, var/mob/user, var/emag_source)
+/obj/machinery/v_garbosystem/emag_act(remaining_charges, mob/user, emag_source)
 	emagged = !emagged
 	update()
 
@@ -166,14 +166,14 @@ GLOBAL_VAR_INIT(Recycled_Items, 0)
 			to_chat(user, span_warning("Unable to empty filter while the machine is running."))
 	return ..()
 
-/obj/machinery/v_garbosystem/proc/transfer_reagent_to_tank(var/datum/reagents/reg,var/multiplier)
+/obj/machinery/v_garbosystem/proc/transfer_reagent_to_tank(datum/reagents/reg,multiplier)
 	var/volume_magic = reg.total_volume * multiplier
 	volume_magic -= rand(2,10) // reagent tax
 	if(volume_magic > 0)
 		reg.trans_to_holder( reagents, volume_magic)
 		transfer_sludge_to_tank(rand(1,5))
 
-/obj/machinery/v_garbosystem/proc/transfer_ore_to_tank(var/obj/item/ore/R,var/multiplier)
+/obj/machinery/v_garbosystem/proc/transfer_ore_to_tank(obj/item/ore/R,multiplier)
 	if(GLOB.ore_reagents[R.type])
 		var/list/ore_components = GLOB.ore_reagents[R.type]
 		if(islist(ore_components))
@@ -184,7 +184,7 @@ GLOBAL_VAR_INIT(Recycled_Items, 0)
 			reagents.add_reagent(ore_components, REAGENTS_PER_ORE * multiplier)
 		transfer_sludge_to_tank(rand(1,5))
 
-/obj/machinery/v_garbosystem/proc/transfer_sludge_to_tank(var/amt)
+/obj/machinery/v_garbosystem/proc/transfer_sludge_to_tank(amt)
 	if(prob(10) || amt >= 5)
 		reagents.add_reagent(REAGENT_ID_TOXIN, amt)
 		visible_message("\The [src] gurgles.")

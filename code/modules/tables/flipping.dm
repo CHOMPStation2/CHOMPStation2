@@ -1,5 +1,5 @@
 
-/obj/structure/table/proc/straight_table_check(var/direction)
+/obj/structure/table/proc/straight_table_check(direction)
 	if(health > 100)
 		return 0
 	var/obj/structure/table/T
@@ -18,7 +18,8 @@
 	set category = "Object"
 	set src in oview(1)
 
-	if (!can_touch(usr) || ismouse(usr))
+
+	if (!can_touch(usr) || HAS_TRAIT(usr, TRAIT_AMBIENT_PEST_MOB))
 		return
 
 	if(flipped < 0 || !flip(get_cardinal_dir(usr,src)))
@@ -31,7 +32,7 @@
 
 	return
 
-/obj/structure/table/proc/unflipping_check(var/direction)
+/obj/structure/table/proc/unflipping_check(direction)
 
 	for(var/mob/M in oview(src,0))
 		return 0
@@ -68,7 +69,7 @@
 		return
 	unflip()
 
-/obj/structure/table/proc/flip(var/direction)
+/obj/structure/table/proc/flip(direction)
 	if( !straight_table_check(turn(direction,90)) || !straight_table_check(turn(direction,-90)) )
 		return 0
 

@@ -20,15 +20,15 @@
 	attack_armor_pen = 50 //fist of iron and stone will smash through most things
 	attacktext = list("smashed their armoured gauntlet into")
 	friendly = list("pats")
-	organ_names = /decl/mob_organ_names/juggernaut
+	organ_names = /datum/decl/mob_organ_names/juggernaut
 	mob_size = MOB_HUGE
 	attack_sound = 'sound/weapons/heavysmash.ogg'
 	status_flags = 0
 	resistance = 10
-	construct_spells = list(/spell/targeted/fortify,
-							/spell/targeted/construct_advanced/slam,
-							/spell/targeted/construct_advanced/mend_purity,
-							/spell/targeted/purity_repair_aura
+	construct_spells = list(/datum/spell/targeted/fortify,
+							/datum/spell/targeted/construct_advanced/slam,
+							/datum/spell/targeted/construct_advanced/mend_purity,
+							/datum/spell/targeted/purity_repair_aura
 							)
 
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative
@@ -46,7 +46,7 @@
 	SetWeakened(0)
 	..()
 
-/mob/living/simple_mob/construct/cardinal/bullet_act(var/obj/item/projectile/P)
+/mob/living/simple_mob/construct/cardinal/bullet_act(obj/item/projectile/P)
 	var/reflectchance = 100 - round(P.damage)
 	if(prob(reflectchance))
 		var/damage_mod = rand(2,4)
@@ -86,5 +86,5 @@
 
 	return (..(P))
 
-/decl/mob_organ_names/juggernaut
+/datum/decl/mob_organ_names/juggernaut
 	hit_zones = list("body", "left pauldron", "right pauldron", "left arm", "right arm", "eye", "head", "crystaline spike")

@@ -16,7 +16,7 @@
 	show_messages = 1
 	matter = list(MAT_FIBERS = 50) //CHOMPAdd
 
-	/// List of objects which this item can store (if set, it can't store anything else)
+	/// List of objects which this item can store (if set, it can't store anything else). Becomes linked to a global list after init. See: update_storage_filters()
 	var/list/can_hold
 	/// List of objects which this item can't store (in effect only if can_hold isn't set)
 	var/list/cant_hold
@@ -52,6 +52,8 @@
 	var/empty //Mapper override to spawn an empty version of a container that usually has stuff
 	/// If you can use this storage while in a pocket
 	var/pocketable = FALSE
+	/// Used for attack_self chain
+	var/special_handling = FALSE
 
 /obj/item/storage/Initialize(mapload)
 	. = ..()
@@ -69,30 +71,30 @@
 	if(storage_slots)
 		src.boxes = new /atom/movable/screen/storage(  )
 		src.boxes.name = "storage"
-		src.boxes.master = src
+		src.boxes.master_ref = WEAKREF(src)
 		src.boxes.icon_state = "block"
 		src.boxes.screen_loc = "7,7 to 10,8"
 	else
 		src.storage_start = new /atom/movable/screen/storage(  )
 		src.storage_start.name = "storage"
-		src.storage_start.master = src
+		src.storage_start.master_ref = WEAKREF(src)
 		src.storage_start.icon_state = "storage_start"
 		src.storage_start.screen_loc = "7,7 to 10,8"
 
 		src.storage_continue = new /atom/movable/screen/storage(  )
 		src.storage_continue.name = "storage"
-		src.storage_continue.master = src
+		src.storage_continue.master_ref = WEAKREF(src)
 		src.storage_continue.icon_state = "storage_continue"
 		src.storage_continue.screen_loc = "7,7 to 10,8"
 
 		src.storage_end = new /atom/movable/screen/storage(  )
 		src.storage_end.name = "storage"
-		src.storage_end.master = src
+		src.storage_end.master_ref = WEAKREF(src)
 		src.storage_end.icon_state = "storage_end"
 		src.storage_end.screen_loc = "7,7 to 10,8"
 
 	src.closer = new /atom/movable/screen/close(  )
-	src.closer.master = src
+	src.closer.master_ref = WEAKREF(src)
 	src.closer.icon_state = "storage_close"
 	src.closer.hud_layerise()
 	orient2hud()
@@ -107,6 +109,8 @@
 		update_icon()
 
 	calibrate_size()
+
+	can_hold = update_storage_filters(src, can_hold)
 
 /obj/item/storage/Destroy()
 	close_all()
@@ -145,7 +149,7 @@
 		if(!(loc == user) || (loc && loc.loc == user))
 			return
 
-		if(user.restrained() || user.stat || user.is_paralyzed() || !user.incapacitated(INCAPACITATION_KNOCKOUT))
+		if(user.restrained() || user.stat || user.is_paralyzed() || user.incapacitated(INCAPACITATION_KNOCKOUT))
 			return
 
 		if((loc == user) && !(istype(over_object, /atom/movable/screen)) && !user.unEquip(src))
@@ -300,7 +304,7 @@
 	return
 
 //This proc draws out the inventory and places the items on it. It uses the standard position.
-/obj/item/storage/proc/slot_orient_objs(var/rows, var/cols, var/list/obj/item/display_contents)
+/obj/item/storage/proc/slot_orient_objs(rows, cols, list/obj/item/display_contents)
 	var/cx = 4
 	var/cy = 2+rows
 	src.boxes.screen_loc = "4:16,2:16 to [4+cols]:16,[2+rows]:16"
@@ -332,7 +336,7 @@
 	src.closer.screen_loc = "[4+cols+1]:16,2:16"
 	return
 
-/obj/item/storage/proc/space_orient_objs(var/list/obj/item/display_contents)
+/obj/item/storage/proc/space_orient_objs(list/obj/item/display_contents)
 	SHOULD_NOT_SLEEP(TRUE)
 
 	/// A prototype for drawing the leftmost border behind each item in storage
@@ -703,11 +707,16 @@
 		total_storage_space += I.get_storage_cost()
 	max_storage_space = max(total_storage_space,max_storage_space) //Prevents spawned containers from being too small for their contents.
 
-/obj/item/storage/attack_self(mob/user as mob)
+/obj/item/storage/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
 	if((user.get_active_hand() == src) || (isrobot(user)) && allow_quick_empty)
 		if(src.verbs.Find(/obj/item/storage/verb/quick_empty))
 			src.quick_empty()
-			return 1
+			return TRUE
 
 //Returns the storage depth of an atom. This is the number of storage items the atom is contained in before reaching toplevel (the area).
 //Returns -1 if the atom was not found on container.
@@ -793,6 +802,7 @@
 		)
 	var/open_state
 	var/closed_state
+	special_handling = TRUE
 
 /obj/item/storage/trinketbox/update_icon()
 	cut_overlays()
@@ -819,10 +829,12 @@
 		closed_state = "[initial(icon_state)]"
 	. = ..()
 
-/obj/item/storage/trinketbox/attack_self()
+/obj/item/storage/trinketbox/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	open = !open
 	update_icon()
-	..()
 
 /obj/item/storage/trinketbox/examine(mob/user)
 	. = ..()
@@ -834,7 +846,7 @@
 	return TRUE
 
 //Useful for spilling the contents of containers all over the floor
-/obj/item/storage/proc/spill(var/dist = 2, var/turf/T = null)
+/obj/item/storage/proc/spill(dist = 2, turf/T = null)
 	if (!istype(T))//If its not on the floor this might cause issues
 		T = get_turf(src)
 

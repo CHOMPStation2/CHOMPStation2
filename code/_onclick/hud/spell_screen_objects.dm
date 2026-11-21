@@ -36,7 +36,7 @@
 
 	toggle_open()
 
-/atom/movable/screen/movable/spell_master/proc/toggle_open(var/forced_state = 0)
+/atom/movable/screen/movable/spell_master/proc/toggle_open(forced_state = 0)
 	if(showing && (forced_state != 2))
 		for(var/atom/movable/screen/spell/O in spell_objects)
 			if(spell_holder && spell_holder.client)
@@ -74,7 +74,7 @@
 			spell_holder.client.screen += S
 			S.handle_icon_updates = 1
 
-/atom/movable/screen/movable/spell_master/proc/add_spell(var/spell/spell)
+/atom/movable/screen/movable/spell_master/proc/add_spell(datum/spell/spell)
 	if(!spell) return
 
 	if(spell.connected_button) //we have one already, for some reason
@@ -108,7 +108,7 @@
 	if(spell_holder.client)
 		toggle_open(2) //forces the icons to refresh on screen
 
-/atom/movable/screen/movable/spell_master/proc/remove_spell(var/spell/spell)
+/atom/movable/screen/movable/spell_master/proc/remove_spell(datum/spell/spell)
 	qdel(spell.connected_button)
 
 	spell.connected_button = null
@@ -118,7 +118,7 @@
 	else
 		qdel(src)
 
-/atom/movable/screen/movable/spell_master/proc/silence_spells(var/amount)
+/atom/movable/screen/movable/spell_master/proc/silence_spells(amount)
 	for(var/atom/movable/screen/spell/spell in spell_objects)
 		spell.spell.silenced = amount
 		spell.update_charge(1)
@@ -155,7 +155,7 @@
 	var/spell_base = "wiz"
 	var/last_charge = 0 //not a time, but the last remembered charge value
 
-	var/spell/spell = null
+	var/datum/spell/spell = null
 	var/handle_icon_updates = 0
 	var/atom/movable/screen/movable/spell_master/spellmaster
 
@@ -173,7 +173,7 @@
 		qdel(spellmaster)
 	spellmaster = null
 
-/atom/movable/screen/spell/proc/update_charge(var/forced_update = 0)
+/atom/movable/screen/spell/proc/update_charge(forced_update = 0)
 	if(!spell)
 		qdel(src)
 		return

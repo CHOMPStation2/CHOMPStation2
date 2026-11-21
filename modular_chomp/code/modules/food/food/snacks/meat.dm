@@ -90,94 +90,79 @@
 
 
 //ant meats
-/obj/item/reagent_containers/food/snacks/tyrant
-	name = "Bronze Ant Slice"
+/obj/item/reagent_containers/food/snacks/tyrant_shock
+	name = "Shocking Ant Slice"
 	desc = "A slice from a ant"
 	icon_state = "meat"
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_SHOCKCHEM = 3)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 5, REAGENT_ID_SHOCKCHEM = 5)
 	bitesize = 1
 
 /obj/item/reagent_containers/food/snacks/copperant/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
-	reagents.add_reagent(REAGENT_ID_SHOCKCHEM, 3)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
+	reagents.add_reagent(REAGENT_ID_SHOCKCHEM, 5)
 
-/obj/item/reagent_containers/food/snacks/copperant
-	name = "Copper Ant Slice"
-	desc = "A slice from a ant"
-	icon_state = "meat"
-	center_of_mass_x = 17 //CHOMPEdit
-	center_of_mass_y= 16 //CHOMPEdit
-	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_SHOCKCHEM = 3)
-	bitesize = 1
-
-/obj/item/reagent_containers/food/snacks/copperant/Initialize(mapload)
-	. = ..()
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
-	reagents.add_reagent(REAGENT_ID_SHOCKCHEM, 3)
-
-/obj/item/reagent_containers/food/snacks/painiteant
+/obj/item/reagent_containers/food/snacks/tyrant_neoburn
 	name = "Painite Ant Slice"
 	desc = "A slice from a ant"
 	icon_state = "meat"
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_NEOLIQUIDFIRE = 3)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 5, REAGENT_ID_NEOLIQUIDFIRE = 5)
 	bitesize = 1
 
 /obj/item/reagent_containers/food/snacks/painiteant/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
-	reagents.add_reagent(REAGENT_ID_NEOLIQUIDFIRE,  3)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
+	reagents.add_reagent(REAGENT_ID_NEOLIQUIDFIRE, 5)
 
 
-/obj/item/reagent_containers/food/snacks/bronzeant
+/obj/item/reagent_containers/food/snacks/tyrant_burn
 	name = "Bronze Ant Slice"
 	desc = "A slice from a ant"
 	icon_state = "meat"
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_LIQUIDFIRE = 3)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 5, REAGENT_ID_LIQUIDFIRE = 5)
 	bitesize = 1
 
-/obj/item/reagent_containers/food/snacks/bronzeant/Initialize(mapload)
+/obj/item/reagent_containers/food/snacks/tyrant_burn/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
-	reagents.add_reagent(REAGENT_ID_LIQUIDFIRE, 3)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
+	reagents.add_reagent(REAGENT_ID_LIQUIDFIRE, 5)
 
-/obj/item/reagent_containers/food/snacks/quartzant
+/obj/item/reagent_containers/food/snacks/tyrant_radiation
 	name = "Quartz Ant Slice"
 	desc = "A slice from a ant"
 	icon_state = "meat"
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_DEATHBLOOD = 3)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 5, REAGENT_ID_DEATHBLOOD = 5)
 	bitesize = 1
 
-/obj/item/reagent_containers/food/snacks/quartzant/Initialize(mapload)
+/obj/item/reagent_containers/food/snacks/tyrant_radiation/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
-	reagents.add_reagent(REAGENT_ID_DEATHBLOOD, 3)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
+	reagents.add_reagent(REAGENT_ID_DEATHBLOOD, 5)
 
-/obj/item/reagent_containers/food/snacks/agateant
+/obj/item/reagent_containers/food/snacks/tyrant_bonus
 	name = "Agate Ant Slice"
 	desc = "A slice from a ant"
 	icon_state = "meat"
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_LIQUIDLIFE = 3)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 5, REAGENT_ID_LIQUIDLIFE = 5)
 	bitesize = 1
 
-/obj/item/reagent_containers/food/snacks/agateant/Initialize(mapload)
+/obj/item/reagent_containers/food/snacks/tyrant_bonus/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
-	reagents.add_reagent(REAGENT_ID_LIQUIDLIFE, 3)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
+	reagents.add_reagent(REAGENT_ID_LIQUIDLIFE, 5)
 

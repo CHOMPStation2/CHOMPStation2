@@ -7,7 +7,7 @@
 	unacidable = TRUE //glass
 	center_of_mass_x = 16
 	center_of_mass_y = 10
-	matter = list(MAT_GLASS = 500)
+	matter = list(MAT_GLASS = MATERIAL_COST(0.25))
 	icon = 'icons/obj/drinks.dmi'
 
 /obj/item/reagent_containers/food/drinks/metaglass/metapint
@@ -71,11 +71,7 @@ Drinks Data
 */
 
 /datum/reagent
-	var/glass_icon_file = null
-	var/glass_icon_state = null
-	var/glass_center_of_mass_x = 0
-	var/glass_center_of_mass_y = 0
-	var/glass_icon_source = null //CHOMP A way for us to have metaglass identify and decide which dmi it wants to grab sprites from - Jack
+	var/glass_icon_source = null //CHOMPEdit A way for us to have metaglass identify and decide which dmi it wants to grab sprites from - Jack
 
 /datum/reagent/adminordrazine
 	glass_icon_state = "golden_cup"

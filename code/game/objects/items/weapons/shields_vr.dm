@@ -41,6 +41,9 @@
 //POURPEL WHY U NO COVER
 
 /obj/item/shield/riot/explorer/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(brightness_on)
 		if(!isturf(user.loc))
 			to_chat(user, "You cannot turn the light on while in this [user.loc]")
@@ -53,10 +56,8 @@
 			var/mob/living/carbon/human/H = user
 			H.update_inv_l_hand()
 			H.update_inv_r_hand()
-	else
-		return ..(user)
 
-/obj/item/shield/riot/explorer/proc/update_flashlight(var/mob/user = null)
+/obj/item/shield/riot/explorer/proc/update_flashlight(mob/user = null)
 	if(on && !light_applied)
 		set_light(brightness_on)
 		light_applied = 1

@@ -40,7 +40,6 @@
 	charge_cost = 160  //Chompedit Bringing charge cost down for all phase weapons. 15 shots on normal cell
 	projectile_type = /obj/item/projectile/energy/phase/light
 	one_handed_penalty = 0
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/energy/locked/phasegun/pistol/unlocked
 	desc = "The RayZar EW15 Apollo, also known as the 'phase pistol', is an energy-based handgun specifically designed for self-defense against aggressive wildlife." //ChompEDIT

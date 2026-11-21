@@ -9,7 +9,7 @@
 	locked = 1
 	var/hackguard = 10
 
-/obj/structure/closet/crate/secure/lootsafe/emag_act(var/remaining_charges, var/mob/user)
+/obj/structure/closet/crate/secure/lootsafe/emag_act(remaining_charges, mob/user)
 	if (locked)
 		if(prob(60 - hackguard))
 			to_chat(user, span_notice("The safe unlocks!"))
@@ -145,7 +145,7 @@
 			explosion(T, 0, 0, 1, 2)
 			qdel(src)
 
-/obj/structure/closet/crate/secure/lootsafe/numberlock/proc/check_input(var/input)
+/obj/structure/closet/crate/secure/lootsafe/numberlock/proc/check_input(input)
 	if(length(input) != codelen)
 		return 0
 
@@ -247,7 +247,7 @@
 			explosion(T, 0, 0, 1, 2)
 			qdel(src)
 
-/obj/structure/closet/crate/secure/lootsafe/devillock/proc/check_input(var/input)
+/obj/structure/closet/crate/secure/lootsafe/devillock/proc/check_input(input)
 	if(length(input) != codelen)
 		return 0
 

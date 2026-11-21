@@ -2,16 +2,19 @@
 	name = "'Scarab' central control"
 	id = "scarab_main"
 	build_path = /obj/item/circuitboard/mecha/scarab/main
+	materials = DEFAULT_CIRCUIT_MATERIALS
 
 /datum/design_techweb/mechfab/scarab_peri
 	name = "'scarab' peripherals control"
 	id = "scarab_peri"
 	build_path = /obj/item/circuitboard/mecha/scarab/peripherals
+	materials = DEFAULT_CIRCUIT_MATERIALS
 
 /datum/design_techweb/mechfab/scarab_targ
 	name = "'Scarab' weapon control and targeting"
 	id = "scarab_targ"
 	build_path = /obj/item/circuitboard/mecha/scarab/targeting
+	materials = DEFAULT_CIRCUIT_MATERIALS
 
 /datum/design_techweb/mechfab/phazon_main
 	name = "'Phazon' central control"

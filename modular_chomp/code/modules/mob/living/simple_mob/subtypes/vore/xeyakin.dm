@@ -57,7 +57,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_GODTIER
 	industrial_use = REFINERYEXPORT_REASON_FOOD
 
-/datum/reagent/xeyakinblood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) //should proabaly make something more special but this isn't meant to be a proper chem
+/datum/reagent/xeyakinblood/affect_blood(mob/living/carbon/M, alien, removed) //should proabaly make something more special but this isn't meant to be a proper chem
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		M.adjustBruteLoss(12 * removed) //This will uber merc prometheans. It wants to turn them to crystal.

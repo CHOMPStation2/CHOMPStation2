@@ -48,7 +48,7 @@
 	B.name = "stomach"
 	B.desc = "It turns out that this was not just any old statue, but some form of android waiting for its chance to ambush you. The moment that it laid its hands on you, your fate was decided. The jaws of the machine parted, if you could call them that, and immediately enveloped your head. The inside was hot and slick, but dry. The textures were startlingly realistic, the base was clearly a tongue, the top palate of the mouth was hard but somewhat pliable. Not that you had time to admire it before the rest of your body was stuffed inside. Through a short passage down through a rubbery tube of a gullet, mechanical contractions squeezing you down from behind, you're quickly deposited in something much resembling a stomach. Amid the sounds of mechanical whirrs, you can heard glorping, gurgling and burbling from unknown sources. The walls wrap firmly around your body, deliberately dramping you up into the smallest space that the machine can crush you into, whilst the synthetic lining around you ripples across your hunched up form. You can even see yourself, the gut itself is backlit by some eerie red glow, just enough to tell exactly what is happening to you. It doesn't help that you can see the drooling fluids glistening in the dim light."
 	B.mode_flags = DM_FLAG_THICKBELLY
-	B.belly_fullscreen = "a_synth_flesh_mono_hole"
+	B.belly_fullscreen = "synth_flesh_mono_hole"
 	B.digest_brute = 2
 	B.digest_burn = 2
 	B.digest_oxy = 1
@@ -67,7 +67,7 @@
 	However, when lifeforms exist nearby, these oddly curvaceous devils spring to life, lighting up and attempting to devour all living things. We assume they reduce their targets to biofuel to sustain themselves, but they have been known to break their disguise when attacked to defend themselves."
 	value = CATALOGUER_REWARD_HARD
 
-/mob/living/simple_mob/vore/devil/PounceTarget(var/mob/living/M, var/successrate = 100)
+/mob/living/simple_mob/vore/devil/PounceTarget(mob/living/M, successrate = 100)
 	vore_pounce_cooldown = world.time + 1 SECONDS // don't attempt another pounce for a while
 	if(prob(successrate)) // pounce success!
 		M.Weaken(5)
@@ -140,7 +140,7 @@
 	give_target(new_target)
 	return new_target
 
-/datum/ai_holder/simple_mob/vore/devil/can_attack(atom/movable/the_target, var/vision_required = TRUE)
+/datum/ai_holder/simple_mob/vore/devil/can_attack(atom/movable/the_target, vision_required = TRUE)
 	ai_log("can_attack() : Entering.", AI_LOG_TRACE)
 	if(!can_see_target(the_target) && vision_required)
 		return FALSE

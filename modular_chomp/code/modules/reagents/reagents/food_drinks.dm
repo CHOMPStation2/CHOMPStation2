@@ -53,7 +53,7 @@
 	cup_name = "Medicinal tea cup"
 	color = "#00FF00"
 
-/datum/reagent/drink/tea/dyloteane/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drink/tea/dyloteane/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(M.ingested)
@@ -65,7 +65,7 @@
 			if(istype(R, /datum/reagent/ethanol))
 				R.remove_self(removed * 10)
 
-/datum/reagent/drink/tea/dyloteane/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drink/tea/dyloteane/affect_ingest(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1
 	if(alien != IS_DIONA)
 		M.drowsyness = max(0, M.drowsyness - 6 * removed * chem_effective)
@@ -134,7 +134,7 @@
 	glass_name = REAGENT_ID_LOWPOWER
 	glass_desc = "Smells, and tastes like lemon.. with a hint of Ozone, for whatever reason. It glows softly."
 
-/datum/reagent/drink/lowpower/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drink/lowpower/affect_ingest(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien == IS_DIONA)
 		return
@@ -150,7 +150,7 @@
 	glass_name = REAGENT_ID_HIGHPOWER
 	glass_desc = "A strange, softly crackling drink, smelling just like lightning's just struck, twice. It's rather difficult to make this without busting the lights."
 
-/datum/reagent/drink/highpower/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drink/highpower/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(prob(5))
@@ -171,7 +171,7 @@
 	glass_name = REAGENT_JACKBREW
 	glass_desc = "Irish coffee, and hyperzine. A common mix for panicked drinkers, EMTS, Paramedics, and CMOs alone on the job."
 
-/datum/reagent/ethanol/coffee/jackbrew/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethanol/coffee/jackbrew/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien == IS_TAJARA)
 		removed *= 1.25
 	if(alien == IS_SLIME)
@@ -196,7 +196,7 @@
 	glass_name = REAGENT_BOOKWYRM
 	glass_desc = "A cold lime mint drink. Dont drink to much or you might fall asleep."
 
-/datum/reagent/ethanol/bookwyrm/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethanol/bookwyrm/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 
@@ -253,6 +253,7 @@
 
 	glass_name = REAGENT_ID_OILSLIDE
 	glass_desc = "Tasty, if you're a synth, not so much for organics."
+	wiki_flag = WIKI_DRINK
 
 /datum/reagent/ethanol/sitonmyface
 	name = REAGENT_SITONMYFACE
@@ -291,7 +292,7 @@
 	cup_name = "cup of tea"
 	cup_desc = "Tasty green tea, it has antioxidants, it's good for you!"
 
-/datum/reagent/drink/freshtea/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drink/freshtea/affect_ingest(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien == IS_DIONA)
 		return
@@ -383,7 +384,7 @@
 	cup_name = "cup of matcha"
 	cup_desc = "Heavenly matcha. Good for body and spirit."
 
-/datum/reagent/drink/matcha/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drink/matcha/affect_ingest(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien == IS_DIONA)
 		return
@@ -489,10 +490,10 @@
 	glass_desc = "A freezing pint of delicious Araching Slammer, it foams constantly with the air crisp around it."
 	allergen_type = ALLERGEN_GRAINS //Barley is grain
 
-/datum/reagent/ethanol/arachnidslammer/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethanol/arachnidslammer/affect_ingest(mob/living/carbon/M, alien, removed)
 	.=..()
 	M.reagents.add_reagent(REAGENT_ID_INFUSEDARACHNIDSLAMMER, removed * 5)
-/datum/reagent/ethanol/arachnidslammer/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethanol/arachnidslammer/affect_blood(mob/living/carbon/M, alien, removed)
 	.=..()
 	M.reagents.add_reagent(REAGENT_ID_INFUSEDARACHNIDSLAMMER, removed * 5)
 
@@ -520,10 +521,12 @@
 
 	glass_name = "enraged arachnid slammer"
 	glass_desc = "A pint of Enraged Arachnid Slammer. It bubbles and sparkles fiercly as if it was in a berserking state!"
+
+	wiki_flag = WIKI_DRINK
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/infusedarachnidslammer/enragedarachnidslammer/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/infusedarachnidslammer/enragedarachnidslammer/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 
 	M.adjustOxyLoss(-1.5 * removed * chem_effective)
@@ -568,7 +571,7 @@
 	glass_name = REAGENT_FETCHINGFIZZ
 	glass_desc = "Induces magnetism in the imbiber. Started as a barroom prank but evolved to become popular with miners and scrappers. Metallic aftertaste."
 
-/datum/reagent/ethanol/fetching_fizz/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethanol/fetching_fizz/affect_ingest(mob/living/carbon/M, alien, removed)
 	for(var/obj/item/ore/O in orange(3, M))
 		step_towards(O, get_turf(M))
 
@@ -582,7 +585,7 @@
 	glass_name = REAGENT_HEARTYPUNCH
 	glass_desc = "Aromatic beverage served piping hot. According to folk tales it can almost wake the dead."
 
-/datum/reagent/ethanol/hearty_punch/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethanol/hearty_punch/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(M.health<=0)
 		M.adjustBruteLoss(-3 * removed)
 		M.adjustFireLoss(-3 * removed)
@@ -621,7 +624,7 @@
 	glass_name = REAGENT_CREVICESPIKE
 	glass_desc = "It'll either knock the drunkenness out of you or knock you out cold. Both, probably."
 
-/datum/reagent/ethanol/crevice_spike/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethanol/crevice_spike/affect_ingest(mob/living/carbon/M, alien, removed)
 	M.adjustBruteLoss(50 * removed)
 	for(var/datum/reagent/R in M.ingested.reagent_list)
 		if(istype(R, /datum/reagent/ethanol))
@@ -647,7 +650,7 @@
 	glass_name = REAGENT_MAUNALOA
 	glass_desc = "Lava in a drink... mug... volcano... thing."
 
-/datum/reagent/ethanol/mauna_loa/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethanol/mauna_loa/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(prob(10))
 		M.adjust_fire_stacks(5*removed)
 		M.ignite_mob()
@@ -699,5 +702,7 @@
 	description = "A dry mix for making delicious blondies."
 	reagent_state = SOLID
 	color = "#f3b44e"
+
+	wiki_flag = WIKI_FOOD
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_FOOD

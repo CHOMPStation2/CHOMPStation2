@@ -20,10 +20,10 @@
 		my_turf = get_turf(src)
 		moveToNullspace()
 
-/obj/landed_holder/proc/land_on(var/turf/T)
+/obj/landed_holder/proc/land_on(turf/T)
 	//Gather destination information
 	var/obj/landed_holder/new_holder = new(null)
-	T.lighting_clear_overlay() //CHOMP Add
+	T.lighting_clear_overlay()
 	new_holder.turf_type = T.type
 	new_holder.dir = T.dir
 	new_holder.icon = T.icon
@@ -34,12 +34,12 @@
 
 	//Set the destination to be like us
 	var/turf/simulated/shuttle/new_dest = T.ChangeTurf(my_turf.type,,1)
-	my_turf.lighting_clear_overlay() //CHOMP Add
+	my_turf.lighting_clear_overlay()
 	new_dest.set_dir(my_turf.dir)
 	new_dest.icon_state = my_turf.icon_state
 	new_dest.icon = my_turf.icon
 	new_dest.copy_overlays(my_turf, TRUE)
-	new_dest.underlays = my_turf.underlays.Copy() //CHOMP Edit
+	new_dest.underlays = my_turf.underlays.Copy()
 	new_dest.decals = my_turf.decals
 	//Shuttle specific stuff
 	new_dest.interior_corner = my_turf.interior_corner
@@ -47,7 +47,7 @@
 	new_dest.under_turf = my_turf.under_turf
 	new_dest.join_flags = my_turf.join_flags
 	new_dest.join_group = my_turf.join_group
-	new_dest.lighting_build_overlay() //CHOMP Add
+	new_dest.lighting_build_overlay()
 
 	// Associate the holder with the new turf.
 	new_holder.my_turf = new_dest
@@ -59,19 +59,19 @@
 
 	return new_dest
 
-/obj/landed_holder/proc/leave_turf(var/turf/base_turf = null)
+/obj/landed_holder/proc/leave_turf(turf/base_turf = null)
 	var/turf/new_source
 	//Change our source to whatever it was before
 	if(turf_type)
 		new_source = my_turf.ChangeTurf(turf_type,,1)
-		new_source.lighting_clear_overlay() //CHOMP Add
+		new_source.lighting_clear_overlay()
 		new_source.set_dir(dir)
 		new_source.icon_state = icon_state
 		new_source.icon = icon
 		new_source.copy_overlays(src, TRUE)
-		new_source.underlays = underlays.Copy() //CHOMP Edit
+		new_source.underlays = underlays.Copy()
 		new_source.decals = decals
-		new_source.lighting_build_overlay() //CHOMP Add
+		new_source.lighting_build_overlay()
 	else
 		new_source = my_turf.ChangeTurf(base_turf ? base_turf : get_base_turf_by_area(my_turf),,1)
 
@@ -91,6 +91,7 @@
 	var/join_flags = 0 //Bitstring to represent adjacency of joining walls
 	var/join_group = "shuttle" //A tag for what other walls to join with. Null if you don't want them to.
 	var/static/list/antilight_cache
+	rad_insulation = RAD_MEDIUM_INSULATION
 
 /turf/simulated/shuttle/Initialize(mapload)
 	. = ..()
@@ -110,13 +111,13 @@
 
 // For joined corners touching static lighting turfs, add an overlay to cancel out that part of our lighting overlay.
 /turf/simulated/shuttle/proc/update_breaklights()
-	cut_overlay(antilight_cache["[join_flags]"], TRUE)
+	cut_overlay(antilight_cache["[join_flags]"])
 	if(!(join_flags in GLOB.cornerdirs)) //We're not joined at an angle
 		return
 	//Dynamic lighting dissolver
 	var/turf/T = get_step(src, turn(join_flags,180))
 	if(!T || !T.dynamic_lighting || !get_area(T).dynamic_lighting)
-		add_overlay(antilight_cache["[join_flags]"], TRUE)
+		add_overlay(antilight_cache["[join_flags]"])
 
 /turf/simulated/shuttle/proc/underlay_update()
 	if(!takes_underlays)
@@ -303,7 +304,7 @@
 /turf/simulated/floor/tiled/material
 	icon = 'icons/turf/floors.dmi'
 
-/decl/flooring/tiling/material
+/datum/decl/flooring/tiling/material
 	name = "material floor"
 	icon_base = "steel"
 	icon = 'icons/turf/floors.dmi'
@@ -311,45 +312,75 @@
 
 /turf/simulated/floor/tiled/material/uranium
 	icon_state = "uranium"
-	initial_flooring = /decl/flooring/tiling/material/uranium
+	initial_flooring = /datum/decl/flooring/tiling/material/uranium
+	var/last_event = 0
+	/// Mutex to prevent infinite recursion when propagating radiation pulses
+	var/active = null
 
-/decl/flooring/tiling/material/uranium
+/turf/simulated/floor/tiled/material/uranium/Initialize(mapload)
+	. = ..()
+	RegisterSignal(src, COMSIG_ATOM_PROPAGATE_RAD_PULSE, PROC_REF(radiate))
+
+/turf/simulated/floor/tiled/material/uranium/Destroy()
+	UnregisterSignal(src, COMSIG_ATOM_PROPAGATE_RAD_PULSE)
+	. = ..()
+
+/turf/simulated/floor/tiled/material/uranium/proc/radiate()
+	SIGNAL_HANDLER
+	if(active)
+		return
+	if(world.time <= last_event + 1.5 SECONDS)
+		return
+	active = TRUE
+	radiation_pulse(
+		src,
+		max_range = 1,
+		threshold = RAD_LIGHT_INSULATION,
+		chance = URANIUM_IRRADIATION_CHANCE,
+		minimum_exposure_time = URANIUM_RADIATION_MINIMUM_EXPOSURE_TIME,
+		strength = 1
+	)
+	propagate_radiation_pulse()
+	last_event = world.time
+	active = FALSE
+
+/datum/decl/flooring/tiling/material/uranium
 	name = "uranium floor"
 	icon_base = "uranium"
 	build_type = /obj/item/stack/tile/floor/uranium
 
 /turf/simulated/floor/tiled/material/phoron
 	icon_state = "phoron"
-	initial_flooring = /decl/flooring/tiling/material/phoron
+	initial_flooring = /datum/decl/flooring/tiling/material/phoron
 
-/decl/flooring/tiling/material/phoron
+/datum/decl/flooring/tiling/material/phoron
 	name = "phoron floor"
 	icon_base = "phoron"
 	build_type = /obj/item/stack/tile/floor/phoron
 
 /turf/simulated/floor/tiled/material/gold
 	icon_state = "gold"
-	initial_flooring = /decl/flooring/tiling/material/gold
+	initial_flooring = /datum/decl/flooring/tiling/material/gold
 
-/decl/flooring/tiling/material/gold
+/datum/decl/flooring/tiling/material/gold
 	name = "gold floor"
 	icon_base = "gold"
 	build_type = /obj/item/stack/tile/floor/gold
 
 /turf/simulated/floor/tiled/material/silver
 	icon_state = "silver"
-	initial_flooring = /decl/flooring/tiling/material/silver
+	initial_flooring = /datum/decl/flooring/tiling/material/silver
 
-/decl/flooring/tiling/material/silver
+/datum/decl/flooring/tiling/material/silver
 	name = "silver floor"
 	icon_base = "silver"
 	build_type = /obj/item/stack/tile/floor/silver
 
 /turf/simulated/floor/tiled/material/diamond
 	icon_state = "diamond"
-	initial_flooring = /decl/flooring/tiling/material/diamond
+	initial_flooring = /datum/decl/flooring/tiling/material/diamond
 
-/decl/flooring/tiling/material/diamond
+/datum/decl/flooring/tiling/material/diamond
 	name = "diamond floor"
 	icon_base = "diamond"
 	build_type = /obj/item/stack/tile/floor/diamond

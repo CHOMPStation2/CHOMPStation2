@@ -206,13 +206,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
-"av" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/mob/living/simple_mob/animal/goat{
-	name = "Ted"
-	},
-/turf/simulated/floor/tiled/freezer/cold,
-/area/crew_quarters/kitchen)
 "aw" = (
 /obj/structure/table/standard,
 /obj/random/tech_supply,
@@ -4989,6 +4982,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/aftstarboard)
+"kw" = (
+/mob/living/simple_mob/animal/goat{
+	name = "Ted"
+	},
+/turf/simulated/floor/grass,
+/area/hydroponics)
 "kx" = (
 /obj/structure/disposalpipe/sortjunction/wildcard/flipped{
 	dir = 1
@@ -7206,6 +7205,9 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/noticeboard{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
@@ -15351,6 +15353,11 @@
 /obj/structure/bed/chair/bay/comfy/captain{
 	dir = 1
 	},
+/obj/item/radio/intercom/atc{
+	dir = 1;
+	pixel_y = 19;
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/bridge)
 "HM" = (
@@ -17841,7 +17848,7 @@
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/quartermaster/storage)
 "Nk" = (
-/obj/item/radio/intercom{
+/obj/item/radio/intercom/culture{
 	dir = 1;
 	pixel_y = 24
 	},
@@ -22880,9 +22887,7 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/crew_quarters/kitchen)
 "YD" = (
-/obj/structure/noticeboard{
-	pixel_y = 32
-	},
+/obj/machinery/synthesizer,
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
 "YE" = (
@@ -30972,7 +30977,7 @@ Gi
 wL
 ch
 DD
-av
+AC
 AC
 DP
 BF
@@ -30989,7 +30994,7 @@ iZ
 ej
 WN
 ok
-dP
+kw
 AR
 KK
 si

@@ -242,7 +242,7 @@
 		create_reagents(splatter_volume)
 		ready_chemicals()
 
-/obj/item/projectile/arc/vial/on_impact(var/atom/A)
+/obj/item/projectile/arc/vial/on_impact(atom/A)
 	if(splatter)
 		var/turf/location = get_turf(src)
 		var/datum/effect/effect/system/smoke_spread/chem/blob/S = new /datum/effect/effect/system/smoke_spread/chem/blob

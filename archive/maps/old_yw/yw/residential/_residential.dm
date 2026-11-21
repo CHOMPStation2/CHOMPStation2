@@ -57,14 +57,13 @@
 	. = ..()
 
 // Spawn points
-
-var/global/list/latejoin_residential = list()
+GLOBAL_LIST_EMPTY(latejoin_residential)
 /obj/effect/landmark/residential
 	name = "JoinLateResidential"
 	delete_me = 1
 
 /obj/effect/landmark/residential/Initialize(mapload)
-	latejoin_residential += loc // Register this turf as tram latejoin.
+	GLOB.latejoin_residential += loc // Register this turf as tram latejoin.
 	. = ..()
 
 /datum/spawnpoint/residential
@@ -75,7 +74,7 @@ var/global/list/latejoin_residential = list()
 
 /datum/spawnpoint/residential/New()
 	..()
-	turfs = latejoin_residential
+	turfs = GLOB.latejoin_residential
 
 
 /obj/machinery/cryopod/robot/door/residential
@@ -99,7 +98,7 @@ var/global/list/latejoin_residential = list()
 	base_turf = /turf/simulated/floor/outdoors/snow/plating/cryogaia
 
 /area/residential
-	icon = 'icons/turf/areas_yw.dmi'
+	icon = 'icons/turf/areas.dmi'
 	flags = RAD_SHIELDED
 
 /area/residential/docking_lobby

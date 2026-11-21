@@ -1,4 +1,5 @@
 /obj/structure/sign/double/barsign
+	name = "Bar sign"
 	desc = "The current barsign of this shift! The bartender can change it with their ID."
 	icon = 'icons/obj/barsigns.dmi'
 	plane = ABOVE_PLANE
@@ -8,7 +9,7 @@
 	var/cult = 0
 
 /obj/structure/sign/double/barsign/proc/get_valid_states(initial=1)
-	. = cached_icon_states(icon)
+	. = icon_states_fast(icon)
 	. -= "On"
 	. -= "Nar-sie Bistro"
 	. -= "Empty"
@@ -19,13 +20,14 @@
 	. = ..()
 	switch(icon_state)
 		if("Off")
-			. += "It appears to be switched off."
+
+			. += span_notice("It appears to be switched off.")
 		if("Nar-sie Bistro")
-			. += "It shows a picture of a large black and red being. Spooky!"
+			. += span_notice("It shows a picture of a large black and red being. Spooky!")
 		if("On", "Empty")
-			. += "The lights are on, but there's no picture."
+			. += span_notice("The lights are on, but there's no picture.")
 		else
-			. += "It says '[icon_state]'"
+			. += span_notice("It currently says '[icon_state]'")
 
 /obj/structure/sign/double/barsign/Initialize(mapload)
 	. = ..()

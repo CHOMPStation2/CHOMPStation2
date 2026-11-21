@@ -7,20 +7,20 @@
 	name = "Inactive AI Eye"
 	icon_state = "AI-eye"
 
-/mob/observer/eye/aiEye/Initialize(mapload)
-	. = ..()
-	visualnet = cameranet
-
 /mob/observer/eye/aiEye/Destroy()
 	if(owner)
 		var/mob/living/silicon/ai/ai = owner
 		ai.all_eyes -= src
 		owner = null
-	visualnet.clear_references(src, src.client)
-	visualnet = null
+	clear_camera_chunks()
 	. = ..()
 
-/mob/observer/eye/aiEye/setLoc(var/T, var/cancel_tracking = 1)
+/// Clears us from any visible camera chunks.
+/mob/observer/eye/aiEye/proc/clear_camera_chunks()
+	for(var/datum/camerachunk/chunk in visibleChunks)
+		chunk.remove(src)
+
+/mob/observer/eye/aiEye/setLoc(T, cancel_tracking = 1)
 	if(owner)
 		T = get_turf(T)
 		loc = T
@@ -29,7 +29,7 @@
 		if(cancel_tracking)
 			ai.ai_cancel_tracking()
 
-		if(use_static)
+		if(use_visibility)
 			ai.camera_visibility(src)
 
 		if(ai.client && !ai.multicam_on)
@@ -51,7 +51,7 @@
 /mob/living/silicon/ai
 	var/obj/machinery/hologram/holopad/holo = null
 
-/mob/living/silicon/ai/proc/destroy_eyeobj(var/atom/new_eye)
+/mob/living/silicon/ai/proc/destroy_eyeobj(atom/new_eye)
 	if(!eyeobj) return
 	if(!new_eye)
 		new_eye = src
@@ -59,7 +59,7 @@
 	eyeobj = null
 	reset_perspective(new_eye)
 
-/mob/living/silicon/ai/proc/create_eyeobj(var/newloc)
+/mob/living/silicon/ai/proc/create_eyeobj(newloc)
 	if(eyeobj)
 		destroy_eyeobj()
 	if(!newloc)

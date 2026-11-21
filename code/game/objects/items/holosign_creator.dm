@@ -5,7 +5,7 @@
 	icon_state = "signmaker"
 	item_state = "electronic"
 	force = 0
-	w_class = 2
+	w_class = ITEMSIZE_SMALL
 	throwforce = 0
 	throw_speed = 3
 	throw_range = 7
@@ -46,7 +46,7 @@
 			to_chat(user, span_notice("[src] is projecting at max capacity!"))
 
 /obj/item/holosign_creator/attack_self(mob/user)
-	. = ..()
+	. = ..(user)
 	if(.)
 		return
 	if(signs.len)

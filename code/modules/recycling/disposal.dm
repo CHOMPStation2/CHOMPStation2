@@ -1,8 +1,8 @@
 // Disposal pipes
 /obj/structure/disposalpipe
-	icon = 'icons/obj/pipes/disposal.dmi'
 	name = "disposal pipe"
-	desc = "An underfloor disposal pipe."
+	desc = "An underfloor disposal pipe. Most often used as part of a pneumatic disposal system."
+	icon = 'icons/obj/pipes/disposal.dmi'
 	anchored = TRUE
 	density = FALSE
 	unacidable = TRUE
@@ -43,17 +43,17 @@
 
 		// otherwise, do normal expel from turf
 		if(H)
-			expel(H, T, 0)
+			pipe_expel(H, T, 0)
 	. = ..()
 
 // returns the direction of the next pipe object, given the entrance dir
 // by default, returns the bitmask of remaining directions
-/obj/structure/disposalpipe/proc/nextdir(var/fromdir)
+/obj/structure/disposalpipe/proc/nextdir(fromdir)
 	return dpdir & (~turn(fromdir, 180))
 
 // transfer the holder through this pipe segment
 // overriden for special behaviour
-/obj/structure/disposalpipe/proc/transfer(var/obj/structure/disposalholder/H)
+/obj/structure/disposalpipe/proc/transfer(obj/structure/disposalholder/H)
 	var/nextdir = nextdir(H.dir)
 	H.set_dir(nextdir)
 	var/turf/T = H.nextloc()
@@ -80,7 +80,7 @@
 
 // hide called by levelupdate if turf intact status changes
 // change visibility status and force update of icon
-/obj/structure/disposalpipe/hide(var/intact)
+/obj/structure/disposalpipe/hide(intact)
 	invisibility = intact ? INVISIBILITY_ABSTRACT : INVISIBILITY_NONE	// hide if floor is intact
 	update_icon()
 
@@ -89,6 +89,8 @@
 // this will be revealed if a T-scanner is used
 // if visible, use regular icon_state
 /obj/structure/disposalpipe/update_icon()
+	if(!(flags & ATOM_INITIALIZED)) // Do not call update_icon before init. E.g. hide might be called before
+		return
 /*	if(invisibility)	//we hide things with alpha now, no need for transparent icons
 		icon_state = "[base_icon_state]f"
 	else
@@ -99,7 +101,7 @@
 
 // expel the held objects into a turf
 // called when there is a break in the pipe
-/obj/structure/disposalpipe/proc/expel(obj/structure/disposalholder/H, turf/T, direction)
+/obj/structure/disposalpipe/proc/pipe_expel(obj/structure/disposalholder/H, turf/T, direction)
 	if(!istype(H))
 		return
 
@@ -185,7 +187,7 @@
 
 		// otherwise, do normal expel from turf
 		if(H)
-			expel(H, T, 0)
+			pipe_expel(H, T, 0)
 
 	spawn(2)	// delete pipe after 2 ticks to ensure expel proc finished
 		qdel(src)
@@ -302,7 +304,7 @@
 
 		// otherwise, do normal expel from turf
 		if(H)
-			expel(H, T, 0)
+			pipe_expel(H, T, 0)
 	. = ..()
 
 /obj/structure/disposalpipe/hides_under_flooring()
@@ -450,7 +452,7 @@
 	return
 
 // check if mob has client, if so restore client view on eject
-/mob/pipe_eject(var/direction)
+/mob/pipe_eject(direction)
 	reset_perspective()
 
 /obj/effect/decal/cleanable/blood/gibs/pipe_eject(direction)

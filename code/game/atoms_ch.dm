@@ -1,4 +1,4 @@
-/atom/proc/contains(var/atom/location)
+/atom/proc/contains(atom/location)
 	if(!location)
 		return 0
 	if(location == src)

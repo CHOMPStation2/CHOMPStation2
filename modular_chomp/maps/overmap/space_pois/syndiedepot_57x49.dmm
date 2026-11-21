@@ -935,6 +935,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/item/prop/deconstructable/gigacell,
 /turf/simulated/floor/greengrid/nitrogen,
 /area/submap/syndiedepotinner)
 "VZ" = (

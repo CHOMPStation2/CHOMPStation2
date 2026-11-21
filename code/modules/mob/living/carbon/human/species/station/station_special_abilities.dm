@@ -379,7 +379,7 @@
 
 //Test to see if we can shred a mob. Some child override needs to pass us a target. We'll return it if you can.
 /mob/living/var/vore_shred_time = 45 SECONDS
-/mob/living/proc/can_shred(var/mob/living/carbon/human/target)
+/mob/living/proc/can_shred(mob/living/carbon/human/target)
 	//Needs to have organs to be able to shred them.
 	if(!istype(target))
 		to_chat(src,span_warning("You can't shred that type of creature."))
@@ -414,7 +414,7 @@
 	return ..(G.affecting)
 
 //PAIs, borgs, and animals don't need a grab or anything
-/mob/living/silicon/pai/can_shred(var/mob/living/carbon/human/target)
+/mob/living/silicon/pai/can_shred(mob/living/carbon/human/target)
 	if(!target)
 		var/list/choices = list()
 		for(var/mob/living/carbon/human/M in oviewers(1))
@@ -429,7 +429,7 @@
 
 	return ..(target)
 
-/mob/living/silicon/robot/can_shred(var/mob/living/carbon/human/target)
+/mob/living/silicon/robot/can_shred(mob/living/carbon/human/target)
 	if(!target)
 		var/list/choices = list()
 		for(var/mob/living/carbon/human/M in oviewers(1))
@@ -444,7 +444,7 @@
 
 	return ..(target)
 
-/mob/living/simple_mob/can_shred(var/mob/living/carbon/human/target)
+/mob/living/simple_mob/can_shred(mob/living/carbon/human/target)
 	if(!target)
 		var/list/choices = list()
 		for(var/mob/living/carbon/human/M in oviewers(1))
@@ -533,6 +533,7 @@
 			T.apply_damage(25, BRUTE, T_ext)
 			visible_message(span_danger("[src] severely damages [T]'s [T_ext.name]!"))
 
+		attempt_xenochimera_infection(src, T, attack_damage = 25, zone = T_ext)
 		add_attack_logs(src,T,"Shredded (hardvore)")
 
 /mob/living/proc/shred_limb_temp()
@@ -736,7 +737,7 @@
 		target.visible_message(span_vwarning("\The [target] suddenly disappears, being dragged into the water!"),\
 			span_vdanger("You are dragged below the water and feel yourself slipping directly into \the [src]'s [vore_selected.get_belly_name()]!"))
 		to_chat(src, span_vnotice("You successfully drag \the [target] into the water, slipping them into your [vore_selected.get_belly_name()]."))
-		target.forceMove(src.vore_selected)
+		vore_selected.nom_atom(target)
 
 /mob/living/carbon/human/proc/toggle_pain_module()
 	set name = "Toggle pain simulation."
@@ -861,7 +862,7 @@
 			color = originator.appendage_color
 	..()
 
-/obj/item/projectile/beam/appendage/on_hit(var/atom/target)
+/obj/item/projectile/beam/appendage/on_hit(atom/target)
 	if(target == firer) //NO EATING YOURSELF
 		return
 	if(isliving(target))
@@ -1215,7 +1216,7 @@
 		to_chat(C, span_warning("You must have a tighter grip to bite this creature."))
 		return
 
-	var/choice = tgui_input_list(src, "What do you wish to inject?", "Reagent", list(REAGENT_APHRODISIAC, "Numbing", "Paralyzing"))
+	var/choice = tgui_input_list(src, "What do you wish to inject?", "Reagent", list(REAGENT_APHRODISIAC, "Numbing", "Paralyzing", REAGENT_MICROCILLIN, REAGENT_MACROCILLIN))
 
 	last_special = world.time + 600
 
@@ -1227,17 +1228,25 @@
 	if(do_after(src, 30 SECONDS, target = T)) //Thrirty seconds.
 		if(choice == REAGENT_APHRODISIAC)
 			src.show_message(span_warning("You sink your fangs into [T] and inject your aphrodisiac!"))
-			src.visible_message(span_red("[src] sinks their fangs into [T]!"))
+			src.visible_message(span_danger("[src] sinks their fangs into [T]!"))
 			T.bloodstr.add_reagent(REAGENT_ID_APHRODIAC_FLUID,100)
 			return 0
 		else if(choice == "Numbing")
 			src.show_message(span_warning("You sink your fangs into [T] and inject your poison!"))
-			src.visible_message(span_red("[src] sinks their fangs into [T]!"))
+			src.visible_message(span_danger("[src] sinks their fangs into [T]!"))
 			T.bloodstr.add_reagent(REAGENT_ID_NUMBING_FLUID,20) //Poisons should work when more units are injected
 		else if(choice == "Paralyzing")
 			src.show_message(span_warning("You sink your fangs into [T] and inject your poison!"))
-			src.visible_message(span_red("[src] sinks their fangs into [T]!"))
+			src.visible_message(span_danger("[src] sinks their fangs into [T]!"))
 			T.bloodstr.add_reagent(REAGENT_ID_PARALYZE_FLUID,20) //Poisons should work when more units are injected
+		else if(choice == REAGENT_MICROCILLIN)
+			src.show_message(span_warning("You sink your fangs into [T] and inject your poison!"))
+			src.visible_message(span_danger("[src] sinks their fangs into [T]!"))
+			T.bloodstr.add_reagent(REAGENT_ID_MICROCILLIN,1)
+		else if(choice == REAGENT_MACROCILLIN)
+			src.show_message(span_warning("You sink your fangs into [T] and inject your poison!"))
+			src.visible_message(span_danger("[src] sinks their fangs into [T]!"))
+			T.bloodstr.add_reagent(REAGENT_ID_MACROCILLIN,1)
 		else
 			return //Should never happen
 
@@ -1247,12 +1256,12 @@
 	description = "A unknown liquid, it smells sweet"
 	metabolism = REM * 0.8
 	color = "#8A0829"
-	scannable = 0
+	scannable = SCANNABLE_ADVANCED
 	wiki_flag = WIKI_SPOILER
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/succubi_aphrodisiac/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/succubi_aphrodisiac/affect_blood(mob/living/carbon/M, alien, removed)
 	if(prob(3))
 		M.show_message(span_warning("You feel funny, and fall in love with the person in front of you"))
 		M.say(pick("!blushes", "!moans", "!giggles", "!turns visibly red")) //using mob say so we dont have to define this dumb one time use emote that equates to just blushing -shark
@@ -1265,11 +1274,11 @@
 	description = "A unknown liquid, it doesn't smell"
 	metabolism = REM * 0.5
 	color = "#41029B"
-	scannable = 0
+	scannable = SCANNABLE_ADVANCED
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/succubi_numbing/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/succubi_numbing/affect_blood(mob/living/carbon/M, alien, removed)
 
 
 	M.eye_blurry = max(M.eye_blurry, 10)
@@ -1285,22 +1294,17 @@
 	description = "A unknown liquid, it doesn't smell"
 	metabolism= REM * 0.5
 	color = "#41029B"
-	scannable = 0
+	scannable = SCANNABLE_ADVANCED
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/succubi_paralize/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) //will first keep it like that.  lets see what it changes. if nothing, than I will rework the effect again
+/datum/reagent/succubi_paralize/affect_blood(mob/living/carbon/M, alien, removed) //will first keep it like that.  lets see what it changes. if nothing, than I will rework the effect again
 
 	M.Weaken(20)
 	M.eye_blurry = max(M.eye_blurry, 10)
 	if(prob(10))
 		M.show_message(span_warning("You lose sensation of your body."))
 	return
-
-
-//egglaying
-var/eggs = 0
-
 
 /mob/living/proc/mobegglaying()
 	set name = "Egg laying"
@@ -1365,3 +1369,82 @@ var/eggs = 0
 	src.visible_message(span_infoplain(span_red("[src] sinks their stinger into [T]!")))
 	T.bloodstr.add_reagent(REAGENT_ID_CONDENSEDCAPSAICINV,3)
 	last_special = world.time + (5 SECONDS) // Many little jabs instead of one big one
+
+/mob/living/proc/absorb_devour()
+	if(!absorbed || !isbelly(loc))
+		return
+	if(!isliving(loc.loc))
+		return
+	var/mob/living/pred = loc.loc
+	var/obj/belly/belly = loc
+	var/list/targets = list()
+	for(var/mob/living/potentialtarget in range(1, pred))
+		if(!isliving(potentialtarget)) //Don't eat anything that isn't mob/living. Failsafe.
+			continue
+		if(potentialtarget == pred)
+			continue
+		if(potentialtarget.devourable)
+			targets += potentialtarget
+	if(!(targets.len))
+		to_chat(src, span_notice("No eligible targets found."))
+		return
+	var/mob/living/target = tgui_input_list(src, "Please select a target.", "Victim", targets)
+	if(!absorbed || !isbelly(loc))
+		return
+	if(!isliving(loc.loc))
+		return
+	if(!target)
+		return
+	if(!isliving(target)) //Safety.
+		to_chat(src, span_warning("You need to select a living target!"))
+		return
+	if (get_dist(src,target) >= 2)
+		to_chat(src, span_warning("You need to be closer to do that."))
+		return
+	target.visible_message(span_vnotice("\The [pred]'s [belly] seems interested in \the [target]."),\
+			span_vwarning("\The [pred]'s [belly] threatens to [lowertext(belly.vore_verb)] you!"))
+	to_chat(pred, span_vnotice("Your [belly] tries to [lowertext(belly.vore_verb)] \the [target].")) //people who want this will often be unaware pred players, so I'm making the warning a bit smaller text for them
+	to_chat(pred, span_vwarning("You look for a chance to [lowertext(belly.vore_verb)] \the [target]."))
+	var/starting_loc = target.loc
+	if(do_after(src, 5 SECONDS, target))
+		if(target.loc != starting_loc)
+			to_chat(src, span_notice("\The [target] is no longer within reach."))
+			return
+		if(target.buckled)
+			target.buckled.unbuckle_mob()
+		to_chat(src, span_vwarning("You manage to [lowertext(belly.vore_verb)] \the [target]!"))
+		to_chat(pred, span_vnotice("Your [belly] manages to [lowertext(belly.vore_verb)] \the [target]."))
+		to_chat(target, span_vwarning("You are [lowertext(belly.vore_verb)]ed by \The [pred]'s [belly]!"))
+		return pred.begin_instant_nom(src, target, pred, belly, FALSE)
+
+/mob/living/proc/name_change_verb()
+	set name = "Change Name"
+	set desc = "Change your name. Notifies admins."
+	set category = "Abilities.Superpower"
+
+	if(last_special > world.time)
+		return
+
+	var/chosen_name = tgui_input_text(src, "What would you like your name to become?", "Name change", name, MAX_NAME_LEN)
+
+	if(!chosen_name || !length(chosen_name))
+		return
+
+	last_special = world.time + (5 SECONDS) //don't spam check the global list pls
+	for(var/mob/checkplayer in GLOB.player_list)
+		if(checkplayer == src)
+			continue
+		if(!checkplayer.client) //no client, no problem
+			continue
+		if(checkplayer.name == chosen_name)
+			if(checkplayer.client.prefs.resleeve_lock)
+				to_chat(src, span_notice("\The [checkplayer]'s preferences forbid you from impersonating them."))
+				log_and_message_admins("[key_name(src)] attempted to impersonate [key_name(checkplayer)], but preferences prevented it.", src)
+				return
+			log_and_message_admins("[key_name(src)] impersonated [key_name(checkplayer)]!", src)
+
+	log_and_message_admins("[key_name(src)] set their name to [chosen_name]", src)
+	if(dna)
+		dna.real_name = chosen_name
+	real_name = chosen_name
+	name = chosen_name

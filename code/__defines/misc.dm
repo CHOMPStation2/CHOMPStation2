@@ -120,11 +120,14 @@
 #define AREA_BLOCK_GHOST_SIGHT		0x2000	// If an area blocks sight for ghosts
 #define AREA_BLOCK_INSTANT_BUILDING	0x4000	// If an area blocks the usage of instant building creation items/mechanics such as shelter capsules
 #define AREA_ALWAYS_HAS_GRAVITY		0x8000	// If an area should always have gravity, even during events that would otherwise remove it.
-// The 0x800000 is blocked by INITIALIZED, do NOT use it!
-
+#define AREA_CRYOPLANET_SHIELDED	0x10000 // If an area is protected from SScryoplanet temperature shifts
+// UNUSED 0x20000
+// UNUSED 0x40000
+// UNUSED 0x80000
 #define PHASE_SHIELDED				0x100000 // A less rough way to prevent phase shifting without blocking access //VOREStation Note: Not implemented on VS. Used downstream.
 #define AREA_LIMIT_DARK_RESPITE		0x200000 // Shadekin will die normally in those areas //VOREStation Note: Not implemented on VS. Used downstream.
 #define AREA_ALLOW_CLOCKOUT			0x400000 // The PDA timeclock app can only be used in these areas //VOREStation Note: Not implemented on VS. Used downstream.
+// The 0x800000 is blocked by INITIALIZED, do NOT use it!
 
 // OnTopic return values
 #define TOPIC_NOACTION 0
@@ -326,7 +329,14 @@ GLOBAL_LIST_EMPTY(##LIST_NAME);\
 #define RCD_SHEETS_PER_MATTER_UNIT	3	// Each physical material sheet is worth four matter units. ///YW EDIT 4->3 *Buffing RCDs Hopefully.*
 #define RCD_MAX_CAPACITY			30 * RCD_SHEETS_PER_MATTER_UNIT
 
+// Solvers for radiation calculations. Intensity is calculated with calculate_recieved_radiation_intensity()
+/// Solves the probability that a radiation pulse should affect a mob. I = radiation intensity
+#define RAD_SOLVE_CHANCE(I) (100 * (1 - NUM_E ** -I))
+/// Solve the amount of rads applied to a mob based on the pulse strength and intensity. S = strength of radiation pulse, I = radiation intensity.
+#define RAD_SOLVE_MOBRADS(S, I) (S * (1 - NUM_E ** -I))
+
 // Radiation 'levels'. Used for the geiger counter, for visuals and sound. They are in different files so this goes here.
+#define RAD_ROUNDING_THRESHOLD 0.1
 #define RAD_LEVEL_LOW 0.5 // Around the level at which radiation starts to become harmful
 #define RAD_LEVEL_MODERATE 5
 #define RAD_LEVEL_HIGH 25
@@ -485,24 +495,11 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 #define APPEARANCECHANGER_CHANGED_F_HAIRCOLOR "Facial Hair Color"
 #define APPEARANCECHANGER_CHANGED_EYES "Eye Color"
 
-#define GET_DECL(D) (ispath(D, /decl) ? (decls_repository.fetched_decls[D] || decls_repository.get_decl(D)) : null)
+#define GET_DECL(D) (ispath(D, /datum/decl) ? (GLOB.decls_repository.fetched_decls[D] || GLOB.decls_repository.get_decl(D)) : null)
 
 #define LOADOUT_WHITELIST_OFF    0
 #define LOADOUT_WHITELIST_LAX    1
 #define LOADOUT_WHITELIST_STRICT 2
-
-
-#ifndef WINDOWS_HTTP_POST_DLL_LOCATION
-#define WINDOWS_HTTP_POST_DLL_LOCATION "lib/byhttp.dll"
-#endif
-
-#ifndef UNIX_HTTP_POST_DLL_LOCATION
-#define UNIX_HTTP_POST_DLL_LOCATION "lib/libbyhttp.so"
-#endif
-
-#ifndef HTTP_POST_DLL_LOCATION
-#define HTTP_POST_DLL_LOCATION (world.system_type == MS_WINDOWS ? WINDOWS_HTTP_POST_DLL_LOCATION : UNIX_HTTP_POST_DLL_LOCATION)
-#endif
 
 #define DOCK_ATTEMPT_TIMEOUT 200	//how long in ticks we wait before assuming the docking controller is broken or blown up.
 

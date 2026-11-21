@@ -71,20 +71,20 @@
 /obj/item/ammo_casing/simple/small
 	desc = "A small bullet casing, probably fit for a pistol or SMG"
 	caliber = "small"
-	matter = list(MAT_STEEL = 75)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.0375))
 
 /obj/item/ammo_casing/simple/medium
 	desc = "A medium bullet casing, probably fit for a rifle"
 	caliber = "medium"
 	icon_state = "rifle-casing"
-	matter = list(MAT_STEEL = 180)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.09))
 	ammo_flags = AMMO_FLAG_MEDIUM
 
 /obj/item/ammo_casing/simple/large
 	desc = "A large bullet casing, probably fit for a sniper."
 	icon_state = "lcasing"
 	caliber = "large"
-	matter = list(MAT_STEEL = 800)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.4))
 	ammo_flags = AMMO_FLAG_LARGE
 
 //Casings with modifiers

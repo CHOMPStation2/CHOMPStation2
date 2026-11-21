@@ -10,6 +10,10 @@
 	var/valve_open = 0
 	var/toggle = 1
 
+/obj/item/transfer_valve/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/sellable/transfer_valve)
+
 /obj/item/transfer_valve/attackby(obj/item/item, mob/user)
 	var/turf/location = get_turf(src) // For admin logs
 	if(istype(item, /obj/item/tank))
@@ -71,6 +75,9 @@
 		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
 
 /obj/item/transfer_valve/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	tgui_interact(user)
 
 /obj/item/transfer_valve/tgui_state(mob/user)
@@ -116,7 +123,7 @@
 		update_icon()
 		add_fingerprint(ui.user)
 
-/obj/item/transfer_valve/proc/process_activation(var/obj/item/D)
+/obj/item/transfer_valve/proc/process_activation(obj/item/D)
 	if(toggle)
 		toggle = FALSE
 		toggle_valve()

@@ -27,7 +27,7 @@
 	return HAS_VALID_ZONE(T)
 
 //Creates a new turf
-/turf/proc/ChangeTurf(var/turf/N, var/tell_universe=1, var/force_lighting_update = 0, var/preserve_outdoors = FALSE)
+/turf/proc/ChangeTurf(turf/N, tell_universe=1, force_lighting_update = 0, preserve_outdoors = FALSE)
 	if (!N)
 		return
 
@@ -80,8 +80,6 @@
 
 	var/turf/W = new N( locate(src.x, src.y, src.z) )
 	if(ispath(N, /turf/simulated/floor))
-		if(old_fire)
-			W.fire = old_fire
 		W.RemoveLattice()
 	W.lighting_corners_initialised = old_lighting_corners_initialized
 	var/turf/simulated/W_sim = W
@@ -92,7 +90,9 @@
 		W_sim.shandler = new(src)
 		W_sim.shandler.manualInit()
 	if(old_fire)
-		old_fire.RemoveFire()
+		fire = null
+		W.fire = old_fire
+		W.fire.loc = W
 
 	if(tell_universe)
 		GLOB.universe.OnTurfChange(W)
@@ -169,7 +169,7 @@
 		outdoors = old_outdoors
 
 
-/turf/proc/propogate_sunlight_changes(oldtype, old_density, new_turf, var/above = FALSE)
+/turf/proc/propogate_sunlight_changes(oldtype, old_density, new_turf, above = FALSE)
 	//SEND_SIGNAL(src, COMSIG_TURF_UPDATE, oldtype, old_density, W)
 	//Sends signals in a cross pattern to all tiles that may have their sunlight var affected including this tile.
 	for(var/i = - SUNLIGHT_RADIUS, i <= SUNLIGHT_RADIUS, i++)

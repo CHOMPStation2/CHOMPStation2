@@ -8,6 +8,7 @@ import {
   Image,
   Input,
   LabeledList,
+  ProgressBar,
   Section,
   Stack,
 } from 'tgui-core/components';
@@ -15,11 +16,14 @@ import type { BooleanLike } from 'tgui-core/react';
 import { createSearch } from 'tgui-core/string';
 import { stats } from '../constants';
 import { ourTypeToOptions } from '../functions';
-import type { contentData, DropdownEntry } from '../types';
+import type { ContentData, DropdownEntry, IntentData } from '../types';
+import { VoreContentIntent } from './ContentTab/VoreContentIntent';
 
 export const VoreContentsPanel = (props: {
-  contents?: contentData[] | null;
+  contents?: ContentData[] | null;
+  intent_data?: IntentData | null;
   targetBelly?: string;
+  allow_absorbed_devour?: BooleanLike;
   onTargetBely?: React.Dispatch<React.SetStateAction<string>>;
   bellyDropdownNames?: DropdownEntry[];
   belly?: string;
@@ -28,11 +32,12 @@ export const VoreContentsPanel = (props: {
   icon_overflow: BooleanLike;
 }) => {
   const { act } = useBackend();
-  const [selectedAtom, setSelectedAtom] = useState<contentData | null>(null);
+  const [selectedAtom, setSelectedAtom] = useState<ContentData | null>(null);
   const [contentSearchText, setContentSearchText] = useState<string>('');
 
   const {
     contents = [],
+    intent_data,
     targetBelly = '',
     onTargetBely,
     bellyDropdownNames,
@@ -52,23 +57,13 @@ export const VoreContentsPanel = (props: {
   }, [contents]);
 
   function bellyValueToName(value: string) {
-    const bellyName = bellyDropdownNames
-      ?.map((entry) => {
-        if (entry.value === value) {
-          return entry.displayText;
-        }
-        return undefined;
-      })
-      .filter((value) => value !== undefined);
-    if (Array.isArray(bellyName) && bellyName.length) {
-      return bellyName[0];
-    }
-    return '';
+    const entry = bellyDropdownNames?.find((entry) => entry.value === value);
+    return entry ? entry.displayText : '';
   }
 
-  const contentSearch = createSearch(
+  const contentSearch = createSearch<ContentData>(
     contentSearchText,
-    (content: contentData) => content.name,
+    (content) => content.name,
   );
   const displayedContents = contents?.filter(contentSearch);
 
@@ -78,6 +73,7 @@ export const VoreContentsPanel = (props: {
       title="Contents"
       buttons={
         <Stack>
+          {!!intent_data && <VoreContentIntent intent_data={intent_data} />}
           <Stack.Item>
             <Input
               width="200px"
@@ -155,9 +151,12 @@ export const VoreContentsPanel = (props: {
                   <Stack.Item color="label">Destination:</Stack.Item>
                   <Stack.Item>
                     <Dropdown
+                      searchInput
+                      styledInput
                       onSelected={(value) => onTargetBely(value)}
                       options={bellyDropdownNames!}
                       selected={bellyValueToName(targetBelly)}
+                      displayText={bellyValueToName(targetBelly)}
                     />
                   </Stack.Item>
                 </>
@@ -251,46 +250,69 @@ export const VoreContentsPanel = (props: {
               <Stack wrap="wrap" justify="center" align="center">
                 {displayedContents?.map((thing) => (
                   <Stack.Item key={thing.ref} basis="32%">
-                    <Button
-                      width="64px"
-                      selected={thing.ref === selectedAtom?.ref}
-                      color={thing.absorbed ? 'purple' : stats[thing.stat]}
-                      style={{
-                        verticalAlign: 'middle',
-                        marginRight: '5px',
-                        borderRadius: '20px',
-                      }}
-                      onClick={() => {
-                        if (selectedAtom?.ref === thing.ref) {
-                          setSelectedAtom(null);
-                        } else {
-                          setSelectedAtom(thing);
-                        }
-                      }}
-                    >
-                      <Image
-                        src={`data:image/jpeg;base64,${thing.icon}`}
-                        width="64px"
-                        height="64px"
-                        style={{
-                          marginLeft: '-5px',
-                        }}
-                      />
-                    </Button>
-                    {thing.ref === selectedAtom?.ref &&
-                      (!!stats[thing.stat] || !!thing.absorbed) && (
-                        <>
-                          <ColorBox
-                            color={
-                              thing.absorbed ? 'purple' : stats[thing.stat]
+                    <Stack>
+                      <Stack.Item>
+                        <Button
+                          width="64px"
+                          selected={thing.ref === selectedAtom?.ref}
+                          color={thing.absorbed ? 'purple' : stats[thing.stat]}
+                          style={{
+                            verticalAlign: 'middle',
+                            marginRight: '5px',
+                            borderRadius: '20px',
+                          }}
+                          onClick={() => {
+                            if (selectedAtom?.ref === thing.ref) {
+                              setSelectedAtom(null);
+                            } else {
+                              setSelectedAtom(thing);
                             }
+                          }}
+                        >
+                          <Image
+                            src={`data:image/jpeg;base64,${thing.icon}`}
+                            width="64px"
+                            height="64px"
+                            style={{
+                              marginLeft: '-5px',
+                            }}
                           />
-                          <Box inline preserveWhitespace>
-                            {' '}
-                          </Box>
-                        </>
-                      )}
-                    {thing.name}
+                        </Button>
+                        {thing.ref === selectedAtom?.ref &&
+                          (!!stats[thing.stat] || !!thing.absorbed) && (
+                            <>
+                              <ColorBox
+                                color={
+                                  thing.absorbed ? 'purple' : stats[thing.stat]
+                                }
+                              />
+                              <Box inline preserveWhitespace>
+                                {' '}
+                              </Box>
+                            </>
+                          )}
+                      </Stack.Item>
+                      <Stack.Item grow>
+                        <Stack vertical g={0}>
+                          <Stack.Item>
+                            <ProgressBar
+                              value={thing.damage}
+                              ranges={{
+                                bad: [0, 0.2],
+                                average: [0.2, 0.8],
+                                good: [0.8, 1],
+                              }}
+                            />
+                          </Stack.Item>
+                          {!!thing.nutrition && (
+                            <Stack.Item>
+                              Nutrition: {thing.nutrition}
+                            </Stack.Item>
+                          )}
+                          <Stack.Item>{thing.name}</Stack.Item>
+                        </Stack>
+                      </Stack.Item>
+                    </Stack>
                   </Stack.Item>
                 ))}
               </Stack>
@@ -313,6 +335,21 @@ export const VoreContentsPanel = (props: {
                       }}
                     >
                       <Stack align="center">
+                        <Stack.Item grow>
+                          <ProgressBar
+                            value={thing.damage}
+                            ranges={{
+                              bad: [0, 0.2],
+                              average: [0.2, 0.8],
+                              good: [0.8, 1],
+                            }}
+                          />
+                        </Stack.Item>
+                        {!!thing.nutrition && (
+                          <Stack.Item grow>
+                            Nutrition: {thing.nutrition}
+                          </Stack.Item>
+                        )}
                         <Stack.Item grow>Interact</Stack.Item>
                         {thing.ref === selectedAtom?.ref && (
                           <ColorBox

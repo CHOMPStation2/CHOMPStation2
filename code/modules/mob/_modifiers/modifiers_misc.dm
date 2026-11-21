@@ -107,12 +107,13 @@ the artifact triggers the rage.
 		if(prob(last_shock_stage))
 			to_chat(holder, span_warning("You pass out from the pain you were suppressing."))
 			holder.Paralyse(5)
+			holder.Sleeping(5)
 
 		if(ishuman(holder))
 			var/mob/living/carbon/human/H = holder
 			H.shock_stage = last_shock_stage
 
-/datum/modifier/berserk/can_apply(var/mob/living/L, var/suppress_failure = FALSE)
+/datum/modifier/berserk/can_apply(mob/living/L, suppress_failure = FALSE)
 	if(L.stat)
 		if(!suppress_failure)
 			to_chat(L, span_warning("You can't be unconscious or dead to berserk."))

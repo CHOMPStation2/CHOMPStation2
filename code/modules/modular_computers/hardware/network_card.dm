@@ -1,10 +1,9 @@
-var/global/ntnet_card_uid = 1
+GLOBAL_VAR_INIT(ntnet_card_uid, 1)
 
 /obj/item/computer_hardware/network_card/
 	name = "basic NTNet network card"
 	desc = "A basic network card for usage with standard NTNet frequencies."
 	power_usage = 50
-	origin_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 1)
 	critical = 0
 	icon_state = "netcard_basic"
 	hardware_size = 1
@@ -22,7 +21,7 @@ var/global/ntnet_card_uid = 1
 	/// If set, uses the value to funnel connections through another network card.
 	var/proxy_id
 
-/obj/item/computer_hardware/network_card/diagnostics(var/mob/user)
+/obj/item/computer_hardware/network_card/diagnostics(mob/user)
 	..()
 	to_chat(user, "NIX Unique ID: [identification_id]")
 	to_chat(user, "NIX User Tag: [identification_string]")
@@ -35,14 +34,13 @@ var/global/ntnet_card_uid = 1
 
 /obj/item/computer_hardware/network_card/Initialize(mapload)
 	. = ..()
-	identification_id = ntnet_card_uid
-	ntnet_card_uid++
+	identification_id = GLOB.ntnet_card_uid
+	GLOB.ntnet_card_uid++
 
 /obj/item/computer_hardware/network_card/advanced
 	name = "advanced NTNet network card"
 	desc = "An advanced network card for usage with standard NTNet frequencies. It's transmitter is strong enough to connect even when far away."
 	long_range = 1
-	origin_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 2)
 	power_usage = 100 // Better range but higher power usage.
 	icon_state = "netcard_advanced"
 	hardware_size = 1
@@ -51,19 +49,18 @@ var/global/ntnet_card_uid = 1
 	name = "quantum NTNet network card"
 	desc = "A network card that can connect to NTnet from anywhere, using quantum entanglement."
 	long_range = 1
-	origin_tech = list(TECH_DATA = 6, TECH_ENGINEERING = 7)
 	power_usage = 200 // Infinite range but higher power usage.
 	icon_state = "netcard_advanced"
 	hardware_size = 1
 
-/obj/item/computer_hardware/network_card/quantum/get_signal(var/specific_action = 0)
+/obj/item/computer_hardware/network_card/quantum/get_signal(specific_action = 0)
 	if(!holder2)
 		return 0
 
 	if(!enabled)
 		return 0
 
-	if(!check_functionality() || !ntnet_global || is_banned())
+	if(!check_functionality() || !GLOB.ntnet_global || is_banned())
 		return 0
 
 	return 2
@@ -72,7 +69,6 @@ var/global/ntnet_card_uid = 1
 	name = "wired NTNet network card"
 	desc = "An advanced network card for usage with standard NTNet frequencies. This one also supports wired connection."
 	ethernet = 1
-	origin_tech = list(TECH_DATA = 5, TECH_ENGINEERING = 3)
 	power_usage = 100 // Better range but higher power usage.
 	icon_state = "netcard_ethernet"
 	hardware_size = 3
@@ -88,23 +84,23 @@ var/global/ntnet_card_uid = 1
 	return "[identification_string] (NID [identification_id])"
 
 /obj/item/computer_hardware/network_card/proc/is_banned()
-	return ntnet_global.check_banned(identification_id)
+	return GLOB.ntnet_global.check_banned(identification_id)
 
 // 0 - No signal, 1 - Low signal, 2 - High signal. 3 - Wired Connection
-/obj/item/computer_hardware/network_card/proc/get_signal(var/specific_action = 0)
+/obj/item/computer_hardware/network_card/proc/get_signal(specific_action = 0)
 	if(!holder2) // Hardware is not installed in anything. No signal. How did this even get called?
 		return 0
 
 	if(!enabled)
 		return 0
 
-	if(!check_functionality() || !ntnet_global || is_banned())
+	if(!check_functionality() || !GLOB.ntnet_global || is_banned())
 		return 0
 
 	if(ethernet) // Computer is connected via wired connection.
 		return 3
 
-	if(!ntnet_global.check_function(specific_action)) // NTNet is down and we are not connected via wired connection. No signal.
+	if(!GLOB.ntnet_global.check_function(specific_action)) // NTNet is down and we are not connected via wired connection. No signal.
 		return 0
 
 	if(holder2)
@@ -114,7 +110,7 @@ var/global/ntnet_card_uid = 1
 		var/list/zlevels_in_range = using_map.get_map_levels(holderz, FALSE)// VOREStation Edit - , om_range = DEFAULT_OVERMAP_RANGE)
 		var/list/zlevels_in_long_range = using_map.get_map_levels(holderz, TRUE, om_range = DEFAULT_OVERMAP_RANGE) - zlevels_in_range
 		var/best = 0
-		for(var/obj/machinery/ntnet_relay/R as anything in ntnet_global.relays)
+		for(var/obj/machinery/ntnet_relay/R as anything in GLOB.ntnet_global.relays)
 			//Relay is down
 			if(!R.operable())
 				continue

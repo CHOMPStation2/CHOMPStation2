@@ -5,11 +5,12 @@
 	description = "A frothy green liquid, for causing cellular-level hetrogenous structure merging."
 	reagent_state = LIQUID
 	color = "#10881A"
+	scannable = SCANNABLE_BENEFICIAL
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
-/datum/reagent/sorbitol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/sorbitol/affect_blood(mob/living/carbon/M, alien, removed)
 	M.make_dizzy(1)
 
 	for(var/obj/belly/B as anything in M.vore_organs)

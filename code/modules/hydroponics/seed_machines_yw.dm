@@ -166,7 +166,7 @@
 //nobody's made a helper function for this, so if you want to use it
 //elsewhere, feel free to copy it/make it more easily accessible
 //Verifies that input is valid hex input (#AAAAAA, where A is 0-F)
-/obj/machinery/botany/precisioneditor/proc/is_valid_hex(var/input)
+/obj/machinery/botany/precisioneditor/proc/is_valid_hex(input)
 	var/safety_check = 1
 	if(!(length(input) == 7))
 		return FALSE			 //input is either too short or too long
@@ -183,7 +183,7 @@
 
 	return TRUE
 
-/obj/machinery/botany/precisioneditor/proc/add_chem_to_seed(var/chem_name)
+/obj/machinery/botany/precisioneditor/proc/add_chem_to_seed(chem_name)
 	if(!loaded_beaker)
 		return
 	var/chem_amount = loaded_beaker.reagents.get_reagent_amount(chem_name)

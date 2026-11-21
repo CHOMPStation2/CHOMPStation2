@@ -42,7 +42,7 @@
 	..()
 	return
 
-/obj/machinery/computer/message_monitor/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/computer/message_monitor/emag_act(remaining_charges, mob/user)
 	// Will create sparks and print out the console's password. You will then have to wait a while for the console to be back online.
 	// It'll take more time if there's more characters in the password..
 	if(!emag && operable())
@@ -75,8 +75,8 @@
 /obj/machinery/computer/message_monitor/LateInitialize()
 	//Is the server isn't linked to a server, and there's a server available, default it to the first one in the list.
 	if(!linkedServer)
-		if(message_servers && message_servers.len > 0)
-			linkedServer = message_servers[1]
+		if(GLOB.message_servers && GLOB.message_servers.len > 0)
+			linkedServer = GLOB.message_servers[1]
 
 /obj/machinery/computer/message_monitor/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -136,7 +136,7 @@
 
 		//Get out list of viable PDAs
 		var/list/obj/item/pda/sendPDAs = list()
-		for(var/obj/item/pda/P in PDAs)
+		for(var/obj/item/pda/P in GLOB.PDAs)
 			if(!P.owner || P.hidden)
 				continue
 			var/datum/data/pda/app/messenger/M = P.find_program(/datum/data/pda/app/messenger)
@@ -149,7 +149,7 @@
 
 	return data
 
-/obj/machinery/computer/message_monitor/attack_hand(var/mob/living/user as mob)
+/obj/machinery/computer/message_monitor/attack_hand(mob/living/user as mob)
 	if(stat & (NOPOWER|BROKEN))
 		return
 	if(!istype(user))
@@ -200,11 +200,11 @@
 			. = TRUE
 		//Find a server
 		if("find")
-			if(message_servers && message_servers.len > 1)
-				linkedServer = tgui_input_list(ui.user,"Please select a server.", "Select a server.", message_servers)
+			if(GLOB.message_servers && GLOB.message_servers.len > 1)
+				linkedServer = tgui_input_list(ui.user,"Please select a server.", "Select a server.", GLOB.message_servers)
 				set_temp("NOTICE: Server selected.", "alert")
-			else if(message_servers && message_servers.len > 0)
-				linkedServer = message_servers[1]
+			else if(GLOB.message_servers && GLOB.message_servers.len > 0)
+				linkedServer = GLOB.message_servers[1]
 				set_temp("NOTICE: Only Single Server Detected - Server selected.", "average")
 			else
 				temp = noserver
@@ -299,7 +299,7 @@
 				return TRUE
 
 			var/obj/item/pda/PDARec = null
-			for(var/obj/item/pda/P in PDAs)
+			for(var/obj/item/pda/P in GLOB.PDAs)
 				if(!P.owner || P.hidden)
 					continue
 				var/datum/data/pda/app/messenger/M = P.find_program(/datum/data/pda/app/messenger)
@@ -346,10 +346,9 @@
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/item/paper/monitorkey/LateInitialize()
-	if(message_servers)
-		for(var/obj/machinery/message_server/server in message_servers)
-			if(!isnull(server.decryptkey))
-				info = "<center><h2>Daily Key Reset</h2></center><br>The new message monitor key is '[server.decryptkey]'.<br>Please keep this a secret and away from the clown.<br>If necessary, change the password to a more secure one."
-				info_links = info
-				icon_state = "paper_words"
-				break
+	for(var/obj/machinery/message_server/server in GLOB.message_servers)
+		if(!isnull(server.decryptkey))
+			info = "<center><h2>Daily Key Reset</h2></center><br>The new message monitor key is '[server.decryptkey]'.<br>Please keep this a secret and away from the clown.<br>If necessary, change the password to a more secure one."
+			info_links = info
+			icon_state = "paper_words"
+			break

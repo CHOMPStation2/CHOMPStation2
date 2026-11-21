@@ -96,10 +96,10 @@
 	var/list/in_range = list()
 	if(!istype(M))
 		return in_range
-	var/social_check = only_people && !istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot)
+	var/social_check = only_people && !iscarbon(M) && !isrobot(M) && !ispAI(M) && !isAI(M)
 	var/self_invisible_check = M == human_parent || M.invisibility > human_parent.see_invisible
 	var/ckey_check = only_people && !M.ckey
-	var/overall_checks = M == human_parent || M.stat == DEAD || social_check || ckey_check
+	var/overall_checks = M == human_parent || M.stat == DEAD || social_check || ckey_check || (ispAI(M) && !M.ckey)
 	if(invis_matters && self_invisible_check)
 		return in_range
 	if((M.faction == FACTION_NEUTRAL || M.faction == human_parent.faction) && !overall_checks)
@@ -199,10 +199,14 @@
 	for(var/obj/item/toy/plushie/teshari/P in range(5, human_parent))
 		calm_discomfort()
 		return
+	for(var/obj/item/paicard/P in range(5, human_parent))
+		if(P.pai && !P.pai.stat && P.pai.client) // Must have pai and it must be alive
+			calm_discomfort()
+		return
 
 	increase_discomfort()
 
-/datum/component/crowd_detection/lonely/get_discomfort_message(var/current_discomfort)
+/datum/component/crowd_detection/lonely/get_discomfort_message(current_discomfort)
 	if(current_discomfort >= warning_cap)
 		human_parent.stuttering += 25
 		return span_danger(span_bold(pick("Where are the others?", "Please, there has to be someone nearby!", "I don't want to be alone!","Please, anyone! I don't want to be alone!")))
@@ -216,7 +220,7 @@
 		return pick("Well.. No one is around you anymore...","Well.. You're alone now...","You suddenly feel alone...")
 	. = ..()
 
-/datum/component/crowd_detection/lonely/calm_discomfort(var/amount = 4, var/message)
+/datum/component/crowd_detection/lonely/calm_discomfort(amount = 4, message)
 	if(!message && !get_calm())
 		message = span_infoplain("The nearby company calms you down...")
 	. = ..(amount, message)

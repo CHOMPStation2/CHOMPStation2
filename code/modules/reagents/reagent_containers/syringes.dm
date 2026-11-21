@@ -18,7 +18,7 @@
 	icon_state = "0"
 	center_of_mass_x = 16
 	center_of_mass_y = 14
-	matter = list(MAT_GLASS = 150)
+	matter = list(MAT_GLASS = MATERIAL_COST(0.075))
 	amount_per_transfer_from_this = 5
 	max_transfer_amount = null
 	volume = 15
@@ -60,11 +60,14 @@
 	..()
 	update_icon()
 
-/obj/item/reagent_containers/syringe/dropped(mob/user)
+/obj/item/reagent_containers/syringe/dropped(mob/user, equipping, slot)
 	..()
 	update_icon()
 
-/obj/item/reagent_containers/syringe/attack_self(mob/user as mob)
+/obj/item/reagent_containers/syringe/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	switch(mode)
 		if(SYRINGE_CAPPED)
 			mode = SYRINGE_DRAW
@@ -97,7 +100,7 @@
 		return
 
 	if(user.a_intent == I_HURT && ismob(target))
-		if((CLUMSY in user.mutations) && prob(50))
+		if(CLUMSY_HARM_CHANCE(user))
 			target = user
 		syringestab(target, user)
 		return
@@ -412,7 +415,7 @@
 	//reagents.add_reagent(REAGENT_ID_ADRENALINE,5) //VOREStation Edit - No thanks.
 	reagents.add_reagent(REAGENT_ID_HYPERZINE,10)
 
-/obj/item/reagent_containers/syringe/proc/dirty(var/mob/living/carbon/human/target, var/obj/item/organ/external/eo)
+/obj/item/reagent_containers/syringe/proc/dirty(mob/living/carbon/human/target, obj/item/organ/external/eo)
 	if(!ishuman(loc))
 		return //Avoid borg syringe problems.
 	LAZYINITLIST(targets)
@@ -427,8 +430,7 @@
 	//Grab any viruses they have
 	if(iscarbon(target) && LAZYLEN(target.IsInfected()))
 		LAZYINITLIST(viruses)
-		var/datum/disease/virus = pick(target.IsInfected())
-		viruses[hash] = virus.Copy()
+		viruses[hash] = target.GetViruses()
 
 	//Dirtiness should be very low if you're the first injectee. If you're spam-injecting 4 people in a row around you though,
 	//This gives the last one a 30% chance of infection.
@@ -450,7 +452,7 @@
 	if(!used)
 		START_PROCESSING(SSobj, src)
 
-/obj/item/reagent_containers/syringe/proc/infect_limb(var/obj/item/organ/external/eo)
+/obj/item/reagent_containers/syringe/proc/infect_limb(obj/item/organ/external/eo)
 	src = null
 	var/datum/weakref/limb_ref = WEAKREF(eo)
 	spawn(rand(5 MINUTES,10 MINUTES))

@@ -24,7 +24,7 @@
 					// If they aren't in range, lose the target.
 					lostTarget(target)
 
-/obj/machinery/camera/proc/newTarget(var/mob/target)
+/obj/machinery/camera/proc/newTarget(mob/target)
 	if (isAI(target)) return 0
 	if (detectTime == 0)
 		detectTime = world.time // start the clock
@@ -32,7 +32,7 @@
 		LAZYADD(motionTargets, target)
 	return 1
 
-/obj/machinery/camera/proc/lostTarget(var/mob/target)
+/obj/machinery/camera/proc/lostTarget(mob/target)
 	if (target in motionTargets)
 		LAZYREMOVE(motionTargets, target)
 	if (LAZYLEN(motionTargets) == 0)
@@ -42,7 +42,7 @@
 	if (!status || (stat & NOPOWER))
 		return 0
 	if (detectTime == -1)
-		motion_alarm.clearAlarm(loc, src)
+		GLOB.motion_alarm.clearAlarm(loc, src)
 	detectTime = 0
 	return 1
 
@@ -50,7 +50,7 @@
 	if (!status || (stat & NOPOWER))
 		return 0
 	if (!detectTime) return 0
-	motion_alarm.triggerAlarm(loc, src)
+	GLOB.motion_alarm.triggerAlarm(loc, src)
 	detectTime = -1
 	return 1
 

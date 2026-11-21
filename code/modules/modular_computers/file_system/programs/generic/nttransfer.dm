@@ -1,4 +1,4 @@
-var/global/nttransfer_uid = 0
+GLOBAL_VAR_INIT(nttransfer_uid, 0)
 
 /datum/computer_file/program/nttransfer
 	filename = "nttransfer"
@@ -27,8 +27,8 @@ var/global/nttransfer_uid = 0
 	var/upload_menu = FALSE								// Whether we show the program list and upload menu
 
 /datum/computer_file/program/nttransfer/New()
-	unique_token = nttransfer_uid
-	nttransfer_uid++
+	unique_token = GLOB.nttransfer_uid
+	GLOB.nttransfer_uid++
 	..()
 
 /datum/computer_file/program/nttransfer/process_tick()
@@ -47,7 +47,7 @@ var/global/nttransfer_uid = 0
 		if(!remote)
 			crash_download("Connection to remote server lost")
 
-/datum/computer_file/program/nttransfer/kill_program(var/forced = 0)
+/datum/computer_file/program/nttransfer/kill_program(forced = 0)
 	if(downloaded_file) // Client mode, clean up variables for next use
 		finalize_download()
 
@@ -64,7 +64,7 @@ var/global/nttransfer_uid = 0
 	finalize_download()
 
 //  Crashes the download and displays specific error message
-/datum/computer_file/program/nttransfer/proc/crash_download(var/message)
+/datum/computer_file/program/nttransfer/proc/crash_download(message)
 	error = message ? message : "An unknown error has occurred during download"
 	finalize_download()
 
@@ -109,7 +109,7 @@ var/global/nttransfer_uid = 0
 	data["servers"] = list()
 	if(!(downloaded_file || provided_file || upload_menu))
 		var/list/all_servers = list()
-		for(var/datum/computer_file/program/nttransfer/P in ntnet_global.fileservers)
+		for(var/datum/computer_file/program/nttransfer/P in GLOB.ntnet_global.fileservers)
 			if(!P.provided_file)
 				continue
 			all_servers.Add(list(list(
@@ -127,7 +127,7 @@ var/global/nttransfer_uid = 0
 		return TRUE
 	switch(action)
 		if("PRG_downloadfile")
-			for(var/datum/computer_file/program/nttransfer/P in ntnet_global.fileservers)
+			for(var/datum/computer_file/program/nttransfer/P in GLOB.ntnet_global.fileservers)
 				if(P.unique_token == text2num(params["uid"]))
 					remote = P
 					break
@@ -145,8 +145,8 @@ var/global/nttransfer_uid = 0
 			error = ""
 			upload_menu = 0
 			finalize_download()
-			if(src in ntnet_global.fileservers)
-				ntnet_global.fileservers.Remove(src)
+			if(src in GLOB.ntnet_global.fileservers)
+				GLOB.ntnet_global.fileservers.Remove(src)
 			for(var/datum/computer_file/program/nttransfer/T in connected_clients)
 				T.crash_download("Remote server has forcibly closed the connection")
 			provided_file = null
@@ -167,7 +167,7 @@ var/global/nttransfer_uid = 0
 						error = "I/O Error: File locked."
 						return
 					provided_file = F
-					ntnet_global.fileservers |= src
+					GLOB.ntnet_global.fileservers |= src
 					return
 			error = "I/O Error: Unable to locate file on hard drive."
 			return TRUE

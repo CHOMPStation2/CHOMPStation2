@@ -13,12 +13,12 @@
 	name = "paradox rift generator circuit"
 	build_path = /obj/machinery/paradoxrift
 	board_type = new /datum/frame/frame_types/machine
-	origin_tech = list(TECH_DATA = 8, TECH_PRECURSOR = 3)
 	req_components = list(
 							/obj/item/stack/cable_coil = 10,
 							/obj/item/stock_parts/capacitor = 4,
 							/obj/item/stock_parts/manipulator = 6,
 							/obj/item/stock_parts/scanning_module = 10)
+	hidden = TRUE //This needs a rework before it's enabled.
 
 /obj/machinery/paradoxrift/RefreshParts()
 	..()

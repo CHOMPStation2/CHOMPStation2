@@ -41,11 +41,13 @@
 
 	var/datum/gene/trait/linked_gene = null // Internal use, do not assign.
 
+	var/list/multiple_choice
+
 
 
 
 //Proc can be overridden lower to include special changes, make sure to call up though for the vars changes
-/datum/trait/proc/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+/datum/trait/proc/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	ASSERT(S)
 	if(var_changes)
 		for(var/V in var_changes)
@@ -78,7 +80,7 @@
 	return
 
 // Traitgenes Disabling traits, genes can be turned off after all!
-/datum/trait/proc/unapply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+/datum/trait/proc/unapply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	ASSERT(S)
 	if(var_changes)
 		for(var/V in var_changes)
@@ -119,7 +121,7 @@
 			qdel(C)
 	return
 
-/datum/trait/proc/send_message(var/mob/living/carbon/human/H, var/enabled)
+/datum/trait/proc/send_message(mob/living/carbon/human/H, enabled)
 	if(enabled)
 		if(!activation_message)
 			return
@@ -131,7 +133,7 @@
 // Traitgenes edit end
 
 //Applying trait to preferences rather than just us.
-/datum/trait/proc/apply_pref(var/datum/preferences/P)
+/datum/trait/proc/apply_pref(datum/preferences/P)
 	ASSERT(P)
 	if(var_changes_pref)
 		for(var/V in var_changes_pref)
@@ -139,12 +141,12 @@
 	return
 
 //Similar to the above, but for removing. Probably won't be called often/ever.
-/datum/trait/proc/remove(var/datum/species/S)
+/datum/trait/proc/remove(datum/species/S)
 	ASSERT(S)
 	return
 
 //Similar to the above, but for removing.
-/datum/trait/proc/remove_pref(var/datum/preferences/P)
+/datum/trait/proc/remove_pref(datum/preferences/P)
 	ASSERT(P)
 	if(var_changes_pref)
 		for(var/V in var_changes_pref)
@@ -160,7 +162,7 @@
 		prefs[j] = default
 	return prefs
 
-/datum/trait/proc/default_value_for_pref(var/pref)
+/datum/trait/proc/default_value_for_pref(pref)
 	if (length(has_preferences[pref]) > 3) //custom default
 		return has_preferences[pref][4]
 	switch(has_preferences[pref][1])
@@ -170,9 +172,11 @@
 			return "#ffffff"
 		if(TRAIT_PREF_TYPE_STRING) //string
 			return ""
+		if(TRAIT_PREF_TYPE_LIST) //list
+			return ""
 	return
 
-/datum/trait/proc/apply_sanitization_to_string(var/pref, var/input)
+/datum/trait/proc/apply_sanitization_to_string(pref, input)
 	if (has_preferences[pref][1] != TRAIT_PREF_TYPE_STRING || length(input) <= 0)
 		return default_value_for_pref(pref)
 	input = sanitizeSafe(input, MAX_NAME_LEN)
@@ -180,5 +184,5 @@
 		return default_value_for_pref(pref)
 	return input
 
-/datum/trait/proc/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/trait/proc/handle_environment_special(mob/living/carbon/human/H)
 	return

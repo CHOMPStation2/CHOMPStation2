@@ -27,8 +27,6 @@ GLOBAL_LIST_INIT(grass_animals,list(
 		/mob/living/simple_mob/animal/sif/duck = 24,
 		/obj/random/mob/multiple/sifmobs = 6,
 		/mob/living/simple_mob/humanoid/cultist/tesh = 2,
-		/mob/living/simple_mob/humanoid/eclipse/solar/froststalker = 2,
-		/mob/living/simple_mob/humanoid/eclipse/lunar = 1,
 		/mob/living/simple_mob/humanoid/merc/ranged/laser = 2,
 		/mob/living/simple_mob/humanoid/cultist/magus/rift = 0.05
 		),
@@ -48,8 +46,7 @@ GLOBAL_LIST_INIT(grass_animals,list(
 		/mob/living/simple_mob/animal/space/mouse_army/operative = 6,
 		/mob/living/simple_mob/animal/space/mouse_army/pyro = 6,
 		/mob/living/simple_mob/animal/space/mouse_army/ammo = 6,
-		/mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire = 2,
-		/mob/living/simple_mob/humanoid/eclipse/lunar = 6
+		/mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire = 2
 		),
 	"seasonalspring" = list(
 		/mob/living/simple_mob/vore/alienanimals/teppi = 10, //CHOMP Edit

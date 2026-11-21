@@ -150,7 +150,7 @@
 /area/awaymission/snowfield/medical/patients)
 "ahY" = (
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -746,10 +746,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/structure/closet/l3closet/general{
-	opened = 1;
-	starts_with = null
-	},
+/obj/structure/closet/l3closet,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/medical/storage_room)
 "aLI" = (
@@ -1127,11 +1124,8 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/paramedic{
-	req_access = list(33);
-	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/radio/headset/alt/headset_med,/obj/item/storage/briefcase/inflatable,/obj/item/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
-	},
 /obj/effect/floor_decal/industrial/outline,
+/obj/structure/closet/secure_closet/paramedic,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
 "beX" = (
@@ -1828,7 +1822,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2737,10 +2731,8 @@
 /turf/simulated/mineral/floor/cave,
 /area/awaymission/snowfield/security/hallway2)
 "cDP" = (
-/obj/structure/closet/secure_closet/warden{
-	starts_with = list(/obj/item/clothing/gloves/combat,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/shield/riot,/obj/item/ammo_magazine/akm=2,/obj/item/gun/projectile/automatic/serdy/krinkov,/obj/item/clothing/head/beret/sec/corporate/warden,/obj/item/clothing/head/helmet/warden/hat,/obj/item/clothing/head/helmet/warden,/obj/item/clothing/suit/armor/swat/officer,/obj/item/radio/headset/alt/heads/hos,/obj/item/radio/headset/heads/hos,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/ammo_magazine/s357=2,/obj/item/gun/projectile/revolver/nagant/skinned,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton)
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/warden/snowfield,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/warden)
 "cEo" = (
@@ -2925,9 +2917,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/alt/headset_sec,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
-	},
+/obj/structure/closet/secure_closet/security/snowfield,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
 "cQE" = (
@@ -3733,10 +3723,7 @@
 	},
 /obj/item/soap,
 /obj/effect/floor_decal/industrial/outline,
-/obj/structure/closet/secure_closet/medical3{
-	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/alt/headset_med,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
-	},
+/obj/structure/closet/secure_closet/medical3/snowfield,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
 "dzM" = (
@@ -4324,9 +4311,7 @@
 /area/awaymission/snowfield/hallway/commandhallway_substation)
 "dWX" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/alt/headset_sec,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
-	},
+/obj/structure/closet/secure_closet/security/snowfield,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
 "dXK" = (
@@ -4727,10 +4712,7 @@
 	},
 /obj/item/soap,
 /obj/effect/floor_decal/industrial/outline,
-/obj/structure/closet/secure_closet/medical3{
-	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/alt/headset_med,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
-	},
+/obj/structure/closet/secure_closet/medical3/snowfield,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
 "epG" = (
@@ -4912,9 +4894,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/public/toolstroage2)
 "ewG" = (
-/obj/structure/closet/secure_closet/engineering_personal{
-	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/radio/headset/headset_eng,/obj/item/radio/headset/alt/headset_eng,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
-	},
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 1e+006
@@ -4926,6 +4905,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/engineering_personal/snowfield,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/locker_room)
 "ewH" = (
@@ -5650,7 +5630,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -6407,9 +6387,7 @@
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/chemistry)
 "fWi" = (
-/obj/structure/closet/crate/radiation{
-	starts_with = list(/obj/item/clothing/suit/radiation=8,/obj/item/clothing/head/radiation=8)
-	},
+/obj/structure/closet/crate/radiation,
 /obj/item/stack/material/lead{
 	amount = 50
 	},
@@ -6417,6 +6395,14 @@
 	amount = 50
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/head/radiation,
+/obj/item/clothing/head/radiation,
+/obj/item/clothing/head/radiation,
+/obj/item/clothing/head/radiation,
 /turf/simulated/floor/plating,
 /area/awaymission/snowfield/engineering/primary_storage)
 "fWx" = (
@@ -6888,14 +6874,12 @@
 /turf/simulated/wall/cult,
 /area/awaymission/snowfield/dorms/panicroom)
 "gsi" = (
-/obj/structure/closet/secure_closet/engineering_personal{
-	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/radio/headset/headset_eng,/obj/item/radio/headset/alt/headset_eng,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
-	},
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 1e+006
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/engineering_personal/snowfield,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/locker_room)
 "gsu" = (
@@ -8262,7 +8246,7 @@
 /area/awaymission/snowfield/medical/surgery)
 "hzx" = (
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -9216,7 +9200,7 @@
 	dir = 1
 	},
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/oxygen/fire;
+	closet_appearance = /datum/decl/closet_appearance/oxygen/fire;
 	name = "fire-safety closet";
 	opened = 1
 	},
@@ -9983,7 +9967,7 @@
 	dir = 8
 	},
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -10402,12 +10386,10 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/dorms/dorm7)
 "jtR" = (
-/obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/alt/headset_sec,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/security/snowfield,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
 "juu" = (
@@ -10635,9 +10617,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/detective{
-	starts_with = list(/obj/item/clothing/gloves/forensic,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/fedora,/obj/item/clothing/head/fedora/brown,/obj/item/clothing/suit/storage/det_trench,/obj/item/clothing/suit/storage/det_trench/grey,/obj/item/clothing/suit/armor/bulletproof,/obj/item/radio/headset/alt/headset_sec,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/under/soviet,/obj/item/melee/classic_baton,/obj/item/reagent_containers/spray/pepper,/obj/item/flash,/obj/item/ammo_magazine/s357=2,/obj/item/gun/projectile/revolver/nagant)
-	},
+/obj/structure/closet/secure_closet/detective/snowfield,
 /turf/simulated/floor/lino,
 /area/awaymission/snowfield/security/detective)
 "jDy" = (
@@ -10715,7 +10695,7 @@
 /area/awaymission/snowfield/dorms/dorm10)
 "jGT" = (
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -10981,7 +10961,7 @@
 /area/awaymission/snowfield/hallway/southhallway)
 "jRr" = (
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -11515,18 +11495,6 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/engineering/staff_room)
-"kpY" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/outline,
-/obj/item/soap,
-/obj/structure/closet/secure_closet/medical3{
-	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/alt/headset_med,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
-	},
-/turf/simulated/floor/tiled/neutral,
-/area/awaymission/snowfield/medical/medical_locker)
 "kqw" = (
 /obj/item/pen,
 /turf/simulated/floor/wood,
@@ -12980,15 +12948,13 @@
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/staff_room)
 "lDj" = (
-/obj/structure/closet/secure_closet/engineering_personal{
-	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/radio/headset/headset_eng,/obj/item/radio/headset/alt/headset_eng,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
-	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 1e+006
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/engineering_personal/snowfield,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/locker_room)
 "lDr" = (
@@ -13208,11 +13174,8 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline,
-/obj/structure/closet/secure_closet/medical3{
-	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/alt/headset_med,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
-	},
 /obj/item/soap,
+/obj/structure/closet/secure_closet/medical3/snowfield,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
 "lLo" = (
@@ -13531,7 +13494,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/clothing/suit/bio_suit/general,
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -16093,7 +16056,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/window/reinforced,
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/oxygen/fire;
+	closet_appearance = /datum/decl/closet_appearance/oxygen/fire;
 	name = "fire-safety closet";
 	opened = 1
 	},
@@ -19547,14 +19510,11 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/paramedic{
-	req_access = list(33);
-	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/radio/headset/alt/headset_med,/obj/item/storage/briefcase/inflatable,/obj/item/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
-	},
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/paramedic,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
 "rKt" = (
@@ -20401,7 +20361,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -20491,10 +20451,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline,
-/obj/structure/closet/l3closet/general{
-	opened = 1;
-	starts_with = null
-	},
+/obj/structure/closet/l3closet,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/medical/storage_room)
 "sNi" = (
@@ -22508,11 +22465,8 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 9
 	},
-/obj/structure/closet/secure_closet/paramedic{
-	req_access = list(33);
-	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/radio/headset/alt/headset_med,/obj/item/storage/briefcase/inflatable,/obj/item/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
-	},
 /obj/effect/floor_decal/industrial/outline,
+/obj/structure/closet/secure_closet/paramedic,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
 "uIr" = (
@@ -22870,10 +22824,8 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "vaq" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/alt/headset_sec,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/security/snowfield,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
 "vaD" = (
@@ -24217,7 +24169,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/oxygen/fire;
+	closet_appearance = /datum/decl/closet_appearance/oxygen/fire;
 	name = "fire-safety closet";
 	opened = 1
 	},
@@ -24432,10 +24384,7 @@
 	},
 /obj/item/soap,
 /obj/effect/floor_decal/industrial/outline,
-/obj/structure/closet/secure_closet/medical3{
-	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/alt/headset_med,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
-	},
+/obj/structure/closet/secure_closet/medical3/snowfield,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
 "wuM" = (
@@ -25634,7 +25583,7 @@
 	dir = 4
 	},
 /obj/structure/closet{
-	closet_appearance = /decl/closet_appearance/bio;
+	closet_appearance = /datum/decl/closet_appearance/bio;
 	name = "Level-3 Biohazard Closet";
 	opened = 1
 	},
@@ -43784,7 +43733,7 @@ kOt
 kdE
 dpf
 dzK
-kpY
+lLf
 lLf
 nPS
 vCN

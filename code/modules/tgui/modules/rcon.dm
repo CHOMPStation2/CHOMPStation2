@@ -12,16 +12,13 @@
 	var/current_page = 1
 	var/number_pages = 0
 
-/datum/tgui_module/rcon/proc/filter_smeslist(var/page)
-	number_pages = known_SMESs.len / SMES_PER_PAGE
-
-	if(number_pages != round(number_pages))
-		number_pages = round(number_pages) + 1
+/datum/tgui_module/rcon/proc/filter_smeslist(page)
+	number_pages = (length(known_SMESs) + SMES_PER_PAGE - 1) / SMES_PER_PAGE
 	var/page_index = page - 1
 
 	var/lower_bound = page_index * SMES_PER_PAGE + 1
 	var/upper_bound = (page_index + 1) * SMES_PER_PAGE
-	upper_bound = min(upper_bound, known_SMESs.len)
+	upper_bound = min(upper_bound, length(known_SMESs))
 	filtered_smeslist = list()
 
 	for(var/index = lower_bound, index <= upper_bound, index++)
@@ -34,13 +31,13 @@
 	filter_smeslist(current_page)
 
 	// SMES DATA (simplified view)
-	var/list/smeslist[0]
+	var/list/smeslist = list()
 	for(var/obj/machinery/power/smes/buildable/SMES in filtered_smeslist)
 		var/list/smes_data = SMES.tgui_data()
 		smes_data["RCON_tag"] = SMES.RCon_tag
 		smeslist.Add(list(smes_data))
 
-	data["pages"] = number_pages + 1
+	data["pages"] = number_pages
 	data["current_page"] = current_page
 	data["smes_info"] = sortByKey(smeslist, "RCON_tag")
 
@@ -110,7 +107,7 @@
 // Proc: GetSMESByTag()
 // Parameters: 1 (tag - RCON tag of SMES we want to look up)
 // Description: Looks up and returns SMES which has matching RCON tag
-/datum/tgui_module/rcon/proc/GetSMESByTag(var/tag)
+/datum/tgui_module/rcon/proc/GetSMESByTag(tag)
 	if(!tag)
 		return
 

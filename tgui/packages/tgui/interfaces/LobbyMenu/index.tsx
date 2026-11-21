@@ -24,23 +24,38 @@ export const LobbyMenu = (props) => {
   const [animationsFinished, setAnimationsFinished] = useState(false);
 
   useEffect(() => {
-    storage
-      .get('lobby-filter-disabled')
-      .then((val) => setFilterDisabled(!!val));
-    storage
-      .get('lobby-animations-disabled')
-      .then((val) => setAnimationsDisabled(!!val));
-    storage.get('lobby-audio-disabled').then((val) => setAudioDisabled(!!val));
+    let t1: ReturnType<typeof setTimeout> | undefined;
+    let t2: ReturnType<typeof setTimeout> | undefined;
 
-    setTimeout(() => {
-      if (onLoadPlayer.current) {
-        onLoadPlayer.current!.play();
+    (async () => {
+      const [filterDisabled, animationsDisabled, audioDisabled] =
+        await Promise.all([
+          storage.get('lobby-filter-disabled'),
+          storage.get('lobby-animations-disabled'),
+          storage.get('lobby-audio-disabled'),
+        ]);
+
+      setFilterDisabled(!!filterDisabled);
+      setAnimationsDisabled(!!animationsDisabled);
+      setAudioDisabled(!!audioDisabled);
+
+      t1 = setTimeout(() => {
+        onLoadPlayer.current?.play().catch(() => {});
+      }, 250);
+
+      t2 = setTimeout(() => {
+        setAnimationsFinished(true);
+      }, 10000);
+    })();
+
+    return () => {
+      if (t1) {
+        clearTimeout(t1);
       }
-    }, 250);
-
-    setTimeout(() => {
-      setAnimationsFinished(true);
-    }, 10000);
+      if (t2) {
+        clearTimeout(t2);
+      }
+    };
   }, []);
 
   const [hidden, setHidden] = useState<boolean>(false);

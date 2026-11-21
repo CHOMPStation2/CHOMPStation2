@@ -1300,6 +1300,7 @@
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = 32
 	},
+/obj/machinery/power/emitter,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "cx" = (
@@ -6768,11 +6769,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/angled_bay/standard/glass{
-	door_color = "#8c1d11";
-	name = "Security Processing";
+/obj/machinery/door/airlock/angled_bay/standard/color/security{
 	req_access = list(63);
-	stripe_color = "#d27428"
+	name = "Security Processing";
+	id_tag = "sec_processing"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/security/security_processing)
@@ -9832,6 +9832,8 @@
 /obj/item/pen,
 /obj/item/packageWrap,
 /obj/item/packageWrap,
+/obj/item/multitool/scioutpost,
+/obj/item/retail_scanner/science,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "tP" = (
@@ -10377,7 +10379,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/security_equiptment_storage)
 "vd" = (
-/obj/structure/toilet{
+/obj/structure/toilet/teleplumbed{
 	dir = 4
 	},
 /obj/machinery/alarm/angled{
@@ -11864,8 +11866,14 @@
 "yq" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger,
-/obj/item/retail_scanner/science,
-/obj/item/multitool/scioutpost,
+/obj/item/storage/box/anomaly{
+	pixel_y = 10;
+	pixel_x = -10
+	},
+/obj/item/storage/box/anomaly{
+	pixel_y = 2;
+	pixel_x = -10
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "yr" = (
@@ -11907,6 +11915,7 @@
 /obj/machinery/disposal/wall{
 	dir = 1
 	},
+/obj/machinery/anomaly_harvester,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "yw" = (
@@ -12838,6 +12847,13 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/security,
+/obj/machinery/button/remote/airlock{
+	pixel_y = 32;
+	pixel_x = 36;
+	id = "sec_processing";
+	specialfunctions = 4;
+	name = "Door Control"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_processing)
 "Ax" = (
@@ -17267,7 +17283,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck1/dorms/dorm6)
 "Ki" = (
-/obj/structure/toilet{
+/obj/structure/toilet/teleplumbed{
 	dir = 4
 	},
 /obj/machinery/alarm/angled{
@@ -22234,6 +22250,7 @@
 "UA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/rnd/destructive_analyzer,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research)
 "UB" = (

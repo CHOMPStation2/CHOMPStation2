@@ -14,8 +14,6 @@
 
 	//recipes = material.get_recipes()	No.
 	stacktype = material.stack_type
-	if(islist(material.stack_origin_tech))
-		origin_tech = material.stack_origin_tech.Copy()
 
 	if(apply_colour)
 		color = material.icon_colour

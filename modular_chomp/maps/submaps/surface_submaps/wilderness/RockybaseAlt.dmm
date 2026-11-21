@@ -1,4 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/simulated/floor/plating/turfpack/sif,
+/area/submap/Rockybase)
 "af" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -14,7 +17,7 @@
 /area/submap/Rockybase)
 "aO" = (
 /obj/machinery/porta_turret/poi,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "bm" = (
 /turf/simulated/floor/tiled/hydro,
@@ -154,7 +157,7 @@
 /area/submap/Rockybase)
 "hc" = (
 /obj/effect/decal/remains/posi,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "ih" = (
 /obj/effect/decal/remains,
@@ -693,7 +696,7 @@
 /area/submap/Rockybase)
 "Jz" = (
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "JD" = (
 /turf/simulated/wall,
@@ -777,14 +780,14 @@
 "MJ" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "MW" = (
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "Nz" = (
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "NN" = (
 /obj/structure/table/woodentable,
@@ -986,6 +989,7 @@
 /obj/item/cell/device/weapon,
 /obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/prop/deconstructable/gigacell,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/Rockybase)
 "Wp" = (
@@ -1027,7 +1031,7 @@
 "Yo" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/danger,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/Rockybase)
 "Zd" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -2132,7 +2136,7 @@ yb
 yb
 yb
 yb
-yq
+aa
 Yo
 pk
 KE
@@ -2169,8 +2173,8 @@ yb
 yb
 yb
 yb
-yq
-yq
+aa
+aa
 Jz
 pk
 Lz
@@ -2207,7 +2211,7 @@ yb
 yb
 yb
 yb
-yq
+aa
 Nz
 Jz
 Dh
@@ -2246,7 +2250,7 @@ yb
 yb
 yb
 hc
-yq
+aa
 Jz
 VR
 MW
@@ -2283,8 +2287,8 @@ yb
 yb
 yb
 yb
-yq
-yq
+aa
+aa
 Jz
 VR
 MW
@@ -2321,8 +2325,8 @@ yb
 yb
 yb
 yb
-yq
-yq
+aa
+aa
 Jz
 Dh
 pk
@@ -2359,8 +2363,8 @@ yb
 yb
 yb
 yb
-yq
-yq
+aa
+aa
 MJ
 pk
 wS
@@ -2398,7 +2402,7 @@ yb
 yb
 yb
 yb
-yq
+aa
 Yo
 pk
 wo

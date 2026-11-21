@@ -1,6 +1,6 @@
 /obj/machinery/suspension_gen
 	name = "suspension field generator"
-	desc = "It has stubby bolts up against it's treads for stabilising. Used to be required for artifact removal but now merely works as a monster deterrant."
+	desc = "It has stubby bolts up against it's treads for stabilising. Used to hold anomalies stable in place."
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	icon_state = "suspension"
 	density = 1
@@ -8,7 +8,7 @@
 	var/obj/item/cell/cell
 	var/obj/item/card/id/auth_card
 	var/locked = 1
-	var/power_use = 5
+	var/power_use = 15
 	var/obj/effect/suspension_field/suspension_field
 
 /obj/machinery/suspension_gen/Initialize(mapload)
@@ -36,7 +36,7 @@
 		if(cell.charge <= 0)
 			deactivate()
 
-/obj/machinery/suspension_gen/attack_hand(var/mob/user)
+/obj/machinery/suspension_gen/attack_hand(mob/user)
 	if(!panel_open)
 		tgui_interact(user)
 	else if(cell)
@@ -130,7 +130,7 @@
 		else
 			to_chat(user, span_warning("Remove [auth_card] first."))
 
-/obj/machinery/suspension_gen/proc/attempt_unlock(var/obj/item/card/C, var/mob/user)
+/obj/machinery/suspension_gen/proc/attempt_unlock(obj/item/card/C, mob/user)
 	if(!panel_open)
 		if(istype(C, /obj/item/card/emag))
 			C.resolve_attackby(src, user)
@@ -139,7 +139,7 @@
 		if(!locked)
 			return 1
 
-/obj/machinery/suspension_gen/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/suspension_gen/emag_act(remaining_charges, mob/user)
 	if(cell.charge > 0 && locked)
 		locked = 0
 		return 1
@@ -152,6 +152,12 @@
 	for(var/mob/living/M in T)
 		M.Weaken(5)
 		M.visible_message(span_blue("[icon2html(M,viewers(M))] [M] begins to float in the air!"),"You feel tingly and light, but it is difficult to move.")
+
+	for(var/obj/effect/anomaly/anom in T)
+		anom.immortal = TRUE
+		anom.move_chance = 0
+		if(!anom.stats)
+			anom.stats = new /datum/anomaly_stats(anom)
 
 	suspension_field = new(T)
 	visible_message(span_blue("[icon2html(src,viewers(src))] [src] activates with a low hum."))
@@ -180,6 +186,15 @@
 	for(var/mob/living/M in T)
 		to_chat(M, span_info("You no longer feel like floating."))
 		M.Weaken(3)
+
+	for(var/obj/effect/anomaly/anom in T)
+		if(anom.stats)
+			var/datum/anomaly_stats/anom_stats = anom.stats
+			if(istype(anom_stats.modifier, /datum/anomaly_modifiers/move))
+				anom.move_chance = initial(anom.move_chance)
+			continue
+		else
+			anom.move_chance = initial(anom.move_chance)
 
 	visible_message(span_blue("[icon2html(src,viewers(src))] [src] deactivates with a gentle shudder."))
 	qdel(suspension_field)

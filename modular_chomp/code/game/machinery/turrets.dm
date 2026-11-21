@@ -77,9 +77,9 @@
 	can_salvage = FALSE
 
 /obj/item/circuitboard/defenseonelisk
-	name = "paradox rift generator circuit"
-	build_path = /obj/machinery/paradoxrift
+	name = "defense obelisk circuit"
+	build_path = /obj/machinery/porta_turret/obelisk
 	board_type = new /datum/frame/frame_types/machine
-	origin_tech = list(TECH_DATA = 8, TECH_ARCANE = 3)
 	req_components = list(
 							/obj/item/stack/cable_coil = 30)
+	hidden = TRUE // POI machine, not station made

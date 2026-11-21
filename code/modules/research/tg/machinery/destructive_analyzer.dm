@@ -9,6 +9,7 @@ It is used to destroy hand-held objects and advance technological research. Used
 
 /obj/machinery/rnd/destructive_analyzer
 	name = "destructive analyzer"
+	desc = "Learn science by destroying things!"
 	icon_state = "d_analyzer"
 	var/decon_mod = 0
 	circuit = /obj/item/circuitboard/destructive_analyzer
@@ -31,12 +32,14 @@ It is used to destroy hand-held objects and advance technological research. Used
 	)
 
 	AddComponent(/datum/component/experiment_handler, \
+		config_mode = EXPERIMENT_CONFIG_ALTCLICK, \
 		allowed_experiments = list(/datum/experiment/scanning),\
 		config_flags = EXPERIMENT_CONFIG_ALWAYS_ACTIVE|EXPERIMENT_CONFIG_SILENT_FAIL,\
 		experiment_signals = destructive_signals, \
 	)
 	. = ..()
 	default_apply_parts()
+	ADD_TRAIT(src, TRAIT_ALT_CLICK_BLOCKER, ROUNDSTART_TRAIT)
 
 /obj/machinery/rnd/destructive_analyzer/Destroy()
 	rmat = null
@@ -58,7 +61,7 @@ It is used to destroy hand-held objects and advance technological research. Used
 	else
 		icon_state = "d_analyzer"
 
-/obj/machinery/rnd/destructive_analyzer/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/machinery/rnd/destructive_analyzer/attackby(obj/item/O as obj, mob/user as mob)
 	if(busy)
 		to_chat(user, span_notice("\The [src] is busy right now."))
 		return
@@ -85,8 +88,15 @@ It is used to destroy hand-held objects and advance technological research. Used
 				to_chat(user, span_notice("The machine rejects \the [O]!"))
 				return
 			if(LAZYLEN(O.contents))
-				to_chat(user, span_notice("The machine rejects \the [O]! You need to clear it of all items first!"))
-				return
+				var/bad_item = FALSE
+				for(var/obj/item/thing in O.contents)
+					if(thing.item_flags & ABSTRACT)
+						continue
+					bad_item = TRUE
+					break
+				if(bad_item)
+					to_chat(user, span_notice("The machine rejects \the [O]! You need to clear it of all items first!"))
+					return
 			busy = TRUE
 			loaded_item = WEAKREF(O)
 			user.drop_item()
@@ -246,13 +256,17 @@ It is used to destroy hand-held objects and advance technological research. Used
 	busy = TRUE
 	addtimer(CALLBACK(src, PROC_REF(reset_busy)), 2.4 SECONDS)
 	use_power(active_power_usage)
-	//Failsafe.
+	// Destroy items inside
+	var/list/destructing = list()
+	destructing += current_item
 	for(var/atom/movable/AM in current_item.contents)
 		AM.forceMove(get_turf(src))
-	playsound(src, 'sound/machines/destructive_analyzer.ogg', 50, 1)
-	SEND_SIGNAL(src, COMSIG_MACHINERY_DESTRUCTIVE_SCAN, current_item)
-	destroy_item_individual(current_item, gain_research_points)
+		destructing += AM
+	for(var/atom/thing_destroying in destructing) // For all contents and itself
+		destroy_item_individual(thing_destroying, gain_research_points)
 	loaded_item = null
+	// feedback
+	playsound(src, 'sound/machines/destructive_analyzer.ogg', 50, 1)
 	update_icon()
 	return TRUE
 
@@ -277,11 +291,10 @@ It is used to destroy hand-held objects and advance technological research. Used
 		visible_message(span_warning("A loud buzz sounds out from \the [src] as it rejects and spits out \the [thing]!"))
 		thing.forceMove(turf_to_dump_to)
 		return
-	var/list/point_value = techweb_item_point_check(thing)
-	//If it has a point value and we haven't deconstructed it OR we've deconstructed it but it's a repeatable.
-	if(point_value && (!stored_research.deconstructed_items[thing.type] || (stored_research.deconstructed_items[thing.type] && (thing.type in SSresearch.techweb_repeatable_items))))
-		stored_research.deconstructed_items[thing.type] = TRUE
-		stored_research.add_point_list(point_value)
+
+	//Perform experiment
+	techweb_item_generate_points(thing, stored_research)
+	SEND_SIGNAL(src, COMSIG_MACHINERY_DESTRUCTIVE_SCAN, thing)
 
 	//Finally, let's add it to the material silo, if applicable.
 	var/datum/component/material_container/materials = get_silo_material_container_datum(FALSE)

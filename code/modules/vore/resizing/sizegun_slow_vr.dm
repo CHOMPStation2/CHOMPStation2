@@ -8,7 +8,6 @@
 	icon_state = "sizegun-old-0"
 	var/base_icon_state = "sizegun-old"
 	w_class = ITEMSIZE_NORMAL
-	origin_tech = list(TECH_BLUESPACE = 4)
 	force = 0
 	slot_flags = SLOT_BELT
 	var/beam_range = 4 // How many tiles away it can scan. Changing this also changes the box size.
@@ -25,7 +24,7 @@
 	if(busy)
 		icon_state = "[icon_state]-active"
 
-/obj/item/slow_sizegun/proc/should_stop(var/mob/living/target, var/mob/living/user, var/active_hand)
+/obj/item/slow_sizegun/proc/should_stop(mob/living/target, mob/living/user, active_hand)
 	if(!target || !user || !active_hand || !istype(target) || !istype(user) || !busy)
 		return TRUE
 
@@ -138,6 +137,7 @@
 	playsound(src, 'sound/weapons/wave.ogg', 50)
 
 	var/active_hand = user.get_active_hand()
+	var/previous_scale = L.size_multiplier
 
 	if (trading == 0)
 		while(!should_stop(target, user, active_hand))
@@ -161,6 +161,16 @@
 	busy = FALSE
 	current_target = null
 
+	if(ishuman(L))
+		var/mob/living/carbon/human/our_target = L
+		var/size_difference = previous_scale - our_target.size_multiplier
+		if((size_difference >= 0.3) || (size_difference <= -0.3))
+			if(our_target.size_strip_preference == SIZESTRIP_ITEMS)
+				our_target.drop_all_clothing(FALSE)
+			else if(our_target.size_strip_preference == SIZESTRIP_ALL)
+				our_target.drop_all_clothing(TRUE)
+
+
 	// Now clean up the effects.
 	update_icon()
 	QDEL_NULL(scan_beam)
@@ -170,6 +180,9 @@
 		delete_box(box_segments, user.client)
 
 /obj/item/slow_sizegun/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(busy)
 		busy = !busy
 	else

@@ -1,4 +1,4 @@
-var/list/overminds = list()
+GLOBAL_LIST_EMPTY(overminds)
 
 /mob/observer/blob
 	name = "Blob Overmind"
@@ -36,7 +36,7 @@ var/list/overminds = list()
 	if(pre_placed) //we already have a core!
 		placed = 1
 
-	overminds += src
+	GLOB.overminds += src
 	var/new_name = "[initial(name)] ([rand(1, 999)])"
 	name = new_name
 	real_name = new_name
@@ -67,7 +67,7 @@ var/list/overminds = list()
 			BM.overmind = null
 			BM.update_icons()
 
-	overminds -= src
+	GLOB.overminds -= src
 	return ..()
 
 /mob/observer/blob/get_status_tab_items()
@@ -79,7 +79,7 @@ var/list/overminds = list()
 	. += "Power Stored: [blob_points]/[max_blob_points]"
 	. += "Total Blobs: [GLOB.all_blobs.len]"
 
-/mob/observer/blob/Move(var/atom/NewLoc, Dir = 0)
+/mob/observer/blob/Move(atom/NewLoc, Dir = 0)
 	if(placed)
 		var/obj/structure/blob/B = (locate() in view("5x5", NewLoc))
 		if(B)
@@ -106,7 +106,7 @@ var/list/overminds = list()
 			if(!auto_factory() && !auto_resource())
 				auto_node()
 
-/mob/observer/blob/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
+/mob/observer/blob/say(message, datum/language/speaking = null, whispering = 0)
 	message = sanitize(message)
 
 	if(!message)

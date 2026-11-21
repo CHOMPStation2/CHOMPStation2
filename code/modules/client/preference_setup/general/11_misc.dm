@@ -1,10 +1,10 @@
 // Define a place to save in character setup
 /datum/preferences
-	var/vantag_volunteer = 0	// What state I want to be in, in terms of being affected by antags.
+	var/vantag_volunteer = FALSE		// What state I want to be in, in terms of being affected by antags.
 	var/vantag_preference = VANTAG_NONE	// Whether I'd like to volunteer to be an antag at some point.
-	var/resleeve_lock = 0	// Whether movs should have OOC reslieving protection. Default false.
-	var/resleeve_scan = 1	// Whether mob should start with a pre-spawn body scan.  Default true.
-	var/mind_scan = 1		// Whether mob should start with a pre-spawn mind scan.  Default true.
+	var/resleeve_lock = FALSE			// Whether movs should have OOC reslieving protection. Default false.
+	var/resleeve_scan = TRUE			// Whether mob should start with a pre-spawn body scan.  Default true.
+	var/mind_scan = TRUE				// Whether mob should start with a pre-spawn mind scan.  Default true.
 
 	var/custom_species	// Custom species name, can't be changed due to it having been used in savefiles already.
 
@@ -72,7 +72,7 @@
 	save_data["custom_heat"]		= check_list_copy(pref.custom_heat)
 	save_data["custom_cold"]		= check_list_copy(pref.custom_cold)
 
-/datum/category_item/player_setup_item/general/vore_misc/copy_to_mob(var/mob/living/carbon/human/character)
+/datum/category_item/player_setup_item/general/vore_misc/copy_to_mob(mob/living/carbon/human/character)
 	character.custom_species	= pref.custom_species
 
 	character.custom_say		= lowertext(trim(pref.custom_say))
@@ -95,11 +95,11 @@
 		var/want_body_save = pref.resleeve_scan
 		var/want_mind_save = pref.mind_scan
 
-		spawn(50)
+		spawn(5 SECONDS)
 			if(QDELETED(character) || QDELETED(pref))
 				return // They might have been deleted during the wait
 			if(!character.virtual_reality_mob && !(/mob/living/carbon/human/proc/perform_exit_vr in character.verbs)) //Janky fix to prevent resleeving VR avatars but beats refactoring transcore
-				if(want_body_save)
+				if(want_body_save && !(character.species.flags & NO_SLEEVE)) // Nosleeve flag overrides character pref editor. Otherwise resleevable species still get one even if they took a trait to not be sleevable.
 					var/datum/transhuman/body_record/BR = new()
 					BR.init_from_mob(character, TRUE, pref.resleeve_lock)
 				if(want_mind_save)
@@ -153,6 +153,9 @@
 	data["capture_crystal"] = pref.capture_crystal
 	data["auto_backup_implant"] = pref.auto_backup_implant
 	data["borg_petting"] = pref.borg_petting
+
+	data["ignore_shoes"] = pref.read_preference(/datum/preference/toggle/human/ignore_shoes)
+	data["synth_cookie"] = pref.read_preference(/datum/preference/toggle/living/foodsynth_cookies)
 
 	data["resleeve_lock"] = pref.resleeve_lock
 	data["resleeve_scan"] = pref.resleeve_scan
@@ -214,6 +217,9 @@
 		if("toggle_capture_crystal")
 			pref.capture_crystal = pref.capture_crystal ? 0 : 1;
 			return TOPIC_REFRESH
+		if("toggle_ignore_shoes")
+			pref.update_preference_by_type(/datum/preference/toggle/human/ignore_shoes, !pref.read_preference(/datum/preference/toggle/human/ignore_shoes))
+			return TOPIC_REFRESH
 		if("toggle_implant")
 			pref.auto_backup_implant = pref.auto_backup_implant ? 0 : 1;
 			return TOPIC_REFRESH
@@ -231,6 +237,9 @@
 		if("toggle_resleeve_scan")
 			pref.resleeve_scan = pref.resleeve_scan ? 0 : 1;
 			return TOPIC_REFRESH
+		if("toggle_synth_cookie")
+			pref.update_preference_by_type(/datum/preference/toggle/living/foodsynth_cookies, !pref.read_preference(/datum/preference/toggle/living/foodsynth_cookies))
+			return TOPIC_REFRESH
 		if("toggle_mind_scan")
 			pref.mind_scan = pref.mind_scan ? 0 : 1;
 			return TOPIC_REFRESH
@@ -247,22 +256,26 @@
 				pref.vantag_preference = names_list[selection]
 			return TOPIC_REFRESH
 		if("custom_say")
-			var/say_choice = tgui_input_text(user, "This word or phrase will appear instead of 'says': [pref.real_name] says, \"Hi.\"", "Custom Say", pref.custom_say, 12)
+			var/char_name = pref.read_preference(/datum/preference/name/real_name)
+			var/say_choice = tgui_input_text(user, "This word or phrase will appear instead of 'says': [char_name] says, \"Hi.\"", "Custom Say", pref.custom_say, 12)
 			if(say_choice)
 				pref.custom_say = say_choice
 			return TOPIC_REFRESH
 		if("custom_whisper")
-			var/whisper_choice = tgui_input_text(user, "This word or phrase will appear instead of 'whispers': [pref.real_name] whispers, \"Hi...\"", "Custom Whisper", pref.custom_whisper, 12)
+			var/char_name = pref.read_preference(/datum/preference/name/real_name)
+			var/whisper_choice = tgui_input_text(user, "This word or phrase will appear instead of 'whispers': [char_name] whispers, \"Hi...\"", "Custom Whisper", pref.custom_whisper, 12)
 			if(whisper_choice)
 				pref.custom_whisper = whisper_choice
 			return TOPIC_REFRESH
 		if("custom_ask")
-			var/ask_choice = tgui_input_text(user, "This word or phrase will appear instead of 'asks': [pref.real_name] asks, \"Hi?\"", "Custom Ask", pref.custom_ask, 12)
+			var/char_name = pref.read_preference(/datum/preference/name/real_name)
+			var/ask_choice = tgui_input_text(user, "This word or phrase will appear instead of 'asks': [char_name] asks, \"Hi?\"", "Custom Ask", pref.custom_ask, 12)
 			if(ask_choice)
 				pref.custom_ask = ask_choice
 			return TOPIC_REFRESH
 		if("custom_exclaim")
-			var/exclaim_choice = tgui_input_text(user, "This word or phrase will appear instead of 'exclaims', 'shouts' or 'yells': [pref.real_name] exclaims, \"Hi!\"", "Custom Exclaim", pref.custom_exclaim, 12)
+			var/char_name = pref.read_preference(/datum/preference/name/real_name)
+			var/exclaim_choice = tgui_input_text(user, "This word or phrase will appear instead of 'exclaims', 'shouts' or 'yells': [char_name] exclaims, \"Hi!\"", "Custom Exclaim", pref.custom_exclaim, 12)
 			if(exclaim_choice)
 				pref.custom_exclaim = exclaim_choice
 			return TOPIC_REFRESH

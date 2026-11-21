@@ -11,5 +11,3 @@
 	fire_sound = 'sound/weapons/railgun.ogg'
 
 	equip_type = EQUIP_UTILITY
-
-	origin_tech = list(TECH_MATERIAL = 5, TECH_PHORON = 5, TECH_POWER = 5)

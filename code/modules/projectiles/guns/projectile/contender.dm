@@ -21,8 +21,12 @@
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 	var/retracted_bolt = 0
 	load_method = SINGLE_CASING
+	special_handling = TRUE
 
-/obj/item/gun/projectile/contender/attack_self(mob/user as mob)
+/obj/item/gun/projectile/contender/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(chambered)
 		chambered.loc = get_turf(src)
 		chambered = null
@@ -41,7 +45,7 @@
 	icon_state = initial(icon_state)
 	retracted_bolt = 0
 
-/obj/item/gun/projectile/contender/load_ammo(var/obj/item/A, mob/user)
+/obj/item/gun/projectile/contender/load_ammo(obj/item/A, mob/user)
 	if(!retracted_bolt)
 		to_chat(user, span_notice("You can't load [src] without cycling the bolt."))
 		return

@@ -57,7 +57,9 @@
 
 		var/obj/item/spacecasinocash/SC = W
 
-		SC.adjust_worth(src.worth)
+		if(isnull(SC.adjust_worth(src.worth)))
+			return
+
 		if(ishuman(user))
 			var/mob/living/carbon/human/h_user = user
 
@@ -95,25 +97,33 @@
 		src.overlays += banknote
 	src.desc = "They are worth [worth] casino credits."
 
-/obj/item/spacecasinocash/proc/adjust_worth(var/adjust_worth = 0, var/update = 1)
+/obj/item/spacecasinocash/proc/adjust_worth(adjust_worth = 0, update = 1)
+	if(worth == 0 || adjust_worth == 0)
+		return null
 	worth += adjust_worth
 	if(worth > 0)
 		if(update)
 			update_icon()
 		return worth
-	else
-		qdel(src)
-		return 0
 
-/obj/item/spacecasinocash/proc/set_worth(var/new_worth = 0, var/update = 1)
+	qdel(src)
+	return 0
+
+/obj/item/spacecasinocash/proc/set_worth(new_worth = 0, update = 1)
 	worth = max(0, new_worth)
 	if(update)
 		update_icon()
 	return worth
 
 /obj/item/spacecasinocash/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+
+	if(worth <= 0)
+		return
 	var/amount = tgui_input_number(user, "How much credits worth of chips do you want to take? (0 to [src.worth])", "Take chips", 20, src.worth)
-	if(!src || QDELETED(src))
+	if(QDELETED(src))
 		return
 	amount = round(CLAMP(amount, 0, src.worth))
 
@@ -173,7 +183,7 @@
 	desc = "It's worth 1000 credits."
 	worth = 1000
 
-/proc/spawn_casinochips(var/sum, spawnloc, mob/living/carbon/human/human_user as mob)
+/proc/spawn_casinochips(sum, spawnloc, mob/living/carbon/human/human_user as mob)
 	var/obj/item/spacecasinocash/SC = new (spawnloc)
 
 	SC.set_worth(sum, TRUE)
@@ -196,7 +206,10 @@
 	throw_range = 2
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/casino_platinum_chip/attack_self(mob/user as mob)
+/obj/item/casino_platinum_chip/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/result = rand(1, sides)
 	var/comment = ""
 	if(result == 1)
@@ -232,7 +245,8 @@
 
 		var/obj/item/spacecasinocash_fake/SC = W
 
-		SC.adjust_worth(src.worth)
+		if(isnull(SC.adjust_worth(src.worth)))
+			return
 		if(ishuman(user))
 			var/mob/living/carbon/human/h_user = user
 
@@ -270,25 +284,33 @@
 		src.overlays += banknote
 	src.desc = "They are worth [worth] replica casino credits."
 
-/obj/item/spacecasinocash_fake/proc/adjust_worth(var/adjust_worth = 0, var/update = 1)
+/obj/item/spacecasinocash_fake/proc/adjust_worth(adjust_worth = 0, update = 1)
+	if(worth == 0 || adjust_worth == 0)
+		return null
 	worth += adjust_worth
 	if(worth > 0)
 		if(update)
 			update_icon()
 		return worth
-	else
-		qdel(src)
-		return 0
 
-/obj/item/spacecasinocash_fake/proc/set_worth(var/new_worth = 0, var/update = 1)
+	qdel(src)
+	return 0
+
+/obj/item/spacecasinocash_fake/proc/set_worth(new_worth = 0, update = 1)
 	worth = max(0, new_worth)
 	if(update)
 		update_icon()
 	return worth
 
 /obj/item/spacecasinocash_fake/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+
+	if(worth <= 0)
+		return
 	var/amount = tgui_input_number(user, "How much credits worth of chips do you want to take? (0 to [src.worth])", "Take chips", 20, src.worth)
-	if(!src || QDELETED(src))
+	if(QDELETED(src))
 		return
 	amount = round(CLAMP(amount, 0, src.worth))
 

@@ -18,20 +18,20 @@ SUBSYSTEM_DEF(motiontracker)
 	if(_listen_lookup)
 		var/list/track_list = _listen_lookup[COMSIG_MOVABLE_MOTIONTRACKER]
 		if(islist(track_list))
-			count = track_list.len
+			count = length(track_list)
 		else
 			count = 1 // listen_lookup optimizes single entries into just returning the only thing
 	if(hide_all)
 		msg = "HIDE AND SEEK"
 	else
-		msg = "L: [count] | Q: [queued_echo_turfs.len] | A: [all_echos_round]/[all_pings_round]"
+		msg = "L: [count] | Q: [length(queued_echo_turfs)] | A: [all_echos_round]/[all_pings_round]"
 	return ..()
 
 /datum/controller/subsystem/motiontracker/fire(resumed = 0)
 	if(!resumed)
 		src.currentrun = queued_echo_turfs.Copy()
 		expended_echos.Cut()
-	while(currentrun.len)
+	while(length(currentrun))
 		var/key = currentrun[1] // Because using an index into an associative array gets the key at that index... I hate you byond.
 		var/list/data = currentrun[key]
 		var/datum/weakref/AF= data[1]
@@ -58,7 +58,7 @@ SUBSYSTEM_DEF(motiontracker)
 
 // We get this from anything in the world that would cause a motion tracker ping
 // From sounds to motions, to mob attacks. This then sends a signal to anyone listening.
-/datum/controller/subsystem/motiontracker/proc/ping(var/atom/source, var/hear_chance = 30)
+/datum/controller/subsystem/motiontracker/proc/ping(atom/source, hear_chance = 30)
 	if(hide_all) // No pings, admins turned us off
 		return
 	var/turf/T = get_turf(source)
@@ -79,7 +79,7 @@ SUBSYSTEM_DEF(motiontracker)
 // We get this back from anything that handles the signal, and queues up a turf to draw the echo on
 // The logic is in the SIGNAL HANDLER for if it does anything at all with the signal instead of assuming
 // everything wants effects drawn, for example the motion tracker item just flicks() and doesn't call this.
-/datum/controller/subsystem/motiontracker/proc/queue_echo(var/turf/Rt,var/turf/At,var/echo_count = 1,var/datum/weakref/client)
+/datum/controller/subsystem/motiontracker/proc/queue_echo(turf/Rt,turf/At,echo_count = 1,datum/weakref/client)
 	if(!Rt || !At || !client)
 		return
 	var/rfe = REF(At)

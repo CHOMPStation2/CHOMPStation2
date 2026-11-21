@@ -1,19 +1,20 @@
-import { useBackend } from 'tgui/backend';
-import { Button, Section, Stack } from 'tgui-core/components';
+import { LabeledList, Section, Stack } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
-import { capitalize } from 'tgui-core/string';
-
-import type { localPrefs } from '../types';
-import { VoreUserPreferenceItem } from '../VorePanelElements/VoreUserPreferenceItem';
+import { selectiveModeModel, typeToTooltip } from '../constants';
+import type { CheckBoxEntry, DropdownPrefernces, LocalPrefs } from '../types';
+import { VorePanelEditCheckboxes } from '../VorePanelElements/VorePanelEditCheckboxes';
+import {
+  VoreUserPreferenceDropdown,
+  VoreUserPreferenceItem,
+} from '../VorePanelElements/VoreUserPreferenceItem';
 
 export const VoreUserPreferencesDevouring = (props: {
   devourable: BooleanLike;
-  digestModeToColor: Record<string, string | undefined>;
-  selective_active: string;
-  preferences: localPrefs;
+  preferences: LocalPrefs;
+  dropdownPreferences: DropdownPrefernces;
+  vore_pref_types: CheckBoxEntry[];
 }) => {
-  const { act } = useBackend();
-  const { devourable, digestModeToColor, selective_active, preferences } =
+  const { devourable, dropdownPreferences, preferences, vore_pref_types } =
     props;
 
   return (
@@ -27,90 +28,104 @@ export const VoreUserPreferencesDevouring = (props: {
       }
     >
       {devourable ? (
-        <Stack wrap="wrap" justify="center">
-          <Stack.Item basis="32%">
-            <VoreUserPreferenceItem
-              spec={preferences.healbelly}
-              tooltipPosition="right"
-            />
+        <Stack vertical>
+          <Stack.Item>
+            <LabeledList>
+              <LabeledList.Item label="Vore Types and Specifics">
+                <VorePanelEditCheckboxes
+                  editMode
+                  tooltip="Select your vore type preferences and specifics for some topics."
+                  options={vore_pref_types}
+                  action="toggle_vore_pref_types"
+                  tooltipList={typeToTooltip}
+                />
+              </LabeledList.Item>
+            </LabeledList>
           </Stack.Item>
-          <Stack.Item basis="32%" grow>
-            <VoreUserPreferenceItem
-              spec={preferences.digestion}
-              tooltipPosition="top"
-            />
+          <Stack.Divider />
+          <Stack.Item>
+            <Stack wrap="wrap" justify="center">
+              <Stack.Item basis="32%">
+                <VoreUserPreferenceItem
+                  spec={preferences.healbelly}
+                  tooltipPosition="right"
+                />
+              </Stack.Item>
+              <Stack.Item basis="32%" grow>
+                <VoreUserPreferenceItem
+                  spec={preferences.digestion}
+                  tooltipPosition="top"
+                />
+              </Stack.Item>
+              <Stack.Item basis="32%">
+                <VoreUserPreferenceItem
+                  spec={preferences.absorbable}
+                  tooltipPosition="left"
+                />
+              </Stack.Item>
+              <Stack.Item basis="32%">
+                <VoreUserPreferenceDropdown
+                  spec={selectiveModeModel}
+                  currentActive={dropdownPreferences.selective_active}
+                  tooltipPosition="right"
+                />
+              </Stack.Item>
+              <Stack.Item basis="32%" grow>
+                <VoreUserPreferenceItem
+                  spec={preferences.mobvore}
+                  tooltipPosition="top"
+                />
+              </Stack.Item>
+              <Stack.Item basis="32%">
+                <VoreUserPreferenceItem
+                  spec={preferences.autotransferable}
+                  tooltipPosition="left"
+                />
+              </Stack.Item>
+              <Stack.Item basis="32%">
+                <VoreUserPreferenceItem
+                  spec={preferences.strippref}
+                  tooltipPosition="right"
+                />
+              </Stack.Item>
+              <Stack.Item basis="32%" grow>
+                <VoreUserPreferenceItem
+                  spec={preferences.contaminatepref}
+                  tooltipPosition="top"
+                />
+              </Stack.Item>
+              <Stack.Item basis="32%">
+                <VoreUserPreferenceItem
+                  spec={preferences.liquid_apply}
+                  tooltipPosition="left"
+                />
+              </Stack.Item>
+              <Stack.Item basis="32%">
+                <VoreUserPreferenceItem
+                  spec={preferences.remains}
+                  tooltipPosition="right"
+                />
+              </Stack.Item>
+              <Stack.Item basis="32%" grow>
+                <VoreUserPreferenceItem
+                  spec={preferences.toggle_digest_pain}
+                  tooltipPosition="top"
+                />
+              </Stack.Item>
+              <Stack.Item basis="32%">
+                <VoreUserPreferenceItem
+                  spec={preferences.temperature}
+                  tooltipPosition="left"
+                />
+              </Stack.Item>
+              <Stack.Item basis="35%">
+                <VoreUserPreferenceItem
+                  spec={preferences.afk_prey}
+                  tooltipPosition="right"
+                />
+              </Stack.Item>
+            </Stack>
           </Stack.Item>
-          <Stack.Item basis="32%">
-            <VoreUserPreferenceItem
-              spec={preferences.absorbable}
-              tooltipPosition="left"
-            />
-          </Stack.Item>
-          <Stack.Item basis="32%">
-            <Button
-              fluid
-              backgroundColor={digestModeToColor[selective_active]}
-              tooltip="Allows to set the personal belly mode preference for selective bellies."
-              tooltipPosition="right"
-              onClick={() => act('switch_selective_mode_pref')}
-            >
-              {`Selective Mode Preference: ${capitalize(selective_active)}`}
-            </Button>
-          </Stack.Item>
-          <Stack.Item basis="32%" grow>
-            <VoreUserPreferenceItem
-              spec={preferences.mobvore}
-              tooltipPosition="top"
-            />
-          </Stack.Item>
-          <Stack.Item basis="32%">
-            <VoreUserPreferenceItem
-              spec={preferences.autotransferable}
-              tooltipPosition="left"
-            />
-          </Stack.Item>
-          <Stack.Item basis="32%">
-            <VoreUserPreferenceItem
-              spec={preferences.strippref}
-              tooltipPosition="right"
-            />
-          </Stack.Item>
-          <Stack.Item basis="32%" grow>
-            <VoreUserPreferenceItem
-              spec={preferences.contaminatepref}
-              tooltipPosition="top"
-            />
-          </Stack.Item>
-          <Stack.Item basis="32%">
-            <VoreUserPreferenceItem
-              spec={preferences.liquid_apply}
-              tooltipPosition="left"
-            />
-          </Stack.Item>
-          <Stack.Item basis="32%">
-            <VoreUserPreferenceItem
-              spec={preferences.remains}
-              tooltipPosition="right"
-            />
-          </Stack.Item>
-          <Stack.Item basis="32%" grow>
-            <VoreUserPreferenceItem
-              spec={preferences.toggle_digest_pain}
-              tooltipPosition="top"
-            />
-          </Stack.Item>
-          <Stack.Item basis="32%">
-            <VoreUserPreferenceItem
-              spec={preferences.temperature}
-              tooltipPosition="left"
-            />
-          </Stack.Item>
-          <Stack.Item basis="35%">
-          <VoreUserPreferenceItem
-            spec={preferences.afk_prey}
-            tooltipPosition="right"
-          />
-        </Stack.Item>
         </Stack>
       ) : (
         ''

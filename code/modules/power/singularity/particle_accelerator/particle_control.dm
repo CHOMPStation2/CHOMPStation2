@@ -19,11 +19,10 @@
 	var/list/obj/structure/particle_accelerator/connected_parts
 	var/assembled = 0
 	var/parts = null
-	var/datum/wires/particle_acc/control_box/wires = null
 
 /obj/machinery/particle_accelerator/control_box/Initialize(mapload)
 	. = ..()
-	wires = new(src)
+	set_wires(new /datum/wires/particle_acc/control_box(src))
 	connected_parts = list()
 	update_active_power_usage(initial(active_power_usage) * (strength + 1))
 
@@ -82,24 +81,24 @@
 		part.strength = strength
 		part.update_icon()
 
-/obj/machinery/particle_accelerator/control_box/proc/add_strength(mob/user, var/s)
+/obj/machinery/particle_accelerator/control_box/proc/add_strength(mob/user, s)
 	if(assembled)
 		strength++
 		if(strength > strength_upper_limit)
 			strength = strength_upper_limit
 		else
-			message_admins("PA Control Computer increased to [strength] by [key_name(user, user.client)][ADMIN_QUE(user)] in [ADMIN_COORDJMP(src)]",0,1)
+			message_admins("PA Control Computer increased to [strength] by [key_name(user, user.client)][ADMIN_QUE(user)] in [ADMIN_COORDJMP(src)]")
 			log_game("PACCEL([x],[y],[z]) [key_name(user)] increased to [strength]")
 			investigate_log("increased to " + span_red("[strength]") + " by [user.key]","singulo")
 		strength_change()
 
-/obj/machinery/particle_accelerator/control_box/proc/remove_strength(mob/user, var/s)
+/obj/machinery/particle_accelerator/control_box/proc/remove_strength(mob/user, s)
 	if(assembled)
 		strength--
 		if(strength < 0)
 			strength = 0
 		else
-			message_admins("PA Control Computer decreased to [strength] by [key_name(user, user.client)][ADMIN_QUE(user)] in [ADMIN_COORDJMP(src)]",0,1)
+			message_admins("PA Control Computer decreased to [strength] by [key_name(user, user.client)][ADMIN_QUE(user)] in [ADMIN_COORDJMP(src)]")
 			log_game("PACCEL([x],[y],[z]) [key_name(user)] decreased to [strength]")
 			investigate_log("decreased to " + span_green("[strength]") + " by [user.key]","singulo")
 		strength_change()
@@ -170,7 +169,7 @@
 
 
 
-/obj/machinery/particle_accelerator/control_box/proc/check_part(var/turf/T, var/type)
+/obj/machinery/particle_accelerator/control_box/proc/check_part(turf/T, type)
 	if(!(T)||!(type))
 		return 0
 
@@ -184,7 +183,8 @@
 /obj/machinery/particle_accelerator/control_box/proc/toggle_power(mob/user)
 	active = !active
 	investigate_log("turned [active? span_red("ON") : span_green("OFF")] by [user ? user.key : "outside forces"]","singulo")
-	message_admins("PA Control Computer turned [active ?"ON":"OFF"] by [user ? key_name(user, user.client) : "outside forces"][ADMIN_QUE(user)] in [ADMIN_COORDJMP(src)]",0,1)
+	message_admins("PA Control Computer turned [active ?"ON":"OFF"] by [user ? key_name(user, user.client) : "outside forces"][ADMIN_QUE(user)] in [ADMIN_COORDJMP(src)]")
+
 	log_game("PACCEL([x],[y],[z]) [user ? key_name(user, user.client) : "outside forces"] turned [active?"ON":"OFF"].")
 	if(active)
 		update_use_power(USE_POWER_ACTIVE)
@@ -250,4 +250,12 @@
 			remove_strength(ui.user)
 			. = TRUE
 
+	update_icon()
+
+/obj/machinery/particle_accelerator/control_box/pre_mapped
+	construction_state = 3
+	assembled = TRUE
+
+/obj/machinery/particle_accelerator/control_box/pre_mapped/Initialize(mapload)
+	. = ..()
 	update_icon()

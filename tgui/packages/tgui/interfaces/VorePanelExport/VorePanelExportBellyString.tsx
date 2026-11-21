@@ -19,7 +19,11 @@ import {
 } from './VorePanelExportBellyStringHelpers';
 
 // prettier-ignore
-export const generateBellyString = (belly: Belly, index: number) => {
+export const generateBellyString = (
+  belly: Belly,
+  index: number,
+  vore_pref_type_list: Record<string, number>,
+) => {
   const {
     // General Information
     name,
@@ -34,6 +38,7 @@ export const generateBellyString = (belly: Belly, index: number) => {
     mode,
     addons,
     item_mode,
+    vore_pref_type_flags,
 
     // Options
     digest_brute,
@@ -199,6 +204,7 @@ export const generateBellyString = (belly: Belly, index: number) => {
     reagent_transfer_verb,
     gen_time_display,
     custom_max_volume,
+    reagent_gen_cost_limit,
     vorefootsteps_sounds,
     reagent_mode_flag_list,
     liquid_overlay,
@@ -251,7 +257,7 @@ export const generateBellyString = (belly: Belly, index: number) => {
   const temperatureCelsius = Math.round((bellytemperature - 273.15) * 10) / 10;
   const temperatureSpan = `<span${temperature_damage ? ' style="color: red;"' : ''}>${temperatureCelsius}°C</span>`;
 
-  result += `${name} - (${damageSpans}/${temperatureSpan}) - ${ModeSpan[mode]} - ${ItemModeSpan[item_mode]}`;
+  result += `${name} (${display_name}) - (${damageSpans}/${temperatureSpan}) - ${ModeSpan[mode]} - ${ItemModeSpan[item_mode]}`;
 
   result += '</button></h2>';
 
@@ -259,6 +265,16 @@ export const generateBellyString = (belly: Belly, index: number) => {
   result += '<div class="accordion-body">';
   result += `Addons:<br>${GetAddons(addons)}<br><br>`;
 
+  result += '<b>== Type and Specifics ==</b><br>';
+  for (const [type, flag] of Object.entries(vore_pref_type_list)) {
+    if ((vore_pref_type_flags & flag) !== 0) {
+      result += `<span class="badge text-bg-success">${type}</span>`;
+    } else {
+      result += `<span class="badge text-bg-danger">${type}</span>`;
+    }
+  }
+
+  result += '<br><hr>';
   result += '<b>== Descriptions ==</b><br>';
 
   const infoFields = [
@@ -694,10 +710,13 @@ export const generateBellyString = (belly: Belly, index: number) => {
   result += `<div id="settingsAccordion${index}-collapseThree" class="accordion-collapse collapse" aria-labelledby="settingsAccordion${index}-headingThree">`;
   result += '<div class="accordion-body">';
   result += `<b>Belly Interactions (${
-    escapable
-      ? '<span style="color: green;">Enabled'
-      : '<span style="color: red;">Disabled'
+    escapable === 1
+      ? '<span style="color: green;">Enabled (Default)'
+      : escapable === 2
+        ? '<span style="color: green;">Enabled (Intent)'
+        : '<span style="color: red;">Disabled'
   }</span>)</b>`;
+
   result += '<ul class="list-group">';
 
   const interactionItems = [
@@ -844,6 +863,10 @@ export const generateBellyString = (belly: Belly, index: number) => {
     { label: 'Transfer Verb', value: reagent_transfer_verb },
     { label: 'Generation Time', value: gen_time_display },
     { label: 'Liquid Capacity', value: custom_max_volume },
+    {
+      label: 'Generation Limit (Nutrition / Charge) %',
+      value: reagent_gen_cost_limit,
+    },
   ];
 
   result += formatListItems(liquidItems);

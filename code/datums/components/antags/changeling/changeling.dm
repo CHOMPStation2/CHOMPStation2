@@ -1,9 +1,11 @@
 ///Changeling component.
 ///Stores changeling powers, changeling recharge thingie, changeling absorbed DNA and changeling ID (for changeling hivemind)
 GLOBAL_LIST_INIT(possible_changeling_IDs,list("Alpha","Beta","Chi","Delta","Epsilon","Eta","Gamma","Iota","Kappa","Lambda","Mu","Nu","Omega","Omicron","Phi","Pi","Psi","Rho","Sigma","Tau","Theta","Upsilon","Xi","Zeta")) //ALPHABETICAL ORDER.
+
 //Needs cleanup
-var/list/powers = subtypesof(/datum/power/changeling) //needed for the badmin verb for now
-var/list/datum/power/changeling/powerinstances = list()
+GLOBAL_LIST_INIT(changeling_powers, subtypesof(/datum/power/changeling)) //needed for the badmin verb for now
+GLOBAL_LIST_EMPTY_TYPED(powerinstances, /datum/power/changeling)
+
 /datum/power			//Could be used by other antags too
 	var/name = "Power"
 	var/desc = "Placeholder"
@@ -66,6 +68,9 @@ var/list/datum/power/changeling/powerinstances = list()
 		var/datum/mind/our_mind = M
 		if(our_mind.current)
 			changeling = (our_mind.current.GetComponent(/datum/component/antag/changeling)) //Check to see if the mob we are currently inhabiting is a changeling.
+		if(!changeling)
+			if(our_mind.antag_holder.changeling) //Check our mind's antag holder.
+				changeling = our_mind.antag_holder.changeling
 	else //Fed it a mob and we failed
 		if(M.mind)
 			changeling = M.mind.antag_holder.changeling //Check our mind's antag holder.
@@ -129,13 +134,13 @@ var/list/datum/power/changeling/powerinstances = list()
 	chem_charges = min(max(0, chem_charges+chem_recharge_rate), chem_storage)
 	geneticdamage = max(0, geneticdamage-1)
 
-/datum/component/antag/changeling/proc/GetDNA(var/dna_owner)
+/datum/component/antag/changeling/proc/GetDNA(dna_owner)
 	for(var/datum/absorbed_dna/DNA in absorbed_dna)
 		if(dna_owner == DNA.name)
 			return DNA
 
 //Former /mob procs
-/mob/proc/absorbDNA(var/datum/absorbed_dna/newDNA)
+/mob/proc/absorbDNA(datum/absorbed_dna/newDNA)
 	var/datum/component/antag/changeling/comp = is_changeling(src)
 	if(!comp)
 		return
@@ -159,12 +164,12 @@ var/list/datum/power/changeling/powerinstances = list()
 	mind.antag_holder.changeling = comp
 	var/lesser_form = !ishuman(src)
 
-	if(!powerinstances.len)
-		for(var/P in powers)
-			powerinstances += new P()
+	if(!GLOB.powerinstances.len)
+		for(var/P in GLOB.changeling_powers)
+			GLOB.powerinstances += new P()
 
 	// Code to auto-purchase free powers.
-	for(var/datum/power/changeling/P in powerinstances)
+	for(var/datum/power/changeling/P in GLOB.powerinstances)
 		if(!P.genomecost) // Is it free?
 			if(!(P in comp.purchased_powers)) // Do we not have it already?
 				comp.purchasePower(comp.owner, P.name, 0)// Purchase it. Don't remake our verbs, we're doing it after this.
@@ -221,7 +226,7 @@ var/list/datum/power/changeling/powerinstances = list()
 
 
 //Helper proc. Does all the checks and stuff for us to avoid copypasta
-/mob/proc/changeling_power(var/required_chems=0, var/required_dna=0, var/max_genetic_damage=100, var/max_stat=0)
+/mob/proc/changeling_power(required_chems=0, required_dna=0, max_genetic_damage=100, max_stat=0)
 
 	if(!src.mind)		return
 	if(!isliving(src))	return
@@ -250,7 +255,7 @@ var/list/datum/power/changeling/powerinstances = list()
 	return comp
 
 //Used to dump the languages from the changeling datum into the actual mob.
-/mob/proc/changeling_update_languages(var/updated_languages)
+/mob/proc/changeling_update_languages(updated_languages)
 	languages = list()
 	for(var/language in updated_languages)
 		languages += language
@@ -275,7 +280,7 @@ var/list/datum/power/changeling/powerinstances = list()
 	return 1
 
 //Handles the general sting code to reduce on copypasta (seeming as somebody decided to make SO MANY dumb abilities)
-/mob/proc/changeling_sting(var/required_chems=0, var/verb_path)
+/mob/proc/changeling_sting(required_chems=0, verb_path)
 	var/datum/component/antag/changeling/comp = changeling_power(required_chems)
 	if(!comp)
 		return
@@ -363,9 +368,9 @@ var/list/datum/power/changeling/powerinstances = list()
 	if(!comp)
 		to_chat(src, "You are not a changeling!")
 		return
-	if(!powerinstances.len)
-		for(var/changeling_power in powers)
-			powerinstances += new changeling_power()
+	if(!GLOB.powerinstances.len)
+		for(var/changeling_power in GLOB.changeling_powers)
+			GLOB.powerinstances += new changeling_power()
 	if(!comp.power_panel)
 		comp.power_panel = new()
 		comp.power_panel.comp = comp
@@ -373,11 +378,11 @@ var/list/datum/power/changeling/powerinstances = list()
 	comp.power_panel.tgui_interact(src)
 
 ///Purchasing a power. Called by the Evolution Panel.
-/datum/component/antag/changeling/proc/purchasePower(var/mob/owner, var/Pname, var/remake_verbs = 1)
+/datum/component/antag/changeling/proc/purchasePower(mob/owner, Pname, remake_verbs = 1)
 
 	var/datum/power/changeling/Thepower = Pname
 
-	for (var/datum/power/changeling/P in powerinstances)
+	for (var/datum/power/changeling/P in GLOB.powerinstances)
 		//to_world("[P] - [Pname] = [P.name == Pname ? "True" : "False"]")
 		if(P.name == Pname)
 			Thepower = P
@@ -440,6 +445,9 @@ var/list/datum/power/changeling/powerinstances = list()
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced")
 
 /obj/item/changeling_debug/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	user.make_changeling()
 
 ///Changeling Panel
@@ -468,7 +476,7 @@ var/list/datum/power/changeling/powerinstances = list()
 	var/list/data = list()
 	var/list/power_list = list()
 
-	for(var/datum/power/changeling/P in powerinstances)
+	for(var/datum/power/changeling/P in GLOB.powerinstances)
 		var/list/all_powers = list(
 			"power_name" = P.name,
 			"power_cost" = P.genomecost,

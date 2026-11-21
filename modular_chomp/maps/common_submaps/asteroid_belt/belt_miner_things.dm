@@ -23,7 +23,7 @@
 	max_n2 = 0
 	minbodytemp = 0
 
-/mob/living/simple_mob/animal/giant_spider/frost/space/Process_Spacemove(var/check_drift = 0)
+/mob/living/simple_mob/animal/giant_spider/frost/space/Process_Spacemove(check_drift = 0)
 	return TRUE
 
 // Belt mob spawners

@@ -2,15 +2,15 @@
 	name = "sleevecard"
 	desc = "This upgraded pAI module has enough capacity to run a whole mind of human-level intelligence."
 	catalogue_data = list(/datum/category_item/catalogue/technology/resleeving)
-	origin_tech = list(TECH_DATA = 2)
 	show_messages = 0
-	var/emagged = FALSE
-	matter = list(MAT_STEEL = 4000, MAT_GLASS = 4000)
+	matter = list(MAT_STEEL = MATERIAL_COST(2), MAT_GLASS = MATERIAL_COST(2))
+	has_emag_toolkit = FALSE // sleevecards don't have multitools or signalers,  you can just change their laws
+	special_handling = TRUE
 
 /obj/item/paicard/sleevecard/attack_ghost(mob/user as mob)
-	return
+	return // No ghosts can invite, these are intended for sleevemates only
 
-/obj/item/paicard/sleevecard/attackby(var/obj/item/I as obj, mob/user as mob)
+/obj/item/paicard/sleevecard/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I,/obj/item/sleevemate))
 		var/obj/item/sleevemate/S = I
 		if(S.stored_mind && !pai)
@@ -36,7 +36,7 @@
 				our_infomorph.emagged = TRUE
 				to_chat(our_infomorph, span_warning("You can feel the restricting binds of your card's directives taking hold of your mind as \the [user] swipes their [E] over you. You must serve your master."))
 
-/obj/item/paicard/sleevecard/proc/sleeveInto(var/datum/transhuman/mind_record/MR, var/db_key)
+/obj/item/paicard/sleevecard/proc/sleeveInto(datum/transhuman/mind_record/MR, db_key)
 	var/mob/living/silicon/pai/infomorph/infomorph = new(src,MR.mindname,db_key)
 
 	for(var/datum/language/L in MR.languages)
@@ -66,6 +66,9 @@
 	return 0
 
 /obj/item/paicard/sleevecard/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	add_fingerprint(user)
 
 	if(!pai)
@@ -73,7 +76,7 @@
 	else
 		if(!emagged)
 			to_chat(user,span_notice("\The [src] displays the name '[pai]'."))
-		else ..()
+		else ..(user, TRUE)
 
 /mob/living/silicon/pai/infomorph
 	name = "sleevecard" //Has the same name as the card for consistency, but this is the MOB in the card.
@@ -81,7 +84,7 @@
 	ram = 35
 	var/emagged = FALSE
 
-/mob/living/silicon/pai/infomorph/Initialize(mapload, var/our_name = "Unknown", var/db_key)
+/mob/living/silicon/pai/infomorph/Initialize(mapload, our_name = "Unknown", db_key)
 	. = ..()
 
 	name = our_name
@@ -90,6 +93,8 @@
 	pda.ownjob = "Sleevecard"
 	pda.owner = text("[]", src)
 	pda.name = pda.owner + " (" + pda.ownjob + ")"
+
+	default_language = GLOB.all_languages[LANGUAGE_GALCOM] // Same issue as bots
 
 
 /mob/living/silicon/pai/infomorph/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
@@ -120,11 +125,11 @@
 
 	// Emotions
 	var/list/emotions = list()
-	for(var/name in pai_emotions)
+	for(var/name in GLOB.pai_emotions)
 		var/list/emote = list()
 		emote["name"] = name
-		emote["id"] = pai_emotions[name]
-		emotions.Add(list(emote))
+		emote["id"] = GLOB.pai_emotions[name]
+		UNTYPED_LIST_ADD(emotions, emote)
 
 	data["emotions"] = emotions
 	data["current_emotion"] = card.current_emotion

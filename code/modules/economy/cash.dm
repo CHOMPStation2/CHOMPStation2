@@ -18,6 +18,8 @@
 	var/worth = 0
 	drop_sound = 'sound/items/drop/paper.ogg'
 	pickup_sound = 'sound/items/pickup/paper.ogg'
+	///Var for attack_self chain
+	var/special_handling = FALSE
 
 /obj/item/spacecash/Initialize(mapload)
 	. = ..()
@@ -67,7 +69,7 @@
 		add_overlay(banknote)
 	src.desc = "They are worth [worth] [initial_name]s."
 
-/obj/item/spacecash/proc/adjust_worth(var/adjust_worth = 0, var/update = 1)
+/obj/item/spacecash/proc/adjust_worth(adjust_worth = 0, update = 1)
 	worth += adjust_worth
 	if(worth > 0)
 		if(update)
@@ -77,13 +79,16 @@
 		qdel(src)
 		return 0
 
-/obj/item/spacecash/proc/set_worth(var/new_worth = 0, var/update = 1)
+/obj/item/spacecash/proc/set_worth(new_worth = 0, update = 1)
 	worth = max(0, new_worth)
 	if(update)
 		update_icon()
 	return worth
 
 /obj/item/spacecash/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/amount = tgui_input_number(user, "How many [initial_name]s do you want to take? (0 to [src.worth])", "Take Money", 20, src.worth)
 	if(!src || QDELETED(src))
 		return
@@ -151,7 +156,23 @@
 	desc = "It's worth 1000 Thalers."
 	worth = 1000
 
-/proc/spawn_money(var/sum, spawnloc, mob/living/carbon/human/human_user as mob)
+/obj/item/spacecash/random_value
+	name = "random Thaler"
+	icon_state = "spacecash1"
+	desc = "It's worth a random amount of Thalers."
+	worth = 0
+	var/low_value = 1
+	var/high_value = 1000
+
+/obj/item/spacecash/random_value/Initialize(mapload)
+	. = ..()
+	set_worth(rand(low_value, high_value))
+
+/obj/item/spacecash/random_value/low
+	low_value = 1
+	high_value = 100
+
+/proc/spawn_money(sum, spawnloc, mob/living/carbon/human/human_user as mob)
 	var/obj/item/spacecash/SC = new (spawnloc)
 
 	SC.set_worth(sum)
@@ -167,8 +188,12 @@
 	drop_sound = 'sound/items/drop/card.ogg'
 	pickup_sound = 'sound/items/pickup/card.ogg'
 	var/owner_name = "" //So the ATM can set it so the EFTPOS can put a valid name on transactions.
+	special_handling = TRUE
 
-/obj/item/spacecash/ewallet/attack_self() return  //Don't act
+/obj/item/spacecash/ewallet/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 /obj/item/spacecash/ewallet/attackby()    return  //like actual
 /obj/item/spacecash/ewallet/update_icon() return  //space cash
 

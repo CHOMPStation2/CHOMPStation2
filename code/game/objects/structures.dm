@@ -24,8 +24,9 @@
 			attack_generic(user,1,"smashes")
 		else if(ishuman(user))
 			var/mob/living/carbon/human/H = user
-			if(H.species.can_shred(user))
-				attack_generic(user,1,"slices")
+			var/shreddamage = H.species.can_shred(user, FALSE, 11)
+			if(shreddamage)
+				attack_generic(user, shreddamage, "attacks")
 	SEND_SIGNAL(src, COMSIG_CLIMBABLE_SHAKE_CLIMBERS, user)
 	return ..()
 
@@ -44,7 +45,7 @@
 		if(3.0)
 			return
 
-/obj/structure/proc/can_touch(var/mob/user)
+/obj/structure/proc/can_touch(mob/user)
 	if (!user)
 		return 0
 	if(!Adjacent(user))
@@ -59,7 +60,7 @@
 		return 0
 	return 1
 
-/obj/structure/attack_generic(var/mob/user, var/damage, var/attack_verb)
+/obj/structure/attack_generic(mob/user, damage, attack_verb)
 	if(!breakable || damage < STRUCTURE_MIN_DAMAGE_THRESHOLD)
 		return 0
 	visible_message(span_danger("[user] [attack_verb] the [src] apart!"))
@@ -70,7 +71,7 @@
 /obj/structure/proc/can_visually_connect()
 	return anchored
 
-/obj/structure/proc/can_visually_connect_to(var/obj/structure/S)
+/obj/structure/proc/can_visually_connect_to(obj/structure/S)
 	return istype(S, src)
 
 /obj/structure/proc/update_connections(propagate = 0)

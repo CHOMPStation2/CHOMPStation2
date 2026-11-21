@@ -6,8 +6,6 @@
 	item_state = "cryogun"
 	wielded_item_state = "cryogun-wielded"
 	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
-
 
 	charge_cost = 80 //How much energy is needed to fire.
 
@@ -20,44 +18,58 @@
 
 	reload_time = 10
 
-	move_delay = 0
 
 	firemodes = list(
 		list(mode_name="normal", fire_delay=5, projectile_type=/obj/item/projectile/energy/frostsphere, charge_cost = 80),
 		list(mode_name="shotgun", fire_delay=15, projectile_type=/obj/item/projectile/bullet/frostshotgun, charge_cost = 240),
 		)
 
-/obj/item/gun/energy/flamegun
-	name = "Flame Crystal Projector"
-	desc = "A strange gun pulsing with energy, it's touch warming you up."
-	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
-	icon_state = "flamegun"
-	item_state = "flamegun"
-	wielded_item_state = "flame-wielded"
+/obj/item/grenade/chem_grenade/frost
+	name = "frost grenade"
+	desc = "Currently in the testing phase, pratical purposes are unknown."
+	icon_state = "foam"
+	path = 1
+	stage = 2
+	sealed = TRUE
 
-	w_class = ITEMSIZE_LARGE
+/obj/item/grenade/chem_grenade/frost/Initialize(mapload)
+	. = ..()
+	var/obj/item/reagent_containers/glass/beaker/bluespace/B1 = new(src)
+	var/obj/item/reagent_containers/glass/beaker/bluespace/B2 = new(src)
 
-	accept_cell_type = /obj/item/cell/device
-	cell_type = /obj/item/cell/device/weapon
-	projectile_type = /obj/item/projectile/energy/flamecrystal
+	B1.reagents.add_reagent(REAGENT_ID_CRYOSLURRY, 150)
+	B1.reagents.add_reagent(REAGENT_ID_POTASSIUM, 150)
+	B2.reagents.add_reagent(REAGENT_ID_PHOSPHORUS, 150)
+	B2.reagents.add_reagent(REAGENT_ID_SUGAR, 150)
 
-	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
+	detonator = new/obj/item/assembly_holder/timer_igniter(src)
 
-	recoil_mode = 0
-	charge_meter = 1
+	beakers += B1
 
-	move_delay = 0
+/obj/item/projectile/bullet/frostshotgun
+	use_submunitions = 1
+	only_submunitions = 1
+	range = 0
+	embed_chance = 0
+	submunition_spread_max = 1200
+	submunition_spread_min = 500
+	submunitions = list(/obj/item/projectile/energy/frostsphere = 4)
 
-	charge_cost = 80
+	hud_state = "plasma_sphere"
 
-	reload_time = 10
+/obj/item/projectile/bullet/frostshotgun/on_range()
+	qdel(src)
 
-	firemodes = list(
-		list(mode_name="normal", fire_delay=5, projectile_type=/obj/item/projectile/energy/flamecrystal, charge_cost = 80),
-		list(mode_name="shotgun", fire_delay=15, projectile_type=/obj/item/projectile/bullet/flamegun, charge_cost = 240),
-		list(mode_name="explosive", fire_delay=10, projectile_type=/obj/item/projectile/energy/fireball, charge_cost = 160),
-		)
+/obj/item/projectile/energy/frostsphere
+	name = "frost sphere"
+	icon_state = "ice_2"
+	fire_sound = 'sound/weapons/pulse3.ogg'
+	damage = 20
+	modifier_type_to_apply = /datum/modifier/cryogelled
+	modifier_duration = 0.25 MINUTE
+	speed = 2.5
+	range = 12
+	hud_state = "water"
 
 /obj/item/projectile/energy/mechahack
 	name = "remote hack"
@@ -67,7 +79,7 @@
 	irradiate = 3
 	speed = 1 //a bit faster due to the source having a 3 second wind up
 
-/obj/item/projectile/energy/mechahack/on_hit(var/atom/target)
+/obj/item/projectile/energy/mechahack/on_hit(atom/target)
 	. = ..()
 	if(istype(target, /obj/mecha))
 		remote_eject(target)
@@ -86,7 +98,7 @@
 	speed = 2
 	var/power = 20				//How hard it will hit for with electrocute_act(), decreases with each bounce.
 
-/obj/item/projectile/energy/lightingspark/attack_mob(var/mob/living/target_mob, var/distance, var/miss_modifier=0)
+/obj/item/projectile/energy/lightingspark/attack_mob(mob/living/target_mob, distance, miss_modifier=0)
 	//First we shock the guy we just hit.
 	if(ishuman(target_mob))
 		var/mob/living/carbon/human/H = target_mob
@@ -95,72 +107,63 @@
 	else
 		target_mob.electrocute_act(power, src, 0.75, BP_TORSO)
 
-/obj/item/projectile/bullet/crystaline
-	name = "crystal bullet"
-	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
-	icon_state = "crystal"
-	damage = 30
-	armor_penetration = 20
-	embed_chance = 0
-	speed = 2
-
-/obj/item/projectile/energy/eclipse
+/obj/item/projectile/energy/eclipse_boss
 	name = "experimental laser"
 	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
 	icon_state = "laser"
 	check_armour = "laser"
-	damage = 30
-	armor_penetration = 20
-	penetrating = 2
-	speed = 2
+	speed = 10
 	crawl_destroy = TRUE
 
-//The normal laser respects more armor, but deals more damage if you don't have it.precursor will thwack folks equally.
-/obj/item/projectile/energy/eclipse/lorge
-	damage = 60
-	armor_penetration = 30
-	icon_state = "mega_laser"
-	speed = 10
-
-/obj/item/projectile/energy/eclipse/lorgealien
-	damage = 20
-	armor_penetration = 60
-	icon_state = "mega_laser_p"
-	speed = 10
-
-/obj/item/projectile/bullet/crystalineburst
-	use_submunitions = 1
-	range = 0
-	embed_chance = 0
-	spread_submunition_damage = FALSE
-	submunition_spread_max = 120
-	submunition_spread_min = 60
-	submunitions = list(/obj/item/projectile/bullet/crystaline = 5)
-
-/obj/item/projectile/energy/eclipse/janusjavelin //This will end you
-	name = "energy javelin"
-	icon_state = "javelin"
-	damage_type = SEARING
-	check_armour = "bullet"
-	damage = 45
-	armor_penetration = 95
-	speed = 10
-
-/obj/item/projectile/energy/eclipse/chillingwind
+/obj/item/projectile/energy/eclipse_boss/chillingwind
 	name = "ice winds"
 	icon_state = "ice_wind"
 	damage = 15
 	armor_penetration = 70
-	speed = 10
 	modifier_type_to_apply = /datum/modifier/cryogelled
 	modifier_duration = 0.25 MINUTE
 
-/obj/item/projectile/energy/eclipse/mining
-	name = "drill"
-	icon_state = "drill"
+/obj/item/projectile/energy/eclipse_boss/metalsphere
+	name = "metal sphere"
+	icon_state = "metal_sphere"
 	damage_type = BRUTE
 	check_armour = "bullet"
+	damage = 20
+	agony = 10
+	armor_penetration = 50
+
+/obj/item/projectile/energy/eclipse_boss/energyjavelin
+	name = "searing javelin"
+	icon_state = "javelin"
+	damage_type = SEARING
 	damage = 40
 	armor_penetration = 30
-	speed = 10
-	excavation_amount = 100
+
+//projectiles
+/obj/item/projectile/energy/astral_collective
+	name = "abnormal energy"
+	speed = 3
+	damage = 28
+	damage_type = BURN
+	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
+	icon_state = "laser"
+	check_armour = "laser"
+
+/obj/item/projectile/energy/astral_collective/basic
+	damage_type = SEARING
+
+/obj/item/projectile/energy/astral_collective/spear
+	icon_state = "spear"
+	damage = 20
+	armor_penetration = 30
+
+/obj/item/projectile/energy/astral_collective/fire
+	icon_state = "fire"
+	damage = 10
+	incendiary = 2
+	flammability = 3
+
+/obj/item/projectile/energy/astral_collective/dagger
+	damage = 8
+	armor_penetration = 60
+	icon_state = "dagger"

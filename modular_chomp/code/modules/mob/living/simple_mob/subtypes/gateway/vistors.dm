@@ -17,7 +17,7 @@
 	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/vistor/vistorblue
 
-/mob/living/simple_mob/mechanical/mecha/vistor/vistorblue/shielded/bullet_act(var/obj/item/projectile/P)
+/mob/living/simple_mob/mechanical/mecha/vistor/vistorblue/shielded/bullet_act(obj/item/projectile/P)
 	var/reflectchance = 100
 	if(prob(reflectchance))
 		var/damage_mod = rand(2,4)

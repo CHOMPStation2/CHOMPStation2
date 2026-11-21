@@ -60,7 +60,7 @@ SUBSYSTEM_DEF(robot_sprites)
 					cyborg_sprites_by_module[RS.module_type] = list()
 				cyborg_sprites_by_module[RS.module_type] |= RS
 
-/datum/controller/subsystem/robot_sprites/proc/get_module_sprites(var/module, var/mob/living/silicon/robot/wlcheck)
+/datum/controller/subsystem/robot_sprites/proc/get_module_sprites(module, mob/living/silicon/robot/wlcheck)
 	. = list()
 
 	if(!module || !(module in cyborg_sprites_by_module))
@@ -73,7 +73,7 @@ SUBSYSTEM_DEF(robot_sprites)
 
 	return
 
-/datum/controller/subsystem/robot_sprites/proc/get_module_sprites_len(var/module, var/mob/living/silicon/robot/wlcheck)
+/datum/controller/subsystem/robot_sprites/proc/get_module_sprites_len(module, mob/living/silicon/robot/wlcheck)
 	if(!module || (!(module in cyborg_sprites_by_module) && !(module in whitelisted_sprites_by_module)))
 		return 0
 
@@ -85,13 +85,13 @@ SUBSYSTEM_DEF(robot_sprites)
 	if(!islist(sprite_list))
 		return 0
 
-	return sprite_list.len
+	return length(sprite_list)
 
-/datum/controller/subsystem/robot_sprites/proc/get_default_module_sprite(var/module)
+/datum/controller/subsystem/robot_sprites/proc/get_default_module_sprite(module)
 
 	var/list/module_sprites = get_module_sprites(module)
 
-	if(!module_sprites || !module_sprites.len)
+	if(!module_sprites || !length(module_sprites))
 		return
 
 	var/chosen_sprite
@@ -104,7 +104,7 @@ SUBSYSTEM_DEF(robot_sprites)
 
 	return chosen_sprite
 
-/datum/controller/subsystem/robot_sprites/proc/get_whitelisted_sprites(var/ckey, var/spritename, var/module)
+/datum/controller/subsystem/robot_sprites/proc/get_whitelisted_sprites(ckey, spritename, module)
 	. = list()
 
 	ckey = null // CHOMPDisable, removing custom robot sprites
@@ -141,7 +141,7 @@ SUBSYSTEM_DEF(robot_sprites)
 		RS.icon_x = text2num(splitted[1])
 		RS.icon_y = text2num(splitted[2])
 		RS.vis_height = text2num(splitted[2])
-		var/list/icon_states = cached_icon_states(RS.sprite_icon)
+		var/list/icon_states = icon_states_fast(RS.sprite_icon)
 		for(var/icon in icon_states)
 			// testing whitelist functionality ckey-...
 			if(findtext(icon, regex("ckey-")))

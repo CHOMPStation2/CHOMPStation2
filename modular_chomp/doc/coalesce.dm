@@ -17,7 +17,7 @@ the syntax is coalesce(var1,var2...)
 // This makes it so we do not have to do any extra if/else statements, we simply use whatever is present first.
 
 //as a second example you can also use coalesce as a fallback
-/proc/fetch_name_with_fallback(var/name,var/nametwo)
+/proc/fetch_name_with_fallback(name,nametwo)
 	coalesce(name, nametwo, "Not found")
 //Now what this will do is return name, if name is not null, nametwo if name is null but nametwo isnt null
 //however if both given vars are in fact null we have a hardocded fallback "not found" that will always return instead

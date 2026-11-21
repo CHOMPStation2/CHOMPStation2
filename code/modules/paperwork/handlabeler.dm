@@ -9,8 +9,8 @@
 	drop_sound = 'sound/items/drop/device.ogg'
 	pickup_sound = 'sound/items/pickup/device.ogg'
 
-/obj/item/hand_labeler/attack()
-	return
+/obj/item/hand_labeler/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	return NONE
 
 /obj/item/hand_labeler/afterattack(atom/A, mob/user, proximity)
 	if(!proximity)
@@ -67,7 +67,10 @@
 		span_notice("You label [A] as [label]."))
 	A.name = "[A.name] ([label])"
 
-/obj/item/hand_labeler/attack_self(mob/user as mob)
+/obj/item/hand_labeler/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	mode = !mode
 	icon_state = "labeler[mode]"
 	if(mode)

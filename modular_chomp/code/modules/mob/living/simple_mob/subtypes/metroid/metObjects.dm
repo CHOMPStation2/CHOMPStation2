@@ -21,7 +21,7 @@
 	var/amount_grown = 0
 	var/metroid_type = /mob/living/simple_mob/metroid/juvenile/baby
 
-/obj/effect/metroid/egg/Initialize(mapload, var/atom/parent)
+/obj/effect/metroid/egg/Initialize(mapload, atom/parent)
 	get_light_and_color(parent)
 	. = ..()
 	pixel_x = rand(3,-3)

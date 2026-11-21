@@ -24,7 +24,7 @@
 	base_miss_chance = 10
 
 /obj/item/organ/external/chest/robotize()
-	if(..() && owner)
+	if(..() && owner) //Parent returns False if we were already robotic.
 		if(robotic != ORGAN_NANOFORM) //VOREStation Edit
 			// Give them fancy new organs.
 			owner.internal_organs_by_name[O_CELL] = new /obj/item/organ/internal/cell(owner,1)
@@ -33,11 +33,12 @@
 			owner.internal_organs_by_name[O_CYCLER] = new /obj/item/organ/internal/stomach/machine(owner,1)
 			owner.internal_organs_by_name[O_HEATSINK] = new /obj/item/organ/internal/robotic/heatsink(owner,1)
 			owner.internal_organs_by_name[O_DIAGNOSTIC] = new /obj/item/organ/internal/robotic/diagnostic(owner,1)
-
-		var/datum/robolimb/R = GLOB.all_robolimbs[model] // company should be set in parent by now
-		if(!R)
-			log_runtime("A torso was robotize() but has no model that can be found: [model]. May affect FBPs.")
-		owner.synthetic = R
+	// Always update the synthetic var.
+	// Because revive() is stupid and calls pref code which nulls the synthetic variable after setting it the first time, making parent return false. Cool!
+	var/datum/robolimb/R = GLOB.all_robolimbs[model] // company should be set in parent by now
+	if(!R)
+		log_runtime("A torso was robotize() but has no model that can be found: [model]. May affect FBPs.")
+	owner.synthetic = R
 	return FALSE
 
 
@@ -297,7 +298,7 @@
 		cannot_gib = FALSE
 	return ..()
 
-/obj/item/organ/external/head/robotize(var/company, var/skip_prosthetics, var/keep_organs)
+/obj/item/organ/external/head/robotize(company, skip_prosthetics, keep_organs)
 	. = ..(company, skip_prosthetics, 1)
 	if(model)
 		var/datum/robolimb/robohead = GLOB.all_robolimbs[model]
@@ -349,7 +350,7 @@
 		span_notice("You make \the [I] kiss \the [src]!."))
 	return ..()
 
-/obj/item/organ/external/head/get_icon(var/skeletal, var/can_apply_transparency = TRUE)
+/obj/item/organ/external/head/get_icon(skeletal, can_apply_transparency = TRUE)
 	..()
 
 	//The overlays are not drawn on the mob, they are used for if the head is removed and becomes an item
@@ -363,22 +364,25 @@
 
 	//Eye color/icon
 	var/should_have_eyes = owner.should_have_organ(O_EYES)
-	var/has_eye_color = owner.species.appearance_flags & HAS_EYE_COLOR
-	if((should_have_eyes || has_eye_color) && eye_icon)
+	var/has_eye_sprites = owner.species.appearance_flags & HAS_EYE_COLOR
+	if((should_have_eyes || has_eye_sprites) && eye_icon)
 		var/obj/item/organ/internal/eyes/eyes = owner.internal_organs_by_name[O_EYES]
 		var/icon/eyes_icon = new/icon(eye_icon_location, eye_icon)
-		//Should have eyes
-		if(should_have_eyes)
-			//And we have them
-			if(eyes)
-				if(has_eye_color)
-					eyes_icon.Blend(rgb(eyes.eye_colour[1], eyes.eye_colour[2], eyes.eye_colour[3]), ICON_ADD)
-			//They're gone!
+		//Do we have a special eye icon with its own coloration? Remove
+		if(!findtext(eye_icon, regex("-colored")))
+			//Should have eyes
+			if(should_have_eyes)
+				//And we have them
+				if(eyes)
+					if(has_eye_sprites)
+						eyes_icon.Blend(rgb(eyes.eye_colour[1], eyes.eye_colour[2], eyes.eye_colour[3]), ICON_ADD)
+				//They're gone!
+				else
+					eyes_icon.Blend(rgb(128,0,0), ICON_ADD)
+			//We have weird other-sorts of eyes (as we're not supposed to have eye organ, but we have HAS_EYE_COLOR species)
 			else
-				eyes_icon.Blend(rgb(128,0,0), ICON_ADD)
-		//We have weird other-sorts of eyes (as we're not supposed to have eye organ, but we have HAS_EYE_COLOR species)
-		else
-			eyes_icon.Blend(rgb(owner.r_eyes, owner.g_eyes, owner.b_eyes), ICON_ADD)
+				eyes_icon.Blend(rgb(owner.r_eyes, owner.g_eyes, owner.b_eyes), ICON_ADD)
+
 
 		//VOREStation edit -- allow rendering of eyes over markings.
 		if(eyes_over_markings)

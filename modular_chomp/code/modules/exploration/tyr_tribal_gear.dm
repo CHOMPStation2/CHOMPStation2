@@ -86,19 +86,10 @@
 	w_class = ITEMSIZE_SMALL
 
 	var/static/list/possible_states = list("crystal", "generator","core", "hilt")
-	var/static/list/possible_tech = list(TECH_MATERIAL, TECH_ENGINEERING, TECH_PHORON, TECH_POWER, TECH_BIO, TECH_COMBAT, TECH_MAGNET, TECH_DATA)
 
 /obj/item/prop/alien/prototype/Initialize(mapload)
 	. = ..()
 	icon_state = pick(possible_states)
-	var/list/techs = possible_tech.Copy()
-	origin_tech = list()
-	for(var/i = 1 to rand(1, 4))
-		var/new_tech = pick(techs)
-		techs -= new_tech
-		origin_tech[new_tech] = rand(3, 11)
-
-	origin_tech[TECH_PRECURSOR] = rand(0,3)
 
 /* Yoinked for refrence
 /obj/item/arrow/standard
@@ -167,7 +158,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS //Head be vunerable but cloak covers the other bits.
 	var/block_chance = 20
 
-/obj/item/clothing/suit/armor/tyrtribalcloak/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/suit/armor/tyrtribalcloak/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(prob(block_chance))
 		user.visible_message(span_danger("\The [src] completely deflects [attack_text]!"))
 		return TRUE
@@ -259,6 +250,48 @@
 		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
 		)
 
+
+/obj/item/melee/energy/tyr_sabre
+	name = "tyrian energy blade"
+	slot_flags = SLOT_BELT | SLOT_BACK //should make a proper sprite some time but spriting energy is hard
+	desc = "A forgien blade made via techniques of ages old. Gains a diffrent effect base off your stance."
+	description_info = "Attacking will alter this weapons properties. Attacking in a grab stance increases projectile defense. Disarm intent increases melee defense. Hurt increases damage. They have a cap, and reset upon using another intent."
+	active_force = 30
+	active_armourpen = 30
+	projectile_parry_chance = 20
+	defend_chance = 20
+	lcolor = null
+	colorable = FALSE
+
+	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
+	icon_state = "sabre"
+	item_state = "sabre"
+
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/obj/guns/precursor/lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
+		)
+
+/obj/item/melee/energy/tyr_sabre/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
+	if(active)
+		. = ..()
+		switch(user.a_intent)
+			if(I_GRAB)
+				defend_chance = 20
+				force = 30
+				if(projectile_parry_chance < 60)
+					projectile_parry_chance += 8
+			if(I_DISARM)
+				projectile_parry_chance = 20
+				force = 30
+				if(defend_chance < 60)
+					defend_chance += 8
+			if(I_HURT)
+				projectile_parry_chance = 20
+				defend_chance = 20
+				if(defend_chance < 60)
+					force += 6
+
 //E sword has 30 damage, 50 AP, and 65% projectile block
 //Axe is 60 damage, 65 AP, no guard
 //Normal attackspeed is 8
@@ -267,7 +300,8 @@
 	name = "tyrian scout katar"
 	slot_flags = SLOT_BELT | SLOT_BACK
 	desc = "A forgien blade made via techniques formly lost. Gains a diffrent effect base off your stance."
-	description_info = "Attacking whilst on grab intent will plant a heat bomb, attacking whilst on disarm will increase your speed for a brief moment, and attacking whilst on harm will phase out your foe's armor."
+	description_info = "Attacking gains additional effects based off intent. Grab: Foe takes more damage. Disarm: Temporarly increases your speed. Hurt: Small chance for armour piercing critical hit."
+	lcolor = null
 	colorable = FALSE
 	attackspeed = 4
 	active_force = 5
@@ -287,28 +321,18 @@
 		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
 		)
 
-/obj/item/melee/energy/tyr_katar/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/energy/tyr_katar/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	if(active)
 		. = ..()
 		switch(user.a_intent)
 			if(I_GRAB)
-				target.add_modifier(/datum/modifier/agate_bomb, 8 SECONDS)
+				target.add_modifier(/datum/modifier/phase_armor, 5 SECONDS)
 			if(I_DISARM)
 				user.add_modifier(/datum/modifier/technomancer/haste, 2 SECONDS)
 			if(I_HURT)
-				target.add_modifier(/datum/modifier/phase_armor, 5 SECONDS)
-
-/datum/modifier/agate_bomb
-	name = "Agate Bomb"
-	desc = "The bomb has been planted."
-
-	on_created_text = span_notice("A strange substance is applied to your form.")
-	on_expired_text = span_warning("The substance explodes.")
-	stacks = MODIFIER_STACK_ALLOWED
-
-/datum/modifier/agate_bomb/on_expire()
-	if(holder.stat != DEAD)
-		holder.inflict_heat_damage(20)
+				if(active && prob(8))
+					target.adjustBruteLoss(-50)
+					playsound(src, "blade1", 50, 1)
 
 /datum/modifier/phase_armor
 	name = "Phased Armor"
@@ -324,10 +348,11 @@
 	name = "tyrian guardian hammer"
 	slot_flags = SLOT_BELT | SLOT_BACK
 	desc = "A strange hammer made via techniques formly lost. Gains a diffrent effect base off your stance."
-	description_info = "Attacking whilst on grab intent weakens the target's healing, attacking whilst on disarm weakens the target's melee potential, and attacking whilst on harm has a 2% chance to deal guaranteed massive damage."
+	description_info = "Attacking whilst on grab intent restore the wielder's health, attacking whilst on disarm weakens the target and attacking whilst on harm can throw back the target."
+	lcolor = null
 	colorable = FALSE
 
-	active_force = 20
+	active_force = 35
 	active_armourpen = 40
 
 	attackspeed = 20
@@ -346,16 +371,80 @@
 		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
 		)
 
-/obj/item/melee/energy/tyr_hammer/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/energy/tyr_hammer/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	if(active)
 		. = ..()
 		switch(user.a_intent)
 			if(I_GRAB)
-				user.adjustFireLoss(-5)
-				user.adjustFireLoss(-5)
+				user.add_modifier(/datum/modifier/aura/slime_heal, 4, src)
 			if(I_DISARM)
 				target.Weaken(30)
 			if(I_HURT)
 				var/atom/target_zone = get_edge_target_turf(user,get_dir(user, target))
 				if(!target.anchored)
 					target.throw_at(target_zone, 5, 2, user, FALSE)
+
+/obj/item/melee/energy/tyr_chainsaw
+	name = "tyrian butcher blade"
+	slot_flags = SLOT_BELT | SLOT_BACK
+	desc = "What appears to be a weaponized chainsaw."
+	description_info = "Utilizes charge, recharges with time"
+	lcolor = null
+	colorable = FALSE
+
+	active_force = 60
+	active_armourpen = 20
+
+	attackspeed = 15
+	defend_chance = 0
+	projectile_parry_chance = 0
+
+	active_w_class = ITEMSIZE_HUGE
+	can_cleave = TRUE
+
+	hitcost = 320
+	use_cell = TRUE
+
+	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
+	icon_state = "chainsaw"
+	item_state = "chainsaw"
+
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/obj/guns/precursor/lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
+		)
+
+/obj/item/melee/energy/tyr_chainsaw/Initialize(mapload)
+	. = ..()
+	bcell = new/obj/item/cell/device/weapon/recharge/alien/tyr(src)
+
+/obj/item/melee/energy/tyr_chainsaw/afterattack(atom/A as mob|obj|turf|area, mob/user as mob, proximity)
+	if(!proximity) return
+	..()
+	playsound(src, 'sound/weapons/chainsaw_attack.ogg',40,1)
+
+/obj/item/shield/tyr_shield
+	name = "tyrian portable energy barrier"
+	desc = "A shield with a strange property of reducing the damage of projectiles instead of being effective at blocking them."
+	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
+	icon_state = "barrier"
+	item_state = "barrier"
+
+	slot_flags = SLOT_BACK
+
+	w_class = ITEMSIZE_LARGE
+	attack_verb = list("shoved", "bashed")
+	base_block_chance = 15
+
+/obj/item/shield/tyr_shield/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+	if(user.incapacitated())
+		return 0
+	var/bad_arc = reverse_direction(user.dir) //arc of directions from which we cannot block
+	if(check_shield_arc(user, bad_arc, damage_source, attacker))
+		if(prob(get_block_chance(user, damage, damage_source, attacker)))
+			user.visible_message(span_danger("\The [user] blocks [attack_text] with \the [src]!"))
+			return 1
+	else
+		var/obj/item/projectile/P = damage_source
+		P.damage = P.damage / 2
+		return 0

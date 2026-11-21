@@ -58,10 +58,17 @@
 				var/obj/machinery/computer/C = item
 				var/screen = initial(C.icon_screen)
 				var/keyboard = initial(C.icon_keyboard)
-				var/all_states = cached_icon_states(icon_file)
+				var/all_states = icon_states_fast(icon_file)
 				if (screen && (screen in all_states))
 					transform.blend_icon(uni_icon(icon_file, screen), ICON_OVERLAY)
 				if (keyboard && (keyboard in all_states))
 					transform.blend_icon(uni_icon(icon_file, keyboard), ICON_OVERLAY)
 
-		insert_icon(initial(path.id), uni_icon(icon_file, icon_state, transform=transform))
+			// Materials are snowflakes that use blended colors for some stacks
+			if(ispath(item, /obj/item/stack/material))
+				var/obj/item/stack/material/mat = item
+				if(mat::apply_colour)
+					var/datum/material/material = GET_MATERIAL_REF(mat::default_type)
+					transform = color_transform(material::icon_colour)
+
+		insert_icon(sanitize_css_class_name(initial(path.id)), uni_icon(icon_file, icon_state, transform=transform))

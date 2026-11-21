@@ -5,7 +5,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	CHANNEL_MEDICAL			= MED_FREQ,
 	CHANNEL_ENGINEERING		= ENG_FREQ,
 	CHANNEL_SECURITY		= SEC_FREQ,
-	CHANNEL_BODYCAM			= BDCM_FREQ, // CHOMPAdd
+	CHANNEL_BODYCAM			= BDCM_FREQ,
 	CHANNEL_RESPONSE_TEAM	= ERT_FREQ,
 	CHANNEL_SPECIAL_OPS		= DTH_FREQ,
 	CHANNEL_MERCENARY		= SYND_FREQ,
@@ -17,9 +17,11 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	CHANNEL_ENTERTAINMENT	= ENT_FREQ,
 	CHANNEL_MEDICAL_1		= MED_I_FREQ,
 	CHANNEL_SECURITY_1		= SEC_I_FREQ,
-	CHANNEL_TALON			= TALON_FREQ, //VOREStation Add
+	CHANNEL_TALON			= TALON_FREQ,
 	CHANNEL_CASINO			= CSN_FREQ,
-	CHANNEL_OUTSIDER		= OUT_FREQ // CHOMPAdd
+	CHANNEL_OUTSIDER		= OUT_FREQ,
+	CHANNEL_ATC				= ATC_FREQ,
+	CHANNEL_CULTURE			= CULTURE_FREQ
 ))
 
 // Hey, if anyone ever needs to update tgui/packages/tgui/constants.js with new radio channels
@@ -54,22 +56,22 @@ GLOBAL_LIST_INIT(radiochannels, list(
 
 
 // central command channels, i.e deathsquid & response teams
-var/list/CENT_FREQS = list(ERT_FREQ, DTH_FREQ)
+GLOBAL_LIST_INIT(cent_frequencies, list(ERT_FREQ, DTH_FREQ))
 
 // Antag channels, i.e. Syndicate
-var/list/ANTAG_FREQS = list(SYND_FREQ, RAID_FREQ)
+GLOBAL_LIST_INIT(antag_frequencies, list(SYND_FREQ, RAID_FREQ))
 
 //Department channels, arranged lexically
-var/list/DEPT_FREQS = list(AI_FREQ, BDCM_FREQ, COMM_FREQ, ENG_FREQ, ENT_FREQ, MED_FREQ, SEC_FREQ, SCI_FREQ, SRV_FREQ, SUP_FREQ) // CHOMPEdit
+GLOBAL_LIST_INIT(department_frequencies, list(AI_FREQ, BDCM_FREQ, COMM_FREQ, ENG_FREQ, ENT_FREQ, MED_FREQ, SEC_FREQ, SCI_FREQ, SRV_FREQ, SUP_FREQ))
 
-var/list/OFFMAP_FREQS = list(TALON_FREQ, CSN_FREQ, OUT_FREQ) //VOREStation Add CHOMPEdit: Added outsider
+GLOBAL_LIST_INIT(offmap_frequencies, list(TALON_FREQ, CSN_FREQ, OUT_FREQ))
 
-/proc/frequency_span_class(var/frequency)
+/proc/frequency_span_class(frequency)
 	// Antags!
-	if (frequency in ANTAG_FREQS)
+	if (frequency in GLOB.antag_frequencies)
 		return "syndradio"
 	// CentCom channels (deathsquid and ert)
-	if(frequency in CENT_FREQS)
+	if(frequency in GLOB.cent_frequencies)
 		return "centradio"
 	// command channel
 	if(frequency == COMM_FREQ)
@@ -96,10 +98,8 @@ var/list/OFFMAP_FREQS = list(TALON_FREQ, CSN_FREQ, OUT_FREQ) //VOREStation Add C
 		return "expradio"
 	if(frequency == ENT_FREQ) // entertainment
 		return "entradio"
-	if(frequency in DEPT_FREQS)
+	if(frequency in GLOB.department_frequencies)
 		return "deptradio"
-	//VOREStation Add
-	if(frequency in OFFMAP_FREQS)
+	if(frequency in GLOB.offmap_frequencies)
 		return "expradio"
-	//VOREStation Add End
 	return "radio"

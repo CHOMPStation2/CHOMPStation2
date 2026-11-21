@@ -11,6 +11,17 @@
 /obj/effect/map_effect/portal/master/side_a/caves_to_wilderness,
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outpost/wall/checkpoint)
+"aac" = (
+/obj/structure/catwalk,
+/obj/structure/closet/walllocker_double/engineering/north,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/suit/radiation,
+/obj/item/geiger,
+/obj/item/geiger,
+/obj/item/clothing/head/radiation,
+/obj/item/clothing/head/radiation,
+/turf/simulated/floor/plating,
+/area/engineering/hallway/engineer_hallway)
 "aah" = (
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
@@ -1177,14 +1188,15 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "aFO" = (
-/obj/structure/closet/secure_closet/hos2{
-	starts_with = list(/obj/item/cartridge/hos,/obj/item/taperoll/police,/obj/item/shield/riot/tele,/obj/item/storage/box/holobadge/hos,/obj/item/clothing/accessory/badge/holo/hos,/obj/item/reagent_containers/spray/pepper,/obj/item/tool/crowbar/red,/obj/item/storage/box/flashbangs,/obj/item/flash,/obj/item/melee/baton/loaded,/obj/item/cell/device/weapon,/obj/item/melee/telebaton,/obj/item/clothing/head/beret/sec/corporate/hos,/obj/item/clothing/suit/storage/hooded/wintercoat/security,/obj/item/clothing/shoes/boots/winter/security,/obj/item/flashlight/maglight)
-	},
+/obj/structure/closet/secure_closet/hos2,
 /obj/item/cell/device,
 /obj/item/holowarrant,
 /obj/item/rig/ch/pursuit,
 /obj/item/storage/secure/briefcase/nsfw_pack_hos,
 /obj/item/gun/energy/x01,
+/obj/item/clothing/head/beret/sec/corporate/hos,
+/obj/item/clothing/suit/storage/hooded/wintercoat/security/hos,
+/obj/item/clothing/shoes/boots/winter/security,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hos)
 "aFW" = (
@@ -4087,9 +4099,7 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outside/path/plains)
 "ceP" = (
-/obj/structure/closet/secure_closet/warden{
-	starts_with = list(/obj/item/clothing/suit/storage/vest/warden,/obj/item/clothing/under/rank/warden,/obj/item/clothing/under/rank/warden/corp,/obj/item/clothing/suit/storage/vest/wardencoat,/obj/item/clothing/suit/storage/vest/wardencoat/alt,/obj/item/clothing/suit/storage/vest/wardencoat/alt2,/obj/item/clothing/head/helmet/dermal,/obj/item/clothing/head/helmet/warden,/obj/item/clothing/head/helmet/warden/hat,/obj/item/cartridge/security,/obj/item/radio/headset/headset_sec,/obj/item/radio/headset/alt/headset_sec,/obj/item/clothing/glasses/sunglasses/sechud,/obj/item/taperoll/police,/obj/item/clothing/accessory/badge/holo/warden,/obj/item/storage/box/flashbangs,/obj/item/storage/belt/security,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/baton/loaded,/obj/item/gun/energy/gun,/obj/item/cell/device/weapon,/obj/item/storage/box/holobadge,/obj/item/clothing/head/beret/sec/corporate/warden,/obj/item/clothing/suit/storage/hooded/wintercoat/security,/obj/item/clothing/shoes/boots/winter/security,/obj/item/flashlight/maglight,/obj/item/megaphone,/obj/item/clothing/mask/gas/half,/obj/item/retail_scanner/security)
-	},
+/obj/structure/closet/secure_closet/warden,
 /obj/item/gun/projectile/shotgun/pump/shorty{
 	ammo_type = /obj/item/ammo_casing/a12g/stunshell;
 	desc = "A professionally cut down pump-action shotgun, with a checkered pistol grip, and an 8 round tube. Come with me if you want to live. This one is tagged 'Propety of the Warden.' Chambered in 12 gauge.";
@@ -4107,6 +4117,7 @@
 	pixel_x = 4;
 	pixel_y = 31
 	},
+/obj/item/clothing/mask/gas/half,
 /turf/simulated/floor/carpet,
 /area/security/warden)
 "cfp" = (
@@ -15399,11 +15410,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway/engineer_hallway)
-"gFJ" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/engineering/engine_eva)
 "gFN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17228,9 +17234,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/cafeteria)
 "hus" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/ai_monitored/storage/eva)
 "huG" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -19518,9 +19522,7 @@
 /turf/simulated/floor/plating,
 /area/engineering/engine_eva)
 "isr" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/storage/primary)
 "isN" = (
 /turf/simulated/mineral/cave,
@@ -32076,13 +32078,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/shuttle)
 "nWc" = (
-/obj/structure/closet/walllocker_double/engineering/north{
-	starts_with = list(/obj/item/clothing/suit/radiation = 2, /obj/item/clothing/head/radiation = 2, /obj/item/geiger = 2)
-	},
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
+/obj/structure/closet/walllocker_double/engineering/north,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/suit/radiation,
+/obj/item/geiger,
+/obj/item/geiger,
+/obj/item/clothing/head/radiation,
+/obj/item/clothing/head/radiation,
 /turf/simulated/floor/plating,
 /area/engineering/hallway/engineer_hallway)
 "nWg" = (
@@ -34669,10 +34675,14 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/cryo/autoresleeve)
 "pmU" = (
-/obj/structure/closet/walllocker_double/engineering/north{
-	starts_with = list(/obj/item/clothing/suit/radiation = 2, /obj/item/clothing/head/radiation = 2, /obj/item/geiger = 2)
-	},
 /obj/structure/catwalk,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/suit/radiation,
+/obj/structure/closet/walllocker_double/engineering/north,
+/obj/item/geiger,
+/obj/item/geiger,
+/obj/item/clothing/head/radiation,
+/obj/item/clothing/head/radiation,
 /turf/simulated/floor/plating,
 /area/engineering/hallway/engineer_hallway)
 "pnz" = (
@@ -46272,13 +46282,17 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/cryo/autoresleeve)
 "ugF" = (
-/obj/structure/closet/walllocker_double/engineering/north{
-	starts_with = list(/obj/item/clothing/suit/radiation = 2, /obj/item/clothing/head/radiation = 2, /obj/item/geiger = 2)
-	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
+/obj/structure/closet/walllocker_double/engineering/north,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/suit/radiation,
+/obj/item/geiger,
+/obj/item/geiger,
+/obj/item/clothing/head/radiation,
+/obj/item/clothing/head/radiation,
 /turf/simulated/floor/plating,
 /area/engineering/hallway/engineer_hallway)
 "ugT" = (
@@ -51947,11 +51961,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
-"wpz" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/surface/outside/plains/outpost/outdoors_area)
 "wqg" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -56681,9 +56690,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/engine_eva)
 "yck" = (
 /obj/structure/cable/heavyduty{
@@ -74524,8 +74531,8 @@ rLe
 sct
 rLe
 kGW
-wpz
-wpz
+lfc
+lfc
 kGW
 kGW
 kYl
@@ -74781,7 +74788,7 @@ rLe
 sct
 rLe
 hCq
-wpz
+lfc
 isr
 itb
 itb
@@ -75563,17 +75570,17 @@ lWy
 itv
 tgb
 ncJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
-gFJ
+pCB
+pCB
+pCB
+pCB
+pCB
+pCB
+pCB
+pCB
+pCB
+pCB
+pCB
 ixC
 yci
 vtd
@@ -77094,7 +77101,7 @@ rLe
 sct
 rLe
 kGW
-wpz
+lfc
 lfc
 shq
 idG
@@ -77882,7 +77889,7 @@ plZ
 pML
 qKt
 oOQ
-pmU
+aac
 lpm
 tqj
 eFA

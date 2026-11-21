@@ -1,4 +1,4 @@
-var/datum/planet/sif/planet_sif = null
+GLOBAL_DATUM(planet_sif, /datum/planet/sif)
 
 /datum/planet/sif
 	name = "Sif"
@@ -14,7 +14,7 @@ var/datum/planet/sif/planet_sif = null
 
 /datum/planet/sif/New()
 	..()
-	planet_sif = src
+	GLOB.planet_sif = src
 	weather_holder = new /datum/weather_holder/sif(src) // Cold weather is also nice.
 
 // This code is horrible.
@@ -103,8 +103,8 @@ var/datum/planet/sif/planet_sif = null
 
 // Returns the time datum of Sif.
 /proc/get_sif_time()
-	if(planet_sif)
-		return planet_sif.current_time
+	if(GLOB.planet_sif)
+		return GLOB.planet_sif.current_time
 
 //Weather definitions
 /datum/weather_holder/sif
@@ -572,7 +572,13 @@ var/datum/planet/sif/planet_sif = null
 		if(!T.is_outdoors())
 			return // They're indoors, so no need to irradiate them with fallout.
 
-		L.rad_act(rand(direct_rad_low, direct_rad_high))
+		radiation_pulse(
+			L,
+			max_range = 1,
+			threshold = RAD_VERY_LIGHT_INSULATION,
+			chance = rand(fallout_rad_low, fallout_rad_high),
+			strength = rand(fallout_rad_low, fallout_rad_high)
+		)
 
 // This makes random tiles near people radioactive for awhile.
 // Tiles far away from people are left alone, for performance.
@@ -584,4 +590,11 @@ var/datum/planet/sif/planet_sif = null
 	if(!istype(T))
 		return
 	if(T.is_outdoors())
-		SSradiation.radiate(T, rand(fallout_rad_low, fallout_rad_high))
+		radiation_pulse(
+			T,
+			max_range = 7,
+			threshold = RAD_MEDIUM_INSULATION,
+			chance = URANIUM_IRRADIATION_CHANCE,
+			minimum_exposure_time = URANIUM_RADIATION_MINIMUM_EXPOSURE_TIME,
+			strength = rand(fallout_rad_low, fallout_rad_high)
+		)

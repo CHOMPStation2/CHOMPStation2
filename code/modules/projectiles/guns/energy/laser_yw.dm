@@ -10,7 +10,6 @@
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
 	w_class = 2
 	projectile_type = /obj/item/projectile/energy/gauss
-	origin_tech = null
 	charge_cost = 250
 	self_recharge = 1
 	charge_meter = 1
@@ -28,11 +27,9 @@
 	slot_flags = SLOT_BELT|SLOT_BACK
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	projectile_type = /obj/item/projectile/energy/gaussrifle
-	origin_tech = null
 	charge_cost =400
 	self_recharge = 1
 	charge_meter = 1
 	recoil = 1
 	fire_delay = 27 //old technology
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 ///END OF GAUSS WEAPONRY///

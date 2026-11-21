@@ -32,8 +32,9 @@
 
 	var/rest_dir = 0					//To lay down in a specific direction
 	var/list/datum/genetics/side_effect/genetic_side_effects = list()	//For any genetic side effects we currently have.
+	var/last_chew = 0
 
-/mob/living/carbon/human/Initialize(mapload, var/new_species = null)
+/mob/living/carbon/human/Initialize(mapload, new_species = null)
 	if(!dna)
 		dna = new /datum/dna(null)
 		// Species name is handled by set_species()
@@ -57,7 +58,7 @@
 	. = ..()
 
 	hide_underwear.Cut()
-	for(var/category in global_underwear.categories_by_name)
+	for(var/category in GLOB.global_underwear.categories_by_name)
 		hide_underwear[category] = FALSE
 
 	if(dna)
@@ -99,8 +100,8 @@
 	. += ""
 	. += "Intent: [a_intent]"
 	. += "Move Mode: [m_intent]"
-	if(emergency_shuttle)
-		var/eta_status = emergency_shuttle.get_status_panel_eta()
+	if(SSemergency_shuttle)
+		var/eta_status = SSemergency_shuttle.get_status_panel_eta()
 		if(eta_status)
 			. += "[eta_status]"
 
@@ -132,7 +133,7 @@
 		species.get_status_tab_items(src)
 
 
-/mob/proc/RigPanel(var/obj/item/rig/R)
+/mob/proc/RigPanel(obj/item/rig/R)
 	if(R && !R.canremove && R.installed_modules.len)
 		var/list/L = list()
 		var/cell_status = R.cell ? "[R.cell.charge]/[R.cell.maxcharge]" : "ERROR"
@@ -166,6 +167,9 @@
 		RigPanel(R)
 
 /mob/living/carbon/human/ex_act(severity)
+	if(is_incorporeal()) // Can't explode shadekin in phase
+		return
+
 	if(!blinded)
 		flash_eyes()
 
@@ -210,6 +214,7 @@
 				deaf_loop.start() // CHOMPEnable: Ear Ringing/Deafness
 			if (prob(70) && !shielded)
 				Paralyse(10)
+				Sleeping(10)
 
 		if(3.0)
 			b_loss += 30
@@ -221,6 +226,7 @@
 				deaf_loop.start() // CHOMPEnable: Ear Ringing/Deafness
 			if (prob(50) && !shielded)
 				Paralyse(10)
+				Sleeping(10)
 
 	var/update = 0
 
@@ -275,16 +281,15 @@
 
 // called when something steps onto a human
 // this handles mobs on fire - mulebot and vehicle code has been relocated to /mob/living/Crossed()
-/mob/living/carbon/human/Crossed(var/atom/movable/AM)
+/mob/living/carbon/human/Crossed(atom/movable/AM)
+	. = ..() // call parent because we moved behavior to parent
 	if(AM.is_incorporeal())
 		return
 
 	spreadFire(AM)
 
-	..() // call parent because we moved behavior to parent
-
 // Get rank from ID, ID inside PDA, PDA, ID in wallet, etc.
-/mob/living/carbon/human/proc/get_authentification_rank(var/if_no_id = "No id", var/if_no_job = "No job")
+/mob/living/carbon/human/proc/get_authentification_rank(if_no_id = "No id", if_no_job = "No job")
 	var/obj/item/pda/pda = wear_id
 	if (istype(pda))
 		if (pda.id)
@@ -300,7 +305,7 @@
 
 //gets assignment from ID or ID inside PDA or PDA itself
 //Useful when player do something with computers
-/mob/living/carbon/human/proc/get_assignment(var/if_no_id = "No id", var/if_no_job = "No job")
+/mob/living/carbon/human/proc/get_assignment(if_no_id = "No id", if_no_job = "No job")
 	var/obj/item/pda/pda = wear_id
 	if (istype(pda))
 		if (pda.id)
@@ -316,7 +321,7 @@
 
 //gets name from ID or ID inside PDA or PDA itself
 //Useful when player do something with computers
-/mob/living/carbon/human/proc/get_authentification_name(var/if_no_id = "Unknown")
+/mob/living/carbon/human/proc/get_authentification_name(if_no_id = "Unknown")
 	var/obj/item/pda/pda = wear_id
 	if (istype(pda))
 		if (pda.id)
@@ -332,9 +337,10 @@
 
 //repurposed proc. Now it combines get_id_name() and get_face_name() to determine a mob's name variable. Made into a seperate proc as it'll be useful elsewhere
 /mob/living/carbon/human/get_visible_name()
-	var/datum/component/shadekin/SK = get_shadekin_component()
-	if(SK && SK.in_phase)
-		return "Something"	// Something
+	var/list/name_data = list(null)
+	if(SEND_SIGNAL(src, COMSIG_HUMAN_GET_VISIBLE_NAME, name_data) & COMPONENT_VISIBLE_NAME_CHANGED)
+		return name_data[1]
+
 	if(wear_mask && (wear_mask.flags_inv&HIDEFACE))	//Wearing a mask which hides our face, use id-name if possible
 		return get_id_name("Unknown")
 	if(head && (head.flags_inv&HIDEFACE))
@@ -354,7 +360,7 @@
 
 //gets name from ID or PDA itself, ID inside PDA doesn't matter
 //Useful when player is being seen by other mobs
-/mob/living/carbon/human/proc/get_id_name(var/if_no_id = "Unknown")
+/mob/living/carbon/human/proc/get_id_name(if_no_id = "Unknown")
 	. = if_no_id
 	if(istype(wear_id,/obj/item/pda))
 		var/obj/item/pda/P = wear_id
@@ -372,7 +378,7 @@
 
 //Removed the horrible safety parameter. It was only being used by ninja code anyways.
 //Now checks siemens_coefficient of the affected area by default
-/mob/living/carbon/human/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 1.0, var/def_zone = null, var/stun)
+/mob/living/carbon/human/electrocute_act(shock_damage, obj/source, siemens_coeff = 1.0, def_zone = null, stun)
 
 	if(SEND_SIGNAL(src, COMSIG_BEING_ELECTROCUTED, shock_damage, source, siemens_coeff, def_zone, stun) & COMPONENT_CARBON_CANCEL_ELECTROCUTE)
 		return 0	// Cancelled by a component
@@ -380,11 +386,11 @@
 	if (!def_zone)
 		def_zone = pick(BP_L_HAND, BP_R_HAND)
 
-	if(species.siemens_coefficient == -1)
-		if(stored_shock_by_ref["\ref[src]"])
-			stored_shock_by_ref["\ref[src]"] += shock_damage
+	if(species.siemens_coefficient <= 0 && (species.flags & SHOCK_ABSORB))
+		if(GLOB.stored_shock_by_ref["\ref[src]"])
+			GLOB.stored_shock_by_ref["\ref[src]"] += shock_damage
 		else
-			stored_shock_by_ref["\ref[src]"] = shock_damage
+			GLOB.stored_shock_by_ref["\ref[src]"] = shock_damage
 		return
 
 	var/obj/item/organ/external/affected_organ = get_organ(check_zone(def_zone))
@@ -786,7 +792,7 @@
 		I.additional_flash_effects(number)
 	return number
 
-/mob/living/carbon/human/flash_eyes(var/intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = FALSE, visual = FALSE, type = /atom/movable/screen/fullscreen/flash)
+/mob/living/carbon/human/flash_eyes(intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = FALSE, visual = FALSE, type = /atom/movable/screen/fullscreen/flash)
 	if(internal_organs_by_name[O_EYES]) // Eyes are fucked, not a 'weak point'.
 		var/obj/item/organ/internal/eyes/I = internal_organs_by_name[O_EYES]
 		I.additional_flash_effects(intensity)
@@ -812,7 +818,7 @@
 
 //Used by various things that knock people out by applying blunt trauma to the head.
 //Checks that the species has a "head" (brain containing organ) and that hit_zone refers to it.
-/mob/living/carbon/human/proc/headcheck(var/target_zone, var/brain_tag = O_BRAIN)
+/mob/living/carbon/human/proc/headcheck(target_zone, brain_tag = O_BRAIN)
 
 	var/obj/item/organ/affecting = internal_organs_by_name[brain_tag]
 
@@ -830,7 +836,7 @@
 
 	return 1
 
-/mob/living/carbon/human/IsAdvancedToolUser(var/silent)
+/mob/living/carbon/human/IsAdvancedToolUser(silent)
 	if(get_feralness())
 		to_chat(src, span_warning("Your primitive mind can't grasp the concept of that thing."))
 		return 0
@@ -840,7 +846,8 @@
 		to_chat(src, span_warning("You don't have the dexterity to use that!"))
 	return 0
 
-/mob/living/carbon/human/abiotic(var/full_body = 0)
+/* Disable abiotic lockout
+/mob/living/carbon/human/abiotic(full_body = 0)
 	if(full_body && ((src.l_hand && !( src.l_hand.abstract )) || (src.r_hand && !( src.r_hand.abstract )) || (src.back || src.wear_mask || src.head || src.shoes || src.w_uniform || src.wear_suit || src.glasses || src.l_ear || src.r_ear || src.gloves)))
 		return 1
 
@@ -848,7 +855,7 @@
 		return 1
 
 	return 0
-
+*/
 
 /mob/living/carbon/human/proc/check_dna()
 	dna.check_integrity(src)
@@ -1006,7 +1013,7 @@
 
 	var/mob/target = input ("Who do you want to project your mind to?") as mob in creatures
 	if(target)
-		AddComponent(/datum/component/remote_view/mremote_mutation, focused_on = target, vconfig_path = null)
+		AddComponent(/datum/component/remote_view/mremote_mutation, focused_on = target, viewsize = null, vconfig_path = null)
 		return
 
 /mob/living/carbon/human/get_visible_gender(mob/user, force)
@@ -1075,7 +1082,7 @@
 	var/obj/item/organ/internal/lungs/L = internal_organs_by_name[O_LUNGS]
 	return L && L.is_bruised()
 
-/mob/living/carbon/human/proc/rupture_lung(var/gradual)
+/mob/living/carbon/human/proc/rupture_lung(gradual)
 	var/obj/item/organ/internal/lungs/L = internal_organs_by_name[O_LUNGS]
 
 	if(L)
@@ -1128,9 +1135,9 @@
 	return 1 //we applied blood to the item
 
 /mob/living/carbon/human/proc/get_full_print()
-	if(!dna ||!dna.uni_identity)
+	if(!dna ||!dna.unique_enzymes) // Hash of the hash of a player's name to keep consistency between respawns
 		return
-	return md5(dna.uni_identity)
+	return md5(dna.unique_enzymes)
 
 /mob/living/carbon/human/wash(clean_types)
 	. = ..()
@@ -1157,7 +1164,7 @@
 
 	update_bloodied()
 
-/mob/living/carbon/human/get_visible_implants(var/class = 0)
+/mob/living/carbon/human/get_visible_implants(class = 0)
 
 	var/list/visible_implants = list()
 	for(var/obj/item/organ/external/organ in src.organs)
@@ -1226,7 +1233,7 @@
 	else
 		to_chat(usr, span_warning("You failed to check the pulse. Try again."))
 
-/mob/living/carbon/human/proc/set_species(var/new_species)
+/mob/living/carbon/human/proc/set_species(new_species)
 
 	if(!dna)
 		if(!new_species)
@@ -1290,6 +1297,8 @@
 	species.create_organs(src)
 
 	species.apply_components(src)
+
+	species.apply_actions(src)
 
 	maxHealth = species.total_health
 	hunger_rate = species.hunger_factor
@@ -1382,7 +1391,7 @@
 		W.message = message
 		W.add_fingerprint(src)
 
-/mob/living/carbon/human/can_inject(var/mob/user, var/error_msg, var/target_zone, var/ignore_thickness = FALSE)
+/mob/living/carbon/human/can_inject(mob/user, error_msg, target_zone, ignore_thickness = FALSE)
 	. = 1
 
 	if(!target_zone)
@@ -1418,7 +1427,7 @@
 			fail_msg = "There is no exposed flesh or thin material [target_zone == BP_HEAD ? "on their head" : "on their body"] to inject into."
 		to_chat(user, span_warning("[fail_msg]"))
 
-/mob/living/carbon/human/print_flavor_text(var/shrink = 1)
+/mob/living/carbon/human/print_flavor_text(shrink = 1)
 	var/list/equipment = list(src.head,src.wear_mask,src.glasses,src.w_uniform,src.wear_suit,src.gloves,src.shoes)
 	var/head_exposed = 1
 	var/face_exposed = 1
@@ -1472,22 +1481,12 @@
 			return 1
 	return 0
 
-/mob/living/carbon/human/slip(var/slipped_on, stun_duration=8)
-	var/list/equipment = list(src.w_uniform,src.wear_suit,src.shoes)
-	var/footcoverage_check = FALSE
-	for(var/obj/item/clothing/C in equipment)
-		if(C.body_parts_covered & FEET)
-			footcoverage_check = TRUE
-			break
-	if(lying)
-		playsound(src, 'sound/misc/slip.ogg', 25, 1, -1)
-		drop_both_hands()
-		return FALSE
-	if((species.flags & NO_SLIP && !footcoverage_check) || (shoes && (shoes.item_flags & NOSLIP))) //Footwear negates a species' natural traction.
-		return FALSE
-	if(..(slipped_on,stun_duration))
-		drop_both_hands()
-		return TRUE
+/mob/living/carbon/human/has_lungs()
+	if(internal_organs_by_name[O_LUNGS])
+		var/obj/item/organ/lungs = internal_organs_by_name[O_LUNGS]
+		if(lungs && istype(lungs) && !(lungs.status & ORGAN_CUT_AWAY))
+			return TRUE
+	return FALSE
 
 /mob/living/carbon/human/proc/relocate()
 	set category = "Object"
@@ -1541,7 +1540,7 @@
 		to_chat(S, span_danger("[U] pops your [current_limb.joint] back in!"))
 	current_limb.relocate()
 
-/mob/living/carbon/human/drop_from_inventory(var/obj/item/W, var/atom/target = null)
+/mob/living/carbon/human/drop_from_inventory(obj/item/W, atom/target = null)
 	if(W in organs)
 		return FALSE
 	if(isnull(target) && isdisposalpacket(src.loc))
@@ -1556,14 +1555,14 @@
 	return 0
 
 //Puts the item into our active hand if possible. returns 1 on success.
-/mob/living/carbon/human/put_in_active_hand(var/obj/item/W)
+/mob/living/carbon/human/put_in_active_hand(obj/item/W)
 	return (hand ? put_in_l_hand(W) : put_in_r_hand(W))
 
 //Puts the item into our inactive hand if possible. returns 1 on success.
-/mob/living/carbon/human/put_in_inactive_hand(var/obj/item/W)
+/mob/living/carbon/human/put_in_inactive_hand(obj/item/W)
 	return (hand ? put_in_r_hand(W) : put_in_l_hand(W))
 
-/mob/living/carbon/human/put_in_hands(var/obj/item/W)
+/mob/living/carbon/human/put_in_hands(obj/item/W)
 	if(!W)
 		return 0
 	if(put_in_active_hand(W))
@@ -1577,7 +1576,7 @@
 	else
 		return ..()
 
-/mob/living/carbon/human/put_in_l_hand(var/obj/item/W)
+/mob/living/carbon/human/put_in_l_hand(obj/item/W)
 	if(!..() || l_hand)
 		return 0
 	W.forceMove(src)
@@ -1587,7 +1586,7 @@
 	update_inv_l_hand()
 	return 1
 
-/mob/living/carbon/human/put_in_r_hand(var/obj/item/W)
+/mob/living/carbon/human/put_in_r_hand(obj/item/W)
 	if(!..() || r_hand)
 		return 0
 	W.forceMove(src)
@@ -1613,7 +1612,7 @@
 	set category = "Object"
 
 	if(stat) return
-	var/datum/category_group/underwear/UWC = tgui_input_list(usr, "Choose underwear:", "Show/hide underwear", global_underwear.categories)
+	var/datum/category_group/underwear/UWC = tgui_input_list(usr, "Choose underwear:", "Show/hide underwear", GLOB.global_underwear.categories)
 	if(!UWC) return
 	var/datum/category_item/underwear/UWI = all_underwear[UWC.name]
 	if(!UWI || UWI.name == "None")
@@ -1639,7 +1638,7 @@
 	to_chat(src, span_notice("You are now [pulling ? "pulling your punches" : "not pulling your punches"]."))
 	return
 
-/mob/living/carbon/human/should_have_organ(var/organ_check)
+/mob/living/carbon/human/should_have_organ(organ_check)
 
 	var/obj/item/organ/external/affecting
 	if(organ_check in list(O_HEART, O_LUNGS))
@@ -1668,7 +1667,7 @@
 				return name
 	return FALSE
 
-/mob/living/carbon/human/can_feel_pain(var/obj/item/organ/check_organ)
+/mob/living/carbon/human/can_feel_pain(obj/item/organ/check_organ)
 	if(isSynthetic())
 		return 0
 	if(!digest_pain)
@@ -1799,7 +1798,7 @@
 
 
 // Drag damage is handled in a parent
-/mob/living/carbon/human/dragged(var/mob/living/dragger, var/oldloc, trigged_bleeding)
+/mob/living/carbon/human/dragged(mob/living/dragger, oldloc, trigged_bleeding)
 	if(..())
 		if(species?.flags & NO_BLOOD)
 			return
@@ -1991,7 +1990,7 @@
 			to_chat(src, "Mob doesn't exist anymore")
 			return
 
-		usr.client.cmd_admin_alienize(H)
+		SSadmin_verbs.dynamic_invoke_verb(usr.client, /datum/admin_verb/cmd_admin_alienize, H)
 
 	if(href_list[VK_HK_TURN_SKELETON])
 		if(!check_rights(R_FUN))
@@ -2038,7 +2037,10 @@
 			to_chat(src, "Mob doesn't exist anymore")
 			return
 
-		usr.client.cmd_admin_robotize(H)
+		SSadmin_verbs.dynamic_invoke_verb(usr.client, /datum/admin_verb/cmd_admin_robotize, H)
+
+/mob/living/carbon/human/CanObtainCentcommMessage()
+	return istype(l_ear, /obj/item/radio/headset) || istype(r_ear, /obj/item/radio/headset)
 
 	/*
 	if(href_list[VV_HK_PURRBATION])

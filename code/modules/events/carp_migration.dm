@@ -15,7 +15,7 @@
 	carp_cap = 2 + 3 ** severity // No more than this many at once regardless of waves. (5, 11, 29)
 
 /datum/event/carp_migration/start()
-	affecting_z -= global.using_map.sealed_levels // Space levels only please!
+	affecting_z -= using_map.sealed_levels // Space levels only please!
 	..()
 
 /datum/event/carp_migration/announce()
@@ -24,7 +24,7 @@
 		announcement = "Massive migration of unknown biological entities has been detected near [location_name()], please stand-by."
 	else
 		announcement = "Unknown biological [spawned_carp.len == 1 ? "entity has" : "entities have"] been detected near [location_name()], please stand-by."
-	command_announcement.Announce(announcement, "Lifesign Alert")
+	GLOB.command_announcement.Announce(announcement, "Lifesign Alert", new_sound = ANNOUNCER_MSG_UNIDENTIFIED_LIFESIGNS)
 
 /datum/event/carp_migration/tick()
 	if(activeFor % 5 != 0)
@@ -32,7 +32,7 @@
 	if(count_spawned_carps() < carp_cap)
 		spawn_fish(rand(3, 3 + severity * 2) - 1, 1, severity + 2)
 
-/datum/event/carp_migration/proc/spawn_fish(var/num_groups, var/group_size_min, var/group_size_max, var/dir)
+/datum/event/carp_migration/proc/spawn_fish(num_groups, group_size_min, group_size_max, dir)
 	if(isnull(dir))
 		dir = (victim && prob(80)) ? victim.fore_dir : pick(GLOB.cardinal)
 
@@ -73,11 +73,11 @@
 		i++
 
 // Spawn a single carp at given location.
-/datum/event/carp_migration/proc/spawn_one_carp(var/loc)
-	var/mob/living/simple_mob/animal/M = new /mob/living/simple_mob/animal/space/carp/event(loc)
-	RegisterSignal(M, COMSIG_OBSERVER_DESTROYED, PROC_REF(on_carp_destruction))
-	spawned_carp.Add(M)
-	return M
+/datum/event/carp_migration/proc/spawn_one_carp(loc)
+	var/mob/living/simple_mob/animal/carp_to_spawn = new /mob/living/simple_mob/animal/space/carp/event(loc)
+	RegisterSignal(carp_to_spawn, COMSIG_OBSERVER_DESTROYED, PROC_REF(on_carp_destruction))
+	spawned_carp.Add(carp_to_spawn)
+	return carp_to_spawn
 
 // Counts living carp spawned by this event.
 /datum/event/carp_migration/proc/count_spawned_carps()
@@ -87,10 +87,10 @@
 			. += 1
 
 // If carp is bomphed, remove it from the list.
-/datum/event/carp_migration/proc/on_carp_destruction(var/mob/M)
+/datum/event/carp_migration/proc/on_carp_destruction(datum/source, mob/carp_to_remove)
 	SIGNAL_HANDLER
-	spawned_carp -= M
-	UnregisterSignal(M, COMSIG_OBSERVER_DESTROYED)
+	spawned_carp -= carp_to_remove
+	UnregisterSignal(carp_to_remove, COMSIG_OBSERVER_DESTROYED)
 
 /datum/event/carp_migration/end()
 	. = ..()

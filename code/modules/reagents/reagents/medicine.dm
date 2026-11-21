@@ -9,11 +9,12 @@
 	color = "#00BFFF"
 	overdose = REAGENTS_OVERDOSE * 2
 	metabolism = REM * 0.2
-	scannable = 1
+	dermal_absorption = 0.2
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/inaprovaline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		M.add_chemical_effect(CE_STABLE, 15)
 		M.add_chemical_effect(CE_PAINKILLER, 10 * M.species.chem_strength_pain)
@@ -28,18 +29,18 @@
 	color = "#00BFFF"
 	overdose = REAGENTS_OVERDOSE * 2
 	metabolism = REM * 0.2
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	touch_met = REM * 0.3
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/inaprovaline/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/topical/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		..()
 		M.adjustToxLoss(2 * removed)
 
-/datum/reagent/inaprovaline/topical/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/topical/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		M.add_chemical_effect(CE_STABLE, 20)
 		M.add_chemical_effect(CE_PAINKILLER, 12 * M.species.chem_strength_pain)
@@ -54,18 +55,20 @@
 	color = "#BF0000"
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0.25
-	scannable = 1
+	dermal_absorption = 0.2
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_BICARD
 
-/datum/reagent/bicaridine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/bicaridine/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(4 * removed * chem_effective, 0)
 
-/datum/reagent/bicaridine/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/bicaridine/overdose(mob/living/carbon/M, alien, removed)
 	..()
 	var/wound_heal = 2.5 * removed
 	M.eye_blurry = min(M.eye_blurry + wound_heal, 250)
@@ -91,13 +94,14 @@
 	reagent_state = LIQUID
 	color = "#BF0000"
 	overdose = REAGENTS_OVERDOSE * 0.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	touch_met = REM * 0.75
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_BICARD
 
-/datum/reagent/bicaridine/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/bicaridine/topical/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -105,7 +109,7 @@
 		..(M, alien, removed * chem_effective)
 		M.adjustToxLoss(2 * removed)
 
-/datum/reagent/bicaridine/topical/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/bicaridine/topical/affect_touch(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -118,18 +122,19 @@
 	description = "Calcium carbonate is a calcium salt commonly used as an antacid."
 	taste_description = "chalk"
 	reagent_state = SOLID
+	dermal_absorption = 0 //Solids don't penetrate.
 	color = "#eae6e3"
 	overdose = REAGENTS_OVERDOSE * 0.8
 	metabolism = REM * 0.4
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/calciumcarbonate/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) // Why would you inject this.
+/datum/reagent/calciumcarbonate/affect_blood(mob/living/carbon/M, alien, removed) // Why would you inject this.
 	if(alien != IS_DIONA)
 		M.adjustToxLoss(3 * removed)
 
-/datum/reagent/calciumcarbonate/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/calciumcarbonate/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		M.add_chemical_effect(CE_ANTACID, 3)
 
@@ -139,13 +144,15 @@
 	description = REAGENT_KELOTANE + " is a drug used to treat burns."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#FFA800"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_KELOTANE
 
-/datum/reagent/kelotane/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/kelotane/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.5
@@ -161,13 +168,30 @@
 	taste_description = "bitterness"
 	taste_mult = 1.5
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#FF8000"
 	overdose = REAGENTS_OVERDOSE * 0.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_KELOTANE
 
-/datum/reagent/dermaline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/dermaline/topical/touch_obj(obj/O)
+	..()
+	if(istype(O, /obj/item/stack/medical) && round(volume) >= 1)
+		if(istype(O, /obj/item/stack/medical/bruise_pack)) // Standard gauze into burnpacks
+			return
+		var/obj/item/stack/medical/C = O
+
+		var/packname = C.name
+		var/to_produce = min(C.get_amount(), round(volume))
+		var/obj/item/stack/medical/M = C.upgrade_stack(to_produce, /obj/item/stack/medical/advanced/ointment)
+
+		if(M && M.get_amount())
+			holder.my_atom.visible_message(span_infoplain(span_bold("\The [packname]") + " bubbles."))
+			remove_self(to_produce)
+
+/datum/reagent/dermaline/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -183,13 +207,14 @@
 	reagent_state = LIQUID
 	color = "#FF8000"
 	overdose = REAGENTS_OVERDOSE * 0.4
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	touch_met = REM * 0.75
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_KELOTANE
 
-/datum/reagent/dermaline/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/dermaline/topical/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -197,7 +222,7 @@
 		..(M, alien, removed * chem_effective)
 		M.adjustToxLoss(2 * removed)
 
-/datum/reagent/dermaline/topical/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/dermaline/topical/affect_touch(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -210,12 +235,14 @@
 	description = REAGENT_ANTITOXIN + " is a broad-spectrum antitoxin."
 	taste_description = "a roll of gauze"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#00A000"
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_DYLO
 
-/datum/reagent/dylovene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/dylovene/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.66
@@ -233,14 +260,15 @@
 	id = REAGENT_ID_CARTHATOLINE
 	description = REAGENT_CARTHATOLINE + " is strong evacuant used to treat severe poisoning."
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#225722"
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 0 // Not used, but it shouldn't deal toxin damage anyways. Carth heals toxins!
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/carthatoline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/carthatoline/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(M.getToxLoss() && prob(10))
@@ -259,7 +287,7 @@
 		if(alien == IS_SLIME)
 			H.druggy = max(M.druggy, 5)
 
-/datum/reagent/carthatoline/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/carthatoline/overdose(mob/living/carbon/M, alien, removed)
 	M.adjustHalLoss(2)
 	var/mob/living/carbon/human/H = M
 	var/obj/item/organ/internal/stomach/st = H.internal_organs_by_name[O_STOMACH]
@@ -271,14 +299,15 @@
 	description = REAGENT_DEXALIN + " is used in the treatment of oxygen deprivation."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#0080FF"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = REM * 0.25
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/dexalin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/dexalin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_VOX)
 		M.adjustToxLoss(removed * 24)
 	else if(alien == IS_SLIME && dose >= 15)
@@ -298,14 +327,15 @@
 	description = REAGENT_DEXALINP + " is used in the treatment of oxygen deprivation. It is highly effective."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#0040FF"
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.25
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/dexalinp/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/dexalinp/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_VOX)
 		M.adjustToxLoss(removed * 9)
 	else if(alien == IS_SLIME && dose >= 10)
@@ -325,18 +355,20 @@
 	description = REAGENT_TRICORDRAZINE + " is a highly potent stimulant, originally derived from cordrazine. Can be used to treat a wide range of injuries."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#8040FF"
-	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 4 //YW EDIT - TRICORD FUCKING KILLS YOU
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_TRICORD
 
-/datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien) //YW EDIT START
+/datum/reagent/tricordrazine/overdose(mob/living/carbon/M, alien) //YW EDIT START
 	..()
 	M.druggy = max(M.druggy, 5)
 	M.Confuse(5) //YW EDIT END
 
-/datum/reagent/tricordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/tricordrazine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		var/chem_effective = 1 * M.species.chem_strength_heal
 		if(alien == IS_SLIME)
@@ -345,7 +377,7 @@
 		M.heal_organ_damage(1.5 * removed, 1.5 * removed * chem_effective)
 		M.adjustToxLoss(-1.5 * removed * chem_effective)
 
-/datum/reagent/tricordrazine/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/tricordrazine/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		affect_blood(M, alien, removed * 0.4)
 
@@ -356,12 +388,13 @@
 	taste_description = "bitterness"
 	reagent_state = SOLID
 	color = "#B060FF"
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_TRICORD
 
-/datum/reagent/tricorlidaze/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/tricorlidaze/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		var/chem_effective = 1 * M.species.chem_strength_heal
 		if(alien == IS_SLIME)
@@ -370,18 +403,22 @@
 		M.heal_organ_damage(1 * removed, 1 * removed * chem_effective)
 		M.adjustToxLoss(-2 * removed * chem_effective)
 
-/datum/reagent/tricorlidaze/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/tricorlidaze/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		M.adjustToxLoss(3 * removed)
 
-/datum/reagent/tricorlidaze/touch_obj(var/obj/O)
+/datum/reagent/tricorlidaze/touch_obj(obj/O)
 	..()
 	if(istype(O, /obj/item/stack/medical/bruise_pack) && round(volume) >= 5)
 		var/obj/item/stack/medical/bruise_pack/C = O
 		var/packname = C.name
 		var/to_produce = min(C.get_amount(), round(volume / 5))
 
-		var/obj/item/stack/medical/M = C.upgrade_stack(to_produce)
+		var/obj/item/stack/medical/M
+		if(istype(C, /obj/item/stack/medical/crude_pack)) // crude bandage into gauze
+			M = C.upgrade_stack(to_produce, /obj/item/stack/medical/bruise_pack)
+		else if(istype(C, /obj/item/stack/medical/bruise_pack)) // bandage into brutepack
+			M = C.upgrade_stack(to_produce, /obj/item/stack/medical/advanced/bruise_pack)
 
 		if(M && M.get_amount())
 			holder.my_atom.visible_message(span_infoplain(span_bold("\The [packname]") + " bubbles."))
@@ -393,14 +430,15 @@
 	description = "A chemical mixture with almost magical healing powers. Its main limitation is that the targets body temperature must be under 170K for it to metabolise correctly."
 	taste_description = "overripe bananas"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#8080FF"
 	metabolism = REM * 0.5
 	mrate_static = TRUE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
-/datum/reagent/cryoxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/cryoxadone/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.bodytemperature < 170)
 		var/chem_effective = 1 * M.species.chem_strength_heal
 		if(alien == IS_SLIME)
@@ -420,14 +458,15 @@
 	description = "A liquid compound similar to that used in the cloning process. Can be used to 'finish' the cloning process when used in conjunction with a cryo tube."
 	taste_description = "rotten bananas"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#80BFFF"
 	metabolism = REM * 0.5
 	mrate_static = TRUE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
-/datum/reagent/clonexadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/clonexadone/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.bodytemperature < 170)
 		var/chem_effective = 1 * M.species.chem_strength_heal
 		if(alien == IS_SLIME)
@@ -448,18 +487,19 @@
 	description = "A liquid compound based upon those used in cloning. Utilized in cases of toxic shock. May cause liver damage."
 	taste_description = "meat"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#6b4de3"
 	metabolism = REM * 0.5
 	mrate_static = TRUE
 	affects_dead = FALSE //Clarifying this here since the original intent was this ONLY works on people that have the bloodpump_corpse modifier.
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
-/datum/reagent/mortiferin/on_mob_life(var/mob/living/carbon/M, var/alien, var/datum/reagents/metabolism/location)
+/datum/reagent/mortiferin/on_mob_life(mob/living/carbon/M, alien, datum/reagents/metabolism/location)
 	. = ..(M, alien, location)
 
-/datum/reagent/mortiferin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/mortiferin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.bodytemperature < (T0C - 10) || (M.stat == DEAD))
 		var/chem_effective = 1 * M.species.chem_strength_heal
 		if(alien == IS_SLIME)
@@ -489,15 +529,16 @@
 	description = "A liquid compound based upon that which is used in the cloning process. Utilized primarily in severe cases of toxic shock."
 	taste_description = "meat"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#94B21C"
 	metabolism = REM * 0.5
 	mrate_static = TRUE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	affects_dead = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
-/datum/reagent/necroxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/necroxadone/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(M.bodytemperature < 170 || (M.stat == DEAD && M.has_modifier_of_type(/datum/modifier/bloodpump_corpse)))
 		if(alien == IS_SLIME)
@@ -526,22 +567,23 @@
 	description = "Most probably know this as Tylenol, but this chemical is a mild, simple painkiller."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE * 2
 	overdose_mod = 0.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = 0.02
 	mrate_static = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/paracetamol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/paracetamol/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_pain
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	M.add_chemical_effect(CE_PAINKILLER, 25 * chem_effective)
 
-/datum/reagent/paracetamol/overdose(var/mob/living/carbon/M, var/alien)
+/datum/reagent/paracetamol/overdose(mob/living/carbon/M, alien)
 	..()
 	if(alien == IS_SLIME)
 		M.add_chemical_effect(CE_SLOWDOWN, 1)
@@ -553,23 +595,24 @@
 	description = "A simple, yet effective painkiller."
 	taste_description = "sourness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#CB68FC"
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = 0.02
 	mrate_static = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/tramadol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/tramadol/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_pain
 	if(alien == IS_SLIME)
 		chem_effective = 0.8
 		M.add_chemical_effect(CE_SLOWDOWN, 1)
 	M.add_chemical_effect(CE_PAINKILLER, 80 * chem_effective)
 
-/datum/reagent/tramadol/overdose(var/mob/living/carbon/M, var/alien)
+/datum/reagent/tramadol/overdose(mob/living/carbon/M, alien)
 	..()
 	M.hallucination = max(M.hallucination, 2)
 
@@ -579,25 +622,27 @@
 	description = "An effective and very addictive painkiller."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#800080"
 	overdose = 20
 	overdose_mod = 0.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = 0.02
 	mrate_static = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/oxycodone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/oxycodone/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_pain
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 		M.stuttering = min(50, max(0, M.stuttering + 5)) //If you can't feel yourself, and your main mode of speech is resonation, there's a problem.
 	M.add_chemical_effect(CE_PAINKILLER, 200 * chem_effective)
 	M.add_chemical_effect(CE_SLOWDOWN, 1)
-	M.eye_blurry = min(M.eye_blurry + 10, 250 * chem_effective)
+	M.add_chemical_effect(CE_NARCOTICS, 1)
+	M.eye_blurry = min(M.eye_blurry + 10, 100 * chem_effective)
 
-/datum/reagent/oxycodone/overdose(var/mob/living/carbon/M, var/alien)
+/datum/reagent/oxycodone/overdose(mob/living/carbon/M, alien)
 	..()
 	M.druggy = max(M.druggy, 10)
 	M.hallucination = max(M.hallucination, 3)
@@ -610,14 +655,16 @@
 	description = REAGENT_SYNAPTIZINE + " is used to treat various diseases."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#99CCFF"
 	metabolism = REM * 0.05
+	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/synaptizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/synaptizine/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_DIONA)
 		return
@@ -642,13 +689,15 @@
 	description = REAGENT_HYPERZINE + " is a highly effective, long lasting, muscle stimulant."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#FF3300"
 	overdose = REAGENTS_OVERDOSE * 0.5
+	scannable = SCANNABLE_ADVANCED
 	overdose_mod = 0.25
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_COMSTIM
 
-/datum/reagent/hyperzine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/hyperzine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_TAJARA)
 		removed *= 1.25
 	if(alien == IS_SLIME)
@@ -660,7 +709,7 @@
 		M.emote(pick("twitch", "blink_r", "shiver"))
 	M.add_chemical_effect(CE_SPEEDBOOST, 1)
 
-/datum/reagent/hyperzine/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/hyperzine/overdose(mob/living/carbon/M, alien, removed)
 	..()
 	if(prob(5)) // 1 in 20
 		var/mob/living/carbon/human/H = M
@@ -674,14 +723,15 @@
 	description = REAGENT_ALKYSINE + " is a drug used to lessen the damage to neurological tissue after a catastrophic injury. Can heal brain tissue."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#FFFF66"
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/alkysine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/alkysine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -700,13 +750,14 @@
 	description = "Heals eye damage"
 	taste_description = "dull toxin"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/imidazoline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/imidazoline/affect_blood(mob/living/carbon/M, alien, removed)
 	M.eye_blurry = max(M.eye_blurry - 5, 0)
 	M.AdjustBlinded(-5)
 	if(ishuman(M))
@@ -726,14 +777,16 @@
 	description = "Used to encourage recovery of internal organs and nervous systems. Medicate cautiously."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#561EC3"
 	overdose = 10
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_PERIDAX
 
-/datum/reagent/peridaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/peridaxon/affect_blood(mob/living/carbon/M, alien, removed)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		for(var/obj/item/organ/I in H.internal_organs)
@@ -743,14 +796,14 @@
 				I.damage = max(I.damage - removed, 0)
 				H.Confuse(5)
 			if(I.damage <= 5 && I.organ_tag == O_EYES)
-				H.eye_blurry = min(M.eye_blurry + 10, 250) //Eyes need to reset, or something
+				H.eye_blurry = min(M.eye_blurry + 10, 100) //Eyes need to reset, or something
 				H.sdisabilities &= ~BLIND
 		if(alien == IS_SLIME)
 			H.add_chemical_effect(CE_PAINKILLER, 20 * M.species.chem_strength_pain)
 			if(prob(33))
 				H.Confuse(10)
 
-/datum/reagent/peridaxon/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/peridaxon/overdose(mob/living/carbon/M, alien, removed)
 	..()
 	M.adjustHalLoss(5)
 	M.hallucination = max(M.hallucination, 10)
@@ -760,15 +813,16 @@
 	id = REAGENT_ID_OSTEODAXON
 	description = "An experimental drug used to heal bone fractures."
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#C9BCE3"
 	metabolism = REM * 0.5
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/osteodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/osteodaxon/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.heal_organ_damage(3 * removed, 0)	//Gives the bones a chance to set properly even without other meds
@@ -794,19 +848,20 @@
 	id = REAGENT_ID_MYELAMINE
 	description = "Used to rapidly clot hemorrhages by increasing the effectiveness of platelets. An ideal dosage of 10 units will fully heal any internal hemorrhages."
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#4246C7"
 	metabolism = REM * 0.75
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	var/repair_strength = 6
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/myelamine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/myelamine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
-	M.eye_blurry = min(M.eye_blurry + (repair_strength * removed), 250)
+	M.eye_blurry = min(M.eye_blurry + (repair_strength * removed), 100)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		var/wound_heal = removed * repair_strength
@@ -826,7 +881,7 @@
 					W.damage = 0
 					O.wounds -= W
 
-/datum/reagent/myelamine/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/myelamine/overdose(mob/living/carbon/M, alien, removed)
 	//Heals slightly faster at the cost of high toxins. Honestly you should never do this, but whatever.
 	..()
 	if(ishuman(M))
@@ -844,15 +899,16 @@
 	description = "Used to repair the tissue of the lungs and similar organs."
 	taste_description = "metallic"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#4444FF"
 	metabolism = REM * 1.5
 	overdose = 10
 	overdose_mod = 1.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/respirodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/respirodaxon/affect_blood(mob/living/carbon/M, alien, removed)
 	var/repair_strength = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
@@ -878,15 +934,16 @@
 	description = "Used to repair the tissues of the digestive system."
 	taste_description = "chalk"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#8B4513"
 	metabolism = REM * 1.5
 	overdose = 10
 	overdose_mod = 1.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/gastirodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/gastirodaxon/affect_blood(mob/living/carbon/M, alien, removed)
 	var/repair_strength = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
@@ -912,15 +969,16 @@
 	description = "Used to repair the common tissues involved in filtration."
 	taste_description = "glue"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#D2691E"
 	metabolism = REM * 1.5
 	overdose = 10
 	overdose_mod = 1.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/hepanephrodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/hepanephrodaxon/affect_blood(mob/living/carbon/M, alien, removed)
 	var/repair_strength = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		repair_strength = 0.4
@@ -948,15 +1006,16 @@
 	description = "Used to repair the specialized tissues involved in the circulatory system."
 	taste_description = "rust"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#FF4444"
 	metabolism = REM * 1.5
 	overdose = 10
 	overdose_mod = 1.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/cordradaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/cordradaxon/affect_blood(mob/living/carbon/M, alien, removed)
 	var/repair_strength = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
@@ -979,15 +1038,16 @@
 	description = "An experimental powder believed to have the ability to prevent any organ rejection."
 	taste_description = "flesh"
 	reagent_state = SOLID
+	dermal_absorption = 0
 	color = "#7B4D4F"
 	overdose = 20
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = REM * 0.06
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/immunosuprizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/immunosuprizine/affect_blood(mob/living/carbon/M, alien, removed)
 	var/strength_mod = 1 // * M.species.chem_strength_heal //Just removing the chem strength adjustment. It'd require division, which is best avoided.
 
 	if(alien == IS_DIONA)	// It's a tree.
@@ -1036,15 +1096,16 @@
 	description = "A strange, oily powder used by Malish-Katish to prevent organ rejection."
 	taste_description = "mordant"
 	reagent_state = SOLID
+	dermal_absorption = 0
 	color = "#84B2B0"
 	metabolism = REM * 0.06
 	overdose = 20
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/skrellimmuno/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/skrellimmuno/affect_blood(mob/living/carbon/M, alien, removed)
 	var/strength_mod = 0.5 * M.species.chem_strength_heal
 
 	if(ishuman(M))
@@ -1081,12 +1142,14 @@
 	description = REAGENT_RYETALYN + " can cure DNA, Cloning, and genetic damage via a catalytic process."
 	taste_description = "acid"
 	reagent_state = SOLID
+	dermal_absorption = 0
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#004000"
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
-/datum/reagent/ryetalyn/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ryetalyn/affect_blood(mob/living/carbon/M, alien, removed)
 	//Ryetalyn is for genetics damage curing not resetting mutations, breaks traitgenes
 	if(alien == IS_DIONA)
 		return
@@ -1103,7 +1166,7 @@
 	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE * 0.5
 
-/datum/reagent/hyperzine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/hyperzine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(prob(5))
@@ -1116,12 +1179,14 @@
 	description = "A powerful oxidizer that reacts with ethanol."
 	taste_description = "bitterness"
 	reagent_state = SOLID
+	dermal_absorption = 0
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#605048"
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_RECDRUG
 
-/datum/reagent/ethylredoxrazine/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethylredoxrazine/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.clear_dizzy()
@@ -1133,7 +1198,7 @@
 			if(istype(R, /datum/reagent/ethanol))
 				R.remove_self(removed * 30)
 
-/datum/reagent/ethylredoxrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethylredoxrazine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.clear_dizzy()
@@ -1151,14 +1216,15 @@
 	description = REAGENT_HYRONALIN + " is a medicinal drug used to counter the effect of radiation poisoning."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#408000"
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/hyronalin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/hyronalin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.radiation = max(M.radiation - 30 * removed * M.species.chem_strength_heal, 0)
@@ -1170,15 +1236,16 @@
 	description = REAGENT_ARITHRAZINE + " is an unstable medication used for the most extreme cases of radiation poisoning."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#008000"
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 1.25
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
-/datum/reagent/arithrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/arithrazine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.radiation = max(M.radiation - 70 * removed * M.species.chem_strength_heal, 0)
@@ -1193,16 +1260,18 @@
 	description = "An all-purpose antiviral agent."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#C1C1C1"
 	metabolism = REM * 0.25
 	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	data = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_SPACACIL
 
-/datum/reagent/spaceacillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/spaceacillin/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien == IS_SLIME)
 		if(volume <= 0.1 && data != -1)
@@ -1215,7 +1284,7 @@
 				to_chat(M, span_warning("Your senses feel unfocused, and divided."))
 	M.add_chemical_effect(CE_ANTIBIOTIC, dose >= overdose ? ANTIBIO_OD : ANTIBIO_NORM)
 
-/datum/reagent/spaceacillin/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/spaceacillin/affect_touch(mob/living/carbon/M, alien, removed)
 	affect_blood(M, alien, removed * 0.8) // Not 100% as effective as injections, though still useful.
 
 /datum/reagent/corophizine
@@ -1224,16 +1293,17 @@
 	description = "A wide-spectrum antibiotic drug. Powerful and uncomfortable in equal doses."
 	taste_description = "burnt toast"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#FFB0B0"
 	mrate_static = TRUE
 	overdose = 10
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	data = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/corophizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/corophizine/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	M.add_chemical_effect(CE_ANTIBIOTIC, ANTIBIO_SUPER)
 
@@ -1294,24 +1364,25 @@
 	description = "An all-purpose painkilling antibiotic gel."
 	taste_description = "oil"
 	reagent_state = SOLID
+	dermal_absorption = 0
 	color = "#C1C1C8"
 	metabolism = REM * 0.4
 	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	data = 0
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/spacomycaze/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/spacomycaze/affect_blood(mob/living/carbon/M, alien, removed)
 	M.add_chemical_effect(CE_PAINKILLER, 10 * M.species.chem_strength_pain)
 	M.adjustToxLoss(3 * removed)
 
-/datum/reagent/spacomycaze/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/spacomycaze/affect_ingest(mob/living/carbon/M, alien, removed)
 	affect_blood(M, alien, removed * 0.8)
 
-/datum/reagent/spacomycaze/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/spacomycaze/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)
 		if(volume <= 0.1 && data != -1)
 			data = -1
@@ -1325,14 +1396,18 @@
 	M.add_chemical_effect(CE_ANTIBIOTIC, dose >= overdose ? ANTIBIO_OD : ANTIBIO_NORM)
 	M.add_chemical_effect(CE_PAINKILLER, 20 * M.species.chem_strength_pain) // 5 less than paracetamol.
 
-/datum/reagent/spacomycaze/touch_obj(var/obj/O)
+/datum/reagent/spacomycaze/touch_obj(obj/O)
 	..()
 	if(istype(O, /obj/item/stack/medical) && round(volume) >= 1)
 		var/obj/item/stack/medical/C = O
 		var/packname = C.name
 		var/to_produce = min(C.get_amount(), round(volume))
 
-		var/obj/item/stack/medical/M = C.upgrade_stack(to_produce)
+		var/obj/item/stack/medical/M
+		if(istype(C, /obj/item/stack/medical/crude_pack)) // crude bandage into gauze
+			M = C.upgrade_stack(to_produce, /obj/item/stack/medical/bruise_pack)
+		else if(istype(C, /obj/item/stack/medical/bruise_pack)) // bandage into brutepack
+			M = C.upgrade_stack(to_produce, /obj/item/stack/medical/advanced/bruise_pack)
 
 		if(M && M.get_amount())
 			holder.my_atom.visible_message(span_infoplain(span_bold("\The [packname]") + " bubbles."))
@@ -1344,18 +1419,20 @@
 	description = "Sterilizes wounds in preparation for surgery and thoroughly removes blood. Can additionally be used to prepare a surface for surgery to lower risk of infection."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0 //Custom touch handling.
 	color = "#C8A5DC"
+	scannable = SCANNABLE_BENEFICIAL
 	touch_met = 5
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_CLEAN
 
-/datum/reagent/sterilizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/sterilizine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)
 		M.adjustFireLoss(removed)
 		M.adjustToxLoss(2 * removed)
 	return
 
-/datum/reagent/sterilizine/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/sterilizine/affect_touch(mob/living/carbon/M, alien, removed)
 	M.germ_level -= min(removed*20, M.germ_level)
 	for(var/obj/item/I in M.contents)
 		I.was_bloodied = null
@@ -1364,12 +1441,12 @@
 		M.adjustFireLoss(removed)
 		M.adjustToxLoss(2 * removed)
 
-/datum/reagent/sterilizine/touch_obj(var/obj/O)
+/datum/reagent/sterilizine/touch_obj(obj/O)
 	..()
 	O.germ_level -= min(volume*200, O.germ_level)
 	O.was_bloodied = null
 
-/datum/reagent/sterilizine/touch_turf(var/turf/T)
+/datum/reagent/sterilizine/touch_turf(turf/T)
 	..()
 	T.germ_level -= min(volume*200, T.germ_level)
 	for(var/obj/item/I in T.contents)
@@ -1381,7 +1458,7 @@
 		var/turf/simulated/S = T
 		S.dirt = -50
 
-/datum/reagent/sterilizine/touch_mob(var/mob/living/L, var/amount)
+/datum/reagent/sterilizine/touch_mob(mob/living/L, amount)
 	..()
 	if(istype(L))
 		if(istype(L, /mob/living/simple_mob/slime))
@@ -1396,14 +1473,15 @@
 	description = "Leporazine can be use to stabilize an individuals body temperature."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 	coolant_modifier = 0.5 // Okay substitute coolant
 
-/datum/reagent/leporazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/leporazine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	var/temp = 310
@@ -1421,14 +1499,15 @@
 	description = "A powder with almost magical properties, this substance can effectively treat genetic damage in humanoids, though excessive consumption has side effects."
 	taste_description = "bitterness"
 	reagent_state = SOLID
+	dermal_absorption = 0 //solid powder
 	color = "#669900"
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 2
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
-/datum/reagent/rezadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/rezadone/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	var/strength_mod = 1 * M.species.chem_strength_heal
@@ -1474,13 +1553,13 @@
 	reagent_state = SOLID
 	color = "#555555"
 	metabolism = REM * 4 // Nanomachines gotta go fast.
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	affects_robots = TRUE
 	wiki_flag = WIKI_SPOILER
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/healing_nanites/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/healing_nanites/affect_blood(mob/living/carbon/M, alien, removed)
 	M.heal_organ_damage(2 * removed, 2 * removed)
 	M.adjustOxyLoss(-4 * removed)
 	M.adjustToxLoss(-2 * removed)
@@ -1495,7 +1574,7 @@
 	color = "#80af9c"
 	metabolism = REM * 0.002
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_FOOD
 
@@ -1505,13 +1584,14 @@
 	description = "A rare plant extract with immense, almost magical healing capabilities. Induces a potent psychoactive state, damaging neurons with prolonged use."
 	taste_description = "honey and sunlight"
 	reagent_state = LIQUID
+	dermal_absorption = 0.25
 	color = "#ffb500"
 	overdose = REAGENTS_OVERDOSE * 0.50
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	scannable = SCANNABLE_BENEFICIAL
 
-
-/datum/reagent/earthsblood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/earthsblood/affect_blood(mob/living/carbon/M, alien, removed)
 	M.heal_organ_damage (4 * removed, 4 * removed)
 	M.adjustOxyLoss(-10 * removed)
 	M.adjustToxLoss(-4 * removed)
@@ -1528,21 +1608,22 @@
 	description = "A drug used to stablize vat grown bodies. Often used to control the lifespan of biological experiments." // Who else remembers Cybersix?
 	taste_description = "burning metal"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#31d422"
 	overdose = 15
 	overdose_mod = 1.2
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/acid/artificial_sustenance/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/acid/artificial_sustenance/affect_ingest(mob/living/carbon/M, alien, removed)
 	// You need me...
 	if(M.get_addiction_to_reagent(REAGENT_ID_ASUSTENANCE))
 		return
 	// Continue to acid damage, no changes on injection or splashing, as this is meant to be edible only to those pre-addicted to it! Not a snowflake acid that doesn't hurt you!
 	. = ..()
 
-/datum/reagent/acid/artificial_sustenance/handle_addiction(var/mob/living/carbon/M, var/alien)
+/datum/reagent/acid/artificial_sustenance/handle_addiction(mob/living/carbon/M, alien)
 	// A copy of the base with withdrawl, but with death, and different messages
 	var/current_addiction = M.get_addiction_to_reagent(id)
 	// slow degrade
@@ -1588,6 +1669,8 @@
 	id = REAGENT_ID_TERCOZOLAM
 	color = "#afeb17"
 	metabolism = 0.05
+	scannable = SCANNABLE_BENEFICIAL
+	dermal_absorption = 0.2
 	description = "A well respected drug used for treatment of schizophrenia in specific."
 	overdose = REAGENTS_OVERDOSE * 2
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED

@@ -100,8 +100,9 @@ GLOBAL_LIST_EMPTY(apcs)
 	use_power = USE_POWER_OFF
 	clicksound = "switch"
 	req_access = list(ACCESS_ENGINE_EQUIP)
-	blocks_emissive = FALSE
+	blocks_emissive = EMISSIVE_BLOCK_NONE
 	vis_flags = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
+	flags = WALL_ITEM
 	var/area/area
 	var/areastring = null
 	var/obj/item/cell/cell
@@ -129,14 +130,13 @@ GLOBAL_LIST_EMPTY(apcs)
 	var/lastused_total = 0
 	var/main_status = APC_EXTERNAL_POWER_NOTCONNECTED
 	var/mob/living/silicon/ai/hacker = null // Malfunction var. If set AI hacked the APC and has full control.
-	var/wiresexposed = 0
+	var/wiresexposed = FALSE
 	powernet = 0		// set so that APCs aren't found as powernet nodes //Hackish, Horrible, was like this before I changed it :(
 	var/debug= 0
 	var/autoflag= 0		// 0 = off, 1= eqp and lights off, 2 = eqp off, 3 = all on.
 	var/has_electronics = APC_HAS_ELECTRONICS_NONE // 0 - none, 1 - plugged in, 2 - secured by screwdriver
 	var/beenhit = 0 // used for counting how many times it has been hit, used for Aliens at the moment
 	var/longtermpower = 10
-	var/datum/wires/apc/wires = null
 	var/emergency_lights = FALSE
 	var/update_state = -1
 	var/update_overlay = -1
@@ -151,11 +151,6 @@ GLOBAL_LIST_EMPTY(apcs)
 	var/nightshift_setting = NIGHTSHIFT_AUTO
 	var/last_nightshift_switch = 0
 
-/obj/machinery/power/apc/updateDialog()
-	if(stat & (BROKEN|MAINT))
-		return
-	..()
-
 /obj/machinery/power/apc/connect_to_network()
 	//Override because the APC does not directly connect to the network; it goes through a terminal.
 	//The terminal is what the power computer looks for anyway.
@@ -164,7 +159,7 @@ GLOBAL_LIST_EMPTY(apcs)
 	if(terminal)
 		terminal.connect_to_network()
 
-/obj/machinery/power/apc/drain_power(var/drain_check, var/surge, var/amount = 0)
+/obj/machinery/power/apc/drain_power(drain_check, surge, amount = 0)
 
 	if(drain_check)
 		return 1
@@ -191,7 +186,7 @@ GLOBAL_LIST_EMPTY(apcs)
 
 /obj/machinery/power/apc/Initialize(mapload, ndir, building)
 	. = ..()
-	wires = new(src)
+	set_wires(new /datum/wires/apc(src))
 	GLOB.apcs += src
 
 	// offset 24 pixels in direction of dir
@@ -254,7 +249,7 @@ GLOBAL_LIST_EMPTY(apcs)
 		terminal.connect_to_network() // Refresh the network the terminal is connected to.
 	return
 
-/obj/machinery/power/apc/proc/energy_fail(var/duration)
+/obj/machinery/power/apc/proc/energy_fail(duration)
 	failure_timer = max(failure_timer, round(duration))
 
 /obj/machinery/power/apc/proc/make_terminal()
@@ -684,7 +679,7 @@ GLOBAL_LIST_EMPTY(apcs)
 
 // attack with hand - remove cell (if cover open) or interact with the APC
 /obj/machinery/power/apc/proc/togglelock(mob/user)
-	if(emagged)
+	if(emagged || hacker)
 		to_chat(user, "The panel is unresponsive.")
 	else if(opened)
 		to_chat(user, "You must close the cover to swipe an ID card.")
@@ -692,8 +687,6 @@ GLOBAL_LIST_EMPTY(apcs)
 		to_chat(user, "You must close the wire panel.")
 	else if(stat & (BROKEN|MAINT))
 		to_chat(user, "Nothing happens.")
-	else if(hacker)
-		to_chat(user, span_warning("Access denied."))
 	else
 		if(allowed(user) && !wires.is_cut(WIRE_IDSCAN))
 			locked = !locked
@@ -704,9 +697,10 @@ GLOBAL_LIST_EMPTY(apcs)
 
 /obj/machinery/power/apc/click_alt(mob/user)
 	..()
-	togglelock(user)
+	if(Adjacent(user) || isrobot(user))
+		togglelock(user)
 
-/obj/machinery/power/apc/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/power/apc/emag_act(remaining_charges, mob/user)
 	if(!(emagged || hacker))		// trying to unlock with an emag card
 		if(opened)
 			to_chat(user, "You must close the cover to do that.")
@@ -738,19 +732,20 @@ GLOBAL_LIST_EMPTY(apcs)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 
-		if(H.species.can_shred(H))
+		if(H.species.can_shred(H, FALSE, 14))
 			user.setClickCooldown(user.get_attack_speed())
 			user.visible_message(span_warning("[user.name] slashes at the [name]!"), span_notice("You slash at the [name]!"))
 			playsound(src, 'sound/weapons/slash.ogg', 100, 1)
+			add_hiddenprint(H)
 
 			var/allcut = wires.is_all_cut()
 
-			if(beenhit >= pick(3, 4) && wiresexposed != 1)
-				wiresexposed = 1
+			if(beenhit >= pick(3, 4) && !wiresexposed)
+				wiresexposed = TRUE
 				update_icon()
 				visible_message(span_warning("The [name]'s cover flies open, exposing the wires!"))
 
-			else if(wiresexposed == 1 && allcut == 0)
+			else if(wiresexposed && allcut == 0)
 				wires.cut_all()
 				update_icon()
 				visible_message(span_warning("The [name]'s wires are shredded!"))
@@ -800,7 +795,7 @@ GLOBAL_LIST_EMPTY(apcs)
 	var/list/data = list(
 		"locked" = locked,
 		"normallyLocked" = locked,
-		"emagged" = emagged,
+		"hacked" = (emagged || hacker),
 		"isOperating" = operating,
 		"externalPower" = main_status,
 		"powerCellStatus" = cell ? cell.percent() : 0,
@@ -871,7 +866,7 @@ GLOBAL_LIST_EMPTY(apcs)
 //			to_world("[area.power_equip]")
 	area.power_change()
 
-/obj/machinery/power/apc/proc/can_use(mob/user, var/loud = 0) //used by attack_hand() and Topic()
+/obj/machinery/power/apc/proc/can_use(mob/user, loud = 0) //used by attack_hand() and Topic()
 	if(!user.client)
 		return 0
 	if(isobserver(user) && is_admin(user)) //This is to allow nanoUI interaction by ghost admins.
@@ -1007,7 +1002,7 @@ GLOBAL_LIST_EMPTY(apcs)
 	return (chargemode && charging == 1 && operating)
 
 
-/obj/machinery/power/apc/draw_power(var/amount)
+/obj/machinery/power/apc/draw_power(amount)
 	if(terminal && terminal.powernet)
 		return terminal.powernet.draw_power(amount)
 	return 0
@@ -1124,7 +1119,7 @@ GLOBAL_LIST_EMPTY(apcs)
 		equipment = autoset(equipment, 0)
 		lighting = autoset(lighting, 0)
 		environ = autoset(environ, 0)
-		power_alarm.triggerAlarm(loc, src, hidden=alarms_hidden)
+		GLOB.power_alarm.triggerAlarm(loc, src, hidden=alarms_hidden)
 		autoflag = 0
 
 	// update icon & area power if anything changed
@@ -1148,33 +1143,33 @@ GLOBAL_LIST_EMPTY(apcs)
 			lighting = autoset(lighting, 1)
 			environ = autoset(environ, 1)
 			autoflag = 3
-			power_alarm.clearAlarm(loc, src)
+			GLOB.power_alarm.clearAlarm(loc, src)
 	else if((cell.percent() <= 30) && (cell.percent() > 15) && longtermpower < 0)                       // <30%, turn off equipment
 		if(autoflag != 2)
 			equipment = autoset(equipment, 2)
 			lighting = autoset(lighting, 1)
 			environ = autoset(environ, 1)
-			power_alarm.triggerAlarm(loc, src, hidden=alarms_hidden)
+			GLOB.power_alarm.triggerAlarm(loc, src, hidden=alarms_hidden)
 			autoflag = 2
 	else if(cell.percent() <= 15)        // <15%, turn off lighting & equipment
 		if((autoflag > 1 && longtermpower < 0) || (autoflag > 1 && longtermpower >= 0))
 			equipment = autoset(equipment, 2)
 			lighting = autoset(lighting, 2)
 			environ = autoset(environ, 1)
-			power_alarm.triggerAlarm(loc, src, hidden=alarms_hidden)
+			GLOB.power_alarm.triggerAlarm(loc, src, hidden=alarms_hidden)
 			autoflag = 1
 	else                                   // zero charge, turn all off
 		if(autoflag != 0)
 			equipment = autoset(equipment, 0)
 			lighting = autoset(lighting, 0)
 			environ = autoset(environ, 0)
-			power_alarm.triggerAlarm(loc, src, hidden=alarms_hidden)
+			GLOB.power_alarm.triggerAlarm(loc, src, hidden=alarms_hidden)
 			autoflag = 0
 
 // val 0=off, 1=off(auto) 2=on 3=on(auto)
 // on 0=off, 1=on, 2=autooff
 // defines a state machine, returns the new state
-/obj/machinery/power/apc/proc/autoset(var/cur_state, var/on)
+/obj/machinery/power/apc/proc/autoset(cur_state, on)
 	switch(cur_state)
 		//if(POWERCHAN_OFF); //autoset will never turn on a channel set to off
 		if(POWERCHAN_OFF_AUTO)
@@ -1192,6 +1187,9 @@ GLOBAL_LIST_EMPTY(apcs)
 
 // damage and destruction acts
 /obj/machinery/power/apc/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	// Fail for 8-12 minutes (divided by severity)
 	// Division by 2 is required, because machinery ticks are every two seconds. Without it we would fail for 16-24 minutes.
 
@@ -1207,7 +1205,6 @@ GLOBAL_LIST_EMPTY(apcs)
 		severity = severity+1
 
 	update_icon()
-	..(severity, recursive)
 
 /obj/machinery/power/apc/ex_act(severity)
 
@@ -1235,7 +1232,7 @@ GLOBAL_LIST_EMPTY(apcs)
 					cell.ex_act(3)
 	return
 
-/obj/machinery/power/apc/disconnect_terminal(var/obj/machinery/power/terminal/term)
+/obj/machinery/power/apc/disconnect_terminal(obj/machinery/power/terminal/term)
 	if(terminal)
 		terminal.master = null
 		terminal = null
@@ -1251,7 +1248,7 @@ GLOBAL_LIST_EMPTY(apcs)
 
 // overload the lights in this APC area
 
-/obj/machinery/power/apc/proc/overload_lighting(var/chance = 100)
+/obj/machinery/power/apc/proc/overload_lighting(chance = 100)
 	if(/* !get_connection() || */ !operating || shorted || grid_check)
 		return
 	if( cell && cell.charge>=20)
@@ -1272,7 +1269,7 @@ GLOBAL_LIST_EMPTY(apcs)
 		return 0
 
 // Malfunction: Transfers APC under AI's control
-/obj/machinery/power/apc/proc/ai_hack(var/mob/living/silicon/ai/A = null)
+/obj/machinery/power/apc/proc/ai_hack(mob/living/silicon/ai/A = null)
 	if(!A || !A.hacked_apcs || hacker || aidisabled || A.stat == DEAD)
 		return 0
 	hacker = A
@@ -1292,7 +1289,7 @@ GLOBAL_LIST_EMPTY(apcs)
 	//start with main breaker off, chargemode in the default state and all channels on auto upon reboot
 	operating = 0
 	chargemode = initial(chargemode)
-	power_alarm.clearAlarm(loc, src)
+	GLOB.power_alarm.clearAlarm(loc, src)
 
 	lighting = POWERCHAN_ON_AUTO
 	equipment = POWERCHAN_ON_AUTO
@@ -1308,7 +1305,7 @@ GLOBAL_LIST_EMPTY(apcs)
 	update_icon()
 	update()
 
-/obj/machinery/power/apc/overload(var/obj/machinery/power/source)
+/obj/machinery/power/apc/overload(obj/machinery/power/source)
 	if(is_critical)
 		return
 
@@ -1346,7 +1343,7 @@ GLOBAL_LIST_EMPTY(apcs)
 		if(src && grid_check == TRUE)
 			grid_check = FALSE
 
-/obj/machinery/power/apc/proc/set_nightshift(on, var/automated)
+/obj/machinery/power/apc/proc/set_nightshift(on, automated)
 	set waitfor = FALSE
 	if(automated && istype(area, /area/shuttle))
 		return

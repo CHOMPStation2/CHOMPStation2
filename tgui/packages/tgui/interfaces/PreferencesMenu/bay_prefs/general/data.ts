@@ -15,7 +15,15 @@ export enum Gender {
   Female = 'Female',
   Neuter = 'Neuter',
   Plural = 'Plural',
+  Herm = 'Herm',
 }
+
+export const byondGenders: Gender[] = [
+  Gender.Male,
+  Gender.Female,
+  Gender.Neuter,
+  Gender.Plural,
+];
 
 export enum PersistanceEnum {
   PERSIST_SPAWN = 0x01,
@@ -238,12 +246,20 @@ export type AntagonismData = {
   uplink_type: string;
   record_banned: BooleanLike;
   exploitable_record?: string;
-  pai_name?: string;
-  pai_desc?: string;
-  pai_role?: string;
-  pai_comments?: string;
+  pai_name: string;
+  pai_desc: string;
+  pai_role: string;
+  pai_ad: string;
+  pai_comments: string;
+  pai_eyecolor: string;
+  pai_chassis: string;
+  pai_chassises: Record<string, string>[];
+  pai_emotion: string;
+  pai_emotions: Record<string, number>[];
   syndicate_ban: BooleanLike;
   special_roles: SpecialRole[];
+  pai_sprite_datum_class?: string;
+  pai_sprite_datum_size?: string;
 };
 
 export const REQUIRED_FLAVOR_TEXT_LENGTH = 30;
@@ -276,6 +292,7 @@ export type MiscData = {
 
   resleeve_lock: BooleanLike;
   resleeve_scan: BooleanLike;
+  synth_cookie: BooleanLike;
   mind_scan: BooleanLike;
 
   vantag_volunteer: BooleanLike;
@@ -284,9 +301,10 @@ export type MiscData = {
   nif: BooleanLike;
 
   custom_species: string;
-  pos_traits: string[] | Record<string, Record<string, any> | null>;
-  neu_traits: string[] | Record<string, Record<string, any> | null>;
-  neg_traits: string[] | Record<string, Record<string, any> | null>;
+  ignore_shoes: BooleanLike;
+  pos_traits: string[] | Record<string, Record<string, unknown> | null>;
+  neu_traits: string[] | Record<string, Record<string, unknown> | null>;
+  neg_traits: string[] | Record<string, Record<string, unknown> | null>;
   traits_cheating: BooleanLike;
   max_traits: number;
   trait_points: number;
@@ -311,7 +329,11 @@ export type GeneralDataStatic = Partial<{
   available_wing_styles: string[];
 }>;
 
-export type StandardStyle = { name: string; icon: string; icon_state: string };
+export type StandardStyle = {
+  name: string;
+  icon: string | null;
+  icon_state: string | null;
+};
 
 export type EarStyle = StandardStyle & {
   type: string;
@@ -388,12 +410,15 @@ export type Species = {
   flags: SpeciesFlags;
   spawn_flags: SpawnFlags;
   appearance_flags: AppearanceFlags;
+  whitelisted: BooleanLike;
+  disabled: BooleanLike;
 };
 
 export enum TraitPrefType {
   TRAIT_PREF_TYPE_BOOLEAN = 1,
   TRAIT_PREF_TYPE_COLOR = 2,
   TRAIT_PREF_TYPE_STRING = 3,
+  TRAIT_PREF_TYPE_LIST = 4,
 }
 
 export enum TraitVareditTarget {

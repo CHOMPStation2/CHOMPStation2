@@ -1,7 +1,7 @@
 #define DEFAULT_SEED PLANT_GLOWSHROOM
 #define VINE_GROWTH_STAGES 5
 
-/proc/spacevine_infestation(var/potency_min=70, var/potency_max=100, var/maturation_min=5, var/maturation_max=15)
+/proc/spacevine_infestation(potency_min=70, potency_max=100, maturation_min=5, maturation_max=15)
 	spawn() //to stop the secrets panel hanging
 		var/list/turf/simulated/floor/turfs = list() //list of all the empty floor turfs in the hallway areas //CHOMPedit start: keeping old method over upstream's landmark method
 		for(var/areapath in typesof(/area/hallway))
@@ -83,7 +83,7 @@
 /obj/effect/plant/single
 	spread_chance = 0
 
-/obj/effect/plant/Initialize(mapload, var/datum/seed/newseed, var/obj/effect/plant/newparent)
+/obj/effect/plant/Initialize(mapload, datum/seed/newseed, obj/effect/plant/newparent)
 	. = ..()
 	//VOREStation Edit Start
 	if(isopenturf(loc))
@@ -242,7 +242,7 @@
 	floor = 1
 	return 1
 
-/obj/effect/plant/attackby(var/obj/item/W, var/mob/user)
+/obj/effect/plant/attackby(obj/item/W, mob/user)
 
 	user.setClickCooldown(user.get_attack_speed(W))
 	SSplants.add_plant(src)

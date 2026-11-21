@@ -4,7 +4,7 @@
 
 /obj/machinery/shield_capacitor
 	name = "shield capacitor"
-	desc = "A machine that charges a shield generator."
+	desc = "A machine that charges a shield generator. It stores extra electricity to assists a main generator during high-draw events."
 	icon = 'icons/obj/machines/shielding.dmi'
 	icon_state = "capacitor"
 	var/active = 0
@@ -25,18 +25,24 @@
 	AddElement(/datum/element/climbable)
 	AddElement(/datum/element/rotatable)
 
+
+/obj/machinery/shield_capacitor/examine(mob/user)
+	. = ..()
+	if(anchored)
+		. += span_notice("It is wrenched down to the floor.")
+
+
 /obj/machinery/shield_capacitor/advanced
 	name = "advanced shield capacitor"
 	desc = "A machine that charges a shield generator.  This version can store, input, and output more electricity."
 	max_charge = 12e6
 	max_charge_rate = 600000
 
-/obj/machinery/shield_capacitor/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/shield_capacitor/emag_act(remaining_charges, mob/user)
 	if(prob(75))
 		src.locked = !src.locked
 		to_chat(user, "Controls are now [src.locked ? "locked." : "unlocked."]")
 		. = 1
-		updateDialog()
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 	s.set_up(5, 1, src)
 	s.start()
@@ -48,7 +54,6 @@
 		if((ACCESS_CAPTAIN in C.GetAccess()) || (ACCESS_SECURITY in C.GetAccess()) || (ACCESS_ENGINE in C.GetAccess()))
 			src.locked = !src.locked
 			to_chat(user, "Controls are now [src.locked ? "locked." : "unlocked."]")
-			updateDialog()
 		else
 			to_chat(user, span_red("Access denied."))
 	else if(W.has_tool_quality(TOOL_WRENCH))
@@ -62,7 +67,6 @@
 					if(get_dir(src, gen) == src.dir)
 						owned_gen = gen
 						owned_gen.capacitors |= src
-						owned_gen.updateDialog()
 		else
 			if(owned_gen && (src in owned_gen.capacitors))
 				owned_gen.capacitors -= src

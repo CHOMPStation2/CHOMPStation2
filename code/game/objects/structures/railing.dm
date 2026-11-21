@@ -70,7 +70,7 @@
 		new /obj/item/stack/rods(get_turf(src))
 		qdel(src)
 
-/obj/structure/railing/proc/NeighborsCheck(var/UpdateNeighbors = 1)
+/obj/structure/railing/proc/NeighborsCheck(UpdateNeighbors = 1)
 	check = 0
 	//if (!anchored) return
 	var/Rturn = turn(src.dir, -90)
@@ -108,7 +108,7 @@
 			if (UpdateNeighbors)
 				R.update_icon(0)
 
-/obj/structure/railing/update_icon(var/UpdateNeighgors = 1)
+/obj/structure/railing/update_icon(UpdateNeighgors = 1)
 	NeighborsCheck(UpdateNeighgors)
 	//layer = (dir == SOUTH) ? FLY_LAYER : initial(layer) // wtf does this even do
 	cut_overlays()
@@ -133,8 +133,8 @@
 					if (WEST)
 						add_overlay(image(icon, src, "[icon_modifier]mcorneroverlay", pixel_y = 32))
 
-/obj/structure/railing/handle_rotation_verbs(angle)
-	if(!can_touch(usr))
+/obj/structure/railing/handle_rotation_verbs(angle, mob/user)
+	if(!can_touch(user))
 		return FALSE
 	. = ..()
 	if(.)
@@ -148,7 +148,7 @@
 	if(usr.incapacitated())
 		return 0
 
-	if (!can_touch(usr) || ismouse(usr))
+	if (!can_touch(usr) || HAS_TRAIT(usr, TRAIT_AMBIENT_PEST_MOB))
 		return
 
 	if(anchored)

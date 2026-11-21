@@ -12,10 +12,12 @@
 	item_state = "paper"
 	throw_speed = 4
 	throw_range = 20
-	origin_tech = list(TECH_BLUESPACE = 4)
 
-/obj/item/teleportation_scroll/attack_self(mob/user as mob)
-	if((user.mind && !wizards.is_antagonist(user.mind)))
+/obj/item/teleportation_scroll/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if((user.mind && !GLOB.wizards.is_antagonist(user.mind)))
 		to_chat(user, span_warning("You stare at the scroll but cannot make sense of the markings!"))
 		return
 
@@ -46,7 +48,7 @@
 	attack_self(H)
 	return
 
-/obj/item/teleportation_scroll/proc/teleportscroll(var/mob/user)
+/obj/item/teleportation_scroll/proc/teleportscroll(mob/user)
 	var/A = tgui_input_list(user, "Area to jump to:", "Teleportation Scroll", GLOB.teleportlocs)
 	if(!A)
 		return

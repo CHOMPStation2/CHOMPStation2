@@ -6,13 +6,19 @@
 	var/flipped = 0
 	siemens_coefficient = 0.9
 	body_parts_covered = 0
+	special_handling = TRUE
 
-/obj/item/clothing/head/soft/dropped(mob/user)
+/obj/item/clothing/head/soft/dropped(mob/user, equipping, slot)
+	if(equipping)
+		return ..()
 	icon_state = initial(icon_state)
-	flipped=0
+	flipped = FALSE
 	..()
 
 /obj/item/clothing/head/soft/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	flipped = !flipped
 	if(flipped)
 		icon_state = "[icon_state]_flipped"

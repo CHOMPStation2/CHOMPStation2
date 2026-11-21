@@ -42,15 +42,15 @@
 	icon_state = (unlocked && flowing)? "on" : "off"
 
 /obj/machinery/atmospherics/binary/passive_gate/update_underlays()
-	if(..())
-		underlays.Cut()
-		var/turf/T = get_turf(src)
-		if(!istype(T))
-			return
-		add_underlay(T, node1, turn(dir, 180))
-		add_underlay(T, node2, dir)
+	..()
+	underlays.Cut()
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		return
+	add_underlay(T, node1, turn(dir, 180))
+	add_underlay(T, node2, dir)
 
-/obj/machinery/atmospherics/binary/passive_gate/hide(var/i)
+/obj/machinery/atmospherics/binary/passive_gate/hide(i)
 	update_underlays()
 
 /obj/machinery/atmospherics/binary/passive_gate/process()
@@ -200,7 +200,7 @@
 	update_icon()
 	return
 
-/obj/machinery/atmospherics/binary/passive_gate/attack_hand(user as mob)
+/obj/machinery/atmospherics/binary/passive_gate/attack_hand(mob/user)
 	if(..())
 		return
 	add_fingerprint(user)
@@ -275,7 +275,7 @@
 	update_icon()
 	add_fingerprint(ui.user)
 
-/obj/machinery/atmospherics/binary/passive_gate/attackby(var/obj/item/W as obj, var/mob/user as mob)
+/obj/machinery/atmospherics/binary/passive_gate/attackby(obj/item/W as obj, mob/user as mob)
 	if (!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 	if (unlocked)
@@ -292,7 +292,7 @@
 			span_infoplain(span_bold("\The [user]") + " unfastens \the [src]."), \
 			span_notice("You have unfastened \the [src]."), \
 			"You hear ratchet.")
-		deconstruct()
+		atom_deconstruct()
 
 #undef REGULATE_NONE
 #undef REGULATE_INPUT

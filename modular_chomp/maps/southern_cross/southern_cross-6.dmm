@@ -1762,8 +1762,10 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "dI" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/concrete,
+/obj/structure/fence/electric{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/surface/cave/explored/trader)
 "dJ" = (
 /obj/structure/table/steel,
@@ -3980,10 +3982,8 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "iv" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/concrete,
+/obj/structure/fence/door/electric,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/surface/cave/explored/trader)
 "iw" = (
 /obj/machinery/power/apc{
@@ -4014,10 +4014,10 @@
 	},
 /area/surface/outpost/mining_main/cave)
 "iy" = (
-/obj/machinery/light/small{
+/obj/structure/fence/electric_sign{
 	dir = 4
 	},
-/turf/simulated/floor/concrete,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/surface/cave/explored/trader)
 "iz" = (
 /obj/effect/floor_decal/industrial/warning/dust,
@@ -4047,23 +4047,15 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "iD" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/concrete,
+/obj/structure/fence/corner/electric,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/surface/cave/explored/trader)
 "iE" = (
-/obj/structure/cable/blue{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/rtg/advanced,
-/turf/simulated/floor/plating,
+/obj/structure/fence/electric,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/surface/cave/explored/trader)
 "iF" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/wall/rshull,
 /area/surface/cave/explored/trader)
 "iG" = (
 /turf/simulated/wall/r_wall,
@@ -4678,9 +4670,11 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
 "jU" = (
-/obj/structure/table/marble,
-/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
-/turf/simulated/floor/concrete,
+/obj/structure/fans/hardlight/colorable/abductor{
+	color = "#b6d9f3"
+	},
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled,
 /area/surface/cave/explored/trader)
 "jV" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -4952,8 +4946,8 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
 "kx" = (
-/obj/structure/table/marble,
-/turf/simulated/floor/concrete,
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
 /area/surface/cave/explored/trader)
 "ky" = (
 /turf/simulated/shuttle/floor/voidcraft/external,
@@ -4987,6 +4981,11 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
+"kD" = (
+/turf/simulated/floor/water{
+	outdoors = 0
+	},
+/area/surface/cave/explored/trader)
 "kE" = (
 /obj/effect/zone_divider,
 /turf/simulated/wall/r_wall,
@@ -5033,6 +5032,9 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/engineering/refinery)
+"kJ" = (
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/cave/explored/trader)
 "kK" = (
 /obj/effect/zone_divider,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -5243,17 +5245,198 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/engineering/refinery)
+"ll" = (
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lm" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lp" = (
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lr" = (
+/mob/living/simple_mob/humanoid/astral_collective/purity,
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lt" = (
+/obj/machinery/reagent_refinery/pipe{
+	dir = 1
+	},
+/obj/structure/fans/hardlight/colorable/abductor{
+	color = "#b6d9f3"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lu" = (
+/obj/machinery/hyperpad/centre{
+	map_pad_id = "tyr_1_away";
+	map_pad_link_id = "tyr_1_station"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lw" = (
+/obj/structure/table/standard,
+/obj/random/material,
+/obj/random/material,
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lx" = (
+/obj/structure/table/standard,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/random/material,
+/obj/random/material,
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"ly" = (
+/obj/structure/fence/corner/electric{
+	dir = 8
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/cave/explored/trader)
+"lz" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lA" = (
+/obj/structure/table/standard,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/pickaxe/jackhammer,
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lB" = (
+/obj/structure/table/standard,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/random/material,
+/obj/random/material,
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lC" = (
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/cave/explored/trader)
+"lD" = (
+/obj/machinery/light,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/cave/explored/trader)
+"lE" = (
+/obj/structure/table/standard,
+/obj/machinery/light,
+/obj/random/material,
+/obj/random/material,
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lG" = (
+/obj/structure/fans/hardlight/colorable/abductor{
+	color = "#b6d9f3"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lH" = (
+/obj/machinery/pump,
+/turf/simulated/floor/water{
+	outdoors = 0
+	},
+/area/surface/cave/explored/trader)
+"lI" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/cave/explored/trader)
+"lJ" = (
+/obj/machinery/reagent_refinery/hub,
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lL" = (
+/obj/machinery/reagent_refinery/pump,
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lM" = (
+/obj/machinery/pump_relay,
+/turf/simulated/floor/water{
+	outdoors = 0
+	},
+/area/surface/cave/explored/trader)
+"lN" = (
+/obj/machinery/reagent_refinery/waste_processor,
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lO" = (
+/obj/machinery/reagent_refinery/filter{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lP" = (
+/obj/machinery/reagent_refinery/pump{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lQ" = (
+/obj/machinery/reagent_refinery/pipe{
+	dir = 8
+	},
+/obj/structure/fans/hardlight/colorable/abductor{
+	color = "#b6d9f3"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lR" = (
+/mob/living/simple_mob/humanoid/astral_collective/purity,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/cave/explored/trader)
+"lS" = (
+/obj/structure/table/standard,
+/obj/item/pickaxe/diamonddrill,
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lT" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/cave/explored/trader)
+"lU" = (
+/obj/machinery/reagent_refinery/pump{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
 "lV" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/surface/cave/explored/normal)
+"lW" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
+"lX" = (
+/obj/machinery/reagent_refinery/filter,
+/turf/simulated/floor/tiled,
+/area/surface/cave/explored/trader)
 "md" = (
 /turf/simulated/wall/solidrock,
 /area/surface/cave/unexplored/normal)
-"nr" = (
-/turf/simulated/mineral/sif,
-/area/surface/cave/explored/trader)
 "nx" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -5281,10 +5464,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/surface/cave/explored/deep)
-"oO" = (
-/obj/item/stool,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "pQ" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/water{
@@ -5320,11 +5499,6 @@
 	outdoors = 0
 	},
 /area/surface/outpost/wall/checkpoint)
-"rc" = (
-/obj/structure/simple_door/sandstone,
-/obj/structure/simple_door/sandstone,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "rd" = (
 /obj/effect/map_effect/portal/line/side_a,
 /turf/simulated/wall/solidrock,
@@ -5333,16 +5507,6 @@
 /obj/effect/map_effect/portal/master/side_a/caves_to_wilderness,
 /turf/simulated/wall/solidrock,
 /area/surface/outpost/wall)
-"st" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 1
-	},
-/turf/simulated/wall/solidrock,
-/area/surface/cave/explored/trader)
-"sH" = (
-/obj/structure/simple_door/sandstone,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "tf" = (
 /obj/effect/zone_divider,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
@@ -5363,12 +5527,6 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
-"tS" = (
-/obj/structure/cable/blue{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/trader)
 "xh" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
@@ -5378,11 +5536,6 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
-"xS" = (
-/obj/structure/table/marble,
-/obj/item/reagent_containers/food/drinks/cans/nukie_lemon,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "zJ" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -5410,12 +5563,6 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
-"BX" = (
-/obj/structure/bed,
-/obj/item/bedsheet/cosmos,
-/mob/living/simple_mob/humanoid/starhunter/trader/farmer,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "Co" = (
 /obj/machinery/light{
 	dir = 8
@@ -5427,12 +5574,6 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
-"Cv" = (
-/obj/structure/bed,
-/obj/item/bedsheet/cosmos,
-/mob/living/simple_mob/humanoid/starhunter/trader/miner,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "Cx" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 1
@@ -5484,21 +5625,10 @@
 	},
 /turf/simulated/wall/solidrock,
 /area/surface/cave/unexplored/normal)
-"HL" = (
-/obj/structure/table/marble,
-/obj/item/reagent_containers/food/snacks/breakfast_wrap,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
-"In" = (
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/trader)
 "Jk" = (
 /obj/effect/map_effect/portal/line/side_a,
 /turf/simulated/wall/solidrock,
 /area/surface/outpost/wall/checkpoint)
-"LO" = (
-/turf/simulated/wall/solidrock,
-/area/surface/cave/explored/trader)
 "Nm" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 1
@@ -5543,15 +5673,6 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
-"Qd" = (
-/obj/machinery/vending/starhunter_farmer,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
-"Qs" = (
-/obj/structure/table/marble,
-/obj/item/book/manual/engineering_singularity_safety,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "Qy" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
@@ -5561,19 +5682,6 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
-"QY" = (
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 24
-	},
-/obj/structure/cable/blue{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/trader)
-"RM" = (
-/turf/simulated/wall/sandstone,
-/area/surface/cave/explored/trader)
 "RX" = (
 /obj/structure/cable/ender{
 	icon_state = "1-2";
@@ -5589,26 +5697,10 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
-"St" = (
-/obj/machinery/vending/starhunter_miner,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
-"SI" = (
-/obj/structure/table/marble,
-/obj/item/reagent_containers/food/snacks/bacon_and_eggs,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "Ug" = (
 /obj/effect/map_effect/portal/master/side_a/caves_to_wilderness/river,
 /turf/simulated/wall/solidrock,
 /area/surface/outpost/wall)
-"UB" = (
-/obj/machinery/power/rtg/advanced,
-/obj/structure/cable/blue{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/trader)
 "VK" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -5628,23 +5720,6 @@
 	outdoors = 0
 	},
 /area/surface/cave/explored/normal)
-"WQ" = (
-/obj/structure/table/marble,
-/obj/item/book/manual/anomaly_testing,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
-"Xk" = (
-/obj/structure/cable/blue{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/blue{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/trader)
-"YU" = (
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "YY" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -5922,29 +5997,29 @@ aa
 "}
 (2,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -6180,29 +6255,29 @@ aa
 "}
 (3,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lp
+lp
+ll
+lr
+iF
+lp
+ll
+lp
+lp
+lp
+lp
+ll
+lp
+iF
+lp
+ll
+lp
+lp
+jU
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -6438,29 +6513,29 @@ aa
 "}
 (4,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lp
+lu
+lp
+lp
+lp
+lp
+lp
+lN
+lp
+lp
+lp
+lp
+lp
+lp
+lp
+lp
+lp
+lp
+jU
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -6696,29 +6771,29 @@ aa
 "}
 (5,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lm
+lp
+lp
+kx
+iF
+lm
+lp
+lO
+lL
+lL
+lJ
+lp
+kx
+iF
+lm
+lr
+lp
+kx
+iF
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -6954,29 +7029,29 @@ aa
 "}
 (6,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lr
+lp
+lW
+lp
+iF
+lp
+lp
+lP
+lp
+lp
+lp
+lp
+lp
+iF
+lp
+lp
+lp
+lp
+iF
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -7212,29 +7287,29 @@ aa
 "}
 (7,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+iF
+lp
+iF
+iF
+iF
+iF
+lG
+lQ
+lG
+lG
+lG
+lG
+iF
+iF
+iF
+iF
+lp
+iF
+iF
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -7470,29 +7545,29 @@ aa
 "}
 (8,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lp
+lp
+ll
+lp
+iF
+lC
+kJ
+kJ
+kD
+kD
+kD
+kJ
+lC
+iF
+lz
+lp
+lp
+lw
+iF
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -7728,29 +7803,29 @@ aa
 "}
 (9,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lp
+lp
+lp
+lp
+lG
+kJ
+lR
+kD
+kD
+kD
+kD
+kD
+lD
+iF
+lA
+lp
+lp
+lw
+iF
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -7986,29 +8061,29 @@ aa
 "}
 (10,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lm
+lN
+lX
+lU
+lt
+kJ
+kD
+kD
+kD
+lM
+kD
+kD
+kD
+iF
+lp
+lp
+lp
+lw
+iF
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -8244,29 +8319,29 @@ aa
 "}
 (11,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lp
+lp
+lP
+lp
+lG
+kD
+kD
+lM
+kD
+kD
+kD
+kD
+kD
+jU
+lp
+lr
+lp
+lw
+iF
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -8502,29 +8577,29 @@ aa
 "}
 (12,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lp
+lp
+lP
+lp
+lG
+kD
+kD
+kD
+kD
+kD
+kD
+lH
+kD
+jU
+lp
+lp
+lp
+lw
+iF
+kJ
+iv
+kJ
 ab
 ab
 ab
@@ -8760,29 +8835,29 @@ aa
 "}
 (13,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lm
+lp
+lJ
+lp
+lG
+kJ
+kD
+kD
+lH
+kD
+kD
+kD
+kD
+iF
+lp
+lp
+lp
+lw
+iF
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -9018,29 +9093,29 @@ aa
 "}
 (14,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lp
+lp
+lp
+lp
+lG
+kJ
+kD
+kD
+kD
+kD
+kD
+kD
+lD
+iF
+lB
+lp
+lp
+lw
+iF
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -9276,29 +9351,29 @@ aa
 "}
 (15,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lp
+lp
+lW
+lp
+iF
+lT
+lI
+kD
+kD
+kD
+kJ
+lI
+kJ
+iF
+lw
+lx
+lw
+lw
+iF
+kJ
+iy
+kJ
 ab
 ab
 ab
@@ -9534,29 +9609,29 @@ aa
 "}
 (16,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+iF
+lp
+iF
+iF
+iF
+iF
+iF
+iF
+jU
+jU
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -9792,29 +9867,29 @@ aa
 "}
 (17,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lp
+lp
+ll
+lp
+iF
+lz
+lS
+lp
+lp
+lp
+lp
+lw
+lw
+iF
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -10050,29 +10125,29 @@ aa
 "}
 (18,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lm
+lp
+lr
+lp
+iF
+lm
+lp
+lp
+lp
+lr
+lp
+lp
+lE
+iF
+kJ
+ly
+iE
+iE
+iE
+iE
+iD
+kJ
 ab
 ab
 ab
@@ -10308,29 +10383,29 @@ aa
 "}
 (19,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lp
+lp
+lp
+lp
+lp
+lp
+lp
+lp
+lp
+lp
+lp
+lp
+lw
+iF
+kJ
+dI
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
 ab
 ab
 ab
@@ -10566,24 +10641,24 @@ aa
 "}
 (20,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+lp
+lp
+lW
+lp
+iF
+lw
+lx
+lw
+lw
+lw
+lw
+lx
+lw
+iF
+kJ
+iy
+kJ
 ab
 ab
 ab
@@ -10824,24 +10899,24 @@ aa
 "}
 (21,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iF
+jU
+jU
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+iF
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -11082,24 +11157,24 @@ aa
 "}
 (22,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+dI
+kJ
 ab
 ab
 ab
@@ -11340,24 +11415,24 @@ aa
 "}
 (23,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iD
+kJ
 ab
 ab
 ab
@@ -11598,24 +11673,24 @@ aa
 "}
 (24,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
+kJ
 ab
 ab
 ab
@@ -69372,20 +69447,20 @@ ae
 ae
 ae
 ae
-RM
-RM
-RM
-RM
-RM
-RM
-RM
-RM
-RM
-RM
-rc
-RM
-LO
-st
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+md
+Cx
 aa
 "}
 (248,1,1) = {"
@@ -69630,20 +69705,20 @@ ae
 ae
 ae
 ae
-RM
-BX
-WQ
-kx
-RM
-YU
-YU
-iv
-YU
-YU
-YU
-RM
-LO
-st
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+md
+Cx
 aa
 "}
 (249,1,1) = {"
@@ -69888,20 +69963,20 @@ ae
 ae
 ae
 ae
-RM
-iD
-YU
-YU
-sH
-YU
-YU
-YU
-YU
-YU
-YU
-RM
-LO
-st
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+md
+Cx
 aa
 "}
 (250,1,1) = {"
@@ -70146,20 +70221,20 @@ ae
 ae
 ae
 ae
-RM
-Cv
-Qs
-kx
-RM
-Qd
-oO
-xS
-SI
-oO
-YU
-RM
-LO
-LO
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+md
+md
 aa
 "}
 (251,1,1) = {"
@@ -70404,20 +70479,20 @@ ae
 ae
 ae
 ae
-RM
-RM
-RM
-RM
-RM
-iD
-YU
-kx
-kx
-YU
-dI
-RM
-nr
-nr
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
 aa
 "}
 (252,1,1) = {"
@@ -70662,20 +70737,20 @@ ae
 ae
 ae
 ae
-RM
-In
-iE
-UB
-RM
-St
-oO
-HL
-jU
-oO
-YU
-RM
-nr
-nr
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
 aa
 "}
 (253,1,1) = {"
@@ -70920,20 +70995,20 @@ ae
 ae
 ae
 ae
-RM
-QY
-Xk
-tS
-RM
-YU
-YU
-YU
-YU
-YU
-YU
-RM
-nr
-nr
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
 aa
 "}
 (254,1,1) = {"
@@ -71178,20 +71253,20 @@ ae
 ae
 ae
 ae
-RM
-In
-iF
-In
-sH
-YU
-YU
-iy
-YU
-YU
-YU
-RM
-nr
-nr
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
 aa
 "}
 (255,1,1) = {"
@@ -71436,20 +71511,20 @@ ae
 ae
 ae
 ae
-RM
-RM
-RM
-RM
-RM
-RM
-RM
-RM
-RM
-RM
-RM
-RM
-nr
-nr
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
 aa
 "}
 (256,1,1) = {"

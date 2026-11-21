@@ -10,13 +10,13 @@
 
 /datum/surgery_step/cavity/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(!ishuman(target))
-		return 0
+		return FALSE
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(coverage_check(user, target, affected, tool))
-		return 0
+		return FALSE
 	return affected && affected.open == (affected.encased ? 3 : 2)
 
-/datum/surgery_step/cavity/proc/get_max_wclass(var/obj/item/organ/external/affected)
+/datum/surgery_step/cavity/proc/get_max_wclass(obj/item/organ/external/affected)
 	switch (affected.organ_tag)
 		if (BP_HEAD)
 			return ITEMSIZE_TINY
@@ -24,9 +24,9 @@
 			return ITEMSIZE_NORMAL
 		if (BP_GROIN)
 			return ITEMSIZE_SMALL
-	return 0
+	return FALSE
 
-/datum/surgery_step/cavity/proc/get_cavity(var/obj/item/organ/external/affected)
+/datum/surgery_step/cavity/proc/get_cavity(obj/item/organ/external/affected)
 	switch (affected.organ_tag)
 		if (BP_HEAD)
 			return "cranial"
@@ -129,13 +129,13 @@
 
 /datum/surgery_step/cavity/place_item/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(!istype(tool))
-		return 0
+		return FALSE
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
 		if(istype(user,/mob/living/silicon/robot))
 			if(istype(tool, /obj/item/gripper))
 				var/obj/item/gripper/gripper = tool
-				var/obj/item/wrapped = gripper.get_current_pocket()
+				var/obj/item/wrapped = gripper.get_wrapped_item()
 				if(wrapped)
 					tool = wrapped
 				else
@@ -154,7 +154,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(isrobot(user) && istype(tool, /obj/item/gripper))
 		var/obj/item/gripper/G = tool
-		tool = G.get_current_pocket()
+		tool = G.get_wrapped_item()
 	user.visible_message(span_notice("[user] starts putting \the [tool] inside [target]'s [get_cavity(affected)] cavity."), \
 	span_notice("You start putting \the [tool] inside [target]'s [get_cavity(affected)] cavity.") ) //Nobody will probably ever see this, but I made these two blue. ~CK
 	user.balloon_alert_visible("starts putting \the [tool] inside [target]'s [get_cavity(affected)]", "putting \the [tool] inside \the [get_cavity(affected)]")
@@ -165,7 +165,7 @@
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
 	if(isrobot(user) && istype(tool, /obj/item/gripper))
 		var/obj/item/gripper/G = tool
-		tool = G.get_current_pocket()
+		tool = G.get_wrapped_item()
 		G.drop_item_nm()
 	else
 		user.drop_item()
@@ -176,6 +176,8 @@
 		to_chat(user, span_danger(" You tear some blood vessels trying to fit such a big object in this cavity."))
 		var/datum/wound/internal_bleeding/I = new (10)
 		affected.wounds += I
+		affected.update_damages()
+		affected.owner.handle_organs(TRUE) //Force an update so we start processing the internal bleeding.
 		affected.owner.custom_pain("You feel something rip in your [affected.name]!", 1)
 	affected.implants += tool
 	tool.loc = affected

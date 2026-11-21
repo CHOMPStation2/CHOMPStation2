@@ -25,7 +25,7 @@ SUBSYSTEM_DEF(plants)
 	var/list/currentrun = list()
 
 /datum/controller/subsystem/plants/stat_entry(msg)
-	msg = "P:[processing.len]|S:[seeds.len]"
+	msg = "P:[length(processing)]|S:[length(seeds)]"
 	return ..()
 
 /datum/controller/subsystem/plants/Initialize()
@@ -38,7 +38,7 @@ SUBSYSTEM_DEF(plants)
 // Looks like shit but it's sort of necessary.
 /datum/controller/subsystem/plants/proc/setup()
 	// Build the icon lists.
-	for(var/icostate in cached_icon_states('icons/obj/hydroponics_growing.dmi'))
+	for(var/icostate in icon_states_fast('icons/obj/hydroponics_growing.dmi'))
 		var/split = findtext(icostate,"-")
 		if(!split)
 			// invalid icon_state
@@ -56,7 +56,7 @@ SUBSYSTEM_DEF(plants)
 			if(!(base in GLOB.forbidden_plant_growth_sprites))
 				accessible_plant_sprites[base] = ikey
 
-	for(var/icostate in cached_icon_states('icons/obj/hydroponics_products.dmi'))
+	for(var/icostate in icon_states_fast('icons/obj/hydroponics_products.dmi'))
 		var/split = findtext(icostate,"-")
 		var/base = copytext(icostate,1,split)
 		if(split)
@@ -68,7 +68,7 @@ SUBSYSTEM_DEF(plants)
 	for(var/type in subtypesof(/datum/seed))
 		var/datum/seed/S = new type
 		seeds[S.name] = S
-		S.uid = "[seeds.len]"
+		S.uid = "[length(seeds)]"
 		S.roundstart = 1
 
 	// Make sure any seed packets that were mapped in are updated
@@ -77,20 +77,20 @@ SUBSYSTEM_DEF(plants)
 		S.update_seed()
 
 	//Might as well mask the gene types while we're at it.
-	var/list/gene_datums = decls_repository.get_decls_of_subtype(/decl/plantgene)
+	var/list/gene_datums = GLOB.decls_repository.get_decls_of_subtype(/datum/decl/plantgene)
 	var/list/used_masks = list()
 	var/list/plant_traits = ALL_GENES
-	while(plant_traits && plant_traits.len)
+	while(plant_traits && length(plant_traits))
 		var/gene_tag = pick(plant_traits)
 		var/gene_mask = "[uppertext(num2hex(rand(0,255), 2))]"
 
 		while(gene_mask in used_masks)
 			gene_mask = "[uppertext(num2hex(rand(0,255), 2))]"
 
-		var/decl/plantgene/G
+		var/datum/decl/plantgene/G
 
 		for(var/D in gene_datums)
-			var/decl/plantgene/P = gene_datums[D]
+			var/datum/decl/plantgene/P = gene_datums[D]
 			if(gene_tag == P.gene_tag)
 				G = P
 				gene_datums -= D
@@ -101,7 +101,7 @@ SUBSYSTEM_DEF(plants)
 		gene_masked_list.Add(list(list("tag" = gene_tag, "mask" = gene_mask)))
 
 // Proc for creating a random seed type.
-/datum/controller/subsystem/plants/proc/create_random_seed(var/survive_on_station)
+/datum/controller/subsystem/plants/proc/create_random_seed(survive_on_station)
 	var/datum/seed/seed = new()
 	seed.randomize()
 	seed.uid = SSplants.seeds.len + 1
@@ -131,8 +131,8 @@ SUBSYSTEM_DEF(plants)
 	// Caching
 	var/list/currentrun = src.currentrun
 
-	while(currentrun.len)
-		var/obj/effect/plant/P = currentrun[currentrun.len]
+	while(length(currentrun))
+		var/obj/effect/plant/P = currentrun[length(currentrun)]
 		--currentrun.len
 		if(!P || QDELETED(P))
 			continue
@@ -141,27 +141,21 @@ SUBSYSTEM_DEF(plants)
 		if(MC_TICK_CHECK)
 			return
 
-/datum/controller/subsystem/plants/proc/add_plant(var/obj/effect/plant/plant)
+/datum/controller/subsystem/plants/proc/add_plant(obj/effect/plant/plant)
 	if(!QDELETED(plant))
 		processing |= plant
 
-/datum/controller/subsystem/plants/proc/remove_plant(var/obj/effect/plant/plant)
+/datum/controller/subsystem/plants/proc/remove_plant(obj/effect/plant/plant)
 	processing -= plant
 
 
 // Debug for testing seed genes.
-/client/proc/show_plant_genes()
-	set category = "Debug.Investigate"
-	set name = "Show Plant Genes"
-	set desc = "Prints the round's plant gene masks."
-
-	if(!check_rights_for(src, R_HOLDER))	return
-
-	if(!SSplants || !SSplants.gene_tag_masks)
-		to_chat(usr, "Gene masks not set.")
+ADMIN_VERB(show_plant_genes, R_DEBUG, "Show Plant Genes", "Prints the round's plant gene masks.", ADMIN_CATEGORY_DEBUG_INVESTIGATE)
+	if(!SSplants.initialized)
+		to_chat(user, "Gene masks not set.")
 		return
 
 	for(var/mask in SSplants.gene_tag_masks)
-		to_chat(usr, "[mask]: [SSplants.gene_tag_masks[mask]]")
+		to_chat(user, "[mask]: [SSplants.gene_tag_masks[mask]]")
 
 #undef PLANT_TICK_TIME

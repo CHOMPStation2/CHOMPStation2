@@ -64,7 +64,11 @@ GLOBAL_LIST_INIT(item_vore_blacklist, list(
 		/obj/item/areaeditor/blueprints,
 		/obj/item/clothing/head/helmet/space,
 		/obj/item/disk/nuclear,
-		/obj/item/clothing/suit/storage/hooded/wintercoat/roiz))
+		/obj/item/clothing/suit/storage/hooded/wintercoat/roiz,
+		/obj/item/bluespace_harpoon,
+		/obj/item/storage/belt/utility/chief/full,
+		/obj/item/storage/bag/circuits,
+		/obj/item/telecube))
 
 //Classic Vore sounds
 GLOBAL_LIST_INIT(classic_vore_sounds, list(
@@ -305,6 +309,7 @@ GLOBAL_LIST_INIT(edible_trash, list(/obj/item/broken_device,
 				/obj/item/flashlight,
 				/obj/item/mmi/digital/posibrain,
 				/obj/item/paicard,
+				/obj/item/paiparts,
 				/obj/item/pda,
 				/obj/item/radio/headset,
 				/obj/item/starcaster_news, //chompstation addition
@@ -331,21 +336,14 @@ GLOBAL_LIST_INIT(edible_trash, list(/obj/item/broken_device,
 				/obj/item/newspaper,
 				/obj/item/paper,
 				/obj/item/paperplane,
+				/obj/item/paper_bundle,
 				/obj/item/pen,
 				/obj/item/photo,
 				/obj/item/reagent_containers/food,
 				/obj/item/reagent_containers/glass/rag,
 				/obj/item/soap,
 				/obj/item/spacecash,
-				/obj/item/storage/box/khcrystal,
-				/obj/item/storage/box/matches,
-				/obj/item/storage/box/wings,
-				/obj/item/storage/fancy/candle_box,
-				/obj/item/storage/fancy/cigarettes,
-				/obj/item/storage/fancy/crayons,
-				/obj/item/storage/fancy/egg_box,
-				/obj/item/storage/wallet,
-				/obj/item/storage/vore_egg,
+				/obj/item/storage,
 				/obj/item/bikehorn/tinytether,
 				/obj/item/entrepreneur,
 				/obj/item/capture_crystal,
@@ -374,7 +372,8 @@ GLOBAL_LIST_INIT(edible_trash, list(/obj/item/broken_device,
 				/obj/item/clothing/ears, //chompstation addition end
 				/obj/item/roulette_ball,
 				/obj/item/pizzabox,
-				/obj/item/card/id
+				/obj/item/card/id,
+				/obj/item/text_to_speech
 				))
 
 GLOBAL_LIST_INIT(contamination_flavors, list(
@@ -1237,6 +1236,7 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 
 #define SECURITY_GRIPPER \
 	/obj/item/paper, \
+	/obj/item/paperplane, \
 	/obj/item/paper_bundle, \
 	/obj/item/pen, \
 	/obj/item/sample, \
@@ -1248,20 +1248,23 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 #define PAPERWORK_GRIPPER \
 	/obj/item/clipboard, \
 	/obj/item/paper, \
+	/obj/item/paperplane, \
 	/obj/item/paper_bundle, \
 	/obj/item/card/id, \
 	/obj/item/book, \
 	/obj/item/newspaper
 
+//Food reagent containers due to having to grind food.
 #define MEDICAL_GRIPPER \
 	/obj/item/reagent_containers/glass, \
+	/obj/item/reagent_containers/food, \
 	/obj/item/storage/pill_bottle, \
 	/obj/item/reagent_containers/pill, \
 	/obj/item/reagent_containers/blood, \
 	/obj/item/nif, \
 	/obj/item/stack/material/phoron, \
 	/obj/item/tank/anesthetic, \
-	/obj/item/disk/body_record
+	/obj/item/disk/body_record, \
 
 #define RESEARCH_GRIPPER \
 	/obj/item/cell, \
@@ -1280,7 +1283,9 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/obj/item/disposable_teleporter/slime, \
 	/obj/item/slimepotion, \
 	/obj/item/slime_extract, \
-	/obj/item/reagent_containers/food/snacks/monkeycube
+	/obj/item/reagent_containers/food/snacks/monkeycube, \
+	/obj/item/anomaly_releaser, \
+	/obj/item/research_sample
 
 #define CIRCUIT_GRIPPER \
 	/obj/item/cell/device, \
@@ -1325,7 +1330,15 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/obj/item/casino_platinum_chip, \
 	/obj/item/spacecasinocash, \
 	/obj/item/spacecasinocash_fake, \
-	/obj/item/hand
+	/obj/item/hand, \
+	/obj/item/pen, \
+	/obj/item/leash, \
+	/obj/item/paper, \
+	/obj/item/paperplane, \
+	/obj/item/paper_bundle, \
+	/obj/item/a_gift, \
+	/obj/item/remote_scene_tool, \
+
 
 #define ORGAN_GRIPPER \
 	/obj/item/organ, \

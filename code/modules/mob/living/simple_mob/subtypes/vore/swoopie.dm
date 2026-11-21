@@ -38,7 +38,7 @@
 	vore_pounce_chance = 100
 	vore_pounce_maxhealth = 200
 	has_hands = TRUE
-	adminbus_trash = TRUE //You know what, sure whatever. It's not like anyone's gonna be taking this bird on unga trips to be their gamer backpack, which kinda was the main reason for the trash eater restrictions in the first place anyway.
+	expanded_trasheat = TRUE //You know what, sure whatever. It's not like anyone's gonna be taking this bird on unga trips to be their gamer backpack, which kinda was the main reason for the trash eater restrictions in the first place anyway.
 	faction = "neutral"
 	say_list_type = /datum/say_list/swoopie
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/swoopie
@@ -47,9 +47,6 @@
 
 	var/static/list/crew_creatures = list(	/mob/living/simple_mob/protean_blob,
 											/mob/living/simple_mob/slime/promethean)
-	var/static/list/pest_creatures = list(	/mob/living/simple_mob/animal/passive/mouse,
-											/mob/living/simple_mob/animal/passive/lizard,
-											/mob/living/simple_mob/animal/passive/cockroach)
 	var/obj/item/vac_attachment/swoopie/Vac
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize(mapload)
@@ -59,13 +56,13 @@
 		init_vore()
 	Vac = new /obj/item/vac_attachment/swoopie(src)
 	if(istype(Vac))
-		Vac.output_dest = vore_selected
+		Vac.output_dest = WEAKREF(vore_selected)
 		Vac.vac_power = 3
 		Vac.vac_owner = src
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/IIsAlly(mob/living/L)
 	. = ..()
-	if(L?.type in pest_creatures) // If they're a pest, swoop no matter what!
+	if(L && HAS_TRAIT(L, TRAIT_AMBIENT_PEST_MOB)) // If they're a pest, swoop no matter what!
 		return FALSE
 	if(!.) // Outside the faction and not in friends, are they crew
 		return L?.type in crew_creatures
@@ -99,10 +96,18 @@
 	B.digest_burn = 3
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
-	B.belly_fullscreen = "VBO_trash"
-	B.belly_fullscreen_color = "#555B34"
+	B.belly_fullscreen = "VBOanim_belly9"
+	B.belly_fullscreen_color = "#202020"
 	B.sound_volume = 25
 	B.count_items_for_sprite = TRUE
+	B.show_liquids = TRUE
+	B.reagentbellymode = TRUE
+	B.reagent_mode_flags = DM_FLAG_REAGENTSDIGEST
+	B.reagentid = "biomass"
+	B.reagent_chosen = "Biomass"
+	B.reagent_name = "caustic trash-sludge"
+	B.custom_reagentcolor = "#3c3030"
+	B.reagent_touches = FALSE
 
 	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = FALSE
@@ -115,7 +120,7 @@
 	B.belly_fullscreen_color2 = "#1C1C1C"
 	B.belly_fullscreen_color3 = "#292929"
 	B.belly_fullscreen_color4 = "#CCFFFF"
-	B.belly_fullscreen = "VBO_maw8" //Swoopies have beaks!!
+	B.belly_fullscreen = "VBO_maw25" //Swoopies have beaks!!
 
 	vore_selected = B
 
@@ -123,7 +128,7 @@
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck1"
 	B.name = "vacuum hose"
-	B.autotransferlocation = "vacuum hose 2"
+	B.autotransferlocation = "upper vacuum hose"
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 100
@@ -131,8 +136,8 @@
 	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck2"
-	B.name = "vacuum hose 2"
-	B.autotransferlocation = "vacuum hose 3"
+	B.name = "upper vacuum hose"
+	B.autotransferlocation = "midway vacuum hose"
 	B.desc = "It feels very tight in here..."
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
@@ -141,8 +146,8 @@
 	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck3"
-	B.name = "vacuum hose 3"
-	B.autotransferlocation = "vacuum hose 4"
+	B.name = "midway vacuum hose"
+	B.autotransferlocation = "lower vacuum hose"
 	B.desc = "Looks like it's gonna be all downhill from here..."
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
@@ -151,7 +156,7 @@
 	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck4"
-	B.name = "vacuum hose 4"
+	B.name = "lower vacuum hose"
 	B.autotransferlocation = "Churno-Vac"
 	B.desc = "Thank you for your biofuel contribution~"
 	B.fancy_vore = 1
@@ -173,7 +178,7 @@
 	autotransferlocation = "Churno-Vac"
 	vore_verb = "suck"
 	belly_fullscreen_color = "#4d4d4d"
-	belly_fullscreen = "a_tumby"
+	belly_fullscreen = "VBOanim_gullet1"
 	human_prey_swallow_time = 1
 	nonhuman_prey_swallow_time = 1
 	autotransfer_max_amount = 2
@@ -197,9 +202,10 @@
 					L.remove_from_mob(Vac, src)
 				else
 					Vac.forceMove(src)
-		if(!Vac.output_dest)
+		var/atom/movable/vac_output = Vac.output_dest?.resolve()
+		if(!vac_output)
 			if(isbelly(vore_selected))
-				Vac.output_dest = vore_selected
+				Vac.output_dest = WEAKREF(vore_selected)
 	if(!istype(T) || !istype(Vac) || !has_AI() || Vac.loc != src || stat)
 		return
 	if(istype(T, /turf/simulated))
@@ -223,7 +229,7 @@
 	say_maybe_target = list("Pest detected?")
 	say_got_target = list("PEST DETECTED!")
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/ClickOn(var/atom/A, var/params)
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/ClickOn(atom/A, params)
 	var/list/modifiers = params2list(params)
 	if(modifiers["shift"] || modifiers["ctrl"] || modifiers["middle"] || modifiers["alt"])
 		return ..()
@@ -315,7 +321,7 @@
 			to_chat(usr, "You press a button on \the [src], [ai.swoop_pests ? "" : "de"]activating it's pest seeking routines!")
 		if("Swoop Trash")
 			ai.swoop_trash = !ai.swoop_trash // invert the option
-			to_chat(usr, "you press a button on \the [src], [ai.swoop_trash ? "" : "de"]activating it's pest seeking routines!")
+			to_chat(usr, "you press a button on \the [src], [ai.swoop_trash ? "" : "de"]activating it's trash seeking routines!")
 
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Login()
@@ -329,7 +335,7 @@
 	icon = 'icons/mob/vacpack_swoop.dmi'
 	item_state = null
 
-/obj/item/vac_attachment/swoopie/dropped(mob/user) //This should fix it sitting on the ground until the next life() tick
+/obj/item/vac_attachment/swoopie/dropped(mob/user, equipping, slot) //This should fix it sitting on the ground until the next life() tick
 	. = ..()
 	if(!vac_owner)
 		return
@@ -364,7 +370,7 @@
 
 	return ..(targets)
 
-/datum/ai_holder/simple_mob/retaliate/swoopie/find_target(var/list/possible_targets, var/has_targets_list = FALSE)
+/datum/ai_holder/simple_mob/retaliate/swoopie/find_target(list/possible_targets, has_targets_list = FALSE)
 	ai_log("find_target() : Entered.", AI_LOG_TRACE)
 	if(!hostile) // So retaliating mobs only attack the thing that hit it.
 		return null

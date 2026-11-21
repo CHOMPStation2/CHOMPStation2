@@ -1,6 +1,9 @@
 /obj/item/projectile/bullet
 	damage = 25 //seems many bullets use this value for some reason
 
+/obj/item/projectile/bullet/pistol/strong
+	damage = 40
+
 /* Old balance stuff, check the modular_chomp/zBallisticPort folder for the new stuff
 
 //These are projectiles that do not have damage defined anywhere. Gonna follow laser weapons sorta with a extra kick, 25/35/60

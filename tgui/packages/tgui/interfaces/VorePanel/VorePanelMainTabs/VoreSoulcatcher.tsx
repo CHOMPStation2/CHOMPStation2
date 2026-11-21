@@ -9,7 +9,7 @@ import {
 import type { BooleanLike } from 'tgui-core/react';
 
 import { noSelectionName } from '../constants';
-import type { abilities, DropdownEntry, soulcatcherData } from '../types';
+import type { Abilities, DropdownEntry, SoulcatcherData } from '../types';
 import { VorePanelEditToggle } from '../VorePanelElements/VorePanelCommonElements';
 import { VorePanelEditTextTabs } from '../VorePanelElements/VorePaneldEditTextTabs';
 import { VorePanelEditDropdown } from '../VorePanelElements/VorePanelEditDropdown';
@@ -22,13 +22,13 @@ import { SoulOptions } from '../VoreSoulcatcherSettings/SoulOptions';
 import { VoreAbilities } from './VoreAbilities';
 
 export const VoreSoulcatcher = (props: {
-  soulcatcher: soulcatcherData | null;
+  soulcatcher: SoulcatcherData | null;
   our_bellies: Required<{ name: string; ref: string }[]> & {
     map(
       arg0: (belly: { name: string; ref: string }) => DropdownEntry,
     ): DropdownEntry[];
   };
-  abilities: abilities;
+  abilities: Abilities;
   toggleEditMode: React.Dispatch<React.SetStateAction<boolean>>;
   editMode: boolean;
   persist_edit_mode: BooleanLike;
@@ -52,7 +52,7 @@ export const VoreSoulcatcher = (props: {
     <Section scrollable fill>
       <Stack vertical fill>
         {soulcatcher && (
-          <Stack.Item>
+          <Stack.Item grow>
             <VoreSoulcatcherSection
               soulcatcher={soulcatcher}
               overlayBellies={locationNames}
@@ -71,7 +71,7 @@ export const VoreSoulcatcher = (props: {
 };
 
 const VoreSoulcatcherSection = (props: {
-  soulcatcher: soulcatcherData;
+  soulcatcher: SoulcatcherData;
   overlayBellies: DropdownEntry[];
   toggleEditMode: React.Dispatch<React.SetStateAction<boolean>>;
   editMode: boolean;
@@ -136,15 +136,18 @@ const VoreSoulcatcherSection = (props: {
       }
     >
       {!!active && (
-        <Stack vertical>
+        <Stack fill vertical>
           <Stack.Item>
             <LabeledList>
               <LabeledList.Item label="Captured Souls">
                 <Stack align="center">
                   <Stack.Item>
                     <Dropdown
+                      searchInput
+                      styledInput
                       width="200px"
                       selected={selected_soul}
+                      displayText={selected_soul}
                       options={caught_souls}
                       onSelected={(value) =>
                         act('soulcatcher_select', {
@@ -180,6 +183,7 @@ const VoreSoulcatcherSection = (props: {
               />
               <LabeledList.Item label="Interior SFX">
                 <VorePanelEditDropdown
+                  searchInput
                   action="soulcatcher_sfx"
                   editMode={editMode}
                   options={overlayBellies}
@@ -206,11 +210,11 @@ const VoreSoulcatcherSection = (props: {
             </LabeledList>
           </Stack.Item>
           <Stack.Divider />
-          <Stack.Item>
+          <Stack.Item grow>
             <VorePanelEditTextTabs
               noHighlight
               editMode={editMode}
-              messsageOptions={sc_message_data.possible_messages}
+              messsageOptionsLeft={sc_message_data.possible_messages}
               activeTab={sc_message_data.sc_subtab}
               tabAction="change_sc_message_option"
               tooltip={sc_message_data.tooltip}

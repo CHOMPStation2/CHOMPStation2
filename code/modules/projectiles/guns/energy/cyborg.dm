@@ -2,15 +2,15 @@
 /// Some things are included in here for relevence's sake (like the dogborg blade)
 
 
-/obj/item/gun/energy/robotic/proc/gun_flag_check(var/flag_to_check) //Checks for the flag of the gun.
+/obj/item/gun/energy/robotic/proc/gun_flag_check(flag_to_check) //Checks for the flag of the gun.
 	return (borg_flags & flag_to_check)
 
-/obj/item/melee/robotic/proc/weapon_flag_check(var/flag_to_check) //Checks for the flag of the gun.
+/obj/item/melee/robotic/proc/weapon_flag_check(flag_to_check) //Checks for the flag of the gun.
 	return (borg_flags & flag_to_check)
 
 // THESE ARE OUTLIERS THAT SHOULD BE INCLUDED IN /MELEE BUT ARE SO HARDCODED THAT DOING SUCH WOULD BE A NIGHTMARE.
 // THIS LIST SHOULD BE SHORT AND ONLY INCLUDE THINGS THAT ARE ABSOLUTELY NECESSARY.
-/obj/item/pickaxe/proc/weapon_flag_check(var/flag_to_check) //Checks for the flag of the gun.
+/obj/item/pickaxe/proc/weapon_flag_check(flag_to_check) //Checks for the flag of the gun.
 	return (borg_flags & flag_to_check)
 
 
@@ -154,6 +154,8 @@
 	throwforce = 0
 	w_class = ITEMSIZE_NORMAL
 	pry = 1
+	edge = TRUE
+	sharp = TRUE
 	tool_qualities = list(TOOL_CROWBAR)
 
 /obj/item/melee/robotic/jaws/big
@@ -174,6 +176,9 @@
 	attack_verb = list("nibbled", "bit", "gnawed", "chomped", "nommed")
 	var/emagged = 0
 /obj/item/melee/robotic/jaws/small/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/mob/living/silicon/robot/R = user
 	if(R.emagged || R.emag_items)
 		emagged = !emagged
@@ -242,11 +247,11 @@
 		return TRUE
 	return null
 
-/obj/item/melee/robotic/borg_combat_shocker/attack(mob/M, mob/user)
+/obj/item/melee/robotic/borg_combat_shocker/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	deductcharge(600)
 	return ..()
 
-/obj/item/melee/robotic/borg_combat_shocker/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/robotic/borg_combat_shocker/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	if(isrobot(target))
 		return ..()
 
@@ -301,6 +306,9 @@
 	var/lcolor = "#38e541"
 
 /obj/item/melee/robotic/blade/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(active) //turning off
 		playsound(src, 'sound/weapons/saberoff.ogg', 50, 1)
 		force = 0
@@ -367,7 +375,7 @@
 	Striking a lesser robotic entity will compel it to attack you, as well.  It also does extra burn damage to robotic entities, but it does \
 	very little damage to purely organic targets."
 
-/obj/item/melee/robotic/blade/ionic/afterattack(var/atom/movable/AM, var/mob/living/user, var/proximity)
+/obj/item/melee/robotic/blade/ionic/afterattack(atom/movable/AM, mob/living/user, proximity)
 	if(istype(AM, /obj) && proximity)
 		// EMP stuff.
 		var/obj/O = AM
@@ -376,7 +384,7 @@
 		user.setClickCooldown(user.get_attack_speed(src)) // A lot of objects don't set click delay.
 	return ..()
 
-/obj/item/melee/robotic/blade/ionic/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/robotic/blade/ionic/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	. = ..()
 	if(target.isSynthetic())
 		// Do some extra damage.  Not a whole lot more since emp_act() is pretty nasty on FBPs already.
@@ -412,7 +420,6 @@
 	w_class = ITEMSIZE_NORMAL
 	drop_sound = 'sound/items/drop/metalweapon.ogg'
 	pickup_sound = 'sound/items/pickup/metalweapon.ogg'
-	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("beaten")
 	var/stunforce = 0
 	var/agonyforce = 60
@@ -440,6 +447,9 @@
 	return
 
 /obj/item/melee/robotic/baton/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	status = !status
 	to_chat(user, span_notice("[src] is now [status ? "on" : "off"]."))
 	playsound(src, "sparks", 75, 1, -1)
@@ -459,12 +469,12 @@
 		return TRUE
 	return null
 
-/obj/item/melee/robotic/baton/attack(mob/M, mob/user)
+/obj/item/melee/robotic/baton/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(status)
 		deductcharge(hitcost)
 	return ..()
 
-/obj/item/melee/robotic/baton/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/robotic/baton/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	if(isrobot(target))
 		return ..()
 
@@ -519,7 +529,7 @@
 	agonyforce = 25 // Less efficent than a regular baton.
 	attack_verb = list("poked")
 
-/obj/item/melee/robotic/baton/shocker/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/robotic/baton/shocker/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
 	..(target, user, hit_zone)
 	if(target.has_AI())
 		target.taunt(user)
@@ -535,7 +545,7 @@
 	hitcost = 48	//Less zap for less cost
 
 
-/obj/item/melee/robotic/baton/slime/attack(mob/living/L, mob/user, hit_zone)
+/obj/item/melee/robotic/baton/slime/attack(mob/living/L, mob/living/user, target_zone, attack_modifier)
 	if(!istype(L))
 		return ..()
 

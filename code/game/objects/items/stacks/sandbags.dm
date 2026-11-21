@@ -32,9 +32,9 @@
 
 	bag_material = MAT_SYNCLOTH
 
-/obj/item/stack/sandbags/Initialize(mapload, var/amt, var/bag_mat)
+/obj/item/stack/sandbags/Initialize(mapload, amt, bag_mat)
 	. = ..(mapload, amt)
-	recipes = sandbag_recipes
+	recipes = GLOB.sandbag_recipes
 	update_icon()
 	if(bag_mat)
 		bag_material = bag_mat
@@ -48,7 +48,7 @@
 
 	slowdown = round(amount / 10, 0.1)
 
-/obj/item/stack/sandbags/produce_recipe(datum/stack_recipe/recipe, var/quantity, mob/user)
+/obj/item/stack/sandbags/produce_recipe(datum/stack_recipe/recipe, quantity, mob/user)
 	var/required = quantity*recipe.req_amount
 	var/produced = min(quantity*recipe.res_amount, recipe.max_res_amount)
 
@@ -128,8 +128,9 @@
 	pass_color = TRUE
 
 	var/bag_material = MAT_CLOTH
+	custom_handling = TRUE
 
-/obj/item/stack/emptysandbag/Initialize(mapload, var/amt, var/bag_mat)
+/obj/item/stack/emptysandbag/Initialize(mapload, amt, bag_mat)
 	. = ..(mapload, amt)
 	if(bag_mat)
 		bag_material = bag_mat
@@ -138,7 +139,10 @@
 		return INITIALIZE_HINT_QDEL
 	color = M.icon_colour
 
-/obj/item/stack/emptysandbag/attack_self(var/mob/user)
+/obj/item/stack/emptysandbag/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	while(do_after(user, 1 SECOND, target = src) && can_use(1) && istype(get_turf(src), /turf/simulated/floor/outdoors))
 		use(1)
 		var/obj/item/stack/sandbags/SB = new (get_turf(src), 1, bag_material)

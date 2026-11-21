@@ -55,7 +55,7 @@
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/tie_hair)
 
-/datum/species/human/get_bodytype(var/mob/living/carbon/human/H)
+/datum/species/human/get_bodytype(mob/living/carbon/human/H)
 	return SPECIES_HUMAN
 
 /datum/species/human/vatgrown
@@ -187,21 +187,19 @@
 		)
 
 	default_emotes = list(
-		/decl/emote/human/swish,
-		/decl/emote/human/wag,
-		/decl/emote/human/sway,
-		/decl/emote/human/qwag,
-		/decl/emote/human/fastsway,
-		/decl/emote/human/swag,
-		/decl/emote/human/stopsway
+		/datum/decl/emote/human/swish,
+		/datum/decl/emote/human/wag,
+		/datum/decl/emote/human/sway,
+		/datum/decl/emote/human/qwag,
+		/datum/decl/emote/human/fastsway,
+		/datum/decl/emote/human/swag,
+		/datum/decl/emote/human/stopsway
 	)
-
-	footstep = FOOTSTEP_MOB_CLAW
 
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 	wikilink="https://wiki.chompstation13.net/index.php?title=Unathi" //CHOMPSedit: link to our wiki
 
-/datum/species/unathi/equip_survival_gear(var/mob/living/carbon/human/H)
+/datum/species/unathi/equip_survival_gear(mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
@@ -307,21 +305,25 @@
 
 	default_emotes = list(
 		//VOREStation Add
-		/decl/emote/audible/gnarl,
-		/decl/emote/audible/purr,
-		/decl/emote/audible/purrlong,
+		/datum/decl/emote/audible/gnarl,
+		/datum/decl/emote/audible/purr,
+		/datum/decl/emote/audible/purrlong,
 		//VOREStation Add End
-		/decl/emote/human/swish,
-		/decl/emote/human/wag,
-		/decl/emote/human/sway,
-		/decl/emote/human/qwag,
-		/decl/emote/human/fastsway,
-		/decl/emote/human/swag,
-		/decl/emote/human/stopsway
+		/datum/decl/emote/human/swish,
+		/datum/decl/emote/human/wag,
+		/datum/decl/emote/human/sway,
+		/datum/decl/emote/human/qwag,
+		/datum/decl/emote/human/fastsway,
+		/datum/decl/emote/human/swag,
+		/datum/decl/emote/human/stopsway
 	)
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds, /mob/living/carbon/human/proc/tie_hair)
 
-/datum/species/tajaran/equip_survival_gear(var/mob/living/carbon/human/H)
+	species_abilities = list(
+		/datum/action/cooldown/mob_cooldown/leap/tajaran
+	)
+
+/datum/species/tajaran/equip_survival_gear(mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
@@ -424,10 +426,10 @@
 		)
 
 	default_emotes = list(
-		/decl/emote/audible/warble,
-		/decl/emote/audible/lwarble,
-		/decl/emote/audible/croon,
-		/decl/emote/audible/croak
+		/datum/decl/emote/audible/warble,
+		/datum/decl/emote/audible/lwarble,
+		/datum/decl/emote/audible/croon,
+		/datum/decl/emote/audible/croak
 	)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
 
@@ -520,11 +522,11 @@
 
 
 	default_emotes = list(
-		/decl/emote/audible/chirp
+		/datum/decl/emote/audible/chirp
 	)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 
-/datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
+/datum/species/zaddat/equip_survival_gear(mob/living/carbon/human/H)
 	..()
 	if(H.wear_suit) //get rid of job labcoats so they don't stop us from equipping the Shroud
 		qdel(H.wear_suit) //if you know how to gently set it in like, their backpack or whatever, be my guest
@@ -633,27 +635,27 @@
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	default_emotes = list(
-		/decl/emote/audible/chirp,
-		/decl/emote/audible/multichirp
+		/datum/decl/emote/audible/chirp,
+		/datum/decl/emote/audible/multichirp
 	)
 
-/datum/species/diona/can_understand(var/mob/other)
+/datum/species/diona/can_understand(mob/other)
 	if(istype(other, /mob/living/carbon/alien/diona))
 		return TRUE
 	return FALSE
 
-/datum/species/diona/equip_survival_gear(var/mob/living/carbon/human/H)
+/datum/species/diona/equip_survival_gear(mob/living/carbon/human/H)
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H), slot_r_hand)
 	else
 		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H.back), slot_in_backpack)
 
-/datum/species/diona/handle_post_spawn(var/mob/living/carbon/human/H)
+/datum/species/diona/handle_post_spawn(mob/living/carbon/human/H)
 	H.gender = NEUTER
 	ADD_TRAIT(H, UNIQUE_MINDSTRUCTURE, ROUNDSTART_TRAIT)
 	return ..()
 
-/datum/species/diona/handle_death(var/mob/living/carbon/human/H)
+/datum/species/diona/handle_death(mob/living/carbon/human/H)
 
 	var/mob/living/carbon/alien/diona/S = new(get_turf(H))
 
@@ -682,7 +684,7 @@
 
 	H.visible_message(span_danger("\The [H] splits apart with a wet slithering noise!"))
 
-/datum/species/diona/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/species/diona/handle_environment_special(mob/living/carbon/human/H)
 	if(H.inStasisNow())
 		return
 
@@ -1032,7 +1034,7 @@
 	water_breather = TRUE
 	water_movement = -4 //Negates shallow. Halves deep.
 
-/datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
+/datum/species/zaddat/equip_survival_gear(mob/living/carbon/human/H)
 	.=..()
 	var/obj/item/storage/toolbox/lunchbox/survival/zaddat/L = new(get_turf(H))
 	if(H.backbag == 1)
@@ -1228,14 +1230,16 @@
 		)
 
 	default_emotes = list(
-		/decl/emote/audible/teshsqueak,
-		/decl/emote/audible/teshchirp,
-		/decl/emote/audible/teshtrill
+		/datum/decl/emote/audible/teshsqueak,
+		/datum/decl/emote/audible/teshchirp,
+		/datum/decl/emote/audible/teshtrill
 	)
 
-	footstep = FOOTSTEP_MOB_TESHARI
+	species_abilities = list(
+		/datum/action/cooldown/mob_cooldown/leap/teshari
+	)
 
-/datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
+/datum/species/teshari/equip_survival_gear(mob/living/carbon/human/H)
 	..()
 	//if(!(H.client?.prefs?.shoe_hater)) //CHOMPStation Edit. Disables shoe_hater. Un-indents below line by 1.
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
@@ -1392,6 +1396,8 @@
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot/crewkin),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right/crewkin)
 		)
+
+	species_component = list(/datum/component/radiation_effects/besk)
 
 /datum/species/crew_shadekin/get_bodytype()
 	return SPECIES_SHADEKIN
@@ -1590,7 +1596,7 @@
 
 	climb_mult = 0.75
 
-/datum/species/spider/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/species/spider/handle_environment_special(mob/living/carbon/human/H)
 	if(H.stat == DEAD) // If they're dead they won't need anything.
 		return
 
@@ -1680,7 +1686,7 @@
 	name_plural = "Xenochimeras"
 	icobase = 'icons/mob/human_races/r_xenochimera.dmi'
 	deform = 'icons/mob/human_races/r_def_xenochimera.dmi'
-	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/chimera, /datum/unarmed_attack/bite/sharp)
+	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/chimera, /datum/unarmed_attack/bite/sharp/xenochimera)
 	darksight = 8		//critters with instincts to hide in the dark need to see in the dark - about as good as tajara.
 	slowdown = -0.2		//scuttly, but not as scuttly as a tajara or a teshari.
 	brute_mod = 0.8		//About as tanky to brute as a Unathi. They'll probably snap and go feral when hurt though.
@@ -1701,6 +1707,10 @@
 		/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/carbon/human/proc/shapeshifter_reassemble)		//Xenochimera get all the special verbs since they can't select traits.
 		// CHOMPEdit: Lick Wounds Verb, reform verb
+
+	default_emotes = list(
+		/datum/decl/emote/audible/xenochimera_scream,
+	)
 
 	virus_immune = 1 // They practically ARE one.
 	min_age = 18
@@ -1724,23 +1734,10 @@
 	//primitive_form = SPECIES_MONKEY_TAJ
 
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE//Whitelisted as restricted is broken.
-	flags = NO_SLEEVE | NO_DNA | NO_INFECT // | NO_DEFIB // Dying as a chimera is, quite literally, a death sentence. Well, if it wasn't for their revive, that is. Leaving NO_DEFIB there for the future/in case reversion to old 'chimera no-defib.
+	flags = NO_SLEEVE | NO_DNA | NO_INFECT
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-
-	has_organ = list(    //Same organ list as tajarans, except for their SPECIAL BRAIN.
-		O_HEART =		/obj/item/organ/internal/heart,
-		O_LUNGS =		/obj/item/organ/internal/lungs,
-		O_VOICE =		/obj/item/organ/internal/voicebox,
-		O_LIVER =		/obj/item/organ/internal/liver,
-		O_KIDNEYS =		/obj/item/organ/internal/kidneys,
-		O_SPLEEN =		/obj/item/organ/internal/spleen,
-		O_BRAIN =		/obj/item/organ/internal/brain,
-		O_EYES =		/obj/item/organ/internal/eyes,
-		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine
-		)
 
 	flesh_color = "#AFA59E"
 	base_color 	= "#333333"
@@ -1750,7 +1747,7 @@
 
 	species_component = list(/datum/component/xenochimera)
 
-/datum/species/xenochimera/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/species/xenochimera/handle_environment_special(mob/living/carbon/human/H)
 	//Cold/pressure effects when not regenerating
 	var/datum/gas_mixture/environment = H.loc.return_air()
 	var/pressure2 = environment.return_pressure()

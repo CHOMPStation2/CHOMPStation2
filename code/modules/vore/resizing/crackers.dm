@@ -51,28 +51,25 @@
 					"What do you call a cow with no legs? Ground Beef.",
 					"Why'd the scarecrow win the Nobel prize? He was outstanding in his field.")
 
-/obj/item/cracker/attack(atom/A, mob/living/user, adjacent, params)
-	var/mob/living/carbon/human/target = A
+/obj/item/cracker/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	var/mob/living/carbon/human/target = M
 	if(!istype(target))
-		return
+		return ITEM_INTERACT_FAILURE
 	if(target.stat)
-		return
+		return ITEM_INTERACT_FAILURE
 	if(target == user)
 		to_chat(user, span_notice("You can't pull \the [src] by yourself, that would just be sad!"))
-		return
+		return ITEM_INTERACT_FAILURE
 	to_chat(user, span_notice("You offer \the [src] to \the [target] to pull and wait to see how whether they do."))
 	var/check_pull = tgui_alert(target, "\The [user] is offering to pull \the [src] with you, do you want to pull it?", "Pull Cracker", list("Yes", "No"))
 	if(!check_pull || check_pull == "No")
 		to_chat(user, span_notice("\The [target] chose not to pull \the [src]!"))
-		return
-	if(!adjacent)
-		to_chat(user, span_notice("\The [target] is not standing close enough to pull \the [src]!"))
-		return
+		return ITEM_INTERACT_FAILURE
 	var/obj/item/check_hand = user.get_active_hand()
 	if(check_hand != src)
 		to_chat(user, span_notice("\The [src] is no longer in-hand!"))
 		to_chat(target, span_notice("\The [src] is no longer in-hand!"))
-		return
+		return ITEM_INTERACT_FAILURE
 	var/mob/living/carbon/human/winner
 	var/mob/living/carbon/human/loser
 	if(!rigged)
@@ -100,7 +97,7 @@
 	winner.visible_message(span_notice("\The [winner] wins the cracker prize!"),span_notice("You win the cracker prize!"))
 	switch(prize)
 		if(SHRINKING_CRACKER)
-			winner.resize(0.25)
+			winner.resize(0.25, allow_stripping = TRUE)
 			winner.visible_message(span_bold("\The [winner]") + " shrinks suddenly!")
 		if(GROWING_CRACKER)
 			winner.resize(2)
@@ -129,7 +126,7 @@
 				spk.attach(winner)
 				playsound(T, "sparks", 50, 1)
 				anim(T,winner,'icons/mob/mob.dmi',,"phaseout",,winner.dir)
-				winner.forceMove(loser.vore_selected)
+				loser.vore_selected.nom_atom(winner)
 		if(WEALTHY_CRACKER)
 			new /obj/random/cash/huge(spawnloc)
 			new /obj/random/cash/huge(spawnloc)
@@ -142,6 +139,7 @@
 	var/obj/item/paper/cracker_joke/J = new(spawnloc)
 	J.info = joke
 	qdel(src)
+	return ITEM_INTERACT_SUCCESS
 
 /obj/item/cracker/shrinking
 	name = "shrinking bluespace cracker"

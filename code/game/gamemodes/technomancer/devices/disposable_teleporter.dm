@@ -13,7 +13,6 @@
 	var/uses = 3.0
 	w_class = ITEMSIZE_TINY
 	item_state = "paper"
-	origin_tech = list(TECH_BLUESPACE = 4, TECH_POWER = 3)
 
 //This one is what the wizard starts with.  The above is a better version that can be purchased.
 /obj/item/disposable_teleporter/free
@@ -26,7 +25,10 @@
 	. = ..()
 	. += "[uses] uses remaining."
 
-/obj/item/disposable_teleporter/attack_self(mob/user as mob)
+/obj/item/disposable_teleporter/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!uses)
 		to_chat(user, span_danger("\The [src] has ran out of uses, and is now useless to you!"))
 		return

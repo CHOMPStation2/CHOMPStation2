@@ -13,15 +13,13 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 	see_in_dark = 3
-	melee_damage_lower = 16 //6.25 hits unarmored.
-	melee_damage_upper = 16 //Rng numbers are wierd
+	melee_damage_lower = 12
+	melee_damage_upper = 12
 	attack_sharp = TRUE
 	attack_edge = 1
 
-	meat_amount = 3
-	meat_type = /obj/item/reagent_containers/food/snacks/tyrant
-
-	tame_items = list(/obj/item/reagent_containers/food/snacks/crabmeat = 20)
+	meat_amount = 7
+	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_shock
 
 	faction = FACTION_TYR_ANT
 
@@ -32,6 +30,10 @@
 	tame_items = list(
 	/obj/item/reagent_containers/food/snacks/jellyfishcore = 70
 	)
+
+	harvest_tool = /obj/item/weldingtool
+	harvest_cooldown = 10 MINUTES
+	harvest_delay = 30 SECONDS
 
 	//I know very little of this
 	swallowTime = 3 SECONDS
@@ -59,16 +61,6 @@
 	B.absorbchance = 0
 	B.escapechance = 25
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/bronze //knock back ant
-	name = "bronze metal ant"
-	icon_state = "bronze_ant"
-	icon_living = "bronze_ant"
-	butchery_loot = list(\
-		/obj/item/stack/material/bronze = 18\
-		)
-	meat_amount = 3
-	meat_type = /obj/item/reagent_containers/food/snacks/bronzeant
-
 /mob/living/simple_mob/animal/tyr/mineral_ants/bronze/apply_melee_effects(atom/A)
 	..()
 
@@ -92,12 +84,11 @@
 	butchery_loot = list(\
 		/obj/item/stack/material/copper = 18\
 		)
+	harvest_results = list(
+		/obj/item/stack/material/copper = 10
+		)
 	meat_amount = 3
-	meat_type = /obj/item/reagent_containers/food/snacks/copperant
-
-	special_attack_min_range = 0
-	special_attack_max_range = 2
-	special_attack_cooldown = 10 SECONDS
+	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_burn
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/copper/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
@@ -113,15 +104,40 @@
 	butchery_loot = list(\
 		/obj/item/stack/material/weathered_agate = 18\
 		)
+	harvest_results = list(
+		/obj/item/stack/material/weathered_agate = 10
+		)
 	meat_amount = 3
-	meat_type = /obj/item/reagent_containers/food/snacks/agateant
+	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_bonus
 
 	special_attack_min_range = 0
-	special_attack_max_range = 2
+	special_attack_max_range = 4
 	special_attack_cooldown = 10 SECONDS
 
+	color = "#FF7D51"
+	glow_range = 5
+	glow_intensity = 2
+	glow_toggle = TRUE
+	var/exploded = FALSE
+	var/explosion_delay_lower	= 3 SECOND	// Lower bound for explosion delay.
+	var/explosion_delay_upper	= 4 SECONDS	// Upper bound.
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/agate/proc/explode()
+	if(src && !exploded)
+		visible_message(span_danger("\The [src]'s body detonates!"))
+		exploded = TRUE
+		explosion(src.loc, 0, 3, 0, 0)
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/agate/death()
+	visible_message(span_critical("\The [src]'s body begins to rupture!"))
+	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
+	animate(src, color = "#000000", time = 0.1 SECONDS, loop = ceil(delay/2))
+	animate(color = "#FF0000", time = 0.1 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(explode)), delay, TIMER_DELETE_ME)
+	return ..()
+
 /mob/living/simple_mob/animal/tyr/mineral_ants/agate/do_special_attack(atom/A)
-	explosion(src.loc, 2, 1, 1, 1)
+	adjustBruteLoss(30)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/quartz //irl quartz is apparently tough?
 	name = "quartz metal ant"
@@ -131,19 +147,11 @@
 	butchery_loot = list(\
 		/obj/item/stack/material/quartz = 18\
 		)
-	meat_amount = 3
-	meat_type = /obj/item/reagent_containers/food/snacks/quartzant
-
-/mob/living/simple_mob/animal/tyr/mineral_ants/painite
-	name = "painite metal ant"
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
-	icon_state = "painite_ant"
-	icon_living = "painite_ant"
-	butchery_loot = list(\
-		/obj/item/stack/material/painite = 18\
+	harvest_results = list(
+		/obj/item/stack/material/quartz = 10
 		)
 	meat_amount = 3
-	meat_type = /obj/item/reagent_containers/food/snacks/painiteant
+	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_radiation
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/diamond //slower, tankier, more damage
 	name = "diamond metal ant"
@@ -154,8 +162,12 @@
 	melee_damage_lower = 24
 	melee_damage_upper = 24
 	movement_cooldown = 3
+	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_neoburn
 	butchery_loot = list(\
 		/obj/item/stack/material/diamond = 18\
+		)
+	harvest_results = list(
+		/obj/item/stack/material/diamond = 10
 		)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/verdantium
@@ -163,50 +175,126 @@
 	evasion = 50
 	icon_state = "verdantium_ant"
 	icon_living = "verdantium_ant"
+	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_radiation
 	butchery_loot = list(\
 		/obj/item/stack/material/verdantium = 18\
+		)
+	harvest_results = list(
+		/obj/item/stack/material/verdantium = 10
 		)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/uranium //if it melees, it unleashes rads
 	name = "glowing metal ant"
 	icon_state = "rad_ant"
 	icon_living = "rad_ant"
+	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_radiation
 	butchery_loot = list(\
 		/obj/item/stack/material/uranium = 18\
 		)
-
+	harvest_results = list(
+		/obj/item/stack/material/uranium = 10
+		)
 	special_attack_min_range = 1
 	special_attack_max_range = 2
 	special_attack_cooldown = 5 SECONDS
 
+	color = "#91FF91"
+	glow_range = 5
+	glow_intensity = 2
+	glow_toggle = TRUE
+
 /mob/living/simple_mob/animal/tyr/mineral_ants/uranium/do_special_attack(atom/A)
 	visible_message(span_bolddanger(span_orange("The ant glows bright green!.")))
-	SSradiation.radiate(src, 15)
+	radiation_pulse(
+		src,
+		max_range = 3,
+		threshold = RAD_MEDIUM_INSULATION,
+		chance = 100,
+		strength = 15
+	)
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/tritium
-	name = "tritium ant"
-	icon_state = "tritium_ant"
-	icon_living = "tritium_ant"
-	butchery_loot = list(\
-		/obj/item/stack/material/tritium = 18\
-		)
-
-/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro //secondary spawner
+/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro //smol
 	name = "mhydro ant"
 	icon_state = "mhydro_ant"
 	icon_living = "mhydro_ant"
+	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_radiation
 	butchery_loot = list(\
-		/obj/item/stack/material/mhydrogen = 6\
+		/obj/item/stack/material/mhydrogen = 12\
+		)
+	harvest_results = list(
+		/obj/item/stack/material/mhydrogen = 4
 		)
 	size_multiplier = 0.5
-	movement_cooldown = -1
+	mob_size = MOB_MINISCULE
+	pass_flags = PASSTABLE
+	layer = MOB_LAYER
+	density = 0
+	melee_damage_lower = 6
+	melee_damage_upper = 6
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/painite //flames
+	name = "painite metal ant"
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+	icon_state = "painite_ant"
+	icon_living = "painite_ant"
+	butchery_loot = list(\
+		/obj/item/stack/material/painite = 18\
+		)
+	harvest_results = list(
+		/obj/item/stack/material/painite = 10
+		)
+	meat_amount = 3
+	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_neoburn
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/painite/apply_melee_effects(atom/A)
+	..()
+	if(isliving(A))
+		var/mob/living/L = A
+		to_chat(L, span_danger("You've been burned by \the [src]!"))
+		L.ignite_mob()
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/bronze //spawns a legion
+	name = "bronze metal ant"
+	icon_state = "bronze_ant"
+	icon_living = "bronze_ant"
+	butchery_loot = list(\
+		/obj/item/stack/material/bronze = 18\
+		)
+	harvest_results = list(
+		/obj/item/stack/material/bronze = 10
+		)
+	meat_amount = 3
+
+	special_attack_min_range = 1
+	special_attack_max_range = 7
+	special_attack_cooldown = 10 SECONDS
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/bronze/do_special_attack(atom/A)
+	for(var/mob/living/L in orange(src, 7))
+		if(IIsAlly(L))
+			L.add_modifier(/datum/modifier/technomancer/haste, 3, src)
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/graphite //nothing special here
+	name = "graphite ant"
+	icon_state = "graphite_ant"
+	icon_living = "graphite_ant"
+	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_neoburn
+	butchery_loot = list(\
+		/obj/item/stack/material/graphite = 18\
+		)
+	harvest_results = list(
+		/obj/item/stack/material/graphite = 10
+		)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/builder
-	name = "concrete ant"
+	name = "tritium ant"
 	icon_state = "builder_ant"
 	icon_living = "builder_ant"
 	butchery_loot = list(\
-		/obj/item/stack/material/concrete = 6\
+		/obj/item/stack/material/tritium = 18\
+		)
+	harvest_results = list(
+		/obj/item/stack/material/tritium = 10
 		)
 	nutrition = 150
 	var/build_type = /obj/random/ant_building
@@ -243,6 +331,48 @@
 	set_AI_busy(FALSE)
 	new build_type(T)
 	return TRUE
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/silver //transparent
+	name = "silver ant"
+	icon_state = "silver_ant"
+	icon_living = "silver_ant"
+	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_neoburn
+	butchery_loot = list(\
+		/obj/item/stack/material/silver = 18\
+		)
+	harvest_results = list(
+		/obj/item/stack/material/silver = 10
+		)
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/gold //emp on death
+	name = "gold ant"
+	icon_state = "gold_ant"
+	icon_living = "gold_ant"
+	desc = "A large ant with a metallic golden rear end. Is crackling with lightning."
+	meat_type = /obj/item/reagent_containers/food/snacks/tyrant_burn
+	butchery_loot = list(\
+		/obj/item/stack/material/gold = 18\
+		)
+	harvest_results = list(
+		/obj/item/stack/material/gold = 10
+		)
+	var/exploded = FALSE
+	var/explosion_delay_lower	= 4 SECOND	// Lower bound for explosion delay.
+	var/explosion_delay_upper	= 5 SECONDS	// Upper bound.
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/gold/proc/explode()
+	if(src && !exploded)
+		visible_message(span_danger("\The [src]'s body detonates!"))
+		exploded = TRUE
+		empulse(src, 1, 2, 0, 0)
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/gold/death()
+	visible_message(span_critical("\The [src]'s body begins to rupture!"))
+	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
+	animate(src, color = "#000000", time = 0.1 SECONDS, loop = ceil(delay/2))
+	animate(color = "#FF0000", time = 0.1 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(explode)), delay, TIMER_DELETE_ME)
+	return ..()
 
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/queen //the nurses of the ants
@@ -301,7 +431,7 @@ ANT STRUCTURES
 	icon_state = "hole"
 	anchored = TRUE
 
-	spawn_delay = 10 MINUTES
+	spawn_delay = 15 MINUTES
 
 	spawn_types = list(
 	/mob/living/simple_mob/animal/tyr/mineral_ants/bronze = 1,
@@ -312,16 +442,20 @@ ANT STRUCTURES
 	/mob/living/simple_mob/animal/tyr/mineral_ants/painite = 1,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/diamond = 1,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/verdantium = 1,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/tritium = 1,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/uranium = 1,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro = 1
+	/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro = 1,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/graphite = 1,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/silver = 1,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/gold = 1,
 	)
 
-	simultaneous_spawns = 3
+	simultaneous_spawns = 5
 
 	destructible = 1
 	health = 50 //Unsure why you would want to break it but you can
 
+/obj/structure/mob_spawner/ant_hill/creatable
+	simultaneous_spawns = 2
 
 /obj/effect/ant_structure
 	name = "organic structure"
@@ -332,7 +466,7 @@ ANT STRUCTURES
 	density = FALSE
 	var/health = 15 //1 thwack with sword, 2 with spear
 
-/obj/effect/ant_structure/attackby(var/obj/item/W, var/mob/user)
+/obj/effect/ant_structure/attackby(obj/item/W, mob/user)
 	user.setClickCooldown(user.get_attack_speed(W))
 
 	if(LAZYLEN(W.attack_verb))
@@ -353,7 +487,7 @@ ANT STRUCTURES
 	healthcheck()
 
 
-/obj/effect/ant_structure/bullet_act(var/obj/item/projectile/Proj)
+/obj/effect/ant_structure/bullet_act(obj/item/projectile/Proj)
 	..()
 	health -= Proj.get_structure_damage()
 	healthcheck()
@@ -400,6 +534,29 @@ ANT STRUCTURES
 	icon_state = "slow_trap"
 	modifiertype = /datum/modifier/chilled
 
+/obj/effect/ant_structure/trap/confusion
+	icon_state = "confusion_trap"
+	//No modifier.
+
+/obj/effect/ant_structure/trap/confusion/attack_mob(mob/living/L)
+	playsound(src, 'sound/effects/ghost2.ogg', 20, 1)
+	if(L.get_ear_protection() == 0)
+		L.Confuse(10)
+
+/obj/effect/ant_structure/trap/poison
+	icon_state = "knock_trap"
+
+/obj/effect/ant_structure/trap/poison/attack_mob(mob/living/L)
+	to_chat(L, span_warning("You feel a sharp stabbing in your foot."))
+	L.reagents.add_reagent(REAGENT_ID_STOXIN, 12)
+
+
+/obj/effect/ant_structure/trap/trip
+	icon_state = "trip_trap"
+
+/obj/effect/ant_structure/trap/poison/attack_mob(mob/living/L)
+	L.Weaken(3)
+
 /obj/effect/ant_structure/wall
 	name = "Metant wall"
 	icon_state = "wall"
@@ -412,9 +569,12 @@ ANT STRUCTURES
 	icon_state = "tool"
 
 /obj/random/ant_building/item_to_spawn()
-	return pick(/obj/effect/ant_structure/wall,
+	return pick(/obj/effect/ant_structure/trap/poison,
 				/obj/effect/ant_structure/trap/burn,
-				/obj/effect/ant_structure/trap/slowdown)
+				/obj/effect/ant_structure/trap/slowdown,
+				/obj/effect/ant_structure/trap/confusion,
+				/obj/effect/ant_structure/trap/trip,
+				/obj/structure/mob_spawner/ant_hill/creatable)
 
 
 /obj/effect/spider/spiderling/antling
@@ -433,22 +593,12 @@ ANT STRUCTURES
 	/mob/living/simple_mob/animal/tyr/mineral_ants/painite,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/diamond,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/verdantium,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/tritium,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/uranium,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro)
+	/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/graphite,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/silver,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/gold)
 	faction = FACTION_TYR_ANT
 
-/obj/effect/ant_structure/webbarrier
-	name = "weblike barrier"
-	icon_state = "web"
-
-/obj/effect/ant_structure/webbarrier/CanPass(atom/movable/mover, turf/target)
-	if(istype(mover, /mob/living/simple_mob/animal/tyr/mineral_ants))
-		return TRUE
-	else if(istype(mover, /mob/living))
-		if(prob(80))
-			to_chat(mover, span_warning("You get stuck in \the [src] for a moment."))
-			return FALSE
-	else if(istype(mover, /obj/item/projectile))
-		return prob(30)
-	return TRUE
+/obj/effect/spider/spiderling/antling/created
+	faction = FACTION_TYR

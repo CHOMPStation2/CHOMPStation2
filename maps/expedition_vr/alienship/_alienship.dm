@@ -139,7 +139,7 @@
 
 		did_entry = TRUE
 
-/area/shuttle/excursion/away_alienship/proc/abduct(var/mob/living/mob)
+/area/shuttle/excursion/away_alienship/proc/abduct(mob/living/mob)
 	if(isliving(mob))
 		var/mob/living/L = mob
 
@@ -168,6 +168,7 @@
 					abduct(M)
 				L.drop_from_inventory(I, loc)
 		L.Paralyse(10)
+		L.Sleeping(10)
 		L.forceMove(get_turf(pick(teleport_to)))
 		L << 'sound/effects/bamf.ogg'
 		to_chat(L,span_warning("You're starting to come to. You feel like you've been out for a few minutes, at least..."))

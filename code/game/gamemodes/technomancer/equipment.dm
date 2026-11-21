@@ -161,7 +161,6 @@
 	across physical barriers."
 	icon_state = "uzenwa_sissra_1"
 	actions_types = list(/datum/action/item_action/toggle_goggles)
-	origin_tech = list(TECH_MAGNET = 6, TECH_ENGINEERING = 6)
 	toggleable = 1
 	vision_flags = SEE_TURFS|SEE_MOBS|SEE_OBJS
 	prescription = TRUE // So two versions of these aren't needed.
@@ -191,6 +190,9 @@
 	attack_verb = list("beaten", "smashed", "struck", "whacked")
 
 /obj/item/scepter/attack_self(mob/living/carbon/human/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/obj/item/item_to_test = user.get_other_hand(src)
 	if(istype(item_to_test, /obj/item/spell))
 		var/obj/item/spell/S = item_to_test

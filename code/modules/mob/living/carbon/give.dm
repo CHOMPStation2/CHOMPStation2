@@ -1,10 +1,10 @@
-/mob/living/verb/give(var/mob/living/target in living_mobs_in_view(1))
+/mob/living/verb/give(mob/living/target in living_mobs_in_view(1))
 	set category = "IC.Game"
 	set name = "Give"
 
 	do_give(target)
 
-/mob/living/proc/do_give(var/mob/living/carbon/human/target)
+/mob/living/proc/do_give(mob/living/carbon/human/target)
 
 	if(src.incapacitated())
 		return
@@ -16,6 +16,13 @@
 		I = src.get_inactive_hand()
 	if(!I)
 		to_chat(src, span_warning("You don't have anything in your hands to give to \the [target]."))
+		return
+
+	if(istype(I, /obj/item/grab)) // Drop grabs, this is an edge case
+		var/obj/item/grab/check_grab = I
+		if(check_grab.affecting)
+			visible_message(span_danger("\The [src] breaks their grip on [check_grab.affecting]!"))
+		drop_from_inventory(check_grab)
 		return
 
 	src.visible_message(span_notice("\The [src] holds out \the [I] to \the [target]."), span_notice("You hold out \the [I] to \the [target], waiting for them to accept it."))

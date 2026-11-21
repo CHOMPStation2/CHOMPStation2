@@ -4,19 +4,18 @@
 	icon = 'icons/obj/assemblies/new_assemblies.dmi'
 	icon_state = ""
 	w_class = ITEMSIZE_SMALL
-	matter = list(MAT_STEEL = 100)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.05))
 	throwforce = 2
 	throw_speed = 3
 	throw_range = 10
 	drop_sound = 'sound/items/drop/component.ogg'
 	pickup_sound =  'sound/items/pickup/component.ogg'
-	origin_tech = list(TECH_MAGNET = 1)
 
 	var/secured = 1
 	var/list/attached_overlays = null
 	var/obj/item/assembly_holder/holder = null
 	var/cooldown = FALSE //To prevent spam
-	var/wires = WIRE_RECEIVE | WIRE_PULSE
+	var/wires_type = WIRE_RECEIVE | WIRE_PULSE
 
 	var/const/WIRE_RECEIVE = 1			//Allows Pulsed(0) to call Activate()
 	var/const/WIRE_PULSE = 2				//Allows Pulse(0) to act on the holder
@@ -24,33 +23,33 @@
 	var/const/WIRE_RADIO_RECEIVE = 8		//Allows Pulsed(1) to call Activate()
 	var/const/WIRE_RADIO_PULSE = 16		//Allows Pulse(1) to send a radio message
 
+	///var used for attack_self chain
+	var/special_handling = FALSE
+
+	COOLDOWN_DECLARE(next_activate)
+	var/activation_cooldown = 3 SECONDS
+
 /obj/item/assembly/proc/holder_movement()
 	return
 
-/obj/item/assembly/proc/process_cooldown()
-	if(cooldown)
-		return FALSE
-	cooldown = TRUE
-	VARSET_IN(src, cooldown, FALSE, 2 SECONDS)
-	return TRUE
-
-/obj/item/assembly/proc/pulsed(var/radio = 0)
-	if(holder && (wires & WIRE_RECEIVE))
+/obj/item/assembly/proc/pulsed(radio = 0)
+	if(holder && (wires_type & WIRE_RECEIVE))
 		activate()
-	if(radio && (wires & WIRE_RADIO_RECEIVE))
+	if(radio && (wires_type & WIRE_RADIO_RECEIVE))
 		activate()
 	return 1
 
-/obj/item/assembly/proc/pulse(var/radio = 0)
-	if(holder && (wires & WIRE_PULSE))
+/obj/item/assembly/proc/pulse(radio = 0)
+	if(holder && (wires_type & WIRE_PULSE))
 		holder.process_activation(src, 1, 0)
-	if(holder && (wires & WIRE_PULSE_SPECIAL))
+	if(holder && (wires_type & WIRE_PULSE_SPECIAL))
 		holder.process_activation(src, 0, 1)
 	return 1
 
 /obj/item/assembly/proc/activate()
-	if(!secured || !process_cooldown())
+	if(QDELETED(src) || !secured || !COOLDOWN_FINISHED(src, next_activate))
 		return FALSE
+	COOLDOWN_START(src, next_activate, activation_cooldown)
 	return TRUE
 
 /obj/item/assembly/proc/toggle_secure()
@@ -58,7 +57,7 @@
 	update_icon()
 	return secured
 
-/obj/item/assembly/proc/attach_assembly(var/obj/item/assembly/A, var/mob/user)
+/obj/item/assembly/proc/attach_assembly(obj/item/assembly/A, mob/user)
 	holder = new/obj/item/assembly_holder(get_turf(src))
 	if(holder.attach(A,src,user))
 		to_chat(user, span_notice("You attach \the [A] to \the [src]!"))
@@ -89,11 +88,15 @@
 		else
 			. += "\The [src] can be attached!"
 
-/obj/item/assembly/attack_self(mob/user as mob)
+/obj/item/assembly/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
 	if(!user)
-		return 0
+		return FALSE
 	tgui_interact(user)
-	return 1
 
 /obj/item/assembly/tgui_state(mob/user)
 	return GLOB.tgui_deep_inventory_state

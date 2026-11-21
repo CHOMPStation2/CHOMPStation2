@@ -7,8 +7,7 @@
 	w_class = ITEMSIZE_SMALL
 	item_state = "electronic"
 	actions_types = list(/datum/action/item_action/toggle_uv_light)
-	matter = list(MAT_STEEL = 150)
-	origin_tech = list(TECH_MAGNET = 1, TECH_ENGINEERING = 1)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.075))
 
 	var/list/scanned = list()
 	var/list/stored_alpha = list()
@@ -20,7 +19,10 @@
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
 
-/obj/item/uv_light/attack_self(var/mob/user)
+/obj/item/uv_light/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	on = !on
 	if(on)
 		set_light(range, 2, "#007fff")

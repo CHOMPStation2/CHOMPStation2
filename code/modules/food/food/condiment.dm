@@ -11,22 +11,21 @@
 	icon = 'icons/obj/food.dmi'
 	icon_state = "emptycondiment"
 	flags = OPENCONTAINER
+	min_transfer_amount = 1
+	amount_per_transfer_from_this = 2
 	max_transfer_amount = 10
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 	volume = 50
 
-/obj/item/reagent_containers/food/condiment/attackby(var/obj/item/W as obj, var/mob/user as mob)
+/obj/item/reagent_containers/food/condiment/attackby(obj/item/W as obj, mob/user as mob)
 	return
 
-/obj/item/reagent_containers/food/condiment/attack_self(var/mob/user as mob)
-	return
-
-/obj/item/reagent_containers/food/condiment/attack(var/mob/M as mob, var/mob/user as mob, var/def_zone)
+/obj/item/reagent_containers/food/condiment/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(standard_feed_mob(user, M))
 		return
 
-/obj/item/reagent_containers/food/condiment/afterattack(var/obj/target, var/mob/user, var/flag)
+/obj/item/reagent_containers/food/condiment/afterattack(obj/target, mob/user, flag)
 	if(!user.Adjacent(target))
 		return
 	if(standard_dispenser_refill(user, target))
@@ -48,10 +47,10 @@
 	else
 		..()
 
-/obj/item/reagent_containers/food/condiment/feed_sound(var/mob/user)
+/obj/item/reagent_containers/food/condiment/feed_sound(mob/user)
 	playsound(src, 'sound/items/drink.ogg', rand(10, 50), 1)
 
-/obj/item/reagent_containers/food/condiment/self_feed_message(var/mob/user)
+/obj/item/reagent_containers/food/condiment/self_feed_message(mob/user)
 	to_chat(user, span_notice("You swallow some of contents of \the [src]."))
 
 /obj/item/reagent_containers/food/condiment/on_reagent_change()
@@ -102,7 +101,7 @@
 			if(REAGENT_ID_SODIUMCHLORIDE)
 				name = "Salt Shaker"
 				desc = "Salt. From space oceans, presumably."
-				icon_state = "saltshaker"
+				icon_state = "saltshakersmall"
 				center_of_mass_x = 17
 				center_of_mass_y = 11
 			if(REAGENT_ID_BLACKPEPPER)
@@ -240,6 +239,10 @@
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SPRINKLES, 50)
 
+/obj/item/reagent_containers/food/condiment/barbeque/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(REAGENT_ID_BARBECUE, 50)
+
 /obj/item/reagent_containers/food/condiment/small
 	max_transfer_amount = 20
 	min_transfer_amount = 1
@@ -286,7 +289,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/sugar
 	name = REAGENT_ID_SUGAR
-	desc = "Sweetness in a bottle"
+	desc = "Sweetness in a bottle."
 	icon_state = "sugarsmall"
 
 /obj/item/reagent_containers/food/condiment/small/sugar/Initialize(mapload)
@@ -494,6 +497,7 @@
 	volume = 220
 	center_of_mass_x = 16
 	center_of_mass_y = 8
+	amount_per_transfer_from_this = 5
 
 /obj/item/reagent_containers/food/condiment/carton/flour/on_reagent_change()
 	update_icon()
@@ -526,6 +530,7 @@
 	volume = 120
 	center_of_mass_x = 16
 	center_of_mass_y = 8
+	amount_per_transfer_from_this = 5
 
 /obj/item/reagent_containers/food/condiment/carton/sugar/on_reagent_change()
 	update_icon()

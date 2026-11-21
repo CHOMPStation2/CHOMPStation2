@@ -10,11 +10,13 @@
 // code for exact logic. Inaprovaline is intended to suppress withdrawl effects. Reagents may override the handle_addiction proc to have their own special handling. Like reagents that kill you if you
 // do not feed their withdrawls. The handle_addiction proc also handles if you become cured of your addiction! If it returns 0, it will end your addiction.
 
-#define ADDICTION_PROC -4000
-#define SLOWADDICT_PROC -8000
-#define FASTADDICT_PROC -1000
+// CHOMPEdit Start - Faster addictions
+#define SLOWADDICT_PROC -1750
+#define ADDICTION_PROC -1000
+#define FASTADDICT_PROC -750
 #define POISONADDICT_PROC -100
-#define ADDICTION_PEAK 300
+#define ADDICTION_PEAK 250
+// CHOMPEdit End
 
 /mob/living/carbon/proc/sync_addictions()
 	SHOULD_NOT_OVERRIDE(TRUE)
@@ -117,7 +119,7 @@
 			LAZYREMOVE(addictions,C)
 			LAZYREMOVE(addiction_counters,C)
 
-/mob/living/carbon/proc/addict_to_reagent(var/reagentid, var/round_start)
+/mob/living/carbon/proc/addict_to_reagent(reagentid, round_start)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(isSynthetic()) // Should this be allowed? I guess you can roleplay Bender as an FBP? Trait in the future?
@@ -130,7 +132,7 @@
 		LAZYADD(addictions,reagentid)
 	LAZYSET(addiction_counters,reagentid,ADDICTION_PEAK)
 
-/mob/living/carbon/proc/get_addiction_to_reagent(var/reagentid) // returns counter's value or 0
+/mob/living/carbon/proc/get_addiction_to_reagent(reagentid) // returns counter's value or 0
 	SHOULD_NOT_OVERRIDE(TRUE)
 	return LAZYACCESS(addiction_counters,reagentid)
 

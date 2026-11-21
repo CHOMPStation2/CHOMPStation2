@@ -1,12 +1,12 @@
 GLOBAL_LIST_EMPTY(widelists)
 
-/proc/widelist(var/list/input_list)
+/proc/widelist(list/input_list)
 	var/list_hash = gen_hash_list(input_list)
 	if(!(list_hash in GLOB.widelists))
 		GLOB.widelists[list_hash] = input_list
 	return GLOB.widelists[list_hash]
 
-/proc/gen_hash_list(var/list/input_list)
+/proc/gen_hash_list(list/input_list)
 	var/string = ""
 	for(var/item in input_list)
 		var/p1 = ""

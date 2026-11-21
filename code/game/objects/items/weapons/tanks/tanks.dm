@@ -1,6 +1,6 @@
 #define TANK_IDEAL_PRESSURE 1015 //Arbitrary.
 
-var/list/global/tank_gauge_cache = list()
+GLOBAL_LIST_EMPTY(tank_gauge_cache)
 
 /obj/item/tank
 	name = "tank"
@@ -209,7 +209,10 @@ var/list/global/tank_gauge_cache = list()
 
 
 
-/obj/item/tank/attack_self(mob/user as mob)
+/obj/item/tank/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return
 	add_fingerprint(user)
 	if (!(src.air_contents))
 		return
@@ -283,7 +286,7 @@ var/list/global/tank_gauge_cache = list()
 
 	add_fingerprint(ui.user)
 
-/obj/item/tank/proc/toggle_valve(var/mob/user)
+/obj/item/tank/proc/toggle_valve(mob/user)
 	if(istype(loc,/mob/living/carbon))
 		var/mob/living/carbon/location = loc
 		if(location.internal == src)
@@ -374,9 +377,9 @@ var/list/global/tank_gauge_cache = list()
 	cut_overlays()
 	add_bomb_overlay()
 	var/indicator = "[gauge_icon][(gauge_pressure == -1) ? "overload" : gauge_pressure]"
-	if(!tank_gauge_cache[indicator])
-		tank_gauge_cache[indicator] = image(icon, indicator)
-	add_overlay(tank_gauge_cache[indicator])
+	if(!GLOB.tank_gauge_cache[indicator])
+		GLOB.tank_gauge_cache[indicator] = image(icon, indicator)
+	add_overlay(GLOB.tank_gauge_cache[indicator])
 
 
 
@@ -507,9 +510,10 @@ var/list/global/tank_gauge_cache = list()
 				log_world(span_warning("[x],[y] tank is leaking: [pressure] kPa, integrity [integrity]"))
 				#endif
 
-
+		/* //This resulted in tanks going into negative values of integrity forever. Integrity should only be lost if the tank is moving towards exploding.
 		else
 			integrity-= 1
+		*/
 
 
 	else
@@ -534,7 +538,7 @@ var/list/global/tank_gauge_cache = list()
 ///Onetankbombs (added as actual items)
 /////////////////////////////////
 
-/obj/item/tank/proc/onetankbomb(var/fill = 1)
+/obj/item/tank/proc/onetankbomb(fill = 1)
 	var/phoron_amt = 4 + rand(4)
 	var/oxygen_amt = 6 + rand(8)
 
@@ -563,11 +567,11 @@ var/list/global/tank_gauge_cache = list()
 	add_overlay("bomb_assembly")
 
 
-/obj/item/tank/phoron/onetankbomb/Initialize(mapload, var/amount = 1)
+/obj/item/tank/phoron/onetankbomb/Initialize(mapload, amount = 1)
 	. = ..()
 	onetankbomb(amount)
 
-/obj/item/tank/oxygen/onetankbomb/Initialize(mapload, var/amount = 1)
+/obj/item/tank/oxygen/onetankbomb/Initialize(mapload, amount = 1)
 	. = ..()
 	onetankbomb(amount)
 
@@ -593,6 +597,7 @@ var/list/global/tank_gauge_cache = list()
 	desc = "Used as a stand in to trigger single tank assemblies... but you shouldn't see this."
 	var/obj/item/tank/tank = null
 	var/obj/item/assembly_holder/assembly = null
+	item_flags = ABSTRACT
 
 
 /obj/item/tankassemblyproxy/receive_signal()	//This is mainly called by the sensor through sense() to the holder, and from the holder to here.

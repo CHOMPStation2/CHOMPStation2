@@ -78,6 +78,9 @@
 	can_be_drop_prey = FALSE
 	allow_mind_transfer = TRUE
 
+	export_research_value = TECHWEB_TIER_1_POINTS
+	export_research_diminished_max = 3
+
 /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi
 	name = "corrupt corrupt hound"
 	desc = "Bad boy machine broke as well. Seems an attempt was made to achieve a less threatening look, and this one is definitely having some conflicting feelings about it."
@@ -98,7 +101,7 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/speech_bubble_appearance()
 	return "synthetic_evil"
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/vore/aggressive/corrupthound/apply_melee_effects(atom/A)
 	if(ismouse(A))
 		var/mob/living/simple_mob/animal/passive/mouse/mouse = A
 		if(mouse.getMaxHealth() < 20) // In case a badmin makes giant mice or something.
@@ -123,7 +126,7 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/MouseDrop_T(mob/living/M, mob/living/user)
 	return
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/space/Process_Spacemove(var/check_drift = 0)
+/mob/living/simple_mob/vore/aggressive/corrupthound/space/Process_Spacemove(check_drift = 0)
 	return TRUE
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/load_default_bellies()
@@ -236,15 +239,15 @@
 //Synth emotes for the (broken) synth hounds.
 /mob/living/simple_mob/vore/aggressive/corrupthound/get_available_emotes()
 	. = ..()
-	. += /decl/emote/audible/synth
-	. += /decl/emote/audible/synth/beep
-	. += /decl/emote/audible/synth/buzz
-	. += /decl/emote/audible/synth/confirm
-	. += /decl/emote/audible/synth/deny
-	. += /decl/emote/audible/synth/scary
-	. += /decl/emote/audible/synth/dwoop
-	. += /decl/emote/audible/synth/boop
-	. += /decl/emote/audible/synth/robochirp
+	. += /datum/decl/emote/audible/synth
+	. += /datum/decl/emote/audible/synth/beep
+	. += /datum/decl/emote/audible/synth/buzz
+	. += /datum/decl/emote/audible/synth/confirm
+	. += /datum/decl/emote/audible/synth/deny
+	. += /datum/decl/emote/audible/synth/scary
+	. += /datum/decl/emote/audible/synth/dwoop
+	. += /datum/decl/emote/audible/synth/boop
+	. += /datum/decl/emote/audible/synth/robochirp
 
 /datum/category_item/catalogue/technology/drone/corrupt_hound/janihound
 	name = "Drone - Corrupt Hound"
@@ -345,7 +348,7 @@
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/speech_bubble_appearance()
 	return "synthetic_evil"
 
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/apply_melee_effects(atom/A)
 	if(ismouse(A))
 		var/mob/living/simple_mob/animal/passive/mouse/mouse = A
 		if(mouse.getMaxHealth() < 20) // In case a badmin makes giant mice or something.
@@ -370,7 +373,7 @@
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/MouseDrop_T(mob/living/M, mob/living/user)
 	return
 
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/space/Process_Spacemove(var/check_drift = 0)
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/space/Process_Spacemove(check_drift = 0)
 	return TRUE
 
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/load_default_bellies()
@@ -380,7 +383,7 @@
 	B.release_sound = "Pred Escape"
 	B.fancy_vore = 1
 	B.belly_fullscreen_color = "#380000"
-	B.belly_fullscreen = "anim_belly"
+	B.belly_fullscreen = "VBOanim_belly1"
 	B.name = "fuel processor"
 	B.desc = "Uttering distorted growls and fragmented voice clips all the while, the corrupted hound gulps the rest of your squirming figure past its jaws... which snap shut with an audible click of metal on metal. Your trip down its slickly lubricated, rubbery gullet is a tight and efficient one... and once you spill out into the machine's fuel processor, your weight making it sag slightly, hot-and-thick slime begins oozing all over your form. Only time will tell if you're destined to become fuel for its next bout of rampaging... be it days, hours, or just mere minutes..."
 

@@ -5576,11 +5576,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard/simulated_caves)
-"gmA" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/maintenance/firstdeck/foreport/simulated_caves)
 "gnp" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/closet/crate,
@@ -7724,11 +7719,6 @@
 /obj/random/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/simulated_caves)
-"iKm" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/maintenance/firstdeck/centralport/simulated_caves)
 "iKR" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -11121,11 +11111,6 @@
 /obj/structure/stairs/spawner/south,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport/simulated_caves)
-"oeN" = (
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
-/area/engineering/atmos)
 "ofj" = (
 /obj/effect/floor_decal/corner/blue/diagonal{
 	dir = 4
@@ -18017,9 +18002,7 @@
 	dir = 4;
 	pixel_y = null
 	},
-/turf/simulated/wall/r_wall{
-	cached_rad_resistance = 150
-	},
+/turf/simulated/wall/r_wall,
 /area/engineering/atmos)
 "xCj" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
@@ -32732,7 +32715,7 @@ pwQ
 xUe
 nyd
 vVd
-oeN
+nEe
 rlb
 rlb
 rlb
@@ -32989,7 +32972,7 @@ dKh
 peJ
 pxt
 fUi
-oeN
+nEe
 rlb
 rlb
 rlb
@@ -33245,8 +33228,8 @@ ikR
 nQX
 kFw
 jNJ
-oeN
-oeN
+nEe
+nEe
 rlb
 rlb
 rlb
@@ -33490,25 +33473,25 @@ aac
 jbA
 aac
 exi
-gmA
-gmA
-gmA
-gmA
-gmA
-gmA
-gmA
-gmA
-gmA
-iKm
-iKm
-iKm
-iKm
-iKm
-iKm
-iKm
-iKm
-iKm
-iKm
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+yjd
+yjd
+yjd
+yjd
+yjd
+yjd
+yjd
+yjd
+yjd
+yjd
 lll
 lll
 lll

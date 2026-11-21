@@ -13,16 +13,33 @@
 
 	var/stored_name
 	var/badge_string = "Corporate Security"
+	special_handling = TRUE
+	///var for attack_self chain
+	var/sheriff_badge = FALSE
+	///Another var for attack_self chain
+	var/fluff_badge = FALSE
+	var/holo = FALSE
 
-/obj/item/clothing/accessory/badge/proc/set_name(var/new_name)
+/obj/item/clothing/accessory/badge/proc/set_name(new_name)
 	stored_name = new_name
 	name = "[initial(name)] ([stored_name])"
 
-/obj/item/clothing/accessory/badge/proc/set_desc(var/mob/living/carbon/human/H)
+/obj/item/clothing/accessory/badge/proc/set_desc(mob/living/carbon/human/H)
 
-/obj/item/clothing/accessory/badge/attack_self(mob/user as mob)
+/obj/item/clothing/accessory/badge/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(sheriff_badge)
+		return FALSE
+	if(fluff_badge)
+		return FALSE
 	if(!stored_name)
-		to_chat(user, "You polish your old badge fondly, shining up the surface.")
+		if(holo)
+			to_chat(user, "Waving around a holobadge before swiping an ID would be pretty pointless.")
+			return
+		else
+			to_chat(user, "You polish your old badge fondly, shining up the surface.")
 		set_name(user.real_name)
 		return
 
@@ -32,11 +49,11 @@
 		else
 			user.visible_message(span_notice("[user] displays their [src.name].\nIt reads: [badge_string]."),span_notice("You display your [src.name]. It reads: [badge_string]."))
 
-/obj/item/clothing/accessory/badge/attack(mob/living/carbon/human/M, mob/living/user)
-	if(isliving(user))
-		user.visible_message(span_danger("[user] invades [M]'s personal space, thrusting [src] into their face insistently."),span_danger("You invade [M]'s personal space, thrusting [src] into their face insistently."))
-		user.do_attack_animation(M)
-		user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) //NO SPAM
+/obj/item/clothing/accessory/badge/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	user.visible_message(span_danger("[user] invades [M]'s personal space, thrusting [src] into their face insistently."),span_danger("You invade [M]'s personal space, thrusting [src] into their face insistently."))
+	user.do_attack_animation(M)
+	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) //NO SPAM
+	return ITEM_INTERACT_SUCCESS
 
 // General Badges
 /obj/item/clothing/accessory/badge/old
@@ -81,18 +98,13 @@
 	icon_state = "holobadge"
 	var/emagged //Emagging removes Sec check.
 	var/valid_access = list(ACCESS_SECURITY) //Default access is security, to be overriden or expanded as desired
+	holo = TRUE
 
 /obj/item/clothing/accessory/badge/holo/cord
 	icon_state = "holobadge-cord"
 	slot_flags = SLOT_MASK | SLOT_TIE | SLOT_BELT
 
-/obj/item/clothing/accessory/badge/holo/attack_self(mob/user as mob)
-	if(!stored_name)
-		to_chat(user, "Waving around a holobadge before swiping an ID would be pretty pointless.")
-		return
-	return ..()
-
-/obj/item/clothing/accessory/badge/holo/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/clothing/accessory/badge/holo/emag_act(remaining_charges, mob/user)
 	if (emagged)
 		to_chat(user, span_danger("\The [src] is already cracked."))
 		return
@@ -101,7 +113,7 @@
 		to_chat(user, span_danger("You crack the holobadge security checks."))
 		return 1
 
-/obj/item/clothing/accessory/badge/holo/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/item/clothing/accessory/badge/holo/attackby(obj/item/O as obj, mob/user as mob)
 	if(istype(O, /obj/item/card/id) || istype(O, /obj/item/pda))
 
 		var/obj/item/card/id/id_card = null
@@ -188,16 +200,21 @@
 	desc = "This town ain't big enough for the two of us, pardner."
 	icon_state = "sheriff_toy"
 	item_state = "sheriff_toy"
+	special_handling = TRUE
+	sheriff_badge = TRUE
 
-/obj/item/clothing/accessory/badge/sheriff/attack_self(mob/user as mob)
+/obj/item/clothing/accessory/badge/sheriff/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	user.visible_message("[user] shows their sheriff badge. There's a new sheriff in town!",\
 		"You flash the sheriff badge to everyone around you!")
 
-/obj/item/clothing/accessory/badge/sheriff/attack(mob/living/carbon/human/M, mob/living/user)
-	if(isliving(user))
-		user.visible_message(span_danger("[user] invades [M]'s personal space, the sheriff badge into their face!."),span_danger("You invade [M]'s personal space, thrusting the sheriff badge into their face insistently."))
-		user.do_attack_animation(M)
-		user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) //NO SPAM
+/obj/item/clothing/accessory/badge/sheriff/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	user.visible_message(span_danger("[user] invades [M]'s personal space, the sheriff badge into their face!."),span_danger("You invade [M]'s personal space, thrusting the sheriff badge into their face insistently."))
+	user.do_attack_animation(M)
+	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) //NO SPAM
+	return ITEM_INTERACT_SUCCESS
 
 // Synthmorph bag / Corporation badges. Primarily used on the robobag, but can be worn. Default is NT.
 /obj/item/clothing/accessory/badge/corporate_tag

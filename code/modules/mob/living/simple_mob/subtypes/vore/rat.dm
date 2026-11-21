@@ -82,7 +82,7 @@
 	B.release_sound = "Pred Escape"
 	B.fancy_vore = TRUE
 	B.belly_fullscreen_color = "#c47cb4"
-	B.belly_fullscreen = "anim_belly"
+	B.belly_fullscreen = "VBOanim_belly1"
 
 	B.emote_lists[DM_HOLD] = list(
 		"As time passes, the massive rat's stomach slowly churns and squeezes down around you, packing you into an easier to carry bundle amidst that oddly soothing massage.",
@@ -177,7 +177,7 @@
 			hunger = 0
 			food = null
 
-/mob/living/simple_mob/vore/aggressive/rat/tame/attackby(var/obj/item/O, var/mob/user) // Feed the rat your food to satisfy it.
+/mob/living/simple_mob/vore/aggressive/rat/tame/attackby(obj/item/O, mob/user) // Feed the rat your food to satisfy it.
 	if(istype(O, /obj/item/reagent_containers/food/snacks))
 		qdel(O)
 		playsound(src,'sound/items/eatfood.ogg', rand(10,50), 1)
@@ -186,7 +186,7 @@
 		return
 	. = ..()
 
-/mob/living/simple_mob/vore/aggressive/rat/tame/Found(var/atom/found_atom)
+/mob/living/simple_mob/vore/aggressive/rat/tame/Found(atom/found_atom)
 	if(!SA_attackable(found_atom))
 		return null
 	else if(ishuman(found_atom) && will_eat(found_atom))
@@ -256,6 +256,8 @@
 /mob/living/simple_mob/vore/aggressive/rat/pet
 	name = "Giant Rat Siblings"
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+	devourable = 0
+	digestable = 0
 
 /mob/living/simple_mob/vore/aggressive/rat/pet/Initialize(mapload)
 	.=..()

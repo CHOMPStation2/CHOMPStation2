@@ -345,7 +345,7 @@
 /turf/unsimulated/floor/plating/snow/plating
 	name = "frozen plating"
 	icon_state = "snowyplating"
-	icon = 'icons/turf/snow_new.dmi'
+	icon = 'icons/turf/snow.dmi'
 
 /turf/unsimulated/floor/plating/eris
 	name = "reinforced plating"

@@ -52,6 +52,7 @@
 
 	activation_message="You feel lightheaded."
 	primitive_expression_messages=list("trips.")
+	mutation = CLUMSY
 
 /datum/trait/negative/disability_coprolalia
 	name = "Coprolalia"
@@ -79,7 +80,7 @@
 	sdisability=BLIND
 	activation_message="You can't seem to see anything."
 
-/datum/trait/negative/disability_blind/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/trait/negative/disability_blind/handle_environment_special(mob/living/carbon/human/H)
 	H.sdisabilities |= sdisability 		// In space, no one can hear you scream
 */
 
@@ -91,12 +92,14 @@
 
 	is_genetrait = TRUE
 	hidden = FALSE
+	excludes = list(/datum/trait/negative/disability_wingdings)
 
 	sdisability=MUTE
+	special_env = TRUE
 	activation_message="Your throat feels strange..."
 	primitive_expression_messages=list("screams without a sound.")
 
-/datum/trait/negative/disability_mute/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/trait/negative/disability_mute/handle_environment_special(mob/living/carbon/human/H)
 	H.sdisabilities |= sdisability 		// In space, no one can hear you scream
 
 /datum/trait/negative/disability_deaf
@@ -107,15 +110,16 @@
 
 	is_genetrait = TRUE
 	hidden = FALSE
+	special_env = TRUE
 
 	sdisability=DEAF
 	activation_message="It's kinda quiet."
 	primitive_expression_messages=list("stares blanky.")
 
-/datum/trait/negative/disability_deaf/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/trait/negative/disability_deaf/handle_environment_special(mob/living/carbon/human/H)
 	H.sdisabilities |= sdisability 		// In space, I can't hear shit
 
-/datum/trait/negative/disability_deaf/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/negative/disability_deaf/apply(datum/species/S,mob/living/carbon/human/H)
 	. = ..()
 	H.ear_deaf = 1
 	/* //Not used here, used downstream.
@@ -138,10 +142,14 @@
 
 	is_genetrait = TRUE
 	hidden = FALSE
+	special_env = TRUE
 
 	disability=NEARSIGHTED
 	activation_message="Your eyes feel weird..."
 	primitive_expression_messages=list("squints and stares.")
+
+/datum/trait/negative/disability_nearsighted/handle_environment_special(mob/living/carbon/human/H)
+	H.disabilities |= disability
 
 /datum/trait/negative/disability_wingdings
 	name = "Incomprehensible"
@@ -151,10 +159,15 @@
 
 	is_genetrait = TRUE
 	hidden = FALSE
+	special_env = TRUE
+	excludes = list(/datum/trait/negative/disability_mute)
 
 	disability=WINGDINGS
 	activation_message="You feel a little... Ga-hoo!"
 	primitive_expression_messages=list("zooks!","bloops!","boinks!")
+
+/datum/trait/negative/disability_wingdings/handle_environment_special(mob/living/carbon/human/H) //Ensures it gets reapplied after rejuv...Need a better solution for the future.
+	H.disabilities |= disability
 
 /datum/trait/negative/disability_deteriorating
 	name = "Rotting Genetics"
@@ -168,6 +181,8 @@
 	activation_message="You feel sore..."
 	primitive_expression_messages=list("shudders.","gasps.","chokes.")
 	added_component_path = /datum/component/rotting_disability
+	excludes = list(/datum/trait/positive/stable_genetics)
+	banned_species	= list(/datum/species/protean, /datum/species/shapeshifter/promethean)
 
 
 /datum/trait/negative/disability_gibbing
@@ -193,10 +208,14 @@
 
 	is_genetrait = TRUE
 	hidden = FALSE
+	special_env = TRUE
 	activity_bounds = DNA_HARDER_BOUNDS // Shouldn't be easy for genetics to find this
 
 	sdisability=SPINE
 	activation_message="Your legs shake..."
+
+/datum/trait/negative/disability_damagedspine/handle_environment_special(mob/living/carbon/human/H)
+	H.sdisabilities |= sdisability
 
 /datum/trait/negative/ambulant_blood
 	name = "Ambulant Blood"

@@ -1,4 +1,9 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/bed/chair,
+/mob/living/simple_mob/humanoid/merc/ranged/smg,
+/turf/simulated/floor/tiled/dark,
+/area/submap/DogBase)
 "ab" = (
 /obj/machinery/light{
 	dir = 4
@@ -7,6 +12,15 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/DogBase)
+"ac" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/mob/living/simple_mob/humanoid/merc/ranged/laser,
+/turf/simulated/floor/tiled/dark,
+/area/submap/DogBase)
+"ad" = (
+/mob/living/simple_mob/humanoid/merc/melee/sword/space,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "ae" = (
@@ -19,6 +33,14 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
+/area/submap/DogBase)
+"af" = (
+/obj/structure/table/woodentable,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/item/prop/deconstructable/gigacell,
+/turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "ay" = (
 /obj/structure/dogbed,
@@ -95,19 +117,6 @@
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
-"eZ" = (
-/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
-	desc = "The biggest and baddest guard dog around.";
-	faction = "syndicate";
-	max_co2 = 0;
-	max_tox = 0;
-	name = "syndicate guard dog"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/submap/DogBase)
 "fg" = (
 /obj/structure/closet/l3closet/janitor,
 /obj/effect/floor_decal/corner/purple/diagonal,
@@ -132,10 +141,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/submap/DogBase)
-"ik" = (
-/obj/random/mob/merc/all,
-/turf/template_noop,
-/area/template_noop)
 "iv" = (
 /obj/structure/dogbed,
 /obj/effect/decal/remains/human,
@@ -179,7 +184,7 @@
 /turf/template_noop,
 /area/template_noop)
 "lb" = (
-/obj/random/mob/merc/all,
+/mob/living/simple_mob/humanoid/merc/ranged/technician,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "lg" = (
@@ -283,16 +288,6 @@
 /obj/effect/decal/remains/ribcage,
 /turf/template_noop,
 /area/template_noop)
-"re" = (
-/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
-	desc = "The biggest and baddest guard dog around.";
-	faction = "syndicate";
-	max_co2 = 0;
-	max_tox = 0;
-	name = "syndicate guard dog"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/submap/DogBase)
 "rH" = (
 /obj/machinery/light{
 	dir = 1
@@ -480,19 +475,6 @@
 /obj/effect/landmark/loot_spawn,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
-"Dv" = (
-/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
-	desc = "The biggest and baddest guard dog around.";
-	faction = "syndicate";
-	max_co2 = 0;
-	max_tox = 0;
-	name = "syndicate guard dog"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/submap/DogBase)
 "Ez" = (
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
 /turf/template_noop,
@@ -548,8 +530,8 @@
 /turf/simulated/floor,
 /area/submap/DogBase)
 "HF" = (
-/obj/random/mob/merc/all,
 /obj/structure/bed/chair,
+/mob/living/simple_mob/humanoid/merc/ranged/garand,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "HM" = (
@@ -781,19 +763,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
-"Ya" = (
-/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
-	desc = "The biggest and baddest guard dog around.";
-	faction = "syndicate";
-	max_co2 = 0;
-	max_tox = 0;
-	name = "syndicate guard dog"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/dark,
-/area/submap/DogBase)
 "Yi" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/effect/floor_decal/corner/purple/diagonal,
@@ -804,10 +773,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/submap/DogBase)
-"YJ" = (
-/obj/random/mob/merc/all,
-/turf/simulated/floor,
 /area/submap/DogBase)
 "YX" = (
 /obj/structure/dogbed,
@@ -1028,12 +993,12 @@ hp
 hp
 hp
 hp
-ik
+hp
 wS
 hp
 Bk
 Yi
-Qu
+ac
 Vm
 Bk
 UY
@@ -1167,7 +1132,7 @@ Bk
 Dt
 tN
 tN
-Dv
+tN
 RW
 vq
 Bk
@@ -1188,12 +1153,12 @@ hp
 Ez
 Bk
 Ge
-Wq
+ad
 Bx
 lX
 Bk
 GJ
-lb
+Wq
 OS
 Bk
 Yr
@@ -1203,7 +1168,7 @@ wI
 Wq
 lX
 Bk
-eZ
+Yr
 Wq
 Wq
 lX
@@ -1284,7 +1249,7 @@ lN
 Hl
 Bk
 qO
-lb
+Wq
 BA
 lX
 LP
@@ -1296,7 +1261,7 @@ Yr
 VG
 Ok
 wI
-re
+Wq
 lX
 Bk
 Yr
@@ -1305,7 +1270,7 @@ yx
 Wq
 yx
 lr
-YJ
+Hl
 SW
 SW
 SW
@@ -1357,10 +1322,10 @@ wI
 OS
 Bk
 Yr
-VG
+aa
 Iz
 wI
-lb
+Wq
 hl
 jD
 WH
@@ -1379,7 +1344,7 @@ hp
 hp
 Ez
 Bk
-lm
+af
 Wq
 Iz
 lX
@@ -1425,7 +1390,7 @@ se
 se
 se
 jD
-Ya
+UW
 Bk
 ec
 se
@@ -1572,7 +1537,7 @@ hp
 hp
 hp
 hp
-ik
+hp
 hp
 hp
 Bk

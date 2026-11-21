@@ -19,31 +19,31 @@
 			else
 				to_chat(src, span_filter_notice("Insufficient water reserves."))
 
-/obj/machinery/door/airlock/BorgCtrlShiftClick(var/mob/living/silicon/robot/user)
+/obj/machinery/door/airlock/BorgCtrlShiftClick(mob/living/silicon/robot/user)
 	if(check_access(user.idcard))
 		..()
 
-/obj/machinery/door/airlock/BorgShiftClick(var/mob/living/silicon/robot/user)  // Opens and closes doors! Forwards to AI code.
+/obj/machinery/door/airlock/BorgShiftClick(mob/living/silicon/robot/user)  // Opens and closes doors! Forwards to AI code.
 	if(check_access(user.idcard))
 		..()
 
-/obj/machinery/door/airlock/BorgCtrlClick(var/mob/living/silicon/robot/user) // Bolts doors. Forwards to AI code.
+/obj/machinery/door/airlock/BorgCtrlClick(mob/living/silicon/robot/user) // Bolts doors. Forwards to AI code.
 	if(check_access(user.idcard))
 		..()
 
-/obj/machinery/power/apc/BorgCtrlClick(var/mob/living/silicon/robot/user) // turns off/on APCs. Forwards to AI code.
+/obj/machinery/power/apc/BorgCtrlClick(mob/living/silicon/robot/user) // turns off/on APCs. Forwards to AI code.
 	if(allowed(user))
 		..()
 
-/obj/machinery/turretid/BorgCtrlClick(var/mob/living/silicon/robot/user) //turret control on/off. Forwards to AI code.
+/obj/machinery/turretid/BorgCtrlClick(mob/living/silicon/robot/user) //turret control on/off. Forwards to AI code.
 	if(allowed(user))
 		..()
 
-/obj/machinery/door/airlock/BorgAltClick(var/mob/living/silicon/robot/user) // Eletrifies doors. Forwards to AI code.
+/obj/machinery/door/airlock/BorgAltClick(mob/living/silicon/robot/user) // Eletrifies doors. Forwards to AI code.
 	if(check_access(user.idcard))
 		..()
 
-/obj/machinery/turretid/BorgAltClick(var/mob/living/silicon/robot/user) //turret lethal on/off. Forwards to AI code.
+/obj/machinery/turretid/BorgAltClick(mob/living/silicon/robot/user) //turret lethal on/off. Forwards to AI code.
 	if(allowed(user))
 		..()
 
@@ -53,25 +53,25 @@
 		return FALSE
 	. = ..()
 
-/obj/machinery/computer/atmoscontrol/attack_robot(var/mob/user)
+/obj/machinery/computer/atmoscontrol/attack_robot(mob/user)
 	if(allowed(user))
 		..()
 	else if(Adjacent(user))
 		attack_hand(user)
 
-/obj/machinery/computer/robotics/attack_robot(var/mob/user)
+/obj/machinery/computer/robotics/attack_robot(mob/user)
 	if(allowed(user))
 		..()
 	else if(Adjacent(user))
 		attack_hand(user)
 
-/obj/machinery/turretid/attack_robot(var/mob/user)
+/obj/machinery/turretid/attack_robot(mob/user)
 	if(allowed(user))
 		..()
 	else if(Adjacent(user))
 		attack_hand(user)
 
-/obj/machinery/door/airlock/attack_robot(var/mob/user)
+/obj/machinery/door/airlock/attack_robot(mob/user)
 	var/mob/living/silicon/robot/R = user
 	if(!istype(R))
 		return //why are you here
@@ -80,7 +80,7 @@
 	else if(Adjacent(user))
 		attack_hand(user)
 
-/obj/machinery/porta_turret/attack_robot(var/mob/user)
+/obj/machinery/porta_turret/attack_robot(mob/user)
 	if(allowed(user))
 		..()
 	else if(Adjacent(user))

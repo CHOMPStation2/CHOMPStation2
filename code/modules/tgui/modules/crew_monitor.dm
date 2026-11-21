@@ -44,7 +44,6 @@
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, tgui_id, name)
-		ui.autoupdate = TRUE
 		ui.open()
 
 /datum/tgui_module/crew_monitor/tgui_data(mob/user)
@@ -58,7 +57,7 @@
 
 	var/list/crewmembers = list()
 	for(var/zlevel in map_levels)
-		crewmembers += crew_repository.health_data(zlevel)
+		crewmembers += GLOB.crew_repository.health_data(zlevel)
 
 	// This is apparently necessary, because the above loop produces an emergent behavior
 	// of telling you what coordinates someone is at even without sensors on,

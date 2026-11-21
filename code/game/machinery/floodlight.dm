@@ -17,6 +17,7 @@
 	. = ..()
 	cell = new(src)
 	AddElement(/datum/element/climbable)
+	AddElement(/datum/element/rotatable)
 
 /obj/machinery/floodlight/update_icon()
 	cut_overlays()
@@ -43,7 +44,7 @@
 
 
 // Returns 0 on failure and 1 on success
-/obj/machinery/floodlight/proc/turn_on(var/loud = 0)
+/obj/machinery/floodlight/proc/turn_on(loud = 0)
 	if(!cell)
 		return 0
 	if(cell.charge < (use * CELLRATE))
@@ -58,7 +59,7 @@
 		visible_message("\The [src] turns on.")
 	return 1
 
-/obj/machinery/floodlight/proc/turn_off(var/loud = 0)
+/obj/machinery/floodlight/proc/turn_off(loud = 0)
 	on = 0
 	set_light_on(FALSE)
 	update_icon()

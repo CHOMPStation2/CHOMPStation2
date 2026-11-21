@@ -12,8 +12,8 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm)
 
 	firemodes = list(
-	list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-	list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+	list(mode_name="semiauto",       burst=1, fire_delay=0, burst_accuracy=null, dispersion=null),
+	list(mode_name="short bursts",	burst=5, burst_accuracy = list(0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
 
 /obj/item/gun/projectile/automatic/glock/update_icon()

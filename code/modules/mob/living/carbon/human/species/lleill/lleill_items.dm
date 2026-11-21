@@ -20,11 +20,11 @@
 	taste_description = "nothingness"
 	reagent_state = LIQUID
 	color = "#ffffff"
-	scannable = 1
+	scannable = SCANNABLE_ADVANCED
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/glamour_transparent/affect_blood(var/mob/living/carbon/target, var/removed)
+/datum/reagent/glamour_transparent/affect_blood(mob/living/carbon/target, removed)
 	if(!target.cloaked)
 		target.visible_message(span_infoplain(span_bold("\The [target]") + " vanishes from sight."))
 		target.cloak()
@@ -58,12 +58,12 @@
 	taste_description = "difficult to discern"
 	reagent_state = LIQUID
 	color = "#ffffff"
-	scannable = 1
+	scannable = SCANNABLE_ADVANCED
 	wiki_flag = WIKI_SPOILER
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/glamour_scaling/affect_blood(var/mob/living/carbon/target, var/removed)
+/datum/reagent/glamour_scaling/affect_blood(mob/living/carbon/target, removed)
 	if(!(/mob/living/proc/set_size in target.verbs))
 		to_chat(target, span_warning("You feel as though you could change size at any moment."))
 		add_verb(target, /mob/living/proc/set_size)
@@ -93,11 +93,11 @@
 	taste_description = "bright"
 	reagent_state = LIQUID
 	color = "#ffffff"
-	scannable = 1
+	scannable = SCANNABLE_ADVANCED
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/glamour_twinkling/affect_blood(var/mob/living/carbon/human/target, var/removed)
+/datum/reagent/glamour_twinkling/affect_blood(mob/living/carbon/human/target, removed)
 	if(target.species.darksight < 10)
 		to_chat(target, span_warning("You can suddenly see much better than before."))
 		target.species.darksight = 10
@@ -130,7 +130,10 @@
 	icon_state = "face"
 	var/mob/living/homunculus = 0
 
-/obj/item/glamour_face/attack_self(var/mob/user)
+/obj/item/glamour_face/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!homunculus)
 		var/list/targets = list()
 		for(var/mob/living/carbon/human/M in GLOB.mob_list)
@@ -300,7 +303,6 @@
 	icon = 'icons/obj/glamour.dmi'
 	icon_state = "unstable"
 	w_class = ITEMSIZE_SMALL
-	origin_tech = list(TECH_BLUESPACE = 7, TECH_MATERIAL = 2)
 	var/tele_range = 4
 	var/tf_type = /mob/living/simple_mob/animal/passive/mouse
 	var/tf_possible_types = list(
@@ -357,6 +359,9 @@
 		)
 
 /obj/item/glamour_unstable/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/mob/living/M = user
 	if(!istype(M))
 		return
@@ -397,27 +402,7 @@
 	if(!istype(M))
 		return
 	if(M.tf_mob_holder)
-		var/mob/living/ourmob = M.tf_mob_holder
-		if(ourmob.ai_holder)
-			var/datum/ai_holder/our_AI = ourmob.ai_holder
-			our_AI.set_stance(STANCE_IDLE)
-		M.tf_mob_holder = null
-		ourmob.ckey = M.ckey
-		var/turf/get_dat_turf = get_turf(target)
-		ourmob.loc = get_dat_turf
-		ourmob.forceMove(get_dat_turf)
-		ourmob.vore_selected = M.vore_selected
-		M.vore_selected = null
-		ourmob.mob_belly_transfer(M)
-
-		ourmob.Life(1)
-		if(ishuman(M))
-			for(var/obj/item/W in M)
-				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
-					continue
-				M.drop_from_inventory(W)
-
-		qdel(target)
+		M.revert_mob_tf()
 		return
 	else
 		if(M.stat == DEAD)	//We can let it undo the TF, because the person will be dead, but otherwise things get weird.
@@ -427,7 +412,7 @@
 		M.tf_into(new_mob)
 
 
-/obj/item/glamour_unstable/proc/spawn_mob(var/mob/living/target)
+/obj/item/glamour_unstable/proc/spawn_mob(mob/living/target)
 	var/choice = pick(tf_possible_types)
 	tf_type = tf_possible_types[choice]
 	if(!ispath(tf_type))

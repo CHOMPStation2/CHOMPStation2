@@ -4,14 +4,14 @@
 /* --- Traffic Control Scripting Language --- */
 	// NanoTrasen TCS Language - Made by Doohl
 
-/n_Interpreter/TCS_Interpreter
+/datum/n_Interpreter/TCS_Interpreter
 	var/datum/TCS_Compiler/Compiler
 
-/n_Interpreter/TCS_Interpreter/HandleError(runtimeError/e)
+/datum/n_Interpreter/TCS_Interpreter/HandleError(datum/runtimeError/e)
 	Compiler.Holder.add_entry(e.ToString(), "Execution Error")
 
 /datum/TCS_Compiler
-	var/n_Interpreter/TCS_Interpreter/interpreter
+	var/datum/n_Interpreter/TCS_Interpreter/interpreter
 	var/obj/machinery/telecomms/server/Holder	// the server that is running the code
 	var/ready = 1 // 1 if ready to run code
 
@@ -21,11 +21,11 @@
 	*/
 
 /datum/TCS_Compiler/proc/Compile(code as message)
-	var/n_scriptOptions/nS_Options/options = new()
-	var/n_Scanner/nS_Scanner/scanner       = new(code, options)
+	var/datum/n_scriptOptions/nS_Options/options = new()
+	var/datum/n_Scanner/nS_Scanner/scanner       = new(code, options)
 	var/list/tokens                        = scanner.Scan()
-	var/n_Parser/nS_Parser/parser          = new(tokens, options)
-	var/node/BlockDefinition/GlobalBlock/program   	 = parser.Parse()
+	var/datum/n_Parser/nS_Parser/parser          = new(tokens, options)
+	var/datum/node/BlockDefinition/GlobalBlock/program   	 = parser.Parse()
 
 	var/list/returnerrors = list()
 
@@ -48,7 +48,7 @@
  *   var/datum/signal/signal - a telecomms signal
  * Returns: None
  */
-/datum/TCS_Compiler/proc/Run(var/datum/signal/signal)
+/datum/TCS_Compiler/proc/Run(datum/signal/signal)
 
 	if(!ready)
 		return
@@ -215,7 +215,7 @@
 
 /*  -- Actual language proc code --  */
 
-/datum/signal/proc/mem(var/address, var/value)
+/datum/signal/proc/mem(address, value)
 
 	if(istext(address))
 		var/obj/machinery/telecomms/server/S = data["server"]
@@ -227,7 +227,7 @@
 			S.memory[address] = value
 
 
-/datum/signal/proc/tcombroadcast(var/message, var/freq, var/source, var/job)
+/datum/signal/proc/tcombroadcast(message, freq, source, job)
 
 	var/datum/signal/newsign = new
 	var/obj/machinery/telecomms/server/S = data["server"]

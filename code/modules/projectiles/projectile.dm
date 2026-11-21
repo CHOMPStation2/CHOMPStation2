@@ -249,9 +249,9 @@
 	Range()
 
 /obj/item/projectile/Crossed(atom/movable/AM) //A mob moving on a tile with a projectile is hit by it.
+	. = ..()
 	if(AM.is_incorporeal() && !hits_phased)
 		return
-	..()
 	if(isliving(AM) && !(pass_flags & PASSMOB))
 		var/mob/living/L = AM
 		if(can_hit_target(L, permutated, (AM == original)))
@@ -313,22 +313,22 @@
 		trajectory.set_angle(new_angle)
 	return TRUE
 
-/obj/item/projectile/forceMove(atom/target)
-	if(!isloc(target) || !isloc(loc) || !z)
+/obj/item/projectile/forceMove(atom/destination, direction, movetime)
+	if(!isloc(destination) || !isloc(loc) || !z)
 		return ..()
-	var/zc = target.z != z
+	var/zc = destination.z != z
 	var/old = loc
 	if(zc)
-		before_z_change(old, target)
+		before_z_change(old, destination)
 	. = ..()
-	if(trajectory && !trajectory_ignore_forcemove && isturf(target))
+	if(trajectory && !trajectory_ignore_forcemove && isturf(destination))
 		if(hitscan)
 			finalize_hitscan_and_generate_tracers(FALSE)
-		trajectory.initialize_location(target.x, target.y, target.z, 0, 0)
+		trajectory.initialize_location(destination.x, destination.y, destination.z, 0, 0)
 		if(hitscan)
 			record_hitscan_start(RETURN_PRECISE_POINT(src))
 	if(zc)
-		after_z_change(old, target)
+		after_z_change(old, destination)
 
 /obj/item/projectile/proc/fire(angle, atom/direct_target)
 	//If no angle needs to resolve it from xo/yo!
@@ -679,7 +679,7 @@
 
 /obj/item/projectile/proc/get_structure_damage()
 	if(damage_type == BRUTE || damage_type == BURN)
-		return damage + mob_bonus_damage //CHOMP Edit: Added mob_bonus_damage to the returned value so that phaser can do damage against shields.
+		return damage
 	return 0
 
 //return 1 if the projectile should be allowed to pass through after all, 0 if not.
@@ -735,7 +735,7 @@
 	var/impacted_organ = parse_zone(def_zone)
 	if(isanimal(target_mob))
 		var/mob/living/simple_mob/SM = target_mob
-		var/decl/mob_organ_names/organ_plan = SM.organ_names
+		var/datum/decl/mob_organ_names/organ_plan = SM.organ_names
 		impacted_organ = pick(organ_plan.hit_zones)
 
 	//hit messages

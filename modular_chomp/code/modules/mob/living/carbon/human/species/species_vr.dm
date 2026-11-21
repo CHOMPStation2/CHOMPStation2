@@ -1,4 +1,4 @@
-/datum/species/proc/copy_species_sounds(var/datum/species/S, var/species_sounds, var/custom_base)
+/datum/species/proc/copy_species_sounds(datum/species/S, species_sounds, custom_base)
 	switch(species_sounds)
 		get_species_sound(species_sounds)
 		if("Canine")

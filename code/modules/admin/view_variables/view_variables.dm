@@ -6,8 +6,6 @@ ADMIN_VERB_AND_CONTEXT_MENU(debug_variables, (R_DEBUG|R_SERVER|R_ADMIN|R_SPAWN|R
 // This is kept as a separate proc because admins are able to show VV to non-admins
 
 /client/proc/debug_variables(datum/thing in world)
-	set category = "Debug.Investigate"
-	set name = "View Variables"
 	//set src in world
 	var/static/cookieoffset = rand(1, 9999) //to force cookies to reset after the round.
 
@@ -75,7 +73,7 @@ ADMIN_VERB_AND_CONTEXT_MENU(debug_variables, (R_DEBUG|R_SERVER|R_ADMIN|R_SPAWN|R
 	var/sprite_text
 	if(sprite)
 		hash = md5(sprite)
-		src << browse_rsc(sprite, "vv[hash].png")
+		send_rsc(src, sprite, "vv[hash].png")
 		sprite_text = no_icon ? "\[NO ICON\]" : "<img src='vv[hash].png'></td><td>"
 
 	title = "[thing] ([REF(thing)]) = [type]"

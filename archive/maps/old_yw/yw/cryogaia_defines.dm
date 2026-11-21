@@ -238,7 +238,7 @@
 // Commented out due to causing a lot of bugs. The base proc plus overmap achieves this functionality anyways.
 /*
 // Short range computers see only the six main levels, others can see the surrounding surface levels.
-/datum/map/cryogaia/get_map_levels(var/srcz, var/long_range = TRUE)
+/datum/map/cryogaia/get_map_levels(srcz, long_range = TRUE)
 	if (long_range && (srcz in map_levels))
 		return map_levels
 	else if (srcz == Z_LEVEL_CRYOGAIA_CENTCOM)
@@ -282,15 +282,15 @@
 						  Z_LEVEL_CRYOGAIA_CAVES,
 						  Z_LEVEL_CRYOGAIA_MISC)/*Temporary change to fix arrivals*/
 
-/obj/effect/overmap/visitable/sector/cryogaia/Crossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/cryogaia/Crossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/cryogaia/Uncrossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/cryogaia/Uncrossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/cryogaia/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/cryogaia/announce_atc(atom/movable/AM, going = FALSE)
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
@@ -306,7 +306,7 @@
 /obj/effect/overmap/visitable/sector/cryogaia/get_space_zlevels()
 	return list() //None!
 
-/obj/effect/overmap/visitable/sector/virgo3b/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/virgo3b/announce_atc(atom/movable/AM, going = FALSE)
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))

@@ -23,6 +23,10 @@
 	var/state = 0
 	var/locked = 0
 
+	// Anomaly harvesting stuff
+	var/anomalous = FALSE
+	var/particle = ANOMALY_PARTICLE_SIGMA
+
 	var/burst_delay = 2
 	var/initial_fire_delay = 100
 
@@ -34,9 +38,10 @@
 		connect_to_network()
 	AddElement(/datum/element/climbable)
 	AddElement(/datum/element/rotatable)
+	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
 
 /obj/machinery/power/emitter/Destroy()
-	message_admins("Emitter deleted at ([x],[y],[z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
+	message_admins("Emitter deleted at ([x],[y],[z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)")
 	log_game("EMITTER([x],[y],[z]) Destroyed/deleted.")
 	investigate_log(span_red("deleted") + " at ([x],[y],[z])","singulo")
 	. = ..()
@@ -59,16 +64,16 @@
 		if(!src.locked)
 			if(src.active==1)
 				src.active = 0
-				to_chat(user, "You turn off [src].")
+				balloon_alert_visible("turned off")
 				message_admins("Emitter turned off by [key_name(user, user.client)](<A href='byond://?_src_=holder;[HrefToken()];adminmoreinfo=\ref[user]'>?</A>) in ([x],[y],[z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
 				log_game("EMITTER([x],[y],[z]) OFF by [key_name(user)]")
 				investigate_log("turned " + span_red("off") + " by [user.key]","singulo")
 			else
 				src.active = 1
-				to_chat(user, "You turn on [src].")
+				balloon_alert_visible("turned on")
 				src.shot_number = 0
 				src.fire_delay = get_initial_fire_delay()
-				message_admins("Emitter turned on by [key_name(user, user.client)](<A href='byond://?_src_=holder;[HrefToken()];adminmoreinfo=\ref[user]'>?</A>) in ([x],[y],[z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
+				message_admins("Emitter turned on by [key_name(user, user.client)](<A href='byond://?_src_=holder;[HrefToken()];adminmoreinfo=\ref[user]'>?</A>) in ([x],[y],[z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)")
 				log_game("EMITTER([x],[y],[z]) ON by [key_name(user)]")
 				investigate_log("turned " + span_green("on") + " by [user.key]","singulo")
 			update_icon()
@@ -77,10 +82,6 @@
 	else
 		to_chat(user, span_warning("\The [src] needs to be firmly secured to the floor first."))
 		return 1
-
-
-/obj/machinery/power/emitter/emp_act(severity, recursive)
-	return TRUE
 
 /obj/machinery/power/emitter/process()
 	if(stat & (BROKEN))
@@ -223,17 +224,33 @@
 		else
 			to_chat(user, span_warning("Access denied."))
 		return
+	if(istype(W, /obj/item/anomaly_scanner))
+		anomalous = !anomalous
+		burst_delay = anomalous ? 3 : 8
+		to_chat(user, span_notice("The beam is now set to [anomalous ? "anomalous." : "normal."]"))
+		if(anomalous)
+			description_info = "Use a multitool to change the particle type."
+		else
+			description_info = initial(description_info)
+		return
+	if(W.has_tool_quality(TOOL_MULTITOOL) && anomalous)
+		var/chosen_particle = tgui_input_list(user, "Select particle type", "Particle Selection", ANOMALY_PARTICLE_ALL)
+		if(!chosen_particle)
+			return
+		particle = chosen_particle
+		balloon_alert_visible("changed to [chosen_particle]")
+		return
 	..()
 	return
 
-/obj/machinery/power/emitter/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/power/emitter/emag_act(remaining_charges, mob/user)
 	if(!emagged)
 		locked = 0
 		emagged = 1
 		user.visible_message("[user.name] emags [src].",span_warning("You short out the lock."))
 		return 1
 
-/obj/machinery/power/emitter/bullet_act(var/obj/item/projectile/P)
+/obj/machinery/power/emitter/bullet_act(obj/item/projectile/P)
 	if(!P || !P.damage || P.get_structure_damage() <= 0 )
 		return
 
@@ -282,4 +299,17 @@
 	return burst_delay
 
 /obj/machinery/power/emitter/proc/get_emitter_beam()
+	if(anomalous)
+		var/obj/item/projectile/energy/anomaly/projectile = new /obj/item/projectile/energy/anomaly(get_turf(src))
+		projectile.particle_type = particle
+		return projectile
 	return new /obj/item/projectile/beam/emitter(get_turf(src))
+
+/obj/machinery/power/emitter/pre_mapped
+	anchored = TRUE
+	state = 2
+
+/obj/machinery/power/emitter/pre_mapped/Initialize(mapload)
+	. = ..()
+	connect_to_network()
+	update_icon()

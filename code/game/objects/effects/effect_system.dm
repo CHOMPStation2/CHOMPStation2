@@ -6,6 +6,7 @@ would spawn and follow the beaker, even if it is carried or thrown.
 */
 /obj/effect
 	light_on = TRUE
+	uses_integrity = FALSE
 
 /obj/effect/effect
 	name = "effect"
@@ -50,12 +51,12 @@ would spawn and follow the beaker, even if it is carried or thrown.
 // to something, like a smoking beaker, so then you can just call start() and the steam
 // will always spawn at the items location, even if it's moved.
 
-/* Example:
-var/datum/effect/system/steam_spread/steam = new /datum/effect/system/steam_spread() -- creates new system
-steam.set_up(5, 0, mob.loc) -- sets up variables
-OPTIONAL: steam.attach(mob)
-steam.start() -- spawns the effect
-*/
+/** Example:
+ * var/datum/effect/system/steam_spread/steam = new /datum/effect/system/steam_spread() -- creates new system
+ * steam.set_up(5, 0, mob.loc) -- sets up variables
+ * OPTIONAL: steam.attach(mob)
+ * steam.start() -- spawns the effect
+ **/
 /////////////////////////////////////////////
 /obj/effect/effect/steam
 	name = "steam"
@@ -184,14 +185,14 @@ steam.start() -- spawns the effect
 	if(time_to_live)
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), time_to_live, TIMER_DELETE_ME)
 
-/obj/effect/effect/smoke/Crossed(mob/living/carbon/M as mob )
+/obj/effect/effect/smoke/Crossed(mob/living/carbon/M as mob)
+	. = ..()
 	if(M.is_incorporeal())
 		return
-	..()
 	if(istype(M))
 		affect(M)
 
-/obj/effect/effect/smoke/proc/affect(var/mob/living/carbon/M)
+/obj/effect/effect/smoke/proc/affect(mob/living/carbon/M)
 	if (!istype(M))
 		return 0
 	if(M.wear_mask && (M.wear_mask.item_flags & AIRTIGHT))
@@ -214,7 +215,7 @@ steam.start() -- spawns the effect
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "sparks"
 
-/obj/effect/effect/smoke/illumination/Initialize(mapload, var/lifetime=10, var/range=null, var/power=null, var/color=null)
+/obj/effect/effect/smoke/illumination/Initialize(mapload, lifetime=10, range=null, power=null, color=null)
 	time_to_live=lifetime
 	. = ..()
 	set_light(range, power, color)
@@ -232,7 +233,7 @@ steam.start() -- spawns the effect
 	for(var/mob/living/L in get_turf(src))
 		affect(L)
 
-/obj/effect/effect/smoke/bad/affect(var/mob/living/L)
+/obj/effect/effect/smoke/bad/affect(mob/living/L)
 	if (!..())
 		return 0
 	if(L.needs_to_breathe())
@@ -243,7 +244,7 @@ steam.start() -- spawns the effect
 /obj/effect/effect/smoke/bad/noxious
 	opacity = 0
 
-/obj/effect/effect/smoke/bad/noxious/affect(var/mob/living/L)
+/obj/effect/effect/smoke/bad/noxious/affect(mob/living/L)
 	if (!..())
 		return 0
 	if(L.needs_to_breathe())
@@ -274,7 +275,7 @@ steam.start() -- spawns the effect
 	for(var/mob/living/L in get_turf(src))
 		affect(L)
 
-/obj/effect/effect/smoke/bad/burntfood/affect(var/mob/living/L) // This stuff is extra-vile.
+/obj/effect/effect/smoke/bad/burntfood/affect(mob/living/L) // This stuff is extra-vile.
 	if (!..())
 		return 0
 	if(L.needs_to_breathe())
@@ -370,7 +371,7 @@ steam.start() -- spawns the effect
 	if(direct)
 		direction = direct
 
-/datum/effect/effect/system/smoke_spread/start(var/I)
+/datum/effect/effect/system/smoke_spread/start(I)
 	var/i = 0
 	for(i=0, i<src.number, i++)
 		if(src.total_smoke > 20)

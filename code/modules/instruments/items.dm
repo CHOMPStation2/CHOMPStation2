@@ -36,11 +36,14 @@
 		return FALSE
 	return TRUE
 
-/obj/item/instrument/attack_self(mob/M)
-	if(!M.IsAdvancedToolUser())
+/obj/item/instrument/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(!user.IsAdvancedToolUser())
 		return
 
-	tgui_interact(M)
+	tgui_interact(user)
 
 /obj/item/instrument/tgui_interact(mob/user, datum/tgui/ui)
 	return song.tgui_interact(user)
@@ -118,7 +121,7 @@
 	. = ..()
 	AddComponent(/datum/component/spooky)
 */
-/obj/item/instrument/trumpet/spectral/attack(mob/living/carbon/C, mob/user)
+/obj/item/instrument/trumpet/spectral/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	playsound (src, 'sound/runtime/instruments/trombone/En4.mid', 100,1,-1)
 	..()
 
@@ -141,7 +144,7 @@
 	AddComponent(/datum/component/spooky)
 */
 
-/obj/item/instrument/saxophone/spectral/attack(mob/living/carbon/C, mob/user)
+/obj/item/instrument/saxophone/spectral/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	playsound (src, 'sound/runtime/instruments/saxophone/En4.mid', 100,1,-1)
 	..()
 
@@ -164,7 +167,7 @@
 	AddComponent(/datum/component/spooky)
 */
 
-/obj/item/instrument/trombone/spectral/attack(mob/living/carbon/C, mob/user)
+/obj/item/instrument/trombone/spectral/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	playsound (src, 'sound/runtime/instruments/trombone/Cn4.mid', 100,1,-1)
 	..()
 

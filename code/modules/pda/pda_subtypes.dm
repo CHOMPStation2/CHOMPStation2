@@ -175,53 +175,53 @@
 	. = ..()
 	owner = "Command Department"
 	name = "Command Department (Relay)"
-	cartridges_to_send_to = command_cartridges
+	cartridges_to_send_to = GLOB.command_cartridges
 
 /obj/item/pda/multicaster/security/Initialize(mapload)
 	. = ..()
 	owner = "Security Department"
 	name = "Security Department (Relay)"
-	cartridges_to_send_to = security_cartridges
+	cartridges_to_send_to = GLOB.security_cartridges
 
 /obj/item/pda/multicaster/engineering/Initialize(mapload)
 	. = ..()
 	owner = "Engineering Department"
 	name = "Engineering Department (Relay)"
-	cartridges_to_send_to = engineering_cartridges
+	cartridges_to_send_to = GLOB.engineering_cartridges
 
 /obj/item/pda/multicaster/medical/Initialize(mapload)
 	. = ..()
 	owner = "Medical Department"
 	name = "Medical Department (Relay)"
-	cartridges_to_send_to = medical_cartridges
+	cartridges_to_send_to = GLOB.medical_cartridges
 
 /obj/item/pda/multicaster/research/Initialize(mapload)
 	. = ..()
 	owner = "Research Department"
 	name = "Research Department (Relay)"
-	cartridges_to_send_to = research_cartridges
+	cartridges_to_send_to = GLOB.research_cartridges
 
 /obj/item/pda/multicaster/cargo/Initialize(mapload)
 	. = ..()
 	owner = "Cargo Department"
 	name = "Cargo Department (Relay)"
-	cartridges_to_send_to = cargo_cartridges
+	cartridges_to_send_to = GLOB.cargo_cartridges
 
 /obj/item/pda/multicaster/civilian/Initialize(mapload)
 	. = ..()
 	owner = "Civilian Services Department"
 	name = "Civilian Services Department (Relay)"
-	cartridges_to_send_to = civilian_cartridges
+	cartridges_to_send_to = GLOB.civilian_cartridges
 
-/obj/item/pda/clown/Crossed(atom/movable/AM as mob|obj) //Clown PDA is slippery.
-	if(AM.is_incorporeal())
-		return
-	if (isliving(AM))
-		var/mob/living/M = AM
+/obj/item/pda/clown/Initialize(mapload) //Clown PDA is slippery.
+	. = ..()
+	AddComponent(/datum/component/slippery, 12, NO_SLIP_WHEN_WALKING, 0, CALLBACK(src, PROC_REF(AfterSlip)))
 
-		if(M.slip("the PDA",8) && M.real_name != src.owner && istype(src.cartridge, /obj/item/cartridge/clown))
-			if(src.cartridge.charges < 5)
-				src.cartridge.charges++
+/obj/item/pda/clown/proc/AfterSlip(mob/living/carbon/human/M)
+	if (istype(M) && (M.real_name != owner))
+		var/obj/item/cartridge/clown/cart = cartridge
+		if(istype(cart) && cart.charges < 5)
+			cart.charges++
 
 //Some spare PDAs in a box
 /obj/item/storage/box/PDAs

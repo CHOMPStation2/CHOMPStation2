@@ -101,7 +101,7 @@
 	icon = 'icons/obj/ammo.dmi'
 	slot_flags = SLOT_BELT
 	item_state = "syringe_kit"
-	matter = list(MAT_STEEL = 500)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.25))
 	throwforce = 5
 	w_class = ITEMSIZE_SMALL
 	throw_speed = 4
@@ -173,6 +173,9 @@
 
 // This dumps all the bullets right on the floor
 /obj/item/ammo_magazine/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(can_remove_ammo)
 		if(!stored_ammo.len)
 			to_chat(user, span_notice("[src] is already empty!"))
@@ -218,13 +221,13 @@
 
 /obj/item/ammo_magazine/examine(mob/user)
 	. = ..()
-	. += "There [(stored_ammo.len == 1)? "is" : "are"] [stored_ammo.len] round\s left!"
+	. += span_notice("There [(stored_ammo.len == 1)? "is" : "are"] [stored_ammo.len] round\s left!")
 
 //magazine icon state caching
 GLOBAL_LIST_EMPTY(magazine_icondata_keys)
 GLOBAL_LIST_EMPTY(magazine_icondata_states)
 
-/proc/initialize_magazine_icondata(var/obj/item/ammo_magazine/M)
+/proc/initialize_magazine_icondata(obj/item/ammo_magazine/M)
 	var/typestr = M.type
 	if(!(typestr in GLOB.magazine_icondata_keys) || !(typestr in GLOB.magazine_icondata_states))
 		magazine_icondata_cache_add(M)
@@ -232,10 +235,10 @@ GLOBAL_LIST_EMPTY(magazine_icondata_states)
 	M.icon_keys = GLOB.magazine_icondata_keys[typestr]
 	M.ammo_states = GLOB.magazine_icondata_states[typestr]
 
-/proc/magazine_icondata_cache_add(var/obj/item/ammo_magazine/M)
+/proc/magazine_icondata_cache_add(obj/item/ammo_magazine/M)
 	var/list/icon_keys = list()
 	var/list/ammo_states = list()
-	var/list/states = cached_icon_states(M.icon)
+	var/list/states = icon_states_fast(M.icon)
 	for(var/i = 0, i <= M.max_ammo, i++)
 		var/ammo_state = "[M.icon_state]-[i]"
 		if(ammo_state in states)

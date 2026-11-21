@@ -11,10 +11,13 @@
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
 
-	//matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
+	//matter = list(MAT_STEEL = MATERIAL_COST(0.025), MAT_GLASS = MATERIAL_COST(0.025))
 
 /obj/item/binoculars/attack_self(mob/user)
-	zoom()
+	. = ..(user)
+	if(.)
+		return TRUE
+	toggle_zoom(user)
 
 /obj/item/binoculars/spyglass
 	name = "spyglass"

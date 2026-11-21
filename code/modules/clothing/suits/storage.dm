@@ -1,6 +1,7 @@
 /obj/item/clothing/suit/storage
 	name = DEVELOPER_WARNING_NAME
 	var/obj/item/storage/internal/pockets
+	description_info = "This item has storage space."
 
 /obj/item/clothing/suit/storage/Initialize(mapload)
 	. = ..()
@@ -117,3 +118,17 @@
 		to_chat(usr, "\The [src] does not have a badge.")
 		return
 	update_clothing_icon()
+
+/obj/item/clothing/suit/storage/tailcoat
+	name = "victorian tailcoat"
+	desc = "A fancy victorian tailcoat."
+	icon_state = "tailcoat"
+
+/obj/item/clothing/suit/storage/victcoat
+	name = "ladies black victorian coat"
+	desc = "A fancy victorian coat."
+	icon_state = "ladiesvictoriancoat"
+
+/obj/item/clothing/suit/storage/victcoat/red
+	name = "ladies red victorian coat"
+	icon_state = "ladiesredvictoriancoat"

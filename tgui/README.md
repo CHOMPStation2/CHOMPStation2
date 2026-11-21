@@ -46,11 +46,7 @@ free to skip this step.
 However, if you want finer control over the installation or build process, you
 will need these:
 
-- [Node v22.11+](https://nodejs.org/en/download/)
-  - **LTS** release is recommended instead of latest
-  - **DO NOT install Chocolatey if Node installer asks you to!**
-- [Yarn v4.8.1+](https://yarnpkg.com/getting-started/install)
-  - Yarn is normally installed with corepack.
+- [Bun v1.2.16+](https://bun.com/docs/installation)
 
 ## Usage
 
@@ -66,7 +62,7 @@ will need these:
 > holding Shift** on any free space in the folder, then click on either
 > `Open command window here` or `Open PowerShell window here`.
 
-**Via Juke Build (cross-platform)**:
+**Via Juke Build (cross-platform(No))**:
 
 - `tools/build/build.sh tgui` - Build tgui in production mode.
 - `tools/build/build.sh tgui-dev` - Build tgui in production mode.
@@ -168,7 +164,7 @@ Inspection". You can then f12 to open the standard chrome dev tools.
 
 ## Project Structure
 
-- `/packages` - Each folder here represents a self-contained Node module.
+- `/packages` - Each folder here represents a self-contained Bun module.
 - `/packages/common` - Helper functions that are used throughout all packages.
 - `/packages/tgui/index.ts` - Application entry point.
 - `/packages/tgui/interfaces` - Actual in-game interfaces.
@@ -188,6 +184,12 @@ Inspection". You can then f12 to open the standard chrome dev tools.
 - `/packages/tgui/styles/layouts` - Layout-related styles.
 - `/packages/tgui/styles/themes` - Contains themes that you can use in tgui.
   Each theme must be registered in `/packages/tgui/index.ts` file.
+
+## FontAwesome Icons
+
+For a list of usable icons, see [FontAwesome website](https://fontawesome.com/v7/search?ip=classic&ic=free&o=r)
+
+For additional, check the [FontAwesome Docs](https://fontawesome.com/v7/docs/web/style/style-cheatsheet#contentHeader)
 
 ## License
 

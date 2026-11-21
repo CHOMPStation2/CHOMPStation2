@@ -4,7 +4,6 @@
 	description_info = "This device disrupts shields on directly adjacent tiles (in a + shaped pattern), in a similar way the floor mounted variant does. It is, however, portable and run by an internal battery. Can be recharged with a regular recharger."
 	icon = 'icons/obj/machines/shielding.dmi'
 	icon_state = "hdiffuser_off"
-	origin_tech = list(TECH_MAGNET = 5, TECH_POWER = 5, TECH_ILLEGAL = 2)
 	var/obj/item/cell/device/cell
 	var/enabled = 0
 
@@ -44,6 +43,9 @@
 		icon_state = "hdiffuser_off"
 
 /obj/item/shield_diffuser/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	enabled = !enabled
 	update_icon()
 	if(enabled)

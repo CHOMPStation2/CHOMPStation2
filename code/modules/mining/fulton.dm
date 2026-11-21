@@ -15,6 +15,9 @@
 	. += "It has [uses_left] use\s remaining."
 
 /obj/item/extraction_pack/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/list/possible_beacons = list()
 	for(var/obj/structure/extraction_point/EP as anything in GLOB.total_extraction_beacons)
 		if(EP.beacon_network in beacon_networks)
@@ -107,11 +110,17 @@
 				var/mob/living/carbon/human/L = A
 				L.AdjustStunned(20)
 				L.drowsyness = 0
+				L.emote("scream")
 			sleep(30)
 			var/list/flooring_near_beacon = list()
+			var/had_option = FALSE
 			for(var/turf/simulated/floor/floor in orange(1, beacon))
+				had_option = TRUE
 				flooring_near_beacon += floor
-			holder_obj.forceMove(pick(flooring_near_beacon))
+			if(had_option)
+				holder_obj.forceMove(pick(flooring_near_beacon))
+			else
+				holder_obj.forceMove(beacon.loc)
 			animate(holder_obj, pixel_z = 10, time = 50)
 			sleep(50)
 			animate(holder_obj, pixel_z = 15, time = 10)
@@ -143,6 +152,13 @@
 	icon_state = "extraction_pointoff"
 
 /obj/item/fulton_core/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	var/turf/T = get_turf(user)
+	if(!T)
+		to_chat(user, span_warning("You must be standing on solid ground to deploy an extraction beacon!"))
+		return
 	if(do_after(user, 1.5 SECONDS, target = user) && !QDELETED(src))
 		new /obj/structure/extraction_point(get_turf(user))
 		qdel(src)

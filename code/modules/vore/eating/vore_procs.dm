@@ -72,13 +72,13 @@
 	if(istype(prey.loc, /obj/item/holder))
 		var/obj/item/holder/H = prey.loc
 		for(var/mob/living/M in H.contents)
-			belly.nom_mob(M, user)
-			if(M.loc == H) // In case nom_mob failed somehow.
+			belly.nom_atom(M, user)
+			if(M.loc == H) // In case nom_atom failed somehow.
 				M.forceMove(get_turf(user))
 		H.held_mob = null
 		qdel(H)
 	else
-		belly.nom_mob(prey, user)
+		belly.nom_atom(prey, user)
 
 	user.update_icon()
 
@@ -107,14 +107,14 @@
 	//Determining vore attempt privacy
 	var/success_msg = "ERROR: Vore message couldn't be created. Notify a dev. (sc)"
 
-	if(prey.is_slipping)
-		success_msg = span_vwarning("[prey] suddenly slides into [pred]'s [lowertext(belly.name)]!")
-	else if(pred.is_slipping)
-		success_msg = span_vwarning("[prey] suddenly slips inside of [pred]'s [lowertext(belly.name)] as [pred] slides into them!")
+	if(prey.slip_timer)
+		success_msg = span_vwarning("[prey] suddenly slides into [pred]'s [lowertext(belly.get_belly_name())]!")
+	else if(pred.slip_timer)
+		success_msg = span_vwarning("[prey] suddenly slips inside of [pred]'s [lowertext(belly.get_belly_name())] as [pred] slides into them!")
 	else if(user == pred) //Feeding someone to yourself
-		success_msg = span_vwarning("[pred] manages to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!")
+		success_msg = span_vwarning("[pred] manages to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.get_belly_name())]!")
 	else //Feeding someone to another person
-		success_msg = span_vwarning("[user] manages to make [pred] [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!")
+		success_msg = span_vwarning("[user] manages to make [pred] [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.get_belly_name())]!")
 	return success_msg
 
 /**
@@ -126,14 +126,14 @@
 	//Determining vore attempt privacy
 	var/attempt_msg = "ERROR: Vore message couldn't be created. Notify a dev. (sc)"
 
-	if(prey.is_slipping)
-		attempt_msg = span_vwarning("It seems like [prey] is about to slide into [pred]'s [lowertext(belly.name)]!")
-	else if(pred.is_slipping)
-		attempt_msg = span_vwarning("It seems like [prey] is gonna end up inside [pred]'s [lowertext(belly.name)] as [pred] comes sliding over!")
+	if(prey.slip_timer)
+		attempt_msg = span_vwarning("It seems like [prey] is about to slide into [pred]'s [lowertext(belly.get_belly_name())]!")
+	else if(pred.slip_timer)
+		attempt_msg = span_vwarning("It seems like [prey] is gonna end up inside [pred]'s [lowertext(belly.get_belly_name())] as [pred] comes sliding over!")
 	else if(user == pred) //Feeding someone to yourself
-		attempt_msg = span_vwarning("[pred] is attempting to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!")
+		attempt_msg = span_vwarning("[pred] is attempting to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.get_belly_name())]!")
 	else //Feeding someone to another person
-		attempt_msg = span_vwarning("[user] is attempting to make [pred] [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!")
+		attempt_msg = span_vwarning("[user] is attempting to make [pred] [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.get_belly_name())]!")
 	return attempt_msg
 
 /**
@@ -143,7 +143,7 @@
  */
 /proc/get_vore_message_range(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly)
 	var/message_range = world.view
-	if(!pred.is_slipping && !prey.is_slipping) //We only care about privacy preference if it's NOT a spontaneous vore.
+	if(!pred.slip_timer && !prey.slip_timer) //We only care about privacy preference if it's NOT a spontaneous vore.
 		switch(belly.eating_privacy_local) //if("loud") case not added, as it would not modify message_range
 			if("default")
 				if(pred.eating_privacy_global)
@@ -165,6 +165,10 @@
 		log_vore("[user] attempted to feed [prey] to [pred], via [belly ? lowertext(belly.name) : "*null*"] but it went wrong.")
 		return FALSE
 	if(pred == prey)
+		return FALSE
+
+	if(!((prey.vore_pref_type_flags & belly.vore_pref_type_flags) == belly.vore_pref_type_flags))
+		to_chat(user, span_vwarning("Vore type preferences do not align!"))
 		return FALSE
 
 	//Final distance check. Time has passed, menus have come and gone. Can't use do_after adjacent because doesn't behave for held micros
@@ -192,7 +196,7 @@
 			return FALSE
 		to_chat(user, span_vnotice("The predator prefers not to be fed while AFK"))
 		return FALSE
-	if(!prey.can_be_afk_prey && (!prey.client || prey.away_from_keyboard))
+	if(!prey.is_dead() && !prey.can_be_afk_prey && (!prey.client || prey.away_from_keyboard))
 		if(user == prey)
 			to_chat(user, span_vwarning("You aren't set as being able to prey while AFK"))
 			return FALSE

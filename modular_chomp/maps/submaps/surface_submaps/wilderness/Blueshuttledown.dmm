@@ -317,6 +317,7 @@
 /obj/structure/table/standard,
 /obj/item/tank/anesthetic,
 /obj/effect/floor_decal/corner/green/border,
+/obj/item/prop/deconstructable/gigacell,
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
 "aX" = (

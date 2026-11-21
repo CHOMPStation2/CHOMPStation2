@@ -23,8 +23,7 @@
 	slot_flags = SLOT_ID | SLOT_BELT
 	show_messages = 1
 
-	origin_tech = list(TECH_ENGINEERING = 2, TECH_MAGNET = 2, TECH_BLUESPACE = 2, TECH_DATA = 2)
-	matter = list(MAT_STEEL = 30,MAT_GLASS = 10)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.015),MAT_GLASS = MATERIAL_COST(0.005))
 
 	var/video_range = 3
 	var/obj/machinery/camera/communicator/video_source	// Their camera
@@ -86,8 +85,7 @@
 //				assign the device to the holder's name automatically in a spectacularly shitty way.
 /obj/item/communicator/Initialize(mapload)
 	. = ..()
-	all_communicators += src
-	all_communicators = sort_names(all_communicators)
+	GLOB.all_communicators += src
 	node = get_exonet_node()
 	START_PROCESSING(SSobj, src)
 	camera = new(src)
@@ -236,12 +234,15 @@
 // Parameters: None
 // Description: Drops all calls when EMPed, so the holder can then get murdered by the antagonist.
 /obj/item/communicator/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	close_connection(reason = "Hardware error de%#_^@%-BZZZZZZZT")
 
 // Proc: add_to_EPv2()
 // Parameters: 1 (hex - a single hexadecimal character)
 // Description: Called when someone is manually dialing with nanoUI.  Adds colons when appropiate.
-/obj/item/communicator/proc/add_to_EPv2(var/hex)
+/obj/item/communicator/proc/add_to_EPv2(hex)
 	var/length = length(target_address)
 	if(length >= 24)
 		return
@@ -259,7 +260,7 @@
 	src.known_devices.Cut()
 	if(!get_connection_to_tcomms()) //If the network's down, we can't see anything.
 		return
-	for(var/obj/item/communicator/comm in all_communicators)
+	for(var/obj/item/communicator/comm in GLOB.all_communicators)
 		if(!comm || !comm.exonet || !comm.exonet.address || comm.exonet.address == src.exonet.address) //Don't add addressless devices, and don't add ourselves.
 			continue
 		src.known_devices |= comm
@@ -307,7 +308,6 @@
 			if(id_check(user, 2))
 				to_chat(user, span_notice("You put the ID into \the [src]'s slot."))
 				add_overlay("pda-id")
-				updateSelfDialog()//Update self dialog on success.
 				return	//Return in case of failed check or when successful.
 		//CHOMPADDITION END
 	return
@@ -317,6 +317,9 @@
 // Description: Makes an exonet datum if one does not exist, allocates an address for it, maintains the lists of all devies, clears the alert icon, and
 //				finally makes NanoUI appear.
 /obj/item/communicator/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	initialize_exonet(user)
 	alert_called = 0
 	update_icon()
@@ -351,7 +354,7 @@
 	. = ..()
 	exonet = new(src)
 	if(client)
-		exonet.make_address("communicator-[src.client]-[src.client.prefs.real_name]")
+		exonet.make_address("communicator-[src.client]-[src.client.prefs.read_preference(/datum/preference/name/real_name)]")
 	else
 		exonet.make_address("communicator-[key]-[src.real_name]")
 
@@ -401,16 +404,16 @@
 	node = null
 
 	//Clean up references that might point at us
-	all_communicators -= src
+	GLOB.all_communicators -= src
 	STOP_PROCESSING(SSobj, src)
 	GLOB.listening_objects.Remove(src)
 	QDEL_NULL(camera)
 	QDEL_NULL(exonet)
 
 	last_camera_turf = null
-	qdel(cam_screen)
+	QDEL_NULL(cam_screen)
 	QDEL_LIST(cam_plane_masters)
-	qdel(cam_background)
+	QDEL_NULL(cam_background)
 
 	return ..()
 

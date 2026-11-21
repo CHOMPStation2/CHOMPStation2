@@ -16,7 +16,7 @@
 	direct			(bool)					If true plays directly to provided atoms instead of from them
 	opacity_check	(bool)					If true, things behind walls/opaque things won't hear the sounds.
 	pref_check		(type)					If set to a /datum/client_preference type, will check if the hearer has that preference active before playing it to them.
-	volume_chan		(type)					If set to a specific volume channel via the incoming argument, we tell the playsound proc to modulate volume based on that channel //CHOMPedit
+	volume_chan		(type)					If set to a specific volume channel via the incoming argument, we tell the playsound proc to modulate volume based on that channel
 	exclusive		(bool)					If true, only one of this sound is allowed to play. Relies on if started is true or not. If true, it will not start another loop until it is false.
 */
 /datum/looping_sound
@@ -35,7 +35,7 @@
 	var/opacity_check
 	var/pref_check
 	var/exclusive
-	var/falloff // CHOMPEdit: Add Falloff
+	var/falloff
 	var/volume_chan
 
 	var/timerid
@@ -59,8 +59,8 @@
 	return ..()
 
 /datum/looping_sound/proc/start(atom/add_thing, skip_start_sound = FALSE)
-	if(QDELETED(src)) //Chomp runtime
-		return //Chomp runtime
+	if(QDELETED(src))
+		return
 	if(add_thing)
 		output_atoms |= add_thing
 	if(timerid)
@@ -86,11 +86,13 @@
 	started = FALSE
 
 /datum/looping_sound/proc/sound_loop(starttime)
-	if(QDELETED(src) || (max_loops && world.time >= starttime + mid_length * max_loops)) //ChompEDIT - runtime
+	if(QDELETED(src) || (max_loops && world.time >= starttime + mid_length * max_loops))
 		stop()
 		return
 	if(!chance || prob(chance))
-		play(get_sound(starttime))
+		var/soundfile = get_sound(starttime)
+		if(soundfile)
+			play(soundfile)
 	if(!timerid)
 		timerid = addtimer(CALLBACK(src, PROC_REF(sound_loop), world.time), mid_length, TIMER_STOPPABLE | TIMER_LOOP)
 
@@ -100,7 +102,7 @@
 	if(direct)
 		S.channel = SSsounds.random_available_channel()
 		S.volume = volume
-	for(var/i in 1 to atoms_cache?.len) //Chomp - runtime
+	for(var/i in 1 to atoms_cache?.len)
 		var/atom/thing = atoms_cache[i]
 		if(direct)
 			if(ismob(thing))
@@ -109,7 +111,7 @@
 					continue
 			SEND_SOUND(thing, S)
 		else
-			playsound(thing, S, volume, vary, extra_range, falloff = falloff, ignore_walls = !opacity_check, preference = pref_check, volume_channel = volume_chan) // CHOMPEdit - Weather volume channel CHOMPEdit again: falloff
+			playsound(thing, S, volume, vary, extra_range, falloff = falloff, ignore_walls = !opacity_check, preference = pref_check, volume_channel = volume_chan)
 
 /datum/looping_sound/proc/get_sound(starttime, _mid_sounds)
 	if(!_mid_sounds)

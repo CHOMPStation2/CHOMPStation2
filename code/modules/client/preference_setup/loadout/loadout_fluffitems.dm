@@ -25,7 +25,7 @@
 
 /datum/gear/fluff/collar/New()
 	..()
-	gear_tweaks += gear_tweak_collar_tag
+	gear_tweaks += GLOB.gear_tweak_collar_tag
 
 /* CHOMPRemove Start Virgo Fluffitems
 //  0-9 CKEYS
@@ -350,6 +350,13 @@
 	slot = "implant"
 	ckeywhitelist = list("coolcrow420")
 	character_name = list("M41L")
+
+/datum/gear/fluff/clara_flask
+	path = /obj/item/reagent_containers/food/drinks/glass2/fluff/claraflask
+	display_name = "Clara's Vacuum Flask"
+	ckeywhitelist = list("claracow")
+	character_name = list("Clara Mali")
+	cost = 1
 
 //  D CKEYS
 /datum/gear/fluff/Aku_briefcase
@@ -1014,13 +1021,6 @@
 	character_name = list("Tiemli Kroto")
 	allowed_roles = list(JOB_ROBOTICIST)
 
-/datum/gear/fluff/clara_flask
-	path = /obj/item/reagent_containers/food/drinks/glass2/fluff/claraflask
-	display_name = "Clara's Vacuum Flask"
-	ckeywhitelist = list("rboys2")
-	character_name = list("Clara Mali")
-	cost = 1
-
 /datum/gear/fluff/luna_sci_medal
 	path = /obj/item/clothing/accessory/medal/nobel_science
 	display_name = "LUNA's Nobel Science Award"
@@ -1506,7 +1506,7 @@
 
 /datum/gear/fluff/dessa_hat/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/fluff/casey_glasses
 	path = /obj/item/clothing/glasses/big_round

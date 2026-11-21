@@ -4,7 +4,7 @@
 #define BOOK_VERSION_MAX	2
 #define BOOK_PATH			"data/books/"
 
-var/global/datum/book_manager/book_mgr = new()
+GLOBAL_DATUM_INIT(book_mgr, /datum/book_manager, new)
 
 /datum/book_manager/proc/path(id)
 	if(isnum(id)) // kill any path exploits
@@ -82,7 +82,7 @@ var/global/datum/book_manager/book_mgr = new()
 //VOREStation Edit End
 
 // delete a book
-/datum/book_manager/proc/remove(var/id)
+/datum/book_manager/proc/remove(id)
 	fdel(path(id))
 
 /datum/archived_book
@@ -97,7 +97,7 @@ var/global/datum/book_manager/book_mgr = new()
 	var/list/icon/photos	 // in-game photos used
 
 // loads the book corresponding by the specified id
-/datum/archived_book/New(var/path)
+/datum/archived_book/New(path)
 	if(isnull(path))
 		return
 
@@ -131,7 +131,7 @@ var/global/datum/book_manager/book_mgr = new()
 
 
 /datum/archived_book/proc/save()
-	var/savefile/F = new(book_mgr.path(id))
+	var/savefile/F = new(GLOB.book_mgr.path(id))
 
 	F["version"] << BOOK_VERSION_MAX
 	F["author"] << author

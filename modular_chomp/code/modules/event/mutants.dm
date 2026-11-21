@@ -89,7 +89,7 @@
 
 
 /datum/event/mutants/announce()
-	command_announcement.Announce("Bioscans indicate... What are those? It looks like [vermstring] have been breeding in [locstring]. Clear them out, just in case.", "Vermin infestation")
+	GLOB.command_announcement.Announce("Bioscans indicate... What are those? It looks like [vermstring] have been breeding in [locstring]. Clear them out, just in case.", "Vermin infestation")
 
 #undef LOC_KITCHEN
 #undef LOC_ATMOS

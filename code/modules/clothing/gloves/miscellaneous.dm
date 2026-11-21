@@ -20,6 +20,7 @@
 
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/gloves/swat
 	desc = "These tactical gloves are somewhat fire and impact-resistant."
@@ -31,6 +32,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
 	armor = list(melee = 15, bullet = 10, laser = 10, energy = 10, bomb = 5, bio = 0, rad = 0) // CHOMPedit: Now protective.
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/gloves/combat //CHOMPedit: Combined effect of SWAT gloves and insulated gloves, with better protective stats.
 	desc = "These military-grade tactical gloves protect the user from electrical shocks, fire, high-velocity impacts and varying temperatures." // CHOMPedit: Updated description.
@@ -42,6 +44,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
 	armor = list(melee = 20, bullet = 15, laser = 15, energy = 15, bomb = 10, bio = 0, rad = 0) // CHOMPedit: Now protective.
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/gloves/sterile
 	name = "sterile gloves"
@@ -120,6 +123,7 @@
 
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/gloves/ranger
 	var/glovecolor = "white"

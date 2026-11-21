@@ -27,7 +27,7 @@
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 2 MINUTES
 
-/obj/item/clothing/suit/space/rig/ch/tyrprecursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/suit/space/rig/ch/tyrprecursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(shieldhealth < 75)
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		shieldhealth -= damage
@@ -35,16 +35,16 @@
 		return TRUE
 	return FALSE
 
-/obj/item/clothing/suit/space/rig/ch/tyrprecursor/proc/activate_ability(var/mob/living/wearer)
+/obj/item/clothing/suit/space/rig/ch/tyrprecursor/proc/activate_ability(mob/living/wearer)
 	cooldown = world.time + cooldown_duration
 	shieldhealth = 75
 
-/obj/item/clothing/suit/space/rig/ch/tyrprecursor/equipped(var/mob/living/carbon/human/H)
+/obj/item/clothing/suit/space/rig/ch/tyrprecursor/equipped(mob/living/carbon/human/H)
 	..()
 	if(istype(H) && H.head == src && H.is_sentient())
 		START_PROCESSING(SSobj, src)
 
-/obj/item/clothing/suit/space/rig/ch/tyrprecursor/dropped(var/mob/living/carbon/human/H)
+/obj/item/clothing/suit/space/rig/ch/tyrprecursor/dropped(mob/living/carbon/human/H)
 	..()
 	STOP_PROCESSING(SSobj, src)
 
@@ -68,7 +68,7 @@
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 2 MINUTES
 
-/obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(shieldhealth < 75)
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		shieldhealth -= damage
@@ -76,16 +76,16 @@
 		return TRUE
 	return FALSE
 
-/obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/proc/activate_ability(var/mob/living/wearer)
+/obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/proc/activate_ability(mob/living/wearer)
 	cooldown = world.time + cooldown_duration
 	shieldhealth = 75
 
-/obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/equipped(var/mob/living/carbon/human/H)
+/obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/equipped(mob/living/carbon/human/H)
 	..()
 	if(istype(H) && H.head == src && H.is_sentient())
 		START_PROCESSING(SSobj, src)
 
-/obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/dropped(var/mob/living/carbon/human/H)
+/obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/dropped(mob/living/carbon/human/H)
 	..()
 	STOP_PROCESSING(SSobj, src)
 
@@ -108,7 +108,7 @@
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 2 MINUTES
 
-/obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(shieldhealth < 75)
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		shieldhealth -= damage
@@ -116,16 +116,16 @@
 		return TRUE
 	return FALSE
 
-/obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/proc/activate_ability(var/mob/living/wearer)
+/obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/proc/activate_ability(mob/living/wearer)
 	cooldown = world.time + cooldown_duration
 	shieldhealth = 75
 
-/obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/equipped(var/mob/living/carbon/human/H)
+/obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/equipped(mob/living/carbon/human/H)
 	..()
 	if(istype(H) && H.head == src && H.is_sentient())
 		START_PROCESSING(SSobj, src)
 
-/obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/dropped(var/mob/living/carbon/human/H)
+/obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/dropped(mob/living/carbon/human/H)
 	..()
 	STOP_PROCESSING(SSobj, src)
 
@@ -148,7 +148,7 @@
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 2 MINUTES
 
-/obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(shieldhealth < 75)
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		shieldhealth -= damage
@@ -156,16 +156,16 @@
 		return TRUE
 	return FALSE
 
-/obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/proc/activate_ability(var/mob/living/wearer)
+/obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/proc/activate_ability(mob/living/wearer)
 	cooldown = world.time + cooldown_duration
 	shieldhealth = 75
 
-/obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/equipped(var/mob/living/carbon/human/H)
+/obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/equipped(mob/living/carbon/human/H)
 	..()
 	if(istype(H) && H.head == src && H.is_sentient())
 		START_PROCESSING(SSobj, src)
 
-/obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/dropped(var/mob/living/carbon/human/H)
+/obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/dropped(mob/living/carbon/human/H)
 	..()
 	STOP_PROCESSING(SSobj, src)
 

@@ -18,11 +18,11 @@
 	attack_edge = 1
 	attacktext = list("slashed")
 	friendly = list("pinches")
-	organ_names = /decl/mob_organ_names/wraith
+	organ_names = /datum/decl/mob_organ_names/wraith
 	movement_cooldown = -1
 	attack_sound = 'sound/weapons/rapidslice.ogg'
-	construct_spells = list(/spell/targeted/ethereal_jaunt/shift,
-							/spell/targeted/ambush_mode
+	construct_spells = list(/datum/spell/targeted/ethereal_jaunt/shift,
+							/datum/spell/targeted/ambush_mode
 							)
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 	var/jaunt_warning = 0.5 SECONDS	// How long the jaunt telegraphing is.
@@ -33,12 +33,12 @@
 
 //	environment_smash = 1	// Whatever this gets renamed to, Wraiths need to break things
 
-/mob/living/simple_mob/construct/wraith/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/construct/wraith/apply_melee_effects(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		L.add_modifier(/datum/modifier/deep_wounds, 30 SECONDS)
 
-/decl/mob_organ_names/wraith
+/datum/decl/mob_organ_names/wraith
 	hit_zones = list("body", "eye", "crystaline spike", "left claw", "right claw")
 
 /mob/living/simple_mob/construct/wraith/jaunt_spam

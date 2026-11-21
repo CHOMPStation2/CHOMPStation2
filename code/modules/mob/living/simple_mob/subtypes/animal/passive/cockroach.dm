@@ -43,13 +43,18 @@
 
 	var/squish_chance = 25
 
+/mob/living/simple_mob/animal/passive/cockroach/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_AMBIENT_PEST_MOB, ROUNDSTART_TRAIT)
+
 //Deletes the body upon death
 /mob/living/simple_mob/animal/passive/cockroach/death()
 	new /obj/effect/decal/cleanable/bug_remains(src.loc)
 	qdel(src)
 
 //Squish code
-/mob/living/simple_mob/animal/passive/cockroach/Crossed(var/atom/movable/AM)
+/mob/living/simple_mob/animal/passive/cockroach/Crossed(atom/movable/AM)
+	. = ..()
 	if(ismob(AM))
 		if(isliving(AM))
 			var/mob/living/A = AM

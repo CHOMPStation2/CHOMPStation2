@@ -18,7 +18,7 @@
 	..()
 	new /obj/effect/decal/cleanable/blood/splatter(get_turf(src))
 
-/obj/effect/meteor/medium/meatyore/meteor_effect(var/gib)
+/obj/effect/meteor/medium/meatyore/meteor_effect(gib)
 	..()
 	if(gib)
 		new /obj/effect/gibspawner/human(get_turf(src))
@@ -33,7 +33,7 @@
 	..()
 	new /obj/effect/decal/cleanable/blood/splatter(get_turf(src))
 
-/obj/effect/meteor/big/meteor_effect(var/gib)
+/obj/effect/meteor/big/meteor_effect(gib)
 	..()
 	if(gib)
 		new /obj/effect/gibspawner/human(get_turf(src))
@@ -48,7 +48,7 @@
 	..()
 	new /obj/effect/decal/cleanable/blood/splatter(get_turf(src))
 
-/obj/effect/meteor/flaming/meatyore/meteor_effect(var/gib)
+/obj/effect/meteor/flaming/meatyore/meteor_effect(gib)
 	..()
 	if(gib)
 		new /obj/effect/gibspawner/human(get_turf(src))
@@ -63,7 +63,7 @@
 	..()
 	new /obj/effect/decal/cleanable/blood/splatter(get_turf(src))
 
-/obj/effect/meteor/irradiated/meatyore/meteor_effect(var/gib)
+/obj/effect/meteor/irradiated/meatyore/meteor_effect(gib)
 	..()
 	if(gib)
 		new /obj/effect/gibspawner/human(get_turf(src))
@@ -78,7 +78,7 @@
 	..()
 	new /obj/effect/decal/cleanable/blood/splatter(get_turf(src))
 
-/obj/effect/meteor/emp/meatyore/meteor_effect(var/gib)
+/obj/effect/meteor/emp/meatyore/meteor_effect(gib)
 	..()
 	if(gib)
 		new /obj/effect/gibspawner/human
@@ -89,7 +89,7 @@
 	icon_state = "meaty_flaming"
 	meteordrop = /obj/item/reagent_containers/food/snacks/phorondragonmeat
 
-/obj/effect/meteor/tunguska/meatyore/meteor_effect(var/gib)
+/obj/effect/meteor/tunguska/meatyore/meteor_effect(gib)
 	..()
 	if(gib)
 		new /obj/effect/gibspawner/human(get_turf(src))

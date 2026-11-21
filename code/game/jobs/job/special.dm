@@ -13,7 +13,7 @@
 	economic_modifier = 20
 	whitelist_only = 1
 	latejoin_only = 1
-	outfit_type = /decl/hierarchy/outfit/job/centcom_officer
+	outfit_type = /datum/decl/hierarchy/outfit/job/centcom_officer
 	job_description = "A Central Command Officer is there on official business. Most of time. Whatever it is, they're a VIP."
 
 	minimum_character_age = 25
@@ -22,10 +22,10 @@
 	pto_type = PTO_CIVILIAN
 
 /datum/job/centcom_officer/get_access()
-	return get_all_accesses().Copy()
+	return SSaccess.get_all_accesses().Copy()
 
 //YW UNCOMMENTINGSTART: INSTATE LOYALTY IMPLANT
-/datum/job/centcom_officer/equip(var/mob/living/carbon/human/H)
+/datum/job/centcom_officer/equip(mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty()
@@ -88,7 +88,7 @@
 	economic_modifier = 20
 	whitelist_only = 1
 	latejoin_only = 1
-	outfit_type = /decl/hierarchy/outfit/job/emergency_responder
+	outfit_type = /datum/decl/hierarchy/outfit/job/emergency_responder
 	job_description = "Emergency Responders are usually called in to deal with on-station emergencies that the crew require assistance to deal with."
 
 	minimum_character_age = 18
@@ -97,24 +97,24 @@
 	pto_type = PTO_CIVILIAN
 
 /datum/job/emergency_responder/get_access()
-	return get_all_accesses().Copy()
-/* CHOMPEDIT: Removing Clown/Mime job from being initialized at all (These are alt titles of Entertainer on our codebase)
+	return SSaccess.get_all_accesses().Copy()
+
 /datum/job/clown
 	title = JOB_CLOWN
 	flag = CLOWN
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = ENGSEC
 	faction = FACTION_STATION
-	total_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
-	spawn_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "the spirit of laughter"
 	selection_color = "#515151"
 	economic_modifier = 1
 	job_description = "A " + JOB_CLOWN + " is there to entertain the crew and keep high morale using various harmless pranks and ridiculous jokes!"
-	whitelist_only = 1
+	whitelist_only = 0 // CHOMPEdit - Be free!
 	latejoin_only = 0
 	requestable = FALSE
-	outfit_type = /decl/hierarchy/outfit/job/clown
+	outfit_type = /datum/decl/hierarchy/outfit/job/clown
 	pto_type = PTO_CIVILIAN
 	alt_titles = list(JOB_ALT_JESTER = /datum/alt_title/jester, JOB_ALT_FOOL = /datum/alt_title/fool)
 
@@ -136,18 +136,24 @@
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = ENGSEC
 	faction = FACTION_STATION
-	total_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
-	spawn_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "the spirit of performance"
 	selection_color = "#515151"
 	economic_modifier = 1
 	job_description = "A " + JOB_MIME + " is there to entertain the crew and keep high morale using unbelievable performances and acting skills!"
 	alt_titles = list(JOB_ALT_PASEUR = /datum/alt_title/poseur)
-	whitelist_only = 1
+	whitelist_only = 0 // CHOMPEdit - Be free!
 	latejoin_only = 0
 	requestable = FALSE
-	outfit_type = /decl/hierarchy/outfit/job/mime
+	outfit_type = /datum/decl/hierarchy/outfit/job/mime
 	pto_type = PTO_CIVILIAN
+
+/datum/job/mime/equip(mob/living/carbon/human/H, alt_title)
+	. = ..()
+	if(H.mind)
+		var/datum/action/innate/vow_of_silence/vow = new(H)
+		vow.Grant(H)
 
 /datum/alt_title/poseur
 	title = JOB_ALT_PASEUR
@@ -157,7 +163,6 @@
 		return list(ACCESS_MAINT_TUNNELS, ACCESS_ENTERTAINMENT, ACCESS_TOMFOOLERY, ACCESS_MIME)
 	else
 		return list(ACCESS_ENTERTAINMENT, ACCESS_TOMFOOLERY, ACCESS_MIME)
-*/ //CHOMPEDIT: END remove Mime/clown defines (These are alt titles of Entertainer on our codebase)
 
 /obj/item/card/id/civilian/lurker
 	desc = "A rather old and scuffed-looking ID. It seems legit, but something also seems very off somehow. Say, what's the issue/expiry date..?"
@@ -177,6 +182,6 @@
 	whitelist_only = 1
 	latejoin_only = 1
 	requestable = FALSE
-	outfit_type = /decl/hierarchy/outfit/maint_lurker
+	outfit_type = /datum/decl/hierarchy/outfit/maint_lurker
 	access = list(ACCESS_MAINT_TUNNELS)
 	minimal_access = list(ACCESS_MAINT_TUNNELS)

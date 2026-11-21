@@ -13,7 +13,7 @@
 	access = list(ACCESS_MORGUE, ACCESS_CHAPEL_OFFICE, ACCESS_CREMATORIUM, ACCESS_MAINT_TUNNELS)
 	minimal_access = list(ACCESS_CHAPEL_OFFICE, ACCESS_CREMATORIUM)
 
-	outfit_type = /decl/hierarchy/outfit/job/chaplain
+	outfit_type = /datum/decl/hierarchy/outfit/job/chaplain
 	job_description = "The " + JOB_CHAPLAIN + " ministers to the spiritual needs of the crew."
 	alt_titles = list(JOB_ALT_MISSIONARY = /datum/alt_title/missionary, JOB_ALT_PREACHER = /datum/alt_title/preacher, JOB_ALT_PRIEST = /datum/alt_title/priest,
 							JOB_ALT_NUN = /datum/alt_title/nun, JOB_ALT_MONK = /datum/alt_title/monk, JOB_ALT_COUNSELOR = /datum/alt_title/counselor,
@@ -43,7 +43,7 @@
 /datum/alt_title/monk
 	title = JOB_ALT_MONK
 
-/datum/job/chaplain/equip(var/mob/living/carbon/human/H, var/alt_title, var/ask_questions = TRUE)
+/datum/job/chaplain/equip(mob/living/carbon/human/H, alt_title, ask_questions = TRUE)
 	. = ..()
 	if(!.)
 		return
@@ -136,7 +136,7 @@
 	var/title = JOB_CHAPLAIN
 	var/configured = FALSE
 
-/datum/religion/New(var/r, var/d, var/bn, var/bis, var/bits, var/t)
+/datum/religion/New(r, d, bn, bis, bits, t)
 	. = ..()
 	religion = r
 	deity = d

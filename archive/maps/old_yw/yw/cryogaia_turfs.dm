@@ -86,7 +86,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/old_tile/gray)
 CRYOGAIA_TURF_CREATE(/turf/simulated/mineral)
 CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 	//This proc is responsible for ore generation on surface turfs
-/turf/simulated/mineral/cryogaia/make_ore(var/rare_ore)
+/turf/simulated/mineral/cryogaia/make_ore(rare_ore)
 	if(mineral || ignore_mapgen)
 		return
 	var/mineral_name
@@ -114,7 +114,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 		UpdateMineral()
 	update_icon()
 
-/turf/simulated/mineral/cryogaia/rich/make_ore(var/rare_ore)
+/turf/simulated/mineral/cryogaia/rich/make_ore(rare_ore)
 	if(mineral || ignore_mapgen)
 		return
 	var/mineral_name
@@ -238,7 +238,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 
 /turf/simulated/sky/snowscroll
 	name = "snow transit"
-	icon = 'icons/turf/transit_yw.dmi' //Moved to archive
+	icon = 'icons/turf/transit.dmi' //Moved to archive
 	icon_state = "snow_ns"
 
 

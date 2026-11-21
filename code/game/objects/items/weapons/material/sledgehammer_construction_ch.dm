@@ -7,7 +7,7 @@
 
 	var/construction_stage = 1
 
-/obj/item/hammer_head/attackby(var/obj/item/thing, var/mob/user)
+/obj/item/hammer_head/attackby(obj/item/thing, mob/user)
 
 	if(istype(thing, /obj/item/stack/rods) && construction_stage == 1)
 		var/obj/item/stack/rods = thing
@@ -111,7 +111,7 @@
 		construction_stage++
 	icon_state = "hammer_construction_[construction_stage]"
 
-/obj/item/hammer_head/examine(var/mob/user)
+/obj/item/hammer_head/examine(mob/user)
 	. = ..(user,2)
 	if(.)
 		switch(construction_stage)

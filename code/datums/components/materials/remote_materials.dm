@@ -162,11 +162,17 @@ handles linking back and forth.
 	if(istype(target, /obj/item/multitool))
 		return OnMultitool(source, user, target)
 
+	if(istype(target, /obj/item/forensics))
+		return FALSE
+
 	if(mat_container_flags & MATCONTAINER_NO_INSERT)
-		return
+		return FALSE
 
 	if(istype(target, /obj/item/storage/bag/sheetsnatcher))
-		return mat_container.OnSheetSnatcher(source, target, user)
+		return mat_container.OnSheetSnatcher(source, user, target)
+
+	if(istype(target, /obj/item/gripper))
+		return mat_container.OnGripper(source, user, target)
 
 	return attempt_insert(user, target)
 

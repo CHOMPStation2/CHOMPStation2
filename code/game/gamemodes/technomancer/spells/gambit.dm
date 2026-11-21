@@ -29,13 +29,13 @@
 			give_new_spell(random_spell())
 		qdel(src)
 
-/obj/item/spell/gambit/proc/give_new_spell(var/spell_type)
+/obj/item/spell/gambit/proc/give_new_spell(spell_type)
 	owner.drop_from_inventory(src, null)
 	owner.place_spell_in_hand(spell_type)
 
 // Gives a random spell.
 /obj/item/spell/gambit/proc/random_spell()
-	var/list/potential_spells = all_technomancer_gambit_spells.Copy()
+	var/list/potential_spells = GLOB.all_technomancer_gambit_spells.Copy()
 	var/rare_spell_chance = between(0, calculate_spell_power(100) - 100, 100) // Having 120% spellpower means a 20% chance to get to roll for rare spells.
 	if(prob(rare_spell_chance))
 		potential_spells += rare_spells.Copy()
@@ -119,6 +119,6 @@
 
 	// Fallback method in case nothing gets added.
 	if(!potential_spells.len)
-		potential_spells = all_technomancer_gambit_spells.Copy()
+		potential_spells = GLOB.all_technomancer_gambit_spells.Copy()
 
 	return pick(potential_spells)

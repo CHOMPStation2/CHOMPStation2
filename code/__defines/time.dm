@@ -4,8 +4,11 @@
 /// Define that just has the current in-universe year for use in whatever context you might want to display that in. (For example, 2022 -> 2562 given a 540 year offset)
 #define CURRENT_STATION_YEAR (GLOB.year_integer + STATION_YEAR_OFFSET)
 
+/// Used in the GLOB year and tgui PreInit
+#define UTC_YEAR time2text(world.realtime,"YYYY",NO_TIMEZONE)
+
 /// In-universe, SS13 is set 300 years in the future from the real-world day, hence this number for determining the year-offset for the in-game year.
-#define STATION_YEAR_OFFSET 300
+#define STATION_YEAR_OFFSET 544 // CHOMPEdit
 
 #define MILISECOND * 0.01
 #define MILLISECONDS * 0.01
@@ -132,3 +135,24 @@
 
 /// in the grim darkness of the thirteenth space station there is no timezones, since they break IC game times. Use this for all IC/round time values
 #define NO_TIMEZONE 0
+
+#define JANUARY 1
+#define FEBRUARY 2
+#define MARCH 3
+#define APRIL 4
+#define MAY 5
+#define JUNE 6
+#define JULY 7
+#define AUGUST 8
+#define SEPTEMBER 9
+#define OCTOBER 10
+#define NOVEMBER 11
+#define DECEMBER 12
+
+#define MONDAY "Mon"
+#define TUESDAY "Tue"
+#define WEDNESDAY "Wed"
+#define THURSDAY "Thu"
+#define FRIDAY "Fri"
+#define SATURDAY "Sat"
+#define SUNDAY "Sun"

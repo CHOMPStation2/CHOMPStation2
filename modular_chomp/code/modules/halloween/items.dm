@@ -214,7 +214,7 @@
 	costumes = typesof(/obj/item/storage/box/halloween/)
 
 /obj/structure/boxpile/attack_hand(mob/living/user)
-	if(!do_after(user, 5 SECONDS))
+	if(!do_after(user, 5 SECONDS, src))
 		return
 	if(!user.ckey)
 		return

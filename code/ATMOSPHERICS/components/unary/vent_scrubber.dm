@@ -4,12 +4,12 @@
 	pipe_state = "scrubber"
 
 	name = "Air Scrubber"
-	desc = "Has a valve and pump attached to it"
+	desc = "Has a valve and pump attached to it."
 	use_power = USE_POWER_OFF
 	idle_power_usage = 150		//internal circuitry, friction losses and stuff
 	power_rating = 7500			//7500 W ~ 10 HP
 
-	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_SCRUBBER //connects to regular and scrubber pipes
+	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_SCRUBBER|CONNECT_TYPE_FUEL|CONNECT_TYPE_AUX // All except supply
 
 	level = 1
 
@@ -56,10 +56,7 @@
 		initial_loc.air_scrub_names -= id_tag
 	return ..()
 
-/obj/machinery/atmospherics/unary/vent_scrubber/update_icon(var/safety = 0)
-	if(!check_icon_cache())
-		return
-
+/obj/machinery/atmospherics/unary/vent_scrubber/update_icon(safety = 0)
 	cut_overlays()
 
 	var/scrubber_icon = "scrubber"
@@ -75,21 +72,21 @@
 	else
 		scrubber_icon += "[use_power ? "[scrubbing ? "on" : "in"]" : "off"]"
 
-	add_overlay(icon_manager.get_atmos_icon("device", , , scrubber_icon))
+	add_overlay(GLOB.icon_manager.get_atmos_icon("device", , , scrubber_icon))
 
 /obj/machinery/atmospherics/unary/vent_scrubber/update_underlays()
-	if(..())
-		underlays.Cut()
-		var/turf/T = get_turf(src)
-		if(!istype(T))
-			return
-		if(!T.is_plating() && node && node.level == 1 && istype(node, /obj/machinery/atmospherics/pipe))
-			return
+	..()
+	underlays.Cut()
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		return
+	if(!T.is_plating() && node && node.level == 1 && istype(node, /obj/machinery/atmospherics/pipe))
+		return
+	else
+		if(node)
+			add_underlay(T, node, dir, node.icon_connect_type)
 		else
-			if(node)
-				add_underlay(T, node, dir, node.icon_connect_type)
-			else
-				add_underlay(T,, dir)
+			add_underlay(T,, dir)
 
 /obj/machinery/atmospherics/unary/vent_scrubber/proc/set_frequency(new_frequency)
 	SSradio.remove_object(src, frequency)
@@ -176,7 +173,7 @@
 
 	return 1
 
-/obj/machinery/atmospherics/unary/vent_scrubber/hide(var/i) //to make the little pipe section invisible, the icon changes.
+/obj/machinery/atmospherics/unary/vent_scrubber/hide(i) //to make the little pipe section invisible, the icon changes.
 	update_icon()
 	update_underlays()
 
@@ -273,7 +270,7 @@
 	if(old_stat != stat)
 		update_icon()
 
-/obj/machinery/atmospherics/unary/vent_scrubber/attackby(var/obj/item/W as obj, var/mob/user as mob)
+/obj/machinery/atmospherics/unary/vent_scrubber/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.has_tool_quality(TOOL_WELDER))
 		var/obj/item/weldingtool/WT = W
 		if (WT.remove_fuel(0,user))
@@ -318,7 +315,7 @@
 			span_infoplain(span_bold("\The [user]") + " unfastens \the [src]."), \
 			span_notice("You have unfastened \the [src]."), \
 			"You hear a ratchet.")
-		deconstruct()
+		atom_deconstruct()
 
 /obj/machinery/atmospherics/unary/vent_scrubber/examine(mob/user)
 	. = ..()

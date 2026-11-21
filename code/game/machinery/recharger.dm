@@ -16,7 +16,8 @@ GLOBAL_LIST_INIT(allowed_recharger_devices, list(
 	/obj/item/paicard,
 	/obj/item/personal_shield_generator,
 	/obj/item/gun/projectile/cell_loaded,
-	/obj/item/ammo_magazine/cell_mag
+	/obj/item/ammo_magazine/cell_mag,
+	/obj/item/medigun_backpack
 	))
 
 GLOBAL_LIST_INIT(allowed_wallcharger_devices, list(
@@ -59,15 +60,22 @@ GLOBAL_LIST_INIT(recharger_battery_exempt, list(
 	. = ..()
 	default_apply_parts()
 
+/obj/machinery/recharger/Destroy()
+	if(charging)
+		charging.update_icon()
+		charging.forceMove(src.loc)
+		charging = null
+	. = ..()
+
 /obj/machinery/recharger/examine(mob/user)
 	. = ..()
 
 	if(get_dist(user, src) <= 5)
-		. += "[charging ? "[charging]" : "Nothing"] is in [src]."
+		. += span_notice("[charging ? "[charging]" : "Nothing"] is in [src].")
 		if(charging)
 			var/obj/item/cell/C = charging.get_cell()
 			if(C)				// Sometimes we get things without cells in it.
-				. += "Current charge: [C.charge] / [C.maxcharge]"
+				. += span_notice("Current charge: [C.charge] / [C.maxcharge]")
 
 ///Checks valid items to see if there's any reasons we wouldn't allow them to be put in.
 /obj/machinery/recharger/proc/do_allowed_checks(obj/item/G, mob/user)
@@ -310,3 +318,4 @@ GLOBAL_LIST_INIT(recharger_battery_exempt, list(
 	icon_state_idle = "wrecharger0"
 	portable = FALSE
 	circuit = /obj/item/circuitboard/recharger/wrecharger
+	flags = WALL_ITEM

@@ -66,6 +66,10 @@
 	#define COMPONENT_LIVING_CANCEL_LIFE_PROCESSING (1<<0)
 ///From living/set_resting(): (new_resting, silent, instant)
 #define COMSIG_LIVING_RESTING "living_resting"
+///When a mob slips. Called on /turf/simulated/handle_slip()
+#define COMSIG_ON_LIVING_SLIP "living_slip"
+///When after every foced movement a mob slides due to a lube or ice-like slip. Called on /turf/simulated/slip_slide()
+#define COMSIG_AFTER_LIVING_SLIDE "living_slide"
 
 ///from base of element/bane/activate(): (item/weapon, mob/user)
 #define COMSIG_LIVING_BANED "living_baned"
@@ -449,3 +453,7 @@
 #define COMSIG_VENT_CRAWLER_ENTERED "ventcrawl_entered_vent"
 ///called when a ventcrawling mob leaves a vent : (mob/exiting_mob)
 #define COMSIG_VENT_CRAWLER_EXITED "ventcrawl_exit_vent"
+
+///called when a living mob collides with a dense turf : /mob/living/proc/turf_collision(var/turf/T, var/speed)
+#define COMSIG_LIVING_TURF_COLLISION "living_turf_collision"
+	#define COMPONENT_LIVING_BLOCK_TURF_COLLISION (1<<0)

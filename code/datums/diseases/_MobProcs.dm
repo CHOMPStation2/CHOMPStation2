@@ -38,14 +38,6 @@
 	if(HasDisease(D))
 		return FALSE
 
-	if(istype(D, /datum/disease/advance))
-		var/active_diseases = 0
-		for(var/datum/disease/AD in GetViruses())
-			if(!(AD.virus_modifiers & DORMANT)) // You can have as many dormant diseases as you want
-				active_diseases++
-		if(active_diseases > 0) // But ONLY one active disease
-			return FALSE
-
 	var/compatible_type = FALSE
 	for(var/type_to_test in D.viable_mobtypes)
 		if(ispath(type, type_to_test))
@@ -61,10 +53,10 @@
 
 	return TRUE
 
-/mob/proc/ContractDisease(datum/disease/D, var/target_zone)
+/mob/proc/ContractDisease(datum/disease/D, target_zone)
 	if(!CanContractDisease(D))
-		return 0
-	D.infect(src)
+		return FALSE
+	D.try_infect(src)
 	return TRUE
 
 /mob/living/carbon/human/ContractDisease(datum/disease/D, target_zone)
@@ -85,8 +77,10 @@
 	if(prob(15/D.permeability_mod))
 		return
 
+/* We have stupid high nutrition values - Something to see about in the future
 	if(nutrition > 300 && prob(nutrition/50))
 		return
+*/
 
 	if(!target_zone)
 		target_zone = pick(list(
@@ -136,10 +130,10 @@
 					passed = prob((Cl.permeability_coefficient*100) - 1)
 
 	if(passed)
-		D.infect(src)
+		D.try_infect(src)
 
 /mob/living/proc/AirborneContractDisease(datum/disease/D, force_spread)
-	if(((D.spread_flags & DISEASE_SPREAD_AIRBORNE) || force_spread) && prob(50*D.spreading_modifier) - 1)
+	if(((D.spread_flags & DISEASE_SPREAD_AIRBORNE) || force_spread) && prob(50*D.permeability_mod) - 1)
 		ForceContractDisease(D)
 
 /mob/living/carbon/AirborneContractDisease(datum/disease/D, force_spread)
@@ -184,6 +178,11 @@
 	LAZYINITLIST(viruses)
 	return viruses
 
+/mob/proc/GetActiveViruses()
+	var/list/viruses_to_return = GetViruses()
+	viruses_to_return.Remove(GetDormantDiseases())
+	return viruses_to_return
+
 /mob/proc/GetSpreadableViruses()
 	LAZYINITLIST(viruses)
 	var/list/viruses_to_return = list()
@@ -205,25 +204,29 @@
 	LAZYINITLIST(resistances)
 	return resistances
 
-/mob/proc/AddResistances(var/list/resistance)
+/mob/proc/AddResistances(list/resistance)
 	LAZYINITLIST(resistances)
 	resistances |= resistance
 	return TRUE
 
-/client/proc/ReleaseVirus()
-	set category = "Fun.Event Kit"
-	set name = "Release Virus"
-	set desc = "Release a pre-set virus."
+/mob/proc/check_virus()
+	var/threat
+	var/danger
+	for(var/thing in viruses)
+		var/datum/disease/disease = thing
+		if(!(disease.visibility_flags & HIDDEN_SCANNER))
+			if(!threat || get_disease_danger_value(disease.danger) > threat)
+				threat = get_disease_danger_value(disease.danger)
+				danger = disease.danger
+	return danger
 
-	if(!check_rights(R_FUN|R_EVENT))
-		return FALSE
-
-	var/disease = tgui_input_list(usr, "Choose virus", "Viruses", subtypesof(/datum/disease), subtypesof(/datum/disease))
+ADMIN_VERB(ReleaseVirus, R_SPAWN|R_EVENT, "Release Virus", "Release a pre-set virus.", ADMIN_CATEGORY_FUN_EVENT_KIT)
+	var/disease = tgui_input_list(user, "Choose virus", "Viruses", subtypesof(/datum/disease), subtypesof(/datum/disease))
 
 	if(isnull(disease))
 		return FALSE
 
-	var/mob/living/carbon/human/H = tgui_input_list(usr, "Choose infectee", "Characters", GLOB.human_mob_list)
+	var/mob/living/carbon/human/H = tgui_input_list(user, "Choose infectee", "Characters", GLOB.human_mob_list)
 
 	if(isnull(H))
 		return FALSE
@@ -233,10 +236,8 @@
 	if(!H.HasDisease(D))
 		H.ForceContractDisease(D)
 
-		message_admins("[key_name_admin(usr)] has triggered a virus outbreak of [D.name]! Affected mob: [key_name_admin(H)]")
-		log_admin("[key_name_admin(usr)] infected [key_name_admin(H)] with [D.name]")
+		message_admins("[key_name_admin(user)] has triggered a virus outbreak of [D.name]! Affected mob: [key_name_admin(H)]")
+		log_admin("[key_name_admin(user)] infected [key_name_admin(H)] with [D.name]")
 
 		if(!GLOB.archive_diseases[D.GetDiseaseID()])
 			GLOB.archive_diseases[D.GetDiseaseID()] = D
-
-		return TRUE

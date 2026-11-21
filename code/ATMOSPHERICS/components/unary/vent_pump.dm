@@ -13,13 +13,13 @@
 	pipe_state = "uvent"
 
 	name = "Air Vent"
-	desc = "Has a valve and pump attached to it"
+	desc = "Has a valve and pump attached to it."
 	use_power = USE_POWER_OFF
 	idle_power_usage = 150		//internal circuitry, friction losses and stuff
 	power_rating = 30000			//7500 W ~ 10 HP //VOREStation Edit - 30000 W
 
-	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_SUPPLY //connects to regular and supply pipes
-	blocks_emissive = FALSE
+	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_SUPPLY|CONNECT_TYPE_FUEL|CONNECT_TYPE_AUX // All except scrubbers
+	blocks_emissive = EMISSIVE_BLOCK_NONE
 
 	var/area/initial_loc
 	level = 1
@@ -145,10 +145,7 @@
 	. = ..()
 	air_contents.volume = ATMOS_DEFAULT_VOLUME_PUMP + 500 //meant to match air injector
 
-/obj/machinery/atmospherics/unary/vent_pump/update_icon(var/safety = 0)
-	if(!check_icon_cache())
-		return
-
+/obj/machinery/atmospherics/unary/vent_pump/update_icon(safety = 0)
 	cut_overlays()
 
 	var/vent_icon = "vent"
@@ -172,21 +169,21 @@
 		playsound(src, start_sound, 25, ignore_walls = FALSE, preference = /datum/preference/toggle/air_pump_noise)
 
 
-	add_overlay(icon_manager.get_atmos_icon("device", , , vent_icon))
+	add_overlay(GLOB.icon_manager.get_atmos_icon("device", , , vent_icon))
 
 /obj/machinery/atmospherics/unary/vent_pump/update_underlays()
-	if(..())
-		underlays.Cut()
-		var/turf/T = get_turf(src)
-		if(!istype(T))
-			return
-		if(!T.is_plating() && node && node.level == 1 && istype(node, /obj/machinery/atmospherics/pipe))
-			return
+	..()
+	underlays.Cut()
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		return
+	if(!T.is_plating() && node && node.level == 1 && istype(node, /obj/machinery/atmospherics/pipe))
+		return
+	else
+		if(node)
+			add_underlay(T, node, dir, node.icon_connect_type)
 		else
-			if(node)
-				add_underlay(T, node, dir, node.icon_connect_type)
-			else
-				add_underlay(T,, dir)
+			add_underlay(T,, dir)
 
 /obj/machinery/atmospherics/unary/vent_pump/hide()
 	update_icon()
@@ -424,7 +421,7 @@
 	if(old_stat != stat)
 		update_icon()
 
-/obj/machinery/atmospherics/unary/vent_pump/attackby(var/obj/item/W as obj, var/mob/user as mob)
+/obj/machinery/atmospherics/unary/vent_pump/attackby(obj/item/W as obj, mob/user as mob)
 	if (!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 	if (!(stat & NOPOWER) && use_power)
@@ -445,7 +442,7 @@
 			span_infoplain(span_bold("\The [user]") + " unfastens \the [src]."), \
 			span_notice("You have unfastened \the [src]."), \
 			"You hear a ratchet.")
-		deconstruct()
+		atom_deconstruct()
 
 /obj/machinery/atmospherics/unary/vent_pump/proc/multitool_act(obj/item/W, mob/user)
 	var/list/options = list(

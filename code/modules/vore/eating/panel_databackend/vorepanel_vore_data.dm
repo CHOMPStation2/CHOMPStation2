@@ -28,69 +28,96 @@
 
 /datum/vore_look/proc/get_inside_data(mob/owner)
 	var/atom/hostloc = owner.loc
-	//Allow VorePanel to show pred belly details even while indirectly inside
+	// Allow VorePanel to show pred belly details even while indirectly inside
 	if(isliving(owner))
 		var/mob/living/H = owner
 		hostloc = H.surrounding_belly()
-	//End of indirect vorefx additions
-	var/list/inside = list()
-	if(isbelly(hostloc))
-		var/obj/belly/inside_belly = hostloc
-		var/mob/living/pred = inside_belly.owner
+	if(!isbelly(hostloc))
+		return list()
 
-		var/inside_desc = "No description."
-		if(owner.absorbed && inside_belly.absorbed_desc)
-			inside_desc = inside_belly.absorbed_desc
-		else if(inside_belly.desc)
-			inside_desc = inside_belly.desc
+	var/obj/belly/inside_belly = hostloc
+	var/mob/living/pred = inside_belly.owner
 
-		if(inside_desc != "No description.")
-			inside_desc = inside_belly.belly_format_string(inside_desc, owner, use_first_only = TRUE)
+	var/inside_desc = "No description."
+	if(owner.absorbed && inside_belly.absorbed_desc)
+		inside_desc = inside_belly.absorbed_desc
+	else if(inside_belly.desc)
+		inside_desc = inside_belly.desc
 
-		inside = list(
-			"absorbed" = owner.absorbed,
-			"belly_name" = inside_belly.name,
-			"belly_mode" = inside_belly.digest_mode,
-			"desc" = inside_desc,
-			"pred" = pred,
-			"ref" = "\ref[inside_belly]",
-			"liq_lvl" = inside_belly.reagents.total_volume,
-			"liq_reagent_type" = inside_belly.reagent_chosen,
-			"liuq_name" = inside_belly.reagent_name,
+	if(inside_desc != "No description.")
+		inside_desc = inside_belly.belly_format_string(inside_desc, owner, use_first_only = TRUE)
+
+	var/list/inside_contents = list()
+	for(var/atom/movable/O in inside_belly)
+		if(O == owner)
+			continue
+
+		var/list/info = list(
+			"name" = "[O]",
+			"absorbed" = FALSE,
+			"stat" = 0,
+			"ref" = "\ref[O]",
+			"outside" = FALSE,
+			"our_type" = "Item",
+			"damage" = 1
 		)
+		if(show_pictures) //disables icon mode
+			if(inside_belly.contents.len <= max_icon_content)
+				icon_overflow = FALSE
+				info["icon"] = cached_nom_icon(O)
+			else
+				icon_overflow = TRUE
+		if(isliving(O))
+			var/mob/living/M = O
+			info["stat"] = M.stat
+			info["our_type"] = "Living"
+			if(M.absorbed)
+				info["absorbed"] = TRUE
+			info["damage"] = M.health / M.maxHealth
+			info["nutrition"] = M.nutrition
+		else if(isitem(O))
+			var/obj/item/our_item = O
+			if(!isnull(our_item.digest_stage))
+				info["damage"] = our_item.digest_stage / our_item.w_class
 
-		var/list/inside_contents = list()
-		for(var/atom/movable/O in inside_belly)
-			if(O == owner)
-				continue
-			var/our_type
-			if(isliving(O))
-				our_type = "Living"
-			else if(isitem(O))
-				our_type = "Item"
+		UNTYPED_LIST_ADD(inside_contents, info)
 
-			var/list/info = list(
-				"name" = "[O]",
-				"absorbed" = FALSE,
-				"stat" = 0,
-				"ref" = "\ref[O]",
-				"outside" = FALSE,
-				"our_type" = our_type
-			)
-			if(show_pictures) //disables icon mode
-				if(inside_belly.contents.len <= max_icon_content)
-					icon_overflow = FALSE
-					info["icon"] = cached_nom_icon(O)
-				else
-					icon_overflow = TRUE
-			if(isliving(O))
-				var/mob/living/M = O
-				info["stat"] = M.stat
-				if(M.absorbed)
-					info["absorbed"] = TRUE
-			UNTYPED_LIST_ADD(inside_contents, info)
-		inside["contents"] = inside_contents
+	var/list/inside = list(
+		"absorbed" = owner.absorbed,
+		"belly_name" = inside_belly.get_belly_name(),
+		"belly_mode" = inside_belly.digest_mode,
+		"desc" = inside_desc,
+		"pred" = pred,
+		"ref" = "\ref[inside_belly]",
+		"liq_lvl" = inside_belly.reagents.total_volume,
+		"liq_reagent_type" = inside_belly.reagent_chosen,
+		"liuq_name" = inside_belly.reagent_name,
+		"contents" = inside_contents
+	)
+
 	return inside
+
+/datum/vore_look/proc/get_prey_abilities(mob/owner, obj/belly/inside_belly)
+	if(!istype(inside_belly))
+		return null
+
+	var/list/abilities = list()
+	if(inside_belly.mode_flags & DM_FLAG_ABSORBEDVORE)
+		UNTYPED_LIST_ADD(abilities, list("name" = "devour_as_absorbed", "available" = owner.absorbed))
+	return abilities
+
+/datum/vore_look/proc/get_intent_data(mob/owner, obj/belly/inside_belly)
+	if(!isbelly(inside_belly))
+		return null
+
+	return list(
+		"active" = inside_belly.escapable == B_ESCAPABLE_INTENT,
+		"current_intent" = owner.a_intent,
+		"help" = !!inside_belly.belchchance,
+		"disarm" = (inside_belly.transferchance && inside_belly.transferlocation) || (inside_belly.transferchance_secondary && inside_belly.transferlocation_secondary),
+		"grab" = (inside_belly.absorbchance && inside_belly.digest_mode != DM_ABSORB) || (inside_belly.digestchance && inside_belly.digest_mode != DM_DIGEST) || (inside_belly.selectchance && inside_belly.digest_mode != DM_SELECT),
+		"harm" = !!inside_belly.escapechance
+	)
 
 /datum/vore_look/proc/get_host_mobtype(mob/owner)
 	var/list/host_mobtype = list("is_cyborg" = FALSE, "is_vore_simple_mob" = FALSE)
@@ -111,17 +138,21 @@
 		switch(active_vore_tab)
 			if(CONTROL_TAB)
 				var/list/addons = list()
+				var/list/vore_pref_type_list = list()
 				for(var/flag_name in selected.mode_flag_list)
 					UNTYPED_LIST_ADD(addons, list("label" = flag_name, "selection" = selected.mode_flags & selected.mode_flag_list[flag_name]))
+				for(var/flag_name in GLOB.vore_pref_types)
+					UNTYPED_LIST_ADD(vore_pref_type_list, list("label" = flag_name, "selection" = selected.vore_pref_type_flags & GLOB.vore_pref_types[flag_name]))
+
 				var/list/belly_mode_data = list(
 					"mode" = selected.digest_mode,
 					"item_mode" = selected.item_digest_mode,
 					"addons" = addons,
+					"vore_types" = vore_pref_type_list,
 					"name_length" = BELLIES_NAME_MAX,
 					"name_min" = BELLIES_NAME_MIN,
 					"mode_options" = selected.digest_modes,
 					"item_mode_options" = selected.item_digest_modes,
-
 				)
 				selected_list["belly_mode_data"] = belly_mode_data
 
@@ -238,15 +269,15 @@
 				)
 				var/list/belly_fullscreens
 				if(selected.colorization_enabled)
-					belly_fullscreens = cached_icon_states('icons/mob/screen_full_vore_list.dmi') //Makes any icons inside of here selectable.
+					belly_fullscreens = icon_states_fast('icons/mob/vore_fullscreens/ui_lists/screen_full_vore_list_base.dmi') //Makes any icons inside of here selectable.
 				else
-					belly_fullscreens = cached_icon_states('icons/mob/screen_full_vore.dmi') //Non colorable
+					belly_fullscreens = icon_states_fast('icons/mob/vore_fullscreens/ui_lists/screen_full_vore.dmi') //Non colorable
 
 				var/list/vs_flags = list()
 				for(var/flag_name in selected.vore_sprite_flag_list)
 					UNTYPED_LIST_ADD(vs_flags, list("label" = flag_name, "selection" = selected.vore_sprite_flags & selected.vore_sprite_flag_list[flag_name]))
 
-				var/datum/category_group/underwear/UWC = global_underwear.categories_by_name[host.vore_selected.undergarment_chosen]
+				var/datum/category_group/underwear/UWC = GLOB.global_underwear.categories_by_name[host.vore_selected.undergarment_chosen]
 				var/list/undergarments
 				if(UWC)
 					undergarments = UWC.items
@@ -276,7 +307,7 @@
 				"belly_sprite_options" = host.vore_icon_bellies,
 				"undergarment_chosen" = selected.undergarment_chosen,
 				"undergarment_if_none" = selected.undergarment_if_none || "None",
-				"undergarment_options" = global_underwear.categories,
+				"undergarment_options" = GLOB.global_underwear.categories,
 				"undergarment_options_if_none" = undergarments,
 				"undergarment_color" = selected.undergarment_color,
 				"tail_option_shown" = ishuman(owner),
@@ -301,19 +332,6 @@
 		for(var/O in selected)
 
 			// Please don't pass the options as a list... let TGUI handle that
-			var/our_type
-			if(ishuman(O))
-				our_type = "Human"
-
-			else if(isobserver(O) || istype(O,/obj/item/mmi))
-				our_type = "Obeserver"
-
-			else if(isliving(O))
-				var/mob/living/datarget = O
-				if(datarget.client)
-					our_type = "LivingC"
-				else
-					our_type = "Living"
 
 			total_content_count++
 			if(active_vore_tab == CONTENTS_TAB)
@@ -323,7 +341,7 @@
 					"stat" = 0,
 					"ref" = "\ref[O]",
 					"outside" = TRUE,
-					"our_type" = our_type
+					"damage" = 1
 				)
 				if(show_pictures) //disables icon mode
 					if(selected.contents.len <= max_icon_content)
@@ -332,11 +350,34 @@
 					else
 						icon_overflow = TRUE
 
-				if(isliving(O))
-					var/mob/living/M = O
-					info["stat"] = M.stat
-					if(M.absorbed)
+				var/our_type = "Item"
+				if(isobserver(O) || istype(O,/obj/item/mmi))
+					our_type = "Obeserver"
+
+				else if(isliving(O))
+					var/mob/living/datarget = O
+					if(ishuman(O))
+						if(datarget.client)
+							our_type = "HumanC"
+						else
+							our_type = "Human"
+					else
+						if(datarget.client)
+							our_type = "LivingC"
+						else
+							our_type = "Living"
+
+					info["stat"] = datarget.stat
+					if(datarget.absorbed)
 						info["absorbed"] = TRUE
+					info["damage"] = datarget.health / datarget.maxHealth
+					info["nutrition"] = datarget.nutrition
+				else if(isitem(O))
+					var/obj/item/our_item = O
+					if(!isnull(our_item.digest_stage))
+						info["damage"] = our_item.digest_stage / our_item.w_class
+
+				info["our_type"] = our_type
 				LAZYADD(selected_contents, list(info))
 
 		selected_list["content_length"] = total_content_count
@@ -345,9 +386,18 @@
 				selected_list["contents"] = selected_contents
 
 			if(LIQUID_OPTIONS_TAB)
+				var/liq_gen_resources = 0
+				if(isrobot(owner))
+					var/mob/living/silicon/robot/robot_owner = owner
+					if(robot_owner.cell)
+						liq_gen_resources = robot_owner.cell.percent()
+				else if(isliving(owner))
+					var/mob/living/living_owner = owner
+					liq_gen_resources = living_owner.nutrition_percent()
 				// liquid belly options
 				var/list/belly_liquid_data = list(
 					"show_liq" = selected.show_liquids,
+					"liq_gen_resources" = liq_gen_resources,
 					"liq_interacts" = compile_liquid_interact_data(selected)
 				)
 				selected_list["belly_liquid_data"] = belly_liquid_data

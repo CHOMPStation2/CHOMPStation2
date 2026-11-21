@@ -1,6 +1,6 @@
 //  Virgo modified syndie beacon, does not give objectives
 
-/obj/machinery/syndicate_beacon/virgo/attack_hand(var/mob/user)
+/obj/machinery/syndicate_beacon/virgo/attack_hand(mob/user)
 	user.set_machine(src)
 	var/dat = span_darkgreen(span_italics("Scanning [pick("retina pattern", "voice print", "fingerprints", "dna sequence")]...<br>Identity confirmed,<br>"))
 	if(ishuman(user) || isAI(user))
@@ -35,7 +35,7 @@
 		if(ishuman(M))
 			var/mob/living/carbon/human/N = M
 			to_chat(N, span_infoplain(span_bold("Access granted, here are the supplies!")))
-			traitors.spawn_uplink(N)
+			GLOB.traitors.spawn_uplink(N)
 			N.mind.tcrystals = DEFAULT_TELECRYSTAL_AMOUNT
 			N.mind.accept_tcrystals = 1
 			message_admins("[N]/([N.ckey]) has received an uplink and telecrystals from the syndicate beacon.")
