@@ -95,8 +95,13 @@ On the map:
 #define ATC_FREQ 1477
 #define CULTURE_FREQ 1479
 
+<<<<<<< HEAD
 #define BDCM_FREQ 1483 // CHOMPAdd
 #define OUT_FREQ 1367 // CHOMPAdd
+=======
+#define BDCM_FREQ 1483
+#define OUT_FREQ 1367
+>>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 
 #define LOCKED_COM_FREQ 1481
 

@@ -117,12 +117,18 @@ GLOBAL_LIST_INIT(engineering_networks, list(
 	invuln = 1
 	always_visible = TRUE
 
+<<<<<<< HEAD
 // CHOMPEdit Begin - Bodycams
+=======
+>>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 /obj/machinery/camera/network/bodycamera
 	network = list(NETWORK_BODYCAM)
 	invuln = 1
 	always_visible = TRUE
+<<<<<<< HEAD
 // CHOMPEdit End
+=======
+>>>>>>> 12408ae9a8 (Cameranet to SScamera (#19468))
 
 // EMP
 
