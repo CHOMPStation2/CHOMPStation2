@@ -131,3 +131,10 @@
       due to already having them inately
   - balance: Lick wounds now works while weakened
   - refactor: ancient and unused transport pod entirely recoded for future event use
+2026-11-21:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Make it so ghost spawns work anywhere players can reach
+  Cerami:
+  - rscadd: Adds two new reagents to Succubus Bite
+  Lira:
+  - bugfix: Weedkiller kills instead of grows weeds.
