@@ -52,12 +52,10 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 	else
 		for(var/turf/simulated/T in fire_tiles)
 			// CHOMPEdit - Lingering fires
-			if(istype(T.fire) && !istype(T.fire, /obj/fire/lingering))
+			if(istype(T.fire, /obj/fire) && !istype(T.fire, /obj/fire/lingering))
 				qdel(T.fire)
-				if(prob(10))
+				if(prob(10)) // Sometimes spawn a lingering fire when normal fires go out
 					T.lingering_fire(1)
-				else
-					T.fire = null
 			// CHOMPEdit End
 		fire_tiles.Cut()
 		fuel_objs.Cut()
@@ -92,11 +90,9 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 
 /turf/simulated/create_fire(fl)
 	// CHOMPAdd - Lingering fires
-	if(istype(fire) && istype(fire, /obj/fire/lingering))
-		var/obj/fire/F = fire
-		F.RemoveFire()
-		qdel(F)
-	// CHOMPEnd - Lingering fires
+	if(istype(fire, /obj/fire/lingering))
+		qdel(fire) // Clear lingering fire if an actual fire wants to start
+	// CHOMPEnd
 	if(fire)
 		fire.firelevel = max(fl, fire.firelevel)
 		return 1
@@ -133,10 +129,8 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 
 	var/turf/simulated/my_tile = loc
 	if(!istype(my_tile) || !my_tile.zone)
-		if(my_tile && my_tile.fire == src)
-			my_tile.fire = null
-		RemoveFire()
-		return 1
+		qdel(src)
+		return PROCESS_KILL
 
 	var/datum/gas_mixture/air_contents = my_tile.return_air()
 
@@ -212,19 +206,12 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 	return heat2color(temperature)
 
 /obj/fire/Destroy()
-	RemoveFire()
-
-	. = ..()
-
-/obj/fire/proc/RemoveFire()
 	var/turf/T = loc
 	if (istype(T))
 		set_light(0)
-
 		T.fire = null
-		loc = null
 	SSair.active_hotspots.Remove(src)
-
+	. = ..()
 
 /turf/simulated/var/fire_protection = 0 //Protects newly extinguished tiles from being overrun again.
 /turf/proc/apply_fire_protection()
