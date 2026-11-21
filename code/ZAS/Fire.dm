@@ -54,7 +54,7 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 			// CHOMPEdit - Lingering fires
 			if(istype(T.fire, /obj/fire) && !istype(T.fire, /obj/fire/lingering))
 				qdel(T.fire)
-				if(prob(10)) // Spawn a lingering sometimes fire when normal fires go out
+				if(prob(10)) // Sometimes spawn a lingering fire when normal fires go out
 					T.lingering_fire(1)
 			// CHOMPEdit End
 		fire_tiles.Cut()
