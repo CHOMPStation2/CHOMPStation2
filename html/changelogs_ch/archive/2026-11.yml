@@ -138,3 +138,19 @@
   - rscadd: Adds two new reagents to Succubus Bite
   Lira:
   - bugfix: Weedkiller kills instead of grows weeds.
+2026-11-22:
+  CHOMPStation2StaffMirrorBot:
+  - refactor: cameranet to SScameras
+  - bugfix: a crash with tgui data on UIs using parent_ui after the update
+  - rscadd: Adds a holidify window mapping helper
+  - bugfix: fixed wrong path for reinforced holiday windows
+  Cerami:
+  - qol: Adds aquatic movement to Kelpie simplemobs
+  Will:
+  - balance: Reduced the death explosion size of phoron spiders
+  - bugfix: Corrected a harddel with fires, updated fire destroy logic
+  - bugfix: Missing proper airlock electronic's access list
+  - refactor: Updates airlock electronics circuitboard to tgui
+  Will, Kash:
+  - refactor: Modernizes deletion overview ui
+  - code_imp: update tgui to tg
