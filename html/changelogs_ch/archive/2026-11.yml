@@ -154,3 +154,13 @@
   Will, Kash:
   - refactor: Modernizes deletion overview ui
   - code_imp: update tgui to tg
+2026-11-23:
+  Kashargul:
+  - bugfix: some runtimes
+  RexAnivius, Diana, Kash:
+  - image: added and modified centiborg sprites. Modifications include renaming the
+      dmis to "Centiborg", neck sprites to "throat", "sit" sprites to "rest".
+  - code_imp: updated robot_hats_offset.dm to include centiborg defines.
+  - code_imp: Adds size limiters for borgs. Only centiborgs have this for now (1.75x
+      resize max)
+  - rscadd: added centiborgs
