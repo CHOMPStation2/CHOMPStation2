@@ -164,3 +164,14 @@
   - code_imp: Adds size limiters for borgs. Only centiborgs have this for now (1.75x
       resize max)
   - rscadd: added centiborgs
+2026-11-24:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: soulcatcher sfx not saving for non capitalised bellies
+  - bugfix: capitalisation of a selected belly can be changed without triggering the
+      duplicate warning
+  - bugfix: fixed service and janitor dullahan taur sprite issues
+  - bugfix: a few runtimes in some very specific cases
+  - image: Fixed xenomorph tail (fully colourable, vwag) layering on south facing.
+  SilencedMP5A5:
+  - rscadd: four new mechanical enemies, Gewehrwolves, Bombspiders
+  - balance: tweaked the damage of a few projectiles

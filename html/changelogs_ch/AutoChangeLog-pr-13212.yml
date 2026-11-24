@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "a few runtimes in some very specific cases"
