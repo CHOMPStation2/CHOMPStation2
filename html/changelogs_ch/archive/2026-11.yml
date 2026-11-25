@@ -175,3 +175,7 @@
   SilencedMP5A5:
   - rscadd: four new mechanical enemies, Gewehrwolves, Bombspiders
   - balance: tweaked the damage of a few projectiles
+2026-11-25:
+  CHOMPStation2StaffMirrorBot:
+  - balance: Halved range on EMP landmines. Still very dangerous to step on, but maintaining
+      good spacing now actually works.
