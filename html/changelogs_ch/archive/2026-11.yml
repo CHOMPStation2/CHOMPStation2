@@ -179,3 +179,9 @@
   CHOMPStation2StaffMirrorBot:
   - balance: Halved range on EMP landmines. Still very dangerous to step on, but maintaining
       good spacing now actually works.
+2026-11-26:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: slip timers nolonger try to delete un-deletable timers by making all slip-related
+      timers deletable
+  Kashargul:
+  - bugfix: legacy hook calls
