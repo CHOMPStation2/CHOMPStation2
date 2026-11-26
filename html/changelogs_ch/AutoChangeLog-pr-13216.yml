@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "slip timers nolonger try to delete un-deletable timers by making all slip-related timers deletable"
