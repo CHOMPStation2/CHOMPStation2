@@ -104,7 +104,7 @@
 		pda.id.name = text("[pda.id.registered_name]'s ID Card ([pda.id.assignment])")
 		GLOB.data_core.manifest_modify(pda.id.registered_name, pda.id.assignment, pda.id.rank)
 		pda.id.last_job_switch = world.time
-		callHook("reassign_employee", list(pda.id))
+		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_TERMINATE_EMPLOYEE_IDCARD, pda.id)
 		newjob.current_positions++
 		user.mind.assigned_role = pda.id.rank
 		user.mind.role_alt_title = pda.id.assignment
@@ -133,7 +133,7 @@
 		pda.id.name = text("[pda.id.registered_name]'s ID Card ([pda.id.assignment])")
 		GLOB.data_core.manifest_modify(pda.id.registered_name, pda.id.assignment, pda.id.rank)
 		pda.id.last_job_switch = world.time
-		callHook("reassign_employee", list(pda.id))
+		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_TERMINATE_EMPLOYEE_IDCARD, pda.id)
 		user.mind.assigned_role = ptojob.title
 		user.mind.role_alt_title = ptojob.title
 		foundjob.current_positions--
