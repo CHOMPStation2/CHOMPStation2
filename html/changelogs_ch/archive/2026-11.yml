@@ -185,3 +185,7 @@
       timers deletable
   Kashargul:
   - bugfix: legacy hook calls
+2026-11-27:
+  Guti:
+  - rscadd: Added marshmallows, graham crackers, and smores.
+  - bugfix: Fixed the crafting menu not using up food
