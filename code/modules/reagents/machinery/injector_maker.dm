@@ -100,7 +100,7 @@
 		if(O.get_material_name() == MAT_PLASTIC)
 			var/obj/item/stack/S = O
 			var/input_amount = tgui_input_number(user, "How many sheets would you like to add?", "Add plastic", 0, S.get_amount())
-			if(input_amount == 0)
+			if(!input_amount)
 				return
 			var/plastic_input = input_amount * value_plastic
 			var/free_space = capacity_plastic - src.count_plastic
@@ -119,7 +119,7 @@
 	if(istype(dropping, /obj/item/stack/material/plastic))
 		var/obj/item/stack/material/plastic/plastic_stack = dropping
 		var/input_amount = tgui_input_number(user, "How many sheets would you like to add?", "Add plastic", 0, plastic_stack.get_amount())
-		if(input_amount == 0)
+		if(!input_amount)
 			return
 		if(!isliving(user) || user.stat || !Adjacent(user) || !Adjacent(dropping))
 			return
@@ -199,20 +199,21 @@
 				to_chat(user, span_warning("Chemical storage is empty!"))
 				return
 			var/injector_amount = tgui_input_number(user, "How many injectors would you like?", "Make small injectors", 0, 100)
-			if(injector_amount > 0)
-				switch(material)
-					if("mold plastic")
-						var/plastic_cost = cost_plastic_small * injector_amount
-						if(src.count_plastic < plastic_cost)
-							to_chat(user, span_warning("Not enough plastic! Need at least [plastic_cost] units."))
-							return
-					if("use injectors")
-						if(src.count_small_injector < injector_amount)
-							to_chat(user, span_warning("Not enough autoinjectors! You only have [src.count_small_injector]"))
-							return
-				var/name = tgui_input_text(user, "Name Injector", "Naming", null, 32)
-				make_injector("small injector", injector_amount, name, material, user)
-				update_icon()
+			if(!injector_amount)
+				return
+			switch(material)
+				if("mold plastic")
+					var/plastic_cost = cost_plastic_small * injector_amount
+					if(src.count_plastic < plastic_cost)
+						to_chat(user, span_warning("Not enough plastic! Need at least [plastic_cost] units."))
+						return
+				if("use injectors")
+					if(src.count_small_injector < injector_amount)
+						to_chat(user, span_warning("Not enough autoinjectors! You only have [src.count_small_injector]"))
+						return
+			var/name = tgui_input_text(user, "Name Injector", "Naming", null, 32)
+			make_injector("small injector", injector_amount, name, material, user)
+			update_icon()
 
 
 		if("large injector")
@@ -230,20 +231,21 @@
 				to_chat(user, span_warning("Chemical storage is empty!"))
 				return
 			var/injector_amount = tgui_input_number(user, "How many injectors would you like?", "Make large injectors", 0, 100)
-			if(injector_amount > 0)
-				switch(material)
-					if("mold plastic")
-						var/plastic_cost = cost_plastic_large * injector_amount
-						if(src.count_plastic < plastic_cost)
-							to_chat(user, span_warning("Not enough plastic! Need at least [plastic_cost] units."))
-							return
-					if("use injectors")
-						if(src.count_large_injector < injector_amount)
-							to_chat(user, span_warning("Not enough autoinjectors! You only have [src.count_large_injector]"))
-							return
-				var/name = tgui_input_text(user, "Name Injector", "Naming", null, 32)
-				make_injector("large injector", injector_amount, name, material,user)
-				update_icon()
+			if(!injector_amount)
+				return
+			switch(material)
+				if("mold plastic")
+					var/plastic_cost = cost_plastic_large * injector_amount
+					if(src.count_plastic < plastic_cost)
+						to_chat(user, span_warning("Not enough plastic! Need at least [plastic_cost] units."))
+						return
+				if("use injectors")
+					if(src.count_large_injector < injector_amount)
+						to_chat(user, span_warning("Not enough autoinjectors! You only have [src.count_large_injector]"))
+						return
+			var/name = tgui_input_text(user, "Name Injector", "Naming", null, 32)
+			make_injector("large injector", injector_amount, name, material,user)
+			update_icon()
 
 
 /obj/machinery/injector_maker/proc/make_injector(size, amount, new_name, material, mob/user)
