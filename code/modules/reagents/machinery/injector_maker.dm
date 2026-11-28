@@ -100,7 +100,7 @@
 		if(O.get_material_name() == MAT_PLASTIC)
 			var/obj/item/stack/S = O
 			var/input_amount = tgui_input_number(user, "How many sheets would you like to add?", "Add plastic", 0, S.get_amount())
-			if(!injector_amount)
+			if(!input_amount)
 				return
 			var/plastic_input = input_amount * value_plastic
 			var/free_space = capacity_plastic - src.count_plastic
@@ -119,7 +119,7 @@
 	if(istype(dropping, /obj/item/stack/material/plastic))
 		var/obj/item/stack/material/plastic/plastic_stack = dropping
 		var/input_amount = tgui_input_number(user, "How many sheets would you like to add?", "Add plastic", 0, plastic_stack.get_amount())
-		if(!injector_amount)
+		if(!input_amount)
 			return
 		if(!isliving(user) || user.stat || !Adjacent(user) || !Adjacent(dropping))
 			return
