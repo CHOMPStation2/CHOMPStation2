@@ -100,7 +100,7 @@
 		if(O.get_material_name() == MAT_PLASTIC)
 			var/obj/item/stack/S = O
 			var/input_amount = tgui_input_number(user, "How many sheets would you like to add?", "Add plastic", 0, S.get_amount())
-			if(isnull(input_amount) || input_amount <= 0)
+			if(isnull(input_amount) || input_amount == 0)
 				return
 			var/plastic_input = input_amount * value_plastic
 			var/free_space = capacity_plastic - src.count_plastic
@@ -119,7 +119,7 @@
 	if(istype(dropping, /obj/item/stack/material/plastic))
 		var/obj/item/stack/material/plastic/plastic_stack = dropping
 		var/input_amount = tgui_input_number(user, "How many sheets would you like to add?", "Add plastic", 0, plastic_stack.get_amount())
-		if(isnull(input_amount) || input_amount <= 0)
+		if(isnull(input_amount) || input_amount == 0)
 			return
 		if(!isliving(user) || user.stat || !Adjacent(user) || !Adjacent(dropping))
 			return
@@ -199,7 +199,7 @@
 				to_chat(user, span_warning("Chemical storage is empty!"))
 				return
 			var/injector_amount = tgui_input_number(user, "How many injectors would you like?", "Make small injectors", 0, 100)
-			if(isnull(injector_amount) || injector_amount <= 0)
+			if(isnull(injector_amount) || injector_amount == 0)
 				return
 			switch(material)
 				if("mold plastic")
@@ -231,7 +231,7 @@
 				to_chat(user, span_warning("Chemical storage is empty!"))
 				return
 			var/injector_amount = tgui_input_number(user, "How many injectors would you like?", "Make large injectors", 0, 100)
-			if(isnull(injector_amount) || injector_amount <= 0)
+			if(isnull(injector_amount) || injector_amount == 0)
 				return
 			switch(material)
 				if("mold plastic")
